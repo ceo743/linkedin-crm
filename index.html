@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DC Academy — CRM Outreach LinkedIn</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0d0d0d;
+    --bg2: #161616;
+    --bg3: #1e1e1e;
+    --red: #e63329;
+    --orange: #f5842a;
+    --text: #f0f0f0;
+    --muted: #888;
+    --border: #2a2a2a;
+    --green: #2ecc71;
+    --yellow: #f1c40f;
+    --blue: #3498db;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--bg2);
+    border-bottom: 3px solid var(--red);
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text);
+  }
+
+  .logo span { color: var(--red); }
+
+  .last-update {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* LAYOUT */
+  main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px 24px;
+  }
+
+  h2 {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+
+  /* METRICHE */
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .metric-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: border-color 0.2s;
+  }
+
+  .metric-card:hover { border-color: var(--red); }
+
+  .metric-value {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .metric-label {
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .metric-sub {
+    font-size: 12px;
+    color: var(--orange);
+    margin-top: 4px;
+    font-weight: 600;
+  }
+
+  .v-red { color: var(--red); }
+  .v-orange { color: var(--orange); }
+  .v-green { color: var(--green); }
+  .v-blue { color: var(--blue); }
+  .v-yellow { color: var(--yellow); }
+  .v-white { color: var(--text); }
+
+  /* CHARTS */
+  .charts {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .chart-box {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+
+  .chart-title {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+
+  .chart-wrap { position: relative; height: 200px; }
+
+  /* PIPELINE */
+  .pipeline {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .pipeline-stage {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 12px;
+    text-align: center;
+    position: relative;
+  }
+
+  .pipeline-stage::after {
+    content: '→';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    font-size: 16px;
+    z-index: 1;
+  }
+
+  .pipeline-stage:last-child::after { display: none; }
+
+  .stage-count {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--orange);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stage-name {
+    font-size: 10px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .stage-rate {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  /* FILTRI */
+  .filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .filter-btn {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 7px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 600;
+  }
+
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--red);
+    border-color: var(--red);
+    color: white;
+  }
+
+  .search-box {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 7px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    width: 220px;
+    outline: none;
+  }
+
+  .search-box:focus { border-color: var(--red); }
+
+  /* TABELLA */
+  .table-wrap {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  thead {
+    background: var(--bg3);
+    border-bottom: 1px solid var(--border);
+  }
+
+  th {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  th:hover { color: var(--text); }
+
+  td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  tr:hover td { background: rgba(255,255,255,0.02); }
+
+  .prospect-name {
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+
+  .prospect-company {
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .badge-contattato { background: rgba(52,152,219,0.15); color: var(--blue); }
+  .badge-risposto { background: rgba(241,196,15,0.15); color: var(--yellow); }
+  .badge-interessato { background: rgba(245,132,42,0.15); color: var(--orange); }
+  .badge-call { background: rgba(46,204,113,0.15); color: var(--green); }
+  .badge-cliente { background: rgba(46,204,113,0.25); color: var(--green); border: 1px solid var(--green); }
+  .badge-perso { background: rgba(231,76,60,0.15); color: #e74c3c; }
+
+  .interaction-type {
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .interaction-like { color: var(--red); }
+  .interaction-comment { color: var(--orange); }
+
+  .msg-preview {
+    font-size: 11px;
+    color: var(--muted);
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .profile-link {
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .profile-link:hover { color: var(--orange); }
+
+  /* EMPTY STATE */
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--muted);
+  }
+
+  .empty-state p { font-size: 14px; margin-top: 8px; }
+
+  /* LOADING */
+  .loading {
+    text-align: center;
+    padding: 40px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  /* TOAST */
+  #toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--red);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 999;
+  }
+
+  #toast.show { opacity: 1; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .charts { grid-template-columns: 1fr; }
+    .pipeline { grid-template-columns: repeat(3, 1fr); }
+    .pipeline-stage::after { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    .metrics { grid-template-columns: repeat(2, 1fr); }
+    .pipeline { grid-template-columns: repeat(2, 1fr); }
+    header { padding: 14px 16px; }
+    main { padding: 20px 12px; }
+  }
+
+  /* SHEET CONFIG BANNER */
+  .config-banner {
+    background: rgba(245,132,42,0.1);
+    border: 1px solid rgba(245,132,42,0.3);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .config-banner.hidden { display: none; }
+
+  .config-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--orange);
+    flex-shrink: 0;
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .config-banner a {
+    color: var(--orange);
+    font-weight: 700;
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">DC <span>Academy</span> — CRM Outreach</div>
+  <div class="last-update" id="lastUpdate">Caricamento dati...</div>
+</header>
+
+<main>
+
+  <!-- CONFIG BANNER -->
+  <div class="config-banner" id="configBanner">
+    <div class="config-dot"></div>
+    <div>
+      <strong>Configura il Google Sheet.</strong>
+      Apri <code>config.js</code> e inserisci l'ID del tuo Google Sheet per connettere i dati reali.
+      Per ora vedi dati di esempio.
+    </div>
+  </div>
+
+  <!-- METRICHE -->
+  <h2>Panoramica</h2>
+  <div class="metrics" id="metricsGrid">
+    <div class="metric-card">
+      <div class="metric-value v-white" id="m-dm">—</div>
+      <div class="metric-label">DM inviati</div>
+      <div class="metric-sub" id="m-dm-oggi">—</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value v-yellow" id="m-reply">—</div>
+      <div class="metric-label">Reply rate</div>
+      <div class="metric-sub" id="m-risposte">—</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value v-orange" id="m-interessati">—</div>
+      <div class="metric-label">Interessati</div>
+      <div class="metric-sub" id="m-interessati-rate">—</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value v-green" id="m-call">—</div>
+      <div class="metric-label">Call prenotate</div>
+      <div class="metric-sub" id="m-call-rate">—</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value v-green" id="m-clienti">—</div>
+      <div class="metric-label">Clienti chiusi</div>
+      <div class="metric-sub" id="m-revenue">—</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value v-red" id="m-oggi">—</div>
+      <div class="metric-label">DM oggi</div>
+      <div class="metric-sub">Su 12 max</div>
+    </div>
+  </div>
+
+  <!-- GRAFICI -->
+  <div class="charts">
+    <div class="chart-box">
+      <div class="chart-title">DM inviati negli ultimi 14 giorni</div>
+      <div class="chart-wrap">
+        <canvas id="chartDM"></canvas>
+      </div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">Pipeline per stadio</div>
+      <div class="chart-wrap">
+        <canvas id="chartFunnel"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- PIPELINE -->
+  <h2>Pipeline</h2>
+  <div class="pipeline" id="pipelineRow">
+    <div class="pipeline-stage">
+      <div class="stage-count" id="p-contattato">—</div>
+      <div class="stage-name">Contattati</div>
+    </div>
+    <div class="pipeline-stage">
+      <div class="stage-count" id="p-risposto">—</div>
+      <div class="stage-name">Risposto</div>
+      <div class="stage-rate" id="pr-risposto">—</div>
+    </div>
+    <div class="pipeline-stage">
+      <div class="stage-count" id="p-interessato">—</div>
+      <div class="stage-name">Interessati</div>
+      <div class="stage-rate" id="pr-interessato">—</div>
+    </div>
+    <div class="pipeline-stage">
+      <div class="stage-count" id="p-call">—</div>
+      <div class="stage-name">Call</div>
+      <div class="stage-rate" id="pr-call">—</div>
+    </div>
+    <div class="pipeline-stage">
+      <div class="stage-count" id="p-proposta">—</div>
+      <div class="stage-name">Proposta</div>
+      <div class="stage-rate" id="pr-proposta">—</div>
+    </div>
+    <div class="pipeline-stage">
+      <div class="stage-count v-green" id="p-cliente">—</div>
+      <div class="stage-name">Clienti</div>
+      <div class="stage-rate" id="pr-cliente">—</div>
+    </div>
+  </div>
+
+  <!-- TABELLA PROSPECT -->
+  <h2>Prospect</h2>
+  <div class="filters">
+    <button class="filter-btn active" onclick="filterTable('tutti')">Tutti</button>
+    <button class="filter-btn" onclick="filterTable('Contattato')">Contattati</button>
+    <button class="filter-btn" onclick="filterTable('Risposto')">Risposto</button>
+    <button class="filter-btn" onclick="filterTable('Interessato')">Interessati</button>
+    <button class="filter-btn" onclick="filterTable('Call')">Call</button>
+    <button class="filter-btn" onclick="filterTable('Cliente')">Clienti</button>
+    <button class="filter-btn" onclick="filterTable('Perso')">Persi</button>
+    <input class="search-box" type="text" id="searchInput" placeholder="Cerca nome o azienda..." oninput="searchTable(this.value)">
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Prospect</th>
+          <th>Interazione</th>
+          <th>Post</th>
+          <th>Data DM</th>
+          <th>Stadio</th>
+          <th>Messaggio inviato</th>
+          <th>Profilo</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <tr><td colspan="7" class="loading">Caricamento...</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</main>
+
+<div id="toast"></div>
+
+<script>
+// ─── CONFIG ───────────────────────────────────────────────
+// Inserisci qui l'ID del tuo Google Sheet dopo averlo creato.
+// Il foglio deve essere condiviso come "chiunque con il link può visualizzare".
+// Nome del foglio: "DM"
+const SHEET_ID = '1KSR3FBgnyMc9gV1oKc2RiG1w-aJb0m6hh2IpED3gEh0';
+const SHEET_NAME = 'DM';
+
+// Dati mock per preview (usati finché il Sheet non è configurato)
+const MOCK_DATA = [
+  { nome: 'Marco Rossi', azienda: 'Rossi & Partners Srl', titolo: 'CEO', settore: 'Consulenza', interazione: 'commento', post: 'Automazioni AI', data: '2026-05-15', stadio: 'Interessato', messaggio: 'Ho visto il tuo commento sul post di automazioni AI. Le aziende come Rossi & Partners sono esattamente quelle dove troviamo processi che valgono tra €2.000 e €5.000 al mese...', url: 'https://linkedin.com' },
+  { nome: 'Laura Bianchi', azienda: 'Digital Wave Agency', titolo: 'Founder', settore: 'Agenzia Marketing', interazione: 'like', post: 'Automazioni AI', data: '2026-05-15', stadio: 'Call', messaggio: 'Ho visto che hai salvato il post sulle automazioni AI. Di solito chi lo salva ha già il problema in casa ma non sa da dove partire...', url: 'https://linkedin.com' },
+  { nome: 'Giorgio Ferretti', azienda: 'Ferretti Distribuzione', titolo: 'Titolare', settore: 'Distribuzione B2B', interazione: 'commento', post: 'Formazione AI', data: '2026-05-14', stadio: 'Risposto', messaggio: 'Ho visto il tuo commento sul post di formazione AI...', url: 'https://linkedin.com' },
+  { nome: 'Alessia Conti', azienda: 'Studio Conti Commercialisti', titolo: 'Responsabile', settore: 'Commercialisti', interazione: 'like', post: 'Automazioni AI', data: '2026-05-14', stadio: 'Contattato', messaggio: 'Ho visto che hai salvato il post sulle automazioni AI...', url: 'https://linkedin.com' },
+  { nome: 'Davide Moretti', azienda: 'SaaS Italia Srl', titolo: 'Co-Founder', settore: 'SaaS', interazione: 'commento', post: 'Automazioni AI', data: '2026-05-13', stadio: 'Cliente', messaggio: 'Ho visto il tuo commento sul post di automazioni AI. Le aziende come SaaS Italia...', url: 'https://linkedin.com' },
+  { nome: 'Sofia Ricci', azienda: 'Ricci Immobiliare', titolo: 'Direttore', settore: 'Immobiliare', interazione: 'like', post: 'Formazione AI', data: '2026-05-13', stadio: 'Perso', messaggio: 'Ho visto che hai salvato il post sulla formazione AI...', url: 'https://linkedin.com' },
+];
+
+// ─── STATE ────────────────────────────────────────────────
+let allData = [];
+let filteredData = [];
+let currentFilter = 'tutti';
+
+// ─── INIT ─────────────────────────────────────────────────
+async function init() {
+  if (SHEET_ID === 'INSERISCI_ID_SHEET_QUI') {
+    loadData(MOCK_DATA);
+    document.getElementById('lastUpdate').textContent = 'Dati di esempio';
+    return;
+  }
+  document.getElementById('configBanner').classList.add('hidden');
+  try {
+    const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${SHEET_NAME}`;
+    const res = await fetch(url);
+    const text = await res.text();
+    const json = JSON.parse(text.substring(47).slice(0, -2));
+    const rows = json.table.rows.slice(1); // salta header
+    const data = rows.map(r => ({
+      nome: r.c[0]?.v || '',
+      azienda: r.c[1]?.v || '',
+      titolo: r.c[2]?.v || '',
+      settore: r.c[3]?.v || '',
+      interazione: r.c[4]?.v || '',
+      post: r.c[5]?.v || '',
+      data: r.c[6]?.v || '',
+      stadio: r.c[7]?.v || '',
+      messaggio: r.c[8]?.v || '',
+      url: r.c[9]?.v || '',
+    }));
+    loadData(data);
+    document.getElementById('lastUpdate').textContent = 'Aggiornato ' + new Date().toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
+  } catch(e) {
+    loadData(MOCK_DATA);
+    document.getElementById('lastUpdate').textContent = 'Errore caricamento — dati di esempio';
+    showToast('Errore connessione Sheet. Controlla config.js');
+  }
+}
+
+// ─── LOAD DATA ────────────────────────────────────────────
+function loadData(data) {
+  allData = data;
+  filteredData = [...data];
+  renderMetrics();
+  renderCharts();
+  renderTable();
+}
+
+// ─── METRICHE ────────────────────────────────────────────
+function renderMetrics() {
+  const d = allData;
+  const totali = d.length;
+  const risposte = d.filter(r => ['Risposto','Interessato','Call','Proposta','Cliente'].includes(r.stadio)).length;
+  const interessati = d.filter(r => ['Interessato','Call','Proposta','Cliente'].includes(r.stadio)).length;
+  const call = d.filter(r => ['Call','Proposta','Cliente'].includes(r.stadio)).length;
+  const clienti = d.filter(r => r.stadio === 'Cliente').length;
+
+  const oggi = new Date().toISOString().slice(0, 10);
+  const dmOggi = d.filter(r => r.data === oggi).length;
+
+  const replyRate = totali ? Math.round(risposte / totali * 100) : 0;
+  const interRate = risposte ? Math.round(interessati / risposte * 100) : 0;
+  const callRate = interessati ? Math.round(call / interessati * 100) : 0;
+  const revenue = clienti * 6000;
+
+  set('m-dm', totali);
+  set('m-dm-oggi', `+${dmOggi} oggi`);
+  set('m-reply', replyRate + '%');
+  set('m-risposte', risposte + ' risposte');
+  set('m-interessati', interessati);
+  set('m-interessati-rate', interRate + '% delle risposte');
+  set('m-call', call);
+  set('m-call-rate', callRate + '% degli interessati');
+  set('m-clienti', clienti);
+  set('m-revenue', '~€' + revenue.toLocaleString('it-IT'));
+  set('m-oggi', dmOggi);
+
+  // Pipeline
+  const stadiCounts = {};
+  ['Contattato','Risposto','Interessato','Call','Proposta','Cliente'].forEach(s => {
+    stadiCounts[s] = d.filter(r => r.stadio === s).length;
+  });
+
+  set('p-contattato', stadiCounts['Contattato']);
+  set('p-risposto', stadiCounts['Risposto']);
+  set('p-interessato', stadiCounts['Interessato']);
+  set('p-call', stadiCounts['Call']);
+  set('p-proposta', stadiCounts['Proposta']);
+  set('p-cliente', stadiCounts['Cliente']);
+
+  const rate = (a, b) => b ? Math.round(a / b * 100) + '%' : '—';
+  set('pr-risposto', rate(stadiCounts['Risposto'], totali) + ' dei contattati');
+  set('pr-interessato', rate(stadiCounts['Interessato'], stadiCounts['Risposto']) + ' delle risposte');
+  set('pr-call', rate(stadiCounts['Call'], stadiCounts['Interessato']) + ' degli interessati');
+  set('pr-proposta', rate(stadiCounts['Proposta'], stadiCounts['Call']) + ' delle call');
+  set('pr-cliente', rate(stadiCounts['Cliente'], stadiCounts['Proposta']) + ' delle proposte');
+}
+
+// ─── CHARTS ──────────────────────────────────────────────
+let chartDM, chartFunnel;
+
+function renderCharts() {
+  // Chart DM — ultimi 14 giorni
+  const days = [];
+  const dmPerDay = [];
+  for (let i = 13; i >= 0; i--) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    const key = d.toISOString().slice(0, 10);
+    days.push(d.toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit' }));
+    dmPerDay.push(allData.filter(r => r.data === key).length);
+  }
+
+  if (chartDM) chartDM.destroy();
+  chartDM = new Chart(document.getElementById('chartDM'), {
+    type: 'bar',
+    data: {
+      labels: days,
+      datasets: [{
+        data: dmPerDay,
+        backgroundColor: 'rgba(230,51,41,0.7)',
+        borderColor: '#e63329',
+        borderWidth: 1,
+        borderRadius: 4,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { color: '#1e1e1e' }, ticks: { color: '#666', font: { size: 10 } } },
+        y: { grid: { color: '#1e1e1e' }, ticks: { color: '#666', font: { size: 10 }, stepSize: 1 }, beginAtZero: true }
+      }
+    }
+  });
+
+  // Chart Funnel
+  const stadi = ['Contattato','Risposto','Interessato','Call','Proposta','Cliente'];
+  const counts = stadi.map(s => allData.filter(r => r.stadio === s).length);
+
+  if (chartFunnel) chartFunnel.destroy();
+  chartFunnel = new Chart(document.getElementById('chartFunnel'), {
+    type: 'doughnut',
+    data: {
+      labels: stadi,
+      datasets: [{
+        data: counts,
+        backgroundColor: ['#3498db','#f1c40f','#f5842a','#2ecc71','#27ae60','#1a7a43'],
+        borderColor: '#161616',
+        borderWidth: 2,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'right',
+          labels: { color: '#888', font: { size: 11 }, padding: 8 }
+        }
+      }
+    }
+  });
+}
+
+// ─── TABELLA ─────────────────────────────────────────────
+function renderTable() {
+  const tbody = document.getElementById('tableBody');
+  if (!filteredData.length) {
+    tbody.innerHTML = '<tr><td colspan="7"><div class="empty-state"><strong>Nessun prospect trovato</strong><p>Prova a cambiare i filtri.</p></div></td></tr>';
+    return;
+  }
+
+  const badgeClass = {
+    'Contattato': 'badge-contattato',
+    'Risposto': 'badge-risposto',
+    'Interessato': 'badge-interessato',
+    'Call': 'badge-call',
+    'Proposta': 'badge-call',
+    'Cliente': 'badge-cliente',
+    'Perso': 'badge-perso',
+  };
+
+  tbody.innerHTML = filteredData.map(r => `
+    <tr>
+      <td>
+        <div class="prospect-name">${esc(r.nome)}</div>
+        <div class="prospect-company">${esc(r.titolo)} — ${esc(r.azienda)}</div>
+      </td>
+      <td>
+        <span class="interaction-type ${r.interazione === 'like' ? 'interaction-like' : 'interaction-comment'}">
+          ${r.interazione === 'like' ? '♥ Like' : '💬 Commento'}
+        </span>
+      </td>
+      <td style="font-size:12px;color:var(--muted)">${esc(r.post)}</td>
+      <td style="font-size:12px;color:var(--muted);white-space:nowrap">${formatDate(r.data)}</td>
+      <td><span class="badge ${badgeClass[r.stadio] || ''}">${esc(r.stadio)}</span></td>
+      <td><div class="msg-preview" title="${esc(r.messaggio)}">${esc(r.messaggio)}</div></td>
+      <td>
+        ${r.url ? `<a class="profile-link" href="${esc(r.url)}" target="_blank">↗ LinkedIn</a>` : '<span style="color:var(--muted);font-size:11px">—</span>'}
+      </td>
+    </tr>
+  `).join('');
+}
+
+// ─── FILTRI ──────────────────────────────────────────────
+function filterTable(stadio) {
+  currentFilter = stadio;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  applyFilters();
+}
+
+function searchTable(q) {
+  applyFilters(q);
+}
+
+function applyFilters(q = document.getElementById('searchInput').value) {
+  filteredData = allData.filter(r => {
+    const matchFilter = currentFilter === 'tutti' || r.stadio === currentFilter;
+    const matchSearch = !q || (r.nome + r.azienda).toLowerCase().includes(q.toLowerCase());
+    return matchFilter && matchSearch;
+  });
+  renderTable();
+}
+
+// ─── UTILS ───────────────────────────────────────────────
+function set(id, val) { const el = document.getElementById(id); if (el) el.textContent = val; }
+function esc(s) { return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function formatDate(d) {
+  if (!d) return '—';
+  const p = d.split('-');
+  return p.length === 3 ? `${p[2]}/${p[1]}/${p[0]}` : d;
+}
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3500);
+}
+
+// Auto-refresh ogni 5 minuti
+setInterval(init, 5 * 60 * 1000);
+
+init();
+</script>
+</body>
+</html>
