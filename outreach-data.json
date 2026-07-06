@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-06T08:45:58.064379+02:00",
+  "aggiornato": "2026-07-06T14:04:00+02:00",
   "contatti": [
     {
       "id": 1,
@@ -2288,6 +2288,10 @@
     {
       "quando": "2026-07-06T13:45:00+02:00",
       "testo": "PRIMA RISPOSTA al nuovo schema: Stefano Menci ha risposto 1h dopo il messaggio esplorativo. Risposto scavando nel problema (schema: esplora, non vendere). In attesa che riveli cosa gli porta via tempo, poi si propone la call. Il metodo funziona."
+    },
+    {
+      "quando": "2026-07-06T14:04:00+02:00",
+      "testo": "controllo ore 14:04 SALTATO: guardia pre-volo fallita, nuova tab Kajabi comparsa durante l'attesa 60s = Chrome in uso da Davide/altra routine. Nessuna azione su LinkedIn. Calendly newer_than:1d verificato: 0 prenotazioni dai contatti del registro (Di Meo, Cappellacci, Venneri non in lista)."
     }
   ],
   "diario": [
