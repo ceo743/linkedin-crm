@@ -48,6 +48,9 @@
   .kpi .v small{font-size:13px;color:var(--dim);font-weight:600}
   .kpi .v.verde{color:var(--verde)} .kpi .v.acc{color:var(--acc)} .kpi .v.rosso{color:var(--rosso)}
   .kpi .e{font:600 9.5px/1 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-top:6px}
+  .kpi .v.v-goal{color:var(--verde);font-size:34px}
+  .kpi .e.e-goal{color:var(--verde);opacity:.95}
+  .kpi:first-child{background:rgba(62,207,142,.06)}
 
   .barra{height:3px;background:var(--linea);border-radius:99px;margin:14px 0 40px;overflow:hidden}
   .barra i{display:block;height:100%;width:0;background:var(--acc);border-radius:99px;transition:width 1s cubic-bezier(.2,.8,.2,1)}
@@ -201,12 +204,11 @@
   </header>
 
   <div class="kpis">
+    <div class="kpi"><div class="v v-goal" id="k_pren">–</div><div class="e e-goal">🎯 Call prenotate</div></div>
     <div class="kpi"><div class="v" id="k_inviati">–</div><div class="e">Contattati</div></div>
     <div class="kpi"><div class="v acc" id="k_msg">–</div><div class="e">Messaggi inviati</div></div>
-    <div class="kpi"><div class="v verde" id="k_risposte">–</div><div class="e">Risposte</div></div>
+    <div class="kpi"><div class="v" id="k_risposte">–</div><div class="e">Hanno risposto</div></div>
     <div class="kpi"><div class="v" id="k_seguiti">–</div><div class="e">Seguiti dovuti</div></div>
-    <div class="kpi"><div class="v acc" id="k_call">–</div><div class="e">Link call</div></div>
-    <div class="kpi"><div class="v" id="k_pren">–</div><div class="e">Prenotate</div></div>
     <div class="kpi"><div class="v rosso" id="k_approv">–</div><div class="e">Da approvare</div></div>
   </div>
   <div class="barra"><i id="barra_f"></i></div>
@@ -429,7 +431,6 @@ async function carica(){
     document.getElementById('k_msg').innerHTML=msgTot+(seguitiInv?'<small> · '+seguitiInv+' seguiti</small>':'');
     document.getElementById('k_risposte').innerHTML=ris+(inv?'<small> · '+Math.round(ris/inv*100)+'%</small>':'');
     document.getElementById('k_seguiti').textContent=seguitiDovuti;
-    document.getElementById('k_call').textContent=call.length;
     document.getElementById('k_pren').textContent=pren;
     document.getElementById('k_approv').textContent=attivi.filter(x=>!x.inviato&&!x.approvato).length;
     document.getElementById('barra_f').style.width=(attivi.length?Math.round(inv/attivi.length*100):0)+'%';
