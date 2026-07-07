@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-07 09:01",
+ "aggiornato": "2026-07-07 09:15",
  "contatti": [
   {
    "id": 1,
@@ -1753,7 +1753,20 @@
    "gestito": false,
    "prenotato": false,
    "note": "Molto ingaggiato, 3 guide richieste. In target propria attività. Primo tocco esplorativo automazione inviato 2026-07-07 07:30",
-   "seguiti": []
+   "seguiti": [
+    {
+     "n": 1,
+     "dopo_giorni": 4,
+     "inviato": null,
+     "testo": "Andrea, ti faccio un esempio concreto, di solito la parte che costa più tempo è rincorrere i preventivi o rispondere a chi ha già chiesto informazioni. È una di queste due, o è un'altra cosa?"
+    },
+    {
+     "n": 2,
+     "dopo_giorni": 5,
+     "inviato": null,
+     "testo": "Andrea, capito se non hai avuto tempo. Oggi quella parte la segui tu personalmente o hai già qualcuno che se ne occupa?"
+    }
+   ]
   },
   {
    "id": 53,
@@ -1778,7 +1791,20 @@
    "gestito": false,
    "prenotato": false,
    "note": "In target propria attività. Primo tocco esplorativo automazione inviato 2026-07-07 07:32",
-   "seguiti": []
+   "seguiti": [
+    {
+     "n": 1,
+     "dopo_giorni": 4,
+     "inviato": null,
+     "testo": "Francesco, ti faccio un esempio concreto, di solito è rispondere alle stesse domande dei clienti via email o tenere dietro alle scadenze. È una di queste due, o è un'altra cosa?"
+    },
+    {
+     "n": 2,
+     "dopo_giorni": 5,
+     "inviato": null,
+     "testo": "Francesco, capito se non hai avuto tempo. Oggi quella parte la gestisci tu direttamente o hai già qualcuno in studio che se ne occupa?"
+    }
+   ]
   },
   {
    "id": 54,
@@ -1803,7 +1829,14 @@
    "gestito": false,
    "prenotato": false,
    "note": "CALDO. Founder in target. Aveva chiesto di discutere, gli era stato chiesto numero+email, silenzio da 30/06. Inviato follow-up frictionless con Calendly linkedin 2026-07-07 07:56",
-   "seguiti": []
+   "seguiti": [
+    {
+     "n": 1,
+     "dopo_giorni": 5,
+     "inviato": null,
+     "testo": "Simone, nessuna fretta, il link resta aperto per quando vuoi bloccare i 30 minuti con Davide: https://calendly.com/dc-academy-team/consulenza-strategica-gratuita-linkedin-dc-academy"
+    }
+   ]
   },
   {
    "id": 55,
@@ -1828,7 +1861,14 @@
    "gestito": false,
    "prenotato": false,
    "note": "CALDO. Coach con propria attività. Aveva chiesto appuntamento, link AI già dato, non confermato. Nudge inviato 2026-07-07 07:56",
-   "seguiti": []
+   "seguiti": [
+    {
+     "n": 1,
+     "dopo_giorni": 5,
+     "inviato": null,
+     "testo": "Sabrina, il link resta sempre aperto per quando vuoi bloccare l'orario: https://calendly.com/dc-academy-team/consulenza-strategica-gratuita-ai"
+    }
+   ]
   },
   {
    "id": 56,
@@ -1853,7 +1893,20 @@
    "gestito": false,
    "prenotato": false,
    "note": "IN target netto avvocato. Bot non aveva risposto. Primo tocco esplorativo inviato 2026-07-07 07:56",
-   "seguiti": []
+   "seguiti": [
+    {
+     "n": 1,
+     "dopo_giorni": 4,
+     "inviato": null,
+     "testo": "Nicola, ti faccio un esempio concreto, di solito è rispondere alle stesse domande dei clienti o smistare le pratiche urgenti da quelle che possono aspettare. È una di queste due, o è un'altra cosa?"
+    },
+    {
+     "n": 2,
+     "dopo_giorni": 5,
+     "inviato": null,
+     "testo": "Nicola, capito se non hai avuto tempo. Oggi quella parte la segue lei direttamente o ha già qualcuno in studio che se ne occupa?"
+    }
+   ]
   },
   {
    "id": 57,
@@ -1878,7 +1931,20 @@
    "gestito": false,
    "prenotato": false,
    "note": "IN target propria attivita immobiliare. Primo tocco inviato 2026-07-07 08:53 | ERRORE 2026-07-07 09:01: il bot Stefania aveva GIA consegnato questa guida nel thread prima del mio messaggio. Ho rimandato il link inutilmente (duplicato). Segnalato da Davide su Carrabba. Non rimandare una terza volta.",
-   "seguiti": []
+   "seguiti": [
+    {
+     "n": 1,
+     "dopo_giorni": 4,
+     "inviato": null,
+     "testo": "Elena Maria, ti faccio un esempio concreto, di solito è rispondere subito a chi scrive fuori orario o capire chi è davvero interessato da chi guarda solo. È una di queste due, o è un'altra cosa?"
+    },
+    {
+     "n": 2,
+     "dopo_giorni": 5,
+     "inviato": null,
+     "testo": "Elena Maria, capito se non hai avuto tempo. Oggi quella parte la segui tu personalmente o hai già qualcuno che ti aiuta?"
+    }
+   ]
   },
   {
    "id": 58,
@@ -1903,7 +1969,14 @@
    "gestito": false,
    "prenotato": false,
    "note": "IN target commercialista. Aveva rimandato, nudge leggero inviato 2026-07-07 08:53",
-   "seguiti": []
+   "seguiti": [
+    {
+     "n": 1,
+     "dopo_giorni": 5,
+     "inviato": null,
+     "testo": "Francesco, ti faccio un esempio concreto, di solito è rispondere alle mail dei clienti o smistare le scadenze più urgenti. È una di queste due, o è un'altra cosa?"
+    }
+   ]
   },
   {
    "id": 59,
@@ -1928,7 +2001,20 @@
    "gestito": false,
    "prenotato": false,
    "note": "IN target coach/formatore propria attivita. Primo tocco 2026-07-07 08:57 | ERRORE 2026-07-07 09:01: il bot Stefania aveva GIA consegnato questa guida nel thread prima del mio messaggio. Ho rimandato il link inutilmente (duplicato). Segnalato da Davide su Carrabba. Non rimandare una terza volta.",
-   "seguiti": []
+   "seguiti": [
+    {
+     "n": 1,
+     "dopo_giorni": 4,
+     "inviato": null,
+     "testo": "Gian Luca, ti faccio un esempio concreto, di solito è rispondere a chi si informa sul programma o organizzare le sessioni con chi è già dentro. È una di queste due, o è un'altra cosa?"
+    },
+    {
+     "n": 2,
+     "dopo_giorni": 5,
+     "inviato": null,
+     "testo": "Gian Luca, capito se non hai avuto tempo. Oggi quella parte la segui tu personalmente o hai già qualcuno del team che se ne occupa?"
+    }
+   ]
   },
   {
    "id": 60,
@@ -1953,7 +2039,20 @@
    "gestito": false,
    "prenotato": false,
    "note": "CALDO. Consulente strategico propria attivita. Bot non aveva risposto. Primo tocco 2026-07-07 08:57",
-   "seguiti": []
+   "seguiti": [
+    {
+     "n": 1,
+     "dopo_giorni": 4,
+     "inviato": null,
+     "testo": "Dominik, ti faccio un esempio concreto, di solito è rispondere ai contatti che scrivono qui su LinkedIn o preparare i contenuti da pubblicare. È una di queste due, o è un'altra cosa?"
+    },
+    {
+     "n": 2,
+     "dopo_giorni": 5,
+     "inviato": null,
+     "testo": "Dominik, capito se non hai avuto tempo. Oggi quella parte la gestisci tu personalmente?"
+    }
+   ]
   },
   {
    "id": 62,
@@ -1978,7 +2077,20 @@
    "gestito": false,
    "prenotato": false,
    "note": "IN target agente indipendente (simile a Vito Catacchio gia accettato). Primo tocco 2026-07-07 08:57 | ERRORE 2026-07-07 09:01: il bot Stefania aveva GIA consegnato questa guida nel thread prima del mio messaggio. Ho rimandato il link inutilmente (duplicato). Segnalato da Davide su Carrabba. Non rimandare una terza volta.",
-   "seguiti": []
+   "seguiti": [
+    {
+     "n": 1,
+     "dopo_giorni": 4,
+     "inviato": null,
+     "testo": "Giuseppe, ti faccio un esempio concreto, di solito è preparare i preventivi o rispondere alle richieste dei clienti. È una di queste due, o è un'altra cosa?"
+    },
+    {
+     "n": 2,
+     "dopo_giorni": 5,
+     "inviato": null,
+     "testo": "Giuseppe, capito se non hai avuto tempo. Oggi quella parte la segui tu personalmente o hai già qualcuno che ti aiuta?"
+    }
+   ]
   }
  ],
  "servizio": [
@@ -2672,6 +2784,10 @@
   {
    "quando": "2026-07-07 09:01",
    "cosa": "ERRORE trovato da Davide: 3 contatti (Foglia id57, Caruso id59, Carrabba id62) hanno ricevuto la guida due volte perche il bot Stefania l'aveva gia consegnata nel thread e io non ho controllato prima di rimandarla. Non tocca il target/ruolo, solo ridondanza. Annotato nei record, nessun altro invio per correggere (peggiorerebbe). Fix di processo salvato in memoria."
+  },
+  {
+   "quando": "2026-07-07 09:15",
+   "cosa": "Costruito flusso di conversazione (seguiti) per i 10 contatti di stasera: seguito 1-2 scavano il problema con UN esempio concreto legato al loro mestiere (mai link, mai call), SOLO Fierro/Sabrina (che avevano gia chiesto la call esplicitamente) hanno un reminder leggero col link gia dato. La call/Calendly arriva SOLO quando il lead ammette il problema in risposta, mai nei seguiti automatici salvo i 2 casi gia caldi."
   }
  ]
 }
