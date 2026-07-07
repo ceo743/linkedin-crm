@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-07 11:20",
+ "aggiornato": "2026-07-07 11:28",
  "contatti": [
   {
    "id": 1,
@@ -343,7 +343,7 @@
    "link_call_inviato": null,
    "tipo_call": null,
    "prenotato": null,
-   "note": "1° grado, email nota: marketing@tibf.it | in coda per il 03/07 | 04/07: risposta calda gestita (conferma inviata voce Stefania), seguiti automatici SOSPESI (ha risposto: si fa sentire lui tra 2 settimane). Promemoria Stefania: se silenzio entro 20/07, riprende lei. Email avviso a stefania.carini@ inviata 04/07. | 04/07 bis: presidio automatico attivo, scadenza 20/07 gestita dalla routine (non da Stefania).",
+   "note": "1° grado, email nota: marketing@tibf.it | in coda per il 03/07 | 04/07: risposta calda gestita (conferma inviata voce Stefania), seguiti automatici SOSPESI (ha risposto: si fa sentire lui tra 2 settimane). Promemoria Stefania: se silenzio entro 20/07, riprende lei. Email avviso a stefania.carini@ inviata 04/07. | 04/07 bis: presidio automatico attivo, scadenza 20/07 gestita dalla routine (non da Stefania). | Verificato 2026-07-07 11:28: Sanchioni: email specifica del 20/07 NON ancora dovuta (oggi 07/07, scadenza 20/07). Email generale di avviso gia inviata a Stefania il 04/07 (diversa, non il richiamo). Nessuna azione oggi.",
    "messaggio": "Ciao Gianluca! Sono Stefania, lavoro con Davide Caiazzo. Sono passata dal tuo profilo: 30.000 follower e contenuti da CFO vero, roba rara qui su LinkedIn. A maggio avevi provato a prenotare una chiamata con Davide ma gli orari non ti tornavano, e la cosa mi è rimasta in sospeso. Se ti fa ancora piacere te la organizzo io su misura, anche fuori orario. Che dici?",
    "approvato": true,
    "programmato": "2026-07-03T13:35:00+02:00",
@@ -887,7 +887,7 @@
    "link_call_inviato": null,
    "tipo_call": null,
    "prenotato": null,
-   "note": "doppio controllo completo 03/07: calendario zero, CRM zero, blocklist zero | in pausa: Davide vuole partire dai download maggio/giugno 2026 | riattivato da pausa: Kajabi LTV 0,00 € verificato 03/07 sera | 04/07: nessun thread, 2 grado non connesso, pivot a collegamento con nota (267/300). messaggio in messaggio2 per dopo accettazione. | ⛔ 04/07 ERRORE PROCESSO: richiesta collegamento inviata contro la regola (mai collegamenti, solo thread esistenti). Richiesta ormai in sospeso: se accetta si gestisce nel thread, ma il caso non fa precedente. | 04/07: richiesta collegamento ANCORA pendente (non accettata) - verificata in invitation manager sent. | 04/07 13:10: collegamento ACCETTATO + suo msg cortesia; KPI check live OK (Lead OPTIN ID 8334 alberto.repetto@syntonia.biz, webinar 21/11/2024, NON in Consulenza/Setting/Conferma/buyer). Inviata conferma calda+pitch nel thread (messaggio2 adattato), seguiti STOP. | 04/07 13:55: campo messaggio2_inviato allineato (DOM conferma ultimo msg nostro alle 13:10, nessun re-invio).",
+   "note": "doppio controllo completo 03/07: calendario zero, CRM zero, blocklist zero | in pausa: Davide vuole partire dai download maggio/giugno 2026 | riattivato da pausa: Kajabi LTV 0,00 € verificato 03/07 sera | 04/07: nessun thread, 2 grado non connesso, pivot a collegamento con nota (267/300). messaggio in messaggio2 per dopo accettazione. | ⛔ 04/07 ERRORE PROCESSO: richiesta collegamento inviata contro la regola (mai collegamenti, solo thread esistenti). Richiesta ormai in sospeso: se accetta si gestisce nel thread, ma il caso non fa precedente. | 04/07: richiesta collegamento ANCORA pendente (non accettata) - verificata in invitation manager sent. | 04/07 13:10: collegamento ACCETTATO + suo msg cortesia; KPI check live OK (Lead OPTIN ID 8334 alberto.repetto@syntonia.biz, webinar 21/11/2024, NON in Consulenza/Setting/Conferma/buyer). Inviata conferma calda+pitch nel thread (messaggio2 adattato), seguiti STOP. | 04/07 13:55: campo messaggio2_inviato allineato (DOM conferma ultimo msg nostro alle 13:10, nessun re-invio). | Verificato 2026-07-07 11:28: Repetto: scadenza 08/07 (domani), non ancora dovuta oggi. Nessuna azione oggi.",
    "programmato": "2026-07-03T20:25:00+02:00",
    "in_pausa": false,
    "seguiti": [
@@ -1113,7 +1113,7 @@
    "link_call_inviato": null,
    "tipo_call": null,
    "prenotato": null,
-   "note": "doppio controllo 03/07: calendario zero, CRM zero, blocklist zero (Liguori: evento trovato era omonimo Dario Liguori) | Kajabi LTV 0,00 € | NOTA CALL: notaio = vincoli deontologici, in call parlare di autorevolezza ed educazione del pubblico, MAI acquisizione clienti | 04/07 GESTITO: risposta calda (guide non arrivano), conferma inviata nel thread + email operativa a Stefania, presidio al 08/07.",
+   "note": "doppio controllo 03/07: calendario zero, CRM zero, blocklist zero (Liguori: evento trovato era omonimo Dario Liguori) | Kajabi LTV 0,00 € | NOTA CALL: notaio = vincoli deontologici, in call parlare di autorevolezza ed educazione del pubblico, MAI acquisizione clienti | 04/07 GESTITO: risposta calda (guide non arrivano), conferma inviata nel thread + email operativa a Stefania, presidio al 08/07. | Verificato 2026-07-07 11:28: Liguori: scadenza 08/07 (domani), non ancora dovuta oggi. Nessuna azione oggi.",
    "programmato": "2026-07-03T19:55:00+02:00",
    "seguiti": [
     {
@@ -4805,6 +4805,10 @@
   {
    "quando": "2026-07-07 11:20",
    "cosa": "Trovato e risolto bug segnalato da Davide: la card \"Da gestire subito\" proponeva un seguito per Salvatore Zambrino, ma il suo invito di collegamento non e mai stato accettato (verificato ora sul profilo live, ancora 2 grado) - nessun thread reale esiste. Stesso problema trovato su Roberto Rocchi (anche lui 2 grado, mai accettato). Entrambi esclusi. Aggiunta guardia nella dashboard perche i collegamenti non accettati non generino piu falsi \"da gestire\"."
+  },
+  {
+   "quando": "2026-07-07 11:28",
+   "cosa": "Verificate su richiesta Davide le 3 prossima_azione pendenti (Sanchioni 20/07, Repetto e Liguori 08/07): nessuna scaduta oggi, nessuna email da mandare ora. Annotato nei record per tracciabilita."
   }
  ]
 }

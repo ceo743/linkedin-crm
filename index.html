@@ -121,6 +121,8 @@
   .esito{font-size:12px}
   .nota-msg{color:var(--dim);font-size:12px;margin-top:10px}
   .risposta{margin-top:12px;padding:11px 14px;border-left:2px solid var(--verde);color:var(--verde);font-size:13px;background:rgba(62,207,142,.05);border-radius:0 8px 8px 0}
+  .prossimo-passo{margin-top:12px;padding:11px 14px;border-left:2px solid var(--ambra);color:var(--testo);font-size:13px;line-height:1.6;background:rgba(245,185,95,.06);border-radius:0 8px 8px 0}
+  .prossimo-passo b{color:var(--ambra)}
   .profilo-l{font:600 11px/1 'Manrope',sans-serif;color:var(--acc);text-decoration:none;white-space:nowrap}
   .profilo-l:hover{text-decoration:underline}
 
@@ -366,6 +368,10 @@ function escludi(ev,id,nome){
   post('/escludi',{id:id,quando:new Date().toISOString()},'es'+id);
 }
 function salvaSeguito(id,n){ post('/salva_seguito',{id:id,n:n,testo:document.getElementById('fu'+id+'_'+n).value,quando:new Date().toISOString()},'esfu'+id+'_'+n); }
+function prossimoPassoHtml(x){
+  if(!x.prossima_azione || !x.prossima_azione.quando) return '';
+  return '<div class="prossimo-passo"><b>📌 Prossimo passo</b><br>Stefania deve ricontattarlo il '+fmtData(x.prossima_azione.quando)+' se lui non si è fatto sentire prima.</div>';
+}
 function seguitiHtml(x){
   if(!x.seguiti || !x.seguiti.length) return '';
   if(x.risposto||x.gestito||x.prenotato||x.escluso)
@@ -490,6 +496,7 @@ function schedaHtml(x, inPriorita){
            '<span class="esito" id="es'+x.id+'"></span>'+
          '</div>')+
       (x.risposta_testo?'<div class="risposta">'+esc(x.risposta_testo)+'</div>':'')+
+      prossimoPassoHtml(x)+
       seguitiHtml(x)+
     '</div>'+
   '</div>';
