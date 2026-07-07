@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-07 11:07",
+ "aggiornato": "2026-07-07 11:14",
  "contatti": [
   {
    "id": 1,
@@ -2095,7 +2095,7 @@
     "budget": "da verificare",
     "fonte": "guida"
    },
-   "messaggio": "",
+   "messaggio": "Nicola, visto che l'hai trovata, ti chiedo per curiosità, la guida sulle Automazioni l'hai cercata più per capire come funziona o perché nel tuo studio c'è già una parte, tipo la gestione delle email o delle scadenze fiscali, che ogni settimana ti porta via troppo tempo?",
    "approvato": false,
    "escluso": false,
    "in_pausa": false,
@@ -2103,7 +2103,7 @@
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto 2026-07-07 09:34 durante sweep opportunita. IN target (commercialista/tributarista con propria attivita). Da scrivere messaggio esplorativo prima di approvare. Ultimo suo msg era \"Trovata... grazie!!\" (guida ricevuta via email, non tramite bot).",
+   "note": "Scoperto 2026-07-07 09:34 durante sweep opportunita. IN target (commercialista/tributarista con propria attivita). Da scrivere messaggio esplorativo prima di approvare. Ultimo suo msg era \"Trovata... grazie!!\" (guida ricevuta via email, non tramite bot). | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard.",
    "seguiti": []
   },
   {
@@ -2114,7 +2114,7 @@
    "ruolo": "Family Realtor/AI Business Growth Specialist, si posiziona nell AI, obietta sul prezzo. Concorrente/ambiguo.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2138,7 +2138,7 @@
    "ruolo": "Direttore artistico cooperativa impresa sociale, solo 👍, budget sotto soglia.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2162,7 +2162,7 @@
    "ruolo": "Solo \"Laurea in Economia e Management\", nessun segnale propria attivita, solo 👍.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2186,7 +2186,7 @@
    "ruolo": "Founder/autore AI Economy, Product Zucchetti. Concorrente stesso campo AI, si auto-promuove.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2210,7 +2210,7 @@
    "ruolo": "Founder ICalendAI, CRM AI/lead-gen. Concorrente diretto stesso servizio.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2234,7 +2234,7 @@
    "ruolo": "Sales & Order Management, Logistic & Supply Chain Dpt., Account Dpt. (dipendente)",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2282,7 +2282,7 @@
    "ruolo": "Sviluppo Progetti di Comunicazione/vendite. Markettaro comunicazione.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2306,7 +2306,7 @@
    "ruolo": "Responsabile Ufficio Gare e Appalti. Gia segnalato da Davide come NON in target.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2330,7 +2330,7 @@
    "ruolo": "E-Commerce Manager, SEO+AI, Google&Meta Ads. Markettaro/growth specialist.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2354,7 +2354,7 @@
    "ruolo": "Key Account Manager at Retelit. Dipendente.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2378,7 +2378,7 @@
    "ruolo": "export dept presso Tecnocasa Climatizzazione srl. Dipendente.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2402,7 +2402,7 @@
    "ruolo": "Head of Sales & Business Development (ruolo dipendente in azienda Bandit) + docente universitario. Ambiguo/dipendente-like.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2455,15 +2455,15 @@
     "budget": "da verificare",
     "fonte": "guida"
    },
-   "messaggio": "",
-   "approvato": true,
+   "messaggio": "Roberto, ti chiedo per curiosità, la guida sulle Automazioni che ti avevo mandato l'hai scaricata più per capire come funziona o perché nel supporto che dai agli studi professionali c'è già una parte che ogni settimana ti porta via troppo tempo?",
+   "approvato": false,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Verificato 07/07/2026: IN target. Supporto tecnico studi professionali/finanza agevolata su bandi e crediti imposta (simile a Christian Viola gia accettato). Consulente propria attivita. Da scrivere messaggio esplorativo prima dell invio.",
+   "note": "Verificato 07/07/2026: IN target. Supporto tecnico studi professionali/finanza agevolata su bandi e crediti imposta (simile a Christian Viola gia accettato). Consulente propria attivita. Da scrivere messaggio esplorativo prima dell invio. | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard.",
    "seguiti": []
   },
   {
@@ -2474,7 +2474,7 @@
    "ruolo": "Solution Architect, Leading ARXivar Solutions at Able Tech. Dipendente tecnico.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2503,15 +2503,15 @@
     "budget": "da verificare",
     "fonte": "guida"
    },
-   "messaggio": "",
-   "approvato": true,
+   "messaggio": "Antonio, ti chiedo per curiosità, la guida che ti avevo mandato l'hai scaricata più per capire come funziona o perché nel tuo studio c'è già una parte, tipo la gestione delle pratiche o delle email, che ogni settimana ti porta via troppo tempo?",
+   "approvato": false,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Verificato 07/07/2026: IN target. Dottore Commercialista, Sindaco, Amministratore Indipendente. Professionista ordinistico. Da scrivere messaggio esplorativo prima dell invio.",
+   "note": "Verificato 07/07/2026: IN target. Dottore Commercialista, Sindaco, Amministratore Indipendente. Professionista ordinistico. Da scrivere messaggio esplorativo prima dell invio. | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard.",
    "seguiti": []
   },
   {
@@ -2527,15 +2527,15 @@
     "budget": "da verificare",
     "fonte": "guida"
    },
-   "messaggio": "",
-   "approvato": true,
+   "messaggio": "Giovanni, ti chiedo per curiosità, la guida che ti avevo mandato l'hai scaricata più per capire come funziona o perché nel tuo lavoro di fotografo c'è già una parte, tipo rispondere ai clienti o organizzare gli shooting, che ogni settimana ti porta via troppo tempo?",
+   "approvato": false,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Verificato 07/07/2026: IN target. Fotografo Professionista. Propria attivita (budget da verificare in call). Da scrivere messaggio esplorativo prima dell invio.",
+   "note": "Verificato 07/07/2026: IN target. Fotografo Professionista. Propria attivita (budget da verificare in call). Da scrivere messaggio esplorativo prima dell invio. | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard.",
    "seguiti": []
   },
   {
@@ -2546,7 +2546,7 @@
    "ruolo": "Sales Manager Chimica, Wellness, Cosmesi. Dipendente.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2570,7 +2570,7 @@
    "ruolo": "Headline slogan di vendita assicurazioni, ruolo non chiaro. Ambiguo.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2599,15 +2599,15 @@
     "budget": "da verificare",
     "fonte": "guida"
    },
-   "messaggio": "",
-   "approvato": true,
+   "messaggio": "Alessandro, ti chiedo per curiosità, la guida che ti avevo mandato l'hai scaricata più per capire come funziona o perché tra i tuoi brand c'è già una parte, tipo rispondere a chi vuole aprire un franchising, che ogni settimana ti porta via troppo tempo?",
+   "approvato": false,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Verificato 07/07/2026: IN target. CEO & Founder Leotron, BabyBazar, Mercatopoli, NIU.eco, Riclò, Presidente Ecoriuso. Serial entrepreneur. Da scrivere messaggio esplorativo prima dell invio.",
+   "note": "Verificato 07/07/2026: IN target. CEO & Founder Leotron, BabyBazar, Mercatopoli, NIU.eco, Riclò, Presidente Ecoriuso. Serial entrepreneur. Da scrivere messaggio esplorativo prima dell invio. | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard.",
    "seguiti": []
   },
   {
@@ -2618,7 +2618,7 @@
    "ruolo": "Marketing | Comunicazione | Eventi | Relazioni istituzionali. Markettara comunicazione.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2642,7 +2642,7 @@
    "ruolo": "Chief Accounting Officer, ambiguo tra C-level dipendente e CPA indipendente, nessuna azienda specificata.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2666,7 +2666,7 @@
    "ruolo": "Direttore SGA presso Ministero dell'Istruzione. Dipendente statale.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2695,15 +2695,15 @@
     "budget": "da verificare",
     "fonte": "guida"
    },
-   "messaggio": "",
-   "approvato": true,
+   "messaggio": "Stefano, ti chiedo per curiosità, la guida che ti avevo mandato l'hai scaricata più per capire come funziona o perché nel tuo studio c'è già una parte, tipo la gestione delle email o delle perizie, che ogni settimana ti porta via troppo tempo?",
+   "approvato": false,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Verificato 07/07/2026: IN target. Dottore Commercialista, Revisore Contabile, Adjunct Professor. Professionista ordinistico forte. Da scrivere messaggio esplorativo prima dell invio.",
+   "note": "Verificato 07/07/2026: IN target. Dottore Commercialista, Revisore Contabile, Adjunct Professor. Professionista ordinistico forte. Da scrivere messaggio esplorativo prima dell invio. | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard.",
    "seguiti": []
   },
   {
@@ -2714,7 +2714,7 @@
    "ruolo": "Executive Manager Business Development/Sales Operations, nessuna azienda propria. Ambiguo/dipendente-like.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2743,15 +2743,15 @@
     "budget": "da verificare",
     "fonte": "guida"
    },
-   "messaggio": "",
-   "approvato": true,
+   "messaggio": "Mirco, ti chiedo per curiosità, la guida che ti avevo mandato l'hai scaricata più per capire come funziona o perché nelle tue aziende c'è già una parte, tipo la gestione dei preventivi o delle richieste clienti, che ogni settimana ti porta via troppo tempo?",
+   "approvato": false,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Verificato 07/07/2026: IN target. CEO at Stalea srl and OMP srl Mechanical Components. Founder di due aziende. Da scrivere messaggio esplorativo prima dell invio.",
+   "note": "Verificato 07/07/2026: IN target. CEO at Stalea srl and OMP srl Mechanical Components. Founder di due aziende. Da scrivere messaggio esplorativo prima dell invio. | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard.",
    "seguiti": []
   },
   {
@@ -2762,7 +2762,7 @@
    "ruolo": "Founder Bella Esperanza ma con angolo marketing/ESG/CSR per altre aziende. Si sovrappone a consulente marketing, ambiguo.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2786,7 +2786,7 @@
    "ruolo": "Associate Manager (grado di consulenza aziendale tipo big4), verosimile dipendente.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2810,7 +2810,7 @@
    "ruolo": "International Executive, ruolo ambiguo senza segnale di propria attivita.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2834,7 +2834,7 @@
    "ruolo": "Bayernland Italia - sembra account aziendale/brand, non persona con propria attivita chiara.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2858,7 +2858,7 @@
    "ruolo": "Titoli fumosi da comunicazione/coach (\"Stratega della Parola\"), ambiguo, si sovrappone a comunicazione.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -2887,15 +2887,15 @@
     "budget": "da verificare",
     "fonte": "guida"
    },
-   "messaggio": "",
-   "approvato": true,
+   "messaggio": "Tiziana, ti chiedo per curiosità, la guida che ti avevo mandato l'hai scaricata più per capire come funziona o perché nel lavoro con le persone che segui c'è già una parte, tipo rispondere ai messaggi o organizzare gli incontri, che ogni settimana ti porta via troppo tempo?",
+   "approvato": false,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Verificato 07/07/2026: IN target. Founder di Shanti Ritual, Career & Learning Advisor. Coach/formatrice propria attivita. Da scrivere messaggio esplorativo prima dell invio.",
+   "note": "Verificato 07/07/2026: IN target. Founder di Shanti Ritual, Career & Learning Advisor. Coach/formatrice propria attivita. Da scrivere messaggio esplorativo prima dell invio. | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard.",
    "seguiti": []
   },
   {
@@ -2911,15 +2911,15 @@
     "budget": "da verificare",
     "fonte": "guida"
    },
-   "messaggio": "",
-   "approvato": true,
+   "messaggio": "Franco, ti chiedo per curiosità, la guida che ti avevo mandato l'hai scaricata più per capire come funziona o perché nella gestione degli affitti c'è già una parte, tipo rispondere agli ospiti o gestire le prenotazioni, che ogni settimana ti porta via troppo tempo?",
+   "approvato": false,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Verificato 07/07/2026: IN target. Affitti Brevi/Guest House. Propria attivita gestione immobili turistici. Da scrivere messaggio esplorativo prima dell invio.",
+   "note": "Verificato 07/07/2026: IN target. Affitti Brevi/Guest House. Propria attivita gestione immobili turistici. Da scrivere messaggio esplorativo prima dell invio. | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard.",
    "seguiti": []
   },
   {
@@ -2935,15 +2935,15 @@
     "budget": "da verificare",
     "fonte": "guida"
    },
-   "messaggio": "",
-   "approvato": true,
+   "messaggio": "Cala, ti chiedo per curiosità, la guida che ti avevo mandato l'hai scaricata più per capire come funziona o perché nel tuo lavoro c'è già una parte che ogni settimana ti porta via troppo tempo?",
+   "approvato": false,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Verificato 07/07/2026: IN target. Libera professione (generico, campo da chiarire in conversazione). Autonomo. Da scrivere messaggio esplorativo prima dell invio.",
+   "note": "Verificato 07/07/2026: IN target. Libera professione (generico, campo da chiarire in conversazione). Autonomo. Da scrivere messaggio esplorativo prima dell invio. | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard.",
    "seguiti": []
   },
   {
@@ -2954,7 +2954,7 @@
    "ruolo": "Cloud Architect/Service Manager/Project Manager, ruolo tecnico ambiguo, si sovrappone a IT/automazione.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
@@ -4794,6 +4794,10 @@
   {
    "quando": "2026-07-07 11:07",
    "cosa": "Verifica sweep (batch 2): 10 profili controllati (Mirco, Pfeifer, Ragni, Carello, Siller, Grandi, Bucci, Nieddu, Calogera, Camarro). 4 IN target, 6 esclusi. Interrotto da classificatore di sicurezza per apertura ripetuta di thread non autorizzata singolarmente; restano ~46 da verificare."
+  },
+  {
+   "quando": "2026-07-07 11:14",
+   "cosa": "Fix su richiesta Davide: scritti i messaggi esplorativi mancanti per 10 contatti approvati senza testo (Davide non poteva approvare un messaggio vuoto). Rimessi tutti a approvato:false per revisione manuale dalla dashboard. Sistemato anche il semaforo ruolo (rosso vero) per gli esclusi di oggi."
   }
  ]
 }
