@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-07 09:38",
+ "aggiornato": "2026-07-07 09:39",
  "contatti": [
   {
    "id": 1,
@@ -2121,7 +2121,7 @@
    "nome": "Denis Andrian",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Family Realtor/AI Business Growth Specialist, si posiziona nell AI, obietta sul prezzo. Concorrente/ambiguo.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2131,13 +2131,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Gia valutato e scartato durante triage manuale del 07/07/2026 (fuori target). Ripescato dallo sweep, ora escluso correttamente con motivo.",
    "seguiti": []
   },
   {
@@ -2145,7 +2145,7 @@
    "nome": "Francesco Panaro",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Direttore artistico cooperativa impresa sociale, solo 👍, budget sotto soglia.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2155,13 +2155,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Gia valutato e scartato durante triage manuale del 07/07/2026 (fuori target). Ripescato dallo sweep, ora escluso correttamente con motivo.",
    "seguiti": []
   },
   {
@@ -2169,7 +2169,7 @@
    "nome": "Fabrizio Di Domenico",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Solo \"Laurea in Economia e Management\", nessun segnale propria attivita, solo 👍.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2179,13 +2179,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Gia valutato e scartato durante triage manuale del 07/07/2026 (fuori target). Ripescato dallo sweep, ora escluso correttamente con motivo.",
    "seguiti": []
   },
   {
@@ -2193,7 +2193,7 @@
    "nome": "Jacopo Paoletti",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Founder/autore AI Economy, Product Zucchetti. Concorrente stesso campo AI, si auto-promuove.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2203,13 +2203,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Gia valutato e scartato durante triage manuale del 07/07/2026 (fuori target). Ripescato dallo sweep, ora escluso correttamente con motivo.",
    "seguiti": []
   },
   {
@@ -2217,7 +2217,7 @@
    "nome": "Giovanni Infuso",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Founder ICalendAI, CRM AI/lead-gen. Concorrente diretto stesso servizio.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2227,13 +2227,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Gia valutato e scartato durante triage manuale del 07/07/2026 (fuori target). Ripescato dallo sweep, ora escluso correttamente con motivo.",
    "seguiti": []
   },
   {
@@ -2265,7 +2265,7 @@
    "nome": "Enrico Anselmo",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Consulente Aziendale HR e Potenziamento Commerciale, Sales Expert. Si sovrappone al servizio, borderline concorrente.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2275,13 +2275,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Gia valutato e scartato durante triage manuale del 07/07/2026 (fuori target). Ripescato dallo sweep, ora escluso correttamente con motivo.",
    "seguiti": []
   },
   {
@@ -2289,7 +2289,7 @@
    "nome": "Filippo Verducci",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Sviluppo Progetti di Comunicazione/vendite. Markettaro comunicazione.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2299,13 +2299,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Gia valutato e scartato durante triage manuale del 07/07/2026 (fuori target). Ripescato dallo sweep, ora escluso correttamente con motivo.",
    "seguiti": []
   },
   {
@@ -2313,7 +2313,7 @@
    "nome": "Giorgio Tonelli",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Responsabile Ufficio Gare e Appalti. Gia segnalato da Davide come NON in target.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2323,13 +2323,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Gia valutato e scartato durante triage manuale del 07/07/2026 (fuori target). Ripescato dallo sweep, ora escluso correttamente con motivo.",
    "seguiti": []
   },
   {
@@ -2337,7 +2337,7 @@
    "nome": "Flaminio de Castelmur",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "E-Commerce Manager, SEO+AI, Google&Meta Ads. Markettaro/growth specialist.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2347,13 +2347,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Gia valutato e scartato durante triage manuale del 07/07/2026 (fuori target). Ripescato dallo sweep, ora escluso correttamente con motivo.",
    "seguiti": []
   },
   {
@@ -2409,7 +2409,7 @@
    "nome": "Alberto Costa, PhD",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Head of Sales & Business Development (ruolo dipendente in azienda Bandit) + docente universitario. Ambiguo/dipendente-like.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2419,13 +2419,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Gia valutato e scartato durante triage manuale del 07/07/2026 (fuori target). Ripescato dallo sweep, ora escluso correttamente con motivo.",
    "seguiti": []
   },
   {
@@ -2625,7 +2625,7 @@
    "nome": "Alessandra Bonomini",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Marketing | Comunicazione | Eventi | Relazioni istituzionali. Markettara comunicazione.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2635,13 +2635,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Gia valutato e scartato durante triage manuale del 07/07/2026 (fuori target). Ripescato dallo sweep, ora escluso correttamente con motivo.",
    "seguiti": []
   },
   {
@@ -4788,6 +4788,10 @@
   {
    "quando": "2026-07-07 09:38",
    "cosa": "SWEEP OPPORTUNITA (07/07): scorsa la messaggistica dal 07/07 al 16/06, raccolti 113 thread guida, 82 nuovi mai valutati aggiunti al registro come DA VALUTARE (ruolo non verificato, nessun messaggio inviato). Esclusi dal conteggio: gia in registro, SDA Bocconi (istituzione), Utente LinkedIn (placeholder), Fabio Outreach B2B (concorrente auto-dichiarato). Prossimo passo: verificare ruolo/headline di ognuno prima di approvare, come fatto stasera per i 10 inviati."
+  },
+  {
+   "quando": "2026-07-07 09:39",
+   "cosa": "Corretti 11 contatti ripescati dallo sweep che erano gia stati valutati e scartati stasera (giudizio dato solo a voce, mai scritto nel registro): ora escluso:true con motivo esplicito, non piu ambigui \"da verificare\"."
   }
  ]
 }
