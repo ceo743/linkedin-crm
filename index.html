@@ -2,8 +2,8 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
 <title>Outreach LinkedIn · DC Academy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -71,7 +71,11 @@
   .chi{flex:1;min-width:230px}
   .chi .n{font-size:15.5px;font-weight:800;letter-spacing:-.01em}
   .chi .r{color:var(--dim);font-size:13px;font-weight:400;margin-left:8px}
+  .chi .r.r-attesa{color:var(--ambra);font-style:italic}
   .stato-riga{font-size:12.5px;color:var(--testo);opacity:.75;margin-top:6px;line-height:1.45}
+  .ic-riga{font:600 12px/1.5 'JetBrains Mono',monospace;color:var(--dim)}
+  .ic-riga .ic-ok{color:var(--verde)}
+  .ic-riga .ic-attivo{color:var(--ambra)}
   .quando{font:400 11px/1.5 'JetBrains Mono',monospace;color:var(--dim);white-space:nowrap}
   .quando b{color:var(--testo);font-weight:600}
   .stato-t{
@@ -199,6 +203,7 @@
     <div class="titolo">
       <h1>Outreach <span>LinkedIn</span></h1>
       <div id="agg">caricamento…</div>
+      <div id="scala" style="color:var(--dim);font:400 11px/1.6 'JetBrains Mono',monospace;margin-top:2px"></div>
     </div>
     <span class="chip"><span class="vivo"></span>DC Academy · Live</span>
   </header>
@@ -206,9 +211,8 @@
   <div class="kpis">
     <div class="kpi"><div class="v v-goal" id="k_pren">–</div><div class="e e-goal">🎯 Call prenotate</div></div>
     <div class="kpi"><div class="v" id="k_inviati">–</div><div class="e">Contattati</div></div>
-    <div class="kpi"><div class="v acc" id="k_msg">–</div><div class="e">Messaggi inviati</div></div>
+    <div class="kpi"><div class="v acc" id="k_calendly">–</div><div class="e">🔗 Link Calendly inviati</div></div>
     <div class="kpi"><div class="v" id="k_risposte">–</div><div class="e">Hanno risposto</div></div>
-    <div class="kpi"><div class="v" id="k_seguiti">–</div><div class="e">Seguiti dovuti</div></div>
     <div class="kpi"><div class="v rosso" id="k_approv">–</div><div class="e">Da approvare</div></div>
   </div>
   <div class="barra"><i id="barra_f"></i></div>
@@ -253,6 +257,36 @@ function etichetta(c){
   return '<span class="stato-t">In coda</span>';
 }
 // stato in parole semplici: cosa succede ORA con questo contatto
+// date reali dei seguiti: ognuno conta i giorni dall'ULTIMO tocco (non dal primo messaggio)
+function dateSeguiti(x){
+  var base = x.inviato ? new Date(x.inviato) : null;
+  var out = [];
+  (x.seguiti||[]).forEach(function(f){
+    var due = base ? new Date(base) : null;
+    if(due) due.setDate(due.getDate()+f.dopo_giorni);
+    out.push({n:f.n, due:due, inviato:f.inviato, testo:f.testo});
+    base = f.inviato ? new Date(f.inviato) : due;
+  });
+  return out;
+}
+function msgCount(x){
+  return (x.inviato?1:0) + (x.seguiti||[]).filter(function(f){return f.inviato}).length;
+}
+// conta quante volte e' PARTITO un link Calendly (primo messaggio o un seguito, solo se gia inviato)
+function calendlyInviatiContatto(x){
+  var n=0;
+  if(x.inviato && (x.messaggio||'').indexOf('calendly.com')>-1) n++;
+  (x.seguiti||[]).forEach(function(f){ if(f.inviato && (f.testo||'').indexOf('calendly.com')>-1) n++; });
+  return n;
+}
+function contaCalendlyInviati(contatti){
+  return contatti.reduce(function(s,x){ return s+calendlyInviatiContatto(x); },0);
+}
+function prossimoTocco(x){
+  // prossima data utile: seguito non ancora inviato piu vicino, o null se non ce n'e
+  var lista=dateSeguiti(x).filter(function(f){return !f.inviato});
+  return lista.length ? lista[0].due : null;
+}
 function prossima(x){
   if(x.escluso) return 'Escluso dalla campagna, non riceve piu nulla.';
   if(x.prenotato) return 'Call prenotata.';
@@ -262,17 +296,47 @@ function prossima(x){
   if(x.inviato){
     var n=seguitoDovuto(x);
     if(n) return 'Nessuna risposta: il seguito '+n+' e da inviare (parte alla prossima sessione).';
-    var pross=(x.seguiti||[]).filter(function(f){return !f.inviato})[0];
-    if(pross){ var t=new Date(x.inviato); t.setDate(t.getDate()+pross.dopo_giorni); return 'Inviato, nessuna risposta. Prossimo tocco previsto il '+fmt(t)+'.'; }
+    var t=prossimoTocco(x);
+    if(t) return 'Inviato, nessuna risposta. Prossimo tocco previsto il '+fmt(t)+'.';
     return 'Inviato, aspetto la risposta.';
   }
   if(!x.approvato) return 'Da approvare da te prima di partire.';
   return 'In coda, parte il '+(x.programmato?fmt(x.programmato):'prossima sessione')+'.';
 }
+// riga compatta a icone: quanti messaggi, quando parte il prossimo, se ha risposto o e' in attesa
+function statoIcone(x){
+  if(x.escluso) return '<span class="ic-riga">✕ escluso</span>';
+  if(x.prenotato) return '<span class="ic-riga ic-ok">📅 call prenotata</span>';
+  var cnt=msgCount(x);
+  var parti=[];
+  if(cnt>0) parti.push('📨&nbsp;'+cnt);
+  var cal=calendlyInviatiContatto(x);
+  if(cal>0) parti.push('<span class="ic-ok">🔗&nbsp;'+cal+'</span>');
+  if(x.risposto){
+    parti.push(x.gestito ? '<span class="ic-ok">💬 risposto · gestito</span>' : '<span class="ic-attivo">💬 risposto · DA GESTIRE</span>');
+  }else if(x.inviato){
+    var t=prossimoTocco(x);
+    if(t) parti.push('🕐&nbsp;'+fmt(t));
+    else parti.push('👁 in attesa');
+  }else if(x.in_pausa){
+    parti.push('⏸ in pausa');
+  }else if(!x.approvato){
+    parti.push('⏳ da approvare');
+  }else{
+    parti.push('🕐&nbsp;'+(x.programmato?fmt(x.programmato):'prossima sessione'));
+  }
+  return '<span class="ic-riga">'+parti.join(' &nbsp;·&nbsp; ')+'</span>';
+}
+function nonVerificato(x){ return x.ruolo==='DA VERIFICARE' || !x.ruolo; }
+// il ruolo mostrato accanto al nome: mai il testo grezzo "DA VERIFICARE", un'etichetta chiara
+function ruoloVisibile(x){
+  return nonVerificato(x) ? '⏳ ruolo non ancora verificato' : x.ruolo;
+}
 function semaforo(c){
   if(!c.qualifica) return '';
   var q=c.qualifica;
-  function p(v){ return v==='ok'?'🟢':(v==='dubbio'||v==='sconosciuto')?'🟡':'🔴'; }
+  // "da verificare"/"" = non ancora controllato (giallo, non rosso: rosso vuol dire gia scartato)
+  function p(v){ return v==='ok'?'🟢':(v==='no'||v==='male')?'🔴':'🟡'; }
   return '<div class="semafori" onclick="toggle('+c.id+')">'+p(q.ruolo)+' ruolo &nbsp; '+p(q.geografia)+' geografia &nbsp; '+p(q.budget)+' budget &nbsp;·&nbsp; '+esc(q.fonte||'')+'</div>';
 }
 async function post(url, body, esitoId){
@@ -298,19 +362,16 @@ function escludi(ev,id,nome){
   post('/escludi',{id:id,quando:new Date().toISOString()},'es'+id);
 }
 function salvaSeguito(id,n){ post('/salva_seguito',{id:id,n:n,testo:document.getElementById('fu'+id+'_'+n).value,quando:new Date().toISOString()},'esfu'+id+'_'+n); }
-function dataSeguito(base, giorni){
-  if(!base) return 'parte col 1° messaggio';
-  var t=new Date(base); t.setDate(t.getDate()+giorni);
-  return t.toLocaleString('it-IT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
-}
 function seguitiHtml(x){
   if(!x.seguiti || !x.seguiti.length) return '';
   if(x.risposto||x.gestito||x.prenotato||x.escluso)
     return '<div class="nota-msg" style="margin-top:14px;color:var(--dim)">Messaggi successivi: sequenza fermata'+(x.risposto?' (ha risposto)':'')+', non partono.</div>';
+  var date=dateSeguiti(x);
   return '<div style="margin-top:16px;border-top:1px dashed var(--linea);padding-top:12px">'+
     '<div class="nota-msg" style="margin:0 0 10px;font-weight:700;color:var(--testo)">Messaggi successivi (partono solo se non risponde)</div>'+
-    x.seguiti.map(function(f){
-      var quando = f.inviato ? 'inviato '+fmt(f.inviato) : 'previsto '+dataSeguito(x.inviato, f.dopo_giorni);
+    x.seguiti.map(function(f,i){
+      var d=date[i];
+      var quando = f.inviato ? 'inviato '+fmt(f.inviato) : 'previsto '+(d.due?fmt(d.due):'parte col 1° messaggio');
       return '<div class="sg-item">'+
         '<div class="sg-head"><b>Seguito '+f.n+'</b><span class="sg-when">'+quando+'</span>'+(f.inviato?'<span class="stato-t info">inviato</span>':'')+'</div>'+
         '<div class="sg-txt">'+esc(f.testo)+'</div>'+
@@ -374,7 +435,8 @@ function prioritaCard(x){
       '<span class="pc-nome">'+esc(x.nome)+'</span>'+
       '<span class="pc-tag'+(g.tipo==='risposta'?' verde':'')+'">'+esc(tag)+'</span>'+
     '</div>'+
-    (x.ruolo?'<div class="pc-ruolo">'+esc(x.ruolo.slice(0,60))+'</div>':'')+
+    '<div class="pc-ruolo">'+esc(ruoloVisibile(x).slice(0,60))+'</div>'+
+    '<div class="stato-riga" style="margin-top:8px">'+statoIcone(x)+'</div>'+
     risp+
     '<a class="pc-btn" href="'+esc(link)+'" target="_blank">'+btn+'</a>'+
   '</div>';
@@ -387,7 +449,7 @@ function schedaHtml(x, inPriorita){
   return '<div class="scheda'+(aperti[x.id]?' aperta':'')+'" id="'+idSch+'">'+
     '<div class="testata" onclick="toggle('+x.id+')">'+
       '<span class="pallino '+classePallino(x)+'"></span>'+
-      '<div class="chi"><span class="n">'+esc(x.nome)+'</span><span class="r">'+esc(x.ruolo||'')+'</span><div class="stato-riga">'+esc(prossima(x))+'</div></div>'+
+      '<div class="chi"><span class="n">'+esc(x.nome)+'</span><span class="r'+(nonVerificato(x)?' r-attesa':'')+'">'+esc(ruoloVisibile(x))+'</span><div class="stato-riga">'+statoIcone(x)+'</div></div>'+
       etichetta(x)+
       '<a class="profilo-l" href="'+x.profilo+'" target="_blank" onclick="event.stopPropagation()">Profilo ↗</a>'+
       ((x.escluso||x.inviato)?'':(x.in_pausa
@@ -422,19 +484,17 @@ async function carica(){
     const c=d.contatti;
     const attivi=c.filter(x=>!x.escluso), fuori=c.filter(x=>x.escluso);
     const inv=attivi.filter(x=>x.inviato).length, ris=attivi.filter(x=>x.risposto).length;
-    const call=attivi.filter(x=>x.link_call_inviato), pren=attivi.filter(x=>x.prenotato).length;
-    // messaggi totali = primi messaggi inviati + seguiti inviati
-    const seguitiInv=attivi.reduce((s,x)=>s+((x.seguiti||[]).filter(f=>f.inviato).length),0);
-    const msgTot=inv+seguitiInv;
-    const seguitiDovuti=attivi.filter(x=>!!seguitoDovuto(x)).length;
-    document.getElementById('k_inviati').innerHTML=inv+'<small> / '+attivi.length+'</small>';
-    document.getElementById('k_msg').innerHTML=msgTot+(seguitiInv?'<small> · '+seguitiInv+' seguiti</small>':'');
+    const pren=attivi.filter(x=>x.prenotato).length;
+    const daValutare=attivi.filter(x=>!x.inviato&&!x.approvato).length;
+    const calendlyTot=contaCalendlyInviati(c);
+    document.getElementById('k_inviati').textContent=inv;
+    document.getElementById('k_calendly').textContent=calendlyTot;
     document.getElementById('k_risposte').innerHTML=ris+(inv?'<small> · '+Math.round(ris/inv*100)+'%</small>':'');
-    document.getElementById('k_seguiti').textContent=seguitiDovuti;
     document.getElementById('k_pren').textContent=pren;
-    document.getElementById('k_approv').textContent=attivi.filter(x=>!x.inviato&&!x.approvato).length;
+    document.getElementById('k_approv').textContent=daValutare;
     document.getElementById('barra_f').style.width=(attivi.length?Math.round(inv/attivi.length*100):0)+'%';
     document.getElementById('agg').textContent='aggiornato '+fmt(d.aggiornato)+' · si rinnova ogni 5s';
+    document.getElementById('scala').textContent=c.length+' persone nel registro totale · '+attivi.length+' in lavorazione (in target) · '+fuori.length+' escluse (fuori target o duplicati)';
 
     document.getElementById('filtri').innerHTML=filtriHtml(attivi);
     const pri=attivi.filter(x=>daGestire(x))
