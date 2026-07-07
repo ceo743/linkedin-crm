@@ -238,6 +238,7 @@
 <script>
 let aperti = {};
 function fmt(ts){ if(!ts) return ''; try{ return new Date(ts).toLocaleString('it-IT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});}catch(e){return ts} }
+function fmtData(ts){ if(!ts) return ''; try{ return new Date(ts+'T12:00:00').toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit'});}catch(e){return ts} }
 function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
 function classePallino(c){
   if(c.prenotato) return 'prenotato';
@@ -314,6 +315,9 @@ function statoIcone(x){
   if(cal>0) parti.push('<span class="ic-ok">🔗&nbsp;'+cal+'</span>');
   if(x.risposto){
     parti.push(x.gestito ? '<span class="ic-ok">💬 risposto · gestito</span>' : '<span class="ic-attivo">💬 risposto · DA GESTIRE</span>');
+    if(x.gestito && x.prossima_azione && x.prossima_azione.quando){
+      parti.push('<span class="ic-attivo">📌 richiamo il '+fmtData(x.prossima_azione.quando)+'</span>');
+    }
   }else if(x.inviato){
     var t=prossimoTocco(x);
     if(t) parti.push('🕐&nbsp;'+fmt(t));
@@ -399,6 +403,17 @@ function seguitoDovuto(x){
     return null; // il prossimo non è ancora scaduto
   }
   return null;
+}
+// ordina la lista "Tutti": chi richiede un'azione da Davide sale, chi non richiede nulla ORA scende in fondo
+function rankAzione(x){
+  if(!x.approvato && !x.inviato) return 0;                         // da approvare: azione sua
+  if(x.risposto && !x.gestito) return 0;                           // risposta non gestita (raro, di solito e' gia in priorita)
+  if(x.inviato && !x.risposto) return 1;                           // in corso, aspetta risposta/seguito
+  if(x.approvato && !x.inviato && !x.in_pausa) return 2;           // in coda, partira' da solo
+  if(x.in_pausa) return 3;                                         // fermo per scelta sua, nessuna urgenza
+  if(x.risposto && x.gestito) return 4;                            // gestito, si muove lui o Stefania a data fissata
+  if(x.prenotato) return 5;                                        // obiettivo raggiunto, non serve piu guardarlo
+  return 2;
 }
 function daGestire(x){
   if(x.escluso) return null;
@@ -516,9 +531,10 @@ async function carica(){
     }
     const filtroF=(FILTRI.find(ft=>ft.k===filtroAttivo)||FILTRI[0]).f;
     const inPri=new Set(pri.map(x=>x.id));
-    const visibili=(filtroAttivo==='tutti')
+    let visibili=(filtroAttivo==='tutti')
       ? attivi.filter(x=>!inPri.has(x.id))     // già mostrati sopra
       : attivi.filter(filtroF);
+    if(filtroAttivo==='tutti') visibili=visibili.slice().sort((a,b)=>rankAzione(a)-rankAzione(b));
     document.getElementById('lista').innerHTML=visibili.map(x=>schedaHtml(x)).join('')||'<div class="vuoto-msg">Nessun contatto per questo filtro.</div>';
     document.getElementById('esclusi').innerHTML=fuori.map(x=>schedaHtml(x)).join('');
     document.getElementById('arch_t').textContent='Archivio esclusi ('+fuori.length+')';
