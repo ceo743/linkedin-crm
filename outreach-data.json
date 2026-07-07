@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-07 08:59",
+ "aggiornato": "2026-07-07 09:01",
  "contatti": [
   {
    "id": 1,
@@ -1877,7 +1877,7 @@
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "IN target propria attivita immobiliare. Primo tocco inviato 2026-07-07 08:53",
+   "note": "IN target propria attivita immobiliare. Primo tocco inviato 2026-07-07 08:53 | ERRORE 2026-07-07 09:01: il bot Stefania aveva GIA consegnato questa guida nel thread prima del mio messaggio. Ho rimandato il link inutilmente (duplicato). Segnalato da Davide su Carrabba. Non rimandare una terza volta.",
    "seguiti": []
   },
   {
@@ -1927,7 +1927,7 @@
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "IN target coach/formatore propria attivita. Primo tocco 2026-07-07 08:57",
+   "note": "IN target coach/formatore propria attivita. Primo tocco 2026-07-07 08:57 | ERRORE 2026-07-07 09:01: il bot Stefania aveva GIA consegnato questa guida nel thread prima del mio messaggio. Ho rimandato il link inutilmente (duplicato). Segnalato da Davide su Carrabba. Non rimandare una terza volta.",
    "seguiti": []
   },
   {
@@ -1977,7 +1977,7 @@
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "IN target agente indipendente (simile a Vito Catacchio gia accettato). Primo tocco 2026-07-07 08:57",
+   "note": "IN target agente indipendente (simile a Vito Catacchio gia accettato). Primo tocco 2026-07-07 08:57 | ERRORE 2026-07-07 09:01: il bot Stefania aveva GIA consegnato questa guida nel thread prima del mio messaggio. Ho rimandato il link inutilmente (duplicato). Segnalato da Davide su Carrabba. Non rimandare una terza volta.",
    "seguiti": []
   }
  ],
@@ -2668,6 +2668,10 @@
   {
    "quando": "2026-07-07 08:59",
    "cosa": "FIX: corretti i campi messaggio di 8 contatti (53,54,55,56,57,58,59,60,62) che contenevano una MIA descrizione invece del testo reale inviato — per questo il link Calendly di Fierro/Sabrina non si vedeva in dashboard. Rimosso contatto Elena Maria Foglia duplicato vuoto (id 61, bug di un filtro). Annotato probabile duplicato Simone Fierro (id 3 storico escluso vs id 54 nuovo attivo)."
+  },
+  {
+   "quando": "2026-07-07 09:01",
+   "cosa": "ERRORE trovato da Davide: 3 contatti (Foglia id57, Caruso id59, Carrabba id62) hanno ricevuto la guida due volte perche il bot Stefania l'aveva gia consegnata nel thread e io non ho controllato prima di rimandarla. Non tocca il target/ruolo, solo ridondanza. Annotato nei record, nessun altro invio per correggere (peggiorerebbe). Fix di processo salvato in memoria."
   }
  ]
 }
