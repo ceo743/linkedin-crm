@@ -388,6 +388,8 @@ function toggle(id){
 /* ---- priorità e filtri ---- */
 function seguitoDovuto(x){
   if(!x.inviato || x.risposto || x.escluso || !x.seguiti) return null;
+  // collegamento mai accettato = nessun thread reale, il seguito non e mai inviabile
+  if(x.tipo==='collegamento' && x.collegamento_accettato!==true) return null;
   var adesso=new Date();
   for(var i=0;i<x.seguiti.length;i++){
     var f=x.seguiti[i];

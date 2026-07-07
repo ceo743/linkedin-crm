@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-07 11:14",
+ "aggiornato": "2026-07-07 11:20",
  "contatti": [
   {
    "id": 1,
@@ -274,7 +274,7 @@
    "link_call_inviato": null,
    "tipo_call": null,
    "prenotato": null,
-   "note": "email nota: s.zambrino@adrintesa.it, tel 3277785497 | in coda per il 03/07 | strategia 2 tempi: nota leggera, call solo dopo accettazione | richiesta collegamento con nota inviata (stato In sospeso verificato) | controllo 03/07 20:xx: nessuna risposta, non compare tra le conversazioni (collegamento non ancora accettato); stato invito non verificabile (lista inviti non renderizzata) | invito collegamento ancora in sospeso (non accettato) al 2026-07-03T21:05:25+02:00 | controllo ore 22: invito ancora in sospeso (non accettato), nessuna risposta | 04/07: non tra i primi inviti renderizzati in sent (lista 151, virtualizzata) - esito incerto, non forzato scroll per anti-ban. | 04/07: collegamento accettato (scomparso dagli inviti in sospeso). | 05/07 06:xx: profilo LIVE mostra 2° grado (NON collegato): l'invito era solo scomparso dagli inviti in sospeso, NON accettato. messaggio2 NON inviato (premessa 1° grado non verificata). Da riverificare stato collegamento. | 2026-07-06: flag collegamento_accettato CORRETTO a false dalla routine invio: era stale (la verifica live 05/07 mostrava 2 grado, NON collegato). messaggio2 NON inviabile (premessa 1 grado non verificata) E in stile venditore (\"Ti riservo 15 minuti\") -> DA RISCRIVERE in stile esplorativo prima di ogni invio.",
+   "note": "email nota: s.zambrino@adrintesa.it, tel 3277785497 | in coda per il 03/07 | strategia 2 tempi: nota leggera, call solo dopo accettazione | richiesta collegamento con nota inviata (stato In sospeso verificato) | controllo 03/07 20:xx: nessuna risposta, non compare tra le conversazioni (collegamento non ancora accettato); stato invito non verificabile (lista inviti non renderizzata) | invito collegamento ancora in sospeso (non accettato) al 2026-07-03T21:05:25+02:00 | controllo ore 22: invito ancora in sospeso (non accettato), nessuna risposta | 04/07: non tra i primi inviti renderizzati in sent (lista 151, virtualizzata) - esito incerto, non forzato scroll per anti-ban. | 04/07: collegamento accettato (scomparso dagli inviti in sospeso). | 05/07 06:xx: profilo LIVE mostra 2° grado (NON collegato): l'invito era solo scomparso dagli inviti in sospeso, NON accettato. messaggio2 NON inviato (premessa 1° grado non verificata). Da riverificare stato collegamento. | 2026-07-06: flag collegamento_accettato CORRETTO a false dalla routine invio: era stale (la verifica live 05/07 mostrava 2 grado, NON collegato). messaggio2 NON inviabile (premessa 1 grado non verificata) E in stile venditore (\"Ti riservo 15 minuti\") -> DA RISCRIVERE in stile esplorativo prima di ogni invio. | ESCLUSO 2026-07-07 11:20: verificato ora sul profilo live, ancora 2 grado (invito MAI accettato). Nessun thread reale esiste, i seguiti programmati non sono inviabili. Legacy da prima della regola mai-richieste-di-collegamento del 04/07.",
    "messaggio": "Ciao Salvatore, sono Stefania del team di Davide Caiazzo. A maggio ci avevi chiesto informazioni per A.D.R. Intesa. Davide lavora con pochi imprenditori selezionati e il tuo caso lo è: i tuoi clienti veri, avvocati e uffici legali, vivono su LinkedIn. Per questo ti scrivo direttamente.",
    "approvato": true,
    "programmato": "2026-07-03T13:50:00+02:00",
@@ -301,7 +301,8 @@
     }
    ],
    "collegamento_accettato": false,
-   "collegamento_accettato_at": "2026-07-04T12:05:00+02:00"
+   "collegamento_accettato_at": "2026-07-04T12:05:00+02:00",
+   "escluso": true
   },
   {
    "id": 12,
@@ -1180,7 +1181,7 @@
    "link_call_inviato": null,
    "tipo_call": null,
    "prenotato": null,
-   "note": "doppio controllo 03/07: calendario zero, CRM zero, blocklist zero (Liguori: evento trovato era omonimo Dario Liguori) | Kajabi: non contatto | 04/07: nessun thread esistente trovato (2° grado, non connesso), pivot a richiesta di collegamento con nota (260/300 char) invece di messaggio in thread. messaggio originale spostato in messaggio2 da inviare dopo accettazione. | ⛔ 04/07 ERRORE PROCESSO: richiesta collegamento inviata contro la regola (mai collegamenti, solo thread esistenti). Richiesta ormai in sospeso: se accetta si gestisce nel thread, ma il caso non fa precedente. | 04/07: richiesta collegamento ANCORA pendente (non accettata) - verificata in invitation manager sent.",
+   "note": "doppio controllo 03/07: calendario zero, CRM zero, blocklist zero (Liguori: evento trovato era omonimo Dario Liguori) | Kajabi: non contatto | 04/07: nessun thread esistente trovato (2° grado, non connesso), pivot a richiesta di collegamento con nota (260/300 char) invece di messaggio in thread. messaggio originale spostato in messaggio2 da inviare dopo accettazione. | ⛔ 04/07 ERRORE PROCESSO: richiesta collegamento inviata contro la regola (mai collegamenti, solo thread esistenti). Richiesta ormai in sospeso: se accetta si gestisce nel thread, ma il caso non fa precedente. | 04/07: richiesta collegamento ANCORA pendente (non accettata) - verificata in invitation manager sent. | ESCLUSO 2026-07-07 11:20: verificato ora sul profilo live, ancora 2 grado (invito MAI accettato). Nessun thread reale esiste, i seguiti programmati non sono inviabili. Legacy da prima della regola mai-richieste-di-collegamento del 04/07.",
    "programmato": "2026-07-03T20:10:00+02:00",
    "seguiti": [
     {
@@ -1197,7 +1198,9 @@
     }
    ],
    "in_pausa": false,
-   "messaggio2": "Ciao Roberto! Sono Stefania, lavoro con Davide Caiazzo. A maggio ci avevi chiesto una delle guide di Davide qui in messaggio. Ruoli come il tuo parlano a una platea che pesa: imprenditori e CFO che scelgono i partner dai contenuti, non dalle brochure. Davide segue pochi profili selezionati e il tuo ha una leva enorme. Se vuoi, ti metto in agenda 15 minuti con Davide: scegli tu il giorno."
+   "messaggio2": "Ciao Roberto! Sono Stefania, lavoro con Davide Caiazzo. A maggio ci avevi chiesto una delle guide di Davide qui in messaggio. Ruoli come il tuo parlano a una platea che pesa: imprenditori e CFO che scelgono i partner dai contenuti, non dalle brochure. Davide segue pochi profili selezionati e il tuo ha una leva enorme. Se vuoi, ti metto in agenda 15 minuti con Davide: scegli tu il giorno.",
+   "escluso": true,
+   "collegamento_accettato": false
   },
   {
    "id": 38,
@@ -4798,6 +4801,10 @@
   {
    "quando": "2026-07-07 11:14",
    "cosa": "Fix su richiesta Davide: scritti i messaggi esplorativi mancanti per 10 contatti approvati senza testo (Davide non poteva approvare un messaggio vuoto). Rimessi tutti a approvato:false per revisione manuale dalla dashboard. Sistemato anche il semaforo ruolo (rosso vero) per gli esclusi di oggi."
+  },
+  {
+   "quando": "2026-07-07 11:20",
+   "cosa": "Trovato e risolto bug segnalato da Davide: la card \"Da gestire subito\" proponeva un seguito per Salvatore Zambrino, ma il suo invito di collegamento non e mai stato accettato (verificato ora sul profilo live, ancora 2 grado) - nessun thread reale esiste. Stesso problema trovato su Roberto Rocchi (anche lui 2 grado, mai accettato). Entrambi esclusi. Aggiunta guardia nella dashboard perche i collegamenti non accettati non generino piu falsi \"da gestire\"."
   }
  ]
 }
