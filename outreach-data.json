@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-07 07:56",
+ "aggiornato": "2026-07-07 08:57",
  "contatti": [
   {
    "id": 1,
@@ -1854,6 +1854,156 @@
    "prenotato": false,
    "note": "IN target netto avvocato. Bot non aveva risposto. Primo tocco esplorativo inviato 2026-07-07 07:56",
    "seguiti": []
+  },
+  {
+   "id": 57,
+   "nome": "Elena Maria Foglia",
+   "profilo": "https://www.linkedin.com/in/ACoAAAQjeywB591Yx4TlL9ohocz9Aww6MH81DkY",
+   "tipo": "thread",
+   "ruolo": "Mediatrice immobiliare con mandato a titolo oneroso, Property manager, propria attivita (REA)",
+   "fonte": "thread guida (Venditore + Email)",
+   "qualifica": {
+    "ruolo": "Mediatrice immobiliare con mandato a titolo oneroso, Property manager, propria attivita (REA)",
+    "geografia": "",
+    "budget": "da verificare",
+    "fonte": "guida/thread"
+   },
+   "messaggio": "Consegnata guida Venditore + domanda automazione contatti immobiliare",
+   "approvato": true,
+   "escluso": false,
+   "in_pausa": false,
+   "inviato": true,
+   "inviato_at": "2026-07-07 08:53",
+   "risposto": false,
+   "gestito": false,
+   "prenotato": false,
+   "note": "IN target propria attivita immobiliare. Primo tocco inviato 2026-07-07 08:53",
+   "seguiti": []
+  },
+  {
+   "id": 58,
+   "nome": "Francesco Cerchiara",
+   "profilo": "https://www.linkedin.com/in/ACoAAAw9NOYBCGh5cPJ3-gy0P5SKop4GQrKvqbo",
+   "tipo": "thread",
+   "ruolo": "Commercialista (professionista ordinistico)",
+   "fonte": "thread guida Email, aveva detto ci sentiamo piu in la",
+   "qualifica": {
+    "ruolo": "Commercialista (professionista ordinistico)",
+    "geografia": "",
+    "budget": "da verificare",
+    "fonte": "guida/thread"
+   },
+   "messaggio": "Esplorativo leggero su gestione email studio",
+   "approvato": true,
+   "escluso": false,
+   "in_pausa": false,
+   "inviato": true,
+   "inviato_at": "2026-07-07 08:53",
+   "risposto": false,
+   "gestito": false,
+   "prenotato": false,
+   "note": "IN target commercialista. Aveva rimandato, nudge leggero inviato 2026-07-07 08:53",
+   "seguiti": []
+  },
+  {
+   "id": 59,
+   "nome": "Gian Luca Caruso",
+   "profilo": "https://www.linkedin.com/in/ACoAAAN2_1YBRIuwEvG-VQsAdC5AWlcBYOUuN9g",
+   "tipo": "thread",
+   "ruolo": "Voice Personal Trainer, Voice Leadership Program (proprio business, 30 anni, 3000 formati)",
+   "fonte": "thread guida Venditore",
+   "qualifica": {
+    "ruolo": "Voice Personal Trainer, Voice Leadership Program (proprio business, 30 anni, 3000 formati)",
+    "geografia": "",
+    "budget": "da verificare",
+    "fonte": "guida/thread"
+   },
+   "messaggio": "Consegnata guida + domanda automazione contatti program",
+   "approvato": true,
+   "escluso": false,
+   "in_pausa": false,
+   "inviato": true,
+   "inviato_at": "2026-07-07 08:57",
+   "risposto": false,
+   "gestito": false,
+   "prenotato": false,
+   "note": "IN target coach/formatore propria attivita. Primo tocco 2026-07-07 08:57",
+   "seguiti": []
+  },
+  {
+   "id": 60,
+   "nome": "Dominik Engel",
+   "profilo": "https://www.linkedin.com/in/ACoAADZbwSMBhBKWdBHYWKhOo27lK4iIfpI3HrY",
+   "tipo": "thread",
+   "ruolo": "Fractional CEO, Consulente Strategico, LUYAS Consulting (propria attivita), ex-AD ALDI",
+   "fonte": "thread caldo: chiedeva mappa strategica IA via mail, mai risposto",
+   "qualifica": {
+    "ruolo": "Fractional CEO, Consulente Strategico, LUYAS Consulting (propria attivita), ex-AD ALDI",
+    "geografia": "",
+    "budget": "da verificare",
+    "fonte": "guida/thread"
+   },
+   "messaggio": "Inviato link guida automazioni diretto + domanda automazione mentoring",
+   "approvato": true,
+   "escluso": false,
+   "in_pausa": false,
+   "inviato": true,
+   "inviato_at": "2026-07-07 08:57",
+   "risposto": false,
+   "gestito": false,
+   "prenotato": false,
+   "note": "CALDO. Consulente strategico propria attivita. Bot non aveva risposto. Primo tocco 2026-07-07 08:57",
+   "seguiti": []
+  },
+  {
+   "id": 61,
+   "nome": "Elena Maria Foglia",
+   "profilo": "",
+   "tipo": "thread",
+   "ruolo": "",
+   "fonte": "",
+   "qualifica": {
+    "ruolo": "",
+    "geografia": "",
+    "budget": "da verificare",
+    "fonte": "guida/thread"
+   },
+   "messaggio": "",
+   "approvato": true,
+   "escluso": false,
+   "in_pausa": false,
+   "inviato": true,
+   "inviato_at": "2026-07-07 08:57",
+   "risposto": false,
+   "gestito": false,
+   "prenotato": false,
+   "note": "DUPLICATO_SKIP",
+   "seguiti": []
+  },
+  {
+   "id": 62,
+   "nome": "Giuseppe Carrabba",
+   "profilo": "https://www.linkedin.com/in/ACoAACeoHJwBgVmevXzESISX1vgcajyAqnZ4RsQ",
+   "tipo": "thread",
+   "ruolo": "Agente/consulente tecnico macchinari vetro piano, ottimizza costi produttori (propria attivita)",
+   "fonte": "thread guida Email",
+   "qualifica": {
+    "ruolo": "Agente/consulente tecnico macchinari vetro piano, ottimizza costi produttori (propria attivita)",
+    "geografia": "",
+    "budget": "da verificare",
+    "fonte": "guida/thread"
+   },
+   "messaggio": "Consegnata guida + domanda automazione preventivi/email",
+   "approvato": true,
+   "escluso": false,
+   "in_pausa": false,
+   "inviato": true,
+   "inviato_at": "2026-07-07 08:57",
+   "risposto": false,
+   "gestito": false,
+   "prenotato": false,
+   "note": "IN target agente indipendente (simile a Vito Catacchio gia accettato). Primo tocco 2026-07-07 08:57",
+   "seguiti": []
   }
  ],
  "servizio": [
@@ -2531,6 +2681,14 @@
   {
    "quando": "2026-07-07 07:56",
    "cosa": "Grind inbox: +3 invii in target stasera oltre Palmese/Cocci = Fierro (founder EdTech, follow-up call), Sabrina Agostini (love coach, nudge Calendly), Nicola Stiaffini (avvocato, primo tocco). SKIP fuori target: Panaro, Fabrizio, Jacopo/Giovanni (concorrenti AI), Bonomini/Verducci (markettari comunicazione), Raspa (digital marketing), Anselmo (esperto vendita). Hit rate in target ~1 su 3."
+  },
+  {
+   "quando": "2026-07-07 08:53",
+   "cosa": "Continuato grind verso 10: +2 (Foglia immobiliare, Cerchiara commercialista). Skip Trione (sales dipendente), Grillo (PM senza segnali propria attivita)."
+  },
+  {
+   "quando": "2026-07-07 08:57",
+   "cosa": "TRAGUARDO 10/10 nuovi invii in target raggiunto stasera: Palmese, Cocci, Fierro(call), Sabrina(call), Stiaffini, Foglia, Cerchiara, Caruso, Engel, Carrabba. Skip fuori target: Trione/De Risi(dipendenti sales), Grillo/Costa(ambigui-dipendente), Tonelli(gare appalti gia escluso), Flaminio(e-commerce/ads markettaro), Lilla(concorrente lead-gen B2B)."
   }
  ]
 }
