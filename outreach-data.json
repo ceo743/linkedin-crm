@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-07 08:57",
+ "aggiornato": "2026-07-07 08:59",
  "contatti": [
   {
    "id": 1,
@@ -66,7 +66,7 @@
    "link_call_inviato": null,
    "tipo_call": null,
    "prenotato": null,
-   "note": "in coda per il 03/07 | ESCLUSO: founder piccolo, Napoli (regola sud Italia)",
+   "note": "in coda per il 03/07 | ESCLUSO: founder piccolo, Napoli (regola sud Italia) | NOTA 2026-07-07 08:59: probabile stesso Simone Fierro ricontattato oggi come id 54 (thread reale trovato in inbox, founder EdTech/Srl, non più piccolo founder Napoli come valutato il 03/07). id 3 resta escluso/storico, id 54 è quello attivo con follow-up Calendly.",
    "messaggio": "Ciao Simone! Riprendo il discorso che avevi aperto con Davide: competenze solide che faticano a diventare clienti. Un suo cliente nella stessa situazione ha attratto i primi 6 clienti in 30 giorni partendo da zero. Ti organizzo 15 minuti con lui per vedere come? Gratuiti e senza impegno. Stefania",
    "approvato": false,
    "programmato": "2026-07-03T08:50:00+02:00",
@@ -1768,7 +1768,7 @@
     "budget": "da verificare",
     "fonte": "guida"
    },
-   "messaggio": "Francesco, eccola la guida sull'Assistente Email AI... domanda automazione contabilità",
+   "messaggio": "Francesco, eccola la guida sull'Assistente Email AI, la trovi qui https://guida-assistente-email-ai.davidecaiazzo.it/ . Ti chiedo per curiosità, la cercavi più per capire come funziona o perché nella contabilità c'è già una parte che ogni settimana ti porta via troppo tempo?",
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
@@ -1793,7 +1793,7 @@
     "budget": "da verificare",
     "fonte": "guida/thread"
    },
-   "messaggio": "Follow-up con link Calendly DC diretto (Srl/EdTech/posizionamento)",
+   "messaggio": "Simone, ci ho ripensato e il punto che dici, avere già tutti gli asset ma non trovare il nesso vincente, è proprio il tipo di nodo che Davide sblocca meglio parlandone a voce. Invece di scambiarci numero e email, se vuoi puoi bloccare tu direttamente 30 minuti con lui qui https://calendly.com/dc-academy-team/consulenza-strategica-gratuita-linkedin-dc-academy e scegli lo slot che ti torna più comodo per ragionare insieme su Srl, EdTech e posizionamento del brand.",
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
@@ -1818,7 +1818,7 @@
     "budget": "da verificare",
     "fonte": "guida/thread"
    },
-   "messaggio": "Nudge con Calendly AI per farla prenotare",
+   "messaggio": "Sabrina, il link per bloccare la call è sempre attivo qui https://calendly.com/dc-academy-team/consulenza-strategica-gratuita-ai . Scegli lo slot che preferisci e nella call vediamo insieme come l'intelligenza artificiale può gestirti i social e le priorità per Amore Garantito, che è proprio quello su cui volevi saperne di più.",
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
@@ -1843,7 +1843,7 @@
     "budget": "da verificare",
     "fonte": "guida/thread"
    },
-   "messaggio": "Consegnata guida Email AI + domanda automazione studio",
+   "messaggio": "Nicola, eccola la guida sull'Assistente Email AI, la trovi qui https://guida-assistente-email-ai.davidecaiazzo.it/ . Ti chiedo per curiosità, la cercavi più per capire come funziona o perché nello studio c'è già una parte, tipo la gestione delle email e delle pratiche, che ogni settimana ti porta via troppo tempo?",
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
@@ -1868,7 +1868,7 @@
     "budget": "da verificare",
     "fonte": "guida/thread"
    },
-   "messaggio": "Consegnata guida Venditore + domanda automazione contatti immobiliare",
+   "messaggio": "Elena Maria, eccola la guida sul Venditore che non Dorme, la trovi qui https://guida-venditore-ai.davidecaiazzo.it/ . Ti chiedo per curiosità, la cercavi più per capire come funziona o perché nell'attività immobiliare c'è già una parte, tipo il seguire i contatti o rispondere alle richieste, che ogni settimana ti porta via troppo tempo?",
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
@@ -1893,7 +1893,7 @@
     "budget": "da verificare",
     "fonte": "guida/thread"
    },
-   "messaggio": "Esplorativo leggero su gestione email studio",
+   "messaggio": "Francesco, figurati, prendi pure il tuo tempo. Nel frattempo ti chiedo per curiosità, nello studio la gestione delle email è già una parte che ogni settimana ti porta via troppo tempo, o è più una cosa che tieni d'occhio per il futuro?",
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
@@ -1918,7 +1918,7 @@
     "budget": "da verificare",
     "fonte": "guida/thread"
    },
-   "messaggio": "Consegnata guida + domanda automazione contatti program",
+   "messaggio": "Gian Luca, eccola la guida sul Venditore che non Dorme, la trovi qui https://guida-venditore-ai.davidecaiazzo.it/ . Ti chiedo per curiosità, la cercavi più per capire come funziona o perché nel tuo Voice Leadership Program c'è già una parte, tipo seguire i contatti dei nuovi professionisti interessati, che ogni settimana ti porta via troppo tempo?",
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
@@ -1943,7 +1943,7 @@
     "budget": "da verificare",
     "fonte": "guida/thread"
    },
-   "messaggio": "Inviato link guida automazioni diretto + domanda automazione mentoring",
+   "messaggio": "Dominik, eccola qui la guida sulle Automazioni AI, la trovi direttamente a questo link https://guida-automazioni.davidecaiazzo.it/ , così non devi aspettare la mail. Ti chiedo per curiosità, nel tuo lavoro di fractional CEO e mentoring c'è già una parte, tipo la gestione dei contenuti o dei contatti su LinkedIn, che ogni settimana ti porta via troppo tempo?",
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
@@ -1953,31 +1953,6 @@
    "gestito": false,
    "prenotato": false,
    "note": "CALDO. Consulente strategico propria attivita. Bot non aveva risposto. Primo tocco 2026-07-07 08:57",
-   "seguiti": []
-  },
-  {
-   "id": 61,
-   "nome": "Elena Maria Foglia",
-   "profilo": "",
-   "tipo": "thread",
-   "ruolo": "",
-   "fonte": "",
-   "qualifica": {
-    "ruolo": "",
-    "geografia": "",
-    "budget": "da verificare",
-    "fonte": "guida/thread"
-   },
-   "messaggio": "",
-   "approvato": true,
-   "escluso": false,
-   "in_pausa": false,
-   "inviato": true,
-   "inviato_at": "2026-07-07 08:57",
-   "risposto": false,
-   "gestito": false,
-   "prenotato": false,
-   "note": "DUPLICATO_SKIP",
    "seguiti": []
   },
   {
@@ -1993,7 +1968,7 @@
     "budget": "da verificare",
     "fonte": "guida/thread"
    },
-   "messaggio": "Consegnata guida + domanda automazione preventivi/email",
+   "messaggio": "Giuseppe, eccola la guida sull'Assistente Email AI, la trovi qui https://guida-assistente-email-ai.davidecaiazzo.it/ . Ti chiedo per curiosità, la cercavi più per capire come funziona o perché nel tuo lavoro con i produttori di vetrocamera c'è già una parte, tipo la gestione delle email e dei preventivi, che ogni settimana ti porta via troppo tempo?",
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
@@ -2689,6 +2664,10 @@
   {
    "quando": "2026-07-07 08:57",
    "cosa": "TRAGUARDO 10/10 nuovi invii in target raggiunto stasera: Palmese, Cocci, Fierro(call), Sabrina(call), Stiaffini, Foglia, Cerchiara, Caruso, Engel, Carrabba. Skip fuori target: Trione/De Risi(dipendenti sales), Grillo/Costa(ambigui-dipendente), Tonelli(gare appalti gia escluso), Flaminio(e-commerce/ads markettaro), Lilla(concorrente lead-gen B2B)."
+  },
+  {
+   "quando": "2026-07-07 08:59",
+   "cosa": "FIX: corretti i campi messaggio di 8 contatti (53,54,55,56,57,58,59,60,62) che contenevano una MIA descrizione invece del testo reale inviato — per questo il link Calendly di Fierro/Sabrina non si vedeva in dashboard. Rimosso contatto Elena Maria Foglia duplicato vuoto (id 61, bug di un filtro). Annotato probabile duplicato Simone Fierro (id 3 storico escluso vs id 54 nuovo attivo)."
   }
  ]
 }
