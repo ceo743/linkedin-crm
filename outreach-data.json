@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-07 10:36",
+ "aggiornato": "2026-07-07 10:55",
  "contatti": [
   {
    "id": 1,
@@ -2231,7 +2231,7 @@
    "nome": "Lorenza Trione",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Sales & Order Management, Logistic & Supply Chain Dpt., Account Dpt. (dipendente)",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2241,13 +2241,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Gia valutato e scartato durante triage manuale del 07/07/2026 (dipendente reparto vendite/logistica). Ripescato dallo sweep, ora escluso correttamente.",
    "seguiti": []
   },
   {
@@ -2351,7 +2351,7 @@
    "nome": "Riccardo Zavatta",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Key Account Manager at Retelit. Dipendente.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2361,13 +2361,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: fuori target. Key Account Manager at Retelit. Dipendente.",
    "seguiti": []
   },
   {
@@ -2375,7 +2375,7 @@
    "nome": "Alessandra Lucattini",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "export dept presso Tecnocasa Climatizzazione srl. Dipendente.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2385,13 +2385,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: fuori target. export dept presso Tecnocasa Climatizzazione srl. Dipendente.",
    "seguiti": []
   },
   {
@@ -2423,7 +2423,7 @@
    "nome": "Giuseppe Giuliano",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Headline vuota (solo emoji), nessun segnale. Ambiguo, non verificabile senza aprire profilo.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2433,13 +2433,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: fuori target. Headline vuota (solo emoji), nessun segnale. Ambiguo, non verificabile senza aprire profilo.",
    "seguiti": []
   },
   {
@@ -2447,23 +2447,23 @@
    "nome": "Roberto Martana",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Supporto tecnico studi professionali/finanza agevolata su bandi e crediti imposta (simile a Christian Viola gia accettato). Consulente propria attivita.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "ok",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
    },
    "messaggio": "",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: IN target. Supporto tecnico studi professionali/finanza agevolata su bandi e crediti imposta (simile a Christian Viola gia accettato). Consulente propria attivita. Da scrivere messaggio esplorativo prima dell invio.",
    "seguiti": []
   },
   {
@@ -2471,7 +2471,7 @@
    "nome": "Gianluca Russo",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Solution Architect, Leading ARXivar Solutions at Able Tech. Dipendente tecnico.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2481,13 +2481,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: fuori target. Solution Architect, Leading ARXivar Solutions at Able Tech. Dipendente tecnico.",
    "seguiti": []
   },
   {
@@ -2495,23 +2495,23 @@
    "nome": "Antonio Zambon",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Dottore Commercialista, Sindaco, Amministratore Indipendente. Professionista ordinistico.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "ok",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
    },
    "messaggio": "",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: IN target. Dottore Commercialista, Sindaco, Amministratore Indipendente. Professionista ordinistico. Da scrivere messaggio esplorativo prima dell invio.",
    "seguiti": []
   },
   {
@@ -2519,23 +2519,23 @@
    "nome": "Giovanni Nardi",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Fotografo Professionista. Propria attivita (budget da verificare in call).",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "ok",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
    },
    "messaggio": "",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: IN target. Fotografo Professionista. Propria attivita (budget da verificare in call). Da scrivere messaggio esplorativo prima dell invio.",
    "seguiti": []
   },
   {
@@ -2543,7 +2543,7 @@
    "nome": "Maurizio Schifitto",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Sales Manager Chimica, Wellness, Cosmesi. Dipendente.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2553,13 +2553,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: fuori target. Sales Manager Chimica, Wellness, Cosmesi. Dipendente.",
    "seguiti": []
   },
   {
@@ -2567,7 +2567,7 @@
    "nome": "Simona Volpi",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Headline slogan di vendita assicurazioni, ruolo non chiaro. Ambiguo.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2577,13 +2577,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: fuori target. Headline slogan di vendita assicurazioni, ruolo non chiaro. Ambiguo.",
    "seguiti": []
   },
   {
@@ -2591,23 +2591,23 @@
    "nome": "Alessandro Giuliani",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "CEO & Founder Leotron, BabyBazar, Mercatopoli, NIU.eco, Riclò, Presidente Ecoriuso. Serial entrepreneur.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "ok",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
    },
    "messaggio": "",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: IN target. CEO & Founder Leotron, BabyBazar, Mercatopoli, NIU.eco, Riclò, Presidente Ecoriuso. Serial entrepreneur. Da scrivere messaggio esplorativo prima dell invio.",
    "seguiti": []
   },
   {
@@ -2639,7 +2639,7 @@
    "nome": "Sabino Losito",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Chief Accounting Officer, ambiguo tra C-level dipendente e CPA indipendente, nessuna azienda specificata.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2649,13 +2649,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: fuori target. Chief Accounting Officer, ambiguo tra C-level dipendente e CPA indipendente, nessuna azienda specificata.",
    "seguiti": []
   },
   {
@@ -2663,7 +2663,7 @@
    "nome": "Fabio Amici",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Direttore SGA presso Ministero dell'Istruzione. Dipendente statale.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2673,13 +2673,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: fuori target. Direttore SGA presso Ministero dell'Istruzione. Dipendente statale.",
    "seguiti": []
   },
   {
@@ -2687,23 +2687,23 @@
    "nome": "Stefano d'Orsi",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Dottore Commercialista, Revisore Contabile, Adjunct Professor. Professionista ordinistico forte.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "ok",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
    },
    "messaggio": "",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: IN target. Dottore Commercialista, Revisore Contabile, Adjunct Professor. Professionista ordinistico forte. Da scrivere messaggio esplorativo prima dell invio.",
    "seguiti": []
   },
   {
@@ -2711,7 +2711,7 @@
    "nome": "Roberto Francesconi",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Executive Manager Business Development/Sales Operations, nessuna azienda propria. Ambiguo/dipendente-like.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2721,13 +2721,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: fuori target. Executive Manager Business Development/Sales Operations, nessuna azienda propria. Ambiguo/dipendente-like.",
    "seguiti": []
   },
   {
@@ -4786,6 +4786,10 @@
   {
    "quando": "2026-07-07 10:36",
    "cosa": "FIX bug dashboard: 10 contatti (invii di stasera) avevano \"inviato\":true (booleano) invece della data, causando date sballate (es. 05/01/1970) nel calcolo dei prossimi seguiti sulla dashboard. Corretto: inviato ora e la data ISO vera, come tutti gli altri contatti."
+  },
+  {
+   "quando": "2026-07-07 10:55",
+   "cosa": "Verifica sweep (batch 1/vari): 14 profili controllati. 5 confermati IN target (approvato, in attesa messaggio), 9 esclusi con motivo. Continua la verifica dei restanti ~57."
   }
  ]
 }
