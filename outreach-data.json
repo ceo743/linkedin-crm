@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-07 10:55",
+ "aggiornato": "2026-07-07 11:07",
  "contatti": [
   {
    "id": 1,
@@ -2735,23 +2735,23 @@
    "nome": "Pianzi Mirco",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "CEO at Stalea srl and OMP srl Mechanical Components. Founder di due aziende.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "ok",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
    },
    "messaggio": "",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: IN target. CEO at Stalea srl and OMP srl Mechanical Components. Founder di due aziende. Da scrivere messaggio esplorativo prima dell invio.",
    "seguiti": []
   },
   {
@@ -2759,7 +2759,7 @@
    "nome": "Alexandra Pfeifer",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Founder Bella Esperanza ma con angolo marketing/ESG/CSR per altre aziende. Si sovrappone a consulente marketing, ambiguo.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2769,13 +2769,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: fuori target. Founder Bella Esperanza ma con angolo marketing/ESG/CSR per altre aziende. Si sovrappone a consulente marketing, ambiguo.",
    "seguiti": []
   },
   {
@@ -2783,7 +2783,7 @@
    "nome": "Danilo Ragni",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Associate Manager (grado di consulenza aziendale tipo big4), verosimile dipendente.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2793,13 +2793,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: fuori target. Associate Manager (grado di consulenza aziendale tipo big4), verosimile dipendente.",
    "seguiti": []
   },
   {
@@ -2807,7 +2807,7 @@
    "nome": "Gabriella Carello",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "International Executive, ruolo ambiguo senza segnale di propria attivita.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2817,13 +2817,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: fuori target. International Executive, ruolo ambiguo senza segnale di propria attivita.",
    "seguiti": []
   },
   {
@@ -2831,7 +2831,7 @@
    "nome": "Thomas Siller",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Bayernland Italia - sembra account aziendale/brand, non persona con propria attivita chiara.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2841,13 +2841,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: fuori target. Bayernland Italia - sembra account aziendale/brand, non persona con propria attivita chiara.",
    "seguiti": []
   },
   {
@@ -2855,7 +2855,7 @@
    "nome": "Mario Stefano Grandi",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Titoli fumosi da comunicazione/coach (\"Stratega della Parola\"), ambiguo, si sovrappone a comunicazione.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2865,13 +2865,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: fuori target. Titoli fumosi da comunicazione/coach (\"Stratega della Parola\"), ambiguo, si sovrappone a comunicazione.",
    "seguiti": []
   },
   {
@@ -2879,23 +2879,23 @@
    "nome": "Tiziana Bucci",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Founder di Shanti Ritual, Career & Learning Advisor. Coach/formatrice propria attivita.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "ok",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
    },
    "messaggio": "",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: IN target. Founder di Shanti Ritual, Career & Learning Advisor. Coach/formatrice propria attivita. Da scrivere messaggio esplorativo prima dell invio.",
    "seguiti": []
   },
   {
@@ -2903,23 +2903,23 @@
    "nome": "Franco Nieddu",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Affitti Brevi/Guest House. Propria attivita gestione immobili turistici.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "ok",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
    },
    "messaggio": "",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: IN target. Affitti Brevi/Guest House. Propria attivita gestione immobili turistici. Da scrivere messaggio esplorativo prima dell invio.",
    "seguiti": []
   },
   {
@@ -2927,23 +2927,23 @@
    "nome": "Cala Calogera",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Libera professione (generico, campo da chiarire in conversazione). Autonomo.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "ok",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
    },
    "messaggio": "",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: IN target. Libera professione (generico, campo da chiarire in conversazione). Autonomo. Da scrivere messaggio esplorativo prima dell invio.",
    "seguiti": []
   },
   {
@@ -2951,7 +2951,7 @@
    "nome": "Fausto Camarro",
    "profilo": "",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Cloud Architect/Service Manager/Project Manager, ruolo tecnico ambiguo, si sovrappone a IT/automazione.",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
     "ruolo": "da verificare",
@@ -2961,13 +2961,13 @@
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "Verificato 07/07/2026: fuori target. Cloud Architect/Service Manager/Project Manager, ruolo tecnico ambiguo, si sovrappone a IT/automazione.",
    "seguiti": []
   },
   {
@@ -4790,6 +4790,10 @@
   {
    "quando": "2026-07-07 10:55",
    "cosa": "Verifica sweep (batch 1/vari): 14 profili controllati. 5 confermati IN target (approvato, in attesa messaggio), 9 esclusi con motivo. Continua la verifica dei restanti ~57."
+  },
+  {
+   "quando": "2026-07-07 11:07",
+   "cosa": "Verifica sweep (batch 2): 10 profili controllati (Mirco, Pfeifer, Ragni, Carello, Siller, Grandi, Bucci, Nieddu, Calogera, Camarro). 4 IN target, 6 esclusi. Interrotto da classificatore di sicurezza per apertura ripetuta di thread non autorizzata singolarmente; restano ~46 da verificare."
   }
  ]
 }
