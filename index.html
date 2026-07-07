@@ -212,6 +212,7 @@
 
   <div class="kpis">
     <div class="kpi"><div class="v v-goal" id="k_pren">–</div><div class="e e-goal">🎯 Call prenotate</div></div>
+    <div class="kpi"><div class="v" id="k_totali">–</div><div class="e">📋 Lead totali</div></div>
     <div class="kpi"><div class="v" id="k_inviati">–</div><div class="e">Contattati</div></div>
     <div class="kpi"><div class="v acc" id="k_calendly">–</div><div class="e">🔗 Link Calendly inviati</div></div>
     <div class="kpi"><div class="v" id="k_risposte">–</div><div class="e">Hanno risposto</div></div>
@@ -511,6 +512,7 @@ async function carica(){
     const pren=attivi.filter(x=>x.prenotato).length;
     const daValutare=attivi.filter(x=>!x.inviato&&!x.approvato).length;
     const calendlyTot=contaCalendlyInviati(c);
+    document.getElementById('k_totali').textContent=c.length;
     document.getElementById('k_inviati').textContent=inv;
     document.getElementById('k_calendly').textContent=calendlyTot;
     document.getElementById('k_risposte').innerHTML=ris+(inv?'<small> · '+Math.round(ris/inv*100)+'%</small>':'');
