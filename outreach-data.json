@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-08T14:20:00+02:00",
+ "aggiornato": "2026-07-08 14:05",
  "contatti": [
   {
    "id": 1,
@@ -4028,8 +4028,8 @@
    "prenotato": false,
    "seguiti": [],
    "angolo": "automazione",
-   "creato": "2026-07-08T14:00:00+02:00",
-   "programmato": "2026-07-08T13:35:00+02:00",
+   "creato": "2026-07-08T14:05:00+02:00",
+   "programmato": "2026-07-08T14:20:00+02:00",
    "variante": "A"
   },
   {
@@ -4688,7 +4688,7 @@
    "testo": "controllo saltato, Chrome in uso"
   },
   {
-   "quando": "2026-07-08 14:20",
+   "quando": "2026-07-08 14:05",
    "cosa": "RECUPERO pipeline giornaliera: la routine schedulata di stamattina (07:02) è morta in 2-3 secondi per blocco temporaneo del limite di spesa Anthropic; il retry delle 12:26 si è interrotto dopo 10 secondi senza risposta. Rieseguita a mano da Claude (agente risolutore) nel pomeriggio. Verificati 5 contatti dal backlog di sweep (id 100,106,116,122,125) rimasti senza verifica dal 07/07: 4 esclusi con motivo reale (nessun thread, fuori scope, consulente vendite escluso, attività tecnica micro), 1 segnalato come lead calda già in gestione telefonica Stefania (Chiara Palamà, non richiamarla via bot). Trovato e qualificato 1 nuovo candidato pronto per approvazione: Antonio Arrigo (id 143), fondatore G8A Technology Srl, guida Il Venditore che non Dorme mai seguita. Interrotta la verifica dopo essere arrivati al tetto anti-ban di 15 navigazioni/ricerche in un'ora (regola guardia LinkedIn): restano circa 40 contatti nel backlog di sweep del 07/07 ancora da verificare uno per uno (ruolo, thread reale, calendario), da completare nelle prossime sessioni/routine invece di lasciarli 'da verificare' a tempo indefinito."
   }
  ],
