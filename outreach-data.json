@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-09T07:30:00+02:00",
+  "aggiornato": "2026-07-09 09:52",
   "contatti": [
     {
       "id": 1,
@@ -1065,7 +1065,7 @@
         "fonte": "commercialista singolo ma nord e ordinistico: decide Davide"
       },
       "messaggio": "Federico, a suo tempo ti avevo mandato la guida Avvocato del Diavolo. Ti faccio una domanda più da curiosa che altro, oggi i clienti nuovi dello studio ti arrivano quasi tutti da passaparola e referenze o hai già qualcosa che te li porta a prescindere?",
-      "approvato": false,
+      "approvato": true,
       "inviato": "2026-07-05T07:37:00+02:00",
       "risposto": null,
       "risposta_testo": "",
@@ -1726,7 +1726,7 @@
         "fonte": "Stima da segnali: si definisce imprenditore, azienda RETAIL REAL ESTATE MANAGEMENT S.r.l. (struttura societaria, gestione immobiliare retail = clientela business), 2.961 follower, attivo su LinkedIn. Geografia Abruzzo/Chieti borderline (centro-sud) ma controbilanciata dalla struttura S.r.l."
       },
       "messaggio": "Gustavo, a suo tempo ti avevo mandato la guida sull'Assistente Email AI. Ti chiedo per curiosità, l'hai scaricata più per capire come funziona o perché hai già in testa un processo che ti porta via troppo tempo ogni settimana?",
-      "approvato": false,
+      "approvato": true,
       "variante": "A",
       "inviato": null,
       "risposto": null,
@@ -3059,7 +3059,7 @@
         "fonte": "ok"
       },
       "messaggio": "Vittorio, a suo tempo ti avevo mandato la guida sull'Assistente Email AI. Ti chiedo per curiosità, l'hai scaricata più per capire come funziona o perché hai già in testa un processo che ti porta via troppo tempo ogni settimana?",
-      "approvato": false,
+      "approvato": true,
       "escluso": false,
       "in_pausa": false,
       "inviato": null,
@@ -3110,7 +3110,7 @@
         "fonte": "ok"
       },
       "messaggio": "Paola, a suo tempo ti avevo mandato la guida sul Venditore AI. Ti chiedo per curiosità, l'hai scaricata più per capire come funziona o perché hai già in testa qualcosa che ti porta via troppo tempo ogni settimana?",
-      "approvato": false,
+      "approvato": true,
       "escluso": false,
       "in_pausa": false,
       "inviato": null,
@@ -3364,7 +3364,8 @@
       "seguiti": [],
       "angolo": "automazione",
       "variante": "A",
-      "programmato": "2026-07-09T14:05:00+02:00"
+      "programmato": "2026-07-09T14:05:00+02:00",
+      "qualificato_il": "2026-07-09T07:30:00+02:00"
     },
     {
       "id": 116,
@@ -4028,7 +4029,7 @@
         "fonte": "Fondatore di G8A Technology Srl (assistenza informatica aziende, noleggio assistito pc/server) e di Arrigo Holding (gruppo con più iniziative, tra cui il brand Tonerhero per stampanti). Comunica al plurale (noi, la nostra azienda), clientela dichiarata business ('aziende del territorio'). Varese, Lombardia: geografia ok. Dimensione team e fatturato non verificabili da LinkedIn, quindi budget prudenzialmente dubbio: decide Davide."
       },
       "messaggio": "Antonio, ti chiedo per curiosità, la guida che ti avevo mandato l'hai scaricata più per capire come funziona o perché nella gestione dell'assistenza clienti c'è già una parte, tipo i ticket o i preventivi del noleggio, che ogni settimana ti porta via troppo tempo?",
-      "approvato": false,
+      "approvato": true,
       "escluso": false,
       "in_pausa": false,
       "inviato": null,
@@ -4704,7 +4705,12 @@
       "quando": "2026-07-08T18:52:00+02:00",
       "testo": "Invio giornaliero (run serale): rigenerato da zero KPI live (fogli Lead/Consulenza/Setting/Conferma/Rinnovi/Rate/Upsell/Da Incassare/Stefania) -> crm_liste.json (106 clienti, 2644 trattative, 2839 recuperabili), esclusi-crm.json, leads_sheet.csv (5184 righe); vecchia copia locale era del 06/07, ora aggiornata a oggi. Verifica seguiti dovuti: 0 (piu vicino Queirolo/Anilonti/Catacchio/Pizzi a 3g su 4 richiesti; Pezzini gia inviato stamattina dalla routine di recupero). Nuovi approvati pronti: 0 (unico candidato Bosi id28 in_pausa=true, saltato). Secondo tempo collegamenti: 0 inviabili (Zambrino id11 e Rocchi id37 hanno collegamento_accettato=false, non risulta accettato -> nessun thread reale, corretto non riproporli). NESSUN messaggio inviato, NESSUN accesso a LinkedIn necessario (nulla da inviare = pre-volo non richiesto). 0 email."
     },
-    "[09/07/2026 07:30] Pipeline giornaliera — thread verificati via inbox search. Esclusi: Moretti (call Davide 21/01), Nardi+De Lio (esclusi-crm), Taranto (cercatrice lavoro). Completati: Goletti (CEO CRESCENDO), Pagani (Founder YDA), Cori (Travel Designer dubbio). Thread confermati in backlog aggiornati con nota verifica."
+    "[09/07/2026 07:30] Pipeline giornaliera — thread verificati via inbox search. Esclusi: Moretti (call Davide 21/01), Nardi+De Lio (esclusi-crm), Taranto (cercatrice lavoro). Completati: Goletti (CEO CRESCENDO), Pagani (Founder YDA), Cori (Travel Designer dubbio). Thread confermati in backlog aggiornati con nota verifica.",
+    "[2026-07-09T09:45:19+02:00] Revisione 39 candidati 'da approvare' su delega esplicita di Davide (criteri gia stabiliti, controllo blocklist su esclusi-crm.json e crm_liste.json aggiornati 08/07). Approvati 5: Federico Queirolo (35), Gustavo A. Criscuolo (51), Vittorio Goletti (103), Paola Pagani (105), Antonio Arrigo (143) — tutti titolari/professionisti con propria attivita, nessuno presente in esclusi-crm. Scartati 0: nessuno (nessun match cliente in esclusi-crm, nessun ruolo chiaramente dipendente/concorrente/candidato/studente tra i verificabili). Lasciati da verificare manualmente 34: 31 con ruolo ancora 'DA VERIFICARE' nel registro (nessuna indicazione di attivita propria disponibile) + Fabrizio Bellavista(104, dubbio agenzia marketing piccola) + Riccardo Melis(114, ruolo da disambiguare tra due aziende) + Simonetta Cori(115, budget dubbio micro-business, gia flaggata 'decide Davide' dalla pipeline).",
+    {
+      "quando": "2026-07-09T09:52:00+02:00",
+      "testo": "Nuova regola di Davide: se un candidato 'da approvare' completo (ruolo determinato, non DA VERIFICARE) resta senza risposta di Davide oltre 24h dalla qualifica, la routine di invio lo approva da sola (aggiunta a outreach-invio-giornaliero/SKILL.md e outreach-pipeline-giornaliera/SKILL.md, campo qualificato_il come orologio). Applicata retroattivamente solo a Simonetta Cori (115, unica dei 34 residui gia completa: ruolo ok, budget dubbio, qualificato_il stampato 09/07 07:30, quando l'ha completata la pipeline) -> scattera domani 10/07 07:30 se Davide non decide prima. Bellavista(104) e Melis(114) restano esclusi dalla regola: hanno ancora ruolo/qualifica DA VERIFICARE, non sono decision-ready, li deve completare la pipeline prima che il timer possa partire."
+    }
   ],
   "diario": [
     {
