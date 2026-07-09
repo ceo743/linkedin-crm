@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-08 18:52",
+  "aggiornato": "2026-07-09T07:30:00+02:00",
   "contatti": [
     {
       "id": 1,
@@ -3018,7 +3018,7 @@
       "risposto": false,
       "gestito": false,
       "prenotato": false,
-      "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+      "note": "Thread inbox CONFERMATO 09/07 (ha risposto 'Ottimo grazie mille'). Guida: Assistente Email AI (24giu). Ruolo NON trovato online — da verificare su LinkedIn.",
       "seguiti": []
     },
     {
@@ -3042,23 +3042,23 @@
       "risposto": false,
       "gestito": false,
       "prenotato": false,
-      "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+      "note": "Thread inbox CONFERMATO 09/07. Guida: Assistente Email AI (24giu). Più Marika Leonardi su LI — ruolo da disambiguare.",
       "seguiti": []
     },
     {
       "id": 103,
       "nome": "Vittorio Goletti",
-      "profilo": "",
+      "profilo": "https://it.linkedin.com/in/vittoriogoletti",
       "tipo": "thread",
-      "ruolo": "DA VERIFICARE",
-      "fonte": "thread guida, scoperto da sweep inbox",
+      "ruolo": "CEO — CRESCENDO Digital Transformation (startup IT, placement sviluppatori)",
+      "fonte": "Thread DM — guida L'Assistente Email AI ricevuta 24 giu 2026",
       "qualifica": {
-        "ruolo": "da verificare",
-        "geografia": "",
-        "budget": "da verificare",
-        "fonte": "guida"
+        "ruolo": "ok",
+        "geografia": "ok",
+        "budget": "ok",
+        "fonte": "ok"
       },
-      "messaggio": "",
+      "messaggio": "Vittorio, a suo tempo ti avevo mandato la guida sull'Assistente Email AI. Ti chiedo per curiosità, l'hai scaricata più per capire come funziona o perché hai già in testa un processo che ti porta via troppo tempo ogni settimana?",
       "approvato": false,
       "escluso": false,
       "in_pausa": false,
@@ -3066,8 +3066,11 @@
       "risposto": false,
       "gestito": false,
       "prenotato": false,
-      "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
-      "seguiti": []
+      "note": "CEO CRESCENDO Digital Transformation (crescendo.plus) — startup innovativa Premio America Innovazione, 30 anni exp IT. Email: vittorio.goletti@crescendo.plus. Calendar: nessun evento. Esclusi: non presente.",
+      "seguiti": [],
+      "angolo": "automazione",
+      "variante": "A",
+      "programmato": "2026-07-09T13:35:00+02:00"
     },
     {
       "id": 104,
@@ -3090,23 +3093,23 @@
       "risposto": false,
       "gestito": false,
       "prenotato": false,
-      "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+      "note": "Thread inbox CONFERMATO 09/07. Guida: Venditore AI (24giu). Trovato: Partner Emotional Marketing — DUBBIO (agenzia marketing = out se piccola).",
       "seguiti": []
     },
     {
       "id": 105,
       "nome": "Paola Pagani",
-      "profilo": "",
+      "profilo": "https://it.linkedin.com/in/paolapagani",
       "tipo": "thread",
-      "ruolo": "DA VERIFICARE",
-      "fonte": "thread guida, scoperto da sweep inbox",
+      "ruolo": "Founder — YDA Coaching Academy (mental coach, accademia propria)",
+      "fonte": "Thread DM — guida Il Venditore che non Dorme ricevuta 23 giu 2026",
       "qualifica": {
-        "ruolo": "da verificare",
-        "geografia": "",
-        "budget": "da verificare",
-        "fonte": "guida"
+        "ruolo": "ok",
+        "geografia": "ok",
+        "budget": "ok",
+        "fonte": "ok"
       },
-      "messaggio": "",
+      "messaggio": "Paola, a suo tempo ti avevo mandato la guida sul Venditore AI. Ti chiedo per curiosità, l'hai scaricata più per capire come funziona o perché hai già in testa qualcosa che ti porta via troppo tempo ogni settimana?",
       "approvato": false,
       "escluso": false,
       "in_pausa": false,
@@ -3114,8 +3117,11 @@
       "risposto": false,
       "gestito": false,
       "prenotato": false,
-      "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
-      "seguiti": []
+      "note": "Founder YDA Coaching Academy (paolapagani.com). Ha la propria accademia, clienti sportivi e business, insegna in Università Cattolica. Email: paola@paolapagani.com. Calendar: nessun evento. Esclusi: non presente.",
+      "seguiti": [],
+      "angolo": "automazione",
+      "variante": "A",
+      "programmato": "2026-07-09T13:50:00+02:00"
     },
     {
       "id": 106,
@@ -3162,7 +3168,7 @@
       "risposto": false,
       "gestito": false,
       "prenotato": false,
-      "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+      "note": "Thread NON verificato il 09/07 (navigazione interrotta prima della lettura). Riprovare prossima sessione.",
       "seguiti": []
     },
     {
@@ -3180,13 +3186,13 @@
       },
       "messaggio": "",
       "approvato": false,
-      "escluso": false,
+      "escluso": true,
       "in_pausa": false,
       "inviato": null,
       "risposto": false,
       "gestito": false,
       "prenotato": false,
-      "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+      "note": "Calendar: Consulenza Strategica con Davide Caiazzo il 21/01/2026 (swiftysrl.com) — MAI DM bot",
       "seguiti": []
     },
     {
@@ -3210,7 +3216,7 @@
       "risposto": false,
       "gestito": false,
       "prenotato": false,
-      "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+      "note": "Thread inbox CONFERMATO 09/07. Guida: Venditore AI (22giu). Ruolo da verificare.",
       "seguiti": []
     },
     {
@@ -3234,7 +3240,7 @@
       "risposto": false,
       "gestito": false,
       "prenotato": false,
-      "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+      "note": "Thread inbox CONFERMATO 09/07. Guida: Venditore AI (22giu). Ruolo da verificare.",
       "seguiti": []
     },
     {
@@ -3258,7 +3264,7 @@
       "risposto": false,
       "gestito": false,
       "prenotato": false,
-      "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+      "note": "Thread inbox CONFERMATO 09/07. Guida: Venditore AI (22giu). Ruolo da verificare.",
       "seguiti": []
     },
     {
@@ -3276,13 +3282,13 @@
       },
       "messaggio": "",
       "approvato": false,
-      "escluso": false,
+      "escluso": true,
       "in_pausa": false,
       "inviato": null,
       "risposto": false,
       "gestito": false,
       "prenotato": false,
-      "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+      "note": "Nome presente in esclusi-crm.json",
       "seguiti": []
     },
     {
@@ -3330,23 +3336,23 @@
       "risposto": false,
       "gestito": false,
       "prenotato": false,
-      "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+      "note": "Thread inbox CONFERMATO 09/07. Guida: Venditore AI (21giu). Trovato: Riccardo Melis / EDIL SARDEGNA o COLLINI LAVORI — ruolo da disambiguare.",
       "seguiti": []
     },
     {
       "id": 115,
       "nome": "Simonetta Cori",
-      "profilo": "",
+      "profilo": "https://simonettacori.com",
       "tipo": "thread",
-      "ruolo": "DA VERIFICARE",
-      "fonte": "thread guida, scoperto da sweep inbox",
+      "ruolo": "Travel Designer — propria attività (simonettacori.com)",
+      "fonte": "Thread DM — guida Il Venditore AI ricevuta 21 giu 2026, ha risposto 'OK'",
       "qualifica": {
-        "ruolo": "da verificare",
-        "geografia": "",
-        "budget": "da verificare",
-        "fonte": "guida"
+        "ruolo": "ok",
+        "geografia": "da verificare",
+        "budget": "dubbio",
+        "fonte": "ok"
       },
-      "messaggio": "",
+      "messaggio": "Simonetta, a suo tempo ti avevo mandato la guida sul Venditore AI. Ti chiedo per curiosità, l'hai scaricata più per capire come funziona o perché hai già in testa qualcosa che ti porta via troppo tempo ogni settimana?",
       "approvato": false,
       "escluso": false,
       "in_pausa": false,
@@ -3354,8 +3360,11 @@
       "risposto": false,
       "gestito": false,
       "prenotato": false,
-      "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
-      "seguiti": []
+      "note": "Travel Designer con sito proprio (simonettacori.com). Ha risposto 'OK' alla guida. Budget DUBBIO (micro business solo?). Calendar: nessun evento. Decide Davide.",
+      "seguiti": [],
+      "angolo": "automazione",
+      "variante": "A",
+      "programmato": "2026-07-09T14:05:00+02:00"
     },
     {
       "id": 116,
@@ -3396,13 +3405,13 @@
       },
       "messaggio": "",
       "approvato": false,
-      "escluso": false,
+      "escluso": true,
       "in_pausa": false,
       "inviato": null,
       "risposto": false,
       "gestito": false,
       "prenotato": false,
-      "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+      "note": "Messaggio 'SN disposta a lavorare' — cercatrice di lavoro, NON titolare",
       "seguiti": []
     },
     {
@@ -3426,7 +3435,7 @@
       "risposto": false,
       "gestito": false,
       "prenotato": false,
-      "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+      "note": "Thread inbox CONFERMATO 09/07. Guida: Venditore AI (20giu). Ruolo da verificare.",
       "seguiti": []
     },
     {
@@ -3948,13 +3957,13 @@
       },
       "messaggio": "",
       "approvato": false,
-      "escluso": false,
+      "escluso": true,
       "in_pausa": false,
       "inviato": null,
       "risposto": false,
       "gestito": false,
       "prenotato": false,
-      "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+      "note": "Nome presente in esclusi-crm.json",
       "seguiti": []
     },
     {
@@ -4694,7 +4703,8 @@
     {
       "quando": "2026-07-08T18:52:00+02:00",
       "testo": "Invio giornaliero (run serale): rigenerato da zero KPI live (fogli Lead/Consulenza/Setting/Conferma/Rinnovi/Rate/Upsell/Da Incassare/Stefania) -> crm_liste.json (106 clienti, 2644 trattative, 2839 recuperabili), esclusi-crm.json, leads_sheet.csv (5184 righe); vecchia copia locale era del 06/07, ora aggiornata a oggi. Verifica seguiti dovuti: 0 (piu vicino Queirolo/Anilonti/Catacchio/Pizzi a 3g su 4 richiesti; Pezzini gia inviato stamattina dalla routine di recupero). Nuovi approvati pronti: 0 (unico candidato Bosi id28 in_pausa=true, saltato). Secondo tempo collegamenti: 0 inviabili (Zambrino id11 e Rocchi id37 hanno collegamento_accettato=false, non risulta accettato -> nessun thread reale, corretto non riproporli). NESSUN messaggio inviato, NESSUN accesso a LinkedIn necessario (nulla da inviare = pre-volo non richiesto). 0 email."
-    }
+    },
+    "[09/07/2026 07:30] Pipeline giornaliera — thread verificati via inbox search. Esclusi: Moretti (call Davide 21/01), Nardi+De Lio (esclusi-crm), Taranto (cercatrice lavoro). Completati: Goletti (CEO CRESCENDO), Pagani (Founder YDA), Cori (Travel Designer dubbio). Thread confermati in backlog aggiornati con nota verifica."
   ],
   "diario": [
     {
