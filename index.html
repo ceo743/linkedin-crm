@@ -123,6 +123,8 @@
   .esito{font-size:12px}
   .nota-msg{color:var(--dim);font-size:12px;margin-top:10px}
   .risposta{margin-top:12px;padding:11px 14px;border-left:2px solid var(--verde);color:var(--verde);font-size:13px;background:rgba(62,207,142,.05);border-radius:0 8px 8px 0}
+  .nostra-conferma{margin-top:8px;padding:11px 14px;border-left:2px solid var(--acc);color:var(--testo);font-size:13px;background:rgba(120,150,255,.05);border-radius:0 8px 8px 0}
+  .nostra-conferma b{color:var(--acc);display:block;margin-bottom:4px;font-size:11px;text-transform:uppercase;letter-spacing:.03em}
   .prossimo-passo{margin-top:12px;padding:11px 14px;border-left:2px solid var(--ambra);color:var(--testo);font-size:13px;line-height:1.6;background:rgba(245,185,95,.06);border-radius:0 8px 8px 0}
   .prossimo-passo b{color:var(--ambra)}
   .profilo-l{font:600 11px/1 'Manrope',sans-serif;color:var(--acc);text-decoration:none;white-space:nowrap}
@@ -499,6 +501,7 @@ function schedaHtml(x, inPriorita){
            '<span class="esito" id="es'+x.id+'"></span>'+
          '</div>')+
       (x.risposta_testo?'<div class="risposta">'+esc(x.risposta_testo)+'</div>':'')+
+      (x.risposta_conferma?'<div class="nostra-conferma"><b>La nostra risposta'+(x.gestito_il?' · '+fmt(x.gestito_il):'')+'</b>'+esc(x.risposta_conferma)+'</div>':'')+
       prossimoPassoHtml(x)+
       seguitiHtml(x)+
     '</div>'+
