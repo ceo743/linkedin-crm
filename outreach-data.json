@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-09 14:09",
+  "aggiornato": "2026-07-09 19:03",
   "contatti": [
     {
       "id": 1,
@@ -1079,7 +1079,7 @@
         {
           "n": 1,
           "dopo_giorni": 4,
-          "inviato": null,
+          "inviato": "2026-07-09T18:50:00+02:00",
           "testo": "Federico, te lo chiedo perché tra i commercialisti il caso più comune è la gestione delle mail e delle scadenze coi clienti ancora tutta a mano. Da te è così o quella parte l'hai già sistemata?"
         },
         {
@@ -1455,7 +1455,7 @@
         {
           "n": 1,
           "dopo_giorni": 4,
-          "inviato": null,
+          "inviato": "2026-07-09T18:52:00+02:00",
           "testo": "Andrea, te lo chiedo perché chi fa il tuo lavoro spesso perde ore a rimettere insieme report e dati dei clienti a mano. Nei tuoi mandati è così o hai già un modo per non farlo?"
         },
         {
@@ -1491,7 +1491,7 @@
         {
           "n": 1,
           "dopo_giorni": 4,
-          "inviato": null,
+          "inviato": "2026-07-09T18:53:00+02:00",
           "testo": "Vito, te lo chiedo perché nel tuo lavoro spesso il tempo se ne va a preparare preventivi e confronti tra soluzioni a mano. Da te è così o l'hai già velocizzato?"
         },
         {
@@ -1527,7 +1527,7 @@
         {
           "n": 1,
           "dopo_giorni": 4,
-          "inviato": null,
+          "inviato": "2026-07-09T18:55:00+02:00",
           "testo": "Fabio, te lo chiedo perché nel noleggio e nelle flotte spesso le ore se ne vanno tra preventivi e gestione contratti a mano. Da te è così o hai già automatizzato quel pezzo?"
         },
         {
@@ -1735,7 +1735,7 @@
       "messaggio": "Gustavo, a suo tempo ti avevo mandato la guida sull'Assistente Email AI. Ti chiedo per curiosità, l'hai scaricata più per capire come funziona o perché hai già in testa un processo che ti porta via troppo tempo ogni settimana?",
       "approvato": true,
       "variante": "A",
-      "inviato": null,
+      "inviato": "2026-07-09T18:59:00+02:00",
       "risposto": null,
       "programmato": "2026-07-07T13:35:00+02:00",
       "creato": "2026-07-07T07:21:06+02:00"
@@ -3096,7 +3096,7 @@
       },
       "messaggio": "Vittorio, a suo tempo ti avevo mandato la guida sull'Assistente Email AI. Ti chiedo per curiosità, l'hai scaricata più per capire come funziona o perché hai già in testa un processo che ti porta via troppo tempo ogni settimana?",
       "approvato": true,
-      "escluso": false,
+      "escluso": true,
       "in_pausa": false,
       "inviato": null,
       "risposto": false,
@@ -3106,7 +3106,8 @@
       "seguiti": [],
       "angolo": "automazione",
       "variante": "A",
-      "programmato": "2026-07-09T13:35:00+02:00"
+      "programmato": "2026-07-09T13:35:00+02:00",
+      "motivo_esclusione": "trovato in crm_liste.json/trattative: Vittorio Goletti Goletti, vittorio.goletti@crescendo.plus (stesso dominio crescendo.plus del ruolo CEO CRESCENDO), consulenza 21/11/2024, stato Conferma (in corso) — deal attivo, mai bot"
     },
     {
       "id": 104,
@@ -3149,7 +3150,7 @@
       "approvato": true,
       "escluso": false,
       "in_pausa": false,
-      "inviato": null,
+      "inviato": "2026-07-09T19:01:00+02:00",
       "risposto": false,
       "gestito": false,
       "prenotato": false,
@@ -4066,7 +4067,7 @@
       },
       "messaggio": "Antonio, ti chiedo per curiosità, la guida che ti avevo mandato l'hai scaricata più per capire come funziona o perché nella gestione dell'assistenza clienti c'è già una parte, tipo i ticket o i preventivi del noleggio, che ogni settimana ti porta via troppo tempo?",
       "approvato": true,
-      "escluso": false,
+      "escluso": true,
       "in_pausa": false,
       "inviato": null,
       "risposto": null,
@@ -4076,7 +4077,8 @@
       "angolo": "automazione",
       "creato": "2026-07-08T14:05:00+02:00",
       "programmato": "2026-07-08T14:20:00+02:00",
-      "variante": "A"
+      "variante": "A",
+      "motivo_esclusione": "trovato in crm_liste.json/trattative: Antonio Arrigo, antonio.arrigo@g8a.it, foglio Setting (stesso dominio g8a.it del ruolo G8A Technology Srl) — gia in gestione umana, mai bot"
     },
     {
       "id": 144,
@@ -4750,6 +4752,14 @@
     {
       "quando": "2026-07-09T14:09:00+02:00",
       "testo": "Controllo ore 14:01-14:09 (guardia pre-volo ok, nessuna variazione tab in 60s): verificati 32 contatti inviati/non risposti via inbox filter=unread. 4 nuove risposte trovate e GESTITE per intero (conferma nel thread + aggiornamento registro): Massimo Pezzini(38, rifiuto netto cortese 'già automatizzato tutto', chiuso+escluso), Pianzi Mirco(90, problema ammesso tempo/preventivi, guida rimandata, call proposta link AI, presidio 14/07), Andrea Palmese(52, solo scambio email per reinvio guida, riproposta domanda esplorativa, presidio 12/07), Alessandro Giuliani(84, rimanda a settembre dopo migliorie funnel, porta aperta, presidio 01/09). Nessun collegamento nuovo accettato rilevato in questo giro (non controllato per tempo). Nessuna prenotazione Calendly nuova controllata (non fatto per tempo). NON completato per limite 15 minuti: verifica presidio scaduto (08/07) di Alberto Repetto(30) e Notaio Liguori(36) - ricerca LinkedIn non ha trovato i thread in tempo utile, da fare nella prossima esecuzione. Guardia segna-non-letto: verificato via API che solo i 4 thread gestiti sono passati da non letto a letto, nessun altro thread toccato per errore, nessun re-mark necessario. Email a Stefania NON ancora inviate per i 4 gestiti di oggi - da fare a breve fuori da questo giro orario per rispettare il tetto tempo. | Email a Stefania (Ccn ceo@) INVIATA con successo (draft Gmail + click Invia confermato, dialog chiuso) per tutti e 4 i casi gestiti."
+    },
+    {
+      "quando": "2026-07-09T18:52:00+02:00",
+      "testo": "Doppio controllo pre-invio (regola 03/07): rifatti da zero calendario+blocklist+CRM+Kajabi per i 4 nuovi approvati pronti (Criscuolo id51, Arrigo id143, Goletti id103, Pagani id105). Trovati 2 MATCH CRITICI in crm_liste.json/trattative (file 08/07, <24h) sfuggiti alla revisione candidati delle 09:45: Antonio Arrigo = stessa persona del foglio Setting (email antonio.arrigo@g8a.it, dominio G8A identico al ruolo) -> gia in gestione umana Stefania, ESCLUSO senza invio. Vittorio Goletti = stessa persona del foglio Consulenza/Conferma (email vittorio.goletti@crescendo.plus, dominio CRESCENDO identico al ruolo), consulenza 21/11/2024 stato Conferma in corso -> deal attivo, ESCLUSO senza invio. Criscuolo (calendario 0 eventi, CRM pulito, Kajabi gustavo.criscuolo@rremanagement.it LTV 0,00 euro) e Pagani (calendario match e Raffaella Pagani, persona diversa da Paola; CRM Paola solo in recuperabili/Lead; Kajabi paola@paolapagani.com LTV 0,00 euro) risultano puliti, procedo con invio."
+    },
+    {
+      "quando": "2026-07-09T19:03:00+02:00",
+      "testo": "Invio giornaliero (sera): guardia pre-volo ok (60s+ senza variazioni tab). 6 messaggi inviati nel rispetto del tetto 10/giorno, 10-11 min di distanza: 4 SEGUITI dovuti (Federico Queirolo id35 18:50, Andrea Anilonti id42 18:52, Vito Catacchio id43 18:53, Fabio Pizzi id44 18:55 -- tutti verificati ultimo messaggio nostro, nessuna risposta) + 2 NUOVI approvati (Gustavo A. Criscuolo id51 18:59, Paola Pagani id105 19:01). PRIMA di questi due nuovi, rifatto da zero il doppio controllo pre-invio (calendario+CRM+blocklist+Kajabi) sui 4 nuovi approvati pronti in coda: TROVATI 2 MATCH CRITICI sfuggiti alla revisione candidati delle 09:45 -- Antonio Arrigo (id143) e Vittorio Goletti (id103) risultano la STESSA persona di due contatti gia in crm_liste.json/trattative (email aziendale identica al ruolo: antonio.arrigo@g8a.it foglio Setting; vittorio.goletti@crescendo.plus foglio Consulenza/Conferma in corso, consulenza 21/11/2024). Entrambi ESCLUSI senza invio, motivo scritto nel contatto, email aggiunte a esclusi-crm.json. Criscuolo e Pagani invece puliti su tutti e 4 i controlli (calendario 0 eventi/persona diversa, CRM solo Lead/recuperabili, Kajabi LTV 0,00 euro) -> inviati. Guardia segna-non-letto: snapshot iniziale 3 non letti (voyager API, primi 20 per rilevanza), snapshot finale 2 dei 3 ancora presenti e non letti (Raul Casadio + un secondo); il terzo non piu nei primi 20 per via dei 6 nuovi thread attivi che hanno spinto giu la lista per rilevanza (non per lettura) -- verificato con filtro Da leggere: decine di thread non letti preesistenti e indipendenti dalla sessione odierna, nessuno dei 6 lavorati oggi tra quelli da ripristinare, nessun thread estraneo aperto (solo test funzionale su Ester Piovesana, gia letto in partenza). Nessun ripristino necessario. Tab chiuse. 0 collegamenti secondo tempo. 0 email a Stefania (nessuna risposta calda oggi in questo giro)."
     }
   ],
   "diario": [
