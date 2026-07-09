@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-09 09:52",
+  "aggiornato": "2026-07-09 14:09",
   "contatti": [
     {
       "id": 1,
@@ -1220,12 +1220,12 @@
       "messaggio": "Ciao Massimo! Sono Stefania, lavoro con Davide Caiazzo. A giugno ci avevi chiesto una delle guide di Davide qui in messaggio. Con 23.000 follower il pubblico ce l'hai già: la differenza tra follower e clienti però la fa il sistema dietro, ed è il lavoro di Davide. Un suo cliente con un pubblico simile ha superato i 100 clienti di fascia alta. Ti va di vederlo in 15 minuti con Davide? Ti organizzo io tutto.",
       "approvato": true,
       "inviato": "2026-07-03T20:40:00+02:00",
-      "risposto": null,
-      "risposta_testo": "",
+      "risposto": true,
+      "risposta_testo": "Ho automatizzato tutto con AI grazie",
       "link_call_inviato": null,
       "tipo_call": null,
       "prenotato": null,
-      "note": "doppio controllo 03/07: calendario zero, CRM zero, blocklist zero (Liguori: evento trovato era omonimo Dario Liguori) | Kajabi LTV 0,00 € | 04/07 VERIFICA: messaggio risulta INVIATO nel thread LinkedIn (ultimo msg \"Tu: Ciao Massimo...\"), era rimasto inviato ieri sera nonostante la confusione col dialog. Registro allineato.",
+      "note": "doppio controllo 03/07: calendario zero, CRM zero, blocklist zero (Liguori: evento trovato era omonimo Dario Liguori) | Kajabi LTV 0,00 € | 04/07 VERIFICA: messaggio risulta INVIATO nel thread LinkedIn (ultimo msg \"Tu: Ciao Massimo...\"), era rimasto inviato ieri sera nonostante la confusione col dialog. Registro allineato. | 09/07 14:05: risposta ricevuta (già automatizzato tutto), rifiuto netto cortese, chiuso con ringraziamento, nessuna call proposta.",
       "programmato": "2026-07-03T20:40:00+02:00",
       "seguiti": [
         {
@@ -1241,7 +1241,14 @@
           "testo": "Massimo, ultima cosa e poi ti lascio in pace. Se il tema ti gira, Davide in 30 minuti ti fa vedere cosa si può togliere dalle tue giornate. Se non fa per te nessun problema, decidi tu."
         }
       ],
-      "in_pausa": false
+      "in_pausa": false,
+      "risposta_at": "2026-07-09T14:01:00+02:00",
+      "gestito": true,
+      "gestito_il": "2026-07-09T14:05:00+02:00",
+      "risposta_conferma": "Fantastico Massimo, complimenti! Buon lavoro. Stefania",
+      "stop_seguiti": true,
+      "escluso": true,
+      "prossima_azione": null
     },
     {
       "id": 39,
@@ -1751,10 +1758,10 @@
       "escluso": false,
       "in_pausa": false,
       "inviato": "2026-07-07 07:30",
-      "risposto": false,
-      "gestito": false,
+      "risposto": true,
+      "gestito": true,
       "prenotato": false,
-      "note": "Molto ingaggiato, 3 guide richieste. In target propria attività. Primo tocco esplorativo automazione inviato 2026-07-07 07:30",
+      "note": "Molto ingaggiato, 3 guide richieste. In target propria attività. Primo tocco esplorativo automazione inviato 2026-07-07 07:30 | 09/07 14:06: scambio solo logistico (email per reinvio guida non arrivata), rimandato link + riproposta domanda esplorativa, nessun problema ancora ammesso, nessuna call proposta.",
       "seguiti": [
         {
           "n": 1,
@@ -1768,7 +1775,16 @@
           "inviato": null,
           "testo": "Andrea, capito se non hai avuto tempo. Oggi quella parte la segui tu personalmente o hai già qualcuno che se ne occupa?"
         }
-      ]
+      ],
+      "risposta_testo": "Palmeseunit@gmail.com",
+      "risposta_at": "2026-07-08T18:16:00+02:00",
+      "gestito_il": "2026-07-09T14:06:00+02:00",
+      "risposta_conferma": "Grazie Andrea! Ecco il link diretto, così non serve aspettare la mail: https://guida-venditore-ai.davidecaiazzo.it/ . Curiosità: quella parte del lavoro commerciale (gestione lead, follow-up) oggi ti porta via tempo o l'hai già sistemata?",
+      "stop_seguiti": true,
+      "prossima_azione": {
+        "quando": "2026-07-12",
+        "cosa": "Se Andrea non ha risposto alla domanda esplorativa sul tempo: valutare un secondo tentativo o chiudere se resta silente."
+      }
     },
     {
       "id": 53,
@@ -2607,11 +2623,20 @@
       "escluso": false,
       "in_pausa": false,
       "inviato": "2026-07-07 14:49",
-      "risposto": false,
-      "gestito": false,
+      "risposto": true,
+      "gestito": true,
       "prenotato": false,
-      "note": "Verificato 07/07/2026: IN target. CEO & Founder Leotron, BabyBazar, Mercatopoli, NIU.eco, Riclò, Presidente Ecoriuso. Serial entrepreneur. Da scrivere messaggio esplorativo prima dell invio. | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard. | Inviato 2026-07-07 14:49",
-      "seguiti": []
+      "note": "Verificato 07/07/2026: IN target. CEO & Founder Leotron, BabyBazar, Mercatopoli, NIU.eco, Riclò, Presidente Ecoriuso. Serial entrepreneur. Da scrivere messaggio esplorativo prima dell invio. | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard. | Inviato 2026-07-07 14:49 | 09/07 14:06: rimanda a settembre (funnel già in parte automatizzato, valutazione più approfondita prevista), nessuna call ora, porta aperta.",
+      "seguiti": [],
+      "risposta_testo": "Ciao. In parte il funnel è già automatizzato. L'ho scaricata per capire se c'erano degli spunti interessanti. A settembre apporteremo delle migliorie al funnel delle nuove affiliazioni e farò un valutazione più approfondita.",
+      "risposta_at": "2026-07-08T17:43:00+02:00",
+      "gestito_il": "2026-07-09T14:06:00+02:00",
+      "risposta_conferma": "Perfetto Alessandro, in bocca al lupo con le migliorie sul funnel! Se a settembre ti va un confronto veloce con Davide su come strutturarle, scrivimi pure qui e ci penso io.",
+      "stop_seguiti": true,
+      "prossima_azione": {
+        "quando": "2026-09-01",
+        "cosa": "Riprendere il contatto chiedendo come sono andate le migliorie al funnel di settembre e riproporre eventuale confronto con Davide."
+      }
     },
     {
       "id": 85,
@@ -2751,11 +2776,22 @@
       "escluso": false,
       "in_pausa": false,
       "inviato": "2026-07-07 14:52",
-      "risposto": false,
-      "gestito": false,
+      "risposto": true,
+      "gestito": true,
       "prenotato": false,
-      "note": "Verificato 07/07/2026: IN target. CEO at Stalea srl and OMP srl Mechanical Components. Founder di due aziende. Da scrivere messaggio esplorativo prima dell invio. | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard. | Inviato 2026-07-07 14:52",
-      "seguiti": []
+      "note": "Verificato 07/07/2026: IN target. CEO at Stalea srl and OMP srl Mechanical Components. Founder di due aziende. Da scrivere messaggio esplorativo prima dell invio. | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard. | Inviato 2026-07-07 14:52 | 09/07 14:06: rispose ammettendo problema (gestione preventivi/tempo), rimandata guida (non arrivata), proposta call con link Calendly AI.",
+      "seguiti": [],
+      "risposta_testo": "Non trovo nulla era arrivata via mail o qui su LinkedIn? Comunque la risposta è che porta via tempo.",
+      "risposta_at": "2026-07-08T18:34:00+02:00",
+      "gestito_il": "2026-07-09T14:06:00+02:00",
+      "risposta_conferma": "Mirco, grazie e scusa per il disguido! Eccola di nuovo: https://guida-automazioni.davidecaiazzo.it/ . Sul discorso tempo: capito, è proprio il tema su cui Davide lavora con imprenditori come te, per automatizzare preventivi e richieste clienti. In 30 minuti te lo fa vedere concretamente. Se vuoi blocca tu l'orario che preferisci qui: https://calendly.com/dc-academy-team/consulenza-strategica-gratuita-ai . Stefania",
+      "stop_seguiti": true,
+      "link_call_inviato": "https://calendly.com/dc-academy-team/consulenza-strategica-gratuita-ai",
+      "tipo_call": "ai",
+      "prossima_azione": {
+        "quando": "2026-07-14",
+        "cosa": "Se Mirco non ha prenotato su Calendly e non ha scritto altro nel thread: email a Stefania (Ccn ceo@) per proporgli lei 2-3 orari a mano."
+      }
     },
     {
       "id": 91,
@@ -4710,6 +4746,10 @@
     {
       "quando": "2026-07-09T09:52:00+02:00",
       "testo": "Nuova regola di Davide: se un candidato 'da approvare' completo (ruolo determinato, non DA VERIFICARE) resta senza risposta di Davide oltre 24h dalla qualifica, la routine di invio lo approva da sola (aggiunta a outreach-invio-giornaliero/SKILL.md e outreach-pipeline-giornaliera/SKILL.md, campo qualificato_il come orologio). Applicata retroattivamente solo a Simonetta Cori (115, unica dei 34 residui gia completa: ruolo ok, budget dubbio, qualificato_il stampato 09/07 07:30, quando l'ha completata la pipeline) -> scattera domani 10/07 07:30 se Davide non decide prima. Bellavista(104) e Melis(114) restano esclusi dalla regola: hanno ancora ruolo/qualifica DA VERIFICARE, non sono decision-ready, li deve completare la pipeline prima che il timer possa partire."
+    },
+    {
+      "quando": "2026-07-09T14:09:00+02:00",
+      "testo": "Controllo ore 14:01-14:09 (guardia pre-volo ok, nessuna variazione tab in 60s): verificati 32 contatti inviati/non risposti via inbox filter=unread. 4 nuove risposte trovate e GESTITE per intero (conferma nel thread + aggiornamento registro): Massimo Pezzini(38, rifiuto netto cortese 'già automatizzato tutto', chiuso+escluso), Pianzi Mirco(90, problema ammesso tempo/preventivi, guida rimandata, call proposta link AI, presidio 14/07), Andrea Palmese(52, solo scambio email per reinvio guida, riproposta domanda esplorativa, presidio 12/07), Alessandro Giuliani(84, rimanda a settembre dopo migliorie funnel, porta aperta, presidio 01/09). Nessun collegamento nuovo accettato rilevato in questo giro (non controllato per tempo). Nessuna prenotazione Calendly nuova controllata (non fatto per tempo). NON completato per limite 15 minuti: verifica presidio scaduto (08/07) di Alberto Repetto(30) e Notaio Liguori(36) - ricerca LinkedIn non ha trovato i thread in tempo utile, da fare nella prossima esecuzione. Guardia segna-non-letto: verificato via API che solo i 4 thread gestiti sono passati da non letto a letto, nessun altro thread toccato per errore, nessun re-mark necessario. Email a Stefania NON ancora inviate per i 4 gestiti di oggi - da fare a breve fuori da questo giro orario per rispettare il tetto tempo. | Email a Stefania (Ccn ceo@) INVIATA con successo (draft Gmail + click Invia confermato, dialog chiuso) per tutti e 4 i casi gestiti."
     }
   ],
   "diario": [
