@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-10T14:24:00+02:00",
+  "aggiornato": "2026-07-10T14:36:00+02:00",
   "contatti": [
     {
       "id": 1,
@@ -887,7 +887,7 @@
       "link_call_inviato": null,
       "tipo_call": null,
       "prenotato": null,
-      "note": "doppio controllo completo 03/07: calendario zero, CRM zero, blocklist zero | in pausa: Davide vuole partire dai download maggio/giugno 2026 | riattivato da pausa: Kajabi LTV 0,00 € verificato 03/07 sera | 04/07: nessun thread, 2 grado non connesso, pivot a collegamento con nota (267/300). messaggio in messaggio2 per dopo accettazione. | ⛔ 04/07 ERRORE PROCESSO: richiesta collegamento inviata contro la regola (mai collegamenti, solo thread esistenti). Richiesta ormai in sospeso: se accetta si gestisce nel thread, ma il caso non fa precedente. | 04/07: richiesta collegamento ANCORA pendente (non accettata) - verificata in invitation manager sent. | 04/07 13:10: collegamento ACCETTATO + suo msg cortesia; KPI check live OK (Lead OPTIN ID 8334 alberto.repetto@syntonia.biz, webinar 21/11/2024, NON in Consulenza/Setting/Conferma/buyer). Inviata conferma calda+pitch nel thread (messaggio2 adattato), seguiti STOP. | 04/07 13:55: campo messaggio2_inviato allineato (DOM conferma ultimo msg nostro alle 13:10, nessun re-invio). | Verificato 2026-07-07 11:28: Repetto: scadenza 08/07 (domani), non ancora dovuta oggi. Nessuna azione oggi.",
+      "note": "doppio controllo completo 03/07: calendario zero, CRM zero, blocklist zero | in pausa: Davide vuole partire dai download maggio/giugno 2026 | riattivato da pausa: Kajabi LTV 0,00 € verificato 03/07 sera | 04/07: nessun thread, 2 grado non connesso, pivot a collegamento con nota (267/300). messaggio in messaggio2 per dopo accettazione. | ⛔ 04/07 ERRORE PROCESSO: richiesta collegamento inviata contro la regola (mai collegamenti, solo thread esistenti). Richiesta ormai in sospeso: se accetta si gestisce nel thread, ma il caso non fa precedente. | 04/07: richiesta collegamento ANCORA pendente (non accettata) - verificata in invitation manager sent. | 04/07 13:10: collegamento ACCETTATO + suo msg cortesia; KPI check live OK (Lead OPTIN ID 8334 alberto.repetto@syntonia.biz, webinar 21/11/2024, NON in Consulenza/Setting/Conferma/buyer). Inviata conferma calda+pitch nel thread (messaggio2 adattato), seguiti STOP. | 04/07 13:55: campo messaggio2_inviato allineato (DOM conferma ultimo msg nostro alle 13:10, nessun re-invio). | Verificato 2026-07-07 11:28: Repetto: scadenza 08/07 (domani), non ancora dovuta oggi. Nessuna azione oggi. | 10/07 14:36: verificato nessuna risposta nuova nel thread (non presente in lista non letti), inviata email a Stefania (Ccn ceo@) per ripresa a mano con orari, prossima_azione spostata al 15/07.",
       "programmato": "2026-07-03T20:25:00+02:00",
       "in_pausa": false,
       "seguiti": [
@@ -932,8 +932,8 @@
       "stop_seguiti": true,
       "email": "alberto.repetto@syntonia.biz",
       "prossima_azione": {
-        "quando": "2026-07-08",
-        "cosa": "Se nessun nuovo messaggio di Alberto nel thread dopo il 04/07: email a Stefania (Ccn ceo@) con testo suggerito per riprenderlo lei proponendo 2-3 orari a mano (mai Calendly). Poi nuova prossima_azione a +5 giorni."
+        "quando": "2026-07-15",
+        "cosa": "Se nessun nuovo messaggio di Alberto nel thread dopo il 10/07: verificare se Stefania lo ha ripreso e nuova prossima_azione a +5 giorni; altrimenti valutare se chiudere la pratica."
       },
       "messaggio2_inviato": "2026-07-04T13:10:00+02:00"
     },
@@ -1113,7 +1113,7 @@
       "link_call_inviato": null,
       "tipo_call": null,
       "prenotato": null,
-      "note": "doppio controllo 03/07: calendario zero, CRM zero, blocklist zero (Liguori: evento trovato era omonimo Dario Liguori) | Kajabi LTV 0,00 € | NOTA CALL: notaio = vincoli deontologici, in call parlare di autorevolezza ed educazione del pubblico, MAI acquisizione clienti | 04/07 GESTITO: risposta calda (guide non arrivano), conferma inviata nel thread + email operativa a Stefania, presidio al 08/07. | Verificato 2026-07-07 11:28: Liguori: scadenza 08/07 (domani), non ancora dovuta oggi. Nessuna azione oggi.",
+      "note": "doppio controllo 03/07: calendario zero, CRM zero, blocklist zero (Liguori: evento trovato era omonimo Dario Liguori) | Kajabi LTV 0,00 € | NOTA CALL: notaio = vincoli deontologici, in call parlare di autorevolezza ed educazione del pubblico, MAI acquisizione clienti | 04/07 GESTITO: risposta calda (guide non arrivano), conferma inviata nel thread + email operativa a Stefania, presidio al 08/07. | Verificato 2026-07-07 11:28: Liguori: scadenza 08/07 (domani), non ancora dovuta oggi. Nessuna azione oggi. | 10/07 14:36: verificato nessuna risposta nuova nel thread (non presente in lista non letti), inviata email a Stefania (Ccn ceo@) per ripresa a mano con orari, prossima_azione spostata al 15/07.",
       "programmato": "2026-07-03T19:55:00+02:00",
       "seguiti": [
         {
@@ -1154,8 +1154,8 @@
       "risposta_conferma": "Ciao Luciano! Nessun problema, le guide che avevi chiesto ti sono arrivate tutte; le nuove escono ogni tanto e te le giro appena pronte. Il mio messaggio era proprio per te: Davide segue pochi professionisti selezionati e vorrebbe conoscerti di persona. Ti propongo io 2 o 3 orari questa settimana per una chiamata di 15 minuti con lui, cosi scegli quello che ti torna piu comodo. Stefania",
       "stop_seguiti": true,
       "prossima_azione": {
-        "quando": "2026-07-08",
-        "cosa": "Se nessun messaggio nuovo di Liguori nel thread dopo il 04/07: email a Stefania (Ccn ceo@) con testo suggerito per proporgli lei 2 o 3 orari questa settimana (mai Calendly). Poi nuova prossima_azione a +5 giorni."
+        "quando": "2026-07-15",
+        "cosa": "Se nessun messaggio nuovo di Liguori nel thread dopo il 10/07: verificare se Stefania lo ha ripreso e nuova prossima_azione a +5 giorni; altrimenti valutare se chiudere la pratica."
       }
     },
     {
@@ -4771,6 +4771,10 @@
     {
       "quando": "2026-07-10T14:24:00+02:00",
       "testo": "controllo ore 14:05-14:24: 0 nuove risposte (Dominik Engel in unread era nostro ultimo messaggio non sua risposta), 0 collegamenti verificati, controllo interrotto per tempo massimo prima di completare presidio scadenze (Alberto Repetto e Notaio Luciano Liguori avevano prossima_azione scaduta 08/07, non verificati questo giro) e controllo Calendly/KPI."
+    },
+    {
+      "quando": "2026-07-10T14:36:00+02:00",
+      "testo": "presidio scadenze completato: Alberto Repetto e Notaio Luciano Liguori senza nuova risposta, inviate 2 email a Stefania (Ccn ceo@) per ripresa a mano con orari, prossima_azione spostata al 15/07 per entrambi."
     }
   ],
   "diario": [
