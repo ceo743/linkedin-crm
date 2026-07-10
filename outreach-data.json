@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-10 08:45",
+  "aggiornato": "2026-07-10T14:24:00+02:00",
   "contatti": [
     {
       "id": 1,
@@ -4767,6 +4767,10 @@
     {
       "quando": "2026-07-10 08:45",
       "cosa": "Pipeline 10/07 — Backlog sweep verificato (5 thread confermati). Risultati: Valentino De Roma (ID 101) → DA APPROVARE DUBBIO (broker immobiliare, Toscana, thread reale + risposta); Marika Leonardi (ID 102) → ESCLUSA (Sicilia/Sud); Fabrizio Bellavista (ID 104) → ESCLUSO (dipendente manager); Riccardo Melis (ID 114) → ESCLUSO (brand marketer + Sardegna); Michele Trevisan (ID 118) → ESCLUSO (Sales Director dipendente, Parma). Limite anti-ban 15 nav raggiunto. Backlog residuo: Luana Landolina (107), Corina Lupu (109), Marcella Montone (110), Emanuela Negro Ferrero (111) + 25 sweep — da verificare prossima sessione."
+    },
+    {
+      "quando": "2026-07-10T14:24:00+02:00",
+      "testo": "controllo ore 14:05-14:24: 0 nuove risposte (Dominik Engel in unread era nostro ultimo messaggio non sua risposta), 0 collegamenti verificati, controllo interrotto per tempo massimo prima di completare presidio scadenze (Alberto Repetto e Notaio Luciano Liguori avevano prossima_azione scaduta 08/07, non verificati questo giro) e controllo Calendly/KPI."
     }
   ],
   "diario": [
