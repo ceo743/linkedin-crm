@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-11T09:22:35.686331+02:00",
+  "aggiornato": "2026-07-11T09:24:36.157656+02:00",
   "contatti": [
     {
       "id": 1,
@@ -4932,6 +4932,10 @@
     {
       "quando": "2026-07-11T09:22:35.686331+02:00",
       "testo": "controllo ore 09:20: 0 nuove risposte, 0 collegamenti accettati, 0 prenotazioni. 30 contatti in attesa verificati, nessuna novita. Rocchi e Zambrino ancora in inviti inviati (non accettati)."
+    },
+    {
+      "quando": "2026-07-11T09:24:36.157656+02:00",
+      "testo": "Trigger 09:23 duplicato dello slot 09:20 (log gia presente ore 09:22:35 con controllo completo: 0 risposte, 0 collegamenti, 0 prenotazioni). Evitata nuova navigazione LinkedIn ridondante per rispetto ritmo anti-ban. Verificato solo: dashboard server 8766 attivo (200), nessuna prossima_azione scaduta oggi 11/07 tra gli 8 contatti risposto=true, nessuna risposta orfana (tutti gestito=true). Nessuna azione necessaria."
     }
   ],
   "diario": [
