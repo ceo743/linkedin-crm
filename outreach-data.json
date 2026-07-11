@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-11 07:05",
+ "aggiornato": "2026-07-11 07:18",
  "contatti": [
   {
    "id": 1,
@@ -1110,11 +1110,11 @@
    "approvato": true,
    "inviato": "2026-07-03T20:05:26+02:00",
    "risposto": true,
-   "risposta_testo": "Ciao cara, pensavo ci fosse stato un problema perche le guide non mi stanno piu arrivando",
+   "risposta_testo": "grazie cara, ti contatto allora al cellulare da cui ci siamo sentiti",
    "link_call_inviato": null,
    "tipo_call": null,
    "prenotato": null,
-   "note": "doppio controllo 03/07: calendario zero, CRM zero, blocklist zero (Liguori: evento trovato era omonimo Dario Liguori) | Kajabi LTV 0,00 € | NOTA CALL: notaio = vincoli deontologici, in call parlare di autorevolezza ed educazione del pubblico, MAI acquisizione clienti | 04/07 GESTITO: risposta calda (guide non arrivano), conferma inviata nel thread + email operativa a Stefania, presidio al 08/07. | Verificato 2026-07-07 11:28: Liguori: scadenza 08/07 (domani), non ancora dovuta oggi. Nessuna azione oggi. | 10/07 14:36: verificato nessuna risposta nuova nel thread (non presente in lista non letti), inviata email a Stefania (Ccn ceo@) per ripresa a mano con orari, prossima_azione spostata al 15/07.",
+   "note": "doppio controllo 03/07: calendario zero, CRM zero, blocklist zero (Liguori: evento trovato era omonimo Dario Liguori) | Kajabi LTV 0,00 € | NOTA CALL: notaio = vincoli deontologici, in call parlare di autorevolezza ed educazione del pubblico, MAI acquisizione clienti | 04/07 GESTITO: risposta calda (guide non arrivano), conferma inviata nel thread + email operativa a Stefania, presidio al 08/07. | Verificato 2026-07-07 11:28: Liguori: scadenza 08/07 (domani), non ancora dovuta oggi. Nessuna azione oggi. | 10/07 14:36: verificato nessuna risposta nuova nel thread (non presente in lista non letti), inviata email a Stefania (Ccn ceo@) per ripresa a mano con orari, prossima_azione spostata al 15/07. | 2026-07-11 07:18: RISPOSTO (scoperto in audit, la routine non l aveva ancora colto): \"grazie cara, ti contatto al cellulare da cui ci siamo sentiti\" = quasi chiuso, ti chiama lui. Risposto caldo nel thread. Email a Stefania (caso telefono legittimo) per essere pronta alla sua chiamata.",
    "programmato": "2026-07-03T19:55:00+02:00",
    "seguiti": [
     {
@@ -1149,14 +1149,14 @@
     }
    ],
    "in_pausa": false,
-   "risposta_at": "2026-07-03T21:05:25+02:00",
+   "risposta_at": "2026-07-11 07:18",
    "gestito": true,
-   "gestito_il": "2026-07-04",
-   "risposta_conferma": "Ciao Luciano! Nessun problema, le guide che avevi chiesto ti sono arrivate tutte; le nuove escono ogni tanto e te le giro appena pronte. Il mio messaggio era proprio per te: Davide segue pochi professionisti selezionati e vorrebbe conoscerti di persona. Ti propongo io 2 o 3 orari questa settimana per una chiamata di 15 minuti con lui, cosi scegli quello che ti torna piu comodo. Stefania",
+   "gestito_il": "2026-07-11 07:18",
+   "risposta_conferma": "Perfetto Luciano, restiamo in attesa della tua chiamata allora, Davide sarà felice di sentirti. A presto! Stefania",
    "stop_seguiti": true,
    "prossima_azione": {
-    "quando": "2026-07-15",
-    "cosa": "Se nessun messaggio nuovo di Liguori nel thread dopo il 10/07: verificare se Stefania lo ha ripreso e nuova prossima_azione a +5 giorni; altrimenti valutare se chiudere la pratica."
+    "quando": "2026-07-16",
+    "cosa": "CASO TELEFONO: Liguori ha detto che chiama lui al cellulare per la call con Davide. Se entro 16/07 non risulta call fatta/prenotata, chiedere a Stefania aggiornamento (ha lei il contatto telefonico). Non riscrivere su LinkedIn salvo lui scriva."
    }
   },
   {
@@ -1641,15 +1641,17 @@
    "inviato": "2026-07-06T10:42:00+02:00",
    "risposto": true,
    "prenotato": false,
-   "note": "06/07 INVIATO opener automazione. Professionista con propria attività (regola allargata Davide 06/07). | 06/07 HA RISPOSTO (1h dopo!): \"scaricata per approfondimento professionale\". Risposto scavando (te la giro al contrario, c'è una cosa che ti porta via tempo?). Aspetto che riveli il problema, poi call 30 min con Davide. | 2026-07-11 07:05: FIX audit — era orfano (gestito ma senza prossima_azione, silenzio dal 06/07, mai piu ripreso). Aggiunta prossima_azione al 14/07.",
+   "note": "06/07 INVIATO opener automazione. Professionista con propria attività (regola allargata Davide 06/07). | 06/07 HA RISPOSTO (1h dopo!): \"scaricata per approfondimento professionale\". Risposto scavando (te la giro al contrario, c'è una cosa che ti porta via tempo?). Aspetto che riveli il problema, poi call 30 min con Davide. | 2026-07-11 07:05: FIX audit — era orfano (gestito ma senza prossima_azione, silenzio dal 06/07, mai piu ripreso). Aggiunta prossima_azione al 14/07. | 2026-07-11 07:15: FALLO ORA (Davide) - inviato 3o tocco con esempio concreto per sbloccare risposta (era silente dal 06/07). Firmato Stefania, testo verificato pulito prima e dopo invio.",
    "seguiti": [],
    "risposta_at": "2026-07-06T11:27:00+02:00",
    "risposta_testo": "Buon giorno, scaricata per approfondimento professionale",
    "gestito": true,
    "prossima_azione": {
-    "quando": "2026-07-14",
-    "cosa": "Menci NON ha ancora risposto alla domanda esplorativa (silenzio dal 06/07). Se ancora nessun suo messaggio nel thread: riprendere IO su LinkedIn con un tocco leggero (es. 'Stefano, nessun problema se sei preso, ti va se ti giro un esempio concreto di cosa si può togliere dalle giornate?'). Mai delega a Stefania salvo serva telefono."
-   }
+    "quando": "2026-07-15",
+    "cosa": "Se Menci risponde nominando il problema: proporre call con Davide + link Calendly AI. Se silenzio ancora, ultimo tocco poi chiudere. Mai delega Stefania salvo telefono."
+   },
+   "risposta_conferma": "Stefano, nessun problema se sei stato preso. Ti faccio un esempio concreto così è più facile, di solito nella consulenza è rispondere alle stesse richieste dei clienti via email o preparare le proposte e i materiali a mano. È una di queste, o è un'altra la cosa che ti porta via più tempo? Stefania",
+   "gestito_il": "2026-07-11 07:15"
   },
   {
    "id": 49,
