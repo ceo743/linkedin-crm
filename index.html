@@ -14,554 +14,374 @@
     --acc:#5b8cff; --verde:#3ecf8e; --rosso:#f06a6a; --ambra:#f5b95f;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{
-    background:var(--fondo); color:var(--testo);
-    font:14px/1.6 'Manrope',sans-serif;
-    min-height:100vh; padding:44px clamp(20px,5vw,72px) 80px;
-  }
-  body::before{content:'';position:fixed;top:0;left:0;right:0;height:1px;z-index:2;
-    background:linear-gradient(90deg,transparent,rgba(91,140,255,.7),transparent)}
-  main{max-width:960px;margin:0 auto;animation:app .5s ease both}
-  @keyframes app{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-
-  header{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
-  .titolo h1{font-size:26px;font-weight:800;letter-spacing:-.02em}
-  .titolo h1 span{color:var(--acc)}
-  #agg{color:var(--dim);font:400 11px/1.6 'JetBrains Mono',monospace;margin-top:6px}
-  .chip{
-    display:inline-flex;align-items:center;gap:8px;
-    font:600 10px/1 'JetBrains Mono',monospace;letter-spacing:.18em;text-transform:uppercase;
-    padding:7px 13px;border-radius:6px;color:var(--verde);
-    border:1px solid rgba(62,207,142,.25);background:rgba(62,207,142,.05);
-  }
+  body{background:var(--fondo);color:var(--testo);font:14px/1.6 'Manrope',sans-serif;min-height:100vh;padding:40px clamp(16px,5vw,72px) 80px}
+  main{max-width:880px;margin:0 auto}
+  h1{font-size:24px;font-weight:800;letter-spacing:-.02em}
+  h1 span{color:var(--acc)}
+  #agg{color:var(--dim);font:400 11px/1.6 'JetBrains Mono',monospace;margin-top:4px}
+  header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+  .chip{display:inline-flex;align-items:center;gap:8px;font:600 10px/1 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;padding:7px 13px;border-radius:6px;color:var(--verde);border:1px solid rgba(62,207,142,.25)}
   .vivo{width:6px;height:6px;border-radius:50%;background:var(--verde);animation:batte 2.2s infinite}
   @keyframes batte{0%{box-shadow:0 0 0 0 rgba(62,207,142,.5)}70%{box-shadow:0 0 0 7px rgba(62,207,142,0)}100%{box-shadow:0 0 0 0 rgba(62,207,142,0)}}
 
-  .kpis{
-    display:flex;flex-wrap:wrap;
-    background:var(--pann);border:1px solid var(--linea);border-radius:12px;
-    margin:26px 0 8px;overflow:hidden;
-  }
-  .kpi{flex:1;min-width:130px;padding:16px 20px;border-left:1px solid var(--linea)}
-  .kpi.kpi-click{cursor:pointer;transition:background .15s}
-  .kpi.kpi-click:hover{background:rgba(91,140,255,.07)}
-  .kpi:first-child{border-left:none}
-  .kpi .v{font-size:26px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
-  .kpi .v small{font-size:13px;color:var(--dim);font-weight:600}
+  /* KPI */
+  .kpis{display:flex;flex-wrap:wrap;background:var(--pann);border:1px solid var(--linea);border-radius:12px;overflow:hidden;margin-bottom:28px}
+  .kpi{flex:1;min-width:110px;padding:14px 18px;border-left:1px solid var(--linea);cursor:pointer;transition:background .15s}
+  .kpi:first-child{border-left:none;background:rgba(62,207,142,.06)}
+  .kpi:hover{background:rgba(91,140,255,.07)}
+  .kpi .v{font-size:24px;font-weight:800;font-variant-numeric:tabular-nums}
+  .kpi .v small{font-size:12px;color:var(--dim);font-weight:600}
   .kpi .v.verde{color:var(--verde)} .kpi .v.acc{color:var(--acc)} .kpi .v.rosso{color:var(--rosso)}
-  .kpi .e{font:600 9.5px/1 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-top:6px}
-  .kpi .v.v-goal{color:var(--verde);font-size:34px}
-  .kpi .e.e-goal{color:var(--verde);opacity:.95}
-  .kpi:first-child{background:rgba(62,207,142,.06)}
+  .kpi .e{font:600 9px/1.3 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-top:5px}
 
-  .barra{height:3px;background:var(--linea);border-radius:99px;margin:14px 0 40px;overflow:hidden}
-  .barra i{display:block;height:100%;width:0;background:var(--acc);border-radius:99px;transition:width 1s cubic-bezier(.2,.8,.2,1)}
+  /* blocchi */
+  h2{font:800 12px/1 'Manrope',sans-serif;letter-spacing:.14em;text-transform:uppercase;margin:30px 0 12px;display:flex;align-items:center;gap:10px}
+  h2 .cnt{font:600 10px/1 'JetBrains Mono',monospace;border:1px solid var(--linea2);border-radius:99px;padding:4px 9px;color:var(--dim)}
+  h2.dafare{color:var(--ambra)}
+  h2.fatto{color:var(--verde)}
+  .riga{display:flex;align-items:baseline;gap:12px;background:var(--pann);border:1px solid var(--linea);border-radius:10px;padding:11px 16px;margin-bottom:6px;font-size:13.5px;line-height:1.5}
+  .riga:hover{border-color:var(--linea2)}
+  .riga .quando{font:400 11px/1.6 'JetBrains Mono',monospace;color:var(--dim);white-space:nowrap;min-width:86px}
+  .riga .chi-b{font-weight:800}
+  .riga.urgente{border-color:rgba(245,185,95,.4);background:linear-gradient(90deg,rgba(245,185,95,.06),transparent 55%)}
+  .riga a{color:var(--acc);text-decoration:none;font-weight:600;white-space:nowrap;margin-left:auto}
+  .riga a:hover{text-decoration:underline}
+  .vuoto{color:var(--dim);font-size:13px;padding:12px 4px}
 
-  .scheda{
-    background:var(--pann);border:1px solid var(--linea);border-radius:12px;
-    margin-bottom:10px;transition:border-color .2s;
-  }
-  .scheda:hover{border-color:var(--linea2)}
-  .scheda.aperta{border-color:rgba(91,140,255,.45)}
-  .testata{display:flex;align-items:center;gap:14px;padding:16px 20px;cursor:pointer;flex-wrap:wrap}
-  .pallino{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-  .pallino.coda{background:var(--dim)}
-  .pallino.inviato{background:var(--acc)}
-  .pallino.risposto{background:var(--verde)}
-  .pallino.prenotato{background:var(--ambra)}
-  .pallino.rev{background:var(--rosso)}
-  .chi{flex:1;min-width:230px}
-  .chi .n{font-size:15.5px;font-weight:800;letter-spacing:-.01em}
-  .chi .r{color:var(--dim);font-size:13px;font-weight:400;margin-left:8px}
-  .chi .r.r-attesa{color:var(--ambra);font-style:italic}
-  .stato-riga{font-size:12.5px;color:var(--testo);opacity:.75;margin-top:6px;line-height:1.45}
-  .ic-riga{font:600 12px/1.5 'JetBrains Mono',monospace;color:var(--dim)}
-  .ic-riga .ic-ok{color:var(--verde)}
-  .ic-riga .ic-attivo{color:var(--ambra)}
-  .quando{font:400 11px/1.5 'JetBrains Mono',monospace;color:var(--dim);white-space:nowrap}
-  .quando b{color:var(--testo);font-weight:600}
-  .stato-t{
-    font:600 10px/1 'Manrope',sans-serif;letter-spacing:.08em;text-transform:uppercase;
-    padding:5px 11px;border-radius:6px;white-space:nowrap;
-    background:rgba(125,132,148,.1);color:var(--dim);
-  }
-  .stato-t.info{background:rgba(91,140,255,.12);color:var(--acc)}
-  .stato-t.ok{background:rgba(62,207,142,.12);color:var(--verde)}
-  .stato-t.attivo{background:rgba(245,185,95,.14);color:var(--ambra)}
-  .stato-t.no{background:rgba(240,106,106,.12);color:var(--rosso)}
-  .x{
-    width:28px;height:28px;border-radius:7px;border:1px solid var(--linea);
-    background:transparent;color:var(--dim);cursor:pointer;font-size:12px;line-height:1;
-    transition:all .15s;flex-shrink:0;
-  }
-  .x:hover{border-color:var(--rosso);color:var(--rosso);background:rgba(240,106,106,.08)}
-  .freccia{color:var(--dim);font-size:10px;transition:transform .2s;flex-shrink:0}
-  .scheda.aperta .freccia{transform:rotate(180deg)}
-  .semafori{font-size:11.5px;color:var(--dim);padding:0 20px 12px 42px;cursor:pointer}
-
-  .corpo{display:none;border-top:1px solid var(--linea);padding:16px 20px}
-  .scheda.aperta .corpo{display:block}
-  textarea{
-    width:100%;min-height:105px;resize:vertical;
-    background:var(--fondo);border:1px solid var(--linea);border-radius:8px;
-    color:var(--testo);padding:12px 14px;font:13.5px/1.7 'Manrope',sans-serif;
-  }
-  textarea:focus{outline:none;border-color:var(--acc)}
-  textarea:disabled{opacity:.5}
-  .azioni{display:flex;align-items:center;gap:8px;margin-top:12px;flex-wrap:wrap}
-  .btn{
-    font:800 11px/1 'Manrope',sans-serif;letter-spacing:.04em;
-    padding:9px 16px;border-radius:8px;cursor:pointer;transition:all .15s;
-    background:var(--acc);border:1px solid var(--acc);color:#fff;
-  }
-  .btn:hover{filter:brightness(1.15)}
-  .btn.ghost{background:transparent;color:var(--dim);border-color:var(--linea)}
-  .btn.ghost:hover{color:var(--testo);border-color:var(--linea2);filter:none}
-  .btn.verde{background:var(--verde);border-color:var(--verde);color:#0a2417}
-  .btn.pericolo{background:transparent;border-color:rgba(240,106,106,.4);color:var(--rosso)}
-  .btn.pericolo:hover{background:rgba(240,106,106,.1);filter:none}
-  .esito{font-size:12px}
-  .nota-msg{color:var(--dim);font-size:12px;margin-top:10px}
-  .risposta{margin-top:12px;padding:11px 14px;border-left:2px solid var(--verde);color:var(--verde);font-size:13px;background:rgba(62,207,142,.05);border-radius:0 8px 8px 0}
-  .nostra-conferma{margin-top:8px;padding:11px 14px;border-left:2px solid var(--acc);color:var(--testo);font-size:13px;background:rgba(120,150,255,.05);border-radius:0 8px 8px 0}
-  .nostra-conferma b{color:var(--acc);display:block;margin-bottom:4px;font-size:11px;text-transform:uppercase;letter-spacing:.03em}
-  .prossimo-passo{margin-top:12px;padding:11px 14px;border-left:2px solid var(--ambra);color:var(--testo);font-size:13px;line-height:1.6;background:rgba(245,185,95,.06);border-radius:0 8px 8px 0}
-  .prossimo-passo b{color:var(--ambra)}
-  .profilo-l{font:600 11px/1 'Manrope',sans-serif;color:var(--acc);text-decoration:none;white-space:nowrap}
-  .profilo-l:hover{text-decoration:underline}
-
-  .priorita{
-    border:1px solid rgba(62,207,142,.35);border-radius:14px;
-    background:linear-gradient(180deg,rgba(62,207,142,.06),transparent 60%);
-    padding:16px 16px 6px;margin-bottom:34px;
-  }
-  .priorita.vuota{display:none}
-  .priorita .pt{
-    display:flex;align-items:center;gap:10px;margin:0 4px 12px;
-    font:800 12px/1 'Manrope',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--verde);
-  }
-  .priorita .pt .cnt{
-    font:600 10px/1 'JetBrains Mono',monospace;color:var(--verde);
-    border:1px solid rgba(62,207,142,.35);border-radius:99px;padding:4px 9px;
-  }
-  .priorita .scheda{border-color:rgba(62,207,142,.25)}
-  .motivo{
-    font:600 10px/1 'Manrope',sans-serif;letter-spacing:.06em;text-transform:uppercase;
-    padding:5px 11px;border-radius:6px;white-space:nowrap;
-    background:rgba(245,185,95,.14);color:var(--ambra);
-  }
-  .motivo.verde{background:rgba(62,207,142,.14);color:var(--verde)}
-
-  .pc{background:var(--pann);border:1px solid rgba(62,207,142,.28);border-radius:12px;padding:16px 18px;margin-bottom:10px}
-  .pc-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-  .pc-nome{font-size:16.5px;font-weight:800;letter-spacing:-.01em}
-  .pc-tag{font:600 10px/1 'Manrope',sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border-radius:6px;background:rgba(125,132,148,.12);color:var(--dim);margin-left:auto;white-space:nowrap}
-  .pc-tag.verde{background:rgba(62,207,142,.14);color:var(--verde)}
-  .pc-ruolo{color:var(--dim);font-size:13px;margin-top:3px}
-  .pc-risp{margin:12px 0 14px;padding:12px 15px;border-left:3px solid var(--verde);background:rgba(62,207,142,.06);border-radius:0 8px 8px 0;color:var(--testo);font-size:14.5px;line-height:1.5}
-  .pc-btn{display:inline-block;font:800 12px/1 'Manrope',sans-serif;padding:11px 18px;border-radius:8px;background:var(--verde);color:#0a2417;text-decoration:none}
-  .pc-btn:hover{filter:brightness(1.1)}
-  .sg-item{margin-bottom:8px}
-  .sg-head{display:flex;align-items:center;gap:10px;margin-bottom:4px}
-  .sg-head b{font-size:12px;font-weight:700;color:var(--testo)}
-  .sg-when{font:400 11px/1 'JetBrains Mono',monospace;color:var(--dim)}
-  .sg-txt{font-size:13px;line-height:1.5;color:var(--dim);padding:9px 13px;background:var(--fondo);border-radius:8px;border:1px solid var(--linea)}
-
-  .filtri{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
-  .filtro{
-    font:600 11px/1 'Manrope',sans-serif;letter-spacing:.04em;cursor:pointer;
-    padding:8px 14px;border-radius:99px;transition:all .15s;
-    background:transparent;border:1px solid var(--linea);color:var(--dim);
-  }
+  /* lista lead */
+  .filtri{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+  .filtro{font:600 11px/1 'Manrope',sans-serif;cursor:pointer;padding:8px 14px;border-radius:99px;background:transparent;border:1px solid var(--linea);color:var(--dim);transition:all .15s}
   .filtro:hover{color:var(--testo);border-color:var(--linea2)}
   .filtro.on{background:rgba(91,140,255,.14);border-color:rgba(91,140,255,.5);color:var(--acc)}
   .filtro .fn{font:600 10px/1 'JetBrains Mono',monospace;opacity:.75;margin-left:5px}
-  .vuoto-msg{color:var(--dim);font-size:13px;padding:18px 4px}
 
-  details.archivio{margin-top:40px;opacity:.4;transition:opacity .2s}
+  .scheda{background:var(--pann);border:1px solid var(--linea);border-radius:10px;margin-bottom:6px}
+  .scheda.aperta{border-color:rgba(91,140,255,.45)}
+  .testata{display:flex;align-items:center;gap:12px;padding:12px 16px;cursor:pointer;flex-wrap:wrap}
+  .pallino{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+  .pallino.coda{background:var(--dim)} .pallino.inviato{background:var(--acc)}
+  .pallino.risposto{background:var(--verde)} .pallino.prenotato{background:var(--ambra)} .pallino.rev{background:var(--rosso)}
+  .chi{flex:1;min-width:220px}
+  .chi .n{font-size:14.5px;font-weight:800}
+  .chi .r{color:var(--dim);font-size:12.5px;margin-left:8px}
+  .chi .r.r-attesa{color:var(--ambra);font-style:italic}
+  .ic-riga{font:600 11.5px/1.6 'JetBrains Mono',monospace;color:var(--dim);display:block;margin-top:3px}
+  .ic-riga .ic-ok{color:var(--verde)} .ic-riga .ic-attivo{color:var(--ambra)}
+  .profilo-l{font:600 11px/1 'Manrope',sans-serif;color:var(--acc);text-decoration:none;white-space:nowrap}
+  .x{width:26px;height:26px;border-radius:7px;border:1px solid var(--linea);background:transparent;color:var(--dim);cursor:pointer;font-size:12px}
+  .x:hover{border-color:var(--rosso);color:var(--rosso)}
+
+  .corpo{display:none;border-top:1px solid var(--linea);padding:14px 16px}
+  .scheda.aperta .corpo{display:block}
+  .box-msg{background:var(--fondo);border:1px solid var(--linea);border-radius:8px;padding:10px 13px;font-size:13px;line-height:1.6;margin-bottom:8px;white-space:pre-wrap}
+  .box-msg b{color:var(--dim);font:600 10px/1 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:5px}
+  .box-msg.loro{border-left:2px solid var(--verde)}
+  textarea{width:100%;min-height:90px;resize:vertical;background:var(--fondo);border:1px solid var(--linea);border-radius:8px;color:var(--testo);padding:10px 13px;font:13px/1.6 'Manrope',sans-serif}
+  textarea:focus{outline:none;border-color:var(--acc)}
+  .azioni{display:flex;align-items:center;gap:8px;margin-top:10px;flex-wrap:wrap}
+  .btn{font:800 11px/1 'Manrope',sans-serif;padding:9px 15px;border-radius:8px;cursor:pointer;background:var(--acc);border:1px solid var(--acc);color:#fff}
+  .btn.verde{background:var(--verde);border-color:var(--verde);color:#0a2417}
+  .btn.ghost{background:transparent;color:var(--dim);border-color:var(--linea)}
+  .btn.pericolo{background:transparent;border-color:rgba(240,106,106,.4);color:var(--rosso)}
+  .esito{font-size:12px}
+  .prossimo-passo{margin-top:10px;padding:10px 13px;border-left:2px solid var(--ambra);font-size:13px;line-height:1.6;background:rgba(245,185,95,.06);border-radius:0 8px 8px 0}
+  .prossimo-passo b{color:var(--ambra)}
+  .nota-msg{color:var(--dim);font-size:12px;margin-top:8px}
+  details.archivio{margin-top:36px;opacity:.45}
   details.archivio:hover,details.archivio[open]{opacity:1}
-  details.archivio summary{
-    cursor:pointer;list-style:none;
-    font:600 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.2em;text-transform:uppercase;
-    color:var(--dim);padding:12px 0;
-  }
-  details.archivio summary::before{content:'+ '}
-  details.archivio[open] summary::before{content:'− '}
-  details.archivio .scheda{opacity:.55}
-
-  h2{font:600 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin:40px 0 12px}
-  #log{max-height:160px;overflow:auto;background:var(--pann);border:1px solid var(--linea);border-radius:12px;padding:12px 18px}
-  #log div{font:400 11px/1.9 'JetBrains Mono',monospace;color:var(--dim);display:flex;gap:14px}
-  #log div b{color:var(--acc);font-weight:400;white-space:nowrap}
-  .diario-box .dia{background:var(--pann);border:1px solid var(--linea);border-radius:10px;padding:13px 17px;margin-bottom:8px;transition:border-color .2s}
-  .diario-box .dia:hover{border-color:var(--linea2)}
-  .dia-t{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
-  .dia-t b{font-size:13.5px;font-weight:800;letter-spacing:-.01em;color:var(--testo)}
-  .dia-d{font:600 9.5px/1 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-left:auto}
-  .dia-tag{font:600 9px/1 'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:5px;background:rgba(91,140,255,.12);color:var(--acc)}
-  .dia-c{font-size:12.5px;line-height:1.65;color:var(--dim)}
+  details.archivio summary{cursor:pointer;font:600 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);padding:10px 0}
   ::-webkit-scrollbar{width:8px} ::-webkit-scrollbar-thumb{background:var(--linea2);border-radius:4px}
 </style>
 </head>
 <body>
 <main>
   <header>
-    <div class="titolo">
+    <div>
       <h1>Outreach <span>LinkedIn</span></h1>
       <div id="agg">caricamento…</div>
-      <div id="scala" style="color:var(--dim);font:400 11px/1.6 'JetBrains Mono',monospace;margin-top:2px"></div>
     </div>
     <span class="chip"><span class="vivo"></span>DC Academy · Live</span>
   </header>
 
   <div class="kpis">
-    <div class="kpi kpi-click" onclick="setFiltro('prenotato')"><div class="v v-goal" id="k_pren">–</div><div class="e e-goal">🎯 Call prenotate</div></div>
-    <div class="kpi kpi-click" onclick="setFiltro('tutti')"><div class="v" id="k_totali">–</div><div class="e">📋 Lead totali</div></div>
-    <div class="kpi kpi-click" onclick="setFiltro('inviati')"><div class="v" id="k_inviati">–</div><div class="e">Contattati</div></div>
-    <div class="kpi kpi-click" onclick="setFiltro('calendly')"><div class="v acc" id="k_calendly">–</div><div class="e">🔗 Link Calendly inviati</div></div>
-    <div class="kpi kpi-click" onclick="setFiltro('risposto')"><div class="v" id="k_risposte">–</div><div class="e">Hanno risposto</div></div>
-    <div class="kpi kpi-click" onclick="setFiltro('approvare')"><div class="v rosso" id="k_approv">–</div><div class="e">Da approvare</div></div>
+    <div class="kpi" onclick="setFiltro('prenotato')"><div class="v verde" id="k_pren">–</div><div class="e">🎯 Call prenotate</div></div>
+    <div class="kpi" onclick="setFiltro('tutti')"><div class="v" id="k_tot">–</div><div class="e">Lead totali</div></div>
+    <div class="kpi" onclick="setFiltro('inviati')"><div class="v" id="k_inv">–</div><div class="e">Contattati</div></div>
+    <div class="kpi" onclick="setFiltro('risposto')"><div class="v" id="k_ris">–</div><div class="e">Hanno risposto</div></div>
+    <div class="kpi" onclick="setFiltro('calendly')"><div class="v acc" id="k_cal">–</div><div class="e">🔗 Calendly inviati</div></div>
+    <div class="kpi" onclick="setFiltro('approvare')"><div class="v rosso" id="k_app">–</div><div class="e">Da approvare</div></div>
   </div>
-  <div class="barra"><i id="barra_f"></i></div>
 
-  <section class="priorita vuota" id="priorita">
-    <div class="pt">⚡ Da gestire subito<span class="cnt" id="pri_cnt">0</span></div>
-    <div id="pri_lista"></div>
-  </section>
+  <h2 class="dafare">⚡ Da fare <span class="cnt" id="df_cnt">0</span></h2>
+  <div id="dafare"></div>
 
+  <h2 class="fatto">✅ Fatto di recente <span class="cnt" id="ft_cnt">0</span></h2>
+  <div id="fatto"></div>
+
+  <h2>📋 Lead</h2>
   <div class="filtri" id="filtri"></div>
-
   <div id="lista"></div>
 
   <details class="archivio"><summary id="arch_t">Archivio esclusi</summary><div id="esclusi"></div></details>
-
-  <h2>Diario decisionale · il perché di come lavoriamo</h2>
-  <div id="diario" class="diario-box"></div>
-
-  <h2>Registro attività</h2>
-  <div id="log"></div>
 </main>
 
 <script>
-let aperti = {};
-function fmt(ts){ if(!ts) return ''; try{ return new Date(ts).toLocaleString('it-IT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});}catch(e){return ts} }
-function fmtData(ts){ if(!ts) return ''; try{ return new Date(ts+'T12:00:00').toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit'});}catch(e){return ts} }
-function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
-function classePallino(c){
-  if(c.prenotato) return 'prenotato';
-  if(c.risposto) return 'risposto';
-  if(c.inviato) return 'inviato';
-  if(!c.approvato && !c.escluso) return 'rev';
-  return 'coda';
+let aperti={};
+function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+function parseTs(s){
+  if(!s||s===true) return null;
+  s=String(s);
+  let d=new Date(s.replace(' ','T'));
+  if(isNaN(d)) d=new Date(s.slice(0,10)+'T12:00:00');
+  return isNaN(d)?null:d;
 }
-function etichetta(c){
-  if(c.escluso) return '<span class="stato-t no">Escluso</span>';
-  if(c.in_pausa && !c.inviato) return '<span class="stato-t attivo">In pausa</span>';
-  if(c.prenotato) return '<span class="stato-t ok">Call prenotata</span>';
-  if(c.link_call_inviato) return '<span class="stato-t attivo">Link call</span>';
-  if(c.risposto) return c.gestito?'<span class="stato-t ok">Risposto · gestito</span>':'<span class="stato-t attivo">Risposto · DA GESTIRE</span>';
-  if(c.inviato) return '<span class="stato-t info">Inviato</span>';
-  if(!c.approvato) return '<span class="stato-t no">Da approvare</span>';
-  return '<span class="stato-t">In coda</span>';
-}
-// stato in parole semplici: cosa succede ORA con questo contatto
-// date reali dei seguiti: ognuno conta i giorni dall'ULTIMO tocco (non dal primo messaggio)
+function fmt(ts){const d=parseTs(ts);return d?d.toLocaleString('it-IT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}):'';}
+function fmtData(ts){const d=parseTs(ts);return d?d.toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit'}):'';}
+
 function dateSeguiti(x){
-  var base = x.inviato ? new Date(x.inviato) : null;
-  var out = [];
+  let base=parseTs(x.inviato); const out=[];
   (x.seguiti||[]).forEach(function(f){
-    var due = base ? new Date(base) : null;
+    let due=base?new Date(base):null;
     if(due) due.setDate(due.getDate()+f.dopo_giorni);
-    out.push({n:f.n, due:due, inviato:f.inviato, testo:f.testo});
-    base = f.inviato ? new Date(f.inviato) : due;
+    out.push({n:f.n,due:due,inviato:f.inviato,testo:f.testo});
+    base=f.inviato?parseTs(f.inviato):due;
   });
   return out;
 }
-function msgCount(x){
-  return (x.inviato?1:0) + (x.seguiti||[]).filter(function(f){return f.inviato}).length;
-}
-// conta quante volte e' PARTITO un link Calendly (primo messaggio o un seguito, solo se gia inviato)
-function calendlyInviatiContatto(x){
-  var n=0;
-  if(x.inviato && (x.messaggio||'').indexOf('calendly.com')>-1) n++;
-  (x.seguiti||[]).forEach(function(f){ if(f.inviato && (f.testo||'').indexOf('calendly.com')>-1) n++; });
+function msgCount(x){return (x.inviato?1:0)+(x.seguiti||[]).filter(function(f){return f.inviato}).length;}
+function calCount(x){
+  let n=0;
+  if(x.inviato&&(x.messaggio||'').indexOf('calendly.com')>-1)n++;
+  if((x.risposta_conferma||'').indexOf('calendly.com')>-1)n++;
+  (x.seguiti||[]).forEach(function(f){if(f.inviato&&(f.testo||'').indexOf('calendly.com')>-1)n++;});
   return n;
 }
-function contaCalendlyInviati(contatti){
-  return contatti.reduce(function(s,x){ return s+calendlyInviatiContatto(x); },0);
+function seguitoDovuto(x){
+  if(!x.inviato||x.risposto||x.escluso||x.stop_seguiti||!x.seguiti) return null;
+  if(x.tipo==='collegamento'&&x.collegamento_accettato!==true) return null;
+  const adesso=new Date();
+  const lista=dateSeguiti(x);
+  for(let i=0;i<lista.length;i++){
+    if(lista[i].inviato) continue;
+    return (lista[i].due&&lista[i].due<=adesso)?lista[i].n:null;
+  }
+  return null;
 }
 function prossimoTocco(x){
-  // prossima data utile: seguito non ancora inviato piu vicino, o null se non ce n'e
-  var lista=dateSeguiti(x).filter(function(f){return !f.inviato});
-  return lista.length ? lista[0].due : null;
+  const l=dateSeguiti(x).filter(function(f){return !f.inviato});
+  return l.length?l[0].due:null;
 }
-function prossima(x){
-  if(x.escluso) return 'Escluso dalla campagna, non riceve piu nulla.';
-  if(x.prenotato) return 'Call prenotata.';
-  if(x.risposto && x.gestito) return 'Ha risposto, gia gestito. In attesa che si muova lui, poi lo segue Stefania.';
-  if(x.risposto) return 'HA RISPOSTO: da rispondere nel thread.';
-  if(x.in_pausa) return 'In pausa, non parte finche non lo riattivi.';
-  if(x.inviato){
-    var n=seguitoDovuto(x);
-    if(n) return 'Nessuna risposta: il seguito '+n+' e da inviare (parte alla prossima sessione).';
-    var t=prossimoTocco(x);
-    if(t) return 'Inviato, nessuna risposta. Prossimo tocco previsto il '+fmt(t)+'.';
-    return 'Inviato, aspetto la risposta.';
-  }
-  if(!x.approvato) return 'Da approvare da te prima di partire.';
-  return 'In coda, parte il '+(x.programmato?fmt(x.programmato):'prossima sessione')+'.';
+function nonVerificato(x){return x.ruolo==='DA VERIFICARE'||!x.ruolo;}
+function ruoloVisibile(x){return nonVerificato(x)?'⏳ ruolo da verificare':x.ruolo;}
+function classePallino(x){
+  if(x.prenotato)return 'prenotato';
+  if(x.risposto)return 'risposto';
+  if(x.inviato)return 'inviato';
+  if(!x.approvato&&!x.escluso)return 'rev';
+  return 'coda';
 }
-// riga compatta a icone: quanti messaggi, quando parte il prossimo, se ha risposto o e' in attesa
 function statoIcone(x){
-  if(x.escluso) return '<span class="ic-riga">✕ escluso</span>';
-  if(x.prenotato) return '<span class="ic-riga ic-ok">📅 call prenotata</span>';
-  var cnt=msgCount(x);
-  var parti=[];
-  if(cnt>0) parti.push('📨&nbsp;'+cnt);
-  var cal=calendlyInviatiContatto(x);
-  if(cal>0) parti.push('<span class="ic-ok">🔗&nbsp;'+cal+'</span>');
+  if(x.escluso)return '<span class="ic-riga">✕ escluso</span>';
+  if(x.prenotato)return '<span class="ic-riga ic-ok">📅 call prenotata</span>';
+  const parti=[];
+  const cnt=msgCount(x); if(cnt>0)parti.push('📨&nbsp;'+cnt);
+  const cal=calCount(x); if(cal>0)parti.push('<span class="ic-ok">🔗&nbsp;'+cal+'</span>');
   if(x.risposto){
-    parti.push(x.gestito ? '<span class="ic-ok">💬 risposto · gestito</span>' : '<span class="ic-attivo">💬 risposto · DA GESTIRE</span>');
-    if(x.gestito && x.prossima_azione && x.prossima_azione.quando){
-      parti.push('<span class="ic-attivo">📌 richiamo il '+fmtData(x.prossima_azione.quando)+'</span>');
-    }
+    parti.push(x.gestito?'<span class="ic-ok">💬 risposto · gestito</span>':'<span class="ic-attivo">💬 risposto · DA GESTIRE</span>');
+    if(x.gestito&&x.prossima_azione&&x.prossima_azione.quando)parti.push('<span class="ic-attivo">📌 '+fmtData(x.prossima_azione.quando)+'</span>');
   }else if(x.inviato){
-    var t=prossimoTocco(x);
-    if(t) parti.push('🕐&nbsp;'+fmt(t));
-    else parti.push('👁 in attesa');
-  }else if(x.in_pausa){
-    parti.push('⏸ in pausa');
-  }else if(!x.approvato){
-    parti.push('⏳ da approvare');
-  }else{
-    parti.push('🕐&nbsp;'+(x.programmato?fmt(x.programmato):'prossima sessione'));
-  }
+    const t=prossimoTocco(x);
+    parti.push(t?'🕐&nbsp;prossimo '+fmtData(t):'👁 in attesa');
+  }else if(x.in_pausa){parti.push('⏸ in pausa');}
+  else if(!x.approvato){parti.push('⏳ da approvare');}
+  else{parti.push('🕐 in coda');}
   return '<span class="ic-riga">'+parti.join(' &nbsp;·&nbsp; ')+'</span>';
 }
-function nonVerificato(x){ return x.ruolo==='DA VERIFICARE' || !x.ruolo; }
-// il ruolo mostrato accanto al nome: mai il testo grezzo "DA VERIFICARE", un'etichetta chiara
-function ruoloVisibile(x){
-  return nonVerificato(x) ? '⏳ ruolo non ancora verificato' : x.ruolo;
+function breve(s,n){s=(s||'').split(/[.;]/)[0];return s.length>n?s.slice(0,n)+'…':s;}
+
+/* ---- DA FARE ---- */
+function listaDaFare(c){
+  const oggi=new Date(); const items=[];
+  c.filter(function(x){return !x.escluso}).forEach(function(x){
+    if(x.risposto&&!x.gestito&&!x.prenotato)
+      items.push({p:0,html:'💬 <span class="chi-b">'+esc(x.nome)+'</span> ha risposto: <b>rispondere nel thread</b>',urg:true,link:x.profilo});
+    const n=seguitoDovuto(x);
+    if(n) items.push({p:1,html:'📨 <span class="chi-b">'+esc(x.nome)+'</span>: seguito '+n+' pronto, parte con la routine delle 18:40',urg:false});
+    const pa=x.prossima_azione;
+    if(pa&&pa.quando){
+      const d=parseTs(pa.quando); const diff=(d-oggi)/864e5;
+      if(diff<=3) items.push({p:diff<0?0:2,html:'📌 <span class="chi-b">'+esc(x.nome)+'</span> entro '+fmtData(pa.quando)+': '+esc(breve(pa.cosa,90)),urg:diff<0,link:x.profilo});
+    }
+  });
+  const daAppr=c.filter(function(x){return !x.escluso&&!x.inviato&&!x.approvato}).length;
+  if(daAppr) items.push({p:3,html:'⏳ <span class="chi-b">'+daAppr+' messaggi</span> scritti e in attesa della tua approvazione (clicca Da approvare in alto)',urg:false});
+  return items.sort(function(a,b){return a.p-b.p});
 }
-function semaforo(c){
-  if(!c.qualifica) return '';
-  var q=c.qualifica;
-  // "da verificare"/"" = non ancora controllato (giallo, non rosso: rosso vuol dire gia scartato)
-  function p(v){ return v==='ok'?'🟢':(v==='no'||v==='male')?'🔴':'🟡'; }
-  return '<div class="semafori" onclick="toggle('+c.id+')">'+p(q.ruolo)+' ruolo &nbsp; '+p(q.geografia)+' geografia &nbsp; '+p(q.budget)+' budget &nbsp;·&nbsp; '+esc(q.fonte||'')+'</div>';
+
+/* ---- FATTO ---- */
+function listaFatto(c){
+  const ev=[];
+  c.forEach(function(x){
+    const t0=parseTs(x.inviato);
+    if(t0) ev.push({t:t0,html:'📨 Primo messaggio a <span class="chi-b">'+esc(x.nome)+'</span>'});
+    (x.seguiti||[]).forEach(function(f){
+      const tf=parseTs(f.inviato);
+      if(tf) ev.push({t:tf,html:'📨 Seguito '+f.n+' a <span class="chi-b">'+esc(x.nome)+'</span>'});
+    });
+    const tg=parseTs(x.gestito_il);
+    if(tg) ev.push({t:tg,html:'💬 Gestita la risposta di <span class="chi-b">'+esc(x.nome)+'</span>'+(calCount(x)&&(x.risposta_conferma||'').indexOf('calendly')>-1?' · 🔗 link call inviato':'')});
+    if(x.prenotato){
+      const tp=parseTs(x.prenotato_at)||tg||t0;
+      if(tp) ev.push({t:tp,html:'🎯 <span class="chi-b">'+esc(x.nome)+'</span> ha PRENOTATO la call'});
+    }
+  });
+  return ev.sort(function(a,b){return b.t-a.t}).slice(0,10);
 }
-async function post(url, body, esitoId){
+
+/* ---- azioni server ---- */
+async function post(url,body,esitoId){
   const es=document.getElementById(esitoId);
   if(es){es.textContent='…';es.style.color='var(--dim)';}
   try{
     const r=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
     const j=await r.json();
     if(es){es.textContent=j.ok?'fatto ✓':'errore: '+j.errore;es.style.color=j.ok?'var(--verde)':'var(--rosso)';}
-    if(j.ok) setTimeout(carica,400);
+    if(j.ok)setTimeout(carica,400);
     return j.ok;
-  }catch(e){ if(es){es.textContent='errore rete';es.style.color='var(--rosso)';} return false; }
+  }catch(e){if(es){es.textContent='errore rete (funziona solo da localhost:8766)';es.style.color='var(--rosso)';}return false;}
 }
-function salva(id){ post('/salva',{id:id,messaggio:document.getElementById('ta'+id).value,quando:new Date().toISOString()},'es'+id); }
-function approva(id,val){ post('/approva',{id:id,approvato:val,quando:new Date().toISOString()},'es'+id); }
-function pausa(ev,id,val){
-  ev.stopPropagation();
-  post('/pausa',{id:id,in_pausa:val,quando:new Date().toISOString()},'es'+id);
-}
+function salva(id){post('/salva',{id:id,messaggio:document.getElementById('ta'+id).value,quando:new Date().toISOString()},'es'+id);}
+function approva(id,val){post('/approva',{id:id,approvato:val,quando:new Date().toISOString()},'es'+id);}
 function escludi(ev,id,nome){
   ev.stopPropagation();
-  if(!confirm('Escludere PER SEMPRE '+nome+' dalla campagna? Non ricevera piu nessun messaggio.')) return;
+  if(!confirm('Escludere PER SEMPRE '+nome+'?'))return;
   post('/escludi',{id:id,quando:new Date().toISOString()},'es'+id);
 }
-function salvaSeguito(id,n){ post('/salva_seguito',{id:id,n:n,testo:document.getElementById('fu'+id+'_'+n).value,quando:new Date().toISOString()},'esfu'+id+'_'+n); }
-function prossimoPassoHtml(x){
-  if(!x.prossima_azione || !x.prossima_azione.quando) return '';
-  return '<div class="prossimo-passo"><b>📌 Prossimo passo</b><br>Stefania deve ricontattarlo il '+fmtData(x.prossima_azione.quando)+' se lui non si è fatto sentire prima.</div>';
-}
-function seguitiHtml(x){
-  if(!x.seguiti || !x.seguiti.length) return '';
-  if(x.risposto||x.gestito||x.prenotato||x.escluso)
-    return '<div class="nota-msg" style="margin-top:14px;color:var(--dim)">Messaggi successivi: sequenza fermata'+(x.risposto?' (ha risposto)':'')+', non partono.</div>';
-  var date=dateSeguiti(x);
-  return '<div style="margin-top:16px;border-top:1px dashed var(--linea);padding-top:12px">'+
-    '<div class="nota-msg" style="margin:0 0 10px;font-weight:700;color:var(--testo)">Messaggi successivi (partono solo se non risponde)</div>'+
-    x.seguiti.map(function(f,i){
-      var d=date[i];
-      var quando = f.inviato ? 'inviato '+fmt(f.inviato) : 'previsto '+(d.due?fmt(d.due):'parte col 1° messaggio');
-      return '<div class="sg-item">'+
-        '<div class="sg-head"><b>Seguito '+f.n+'</b><span class="sg-when">'+quando+'</span>'+(f.inviato?'<span class="stato-t info">inviato</span>':'')+'</div>'+
-        '<div class="sg-txt">'+esc(f.testo)+'</div>'+
-      '</div>';
-    }).join('')+'</div>';
-}
+function salvaSeguito(id,n){post('/salva_seguito',{id:id,n:n,testo:document.getElementById('fu'+id+'_'+n).value,quando:new Date().toISOString()},'esfu'+id+'_'+n);}
 function toggle(id){
   aperti[id]=!aperti[id];
-  ['sch','pri'].forEach(function(p){
-    const el=document.getElementById(p+id); if(el) el.classList.toggle('aperta',aperti[id]);
-  });
+  const el=document.getElementById('sch'+id);
+  if(el)el.classList.toggle('aperta',aperti[id]);
 }
 
-/* ---- priorità e filtri ---- */
-function seguitoDovuto(x){
-  if(!x.inviato || x.risposto || x.escluso || !x.seguiti) return null;
-  // collegamento mai accettato = nessun thread reale, il seguito non e mai inviabile
-  if(x.tipo==='collegamento' && x.collegamento_accettato!==true) return null;
-  var adesso=new Date();
-  for(var i=0;i<x.seguiti.length;i++){
-    var f=x.seguiti[i];
-    if(f.inviato) continue;
-    var t=new Date(x.inviato); t.setDate(t.getDate()+f.dopo_giorni);
-    if(t<=adesso) return f.n;
-    return null; // il prossimo non è ancora scaduto
-  }
-  return null;
-}
-// ordina la lista "Tutti": chi richiede un'azione da Davide sale, chi non richiede nulla ORA scende in fondo
-function rankAzione(x){
-  if(!x.approvato && !x.inviato) return 0;                         // da approvare: azione sua
-  if(x.risposto && !x.gestito) return 0;                           // risposta non gestita (raro, di solito e' gia in priorita)
-  if(x.inviato && !x.risposto) return 1;                           // in corso, aspetta risposta/seguito
-  if(x.approvato && !x.inviato && !x.in_pausa) return 2;           // in coda, partira' da solo
-  if(x.in_pausa) return 3;                                         // fermo per scelta sua, nessuna urgenza
-  if(x.risposto && x.gestito) return 4;                            // gestito, si muove lui o Stefania a data fissata
-  if(x.prenotato) return 5;                                        // obiettivo raggiunto, non serve piu guardarlo
-  return 2;
-}
-function daGestire(x){
-  if(x.escluso) return null;
-  if(x.risposto && !x.prenotato && !x.gestito) return {tipo:'risposta', label:'Ha risposto → rispondi'};
-  var n=seguitoDovuto(x);
-  if(n) return {tipo:'seguito', label:'Seguito '+n+' da inviare'};
-  return null;
-}
-var filtroAttivo = 'tutti';
-var FILTRI = [
-  {k:'tutti',      n:'Tutti',            f:function(x){return true}},
-  {k:'gestire',    n:'⚡ Da gestire',     f:function(x){return !!daGestire(x)}},
-  {k:'risposto',   n:'Ha risposto',      f:function(x){return !!x.risposto}},
-  {k:'seguiti',    n:'Seguiti da fare',  f:function(x){return !!seguitoDovuto(x)}},
-  {k:'inviati',    n:'Inviati',          f:function(x){return !!x.inviato}},
-  {k:'coda',       n:'In coda',          f:function(x){return !x.inviato && x.approvato && !x.in_pausa}},
-  {k:'approvare',  n:'Da approvare',     f:function(x){return !x.inviato && !x.approvato}},
-  {k:'pausa',      n:'In pausa',         f:function(x){return !!x.in_pausa && !x.inviato}},
-  {k:'prenotato',  n:'Prenotate',        f:function(x){return !!x.prenotato}}
+/* ---- filtri ---- */
+let filtroAttivo='tutti';
+const FILTRI=[
+  {k:'tutti',n:'Tutti',f:function(x){return true}},
+  {k:'risposto',n:'Ha risposto',f:function(x){return !!x.risposto}},
+  {k:'inviati',n:'Contattati',f:function(x){return !!x.inviato}},
+  {k:'approvare',n:'Da approvare',f:function(x){return !x.inviato&&!x.approvato}},
+  {k:'calendly',n:'🔗 Con Calendly',f:function(x){return calCount(x)>0}},
+  {k:'prenotato',n:'🎯 Prenotate',f:function(x){return !!x.prenotato}}
 ];
-function setFiltro(k){ filtroAttivo=k; carica(); }
-function filtriHtml(attivi){
-  return FILTRI.map(function(ft){
-    var n=attivi.filter(ft.f).length;
-    return '<button class="filtro'+(filtroAttivo===ft.k?' on':'')+'" onclick="setFiltro(\''+ft.k+'\')">'+ft.n+'<span class="fn">'+n+'</span></button>';
-  }).join('');
+function setFiltro(k){filtroAttivo=k;carica();window.scrollTo({top:document.getElementById('filtri').offsetTop-80,behavior:'smooth'});}
+
+/* ---- scheda lead ---- */
+function rankAzione(x){
+  if(x.risposto&&!x.gestito)return 0;
+  if(!x.approvato&&!x.inviato)return 1;
+  if(x.inviato&&!x.risposto)return 2;
+  if(x.risposto&&x.gestito)return 3;
+  if(x.prenotato)return 5;
+  return 4;
 }
-function prioritaCard(x){
-  var g=daGestire(x);
-  var risp = (g.tipo==='risposta' && x.risposta_testo) ? '<div class="pc-risp">“'+esc(x.risposta_testo)+'”</div>' : '';
-  var tag = g.tipo==='risposta' ? 'ha risposto'+(x.risposta_at?' · '+fmt(x.risposta_at):'') : g.label;
-  var link = x.profilo || 'https://www.linkedin.com/messaging/?filter=all';
-  var btn = g.tipo==='risposta' ? 'Apri e rispondi ↗' : 'Apri thread ↗';
-  return '<div class="pc">'+
-    '<div class="pc-top">'+
-      '<span class="pc-nome">'+esc(x.nome)+'</span>'+
-      '<span class="pc-tag'+(g.tipo==='risposta'?' verde':'')+'">'+esc(tag)+'</span>'+
-    '</div>'+
-    '<div class="pc-ruolo">'+esc(ruoloVisibile(x).slice(0,60))+'</div>'+
-    '<div class="stato-riga" style="margin-top:8px">'+statoIcone(x)+'</div>'+
-    risp+
-    '<a class="pc-btn" href="'+esc(link)+'" target="_blank">'+btn+'</a>'+
-  '</div>';
-}
-function schedaHtml(x, inPriorita){
+function schedaHtml(x){
   const bloccato=!!x.inviato;
-  const tipo=x.tipo==='thread'?'risposta nel thread':x.tipo==='collegamento'?'collegamento con nota':'DM diretto';
-  var g = inPriorita ? daGestire(x) : null;
-  var idSch = inPriorita ? 'pri'+x.id : 'sch'+x.id;
-  return '<div class="scheda'+(aperti[x.id]?' aperta':'')+'" id="'+idSch+'">'+
+  let corpo='';
+  if(x.risposta_testo)
+    corpo+='<div class="box-msg loro"><b>Lui/lei ha scritto</b>'+esc(x.risposta_testo)+'</div>';
+  if(x.risposta_conferma)
+    corpo+='<div class="box-msg"><b>Nostra risposta</b>'+esc(x.risposta_conferma)+'</div>';
+  if(!bloccato&&!x.escluso){
+    corpo+='<div class="box-msg"><b>Messaggio da inviare (modificabile)</b></div>'+
+      '<textarea id="ta'+x.id+'">'+esc(x.messaggio)+'</textarea>'+
+      '<div class="azioni">'+
+        '<button class="btn" onclick="salva('+x.id+')">Salva</button>'+
+        (x.approvato?'<button class="btn ghost" onclick="approva('+x.id+',false)">Metti in revisione</button>'
+                    :'<button class="btn verde" onclick="approva('+x.id+',true)">Approva ✓</button>')+
+        '<button class="btn pericolo" onclick="escludi(event,'+x.id+',\''+esc(x.nome).replace(/'/g,'')+'\')">Escludi</button>'+
+        '<span class="esito" id="es'+x.id+'"></span>'+
+      '</div>';
+  }else if(bloccato&&x.messaggio&&!x.risposta_conferma&&!x.risposta_testo){
+    corpo+='<div class="box-msg"><b>Messaggio inviato '+fmt(x.inviato)+'</b>'+esc(x.messaggio)+'</div>';
+  }
+  if(x.prossima_azione&&x.prossima_azione.quando)
+    corpo+='<div class="prossimo-passo"><b>📌 Prossimo passo</b> — entro il '+fmtData(x.prossima_azione.quando)+': '+esc(x.prossima_azione.cosa)+'</div>';
+  const seg=(x.seguiti||[]);
+  if(seg.length&&!x.escluso){
+    if(x.risposto||x.prenotato||x.stop_seguiti){
+      corpo+='<div class="nota-msg">Seguiti automatici: fermati (ha risposto).</div>';
+    }else{
+      const date=dateSeguiti(x);
+      corpo+='<div class="nota-msg" style="font-weight:700;color:var(--testo);margin-top:12px">Prossimi messaggi automatici (se non risponde)</div>';
+      seg.forEach(function(f,i){
+        const quando=f.inviato?'inviato '+fmt(f.inviato):'previsto '+(date[i].due?fmtData(date[i].due):'—');
+        if(f.inviato){
+          corpo+='<div class="box-msg" style="opacity:.6"><b>Seguito '+f.n+' · '+quando+'</b>'+esc(f.testo)+'</div>';
+        }else{
+          corpo+='<div class="nota-msg">Seguito '+f.n+' · '+quando+'</div>'+
+            '<textarea id="fu'+x.id+'_'+f.n+'" style="min-height:60px">'+esc(f.testo)+'</textarea>'+
+            '<div class="azioni"><button class="btn ghost" onclick="salvaSeguito('+x.id+','+f.n+')">Salva seguito</button><span class="esito" id="esfu'+x.id+'_'+f.n+'"></span></div>';
+        }
+      });
+    }
+  }
+  return '<div class="scheda'+(aperti[x.id]?' aperta':'')+'" id="sch'+x.id+'">'+
     '<div class="testata" onclick="toggle('+x.id+')">'+
       '<span class="pallino '+classePallino(x)+'"></span>'+
-      '<div class="chi"><span class="n">'+esc(x.nome)+'</span><span class="r'+(nonVerificato(x)?' r-attesa':'')+'">'+esc(ruoloVisibile(x))+'</span><div class="stato-riga">'+statoIcone(x)+'</div></div>'+
-      etichetta(x)+
-      '<a class="profilo-l" href="'+x.profilo+'" target="_blank" onclick="event.stopPropagation()">Profilo ↗</a>'+
-      ((x.escluso||x.inviato)?'':(x.in_pausa
-        ? '<button class="x" title="Riprendi" style="color:var(--ambra);border-color:rgba(245,185,95,.4)" onclick="pausa(event,'+x.id+',false)">▶</button>'
-        : '<button class="x" title="Metti in pausa" onclick="pausa(event,'+x.id+',true)">⏸</button>'))+
-      (x.escluso?'':'<button class="x" title="Escludi per sempre" onclick="escludi(event,'+x.id+',\''+esc(x.nome).replace(/'/g,'')+'\')">✕</button>')+
-      '<span class="freccia">▼</span>'+
+      '<div class="chi"><span class="n">'+esc(x.nome)+'</span><span class="r'+(nonVerificato(x)?' r-attesa':'')+'">'+esc(ruoloVisibile(x).slice(0,55))+'</span>'+statoIcone(x)+'</div>'+
+      (x.profilo?'<a class="profilo-l" href="'+esc(x.profilo)+'" target="_blank" onclick="event.stopPropagation()">Apri ↗</a>':'')+
+      (x.escluso?'':'<button class="x" title="Escludi" onclick="escludi(event,'+x.id+',\''+esc(x.nome).replace(/'/g,'')+'\')">✕</button>')+
     '</div>'+
-    (x.inviato?'':semaforo(x))+
-    '<div class="corpo">'+
-      '<div class="nota-msg" style="margin:0 0 8px">'+tipo+' · fonte: '+esc(x.fonte)+(x.variante?' · <b style="color:var(--acc)">variante '+esc(x.variante)+'</b>':'')+'</div>'+
-      '<textarea id="ta'+x.id+'" '+((bloccato||x.escluso)?'disabled':'')+'>'+esc(x.messaggio)+'</textarea>'+
-      (x.escluso?'<div class="nota-msg">Escluso: '+esc((x.note||'').split('|').pop())+'</div>'
-       : bloccato?'<div class="nota-msg">Già inviato il '+fmt(x.inviato)+': non modificabile.</div>'
-       : '<div class="azioni">'+
-           '<button class="btn" onclick="salva('+x.id+')">Salva</button>'+
-           (x.approvato
-             ?'<button class="btn ghost" onclick="approva('+x.id+',false)">Metti in revisione</button>'
-             :'<button class="btn verde" onclick="approva('+x.id+',true)">Approva ✓</button>')+
-           '<button class="btn pericolo" onclick="escludi(event,'+x.id+',\''+esc(x.nome).replace(/'/g,'')+'\')">Escludi per sempre</button>'+
-           '<span class="esito" id="es'+x.id+'"></span>'+
-         '</div>')+
-      (x.risposta_testo?'<div class="risposta">'+esc(x.risposta_testo)+'</div>':'')+
-      (x.risposta_conferma?'<div class="nostra-conferma"><b>La nostra risposta'+(x.gestito_il?' · '+fmt(x.gestito_il):'')+'</b>'+esc(x.risposta_conferma)+'</div>':'')+
-      prossimoPassoHtml(x)+
-      seguitiHtml(x)+
-    '</div>'+
+    '<div class="corpo">'+corpo+'</div>'+
   '</div>';
 }
+
+/* ---- render ---- */
 async function carica(){
   try{
     const r=await fetch('outreach-data.json?t='+Date.now());
     const d=await r.json();
     const c=d.contatti;
-    const attivi=c.filter(x=>!x.escluso), fuori=c.filter(x=>x.escluso);
-    const inv=attivi.filter(x=>x.inviato).length, ris=attivi.filter(x=>x.risposto).length;
-    const pren=attivi.filter(x=>x.prenotato).length;
-    const daValutare=attivi.filter(x=>!x.inviato&&!x.approvato).length;
-    const calendlyTot=contaCalendlyInviati(c);
-    document.getElementById('k_totali').textContent=c.length;
-    document.getElementById('k_inviati').textContent=inv;
-    document.getElementById('k_calendly').textContent=calendlyTot;
-    document.getElementById('k_risposte').innerHTML=ris+(inv?'<small> · '+Math.round(ris/inv*100)+'%</small>':'');
-    document.getElementById('k_pren').textContent=pren;
-    document.getElementById('k_approv').textContent=daValutare;
-    document.getElementById('barra_f').style.width=(attivi.length?Math.round(inv/attivi.length*100):0)+'%';
-    document.getElementById('agg').textContent='aggiornato '+fmt(d.aggiornato)+' · si rinnova ogni 5s';
-    document.getElementById('scala').textContent=c.length+' persone nel registro totale · '+attivi.length+' in lavorazione (in target) · '+fuori.length+' escluse (fuori target o duplicati)';
+    const attivi=c.filter(function(x){return !x.escluso});
+    const fuori=c.filter(function(x){return x.escluso});
+    const inv=attivi.filter(function(x){return x.inviato}).length;
+    const ris=attivi.filter(function(x){return x.risposto}).length;
+    document.getElementById('k_pren').textContent=attivi.filter(function(x){return x.prenotato}).length;
+    document.getElementById('k_tot').textContent=c.length;
+    document.getElementById('k_inv').textContent=inv;
+    document.getElementById('k_ris').innerHTML=ris+(inv?'<small> · '+Math.round(ris/inv*100)+'%</small>':'');
+    document.getElementById('k_cal').textContent=c.reduce(function(s,x){return s+calCount(x)},0);
+    document.getElementById('k_app').textContent=attivi.filter(function(x){return !x.inviato&&!x.approvato}).length;
+    document.getElementById('agg').textContent='aggiornato '+fmt(d.aggiornato)+' · '+attivi.length+' in lavorazione · '+fuori.length+' esclusi';
 
-    document.getElementById('filtri').innerHTML=filtriHtml(attivi);
-    const pri=attivi.filter(x=>daGestire(x))
-      .sort((a,b)=>{
-        const ga=daGestire(a), gb=daGestire(b);
-        if(ga.tipo!==gb.tipo) return ga.tipo==='risposta'?-1:1; // risposte prima dei seguiti
-        return (b.risposta_at||'').localeCompare(a.risposta_at||'');
-      });
-    const boxPri=document.getElementById('priorita');
-    if(filtroAttivo==='tutti' && pri.length){
-      boxPri.classList.remove('vuota');
-      document.getElementById('pri_cnt').textContent=pri.length;
-      document.getElementById('pri_lista').innerHTML=pri.map(x=>prioritaCard(x)).join('');
-    }else{
-      boxPri.classList.add('vuota');
-      document.getElementById('pri_lista').innerHTML='';
-    }
-    const filtroF=(FILTRI.find(ft=>ft.k===filtroAttivo)||FILTRI[0]).f;
-    const inPri=new Set(pri.map(x=>x.id));
-    let visibili=(filtroAttivo==='tutti')
-      ? attivi.filter(x=>!inPri.has(x.id))     // già mostrati sopra
-      : attivi.filter(filtroF);
-    if(filtroAttivo==='tutti') visibili=visibili.slice().sort((a,b)=>rankAzione(a)-rankAzione(b));
-    document.getElementById('lista').innerHTML=visibili.map(x=>schedaHtml(x)).join('')||'<div class="vuoto-msg">Nessun contatto per questo filtro.</div>';
-    document.getElementById('esclusi').innerHTML=fuori.map(x=>schedaHtml(x)).join('');
+    const df=listaDaFare(c);
+    document.getElementById('df_cnt').textContent=df.length;
+    document.getElementById('dafare').innerHTML=df.map(function(i){
+      return '<div class="riga'+(i.urg?' urgente':'')+'">'+i.html+(i.link?'<a href="'+esc(i.link)+'" target="_blank">apri ↗</a>':'')+'</div>';
+    }).join('')||'<div class="vuoto">Niente da fare ora: tutto in mano alle routine.</div>';
+
+    const ft=listaFatto(c);
+    document.getElementById('ft_cnt').textContent=ft.length;
+    document.getElementById('fatto').innerHTML=ft.map(function(e){
+      return '<div class="riga"><span class="quando">'+fmt(e.t)+'</span>'+e.html+'</div>';
+    }).join('')||'<div class="vuoto">Nessuna attività recente.</div>';
+
+    document.getElementById('filtri').innerHTML=FILTRI.map(function(ft){
+      const n=(ft.k==='tutti'?attivi:attivi.filter(ft.f)).length;
+      return '<button class="filtro'+(filtroAttivo===ft.k?' on':'')+'" onclick="setFiltro(\''+ft.k+'\')">'+ft.n+'<span class="fn">'+n+'</span></button>';
+    }).join('');
+    const fx=(FILTRI.find(function(f){return f.k===filtroAttivo})||FILTRI[0]).f;
+    const visibili=attivi.filter(fx).slice().sort(function(a,b){return rankAzione(a)-rankAzione(b)});
+    document.getElementById('lista').innerHTML=visibili.map(schedaHtml).join('')||'<div class="vuoto">Nessun lead per questo filtro.</div>';
+    document.getElementById('esclusi').innerHTML=fuori.map(schedaHtml).join('');
     document.getElementById('arch_t').textContent='Archivio esclusi ('+fuori.length+')';
-    document.getElementById('log').innerHTML=(d.log||[]).slice().reverse().map(l=>'<div><b>'+fmt(l.quando)+'</b><span>'+esc(l.testo)+'</span></div>').join('')||'<div>Nessuna attività.</div>';
-    document.getElementById('diario').innerHTML=(d.diario||[]).map(function(e){
-      return '<div class="dia"><div class="dia-t"><b>'+esc(e.titolo)+'</b>'+(e.tag?'<span class="dia-tag">'+esc(e.tag)+'</span>':'')+'<span class="dia-d">'+esc(e.data||'')+'</span></div><div class="dia-c">'+esc(e.testo)+'</div></div>';
-    }).join('')||'<div class="vuoto-msg">Diario vuoto.</div>';
-  }catch(e){ document.getElementById('agg').textContent='errore lettura dati: '+e.message; }
+  }catch(e){document.getElementById('agg').textContent='errore lettura dati: '+e.message;}
 }
 carica();
-setInterval(()=>{
+setInterval(function(){
   const inEdit=document.activeElement&&document.activeElement.tagName==='TEXTAREA';
-  if(!inEdit) carica();
+  if(!inEdit)carica();
 },5000);
 </script>
 </body>
