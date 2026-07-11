@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-11T15:57:54+02:00",
+ "aggiornato": "2026-07-11T19:50:00+02:00",
  "contatti": [
   {
    "id": 1,
@@ -1613,7 +1613,7 @@
     {
      "n": 1,
      "dopo_giorni": 4,
-     "inviato": null,
+     "inviato": "2026-07-11T19:00:00+02:00",
      "testo": "Christian, te lo chiedo perché sui bandi il tempo spesso se ne va a preparare pratiche e documenti a mano. Da te è così o hai già un modo per snellirlo?"
     },
     {
@@ -1622,7 +1622,12 @@
      "inviato": null,
      "testo": "Christian, ultima cosa e poi ti lascio in pace. Se il tema ti gira, Davide in 30 minuti ti fa vedere cosa si può togliere dalle tue giornate. Se non fa per te nessun problema, decidi tu."
     }
-   ]
+   ],
+   "doppio_controllo": {
+    "esito": "ok",
+    "quando": "2026-07-11T19:00:00+02:00",
+    "tipo": "seguito"
+   }
   },
   {
    "id": 48,
@@ -1683,7 +1688,7 @@
     {
      "n": 1,
      "dopo_giorni": 4,
-     "inviato": null,
+     "inviato": "2026-07-11T19:03:00+02:00",
      "testo": "Ignazio, te lo chiedo perché in uno studio come il tuo spesso il tempo se ne va tra preventivi, mail e gestione clienti a mano. Da te è così o hai già automatizzato qualcosa?"
     },
     {
@@ -1692,7 +1697,12 @@
      "inviato": null,
      "testo": "Ignazio, ultima cosa e poi ti lascio in pace. Se il tema ti gira, Davide in 30 minuti ti fa vedere cosa si può togliere dalle tue giornate. Se non fa per te nessun problema, decidi tu."
     }
-   ]
+   ],
+   "doppio_controllo": {
+    "esito": "ok",
+    "quando": "2026-07-11T19:03:00+02:00",
+    "tipo": "seguito"
+   }
   },
   {
    "id": 50,
@@ -1719,7 +1729,7 @@
     {
      "n": 1,
      "dopo_giorni": 4,
-     "inviato": null,
+     "inviato": "2026-07-11T19:05:30+02:00",
      "testo": "Paolo, te lo chiedo perché chi segue investitori spesso perde ore a rispondere sempre alle stesse domande e a gestire i contatti. Da te è così o l'hai già sistemato?"
     },
     {
@@ -1728,7 +1738,12 @@
      "inviato": null,
      "testo": "Paolo, ultima cosa e poi ti lascio in pace. Se il tema ti gira, Davide in 30 minuti ti fa vedere cosa si può togliere dalle tue giornate. Se non fa per te nessun problema, decidi tu."
     }
-   ]
+   ],
+   "doppio_controllo": {
+    "esito": "ok",
+    "quando": "2026-07-11T19:05:30+02:00",
+    "tipo": "seguito"
+   }
   },
   {
    "id": 51,
@@ -1838,7 +1853,7 @@
     {
      "n": 1,
      "dopo_giorni": 4,
-     "inviato": null,
+     "inviato": "2026-07-11T19:08:00+02:00",
      "testo": "Francesco, ti faccio un esempio concreto, di solito è rispondere alle stesse domande dei clienti via email o tenere dietro alle scadenze. È una di queste due, o è un'altra cosa?"
     },
     {
@@ -1847,7 +1862,12 @@
      "inviato": null,
      "testo": "Francesco, capito se non hai avuto tempo. Oggi quella parte la gestisci tu direttamente o hai già qualcuno in studio che se ne occupa?"
     }
-   ]
+   ],
+   "doppio_controllo": {
+    "esito": "ok",
+    "quando": "2026-07-11T19:08:00+02:00",
+    "tipo": "seguito"
+   }
   },
   {
    "id": 54,
@@ -1937,7 +1957,7 @@
     {
      "n": 1,
      "dopo_giorni": 4,
-     "inviato": null,
+     "inviato": "2026-07-11T19:11:00+02:00",
      "testo": "Nicola, ti faccio un esempio concreto, di solito è rispondere alle stesse domande dei clienti o smistare le pratiche urgenti da quelle che possono aspettare. È una di queste due, o è un'altra cosa?"
     },
     {
@@ -1946,7 +1966,12 @@
      "inviato": null,
      "testo": "Nicola, capito se non hai avuto tempo. Oggi quella parte la segue lei direttamente o ha già qualcuno in studio che se ne occupa?"
     }
-   ]
+   ],
+   "doppio_controllo": {
+    "esito": "ok",
+    "quando": "2026-07-11T19:11:00+02:00",
+    "tipo": "seguito"
+   }
   },
   {
    "id": 57,
@@ -1974,7 +1999,7 @@
     {
      "n": 1,
      "dopo_giorni": 4,
-     "inviato": null,
+     "inviato": "2026-07-11T19:14:00+02:00",
      "testo": "Elena Maria, ti faccio un esempio concreto, di solito è rispondere subito a chi scrive fuori orario o capire chi è davvero interessato da chi guarda solo. È una di queste due, o è un'altra cosa?"
     },
     {
@@ -1983,7 +2008,12 @@
      "inviato": null,
      "testo": "Elena Maria, capito se non hai avuto tempo. Oggi quella parte la segui tu personalmente o hai già qualcuno che ti aiuta?"
     }
-   ]
+   ],
+   "doppio_controllo": {
+    "esito": "ok",
+    "quando": "2026-07-11T19:14:00+02:00",
+    "tipo": "seguito"
+   }
   },
   {
    "id": 58,
@@ -2068,13 +2098,13 @@
    },
    "messaggio": "Dominik, eccola qui la guida sulle Automazioni AI, la trovi direttamente a questo link https://guida-automazioni.davidecaiazzo.it/ , così non devi aspettare la mail. Ti chiedo per curiosità, nel tuo lavoro di fractional CEO e mentoring c'è già una parte, tipo la gestione dei contenuti o dei contatti su LinkedIn, che ogni settimana ti porta via troppo tempo?",
    "approvato": true,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": "2026-07-07 08:57",
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "CALDO. Consulente strategico propria attivita. Bot non aveva risposto. Primo tocco 2026-07-07 08:57",
+   "note": "CALDO. Consulente strategico propria attivita. Bot non aveva risposto. Primo tocco 2026-07-07 08:57 | ESCLUSO 11/07 19:48: verificato su calendario Davide, Dominik Engel (dominik_engel@yahoo.de) e' CLIENTE ATTIVO in coaching 1:1 con Tania Zandonadi dal 2026-04-16 (doc 'CLIENTE: DOMINIK ENGEL'). Il seguito outreach NON va inviato: sarebbe un messaggio da bot a un cliente pagante gia' seguito dal team. Sequenza fermata definitivamente.",
    "seguiti": [
     {
      "n": 1,
@@ -2088,7 +2118,8 @@
      "inviato": null,
      "testo": "Dominik, capito se non hai avuto tempo. Oggi quella parte la gestisci tu personalmente?"
     }
-   ]
+   ],
+   "stop_seguiti": true
   },
   {
    "id": 62,
@@ -2116,7 +2147,7 @@
     {
      "n": 1,
      "dopo_giorni": 4,
-     "inviato": null,
+     "inviato": "2026-07-11T19:17:00+02:00",
      "testo": "Giuseppe, ti faccio un esempio concreto, di solito è preparare i preventivi o rispondere alle richieste dei clienti. È una di queste due, o è un'altra cosa?"
     },
     {
@@ -2125,7 +2156,12 @@
      "inviato": null,
      "testo": "Giuseppe, capito se non hai avuto tempo. Oggi quella parte la segui tu personalmente o hai già qualcuno che ti aiuta?"
     }
-   ]
+   ],
+   "doppio_controllo": {
+    "esito": "ok",
+    "quando": "2026-07-11T19:17:00+02:00",
+    "tipo": "seguito"
+   }
   },
   {
    "id": 63,
@@ -2153,7 +2189,7 @@
     {
      "n": 1,
      "dopo_giorni": 4,
-     "inviato": null,
+     "inviato": "2026-07-11T19:20:00+02:00",
      "testo": "Nicola, ti faccio un esempio concreto, di solito nello studio è rispondere alle stesse domande dei clienti via email o tenere dietro alle scadenze fiscali. È una di queste due, o è un'altra cosa?"
     },
     {
@@ -2162,7 +2198,12 @@
      "inviato": null,
      "testo": "Nicola, capito se non hai avuto tempo. Oggi quella parte la gestisci tu direttamente o hai già qualcuno in studio che se ne occupa?"
     }
-   ]
+   ],
+   "doppio_controllo": {
+    "esito": "ok",
+    "quando": "2026-07-11T19:20:00+02:00",
+    "tipo": "seguito"
+   }
   },
   {
    "id": 64,
@@ -2526,7 +2567,7 @@
     {
      "n": 1,
      "dopo_giorni": 4,
-     "inviato": null,
+     "inviato": "2026-07-11T19:23:00+02:00",
      "testo": "Roberto, ti faccio un esempio concreto, nel supporto che dai agli studi è spesso rispondere alle richieste dei clienti o preparare la documentazione dei bandi a mano. È una di queste due, o è un'altra cosa?"
     },
     {
@@ -2535,7 +2576,12 @@
      "inviato": null,
      "testo": "Roberto, capito se non hai avuto tempo. Oggi quella parte la segui tu personalmente o hai già qualcuno che ti aiuta?"
     }
-   ]
+   ],
+   "doppio_controllo": {
+    "esito": "ok",
+    "quando": "2026-07-11T19:23:00+02:00",
+    "tipo": "seguito"
+   }
   },
   {
    "id": 79,
@@ -2587,7 +2633,7 @@
     {
      "n": 1,
      "dopo_giorni": 4,
-     "inviato": null,
+     "inviato": "2026-07-11T19:26:00+02:00",
      "testo": "Antonio, ti faccio un esempio concreto, di solito nello studio è rispondere alle email dei clienti o smistare le pratiche urgenti da quelle che possono aspettare. È una di queste due, o è un'altra cosa?"
     },
     {
@@ -2596,7 +2642,12 @@
      "inviato": null,
      "testo": "Antonio, capito se non hai avuto tempo. Oggi quella parte la segui tu direttamente o hai già qualcuno che se ne occupa?"
     }
-   ]
+   ],
+   "doppio_controllo": {
+    "esito": "ok",
+    "quando": "2026-07-11T19:26:00+02:00",
+    "tipo": "seguito"
+   }
   },
   {
    "id": 81,
@@ -2624,7 +2675,7 @@
     {
      "n": 1,
      "dopo_giorni": 4,
-     "inviato": null,
+     "inviato": "2026-07-11T19:29:00+02:00",
      "testo": "Giovanni, ti faccio un esempio concreto, di solito è rispondere a chi ti scrive per un preventivo o organizzare gli shooting con chi ha già confermato. È una di queste due, o è un'altra cosa?"
     },
     {
@@ -2633,7 +2684,12 @@
      "inviato": null,
      "testo": "Giovanni, capito se non hai avuto tempo. Oggi quella parte la segui tu personalmente o hai già qualcuno che ti dà una mano?"
     }
-   ]
+   ],
+   "doppio_controllo": {
+    "esito": "ok",
+    "quando": "2026-07-11T19:29:00+02:00",
+    "tipo": "seguito"
+   }
   },
   {
    "id": 82,
@@ -2814,7 +2870,7 @@
     {
      "n": 1,
      "dopo_giorni": 4,
-     "inviato": null,
+     "inviato": "2026-07-11T19:32:00+02:00",
      "testo": "Stefano, ti faccio un esempio concreto, di solito nello studio è rispondere alle email dei clienti o mettere in ordine i documenti per le perizie. È una di queste due, o è un'altra cosa?"
     },
     {
@@ -2823,7 +2879,12 @@
      "inviato": null,
      "testo": "Stefano, capito se non hai avuto tempo. Oggi quella parte la segui tu direttamente o hai già qualcuno in studio che se ne occupa?"
     }
-   ]
+   ],
+   "doppio_controllo": {
+    "esito": "ok",
+    "quando": "2026-07-11T19:32:00+02:00",
+    "tipo": "seguito"
+   }
   },
   {
    "id": 89,
@@ -3030,7 +3091,7 @@
     {
      "n": 1,
      "dopo_giorni": 4,
-     "inviato": null,
+     "inviato": "2026-07-11T19:35:00+02:00",
      "testo": "Tiziana, ti faccio un esempio concreto, di solito è rispondere ai messaggi di chi ti chiede informazioni o organizzare gli incontri con chi segui. È una di queste due, o è un'altra cosa?"
     },
     {
@@ -3039,7 +3100,12 @@
      "inviato": null,
      "testo": "Tiziana, capito se non hai avuto tempo. Oggi quella parte la gestisci tu personalmente o hai già qualcuno che ti supporta?"
     }
-   ]
+   ],
+   "doppio_controllo": {
+    "esito": "ok",
+    "quando": "2026-07-11T19:35:00+02:00",
+    "tipo": "seguito"
+   }
   },
   {
    "id": 97,
@@ -3067,7 +3133,7 @@
     {
      "n": 1,
      "dopo_giorni": 4,
-     "inviato": null,
+     "inviato": "2026-07-11T19:38:00+02:00",
      "testo": "Franco, ti faccio un esempio concreto, di solito è rispondere agli ospiti che scrivono fuori orario o gestire il calendario delle prenotazioni. È una di queste due, o è un'altra cosa?"
     },
     {
@@ -3076,7 +3142,12 @@
      "inviato": null,
      "testo": "Franco, capito se non hai avuto tempo. Oggi quella parte la segui tu personalmente o hai già qualcuno che ti aiuta?"
     }
-   ]
+   ],
+   "doppio_controllo": {
+    "esito": "ok",
+    "quando": "2026-07-11T19:38:00+02:00",
+    "tipo": "seguito"
+   }
   },
   {
    "id": 98,
@@ -3104,7 +3175,7 @@
     {
      "n": 1,
      "dopo_giorni": 4,
-     "inviato": null,
+     "inviato": "2026-07-11T19:41:00+02:00",
      "testo": "Cala, ti faccio un esempio concreto, di solito è rispondere alle richieste dei clienti o tenere in ordine la parte amministrativa. È una di queste due, o è un'altra cosa?"
     },
     {
@@ -3113,7 +3184,12 @@
      "inviato": null,
      "testo": "Cala, capito se non hai avuto tempo. Oggi quella parte la segui tu direttamente?"
     }
-   ]
+   ],
+   "doppio_controllo": {
+    "esito": "ok",
+    "quando": "2026-07-11T19:41:00+02:00",
+    "tipo": "seguito"
+   }
   },
   {
    "id": 99,
@@ -3180,7 +3256,7 @@
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
-   "inviato": null,
+   "inviato": "2026-07-11T19:44:00+02:00",
    "risposto": false,
    "gestito": false,
    "prenotato": false,
@@ -3188,7 +3264,12 @@
    "seguiti": [],
    "variante": "A",
    "qualificato_il": "2026-07-10T08:45:00+02:00",
-   "programmato": "2026-07-10T13:35:00+02:00"
+   "programmato": "2026-07-10T13:35:00+02:00",
+   "doppio_controllo": {
+    "esito": "ok",
+    "quando": "2026-07-11T19:44:00+02:00",
+    "tipo": "nuovo"
+   }
   },
   {
    "id": 102,
@@ -3541,7 +3622,7 @@
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
-   "inviato": null,
+   "inviato": "2026-07-11T19:47:00+02:00",
    "risposto": false,
    "gestito": false,
    "prenotato": false,
@@ -3550,7 +3631,12 @@
    "angolo": "automazione",
    "variante": "A",
    "programmato": "2026-07-09T14:05:00+02:00",
-   "qualificato_il": "2026-07-09T07:30:00+02:00"
+   "qualificato_il": "2026-07-09T07:30:00+02:00",
+   "doppio_controllo": {
+    "esito": "ok",
+    "quando": "2026-07-11T19:47:00+02:00",
+    "tipo": "nuovo"
+   }
   },
   {
    "id": 116,
@@ -4953,7 +5039,83 @@
    "testo": "Trigger 09:23 duplicato dello slot 09:20 (log gia presente ore 09:22:35 con controllo completo: 0 risposte, 0 collegamenti, 0 prenotazioni). Evitata nuova navigazione LinkedIn ridondante per rispetto ritmo anti-ban. Verificato solo: dashboard server 8766 attivo (200), nessuna prossima_azione scaduta oggi 11/07 tra gli 8 contatti risposto=true, nessuna risposta orfana (tutti gestito=true). Nessuna azione necessaria."
   },
   "[2026-07-11T15:55:14+02:00] pipeline straordinaria backlog: 3 stub completati (128 Miglio, 132 Sacco, 136 Falduto), 5 esclusi (109 Lupu coach, 110 Montone dipendente Etjca, 123 Buoli freelance mkt/AI, 133 Vedovelli consulente comunicazione, 137 Sechi rapporto personale Davide). Verifiche: thread inbox confermato per ogni completo (?searchTerm), profilo URL compilato su tutti gli 8, blocklist esclusi-crm pulita, crm_liste clienti/trattative = falsi positivi, calendar nessun evento, messaggi settoriali esplorativi (immobiliare/turismo medico). Backlog stub residuo 18, coda pronta (completi non inviati) rivedere in dashboard. NON inviato nulla: auto-approvazione dopo 24h o approvazione manuale Davide.",
-  "[2026-07-11T15:57:54+02:00] pipeline straordinaria (2a tranche): +2 completati (145 Troisi Fractional CFO PMI, 139 Errichiello proprietario filiale PrestitoSi Napoli con caveat Sud), +1 escluso (141 Culici Head of BU dipendente). Totale run: 5 completati, 6 esclusi (11 stub smaltiti su 26). Verifiche complete: thread inbox, profilo URL, blocklist, crm, calendar. Messaggi settoriali esplorativi. NON inviato nulla."
+  "[2026-07-11T15:57:54+02:00] pipeline straordinaria (2a tranche): +2 completati (145 Troisi Fractional CFO PMI, 139 Errichiello proprietario filiale PrestitoSi Napoli con caveat Sud), +1 escluso (141 Culici Head of BU dipendente). Totale run: 5 completati, 6 esclusi (11 stub smaltiti su 26). Verifiche complete: thread inbox, profilo URL, blocklist, crm, calendar. Messaggi settoriali esplorativi. NON inviato nulla.",
+  {
+   "quando": "2026-07-11T19:00:00+02:00",
+   "testo": "Seguito 1 inviato a Christian Viola (id47), verificato thread ultimo msg nostro, calendario/CRM puliti (omonimo Marco Viola persona diversa), verificatore indipendente: INVIA."
+  },
+  {
+   "quando": "2026-07-11T19:03:00+02:00",
+   "testo": "Seguito 1 inviato a Ignazio Cannavò (id49), thread verificato ultimo msg nostro, calendario/CRM puliti, verificatore indipendente: INVIA."
+  },
+  {
+   "quando": "2026-07-11T19:05:30+02:00",
+   "testo": "Seguito 1 inviato a Paolo Marciante (id50), thread verificato ultimo msg nostro, calendario/CRM puliti, verificatore indipendente: INVIA."
+  },
+  {
+   "quando": "2026-07-11T19:08:00+02:00",
+   "testo": "Seguito 1 inviato a Francesco Cocci (id53), thread verificato ultimo msg nostro, calendario/CRM puliti, verificatore indipendente: INVIA. NOTA: primo tentativo di paste aveva incollato per errore il testo di Christian Viola — corretto PRIMA del click Invia, verificato testo giusto nel box e nel thread dopo l'invio."
+  },
+  {
+   "quando": "2026-07-11T19:11:00+02:00",
+   "testo": "Seguito 1 inviato a Nicola Stiaffini (id56), thread verificato ultimo msg nostro, calendario/CRM puliti, verificatore indipendente: INVIA."
+  },
+  {
+   "quando": "2026-07-11T19:14:00+02:00",
+   "testo": "Seguito 1 inviato a Elena Maria Foglia (id57), thread verificato ultimo msg nostro, calendario/CRM puliti, verificatore indipendente: INVIA."
+  },
+  {
+   "quando": "2026-07-11T19:17:00+02:00",
+   "testo": "Seguito 1 inviato a Giuseppe Carrabba (id62), thread verificato ultimo msg nostro, calendario/CRM puliti, verificatore indipendente: INVIA."
+  },
+  {
+   "quando": "2026-07-11T19:20:00+02:00",
+   "testo": "Seguito 1 inviato a Nicola Mastroianni (id63), thread verificato ultimo msg nostro, calendario/CRM puliti, verificatore indipendente: INVIA."
+  },
+  {
+   "quando": "2026-07-11T19:23:00+02:00",
+   "testo": "Seguito 1 inviato a Roberto Martana (id78), thread verificato ultimo msg nostro, calendario/CRM puliti, verificatore indipendente: INVIA."
+  },
+  {
+   "quando": "2026-07-11T19:26:00+02:00",
+   "testo": "Seguito 1 inviato a Antonio Zambon (id80), thread verificato ultimo msg nostro, calendario/CRM puliti, verificatore indipendente: INVIA."
+  },
+  {
+   "quando": "2026-07-11T19:29:00+02:00",
+   "testo": "Seguito 1 inviato a Giovanni Nardi (id81), thread verificato ultimo msg nostro (conferma 'fotografo' nel testo, coerente col ruolo, NON e' Maurizio Nardi di Samovar Viaggi), calendario/CRM puliti, verificatore indipendente: INVIA."
+  },
+  {
+   "quando": "2026-07-11T19:32:00+02:00",
+   "testo": "Seguito 1 inviato a Stefano d'Orsi (id88), thread verificato ultimo msg nostro, calendario/CRM puliti, verificatore indipendente: INVIA."
+  },
+  {
+   "quando": "2026-07-11T19:35:00+02:00",
+   "testo": "Seguito 1 inviato a Tiziana Bucci (id96), thread verificato ultimo msg nostro, calendario/CRM puliti, verificatore indipendente: INVIA."
+  },
+  {
+   "quando": "2026-07-11T19:38:00+02:00",
+   "testo": "Seguito 1 inviato a Franco Nieddu (id97), thread verificato ultimo msg nostro, calendario/CRM puliti, verificatore indipendente: INVIA."
+  },
+  {
+   "quando": "2026-07-11T19:41:00+02:00",
+   "testo": "Seguito 1 inviato a Cala Calogera (id98), thread verificato ultimo msg nostro, calendario/CRM puliti, verificatore indipendente: INVIA."
+  },
+  {
+   "quando": "2026-07-11T19:44:00+02:00",
+   "testo": "Primo messaggio esplorativo inviato a Valentino De Roma (id101, auto-approvato dopo 24h), thread verificato ultimo msg suo ('Ottimo, grazie mille'), calendario/CRM puliti, verificatore indipendente: INVIA."
+  },
+  {
+   "quando": "2026-07-11T19:47:00+02:00",
+   "testo": "Primo messaggio esplorativo inviato a Simonetta Cori (id115, auto-approvata dopo 24h), thread verificato ultimo msg suo ('OK'), calendario/CRM puliti, verificatore indipendente: INVIA."
+  },
+  {
+   "quando": "2026-07-11T19:48:00+02:00",
+   "testo": "Dominik Engel (id60) ESCLUSO dal seguito dovuto: calendario conferma cliente attivo in coaching con Tania Zandonadi dal 16/04/2026 (match esatto nome+email). Nessun invio, stop_seguiti impostato."
+  },
+  {
+   "quando": "2026-07-11T19:50:00+02:00",
+   "testo": "invio serale: 17 inviati (15 seguiti: Viola47/Cannavo49/Marciante50/Cocci53/Stiaffini56/Foglia57/Carrabba62/Mastroianni63/Martana78/Zambon80/Nardi81/dOrsi88/Bucci96/Nieddu97/Calogera98 + 2 nuovi: De Roma101/Cori115), 1 bloccato dal verificatore/livello1 (Dominik Engel id60: cliente attivo in coaching con Tania Zandonadi, scoperto da calendario - MAI arrivato al verificatore, escluso prima), 0 auto-approvati (i 5 candidati qualificati oggi 15:55-15:57 non hanno ancora 24h). Guardia segna-non-letto: 0 non letti iniziali, 0 finali, nessun ripristino necessario. Doppio controllo a due livelli completato su tutti i 17 invii (calendario+CRM+registro rifatti da zero + verificatore indipendente INVIA per ciascuno). Tab chiuse."
+  }
  ],
  "diario": [
   {
