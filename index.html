@@ -130,6 +130,7 @@ let aperti={};
 function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;');}
 function parseTs(s){
   if(!s||s===true) return null;
+  if(s instanceof Date) return isNaN(s)?null:s;
   s=String(s);
   let d=new Date(s.replace(' ','T'));
   if(isNaN(d)) d=new Date(s.slice(0,10)+'T12:00:00');
