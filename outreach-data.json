@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-11T15:55:14+02:00",
+ "aggiornato": "2026-07-11T15:57:54+02:00",
  "contatti": [
   {
    "id": 1,
@@ -4116,17 +4116,17 @@
   {
    "id": 139,
    "nome": "Gianpiero Errichiello",
-   "profilo": "",
+   "profilo": "https://www.linkedin.com/in/ACoAADPFEhgBpE9u0BVrcekGecQHMcN4gHn7dCk",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Proprietario Filiale Partner PrestitoSi Napoli - Via Toledo (mediazione creditizia)",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
-    "geografia": "",
-    "budget": "da verificare",
-    "fonte": "guida"
+    "ruolo": "ok",
+    "geografia": "Napoli",
+    "budget": "dubbio",
+    "fonte": "ok"
    },
-   "messaggio": "",
+   "messaggio": "Gianpiero, ti avevo mandato la guida. In filiale chi chiede un preventivo per un prestito e poi sparisce, i solleciti li gestisci ancora a mano uno per uno?",
    "approvato": false,
    "escluso": false,
    "in_pausa": false,
@@ -4134,8 +4134,11 @@
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
-   "seguiti": []
+   "note": "COMPLETO 11/07 (con caveat). Proprietario filiale partner PrestitoSi (rete nazionale) su Via Toledo Napoli = titolare struttura franchising. CAVEAT: Sud Italia, regola target FUORI salvo struttura chiara: qui c'e struttura (filiale brandizzata rete nazionale) -> lo lascio DA APPROVARE, valuta Davide. Thread confermato, guida ricevuta, calendar nessun evento, blocklist pulita.",
+   "seguiti": [],
+   "variante": "A",
+   "qualificato_il": "2026-07-11T15:57:54+02:00",
+   "programmato": "2026-07-11T19:05:00+02:00"
   },
   {
    "id": 140,
@@ -4164,25 +4167,25 @@
   {
    "id": 141,
    "nome": "Riccardo Culici",
-   "profilo": "",
+   "profilo": "https://www.linkedin.com/in/ACoAAA3h050BEMAfxKRFmfP3M71WGrfAcLRlKBA",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Head of Business Unit Closures @ESTAL",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
+    "ruolo": "no",
     "geografia": "",
     "budget": "da verificare",
     "fonte": "guida"
    },
    "messaggio": "",
    "approvato": false,
-   "escluso": false,
+   "escluso": true,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
+   "note": "ESCLUSO 11/07: 'Head of Business Unit Closures @ESTAL' = dirigente/manager dipendente di azienda, non titolare ne C-level ne decisore d'acquisto per se. Fuori target (dipendente). Thread confermato.",
    "seguiti": []
   },
   {
@@ -4264,17 +4267,17 @@
   {
    "id": 145,
    "nome": "Roberto Troisi",
-   "profilo": "",
+   "profilo": "https://www.linkedin.com/in/ACoAADn4VmABFZSpO_G6nCwmsnEuqHfcpiQIxfM",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Fractional CFO — aiuta PMI 500K-5M su margini, liquidita, controllo di gestione (attivita propria)",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
-    "geografia": "",
-    "budget": "da verificare",
-    "fonte": "guida"
+    "ruolo": "ok",
+    "geografia": "Italia",
+    "budget": "dubbio",
+    "fonte": "ok"
    },
-   "messaggio": "",
+   "messaggio": "Roberto, ti avevo mandato la guida sul venditore che non dorme. I titolari di PMI che ti chiedono un confronto sul controllo di gestione e poi si perdono per strada, i solleciti li mandi ancora a mano uno per uno?",
    "approvato": false,
    "escluso": false,
    "in_pausa": false,
@@ -4282,8 +4285,11 @@
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
-   "seguiti": []
+   "note": "COMPLETO 11/07. Fractional CFO per PMI 500K-5M, attivita propria strutturata. Thread confermato, guida Venditore ricevuta. Blocklist/CRM puliti, calendar nessun evento. Budget DUBBIO (fatturato proprio non chiaro) -> decide Davide.",
+   "seguiti": [],
+   "variante": "A",
+   "qualificato_il": "2026-07-11T15:57:54+02:00",
+   "programmato": "2026-07-11T19:00:00+02:00"
   }
  ],
  "servizio": [
@@ -4946,7 +4952,8 @@
    "quando": "2026-07-11T09:24:36.157656+02:00",
    "testo": "Trigger 09:23 duplicato dello slot 09:20 (log gia presente ore 09:22:35 con controllo completo: 0 risposte, 0 collegamenti, 0 prenotazioni). Evitata nuova navigazione LinkedIn ridondante per rispetto ritmo anti-ban. Verificato solo: dashboard server 8766 attivo (200), nessuna prossima_azione scaduta oggi 11/07 tra gli 8 contatti risposto=true, nessuna risposta orfana (tutti gestito=true). Nessuna azione necessaria."
   },
-  "[2026-07-11T15:55:14+02:00] pipeline straordinaria backlog: 3 stub completati (128 Miglio, 132 Sacco, 136 Falduto), 5 esclusi (109 Lupu coach, 110 Montone dipendente Etjca, 123 Buoli freelance mkt/AI, 133 Vedovelli consulente comunicazione, 137 Sechi rapporto personale Davide). Verifiche: thread inbox confermato per ogni completo (?searchTerm), profilo URL compilato su tutti gli 8, blocklist esclusi-crm pulita, crm_liste clienti/trattative = falsi positivi, calendar nessun evento, messaggi settoriali esplorativi (immobiliare/turismo medico). Backlog stub residuo 18, coda pronta (completi non inviati) rivedere in dashboard. NON inviato nulla: auto-approvazione dopo 24h o approvazione manuale Davide."
+  "[2026-07-11T15:55:14+02:00] pipeline straordinaria backlog: 3 stub completati (128 Miglio, 132 Sacco, 136 Falduto), 5 esclusi (109 Lupu coach, 110 Montone dipendente Etjca, 123 Buoli freelance mkt/AI, 133 Vedovelli consulente comunicazione, 137 Sechi rapporto personale Davide). Verifiche: thread inbox confermato per ogni completo (?searchTerm), profilo URL compilato su tutti gli 8, blocklist esclusi-crm pulita, crm_liste clienti/trattative = falsi positivi, calendar nessun evento, messaggi settoriali esplorativi (immobiliare/turismo medico). Backlog stub residuo 18, coda pronta (completi non inviati) rivedere in dashboard. NON inviato nulla: auto-approvazione dopo 24h o approvazione manuale Davide.",
+  "[2026-07-11T15:57:54+02:00] pipeline straordinaria (2a tranche): +2 completati (145 Troisi Fractional CFO PMI, 139 Errichiello proprietario filiale PrestitoSi Napoli con caveat Sud), +1 escluso (141 Culici Head of BU dipendente). Totale run: 5 completati, 6 esclusi (11 stub smaltiti su 26). Verifiche complete: thread inbox, profilo URL, blocklist, crm, calendar. Messaggi settoriali esplorativi. NON inviato nulla."
  ],
  "diario": [
   {
