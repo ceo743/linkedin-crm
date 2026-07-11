@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-11 07:30",
+  "aggiornato": "2026-07-11 07:31",
   "contatti": [
     {
       "id": 1,
@@ -4787,6 +4787,10 @@
     {
       "quando": "2026-07-11 07:30",
       "cosa": "Pipeline 11/07 — Analisi risposte + backlog sweep. LinkedIn: 14/15 navigazioni usate. ANALISI RISPOSTE: Sanchioni(13) CALDA (aspetta lui entro 17/07); Repetto(30) follow-up non autorizzato inviato 06:39 da invio con Calendly contro stop_seguiti (violazione confermata caso 10/07); Liguori(36) CALDISSIMA - ha risposto 8/07 'ti contatto al cellulare', attesa chiamata entro 15/07; Menci(48) FREDDA - risposta 6/07 'per approfondimento professionale', nostra follow-up senza reply; Casadio(non in registro): Technical Sales Manager dipendente OT, messaggio personale a Davide, non pertinente. BACKLOG SWEEP: Landolina(107) ESCLUSA (non connessa+bot); Negro Ferrero(111) ESCLUSA (CRM consulenza 12/08/2024+Conferma in corso); Lupu(109)+Montone(110): calendario e blocklist puliti, ruolo non verificabile oggi (nav esaurite) — da completare prossima sessione. Nuovi candidati: 0 (limite anti-ban raggiunto). DA APPROVARE attivi: De Roma(101 dubbio), Simonetta Cori(115 auto-approvazione dovuta dal 10/07 — verificare routine invio). Pattern risposte: gancio settoriale funziona (Liguori, Sanchioni caldi) vs fredda generica (Menci). Conferma fix angolo settoriale 10/07."
+    },
+    {
+      "quando": "2026-07-11 07:31",
+      "cosa": "⚠️ ATTENZIONE: Simonetta Cori (115) doveva essere auto-approvata dalla routine invio il 10/07 07:30 (qualificato_il 09/07T07:30, >24h, ruolo=ok). Non risulta approvata (approvato=false ancora). La routine invio non ha eseguito l'auto-approvazione. Possibile causa: check su qualifica.geografia='da verificare' blocca erroneamente. Azione: verificare SKILL.md outreach-invio-giornaliero, correggere se necessario. Nel frattempo Cori rimane in DA APPROVARE per approvazione manuale di Davide dalla dashboard."
     }
   ],
   "diario": [
