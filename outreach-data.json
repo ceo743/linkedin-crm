@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-11 07:30",
+ "aggiornato": "2026-07-11T09:19:45+02:00",
  "contatti": [
   {
    "id": 1,
@@ -3177,14 +3177,14 @@
     "fonte": "Broker immobiliare autonomo, Viareggio TOS; segnali struttura misti. Toscana (no Sud). Calendrio: nessun evento."
    },
    "messaggio": "Valentino, a suo tempo ti avevo mandato la guida sull'Assistente Email AI. Ti chiedo per curiosità, l'hai guardata più per capire come funziona o perché hai già in testa qualcosa che ti porta via troppo tempo ogni settimana?",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Thread inbox CONFERMATO 09/07 (ha risposto 'Ottimo grazie mille'). Guida: Assistente Email AI (24giu). Ruolo NON trovato online — da verificare su LinkedIn. | 10/07: profilo verificato — Broker immobiliare e scrittore, Viareggio (TOS). Thread confermato (risposta 'Ottimo grazie mille'). Calendario clear. DUBBIO ruolo/budget: decide Davide.",
+   "note": "Thread inbox CONFERMATO 09/07 (ha risposto 'Ottimo grazie mille'). Guida: Assistente Email AI (24giu). Ruolo NON trovato online — da verificare su LinkedIn. | 10/07: profilo verificato — Broker immobiliare e scrittore, Viareggio (TOS). Thread confermato (risposta 'Ottimo grazie mille'). Calendario clear. DUBBIO ruolo/budget: decide Davide. | auto-approvato 11/07 (regola 24h del 09/07, applicazione retroattiva: blocklist+CRM ricontrollati, puliti; il 10/07 la routine invio non aveva eseguito la scansione per lo split-brain del registro)",
    "seguiti": [],
    "variante": "A",
    "qualificato_il": "2026-07-10T08:45:00+02:00",
@@ -3538,14 +3538,14 @@
     "fonte": "ok"
    },
    "messaggio": "Simonetta, a suo tempo ti avevo mandato la guida sul Venditore AI. Ti chiedo per curiosità, l'hai scaricata più per capire come funziona o perché hai già in testa qualcosa che ti porta via troppo tempo ogni settimana?",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Travel Designer con sito proprio (simonettacori.com). Ha risposto 'OK' alla guida. Budget DUBBIO (micro business solo?). Calendar: nessun evento. Decide Davide.",
+   "note": "Travel Designer con sito proprio (simonettacori.com). Ha risposto 'OK' alla guida. Budget DUBBIO (micro business solo?). Calendar: nessun evento. Decide Davide. | auto-approvato 11/07 (regola 24h del 09/07, applicazione retroattiva: blocklist+CRM ricontrollati, puliti; il 10/07 la routine invio non aveva eseguito la scansione per lo split-brain del registro)",
    "seguiti": [],
    "angolo": "automazione",
    "variante": "A",
@@ -4924,6 +4924,10 @@
   {
    "quando": "2026-07-11 07:31",
    "cosa": "⚠️ ATTENZIONE: Simonetta Cori (115) doveva essere auto-approvata dalla routine invio il 10/07 07:30 (qualificato_il 09/07T07:30, >24h, ruolo=ok). Non risulta approvata (approvato=false ancora). La routine invio non ha eseguito l'auto-approvazione. Possibile causa: check su qualifica.geografia='da verificare' blocca erroneamente. Azione: verificare SKILL.md outreach-invio-giornaliero, correggere se necessario. Nel frattempo Cori rimane in DA APPROVARE per approvazione manuale di Davide dalla dashboard."
+  },
+  {
+   "quando": "2026-07-11T09:19:45+02:00",
+   "testo": "auto-approvati dopo 24h senza risposta Davide: Valentino De Roma (101), Simonetta Cori (115) — regola 09/07, applicata dalla sessione di analisi outreach dell'11/07 dopo verifica blocklist/CRM (puliti). Pronti per l'invio serale 18:40. (2 contatti)"
   }
  ],
  "diario": [
