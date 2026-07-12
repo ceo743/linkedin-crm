@@ -3927,7 +3927,7 @@
         "fonte": "guida Avvocato AI"
       },
       "messaggio": "Massimo, ti seguo tra i post sulla finanza per le PMI, dal factoring alla cartolarizzazione del magazzino fino ai check-up ESG, e si vede che produci parecchia analisi e contenuti. Visto che avevi dato un'occhiata alla guida sull'Avvocato AI, ero curioso di una cosa. Tutta la parte di analisi dei documenti e delle pratiche delle aziende che segui la fai ancora a mano, oppure hai già iniziato a farti aiutare da strumenti di intelligenza artificiale?",
-      "approvato": false,
+      "approvato": true,
       "escluso": false,
       "in_pausa": false,
       "inviato": false,
@@ -5146,6 +5146,10 @@
     {
       "quando": "2026-07-12T03:59:45.343Z",
       "testo": "messaggio #126 approvato da dashboard"
+    },
+    {
+      "quando": "2026-07-12T04:00:05.177Z",
+      "testo": "messaggio #127 approvato da dashboard"
     }
   ],
   "diario": [
