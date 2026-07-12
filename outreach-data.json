@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-12T09:26:35+02:00",
+  "aggiornato": "2026-07-12T14:25:22+02:00",
   "contatti": [
     {
       "id": 1,
@@ -5186,6 +5186,14 @@
     {
       "quando": "2026-07-12T09:26:35+02:00",
       "testo": "controllo ore 09:21: 1 nuova risposta (Tiziana Bucci). Ha risposto 'non uso molto LinkedIn, scarico la guida e ci aggiorniamo' = rimanda, nessun problema ammesso. Verificatore indipendente (Agent sonnet): INVIA. Inviata conferma calda senza link ('Perfetto Tiziana, resto a disposizione, quando ti va ci sono. Stefania'), doppio check testo prima invio e ultimo messaggio nel thread dopo invio confermati. stop_seguiti=true, prossima_azione 2026-07-26. Altri 9 thread non letti in inbox (Fabrizio Di Domenico, Jacopo Paoletti, Giovanni Infuso, Lorenza Trione, Dominik Engel, Davide Grillo, Roberto Raspa, Enrico Anselmo, Filippo Verducci) non sono contatti della campagna outreach corrente (nessuno con 'inviato' valorizzato coerente), non toccati. 0 collegamenti da verificare, 0 prenotazioni Calendly nuove per contatti del registro."
+    },
+    {
+      "quando": "2026-07-12T14:25:22+02:00",
+      "testo": "controllo ore 14:20: 0 nuove risposte, 0 collegamenti accettati, 0 prenotazioni (30 contatti in attesa verificati su unread LinkedIn, invitation-manager, Gmail Calendly)"
+    },
+    {
+      "quando": "2026-07-12T14:31:00+02:00",
+      "testo": "segna-non-letto: 0/10 ripristinati, endpoint voyagerMessagingDashMessengerConversations risponde HTTP 400 anche in GET semplice (non solo POST) - probabile endpoint LinkedIn cambiato/deprecato, non problema di formato richiesta (provati POST semplice, PATCH override, restli-method partial_update, tutti 400). NESSUN DANNO: i 10 thread non letti (tutti 'Preventivi', nessuno del registro outreach) non sono mai stati aperti da questa sessione, restano non letti come prima. Serve rivedere l'endpoint corretto per il ripristino non-letto (probabile migrazione a GraphQL mutation)."
     }
   ],
   "diario": [
