@@ -214,8 +214,10 @@ function listaDaFare(c){
       if(diff<=3) items.push({p:diff<0?0:2,html:'📌 <span class="chi-b">'+esc(x.nome)+'</span> entro '+fmtData(pa.quando)+': '+esc(breve(pa.cosa,90)),urg:diff<0,link:x.profilo});
     }
   });
-  const daAppr=c.filter(function(x){return !x.escluso&&!x.inviato&&!x.approvato}).length;
-  if(daAppr) items.push({p:3,html:'⏳ <span class="chi-b">'+daAppr+' messaggi</span> scritti e in attesa della tua approvazione (clicca Da approvare in alto)',urg:false});
+  const daAppr=c.filter(function(x){return !x.escluso&&daApprovare(x)}).length;
+  if(daAppr) items.push({p:3,html:'⏳ <span class="chi-b">'+daAppr+' messaggi</span> pronti in attesa della tua approvazione (clicca Da approvare in alto)',urg:false});
+  const daVer=c.filter(function(x){return !x.escluso&&daVerificare(x)}).length;
+  if(daVer) items.push({p:4,html:'🔍 <span class="chi-b">'+daVer+' lead</span> trovati ma da verificare (ruolo/messaggio mancante) — non ancora pronti da mandare',urg:false});
   return items.sort(function(a,b){return a.p-b.p});
 }
 
@@ -265,13 +267,19 @@ function toggle(id){
   if(el)el.classList.toggle('aperta',aperti[id]);
 }
 
+/* pronto = ruolo verificato E messaggio scritto → si può approvare e mandare */
+function haMessaggio(x){return !!(x.messaggio&&x.messaggio.trim());}
+function daApprovare(x){return !x.inviato&&!x.approvato&&!nonVerificato(x)&&haMessaggio(x);}
+function daVerificare(x){return !x.inviato&&!x.approvato&&(nonVerificato(x)||!haMessaggio(x));}
+
 /* ---- filtri ---- */
 let filtroAttivo='tutti';
 const FILTRI=[
   {k:'tutti',n:'Tutti',f:function(x){return true}},
   {k:'risposto',n:'Ha risposto',f:function(x){return !!x.risposto}},
   {k:'inviati',n:'Contattati',f:function(x){return !!x.inviato}},
-  {k:'approvare',n:'Da approvare',f:function(x){return !x.inviato&&!x.approvato}},
+  {k:'approvare',n:'Da approvare',f:daApprovare},
+  {k:'verificare',n:'⏳ Da verificare',f:daVerificare},
   {k:'calendly',n:'🔗 Con Calendly',f:function(x){return calCount(x)>0}},
   {k:'prenotato',n:'🎯 Prenotate',f:function(x){return !!x.prenotato}}
 ];
@@ -353,7 +361,7 @@ async function carica(){
     document.getElementById('k_inv').textContent=inv;
     document.getElementById('k_ris').innerHTML=ris+(inv?'<small> · '+Math.round(ris/inv*100)+'%</small>':'');
     document.getElementById('k_cal').textContent=c.reduce(function(s,x){return s+calCount(x)},0);
-    document.getElementById('k_app').textContent=attivi.filter(function(x){return !x.inviato&&!x.approvato}).length;
+    document.getElementById('k_app').textContent=attivi.filter(daApprovare).length;
     document.getElementById('agg').textContent='aggiornato '+fmt(d.aggiornato)+' · '+attivi.length+' in lavorazione · '+fuori.length+' esclusi';
 
     const df=listaDaFare(c);
