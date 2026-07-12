@@ -3734,7 +3734,7 @@
         "fonte": "guida Claude for Legal"
       },
       "messaggio": "Maria Serena, ho letto il post di Marco Camisani Calzolari sull'intelligenza artificiale che avevi ripreso, dove sottolineavi che serve a poco se dietro non c'è qualcuno che sa pensare. Visto che il tema ti interessa e che il tuo lavoro è tutto reperire e incrociare informazioni, ero curioso di una cosa: l'hai già messa alla prova nel concreto, o per ora la stai più osservando da fuori?",
-      "approvato": false,
+      "approvato": true,
       "escluso": false,
       "in_pausa": false,
       "inviato": null,
@@ -5134,6 +5134,10 @@
     {
       "quando": "2026-07-12T03:58:33.060Z",
       "testo": "messaggio #121 approvato da dashboard"
+    },
+    {
+      "quando": "2026-07-12T03:58:43.393Z",
+      "testo": "messaggio #119 approvato da dashboard"
     }
   ],
   "diario": [
