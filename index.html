@@ -222,23 +222,26 @@ function listaDaFare(c){
 }
 
 /* ---- FATTO ---- */
+// link diretto al thread LinkedIn della persona (ricerca messaggi per nome → thread pronto)
+function chatUrl(x){ return 'https://www.linkedin.com/messaging/?searchTerm='+encodeURIComponent(x.nome); }
 function listaFatto(c){
   const ev=[];
   c.forEach(function(x){
+    const link=chatUrl(x), id=x.id;
     const t0=parseTs(x.inviato);
-    if(t0) ev.push({t:t0,html:'📨 Primo messaggio a <span class="chi-b">'+esc(x.nome)+'</span>'});
+    if(t0) ev.push({t:t0,link:link,id:id,html:'📨 Primo messaggio a <span class="chi-b">'+esc(x.nome)+'</span>'});
     (x.seguiti||[]).forEach(function(f){
       const tf=parseTs(f.inviato);
-      if(tf) ev.push({t:tf,html:'📨 Seguito '+f.n+' a <span class="chi-b">'+esc(x.nome)+'</span>'});
+      if(tf) ev.push({t:tf,link:link,id:id,html:'📨 Seguito '+f.n+' a <span class="chi-b">'+esc(x.nome)+'</span>'});
     });
     const tg=parseTs(x.gestito_il);
-    if(tg) ev.push({t:tg,html:'💬 Gestita la risposta di <span class="chi-b">'+esc(x.nome)+'</span>'+(calCount(x)&&(x.risposta_conferma||'').indexOf('calendly')>-1?' · 🔗 link call inviato':'')});
+    if(tg) ev.push({t:tg,link:link,id:id,html:'💬 Gestita la risposta di <span class="chi-b">'+esc(x.nome)+'</span>'+(calCount(x)&&(x.risposta_conferma||'').indexOf('calendly')>-1?' · 🔗 link call inviato':'')});
     if(x.prenotato){
       const tp=parseTs(x.prenotato_at)||tg||t0;
-      if(tp) ev.push({t:tp,html:'🎯 <span class="chi-b">'+esc(x.nome)+'</span> ha PRENOTATO la call'});
+      if(tp) ev.push({t:tp,link:link,id:id,html:'🎯 <span class="chi-b">'+esc(x.nome)+'</span> ha PRENOTATO la call'});
     }
   });
-  return ev.sort(function(a,b){return b.t-a.t}).slice(0,10);
+  return ev.sort(function(a,b){return b.t-a.t}).slice(0,12);
 }
 
 /* ---- azioni server ---- */
@@ -271,6 +274,19 @@ function toggle(id){
   aperti[id]=!aperti[id];
   const el=document.getElementById('sch'+id);
   if(el)el.classList.toggle('aperta',aperti[id]);
+}
+// apre la scheda di un lead dal blocco "Fatto"/"Da fare" e ci scrolla sopra
+function vaiLead(id){
+  aperti[id]=true;
+  filtroAttivo='tutti';
+  carica().then(function(){
+    setTimeout(function(){
+      const el=document.getElementById('sch'+id);
+      if(el){el.classList.add('aperta');el.scrollIntoView({behavior:'smooth',block:'center'});
+        el.style.transition='box-shadow .3s';el.style.boxShadow='0 0 0 2px var(--acc)';
+        setTimeout(function(){el.style.boxShadow='';},1500);}
+    },150);
+  });
 }
 
 /* pronto = ruolo verificato E messaggio scritto → si può approvare e mandare */
@@ -381,7 +397,10 @@ async function carica(){
     const ft=listaFatto(c);
     document.getElementById('ft_cnt').textContent=ft.length;
     document.getElementById('fatto').innerHTML=ft.map(function(e){
-      return '<div class="riga"><span class="quando">'+fmt(e.t)+'</span>'+e.html+'</div>';
+      return '<div class="riga"><span class="quando">'+fmt(e.t)+'</span>'+e.html+
+        '<span style="margin-left:auto;white-space:nowrap;display:flex;gap:14px">'+
+        '<a href="javascript:void(0)" onclick="vaiLead('+e.id+')">dettagli</a>'+
+        '<a href="'+esc(e.link)+'" target="_blank">apri chat ↗</a></span></div>';
     }).join('')||'<div class="vuoto">Nessuna attività recente.</div>';
 
     document.getElementById('filtri').innerHTML=FILTRI.map(function(ft){
