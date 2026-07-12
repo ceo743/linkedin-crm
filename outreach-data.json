@@ -3855,7 +3855,7 @@
         "fonte": "guida Venditore che non Dorme"
       },
       "messaggio": "Elisa, ho letto il tuo post sul mondo Pet dove spiegavi che le foto dei cuccioli non bastano più e che il tuo metodo serve a far arrivare in consulenza solo i contatti davvero qualificati, filtrando i perditempo. Visto che avevi dato un'occhiata anche alla guida sul Venditore che non Dorme, ero curioso di una cosa. Quel filtro dei contatti per i tuoi clienti Pet lo costruisci ancora a mano caso per caso, oppure lo stai già rendendo un sistema che gira da solo?",
-      "approvato": false,
+      "approvato": true,
       "escluso": false,
       "in_pausa": false,
       "inviato": false,
@@ -5138,6 +5138,10 @@
     {
       "quando": "2026-07-12T03:58:43.393Z",
       "testo": "messaggio #119 approvato da dashboard"
+    },
+    {
+      "quando": "2026-07-12T03:59:04.409Z",
+      "testo": "messaggio #124 approvato da dashboard"
     }
   ],
   "diario": [
