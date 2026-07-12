@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-12 04:31",
+ "aggiornato": "2026-07-12 04:50",
  "contatti": [
   {
    "id": 1,
@@ -3723,17 +3723,17 @@
   {
    "id": 119,
    "nome": "Maria Serena Berra",
-   "profilo": "",
+   "profilo": "https://www.linkedin.com/in/maria-serena-berra-0422b5231/",
    "tipo": "thread",
-   "ruolo": "DA VERIFICARE",
+   "ruolo": "Titolare Web Crediti Srls (informazioni commerciali, analisi rischio, GDPR per studi legali e PMI), Presidente FMPI Firenze, consulente autonoma",
    "fonte": "thread guida, scoperto da sweep inbox",
    "qualifica": {
-    "ruolo": "da verificare",
-    "geografia": "",
+    "ruolo": "ok - titolare propria societa + presidente federazione PMI",
+    "geografia": "Milano",
     "budget": "da verificare",
-    "fonte": "guida"
+    "fonte": "guida Claude for Legal"
    },
-   "messaggio": "",
+   "messaggio": "Maria Serena, mi ha colpito il tuo punto sull'intelligenza artificiale, che serve a poco se dietro non c'è qualcuno che sa pensare. Visto che ti occupi di informazioni commerciali e analisi del rischio per studi legali e imprese, ti chiedo per curiosità: nel reperire e mettere insieme tutte quelle informazioni, quanta parte del lavoro oggi la fai ancora a mano?",
    "approvato": false,
    "escluso": false,
    "in_pausa": false,
@@ -3741,8 +3741,9 @@
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare.",
-   "seguiti": []
+   "note": "profilo: titolare Web Crediti Srls, dal 2016 nelle informazioni commerciali (reperisce dati per pignoramenti presso terzi) + analisi rischio clienti/fornitori + GDPR/cybersecurity + head hunting + bandi, per studi legali e PMI; Presidente FMPI Firenze. Pubblica spesso sull'AI con taglio ETICO/umanistico (ha ripreso Camisani Calzolari: 'l'AI serve a poco se non c'e chi sa pensare'). Ha scaricato la guida 12 plugin Claude for Legal, coerente col suo core (studi legali). Messaggio cucito su questo (aggancio al suo post AI + al suo lavoro di ricerca dati). Verificato e scritto col METODO NUOVO 2026-07-12 04:50.",
+   "seguiti": [],
+   "qualificato_il": "2026-07-12T04:50:49.631791"
   },
   {
    "id": 120,
@@ -5299,6 +5300,10 @@
   {
    "quando": "2026-07-12 04:31",
    "cosa": "Davide: i messaggi da approvare erano scritti a stampino (\"chi chiede X e si raffredda, li ricontatti a mano uno per uno?\"), proiettati uguali su tutti e uno (Tiziano) sgrammaticato. Riscritti i 5 puliti con domanda unica aperta che lascia emergere il bisogno. Da correggere la pipeline che li genera cosi."
+  },
+  {
+   "quando": "2026-07-12 04:50",
+   "cosa": "METODO NUOVO (Davide 11/07: analizza il profilo, capisci chi e/cosa fa/cosa vuole, POI scrivi). Dimostrato su Maria Serena Berra: letto profilo + attivita reale (pubblica sull AI con taglio etico, titolare societa di informazioni commerciali per studi legali), messaggio cucito che aggancia il suo post sull AI e il suo mestiere di ricerca dati. Niente stampino. Regola scritta nella pipeline SKILL."
   }
  ]
 }
