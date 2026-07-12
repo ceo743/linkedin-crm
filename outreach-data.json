@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-12 04:52",
+ "aggiornato": "2026-07-12 04:56",
  "contatti": [
   {
    "id": 1,
@@ -3733,7 +3733,7 @@
     "budget": "da verificare",
     "fonte": "guida Claude for Legal"
    },
-   "messaggio": "Maria Serena, ho letto il post di Marco Camisani Calzolari sull'intelligenza artificiale che avevi ripreso, dove sottolineavi che serve a poco se dietro non c'è qualcuno che sa pensare. Visto che ti occupi di informazioni commerciali e analisi del rischio per studi legali e imprese, ti chiedo per curiosità: nel reperire e mettere insieme tutte quelle informazioni, quanta parte oggi la fai ancora a mano?",
+   "messaggio": "Maria Serena, ho letto il post di Marco Camisani Calzolari sull'intelligenza artificiale che avevi ripreso, dove sottolineavi che serve a poco se dietro non c'è qualcuno che sa pensare. Visto che il tema ti interessa e che il tuo lavoro è tutto reperire e incrociare informazioni, ero curioso di una cosa: l'hai già messa alla prova nel concreto, o per ora la stai più osservando da fuori?",
    "approvato": false,
    "escluso": false,
    "in_pausa": false,
@@ -3741,7 +3741,7 @@
    "risposto": false,
    "gestito": false,
    "prenotato": false,
-   "note": "profilo: titolare Web Crediti Srls, dal 2016 nelle informazioni commerciali (reperisce dati per pignoramenti presso terzi) + analisi rischio clienti/fornitori + GDPR/cybersecurity + head hunting + bandi, per studi legali e PMI; Presidente FMPI Firenze. Pubblica spesso sull'AI con taglio ETICO/umanistico (ha ripreso Camisani Calzolari: 'l'AI serve a poco se non c'e chi sa pensare'). Ha scaricato la guida 12 plugin Claude for Legal, coerente col suo core (studi legali). Messaggio cucito su questo (aggancio al suo post AI + al suo lavoro di ricerca dati). Verificato e scritto col METODO NUOVO 2026-07-12 04:50. | 2026-07-12 04:52 FIX Davide: aggancio reso SPECIFICO (citato il post di Camisani Calzolari che lei aveva ripreso), non piu vago \"il tuo punto sull AI\" che lei non avrebbe collegato.",
+   "note": "profilo: titolare Web Crediti Srls, dal 2016 nelle informazioni commerciali (reperisce dati per pignoramenti presso terzi) + analisi rischio clienti/fornitori + GDPR/cybersecurity + head hunting + bandi, per studi legali e PMI; Presidente FMPI Firenze. Pubblica spesso sull'AI con taglio ETICO/umanistico (ha ripreso Camisani Calzolari: 'l'AI serve a poco se non c'e chi sa pensare'). Ha scaricato la guida 12 plugin Claude for Legal, coerente col suo core (studi legali). Messaggio cucito su questo (aggancio al suo post AI + al suo lavoro di ricerca dati). Verificato e scritto col METODO NUOVO 2026-07-12 04:50. | 2026-07-12 04:52 FIX Davide: aggancio reso SPECIFICO (citato il post di Camisani Calzolari che lei aveva ripreso), non piu vago \"il tuo punto sull AI\" che lei non avrebbe collegato. | 2026-07-12 04:56 Domanda finale rifatta (opzione A approvata Davide): da pari, fa dire a LEI dove sta (usa/osserva), zero dolore presunto, zero odore di pitch.",
    "seguiti": [],
    "qualificato_il": "2026-07-12T04:50:49.631791"
   },
