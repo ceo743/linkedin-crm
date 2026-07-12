@@ -3978,7 +3978,7 @@
         "fonte": "guida Venditore che non Dorme"
       },
       "messaggio": "Robert, ho visto che stai costruendo LangUnity nel mondo dell'apprendimento delle lingue. Visto che avevi dato un'occhiata alla guida sul Venditore che non Dorme, ero curioso di capire come stai affrontando l'acquisizione in questa fase. I primi utenti e clienti li stai portando dentro più a mano, contatto per contatto, oppure stai già costruendo un sistema che lavori al posto tuo?",
-      "approvato": false,
+      "approvato": true,
       "escluso": false,
       "in_pausa": false,
       "inviato": false,
@@ -5150,6 +5150,10 @@
     {
       "quando": "2026-07-12T04:00:05.177Z",
       "testo": "messaggio #127 approvato da dashboard"
+    },
+    {
+      "quando": "2026-07-12T04:01:09.527Z",
+      "testo": "messaggio #129 approvato da dashboard"
     }
   ],
   "diario": [
