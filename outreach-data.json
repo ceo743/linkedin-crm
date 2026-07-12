@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-12T14:25:22+02:00",
+  "aggiornato": "2026-07-12T20:29:00+02:00",
   "contatti": [
     {
       "id": 1,
@@ -5194,6 +5194,10 @@
     {
       "quando": "2026-07-12T14:31:00+02:00",
       "testo": "segna-non-letto: 0/10 ripristinati, endpoint voyagerMessagingDashMessengerConversations risponde HTTP 400 anche in GET semplice (non solo POST) - probabile endpoint LinkedIn cambiato/deprecato, non problema di formato richiesta (provati POST semplice, PATCH override, restli-method partial_update, tutti 400). NESSUN DANNO: i 10 thread non letti (tutti 'Preventivi', nessuno del registro outreach) non sono mai stati aperti da questa sessione, restano non letti come prima. Serve rivedere l'endpoint corretto per il ripristino non-letto (probabile migrazione a GraphQL mutation)."
+    },
+    {
+      "quando": "2026-07-12T20:29:00+02:00",
+      "testo": "controllo ore 20:20: 0 nuove risposte, 0 collegamenti accettati, 0 prenotazioni. 19 thread non letti totali (tutti richieste inbound guida Preventivi, non registro outreach). Andrea Palmese: prossima_azione scaduta oggi (17/07 seguito2), rimandata al prossimo giro per tempo (instabilita' tool JS su liste lunghe ha rallentato l'estrazione DOM, nessuna scrittura live rischiata). Nessun thread aperto (apertiLegittimi vuoto), nessun re-mark necessario."
     }
   ],
   "diario": [
