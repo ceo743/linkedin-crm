@@ -83,6 +83,8 @@
   .btn.verde{background:var(--verde);border-color:var(--verde);color:#0a2417}
   .btn.ghost{background:transparent;color:var(--dim);border-color:var(--linea)}
   .btn.pericolo{background:transparent;border-color:rgba(240,106,106,.4);color:var(--rosso)}
+  .btn.arancio{background:transparent;border-color:rgba(240,170,80,.5);color:#f0aa50}
+  .badge-rif{font:700 10px/1 'Manrope',sans-serif;color:#f0aa50;background:rgba(240,170,80,.12);border:1px solid rgba(240,170,80,.35);padding:5px 9px;border-radius:20px;align-self:center}
   .esito{font-size:12px}
   .prossimo-passo{margin-top:10px;padding:10px 13px;border-left:2px solid var(--ambra);font-size:13px;line-height:1.6;background:rgba(245,185,95,.06);border-radius:0 8px 8px 0}
   .prossimo-passo b{color:var(--ambra)}
@@ -264,6 +266,11 @@ async function post(url,body,esitoId){
 }
 function salva(id){post('/salva',{id:id,messaggio:document.getElementById('ta'+id).value,quando:new Date().toISOString()},'es'+id);}
 function approva(id,val){post('/approva',{id:id,approvato:val,quando:new Date().toISOString()},'es'+id);}
+function riformula(id){
+  var motivo=prompt('Perche va riformulato? (facoltativo, aiuta Claude a riscriverlo meglio)','');
+  if(motivo===null)return;
+  post('/riformula',{id:id,motivo:motivo,quando:new Date().toISOString()},'es'+id);
+}
 function escludi(ev,id,nome){
   ev.stopPropagation();
   if(!confirm('Escludere PER SEMPRE '+nome+'?'))return;
@@ -330,7 +337,9 @@ function schedaHtml(x){
         '<button class="btn" onclick="salva('+x.id+')">Salva</button>'+
         (x.approvato?'<button class="btn ghost" onclick="approva('+x.id+',false)">Metti in revisione</button>'
                     :'<button class="btn verde" onclick="approva('+x.id+',true)">Approva ✓</button>')+
+        '<button class="btn arancio" onclick="riformula('+x.id+')" title="Rimanda a Claude per riscriverlo col metodo nuovo (analisi profilo + aggancio specifico)">🔄 Riformula</button>'+
         '<button class="btn pericolo" onclick="escludi(event,'+x.id+',\''+esc(x.nome).replace(/'/g,'')+'\')">Escludi</button>'+
+        (x.da_riformulare?'<span class="badge-rif">in coda per riformulazione</span>':'')+
         '<span class="esito" id="es'+x.id+'"></span>'+
       '</div>';
   }else if(bloccato&&x.messaggio&&!x.risposta_conferma&&!x.risposta_testo){
