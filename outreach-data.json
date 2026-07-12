@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-12 03:57",
+ "aggiornato": "2026-07-12 04:16",
  "contatti": [
   {
    "id": 1,
@@ -1658,7 +1658,7 @@
    "tipo_risposta": "fredda",
    "prossima_azione": {
     "quando": "2026-07-15",
-    "cosa": "Se Menci risponde nominando il problema: proporre call con Davide + link Calendly AI. Se silenzio ancora, ultimo tocco poi chiudere. Mai delega Stefania salvo telefono."
+    "cosa": "Se Menci risponde nominando il problema: proporre la call con Davide A PAROLE (nessun link). Se silenzio ancora, un ultimo tocco leggero poi chiudere. MAI mandare Calendly se non lo chiede lui."
    },
    "gestito_il": "2026-07-11 07:15",
    "risposta_conferma": "Stefano, nessun problema se sei stato preso. Ti faccio un esempio concreto così è più facile, di solito nella consulenza è rispondere alle stesse richieste dei clienti via email o preparare le proposte e i materiali a mano. È una di queste, o è un'altra la cosa che ti porta via più tempo? Stefania"
@@ -1875,8 +1875,8 @@
    "risposta_conferma": "Francesco, capito, tutte e due le cose allora. Su questo Davide può aiutarti in 30 minuti, si parte proprio da lì. Se vuoi blocca tu l'orario che preferisci qui https://calendly.com/dc-academy-team/consulenza-strategica-gratuita-ai\n\nStefania",
    "stop_seguiti": true,
    "prossima_azione": {
-    "quando": "2026-07-18",
-    "cosa": "Se nessun suo messaggio nel thread e non ha prenotato su Calendly, riprendere IO su LinkedIn con un nuovo messaggio di ripresa; email a Stefania solo se a quel punto serve una chiamata telefonica."
+    "quando": "2026-07-14",
+    "cosa": "Se nessun suo messaggio nel thread: riprendere IO su LinkedIn con un nuovo tocco leggero a parole. Nessun altro link."
    }
   },
   {
@@ -2952,7 +2952,7 @@
    "tipo_call": "ai",
    "prossima_azione": {
     "quando": "2026-07-14",
-    "cosa": "Se Mirco non ha prenotato su Calendly e non ha scritto altro nel thread: email a Stefania (Ccn ceo@) per proporgli lei 2-3 orari a mano."
+    "cosa": "Se Mirco non ha scritto altro nel thread: riprendere IO su LinkedIn con un tocco leggero a parole. NON mandare altro Calendly (gia inviato). Email a Stefania solo se serve telefono."
    }
   },
   {
@@ -5291,6 +5291,10 @@
   {
    "quando": "2026-07-12 03:57",
    "cosa": "ERRORE GRAVE segnalato da Davide: mandato link Calendly a lead che NON avevano risposto (Fierro, Sabrina) = comportamento da venditore, danneggia il brand premium di Davide. Bloccato il peggio: tolto il Calendly dai seguiti ANCORA IN CODA e riscritti senza link ne spinta. I messaggi gia inviati col link restano nei thread (da valutare cancellazione con Davide). Regola nuova: MAI link Calendly a chi non lo chiede esplicitamente."
+  },
+  {
+   "quando": "2026-07-12 04:16",
+   "cosa": "Pulite le prossima_azione che ancora dicevano \"manda link Calendly\" (Menci, Mirco, Cocci): allineate alla regola nuova (call a parole, link solo se lo chiede il lead). Repetto lasciato: la sua nota documenta gia l errore, gestione umana."
   }
  ]
 }
