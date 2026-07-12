@@ -267,7 +267,10 @@ async function post(url,body,esitoId){
 function salva(id){post('/salva',{id:id,messaggio:document.getElementById('ta'+id).value,quando:new Date().toISOString()},'es'+id);}
 function approva(id,val){post('/approva',{id:id,approvato:val,quando:new Date().toISOString()},'es'+id);}
 function riformula(id){
-  var motivo=prompt('Perche va riformulato? (facoltativo, aiuta Claude a riscriverlo meglio)','');
+  if(!confirm('Rimando questo messaggio a Claude perche lo riscriva col metodo nuovo.\n\nVuoi aggiungere un commento per guidarlo? Premi OK per scriverlo, Annulla per rimandarlo senza commento.')){
+    post('/riformula',{id:id,motivo:'',quando:new Date().toISOString()},'es'+id);return;
+  }
+  var motivo=prompt('Scrivi il commento per Claude (cosa non va / cosa vuoi diverso):','');
   if(motivo===null)return;
   post('/riformula',{id:id,motivo:motivo,quando:new Date().toISOString()},'es'+id);
 }
