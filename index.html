@@ -242,16 +242,22 @@ function listaFatto(c){
 }
 
 /* ---- azioni server ---- */
+// Il server con i pulsanti gira in locale sul Mac (porta 8766). Se la pagina è sul sito
+// live, i POST vanno comunque al server locale via http://localhost:8766 (Chrome lo permette).
+const LOCALE=(location.hostname==='localhost'||location.hostname==='127.0.0.1');
+const API=LOCALE?'':'http://localhost:8766';
+// il JSON: da locale relativo, dal sito live prima prova il server locale (dati freschi), poi il file statico
+const DATA_URL=LOCALE?'outreach-data.json':'http://localhost:8766/outreach-data.json';
 async function post(url,body,esitoId){
   const es=document.getElementById(esitoId);
   if(es){es.textContent='…';es.style.color='var(--dim)';}
   try{
-    const r=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+    const r=await fetch(API+url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
     const j=await r.json();
     if(es){es.textContent=j.ok?'fatto ✓':'errore: '+j.errore;es.style.color=j.ok?'var(--verde)':'var(--rosso)';}
     if(j.ok)setTimeout(carica,400);
     return j.ok;
-  }catch(e){if(es){es.textContent='errore rete (funziona solo da localhost:8766)';es.style.color='var(--rosso)';}return false;}
+  }catch(e){if(es){es.textContent='server locale spento — avvia outreach-server.py sul Mac';es.style.color='var(--rosso)';}return false;}
 }
 function salva(id){post('/salva',{id:id,messaggio:document.getElementById('ta'+id).value,quando:new Date().toISOString()},'es'+id);}
 function approva(id,val){post('/approva',{id:id,approvato:val,quando:new Date().toISOString()},'es'+id);}
@@ -349,7 +355,9 @@ function schedaHtml(x){
 /* ---- render ---- */
 async function carica(){
   try{
-    const r=await fetch('outreach-data.json?t='+Date.now());
+    let r;
+    try{ r=await fetch(DATA_URL+'?t='+Date.now()); if(!r.ok)throw 0; }
+    catch(_){ r=await fetch('outreach-data.json?t='+Date.now()); } // server locale spento → file statico
     const d=await r.json();
     const c=d.contatti;
     const attivi=c.filter(function(x){return !x.escluso});
