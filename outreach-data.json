@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-13T18:00:00+02:00",
+  "aggiornato": "2026-07-13T20:23:41.754499+02:00",
   "contatti": [
     {
       "id": 1,
@@ -5384,6 +5384,18 @@
     {
       "quando": "2026-07-13T09:30:22.521081+02:00",
       "testo": "controllo ore 09:21-09:32: 0 nuove risposte tra i 29 contatti in attesa, 2 collegamenti ancora in sospeso (Rocchi, Zambrino, non accettati), 0 prenotazioni Calendly correlate al registro. Andrea Palmese (prossima_azione scaduta 12/07) NON gestito questa sessione: non trovato il thread via ricerca DOM/API nei tempi (tetto 15min) — da riprendere al prossimo giro. Anomalia guardia segna-non-letto: navigazione su /messaging/ (senza filtro) durante ricerca ha auto-aperto il thread di Alessio Capogna (NON contatto registro, InMail esterna su preventivi) marcandolo letto; RE-MARK fallito con HTTP 400 (bug endpoint noto dal 12/07). apertiLegittimi vuoto -> nessun contatto registro esposto, nessuna email a Davide per questo. Correzione applicata alla routine: evitare da ora /messaging/ senza filtro, usare solo ?filter=unread per tutta la sessione."
+    },
+    {
+      "quando": "2026-07-13T19:52:37.407867+02:00",
+      "testo": "DIAGNOSI 13/07 (agente risolutore): 2 giri spariti senza traccia. (1) verifica-risposte 14:20 (lastRunAt 12:21:09Z): Claude Desktop risultava chiuso/riavviato tra le 13:59 e le 16:02 locali (buco nei log app, main2.log si ferma 13:59, main1.log riparte 16:02) — la finestra 14:20 e caduta in questo buco, nessuna sessione risulta avviata per questo task, e al riavvio non e scattato il recupero missed-run come invece avvenuto per altre routine (es. linkedin-risposte-commenti recuperata con missed 14:00). Causa probabile: bug/finestra del schedulatore Claude Desktop, non della SKILL.md. (2) invio-giornaliero 18:44: sessione REALMENTE avviata (local_ad829edb, transcript cdb337bb-cd88-4657-94a8-02c63c60e02c) ma durata 8 secondi: il modello ha risposto al messaggio iniettato dallhook SessionStart CONTROLLO CEO (\"Ceh trovato 3 problemi bloccati per te... Vuoi dettagli ora?\") invece di eseguire le istruzioni del task, poi si e fermata (Stop hook) senza eseguire nulla: 0 invii, 0 log, 0 email. Causa: ambiguita del messaggio hook su chat-interattiva-vs-routine. FIX APPLICATO: aggiunta guardia \"PRIMA AZIONE ASSOLUTA\" in cima a entrambi gli SKILL.md (ignora hook CONTROLLO CEO, scrivi subito riga AVVIO SESSIONE) + rafforzato il testo dellhook /Users/davidecaiazzo/.claude/hooks/ceo-session-start.sh per rendere inequivocabile lignora per le routine schedulate. Email di recap mancante per il giro 18:44 inviata ora a ceo@. Prossimo giro utile (20:20 di oggi per verifica-risposte, 18:40 di domani per invio-giornaliero) sara il primo test live del fix."
+    },
+    {
+      "quando": "2026-07-13T20:20:42.941524+02:00",
+      "testo": "[AVVIO SESSIONE] outreach-linkedin-verifica-risposte"
+    },
+    {
+      "quando": "2026-07-13T20:23:41.754499+02:00",
+      "testo": "controllo ore 20:20: 0 nuove risposte (filtro unread vuoto, 0 messaggi non letti), 0 collegamenti verificati, 0 prenotazioni. Presidio scaduto Andrea Palmese (12/07) NON gestito in questo giro: casella ricerca #search-conversations nella tab messaging non ha accettato input via execute_javascript (nativeInputValueSetter + dispatchEvent input, e execCommand insertText, entrambi falliti con risposta anomala del tool \"missing value\"). Nessun rischio: nessun thread aperto, nessun messaggio inviato. Rimandato al prossimo giro (9:20 domani); se il problema persiste va indagata la query GraphQL di ricerca conversazioni come alternativa alla casella UI."
     }
   ],
   "diario": [
