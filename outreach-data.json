@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-13T07:08:39+02:00",
+  "aggiornato": "2026-07-13T09:30:22.521081+02:00",
   "contatti": [
     {
       "id": 1,
@@ -1723,9 +1723,9 @@
       "escluso": false,
       "in_pausa": false,
       "inviato": "2026-07-06T10:51:00+02:00",
-      "risposto": false,
+      "risposto": true,
       "prenotato": false,
-      "note": "06/07 INVIATO opener automazione (regola allargata: propria attivita = in).",
+      "note": "06/07 INVIATO opener automazione (regola allargata: propria attivita = in). | 2026-07-13: risposto con PREVENTIVI in DM, guida inviata da Stefania",
       "seguiti": [
         {
           "n": 1,
@@ -1744,6 +1744,13 @@
         "esito": "ok",
         "quando": "2026-07-11T19:02:24.375000+02:00",
         "tipo": "seguito"
+      },
+      "risposta_at": "2026-07-13T07:15:00+02:00",
+      "gestito": true,
+      "gestito_il": "2026-07-13T07:15:00+02:00",
+      "prossima_azione": {
+        "quando": "2026-07-16",
+        "cosa": "Richiesta guida gestita: ha scritto PREVENTIVI, l'automazione ha riconosciuto il trigger e inviato la guida L'Agente Preventivi firmata Stefania (orario stimato in mattinata, non verificato al minuto su LinkedIn). Non e' un vero seguito di vendita, solo invio materiale. Al 16/07 (data del seguito n.2 gia in coda) verificare se Paolo ha scritto altro nel thread: se si, valutare risposta manuale (mai link Calendly se non lo chiede lui); se resta silente, nessuna ulteriore azione necessaria."
       }
     },
     {
@@ -5217,7 +5224,11 @@
       "quando": "2026-07-12T20:29:00+02:00",
       "testo": "controllo ore 20:20: 0 nuove risposte, 0 collegamenti accettati, 0 prenotazioni. 19 thread non letti totali (tutti richieste inbound guida Preventivi, non registro outreach). Andrea Palmese: prossima_azione scaduta oggi (17/07 seguito2), rimandata al prossimo giro per tempo (instabilita' tool JS su liste lunghe ha rallentato l'estrazione DOM, nessuna scrittura live rischiata). Nessun thread aperto (apertiLegittimi vuoto), nessun re-mark necessario."
     },
-    "[2026-07-13T07:08:39+02:00] PIPELINE RUN: 0 stub smaltiti (era già 0), 0 nuovi candidati (coda pronta=18 >= 10, regola backlog). ANALISI RISPOSTE: 34 inviati totali, 9 risposto=True (26% tasso). Nuovi segnali oggi: Giuseppe Grillo 👍 thread attivo (id=142 DA APPROVARE, nota aggiornata); Tiziana Bucci 'OK' (tiepida, già gestito=True); Giosué Gangi compilato modulo (inbound funnel CRM, no azione pipeline). Fix: qualificato_il timbrato su 6 candidati (id 130,131,134,138,142,144). Coda pronta: 18 (10 da approvare + 8 approvati non inviati). Pattern risposte: gancio generico → silenzio; gancio ruolo+domanda aperta → tiepido ma risponde. Nessun pattern 'caldo' da gancio outreach puro: le risposte calde arrivano dall'inbound (guide). Log precedente conservato."
+    "[2026-07-13T07:08:39+02:00] PIPELINE RUN: 0 stub smaltiti (era già 0), 0 nuovi candidati (coda pronta=18 >= 10, regola backlog). ANALISI RISPOSTE: 34 inviati totali, 9 risposto=True (26% tasso). Nuovi segnali oggi: Giuseppe Grillo 👍 thread attivo (id=142 DA APPROVARE, nota aggiornata); Tiziana Bucci 'OK' (tiepida, già gestito=True); Giosué Gangi compilato modulo (inbound funnel CRM, no azione pipeline). Fix: qualificato_il timbrato su 6 candidati (id 130,131,134,138,142,144). Coda pronta: 18 (10 da approvare + 8 approvati non inviati). Pattern risposte: gancio generico → silenzio; gancio ruolo+domanda aperta → tiepido ma risponde. Nessun pattern 'caldo' da gancio outreach puro: le risposte calde arrivano dall'inbound (guide). Log precedente conservato.",
+    {
+      "quando": "2026-07-13T09:30:22.521081+02:00",
+      "testo": "controllo ore 09:21-09:32: 0 nuove risposte tra i 29 contatti in attesa, 2 collegamenti ancora in sospeso (Rocchi, Zambrino, non accettati), 0 prenotazioni Calendly correlate al registro. Andrea Palmese (prossima_azione scaduta 12/07) NON gestito questa sessione: non trovato il thread via ricerca DOM/API nei tempi (tetto 15min) — da riprendere al prossimo giro. Anomalia guardia segna-non-letto: navigazione su /messaging/ (senza filtro) durante ricerca ha auto-aperto il thread di Alessio Capogna (NON contatto registro, InMail esterna su preventivi) marcandolo letto; RE-MARK fallito con HTTP 400 (bug endpoint noto dal 12/07). apertiLegittimi vuoto -> nessun contatto registro esposto, nessuna email a Davide per questo. Correzione applicata alla routine: evitare da ora /messaging/ senza filtro, usare solo ?filter=unread per tutta la sessione."
+    }
   ],
   "diario": [
     {
