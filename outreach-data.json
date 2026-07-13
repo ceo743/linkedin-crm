@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-13T09:30:22.521081+02:00",
+  "aggiornato": "2026-07-13T09:46:47+02:00",
   "contatti": [
     {
       "id": 1,
@@ -4432,6 +4432,58 @@
       "qualificato_il": "2026-07-11T15:57:54+02:00",
       "programmato": "2026-07-11T19:00:00+02:00",
       "da_riformulare": false
+    },
+    {
+      "id": 146,
+      "nome": "Fabio Biondi",
+      "profilo": "https://www.linkedin.com/in/fabiobiondi/",
+      "tipo": "dm-guida",
+      "angolo": "ai",
+      "fonte": "guida L'Agente Preventivi",
+      "inviato": null,
+      "risposto": null,
+      "risposta_testo": "",
+      "link_call_inviato": null,
+      "tipo_call": null,
+      "prenotato": null,
+      "note": "Lead da DM guida — 2026-07-13 — guida inviata: L'Agente Preventivi",
+      "messaggio": "",
+      "approvato": false,
+      "programmato": null,
+      "ruolo": "Front-End Instructor | Google Developer Expert | Angular | React",
+      "escluso": false,
+      "qualifica": {
+        "ruolo": "da verificare",
+        "geografia": "da verificare",
+        "budget": "sconosciuto",
+        "fonte": "dm-guida"
+      }
+    },
+    {
+      "id": 147,
+      "nome": "Alessio Capogna",
+      "profilo": "",
+      "tipo": "dm-guida",
+      "angolo": "ai",
+      "fonte": "guida L'Agente Preventivi",
+      "inviato": null,
+      "risposto": null,
+      "risposta_testo": "",
+      "link_call_inviato": null,
+      "tipo_call": null,
+      "prenotato": null,
+      "note": "Lead da DM guida — 2026-07-13 — guida inviata: L'Agente Preventivi",
+      "messaggio": "",
+      "approvato": false,
+      "programmato": null,
+      "ruolo": "Project and Costructions Manager",
+      "escluso": false,
+      "qualifica": {
+        "ruolo": "da verificare",
+        "geografia": "da verificare",
+        "budget": "sconosciuto",
+        "fonte": "dm-guida"
+      }
     }
   ],
   "servizio": [
