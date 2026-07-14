@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-14 14:53",
+ "aggiornato": "2026-07-14 14:59",
  "contatti": [
   {
    "id": 1,
@@ -793,7 +793,7 @@
     "budget": "dubbio",
     "fonte": "GM di PMI familiari, decisore ma da capire se titolare o manager: decide Davide"
    },
-   "messaggio": "Andrea, avevo visto il tuo commento sotto il post di Davide sulle due strategie IA delle aziende. Ti chiedo per curiosità, chi guida la trasformazione di aziende familiari come te oggi i clienti nuovi li trova più col passaparola o ha già un canale che gira da solo?",
+   "messaggio": "Andrea, avevo visto il tuo commento sotto il post di Davide sulle due strategie IA delle aziende. Tu che guidi la trasformazione di aziende familiari, ero curiosa di una cosa. Oggi i clienti nuovi arrivano più dal passaparola, o hai già un canale che gira da solo?\n\nStefania",
    "approvato": true,
    "inviato": null,
    "risposto": null,
@@ -801,7 +801,7 @@
    "link_call_inviato": null,
    "tipo_call": null,
    "prenotato": null,
-   "note": "doppio controllo completo 03/07: calendario zero, CRM zero, blocklist zero | in pausa: fonte commento, Davide oggi vuole solo chi ha chiesto guide in DM | 05/07 messaggio riscritto in stile ESPLORATIVO (nuovo schema). Stato thread: da verificare (dm_diretto da commento, non guida).",
+   "note": "doppio controllo completo 03/07: calendario zero, CRM zero, blocklist zero | in pausa: fonte commento, Davide oggi vuole solo chi ha chiesto guide in DM | 05/07 messaggio riscritto in stile ESPLORATIVO (nuovo schema). Stato thread: da verificare (dm_diretto da commento, non guida). | 2026-07-14 14:59 Fix da chat (audit sales/cold-email): aggiunta firma Stefania mancante, frase iniziale sciolta (era grammaticalmente contorta). Test personalizzazione superato (aggancio = suo commento reale), no pitch, 1 domanda, sotto 75 parole.",
    "programmato": "2026-07-03T13:50:00+02:00",
    "in_pausa": true,
    "qualificato_il": "2026-07-13T06:32:47.736381+02:00"
