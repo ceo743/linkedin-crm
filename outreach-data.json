@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-14T06:43:21.602301+02:00",
+ "aggiornato": "2026-07-14T07:02:18.186000+02:00",
  "contatti": [
   {
    "id": 1,
@@ -3968,7 +3968,7 @@
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
-   "inviato": false,
+   "inviato": true,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
@@ -3979,7 +3979,8 @@
    "precheck_crm_fresco": {
     "quando": "2026-07-14T06:43:21.602301+02:00",
     "esito": "CRM live 14/07 06:45: fogli KPI riscaricati (Lead/Consulenza/Setting/Conferma/Rinnovi/Rate/DaIncassare/Upsell/Stefania). Troiano presente SOLO come OPTIN in Lead (s.multiprofessionale@libero.it 30/12/25, mass.troiano@libero.it 17/02/26). Kajabi: LTV 0,00 EUR. Calendario: nessun evento. VERDETTO LIVELLO 1: CONTATTABILE."
-   }
+   },
+   "inviato_il": "2026-07-14T06:44:15"
   },
   {
    "id": 128,
@@ -3998,7 +3999,7 @@
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
-   "inviato": null,
+   "inviato": true,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
@@ -4012,7 +4013,8 @@
    "precheck_crm_fresco": {
     "quando": "2026-07-14T06:43:21.602301+02:00",
     "esito": "CRM live 14/07 06:45: fogli KPI riscaricati. Miglio presente SOLO come OPTIN in Lead con 3 email (tma.advisor gmail, civiemme-system, system-group). Kajabi: LTV 0,00 EUR su 2 email, terza assente. Calendario: nessun evento. VERDETTO LIVELLO 1: CONTATTABILE."
-   }
+   },
+   "inviato_il": "2026-07-14T06:52:37"
   },
   {
    "id": 129,
@@ -4031,7 +4033,7 @@
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
-   "inviato": false,
+   "inviato": true,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
@@ -4042,7 +4044,8 @@
    "precheck_crm_fresco": {
     "quando": "2026-07-14T06:43:21.602301+02:00",
     "esito": "CRM live 14/07 06:45: fogli KPI riscaricati. Nessun riscontro Sava (Savasta/Savarese sono omonimie parziali, persone diverse). Email non nota, Kajabi non verificabile per email. Calendario: nessun evento. VERDETTO LIVELLO 1: CONTATTABILE."
-   }
+   },
+   "inviato_il": "2026-07-14T06:58:31"
   },
   {
    "id": 130,
@@ -4108,7 +4111,7 @@
     "fonte": "ok"
    },
    "messaggio": "Umberto, ho visto che ti muovi come imprenditore e investitore nell'immobiliare. In quel campo le occasioni migliori nascono spesso da una rete di contatti coltivata nel tempo, e mi chiedevo una cosa. Le opportunità e le persone con cui sei in contatto le segui più tu in prima persona una per una, oppure ti sei già organizzato un modo per non lasciarne indietro nessuna?\n\nStefania",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
@@ -4120,7 +4123,11 @@
    "variante": "A",
    "qualificato_il": "2026-07-11T15:55:14+02:00",
    "programmato": "2026-07-11T18:50:00+02:00",
-   "da_riformulare": false
+   "da_riformulare": false,
+   "precheck_crm_fresco": {
+    "quando": "2026-07-14T07:02:18.186000+02:00",
+    "esito": "CRM live 14/07 07:05: fogli KPI freschi. Sacco: unici match Saccoia/Saccone (persone diverse). Kajabi: Umberto Sacco umberto.sacco@gmail.com LTV 0,00 EUR (optin giugno 2026). Calendario: nulla. VERDETTO LIVELLO 1: CONTATTABILE."
+   }
   },
   {
    "id": 133,
@@ -4210,7 +4217,7 @@
     "fonte": "ok"
    },
    "messaggio": "Gianluca, mi ha colpito come ti posizioni sull'immobiliare, quel trasformo immobili inefficienti in patrimonio produttivo. Ero curiosa di capire come lavori dietro le quinte. La parte di analisi degli immobili e di gestione dei contatti che ti portano le occasioni la fai ancora tutta a mano, oppure hai già iniziato a costruirti un sistema che ti alleggerisce?\n\nStefania",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
@@ -4222,7 +4229,11 @@
    "variante": "A",
    "qualificato_il": "2026-07-11T15:55:14+02:00",
    "programmato": "2026-07-11T18:55:00+02:00",
-   "da_riformulare": false
+   "da_riformulare": false,
+   "precheck_crm_fresco": {
+    "quando": "2026-07-14T07:02:18.186000+02:00",
+    "esito": "CRM live 14/07 07:05: fogli KPI freschi. Falduto: zero riscontri fogli. Kajabi: gfalduto@quantumre.it LTV 0,00 EUR ma OPTED OUT dalle email (nessun blocco per DM LinkedIn, mai contattarlo via email). Calendario: nulla. VERDETTO LIVELLO 1: CONTATTABILE."
+   }
   },
   {
    "id": 137,
@@ -4287,7 +4298,7 @@
     "fonte": "ok"
    },
    "messaggio": "Gianpiero, ho visto che gestisci la filiale PrestitoSi di Napoli in Via Toledo. Nella mediazione creditizia il flusso di richieste e il seguito con i clienti è il cuore di tutto, e mi è venuta una curiosità. In filiale i nuovi contatti e le pratiche li seguite ancora tutti a mano, oppure ti sei già costruito qualcosa che ti tiene in ordine i seguiti in automatico?\n\nStefania",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
@@ -4299,7 +4310,11 @@
    "variante": "A",
    "qualificato_il": "2026-07-11T15:57:54+02:00",
    "programmato": "2026-07-11T19:05:00+02:00",
-   "da_riformulare": false
+   "da_riformulare": false,
+   "precheck_crm_fresco": {
+    "quando": "2026-07-14T07:02:18.186000+02:00",
+    "esito": "CRM live 14/07 07:05: fogli KPI freschi. ATTENZIONE: Fernando Errichiello (safeinsurance.it) in trattativa FORM CONSULENZA 08/2024 - persona DIVERSA da Gianpiero (nome, azienda, email diversi) ma cognome raro: se nel thread emergesse un legame, fermarsi. Gianpiero assente da Kajabi (solo Fernando e Adelaide, LTV 0). Calendario: nulla. VERDETTO LIVELLO 1: CONTATTABILE con cautela."
+   }
   },
   {
    "id": 140,
@@ -4442,7 +4457,7 @@
     "fonte": "ok"
    },
    "messaggio": "Roberto, ho visto che fai il CFO frazionale per PMI da 500mila a 5 milioni di euro, tutto su margini, liquidità e controllo di gestione. È un lavoro fatto di numeri e report ricorrenti su più aziende, e mi chiedevo una cosa. La parte di raccolta dati e reportistica per i tuoi clienti la fai ancora a mano azienda per azienda, oppure ti sei già costruito un sistema che te la fa girare da sola?\n\nStefania",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": null,
@@ -4454,7 +4469,11 @@
    "variante": "A",
    "qualificato_il": "2026-07-11T15:57:54+02:00",
    "programmato": "2026-07-11T19:00:00+02:00",
-   "da_riformulare": false
+   "da_riformulare": false,
+   "precheck_crm_fresco": {
+    "quando": "2026-07-14T07:02:18.186000+02:00",
+    "esito": "CRM live 14/07 07:05: fogli KPI freschi. Troisi: solo Tullia Troisi (trattativa 2025) e Polisia, persone diverse da Roberto. Roberto assente da Kajabi (solo Tullia/Polisia LTV 0). Calendario: nulla. VERDETTO LIVELLO 1: CONTATTABILE."
+   }
   },
   {
    "id": 146,
@@ -5443,6 +5462,26 @@
   {
    "quando": "2026-07-14T06:43:21.602301+02:00",
    "testo": "PRE-CHECK CRM FRESCO da chat parallela (sessione verifiche): fogli KPI live riscaricati e leads_sheet.csv rigenerato (5197 righe, ultima 13/07). Livello 1 completo per id127 Troiano, id128 Miglio, id129 Sava: tutti CONTATTABILI (solo OPTIN, LTV Kajabi 0, calendario pulito). Verificati a posteriori anche Gazzi/Costantino (inviati 06:31/06:38): calendario e fogli puliti, nessun problema. NOTA: resta dovuto il verificatore indipendente livello 2 per ogni invio."
+  },
+  {
+   "quando": "2026-07-14T06:44:15",
+   "testo": "#127 Massimo Troiano INVIATO da chat (verificatore OK, testo confermato, firmato Stefania)"
+  },
+  {
+   "quando": "2026-07-14T06:52:37",
+   "testo": "#128 Tiziano Miglio INVIATO da chat (verificatore OK, testo confermato, firmato Stefania)"
+  },
+  {
+   "quando": "2026-07-14T06:58:31",
+   "testo": "#129 Robert Sava INVIATO da chat (verificatore OK, testo confermato, firmato Stefania)"
+  },
+  {
+   "quando": "2026-07-14T06:58:31",
+   "testo": "AUTO-APPROVAZIONE 24h da chat: #132 Umberto Sacco, #136 Gianluca Falduto, #139 Gianpiero Errichiello, #145 Roberto Troisi"
+  },
+  {
+   "quando": "2026-07-14T07:02:18.186000+02:00",
+   "testo": "PRE-CHECK CRM FRESCO (sessione verifiche) su 4 auto-approvati: id132 Sacco, id136 Falduto, id139 Errichiello, id145 Troisi - tutti CONTATTABILI livello 1 (fogli live, Kajabi LTV 0/assenti, calendario pulito). Nota id139: omonimia parziale Fernando Errichiello in trattativa 2024, persona diversa, cautela nel thread. Nota id136: opted-out email Kajabi, ok DM LinkedIn mai email."
   }
  ],
  "diario": [
