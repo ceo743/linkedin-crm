@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-14T18:45:00+02:00",
+  "aggiornato": "2026-07-14T18:48:31.110277+02:00",
   "contatti": [
     {
       "id": 1,
@@ -5696,6 +5696,10 @@
     {
       "quando": "2026-07-14T18:45:10.807044+02:00",
       "testo": "[AVVIO SESSIONE] outreach-invio-giornaliero"
+    },
+    {
+      "quando": "2026-07-14T18:48:31.110290+02:00",
+      "testo": "invio serale: 0 inviati (0 nuovi, 0 seguiti), 0 bloccati dal verificatore, 0 auto-approvati, coda residua 0 nuovi pronti. Guardia pre-volo: tab messaging esistente (linkedin.com/messaging/thread) + tab articolo LinkedIn aperte, invariate su ricontrollo 60s ma presenti = Chrome in uso da Davide, routine terminata subito senza toccare nessuna tab (nessun thread aperto, nessun re-mark necessario). 6 seguiti dovuti (Criscuolo id51, Fierro id54, Agostini id55, Cerchiara id58, Caruso id59, Pagani id105) rimandati al prossimo giro. 1 candidato qualificato non ancora a 24h per auto-approvazione (Romagnano id150, 11.5h)."
     }
   ],
   "diario": [
