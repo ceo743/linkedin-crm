@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-13T20:23:41.754499+02:00",
+  "aggiornato": "2026-07-14T06:22:30.290912+02:00",
   "contatti": [
     {
       "id": 1,
@@ -1116,7 +1116,7 @@
       "link_call_inviato": null,
       "tipo_call": null,
       "prenotato": null,
-      "note": "doppio controllo 03/07: calendario zero, CRM zero, blocklist zero (Liguori: evento trovato era omonimo Dario Liguori) | Kajabi LTV 0,00 € | NOTA CALL: notaio = vincoli deontologici, in call parlare di autorevolezza ed educazione del pubblico, MAI acquisizione clienti | 04/07 GESTITO: risposta calda (guide non arrivano), conferma inviata nel thread + email operativa a Stefania, presidio al 08/07. | Verificato 2026-07-07 11:28: Liguori: scadenza 08/07 (domani), non ancora dovuta oggi. Nessuna azione oggi. | 11/07: risposta CALDISSIMA 8/07 - \"ti contatto al cellulare da cui ci siamo sentiti\". Ha già contatti precedenti con Davide/Stefania al telefono. NON inviare DM automatici: Stefania deve gestire la chiamata in arrivo. | REMOTE-PRESIDIO 10/07: ova nel thread (non presente in lista non letti), inviata email a Stefania (Ccn ceo@) per ripresa a mano con orari, prossima_azione spostata al 15/07. | 2026-07-11 07:30 MERGE: risposto oggi nel thread (sessione Davide): \"Perfetto Luciano, restiamo in attesa della tua chiamata\". Bozza email a Stefania pronta in Gmail (caso telefono), in attesa che Davide la spedisca. pa runtime 15/07 confermata.",
+      "note": "doppio controllo 03/07: calendario zero, CRM zero, blocklist zero (Liguori: evento trovato era omonimo Dario Liguori) | Kajabi LTV 0,00 € | NOTA CALL: notaio = vincoli deontologici, in call parlare di autorevolezza ed educazione del pubblico, MAI acquisizione clienti | 04/07 GESTITO: risposta calda (guide non arrivano), conferma inviata nel thread + email operativa a Stefania, presidio al 08/07. | Verificato 2026-07-07 11:28: Liguori: scadenza 08/07 (domani), non ancora dovuta oggi. Nessuna azione oggi. | 11/07: risposta CALDISSIMA 8/07 - \"ti contatto al cellulare da cui ci siamo sentiti\". Ha già contatti precedenti con Davide/Stefania al telefono. NON inviare DM automatici: Stefania deve gestire la chiamata in arrivo. | REMOTE-PRESIDIO 10/07: ova nel thread (non presente in lista non letti), inviata email a Stefania (Ccn ceo@) per ripresa a mano con orari, prossima_azione spostata al 15/07. | 2026-07-11 07:30 MERGE: risposto oggi nel thread (sessione Davide): \"Perfetto Luciano, restiamo in attesa della tua chiamata\". Bozza email a Stefania pronta in Gmail (caso telefono), in attesa che Davide la spedisca. pa runtime 15/07 confermata. | 13/07 20:35: nuovo msg suo \"Grazie Stefania\" (puro ringraziamento di cortesia dopo nostra conferma). Letto e archiviato SENZA risposta su verdetto verificatore (rumore su lead premium che chiamerà lui). prossima_azione 15/07 INVARIATA: se non ha chiamato, DM di sollecito.",
       "programmato": "2026-07-03T19:55:00+02:00",
       "seguiti": [
         {
@@ -1161,7 +1161,12 @@
         "cosa": "Liguori vuole chiamare Stefania al cellulare (ha detto 8/07). Se entro 15/07 non ha chiamato: DM 'Luciano, aspettavo la tua chiamata — sei ancora disponibile per i 15 minuti con Davide?'"
       },
       "risposta_gestita": true,
-      "tipo_risposta": "caldissima"
+      "tipo_risposta": "caldissima",
+      "doppio_controllo": {
+        "esito": "bloccato",
+        "quando": "2026-07-14T06:22:30.290912+02:00",
+        "motivo": "verificatore: non rispondere a ringraziamento di cortesia, pa 15/07 resta"
+      }
     },
     {
       "id": 37,
@@ -1810,7 +1815,7 @@
       "risposto": true,
       "gestito": true,
       "prenotato": false,
-      "note": "Molto ingaggiato, 3 guide richieste. In target propria attività. Primo tocco esplorativo automazione inviato 2026-07-07 07:30 | 09/07 14:06: scambio solo logistico (email per reinvio guida non arrivata), rimandato link + riproposta domanda esplorativa, nessun problema ancora ammesso, nessuna call proposta.",
+      "note": "Molto ingaggiato, 3 guide richieste. In target propria attività. Primo tocco esplorativo automazione inviato 2026-07-07 07:30 | 09/07 14:06: scambio solo logistico (email per reinvio guida non arrivata), rimandato link + riproposta domanda esplorativa, nessun problema ancora ammesso, nessuna call proposta. | 13/07 20:35 PRESIDIO: Andrea silente da 4 giorni dopo 2 domande esplorative senza problema ammesso. Verificatore indipendente: NON INVIARE terzo rilancio (pressing). Trattativa CHIUSA per silenzio come da prossima_azione 12/07. Riattivabile se si rifà vivo (presidio punto 1 lo riprende).",
       "seguiti": [
         {
           "n": 1,
@@ -1830,9 +1835,11 @@
       "gestito_il": "2026-07-09T14:06:00+02:00",
       "risposta_conferma": "Grazie Andrea! Ecco il link diretto, così non serve aspettare la mail: https://guida-venditore-ai.davidecaiazzo.it/ . Curiosità: quella parte del lavoro commerciale (gestione lead, follow-up) oggi ti porta via tempo o l'hai già sistemata?",
       "stop_seguiti": true,
-      "prossima_azione": {
-        "quando": "2026-07-12",
-        "cosa": "Se Andrea non ha risposto alla domanda esplorativa sul tempo: valutare un secondo tentativo o chiudere se resta silente."
+      "prossima_azione": null,
+      "doppio_controllo": {
+        "esito": "bloccato",
+        "quando": "2026-07-14T06:22:30.290912+02:00",
+        "motivo": "verificatore: terzo giro esplorativo senza problema ammesso = pressing; chiusura per silenzio"
       }
     },
     {
@@ -3754,7 +3761,7 @@
       "approvato": true,
       "escluso": false,
       "in_pausa": false,
-      "inviato": null,
+      "inviato": true,
       "risposto": false,
       "gestito": false,
       "prenotato": false,
@@ -3762,7 +3769,8 @@
       "seguiti": [],
       "qualificato_il": "2026-07-12T04:50:49.631791",
       "email": "info@webcrediti.it",
-      "programmato": "2026-07-13T18:45:00+02:00"
+      "programmato": "2026-07-13T18:45:00+02:00",
+      "inviato_il": "2026-07-14T06:20:40"
     },
     {
       "id": 120,
@@ -5396,6 +5404,14 @@
     {
       "quando": "2026-07-13T20:23:41.754499+02:00",
       "testo": "controllo ore 20:20: 0 nuove risposte (filtro unread vuoto, 0 messaggi non letti), 0 collegamenti verificati, 0 prenotazioni. Presidio scaduto Andrea Palmese (12/07) NON gestito in questo giro: casella ricerca #search-conversations nella tab messaging non ha accettato input via execute_javascript (nativeInputValueSetter + dispatchEvent input, e execCommand insertText, entrambi falliti con risposta anomala del tool \"missing value\"). Nessun rischio: nessun thread aperto, nessun messaggio inviato. Rimandato al prossimo giro (9:20 domani); se il problema persiste va indagata la query GraphQL di ricerca conversazioni come alternativa alla casella UI."
+    },
+    {
+      "quando": "2026-07-14T06:20:40",
+      "testo": "#119 Maria Serena Berra INVIATO da chat (verificatore OK, testo confermato a video, firmato Stefania)"
+    },
+    {
+      "quando": "2026-07-14T06:22:30.290912+02:00",
+      "testo": "controllo ore 20:35 (ripresa su ordine Davide dopo blocco casella ricerca): 0 nuove risposte dai 29 in attesa; 3 thread non letti (Montone=esclusa non toccata, Castiglioni=non in registro non toccato, Liguori=nuovo \"Grazie Stefania\" gestito senza risposta su verdetto verificatore); presidio Palmese eseguito via API GraphQL (paginazione conversazioni 737b), thread trovato, silente 4gg, CHIUSO per silenzio su verdetto verificatore. 0 invii. Thread Montone+Castiglioni verificati ancora non letti, nessun re-mark necessario. FIX METODO: ricerca contatto per nome via casella UI non funziona da execute_javascript; usare paginazione GraphQL messengerConversations.737b27144cf922499202658a5345016f (categories INBOX,SPAM,ARCHIVE + nextCursor) con match su hostIdentityUrn del profilo."
     }
   ],
   "diario": [
