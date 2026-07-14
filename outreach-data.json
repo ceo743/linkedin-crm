@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-14 14:59",
+ "aggiornato": "2026-07-14T18:38:52",
  "contatti": [
   {
    "id": 1,
@@ -4692,6 +4692,35 @@
     "budget": "sconosciuto",
     "fonte": "dm-guida"
    }
+  },
+  {
+   "id": 153,
+   "nome": "Giuseppe D'Imperio",
+   "ruolo": "Ph.D psicologo del lavoro e dell'organizzazione, Learning Specialist e psicoterapeuta - Applied Management",
+   "profilo": "",
+   "fonte": "inbound_dm_diretto",
+   "qualifica": {
+    "ruolo": "si",
+    "geografia": "Italia",
+    "budget": "",
+    "fonte": "DM inbound spontaneo (Premium Open Profile)"
+   },
+   "inviato": true,
+   "inviato_il": "2026-07-14T18:38:52",
+   "approvato": true,
+   "risposto": true,
+   "risposta_at": "2026-07-14T10:10:00",
+   "risposta_testo": "Davide Salve sono Giuseppe D'Imperio di Applied Management. Vorremmo sviluppare visibilita e contatti. Ho visto che puoi darci indicazioni in tal senso. GIUSTO?",
+   "gestito": true,
+   "gestito_il": "2026-07-14T18:38:52",
+   "risposta_conferma": "Giuseppe, grazie del messaggio, sono Stefania e lavoro con Davide. Si, hai visto giusto. Far crescere visibilita e contatti su LinkedIn per chi guida un'azienda e esattamente quello di cui si occupa. Il modo piu concreto per capire cosa si puo fare per Applied Management e mezz'ora con lui, cosi vi da indicazioni sul vostro caso specifico. Se ti va te la organizzo io. Stefania",
+   "stop_seguiti": true,
+   "escluso": false,
+   "prossima_azione": {
+    "quando": "2026-07-16",
+    "cosa": "Se non risponde alla proposta di call entro 2 giorni, ripresa leggera a parole su LinkedIn (mai link). Se dice si alla call, mandare Calendly DC tema LinkedIn (consulenza-strategica-gratuita-linkedin-dc-academy) e avvisare. LEAD CALDO INBOUND, tema visibilita/contatti = LinkedIn."
+   },
+   "note": "2026-07-14T18:38:52 LEAD CALDO INBOUND: DM spontaneo oggi 10:10 (Premium Open Profile) 'vorremmo sviluppare visibilita e contatti, puoi darci indicazioni? GIUSTO?'. Rimasto NON gestito dalle routine fino alle 16:2x, segnalato da Davide (GRAVE). Gestito da chat: verificatore INVIA, risposta Stefania con call proposta a parole (no link finche non dice si). Tema = LinkedIn -> Calendly DC quando accetta."
   }
  ],
  "servizio": [
@@ -5633,6 +5662,10 @@
   {
    "quando": "2026-07-14T14:23:22.123619+02:00",
    "testo": "controllo saltato, Chrome in uso (ricontrollo 14:23, tab ancora in rapido cambiamento: Gmail, PEC, articoli LinkedIn nuovi)"
+  },
+  {
+   "quando": "2026-07-14T18:38:52",
+   "testo": "#153 Giuseppe D'Imperio LEAD CALDO INBOUND gestito da chat (era rimasto senza risposta dalle 10:10, segnalato da Davide). Risposta inviata e verificata."
   }
  ],
  "diario": [
