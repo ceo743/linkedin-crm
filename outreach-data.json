@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-14T07:02:18.186000+02:00",
+ "aggiornato": "2026-07-14T07:15:00+02:00",
  "contatti": [
   {
    "id": 1,
@@ -4061,7 +4061,7 @@
     "fonte": "guida Venditore che non Dorme"
    },
    "messaggio": "Leonardo, intanto grazie a te per aver dato un'occhiata alla guida sul Venditore che non Dorme. Tra l'altro avevo notato che avevi ripreso anche un post di Davide, quindi in parte ci segui già. Visto che aiuti le aziende nella trasformazione digitale, ero curiosa di una cosa. Quando entri in un'azienda per renderla più efficiente, il primo pezzo che di solito provi ad automatizzare qual è, la parte commerciale e la gestione dei contatti oppure i processi interni?\n\nStefania",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": false,
@@ -4070,7 +4070,8 @@
    "prenotato": false,
    "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare. | 2026-07-12 05:24 METODO NUOVO. profilo: consulente trasformazione digitale (Aletheia Srl, Veneto), 2.011 follower. DUE segnali caldi: ha RIPRESO un post di Davide (ci segue gia) + ha risposto 'Grazie Stefania!' il 17/06 alla guida Venditore (thread caldo mai ripreso). IN TARGET. Aggancio = suo grazie + reshare post Davide + suo mestiere. Domanda da pari a due vie (commerciale vs processi interni), no link. DA APPROVARE (re-aggancio caldo). | 2026-07-12 06:07 VERIFICATO Gmail+Calendar: nessuna call prenotata, nessuna email diretta/risposta (solo form guida Kajabi). Nessun doppione, ok procedere.",
    "seguiti": [],
-   "qualificato_il": "2026-07-13T07:03:36+02:00"
+   "qualificato_il": "2026-07-13T07:03:36+02:00",
+   "programmato": "2026-07-14T18:45:00+02:00"
   },
   {
    "id": 131,
@@ -4095,7 +4096,8 @@
    "prenotato": false,
    "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare. | 2026-07-12 05:27 METODO NUOVO. profilo: freelance digital transformation, ex-Accenture 20 anni, voce SERIA su Responsible AI / AI governance / EU AI Act / concetto Epistemia (plausibilita != conoscenza), critico dell'hype AI. IN TARGET per ruolo MA disallineato col prodotto automazioni: un pitch 'automatizza vendite' gli stonerebbe. Scelto angolo DA PARI sul suo tema (Epistemia/governance), zero pitch zero guida-automazione zero link. ⚠️ Per Davide: qui l'angolo e relazione tra pari / brand, non vendita diretta. Valutare se procedere. DA APPROVARE. | 2026-07-12 06:07 VERIFICATO Gmail+Calendar: nessuna call prenotata, nessuna email diretta/risposta (solo form guida Kajabi). Nessun doppione, ok procedere.",
    "seguiti": [],
-   "qualificato_il": "2026-07-13T07:03:36+02:00"
+   "qualificato_il": "2026-07-13T07:03:36+02:00",
+   "programmato": "2026-07-14T18:50:00+02:00"
   },
   {
    "id": 132,
@@ -4114,11 +4116,11 @@
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
-   "inviato": null,
-   "risposto": false,
+   "inviato": true,
+   "risposto": true,
    "gestito": false,
    "prenotato": false,
-   "note": "COMPLETO 11/07. Imprenditore/investitore immobiliare. Thread confermato, guida Venditore ricevuta. CRM: trattative match = falso positivo (Mario Saccoia), lui solo recuperabili/OPTIN. Calendar: nessun evento. Budget DUBBIO -> decide Davide. | 2026-07-12 04:31 messaggio RISCRITTO: la pipeline aveva prodotto uno stampino confuso/proiettato uguale a tutti (Davide 11/07). Ora domanda unica, pulita, che lascia rivelare a lui il bisogno. | 2026-07-12 06:03 RIFORMULATO col metodo nuovo: rimosso lo stampino 'a suo tempo ti avevo girato la guida', aggancio ora specifico sul suo posizionamento reale + domanda da pari a due vie, no link. | 2026-07-12 06:07 VERIFICATO Gmail+Calendar: nessuna call prenotata, nessuna email diretta/risposta (solo form guida Kajabi). Nessun doppione, ok procedere.",
+   "note": "COMPLETO 11/07. Imprenditore/investitore immobiliare. Thread confermato, guida Venditore ricevuta. CRM: trattative match = falso positivo (Mario Saccoia), lui solo recuperabili/OPTIN. Calendar: nessun evento. Budget DUBBIO -> decide Davide. | 2026-07-12 04:31 messaggio RISCRITTO: la pipeline aveva prodotto uno stampino confuso/proiettato uguale a tutti (Davide 11/07). Ora domanda unica, pulita, che lascia rivelare a lui il bisogno. | 2026-07-12 06:03 RIFORMULATO col metodo nuovo: rimosso lo stampino 'a suo tempo ti avevo girato la guida', aggancio ora specifico sul suo posizionamento reale + domanda da pari a due vie, no link. | 2026-07-12 06:07 VERIFICATO Gmail+Calendar: nessuna call prenotata, nessuna email diretta/risposta (solo form guida Kajabi). Nessun doppione, ok procedere. | 14/07 thread conteneva sua risposta Its appreciated (non tracciata): apertura adattata per riconoscerla, poi domanda esplorativa. Inviato.",
    "seguiti": [],
    "variante": "A",
    "qualificato_il": "2026-07-11T15:55:14+02:00",
@@ -4127,7 +4129,8 @@
    "precheck_crm_fresco": {
     "quando": "2026-07-14T07:02:18.186000+02:00",
     "esito": "CRM live 14/07 07:05: fogli KPI freschi. Sacco: unici match Saccoia/Saccone (persone diverse). Kajabi: Umberto Sacco umberto.sacco@gmail.com LTV 0,00 EUR (optin giugno 2026). Calendario: nulla. VERDETTO LIVELLO 1: CONTATTABILE."
-   }
+   },
+   "inviato_il": "2026-07-14T07:02:21"
   },
   {
    "id": 133,
@@ -4167,7 +4170,7 @@
     "fonte": "guida Venditore che non Dorme"
    },
    "messaggio": "Ciro, ho visto che con Power Giob hai costruito un metodo strutturato di selezione, e mi ha incuriosito il tuo articolo su quanto costa assumere la persona sbagliata. Visto che avevi dato un'occhiata anche alla guida sul Venditore che non Dorme, ero curiosa di una cosa. Nella tua agenzia la parte di acquisizione delle aziende clienti la gestisci ancora tutta a mano con il commerciale, oppure stai già provando a costruirci un sistema che porti richieste in automatico?\n\nStefania",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": false,
@@ -4177,7 +4180,8 @@
    "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare. | 2026-07-12 05:28 METODO NUOVO. profilo: founder Power Giob (agenzia per il lavoro accreditata Ministero, ricerca/selezione personale, metodo strutturato, libro trovalapersonagiusta.it) + esperto finanza agevolata, holding Gio.Fra Srl. IN TARGET FORTE (imprenditore). Thread: bot Stefania guida Venditore, nessuna risposta. Nota: sta assumendo un commerciale. Aggancio = sua agenzia/metodo + suo articolo + guida, domanda da pari a due vie su acquisizione clienti (a mano vs sistema), no link. DA APPROVARE. | 2026-07-12 06:07 VERIFICATO Gmail+Calendar: nessuna call prenotata, nessuna email diretta/risposta (solo form guida Kajabi). Nessun doppione, ok procedere.",
    "seguiti": [],
    "email": "direzione@powergiobsrl.it",
-   "qualificato_il": "2026-07-13T07:03:36+02:00"
+   "qualificato_il": "2026-07-13T07:03:36+02:00",
+   "programmato": "2026-07-14T18:55:00+02:00"
   },
   {
    "id": 135,
@@ -4220,7 +4224,7 @@
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
-   "inviato": null,
+   "inviato": true,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
@@ -4233,7 +4237,8 @@
    "precheck_crm_fresco": {
     "quando": "2026-07-14T07:02:18.186000+02:00",
     "esito": "CRM live 14/07 07:05: fogli KPI freschi. Falduto: zero riscontri fogli. Kajabi: gfalduto@quantumre.it LTV 0,00 EUR ma OPTED OUT dalle email (nessun blocco per DM LinkedIn, mai contattarlo via email). Calendario: nulla. VERDETTO LIVELLO 1: CONTATTABILE."
-   }
+   },
+   "inviato_il": "2026-07-14T07:09:13"
   },
   {
    "id": 137,
@@ -4273,7 +4278,7 @@
     "fonte": "guida Venditore che non Dorme"
    },
    "messaggio": "Eleonora, intanto grazie a te per aver dato un'occhiata alla guida sul Venditore che non Dorme. Ho visto che con il tuo metodo CEI aiuti gli imprenditori ad attrarre più contatti da convertire in clienti, tutto partendo dall'analisi dei dati. Ero curiosa di una cosa. La parte di creazione dei contenuti e di gestione dei contatti per i tuoi clienti la fai ancora tutta a mano, oppure hai già iniziato a farti affiancare da qualche strumento di intelligenza artificiale?\n\nStefania",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": false,
@@ -4282,7 +4287,8 @@
    "prenotato": false,
    "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare. | 2026-07-12 05:32 METODO NUOVO. profilo: Digital Content Strategist freelance (Firenze, 2.281 follower, sito eleonoralencioni.it), metodo proprio CEI, aiuta imprenditori con branding e ad 'attrarre contatti da convertire in clienti'. Collegamento 1o grado. IN TARGET (attivita propria). Ha risposto 'Grazie, Stefania!' il 16/06 (thread caldo mai ripreso). Aggancio = suo metodo CEI + posizionamento + suo grazie, domanda da pari a due vie (a mano vs strumenti AI), no link. DA APPROVARE (re-aggancio caldo). | 2026-07-12 06:07 VERIFICATO Gmail+Calendar: nessuna call prenotata, nessuna email diretta/risposta (solo form guida Kajabi). Nessun doppione, ok procedere.",
    "seguiti": [],
-   "qualificato_il": "2026-07-13T07:03:36+02:00"
+   "qualificato_il": "2026-07-13T07:03:36+02:00",
+   "programmato": "2026-07-14T19:00:00+02:00"
   },
   {
    "id": 139,
@@ -4378,7 +4384,7 @@
     "fonte": "guida Venditore che non Dorme"
    },
    "messaggio": "Giuseppe, ho visto che come consulente finanziario e del credito lavori da libero professionista e ti costruisci il portafoglio clienti da solo. Visto che avevi dato un'occhiata alla guida sul Venditore che non Dorme, ero curiosa di una cosa. I nuovi clienti oggi ti arrivano più dal passaparola e dalle referenze, oppure hai già iniziato a costruirti un sistema che te li porta in modo più costante?\n\nStefania",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": false,
@@ -4388,7 +4394,8 @@
    "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare. | 2026-07-12 05:33 METODO NUOVO. profilo: consulente finanziario e del credito FREELANCE (Verona), lunga carriera da autonomo (Signor Prestito, Banca Widiba, Mediolanum), CV con 'sviluppo portafoglio clienti', 'referral selling', 'acquisizione da prospect e referral'. IN TARGET (autonomo, propria attivita). Attivita LinkedIn = per lo piu reshare, pochi post originali. Thread: bot Stefania guida Venditore, nessuna risposta. Aggancio = suo ruolo freelance + costruzione portafoglio, domanda validata passaparola vs sistema (angolo chatbot Stefania), no link. DA APPROVARE. | 2026-07-12 06:07 VERIFICATO Gmail+Calendar: nessuna call prenotata, nessuna email diretta/risposta (solo form guida Kajabi). Nessun doppione, ok procedere. | 2026-07-13: risposta 👍 alla guida Agenti IA/Preventivi nel thread. Thread attivo, messaggio pronto.",
    "seguiti": [],
    "email": "giuseppegrillo.oam@gmail.com",
-   "qualificato_il": "2026-07-13T07:03:36+02:00"
+   "qualificato_il": "2026-07-13T07:03:36+02:00",
+   "programmato": "2026-07-14T19:05:00+02:00"
   },
   {
    "id": 143,
@@ -4432,7 +4439,7 @@
     "fonte": "guida Venditore che non Dorme"
    },
    "messaggio": "Simone, complimenti per l'ingresso di Argovance nel Google for Startups Cloud Program, un bel segnale per un progetto di AI clinica in ambito veterinario. Avevi scritto che portare avanti un progetto del genere insieme a un lavoro a tempo pieno non è sempre semplice, e mi è venuta una curiosità. In questa fase sei concentrato soprattutto sul costruire la piattaforma, oppure stai già ragionando su come portarla davanti alle prime cliniche veterinarie?\n\nStefania",
-   "approvato": false,
+   "approvato": true,
    "escluso": false,
    "in_pausa": false,
    "inviato": false,
@@ -4441,7 +4448,8 @@
    "prenotato": false,
    "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare. | 2026-07-12 05:35 METODO NUOVO. profilo: Founder & Architect Argovance (Veterinary AI, Real World Evidence, clinical data), ex-Ferrari GT/automotive R&D, EMBA Bologna Business School, costruisce la startup accanto a lavoro full-time (R&D manager Esautomotion). Milestone recente: ammesso Google for Startups Cloud Program. IN TARGET (founder). Nota: lui stesso e architetto AI, quindi NIENTE pitch automazione (se la costruisce da solo). Aggancio = suo traguardo Google + sue parole sul full-time, domanda peer-founder a due vie (costruire vs go-to-market cliniche), no link. DA APPROVARE. | 2026-07-12 06:07 VERIFICATO Gmail+Calendar: nessuna call prenotata, nessuna email diretta/risposta (solo form guida Kajabi). Nessun doppione, ok procedere.",
    "seguiti": [],
-   "qualificato_il": "2026-07-13T07:03:36+02:00"
+   "qualificato_il": "2026-07-13T07:03:36+02:00",
+   "programmato": "2026-07-14T19:10:00+02:00"
   },
   {
    "id": 145,
@@ -4479,7 +4487,7 @@
    "id": 146,
    "nome": "Fabio Biondi",
    "profilo": "https://www.linkedin.com/in/fabiobiondi/",
-   "tipo": "dm-guida",
+   "tipo": "thread",
    "angolo": "ai",
    "fonte": "guida L'Agente Preventivi",
    "inviato": null,
@@ -4488,24 +4496,24 @@
    "link_call_inviato": null,
    "tipo_call": null,
    "prenotato": null,
-   "note": "Lead da DM guida — 2026-07-13 — guida inviata: L'Agente Preventivi",
+   "note": "Lead da DM guida — 2026-07-13 — guida inviata: L'Agente Preventivi | ESCLUSO 2026-07-14: instructor/developer, Google Developer Expert, tech educator non in target (non imprenditore con azienda da scalare)",
    "messaggio": "",
    "approvato": false,
    "programmato": null,
    "ruolo": "Front-End Instructor | Google Developer Expert | Angular | React",
-   "escluso": false,
+   "escluso": true,
    "qualifica": {
-    "ruolo": "da verificare",
-    "geografia": "da verificare",
-    "budget": "sconosciuto",
-    "fonte": "dm-guida"
+    "ruolo": "no",
+    "geografia": "ok",
+    "budget": "no",
+    "fonte": "Front-End Instructor, Google Dev Expert, 30k follower ma tech educator non imprenditore tradizionale"
    }
   },
   {
    "id": 147,
    "nome": "Alessio Capogna",
-   "profilo": "",
-   "tipo": "dm-guida",
+   "profilo": "https://www.linkedin.com/in/alessio-capogna/",
+   "tipo": "thread",
    "angolo": "ai",
    "fonte": "guida L'Agente Preventivi",
    "inviato": null,
@@ -4514,24 +4522,24 @@
    "link_call_inviato": null,
    "tipo_call": null,
    "prenotato": null,
-   "note": "Lead da DM guida — 2026-07-13 — guida inviata: L'Agente Preventivi",
+   "note": "Lead da DM guida — 2026-07-13 — guida inviata: L'Agente Preventivi | ESCLUSO 2026-07-14: libero professionista singolo (ingegnere civile/RSPP), no azienda strutturata, budget insufficiente per servizi 5k+",
    "messaggio": "",
    "approvato": false,
    "programmato": null,
    "ruolo": "Project and Costructions Manager",
-   "escluso": false,
+   "escluso": true,
    "qualifica": {
-    "ruolo": "da verificare",
-    "geografia": "da verificare",
-    "budget": "sconosciuto",
-    "fonte": "dm-guida"
+    "ruolo": "dubbio",
+    "geografia": "ok",
+    "budget": "no",
+    "fonte": "Ingegnere civile freelance, RSPP Ordine Ingegneri Frosinone, 903 follower, solo professionista senza azienda strutturata"
    }
   },
   {
    "id": 148,
    "nome": "Marco Gasparini",
    "profilo": "",
-   "tipo": "dm-guida",
+   "tipo": "thread",
    "angolo": "ai",
    "fonte": "guida L'Agente Preventivi",
    "inviato": null,
@@ -4540,24 +4548,24 @@
    "link_call_inviato": null,
    "tipo_call": null,
    "prenotato": null,
-   "note": "Lead da DM guida — 2026-07-13 — guida inviata: guida L'Agente Preventivi",
+   "note": "Lead da DM guida — 2026-07-13 — guida inviata: guida L'Agente Preventivi | ESCLUSO 2026-07-14: CLIENTE ATTIVO confermato da CRM (vendita 03/12/2024 €1.830)",
    "messaggio": "",
    "approvato": false,
    "programmato": null,
    "ruolo": "Comunicazione & Design (professionista)",
-   "escluso": false,
+   "escluso": true,
    "qualifica": {
-    "ruolo": "da verificare",
-    "geografia": "da verificare",
-    "budget": "sconosciuto",
-    "fonte": "dm-guida"
+    "ruolo": "ok",
+    "geografia": "ok",
+    "budget": "ok",
+    "fonte": "CLIENTE ATTIVO: Marco Gasparini Gasparini, vendita 03/12/2024 €1.830 Master Lavoro+2h (mgagroup.it)"
    }
   },
   {
    "id": 149,
    "nome": "Marco Losso",
-   "profilo": "",
-   "tipo": "dm-guida",
+   "profilo": "https://www.linkedin.com/in/intheboxstudio/",
+   "tipo": "thread",
    "angolo": "ai",
    "fonte": "guida L'Agente Preventivi",
    "inviato": null,
@@ -4566,24 +4574,24 @@
    "link_call_inviato": null,
    "tipo_call": null,
    "prenotato": null,
-   "note": "Lead da DM guida — 2026-07-13 — guida inviata: guida L'Agente Preventivi",
+   "note": "Lead da DM guida — 2026-07-13 — guida inviata: guida L'Agente Preventivi | ESCLUSO 2026-07-14: piccolo consulente AI freelance (intheboxstudio), 77 connessioni/86 follower, no struttura aziendale, non in target",
    "messaggio": "",
    "approvato": false,
    "programmato": null,
    "ruolo": "Agenti AI / ottimizzazione lavoro aziendale",
-   "escluso": false,
+   "escluso": true,
    "qualifica": {
-    "ruolo": "da verificare",
-    "geografia": "da verificare",
-    "budget": "sconosciuto",
-    "fonte": "dm-guida"
+    "ruolo": "no",
+    "geografia": "ok",
+    "budget": "no",
+    "fonte": "Consulente AI freelance, 77 connessioni, 86 follower, piccolo solopreneur, anche simile a concorrente"
    }
   },
   {
    "id": 150,
    "nome": "Roberto Romagnano",
-   "profilo": "",
-   "tipo": "dm-guida",
+   "profilo": "https://www.linkedin.com/in/roberto-romagnano-7099861b6/",
+   "tipo": "thread",
    "angolo": "ai",
    "fonte": "guida L'Agente Preventivi",
    "inviato": null,
@@ -4592,24 +4600,27 @@
    "link_call_inviato": null,
    "tipo_call": null,
    "prenotato": null,
-   "note": "Lead da DM guida — 2026-07-13 — guida inviata: guida L'Agente Preventivi",
-   "messaggio": "",
+   "note": "profilo: avvocato con proprio studio a Milano, quasi inattivo su LI (1 commento 'Grande!' in 1 mese), ha chiesto guida L'Agente Preventivi — rilevante per chi gestisce preventivi/offerte di parcella ai clienti",
+   "messaggio": "Ciao Roberto, ero curiosa di sapere una cosa: in uno studio legale come il tuo, la parte di preventivazione verso i clienti la gestisci ancora tutta a mano, o hai già qualche strumento che ti aiuta a standardizzarla?\n\nStefania",
    "approvato": false,
-   "programmato": null,
-   "ruolo": "Avvocato presso Studio Legale Romagnano",
+   "programmato": "2026-07-14T19:15:00+02:00",
+   "ruolo": "Avvocato presso Studio Legale Romagnano (Milano)",
    "escluso": false,
    "qualifica": {
     "ruolo": "ok",
-    "geografia": "da verificare",
-    "budget": "sconosciuto",
-    "fonte": "dm-guida"
-   }
+    "geografia": "ok",
+    "budget": "ok",
+    "fonte": "Avvocato con proprio studio a Milano (Studio Legale Romagnano), 500+ connessioni, 751 follower, 24ORE Business School alum — segnali budget strutturato"
+   },
+   "geografia": "Milano, Lombardia",
+   "variante": "A",
+   "qualificato_il": "2026-07-14T07:15:00+02:00"
   },
   {
    "id": 151,
    "nome": "Antonio Cristiani",
-   "profilo": "",
-   "tipo": "dm-guida",
+   "profilo": "https://www.linkedin.com/in/antonio-cristiani-%E2%98%98%EF%B8%8F-5b95b416b/",
+   "tipo": "thread",
    "angolo": "ai",
    "fonte": "guida L'Agente Preventivi",
    "inviato": null,
@@ -4618,17 +4629,17 @@
    "link_call_inviato": null,
    "tipo_call": null,
    "prenotato": null,
-   "note": "Lead da DM guida — 2026-07-13 — guida inviata: guida L'Agente Preventivi",
+   "note": "Lead da DM guida — 2026-07-13 — guida inviata: guida L'Agente Preventivi | ESCLUSO 2026-07-14: Brand Associato franchisee (giardini pensili), 174 follower, no azienda strutturata, budget insufficiente",
    "messaggio": "",
    "approvato": false,
    "programmato": null,
    "ruolo": "Brand Assocciato - Giardini Pensili",
-   "escluso": false,
+   "escluso": true,
    "qualifica": {
-    "ruolo": "da verificare",
-    "geografia": "da verificare",
-    "budget": "sconosciuto",
-    "fonte": "dm-guida"
+    "ruolo": "dubbio",
+    "geografia": "ok",
+    "budget": "no",
+    "fonte": "Brand Associato Giardini Pensili, 174 follower, 142 connessioni, piccolo installatore/franchisee"
    }
   }
  ],
@@ -5482,7 +5493,20 @@
   {
    "quando": "2026-07-14T07:02:18.186000+02:00",
    "testo": "PRE-CHECK CRM FRESCO (sessione verifiche) su 4 auto-approvati: id132 Sacco, id136 Falduto, id139 Errichiello, id145 Troisi - tutti CONTATTABILI livello 1 (fogli live, Kajabi LTV 0/assenti, calendario pulito). Nota id139: omonimia parziale Fernando Errichiello in trattativa 2024, persona diversa, cautela nel thread. Nota id136: opted-out email Kajabi, ok DM LinkedIn mai email."
-  }
+  },
+  {
+   "quando": "2026-07-14T07:02:21",
+   "testo": "#132 Umberto Sacco INVIATO da chat (aveva risposto Its appreciated alla guida: apertura adattata; verificatore OK, firmato Stefania)"
+  },
+  {
+   "quando": "2026-07-14T07:06:47",
+   "testo": "AUTO-APPROVAZIONE 24h da chat: #130 Leonardo Basso, #134 Ciro Nicolò Del Sorbo, #138 Eleonora Lencioni, #142 Giuseppe Grillo, #144 Simone Lucci"
+  },
+  {
+   "quando": "2026-07-14T07:09:13",
+   "testo": "#136 Gianluca Falduto INVIATO da chat (verificatore OK, testo confermato, firmato Stefania)"
+  },
+  "2026-07-14T07:15: pipeline run — 5 stub esclusi (Biondi istruttore, Capogna libero professionista, Gasparini CLIENTE ATTIVO, Losso piccolo consulente AI, Cristiani brand associato), 1 completato (Romagnano avvocato Milano), programmato aggiunto a 6 completi pre-esistenti (ids 130/131/134/138/142/144). backlog residuo 0, coda pronta 7"
  ],
  "diario": [
   {
