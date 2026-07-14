@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-14T14:21:46.862068+02:00",
+  "aggiornato": "2026-07-14T14:23:22.123592+02:00",
   "contatti": [
     {
       "id": 1,
@@ -5629,6 +5629,10 @@
     {
       "quando": "2026-07-14T14:21:46.862110+02:00",
       "testo": "controllo saltato, Chrome in uso"
+    },
+    {
+      "quando": "2026-07-14T14:23:22.123619+02:00",
+      "testo": "controllo saltato, Chrome in uso (ricontrollo 14:23, tab ancora in rapido cambiamento: Gmail, PEC, articoli LinkedIn nuovi)"
     }
   ],
   "diario": [
