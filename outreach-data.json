@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-14T11:09:48.563398+02:00",
+ "aggiornato": "2026-07-14T11:11:14.930393+02:00",
  "contatti": [
   {
    "id": 1,
@@ -4625,8 +4625,8 @@
    "link_call_inviato": null,
    "tipo_call": null,
    "prenotato": null,
-   "note": "profilo: avvocato con proprio studio a Milano, quasi inattivo su LI (1 commento 'Grande!' in 1 mese), ha chiesto guida L'Agente Preventivi — rilevante per chi gestisce preventivi/offerte di parcella ai clienti | 2026-07-14T11:09 FIX due punti rimossi dal messaggio (regola Davide 14/07, mai due punti fuori dagli elenchi).",
-   "messaggio": "Ciao Roberto, ero curiosa di sapere una cosa. In uno studio legale come il tuo, la parte di preventivazione verso i clienti la gestisci ancora tutta a mano, o hai già qualche strumento che ti aiuta a standardizzarla?\n\nStefania",
+   "note": "profilo: avvocato con proprio studio a Milano, quasi inattivo su LI (1 commento 'Grande!' in 1 mese), ha chiesto guida L'Agente Preventivi — rilevante per chi gestisce preventivi/offerte di parcella ai clienti | 2026-07-14T11:09 FIX due punti rimossi dal messaggio (regola Davide 14/07, mai due punti fuori dagli elenchi). | 2026-07-14T11:11 ANGOLO RISCRITTO su ordine Davide 14/07. Mai efficienza interna (preventivazione, la fanno le segretarie), l'angolo che muove imprenditori e professionisti è TROVARE CLIENTI e non dipendere dal passaparola.",
+   "messaggio": "Ciao Roberto, hai scaricato la guida sull'Agente Preventivi e mi è venuta una curiosità. Per uno studio come il tuo i nuovi clienti oggi arrivano quasi tutti dal passaparola, o hai già un modo per farti trovare da chi sta cercando un avvocato?\n\nStefania",
    "approvato": false,
    "programmato": "2026-07-14T19:15:00+02:00",
    "ruolo": "Avvocato presso Studio Legale Romagnano (Milano)",
@@ -5617,6 +5617,10 @@
   {
    "quando": "2026-07-14T11:09:48.563398+02:00",
    "testo": "FIX testi da regola Davide 14/07 (mai due punti salvo elenchi puntati). Corretti i messaggi non inviati di id131 Luciano Sabatino e id150 Roberto Romagnano (due punti a metà frase sostituiti con punto fermo). Nessun altro messaggio o seguito pendente violava la regola."
+  },
+  {
+   "quando": "2026-07-14T11:11:14.930393+02:00",
+   "testo": "id150 Romagnano, messaggio riscritto su ordine Davide. Angolo cambiato da efficienza interna (preventivazione) ad acquisizione clienti / non dipendere dal passaparola. Regola generale salvata in memoria e nella pipeline."
   }
  ],
  "diario": [
