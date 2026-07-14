@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-07-14T07:15:00+02:00",
+ "aggiornato": "2026-07-14T07:54:11",
  "contatti": [
   {
    "id": 1,
@@ -4064,14 +4064,15 @@
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
-   "inviato": false,
-   "risposto": false,
+   "inviato": true,
+   "risposto": true,
    "gestito": false,
    "prenotato": false,
    "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare. | 2026-07-12 05:24 METODO NUOVO. profilo: consulente trasformazione digitale (Aletheia Srl, Veneto), 2.011 follower. DUE segnali caldi: ha RIPRESO un post di Davide (ci segue gia) + ha risposto 'Grazie Stefania!' il 17/06 alla guida Venditore (thread caldo mai ripreso). IN TARGET. Aggancio = suo grazie + reshare post Davide + suo mestiere. Domanda da pari a due vie (commerciale vs processi interni), no link. DA APPROVARE (re-aggancio caldo). | 2026-07-12 06:07 VERIFICATO Gmail+Calendar: nessuna call prenotata, nessuna email diretta/risposta (solo form guida Kajabi). Nessun doppione, ok procedere.",
    "seguiti": [],
    "qualificato_il": "2026-07-13T07:03:36+02:00",
-   "programmato": "2026-07-14T18:45:00+02:00"
+   "programmato": "2026-07-14T18:45:00+02:00",
+   "inviato_il": "2026-07-14T07:28:14"
   },
   {
    "id": 131,
@@ -4173,7 +4174,7 @@
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
-   "inviato": false,
+   "inviato": true,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
@@ -4181,7 +4182,8 @@
    "seguiti": [],
    "email": "direzione@powergiobsrl.it",
    "qualificato_il": "2026-07-13T07:03:36+02:00",
-   "programmato": "2026-07-14T18:55:00+02:00"
+   "programmato": "2026-07-14T18:55:00+02:00",
+   "inviato_il": "2026-07-14T07:34:51"
   },
   {
    "id": 135,
@@ -4281,14 +4283,15 @@
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
-   "inviato": false,
-   "risposto": false,
+   "inviato": true,
+   "risposto": true,
    "gestito": false,
    "prenotato": false,
    "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare. | 2026-07-12 05:32 METODO NUOVO. profilo: Digital Content Strategist freelance (Firenze, 2.281 follower, sito eleonoralencioni.it), metodo proprio CEI, aiuta imprenditori con branding e ad 'attrarre contatti da convertire in clienti'. Collegamento 1o grado. IN TARGET (attivita propria). Ha risposto 'Grazie, Stefania!' il 16/06 (thread caldo mai ripreso). Aggancio = suo metodo CEI + posizionamento + suo grazie, domanda da pari a due vie (a mano vs strumenti AI), no link. DA APPROVARE (re-aggancio caldo). | 2026-07-12 06:07 VERIFICATO Gmail+Calendar: nessuna call prenotata, nessuna email diretta/risposta (solo form guida Kajabi). Nessun doppione, ok procedere.",
    "seguiti": [],
    "qualificato_il": "2026-07-13T07:03:36+02:00",
-   "programmato": "2026-07-14T19:00:00+02:00"
+   "programmato": "2026-07-14T19:00:00+02:00",
+   "inviato_il": "2026-07-14T07:40:37"
   },
   {
    "id": 139,
@@ -4307,7 +4310,7 @@
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
-   "inviato": null,
+   "inviato": true,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
@@ -4320,7 +4323,8 @@
    "precheck_crm_fresco": {
     "quando": "2026-07-14T07:02:18.186000+02:00",
     "esito": "CRM live 14/07 07:05: fogli KPI freschi. ATTENZIONE: Fernando Errichiello (safeinsurance.it) in trattativa FORM CONSULENZA 08/2024 - persona DIVERSA da Gianpiero (nome, azienda, email diversi) ma cognome raro: se nel thread emergesse un legame, fermarsi. Gianpiero assente da Kajabi (solo Fernando e Adelaide, LTV 0). Calendario: nulla. VERDETTO LIVELLO 1: CONTATTABILE con cautela."
-   }
+   },
+   "inviato_il": "2026-07-14T07:15:05"
   },
   {
    "id": 140,
@@ -4387,15 +4391,16 @@
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
-   "inviato": false,
-   "risposto": false,
+   "inviato": true,
+   "risposto": true,
    "gestito": false,
    "prenotato": false,
    "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare. | 2026-07-12 05:33 METODO NUOVO. profilo: consulente finanziario e del credito FREELANCE (Verona), lunga carriera da autonomo (Signor Prestito, Banca Widiba, Mediolanum), CV con 'sviluppo portafoglio clienti', 'referral selling', 'acquisizione da prospect e referral'. IN TARGET (autonomo, propria attivita). Attivita LinkedIn = per lo piu reshare, pochi post originali. Thread: bot Stefania guida Venditore, nessuna risposta. Aggancio = suo ruolo freelance + costruzione portafoglio, domanda validata passaparola vs sistema (angolo chatbot Stefania), no link. DA APPROVARE. | 2026-07-12 06:07 VERIFICATO Gmail+Calendar: nessuna call prenotata, nessuna email diretta/risposta (solo form guida Kajabi). Nessun doppione, ok procedere. | 2026-07-13: risposta 👍 alla guida Agenti IA/Preventivi nel thread. Thread attivo, messaggio pronto.",
    "seguiti": [],
    "email": "giuseppegrillo.oam@gmail.com",
    "qualificato_il": "2026-07-13T07:03:36+02:00",
-   "programmato": "2026-07-14T19:05:00+02:00"
+   "programmato": "2026-07-14T19:05:00+02:00",
+   "inviato_il": "2026-07-14T07:47:44"
   },
   {
    "id": 143,
@@ -4442,14 +4447,15 @@
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
-   "inviato": false,
+   "inviato": true,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
    "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare. | 2026-07-12 05:35 METODO NUOVO. profilo: Founder & Architect Argovance (Veterinary AI, Real World Evidence, clinical data), ex-Ferrari GT/automotive R&D, EMBA Bologna Business School, costruisce la startup accanto a lavoro full-time (R&D manager Esautomotion). Milestone recente: ammesso Google for Startups Cloud Program. IN TARGET (founder). Nota: lui stesso e architetto AI, quindi NIENTE pitch automazione (se la costruisce da solo). Aggancio = suo traguardo Google + sue parole sul full-time, domanda peer-founder a due vie (costruire vs go-to-market cliniche), no link. DA APPROVARE. | 2026-07-12 06:07 VERIFICATO Gmail+Calendar: nessuna call prenotata, nessuna email diretta/risposta (solo form guida Kajabi). Nessun doppione, ok procedere.",
    "seguiti": [],
    "qualificato_il": "2026-07-13T07:03:36+02:00",
-   "programmato": "2026-07-14T19:10:00+02:00"
+   "programmato": "2026-07-14T19:10:00+02:00",
+   "inviato_il": "2026-07-14T07:54:11"
   },
   {
    "id": 145,
@@ -4468,7 +4474,7 @@
    "approvato": true,
    "escluso": false,
    "in_pausa": false,
-   "inviato": null,
+   "inviato": true,
    "risposto": false,
    "gestito": false,
    "prenotato": false,
@@ -4481,7 +4487,8 @@
    "precheck_crm_fresco": {
     "quando": "2026-07-14T07:02:18.186000+02:00",
     "esito": "CRM live 14/07 07:05: fogli KPI freschi. Troisi: solo Tullia Troisi (trattativa 2025) e Polisia, persone diverse da Roberto. Roberto assente da Kajabi (solo Tullia/Polisia LTV 0). Calendario: nulla. VERDETTO LIVELLO 1: CONTATTABILE."
-   }
+   },
+   "inviato_il": "2026-07-14T07:22:02"
   },
   {
    "id": 146,
@@ -5506,7 +5513,39 @@
    "quando": "2026-07-14T07:09:13",
    "testo": "#136 Gianluca Falduto INVIATO da chat (verificatore OK, testo confermato, firmato Stefania)"
   },
-  "2026-07-14T07:15: pipeline run — 5 stub esclusi (Biondi istruttore, Capogna libero professionista, Gasparini CLIENTE ATTIVO, Losso piccolo consulente AI, Cristiani brand associato), 1 completato (Romagnano avvocato Milano), programmato aggiunto a 6 completi pre-esistenti (ids 130/131/134/138/142/144). backlog residuo 0, coda pronta 7"
+  "2026-07-14T07:15: pipeline run — 5 stub esclusi (Biondi istruttore, Capogna libero professionista, Gasparini CLIENTE ATTIVO, Losso piccolo consulente AI, Cristiani brand associato), 1 completato (Romagnano avvocato Milano), programmato aggiunto a 6 completi pre-esistenti (ids 130/131/134/138/142/144). backlog residuo 0, coda pronta 7",
+  {
+   "quando": "2026-07-14T07:15:05",
+   "testo": "#139 Gianpiero Errichiello INVIATO da chat (verificatore OK, testo confermato, firmato Stefania)"
+  },
+  {
+   "quando": "2026-07-14T07:22:02",
+   "testo": "#145 Roberto Troisi INVIATO da chat (verificatore OK, testo confermato, firmato Stefania)"
+  },
+  {
+   "quando": "2026-07-14T07:28:14",
+   "testo": "#130 Leonardo Basso INVIATO da chat (aveva ringraziato per la guida; verificatore OK, firmato Stefania)"
+  },
+  {
+   "quando": "2026-07-14T07:34:51",
+   "testo": "#134 Ciro Nicolo Del Sorbo INVIATO da chat (verificatore OK, testo confermato, firmato Stefania)"
+  },
+  {
+   "quando": "2026-07-14T07:40:37",
+   "testo": "#138 Eleonora Lencioni INVIATO da chat (aveva ringraziato per la guida; verificatore OK, firmato Stefania)"
+  },
+  {
+   "quando": "2026-07-14T07:47:44",
+   "testo": "#142 Giuseppe Grillo INVIATO da chat (aveva reagito con pollice; verificatore OK, firmato Stefania)"
+  },
+  {
+   "quando": "2026-07-14T07:54:11",
+   "testo": "#144 Simone Lucci INVIATO da chat (verificatore OK, testo confermato, firmato Stefania)"
+  },
+  {
+   "quando": "2026-07-14T07:54:11",
+   "testo": "SESSIONE INVIO MATTUTINA COMPLETATA: 16 messaggi inviati (06:19-07:53), pause 3-5 min, tutti verificati e confermati a video. #131 Luciano Sabatino trattenuto dal verificatore: angolo relazione/pari, decisione riservata a Davide."
+  }
  ],
  "diario": [
   {
