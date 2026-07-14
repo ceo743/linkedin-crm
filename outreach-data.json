@@ -4089,7 +4089,7 @@
         "fonte": "guida Venditore che non Dorme"
       },
       "messaggio": "Luciano, ho letto il tuo articolo sull'intelligenza artificiale, dove spieghi che una risposta plausibile non è la stessa cosa di una risposta vera. È un tema che torna spesso anche nel lavoro di Davide con le aziende. Ero curiosa di sapere una cosa: nelle imprese con cui lavori tu, questa attenzione sta già entrando nelle decisioni di tutti i giorni, o per ora resta più un discorso da addetti ai lavori?\n\nStefania",
-      "approvato": false,
+      "approvato": true,
       "escluso": false,
       "in_pausa": false,
       "inviato": false,
@@ -5609,6 +5609,10 @@
     {
       "quando": "2026-07-14T09:29:57.003168+02:00",
       "testo": "controllo ore 09:30 CONCLUSO: 1 nuova risposta gestita (Falduto, domanda esplorativa), 4 flag risposto stale corretti (130,132,138,142 - vecchie risposte al bot non nuove), 1 presidio ripreso (Cocci, tocco leggero), 1 presidio rimandato al prossimo giro per assenza profilo URL (Pianzi Mirco id 90), nessuna risposta orfana residua. RE-MARK non letto fallito (400, endpoint noto deprecato) ma verificato ground-truth: Montone e Castiglioni ancora genuinamente non letti, nessun rischio reale, nessuna email necessaria."
+    },
+    {
+      "quando": "2026-07-14T09:08:25.678Z",
+      "testo": "messaggio #131 approvato da dashboard"
     }
   ],
   "diario": [
