@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-14T09:29:57.003168+02:00",
+  "aggiornato": "2026-07-14T09:45:00+02:00",
   "contatti": [
     {
       "id": 1,
@@ -4665,6 +4665,32 @@
         "geografia": "ok",
         "budget": "no",
         "fonte": "Brand Associato Giardini Pensili, 174 follower, 142 connessioni, piccolo installatore/franchisee"
+      }
+    },
+    {
+      "id": 152,
+      "nome": "Mario Castiglioni",
+      "profilo": "https://www.linkedin.com/messaging/thread/2-MzE2Y2QxMTktYzk5ZS00MTYyLTkxZWItYTkwMTg2NmY0YjY1XzEwMA==",
+      "tipo": "dm-guida",
+      "angolo": "ai",
+      "fonte": "guida L'Agente Preventivi",
+      "inviato": null,
+      "risposto": null,
+      "risposta_testo": "",
+      "link_call_inviato": null,
+      "tipo_call": null,
+      "prenotato": null,
+      "note": "Lead da DM guida — 2026-07-14 — guida inviata: L'Agente Preventivi (precedente: guida Automazioni mag 2026)",
+      "messaggio": "",
+      "approvato": false,
+      "programmato": null,
+      "ruolo": "AI per PMI (headline: Con AI TEAM AGENTS rendimi il digitale alleato delle PMI)",
+      "escluso": false,
+      "qualifica": {
+        "ruolo": "da verificare",
+        "geografia": "da verificare",
+        "budget": "sconosciuto",
+        "fonte": "dm-guida"
       }
     }
   ],
