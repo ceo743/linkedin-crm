@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-15T12:05:14.442192+02:00",
+  "aggiornato": "2026-07-15T14:32:51.057032+02:00",
   "contatti": [
     {
       "id": 1,
@@ -1116,7 +1116,7 @@
       "link_call_inviato": null,
       "tipo_call": null,
       "prenotato": null,
-      "note": "doppio controllo 03/07: calendario zero, CRM zero, blocklist zero (Liguori: evento trovato era omonimo Dario Liguori) | Kajabi LTV 0,00 € | NOTA CALL: notaio = vincoli deontologici, in call parlare di autorevolezza ed educazione del pubblico, MAI acquisizione clienti | 04/07 GESTITO: risposta calda (guide non arrivano), conferma inviata nel thread + email operativa a Stefania, presidio al 08/07. | Verificato 2026-07-07 11:28: Liguori: scadenza 08/07 (domani), non ancora dovuta oggi. Nessuna azione oggi. | 11/07: risposta CALDISSIMA 8/07 - \"ti contatto al cellulare da cui ci siamo sentiti\". Ha già contatti precedenti con Davide/Stefania al telefono. NON inviare DM automatici: Stefania deve gestire la chiamata in arrivo. | REMOTE-PRESIDIO 10/07: ova nel thread (non presente in lista non letti), inviata email a Stefania (Ccn ceo@) per ripresa a mano con orari, prossima_azione spostata al 15/07. | 2026-07-11 07:30 MERGE: risposto oggi nel thread (sessione Davide): \"Perfetto Luciano, restiamo in attesa della tua chiamata\". Bozza email a Stefania pronta in Gmail (caso telefono), in attesa che Davide la spedisca. pa runtime 15/07 confermata. | 13/07 20:35: nuovo msg suo \"Grazie Stefania\" (puro ringraziamento di cortesia dopo nostra conferma). Letto e archiviato SENZA risposta su verdetto verificatore (rumore su lead premium che chiamerà lui). prossima_azione 15/07 INVARIATA: se non ha chiamato, DM di sollecito.",
+      "note": "doppio controllo 03/07: calendario zero, CRM zero, blocklist zero (Liguori: evento trovato era omonimo Dario Liguori) | Kajabi LTV 0,00 € | NOTA CALL: notaio = vincoli deontologici, in call parlare di autorevolezza ed educazione del pubblico, MAI acquisizione clienti | 04/07 GESTITO: risposta calda (guide non arrivano), conferma inviata nel thread + email operativa a Stefania, presidio al 08/07. | Verificato 2026-07-07 11:28: Liguori: scadenza 08/07 (domani), non ancora dovuta oggi. Nessuna azione oggi. | 11/07: risposta CALDISSIMA 8/07 - \"ti contatto al cellulare da cui ci siamo sentiti\". Ha già contatti precedenti con Davide/Stefania al telefono. NON inviare DM automatici: Stefania deve gestire la chiamata in arrivo. | REMOTE-PRESIDIO 10/07: ova nel thread (non presente in lista non letti), inviata email a Stefania (Ccn ceo@) per ripresa a mano con orari, prossima_azione spostata al 15/07. | 2026-07-11 07:30 MERGE: risposto oggi nel thread (sessione Davide): \"Perfetto Luciano, restiamo in attesa della tua chiamata\". Bozza email a Stefania pronta in Gmail (caso telefono), in attesa che Davide la spedisca. pa runtime 15/07 confermata. | 13/07 20:35: nuovo msg suo \"Grazie Stefania\" (puro ringraziamento di cortesia dopo nostra conferma). Letto e archiviato SENZA risposta su verdetto verificatore (rumore su lead premium che chiamerà lui). prossima_azione 15/07 INVARIATA: se non ha chiamato, DM di sollecito. | 15/07 14:32: nessuna chiamata pervenuta entro la scadenza, inviato DM di sollecito come da prossima_azione (verificatore: INVIA). Verificato nel thread come ultimo messaggio.",
       "programmato": "2026-07-03T19:55:00+02:00",
       "seguiti": [
         {
@@ -1153,19 +1153,19 @@
       "in_pausa": false,
       "risposta_at": "2026-07-08T13:44:00+02:00",
       "gestito": true,
-      "gestito_il": "2026-07-11 07:18",
+      "gestito_il": "2026-07-15 14:32",
       "risposta_conferma": "Perfetto Luciano, restiamo in attesa della tua chiamata allora, Davide sarà felice di sentirti. A presto! Stefania",
       "stop_seguiti": true,
       "prossima_azione": {
-        "quando": "2026-07-15",
-        "cosa": "Liguori vuole chiamare Stefania al cellulare (ha detto 8/07). Se entro 15/07 non ha chiamato: DM 'Luciano, aspettavo la tua chiamata — sei ancora disponibile per i 15 minuti con Davide?'"
+        "quando": "2026-07-18",
+        "cosa": "Se entro il 18/07 non ha chiamato ne' risposto al sollecito del 15/07, ultimo tocco leggero poi chiudere la pratica (nessun altro DM di sollecito dopo questo)."
       },
       "risposta_gestita": true,
       "tipo_risposta": "caldissima",
       "doppio_controllo": {
-        "esito": "bloccato",
-        "quando": "2026-07-14T06:22:30.290912+02:00",
-        "motivo": "verificatore: non rispondere a ringraziamento di cortesia, pa 15/07 resta"
+        "esito": "ok",
+        "quando": "2026-07-15T14:32:31.384492+02:00",
+        "motivo": "verificatore: testo coincide con prossima_azione fissata, nessun link, firma presente"
       }
     },
     {
@@ -5725,6 +5725,18 @@
     {
       "quando": "2026-07-15T12:05:14.442192+02:00",
       "testo": "controllo saltato, Chrome in uso (tab linkedin messaging/notifiche cambiate tra i 2 controlli guardia pre-volo, ore 12:04-12:05)"
+    },
+    {
+      "quando": "2026-07-15T14:20:37.201365+02:00",
+      "testo": "[AVVIO SESSIONE] outreach-linkedin-verifica-risposte"
+    },
+    {
+      "quando": "2026-07-15T14:32:31.384492+02:00",
+      "testo": "invio gestione/presidio: Notaio Luciano Liguori (sollecito chiamata, verificatore INVIA)"
+    },
+    {
+      "quando": "2026-07-15T14:32:51.057032+02:00",
+      "testo": "controllo ore 14:20: 0 nuove risposte non lette (badge Messaggistica non corrispondeva a unread reali, lista filter=unread vuota). Presidio: Liguori sollecito inviato (verificatore INVIA), pa spostata al 18/07. Menci e Pianzi (scadenze presidio) NON verificati per tempo massimo 15 min (profilo URL mancante nel registro, ricerca thread per nome richiede piu tempo del previsto) - da riprendere al prossimo giro. KPI sheet non ri-scaricato dal live per tempo (ultimo refresh locale 14/07), solo verifica di lettura risposte, nessun nuovo invio a lead non gia verificati. Nessun controllo collegamenti accettati ne Calendly per tempo. Controllo interrotto per tempo massimo."
     }
   ],
   "diario": [
