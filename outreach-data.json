@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-14T20:21:37.247112+02:00",
+  "aggiornato": "2026-07-15T07:42:00+02:00",
   "contatti": [
     {
       "id": 1,
@@ -4680,12 +4680,12 @@
       "link_call_inviato": null,
       "tipo_call": null,
       "prenotato": null,
-      "note": "Lead da DM guida — 2026-07-14 — guida inviata: L'Agente Preventivi (precedente: guida Automazioni mag 2026)",
+      "note": "Lead da DM guida — 2026-07-14 — guida inviata: L'Agente Preventivi (precedente: guida Automazioni mag 2026) | ESCLUSO 2026-07-15: piccolo consulente digital marketing/AI per PMI (AISTAR DIGITAL), 1278 follower, inviava pitch bot commerciale a Davide. FUORI TARGET (piccolo consulente marketing/vendite).",
       "messaggio": "",
       "approvato": false,
       "programmato": null,
       "ruolo": "AI per PMI (headline: Con AI TEAM AGENTS rendimi il digitale alleato delle PMI)",
-      "escluso": false,
+      "escluso": true,
       "qualifica": {
         "ruolo": "da verificare",
         "geografia": "da verificare",
@@ -4725,7 +4725,7 @@
     {
       "id": 154,
       "nome": "Isabella PARENTI",
-      "profilo": "",
+      "profilo": "https://www.linkedin.com/in/isabella-parenti-966068b8/",
       "tipo": "dm-guida",
       "angolo": "ai",
       "fonte": "guida L'Agente Preventivi",
@@ -4735,12 +4735,12 @@
       "link_call_inviato": null,
       "tipo_call": null,
       "prenotato": null,
-      "note": "Lead da DM guida — 2026-07-14 — guida inviata: guida L'Agente Preventivi",
+      "note": "Lead da DM guida — 2026-07-14 — guida inviata: guida L'Agente Preventivi | ESCLUSO 2026-07-15: agente di commercio Antinfortunistica Reggio Emilia, 295 follower, nessun post originale, nessuna attività strutturata propria. FUORI TARGET.",
       "messaggio": "",
       "approvato": false,
       "programmato": null,
       "ruolo": "da verificare",
-      "escluso": false,
+      "escluso": true,
       "qualifica": {
         "ruolo": "da verificare",
         "geografia": "da verificare",
@@ -5712,7 +5712,8 @@
     {
       "quando": "2026-07-14T20:21:37.247130+02:00",
       "testo": "controllo ore 20:21: Chrome non aperto, routine terminata senza controllo (guardia pre-volo)"
-    }
+    },
+    "[2026-07-15T07:42:00+02:00] Pipeline 07:03-07:42. STUB COMPLETATI: 2 — id=152 Mario Castiglioni ESCLUSO (piccolo consulente mktg/AI, FUORI TARGET); id=154 Isabella PARENTI ESCLUSA (agente di commercio Antinfortunistica, senza attività strutturata propria). KPI LIVE scaricato: Castiglioni/PARENTI/Romagnano ASSENTI da consulenza e lead alta intenzione. RISPOSTE analizzate: Elena Maria Foglia (calda, thread personale Davide); Notaio Liguori id=36 risposta 'Grazie Stefania' 13/07 — serve follow-up step 2 nel thread; Marco Losso (escluso); Marco Loffreda (non in registro, commento positivo, da valutare). NUOVI CANDIDATI: 0 (inbox satura di outreach recente, thread DM guide antecedenti non raggiungibili nel tempo). CODA PRONTA: 5 (id=150 Roberto Romagnano DA APPROVARE + 4 approvati non inviati: id=28,103,131,143). Backlog residuo: 0 stub. ⚠️ Note: approvati non inviati includono id=28 (Bosi, da 03/07) — verificare con routine invio se bloccati."
   ],
   "diario": [
     {
