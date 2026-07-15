@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-15T14:32:51.057032+02:00",
+  "aggiornato": "2026-07-15T19:54:47.955723+02:00",
   "contatti": [
     {
       "id": 1,
@@ -1783,7 +1783,7 @@
         {
           "n": 1,
           "dopo_giorni": 4,
-          "inviato": null,
+          "inviato": "2026-07-15T19:09:16.227286+02:00",
           "testo": "Gustavo, ti faccio un esempio concreto, di solito è rispondere alle email dei clienti o tenere dietro alla gestione degli immobili e dei contatti. È una di queste due, o è un'altra cosa?"
         },
         {
@@ -1792,7 +1792,12 @@
           "inviato": null,
           "testo": "Gustavo, capito se non hai avuto tempo. Oggi quella parte la segui tu personalmente o hai già qualcuno che se ne occupa?"
         }
-      ]
+      ],
+      "doppio_controllo": {
+        "esito": "ok",
+        "quando": "2026-07-15T19:09:16.227286+02:00",
+        "tipo": "seguito"
+      }
     },
     {
       "id": 52,
@@ -1920,10 +1925,15 @@
         {
           "n": 1,
           "dopo_giorni": 5,
-          "inviato": null,
+          "inviato": "2026-07-15T19:16:13.986548+02:00",
           "testo": "Simone, nessuna fretta e nessuna pressione. Se ti va di sentire Davide su quel nodo del posizionamento, io resto qui. Altrimenti in bocca al lupo per le evoluzioni, buon lavoro."
         }
-      ]
+      ],
+      "doppio_controllo": {
+        "esito": "ok",
+        "quando": "2026-07-15T19:16:13.986548+02:00",
+        "tipo": "seguito"
+      }
     },
     {
       "id": 55,
@@ -1951,10 +1961,15 @@
         {
           "n": 1,
           "dopo_giorni": 5,
-          "inviato": null,
+          "inviato": "2026-07-15T19:22:35.168041+02:00",
           "testo": "Sabrina, nessuna fretta. Se ti va di fare due chiacchiere con Davide su come l'intelligenza artificiale può aiutarti coi social, dimmi pure e ci organizziamo. Buon lavoro intanto."
         }
-      ]
+      ],
+      "doppio_controllo": {
+        "esito": "ok",
+        "quando": "2026-07-15T19:22:35.168041+02:00",
+        "tipo": "seguito"
+      }
     },
     {
       "id": 56,
@@ -2066,10 +2081,15 @@
         {
           "n": 1,
           "dopo_giorni": 5,
-          "inviato": null,
+          "inviato": "2026-07-15T19:28:25.845275+02:00",
           "testo": "Francesco, ti faccio un esempio concreto, di solito è rispondere alle mail dei clienti o smistare le scadenze più urgenti. È una di queste due, o è un'altra cosa?"
         }
-      ]
+      ],
+      "doppio_controllo": {
+        "esito": "ok",
+        "quando": "2026-07-15T19:28:25.845275+02:00",
+        "tipo": "seguito"
+      }
     },
     {
       "id": 59,
@@ -2097,7 +2117,7 @@
         {
           "n": 1,
           "dopo_giorni": 4,
-          "inviato": null,
+          "inviato": "2026-07-15T19:34:12.815526+02:00",
           "testo": "Gian Luca, ti faccio un esempio concreto, di solito è rispondere a chi si informa sul programma o organizzare le sessioni con chi è già dentro. È una di queste due, o è un'altra cosa?"
         },
         {
@@ -2106,7 +2126,12 @@
           "inviato": null,
           "testo": "Gian Luca, capito se non hai avuto tempo. Oggi quella parte la segui tu personalmente o hai già qualcuno del team che se ne occupa?"
         }
-      ]
+      ],
+      "doppio_controllo": {
+        "esito": "ok",
+        "quando": "2026-07-15T19:34:12.815526+02:00",
+        "tipo": "seguito"
+      }
     },
     {
       "id": 60,
@@ -3407,7 +3432,7 @@
         {
           "n": 1,
           "dopo_giorni": 4,
-          "inviato": null,
+          "inviato": "2026-07-15T19:40:45.656600+02:00",
           "testo": "Paola, ti faccio un esempio concreto, di solito è rispondere alle richieste di chi vuole informazioni sull'accademia o organizzare i percorsi con gli iscritti. È una di queste due, o è un'altra cosa?"
         },
         {
@@ -3419,7 +3444,12 @@
       ],
       "angolo": "automazione",
       "variante": "A",
-      "programmato": "2026-07-09T13:50:00+02:00"
+      "programmato": "2026-07-09T13:50:00+02:00",
+      "doppio_controllo": {
+        "esito": "ok",
+        "quando": "2026-07-15T19:40:45.656600+02:00",
+        "tipo": "seguito"
+      }
     },
     {
       "id": 106,
@@ -4092,14 +4122,19 @@
       "approvato": true,
       "escluso": false,
       "in_pausa": false,
-      "inviato": false,
+      "inviato": "2026-07-15T19:47:49.296567+02:00",
       "risposto": false,
       "gestito": false,
       "prenotato": false,
       "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare. | 2026-07-12 05:27 METODO NUOVO. profilo: freelance digital transformation, ex-Accenture 20 anni, voce SERIA su Responsible AI / AI governance / EU AI Act / concetto Epistemia (plausibilita != conoscenza), critico dell'hype AI. IN TARGET per ruolo MA disallineato col prodotto automazioni: un pitch 'automatizza vendite' gli stonerebbe. Scelto angolo DA PARI sul suo tema (Epistemia/governance), zero pitch zero guida-automazione zero link. ⚠️ Per Davide: qui l'angolo e relazione tra pari / brand, non vendita diretta. Valutare se procedere. DA APPROVARE. | 2026-07-12 06:07 VERIFICATO Gmail+Calendar: nessuna call prenotata, nessuna email diretta/risposta (solo form guida Kajabi). Nessun doppione, ok procedere. | 2026-07-14 08:01 Riscritto da chat: voce Stefania semplificata (era troppo tecnica/da pari-esperto AI governance), aggancio piu corto e collegato meglio alla domanda. | 2026-07-14T11:09 FIX due punti rimossi dal messaggio (regola Davide 14/07, mai due punti fuori dagli elenchi). | 2026-07-14 14:53 STRATEGIA SEGUITO (Davide): NON e target automazioni (Calendly AI), e target CALENDLY DC/LINKEDIN. Ha voce ed expertise vera (articoli AI governance) ma poca rete/visibilita costruita su LinkedIn rispetto al valore che scrive. Se risponde nel merito: scavare se la sua autorevolezza oggi gli porta contatti/opportunita in modo strutturato o resta isolata. Se ammette il vuoto: proporre la call a parole poi link Calendly DC (consulenza-strategica-gratuita-linkedin-dc-academy), MAI il link automazioni-ai.",
       "seguiti": [],
       "qualificato_il": "2026-07-13T07:03:36+02:00",
-      "programmato": "2026-07-14T18:50:00+02:00"
+      "programmato": "2026-07-14T18:50:00+02:00",
+      "doppio_controllo": {
+        "esito": "ok",
+        "quando": "2026-07-15T19:47:49.296567+02:00",
+        "tipo": "nuovo"
+      }
     },
     {
       "id": 132,
@@ -4619,7 +4654,7 @@
       "tipo": "thread",
       "angolo": "ai",
       "fonte": "guida L'Agente Preventivi",
-      "inviato": null,
+      "inviato": "2026-07-15T19:52:42.845676+02:00",
       "risposto": null,
       "risposta_testo": "",
       "link_call_inviato": null,
@@ -4639,7 +4674,12 @@
       },
       "geografia": "Milano, Lombardia",
       "variante": "A",
-      "qualificato_il": "2026-07-14T07:15:00+02:00"
+      "qualificato_il": "2026-07-14T07:15:00+02:00",
+      "doppio_controllo": {
+        "esito": "ok",
+        "quando": "2026-07-15T19:52:42.845676+02:00",
+        "tipo": "nuovo"
+      }
     },
     {
       "id": 151,
@@ -5737,6 +5777,42 @@
     {
       "quando": "2026-07-15T14:32:51.057032+02:00",
       "testo": "controllo ore 14:20: 0 nuove risposte non lette (badge Messaggistica non corrispondeva a unread reali, lista filter=unread vuota). Presidio: Liguori sollecito inviato (verificatore INVIA), pa spostata al 18/07. Menci e Pianzi (scadenze presidio) NON verificati per tempo massimo 15 min (profilo URL mancante nel registro, ricerca thread per nome richiede piu tempo del previsto) - da riprendere al prossimo giro. KPI sheet non ri-scaricato dal live per tempo (ultimo refresh locale 14/07), solo verifica di lettura risposte, nessun nuovo invio a lead non gia verificati. Nessun controllo collegamenti accettati ne Calendly per tempo. Controllo interrotto per tempo massimo."
+    },
+    {
+      "quando": "2026-07-15T18:44:59.823201+02:00",
+      "testo": "[AVVIO SESSIONE] outreach-invio-giornaliero"
+    },
+    {
+      "quando": "2026-07-15T19:09:16.227286+02:00",
+      "testo": "invio seguito n.1: Gustavo A. Criscuolo (id 51), verificatore INVIA"
+    },
+    {
+      "quando": "2026-07-15T19:16:13.986548+02:00",
+      "testo": "invio seguito n.1: Simone Fierro (id 54), verificatore INVIA"
+    },
+    {
+      "quando": "2026-07-15T19:22:35.168041+02:00",
+      "testo": "invio seguito n.1: Sabrina Agostini (id 55), verificatore INVIA"
+    },
+    {
+      "quando": "2026-07-15T19:28:25.845275+02:00",
+      "testo": "invio seguito n.1: Francesco Cerchiara (id 58), verificatore INVIA"
+    },
+    {
+      "quando": "2026-07-15T19:34:12.815526+02:00",
+      "testo": "invio seguito n.1: Gian Luca Caruso (id 59), verificatore INVIA"
+    },
+    {
+      "quando": "2026-07-15T19:40:45.656600+02:00",
+      "testo": "invio seguito n.1: Paola Pagani (id 105), verificatore INVIA"
+    },
+    {
+      "quando": "2026-07-15T19:47:49.296567+02:00",
+      "testo": "invio nuovo: Luciano Sabatino (id 131), verificatore INVIA"
+    },
+    {
+      "quando": "2026-07-15T19:54:47.955723+02:00",
+      "testo": "invio serale: 8 inviati (2 nuovi: Sabatino 19:47, Romagnano 19:52; 6 seguiti: Criscuolo 19:09, Fierro 19:16, Agostini 19:22, Cerchiara 19:28, Caruso 19:34, Pagani 19:40), 0 bloccati dal verificatore (tutti INVIA dopo doppio controllo indipendente), 0 auto-approvati (nessun candidato in coda approvazione), coda residua 0. Totale invii oggi 9/20 (incluso sollecito Liguori 14:32). segna-non-letto: FALLITO (endpoint voyagerMessagingDashMessengerConversations risponde 400 su POST/PATCH/action, provati 3 metodi diversi, probabile API LinkedIn cambiata rispetto allo script della skill — 2 thread rimasti letti che erano non letti a inizio sessione: Mauro Lorini e Notaio Liguori, nessuno dei due è un target di stasera, nessun rischio contenuto). Da aggiornare lo script GUARDIA SEGNA-NON-LETTO nella skill."
     }
   ],
   "diario": [
