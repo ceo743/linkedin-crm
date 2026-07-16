@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-16T09:34:20.061937+02:00",
+  "aggiornato": "2026-07-16T14:27:48.468664+02:00",
   "contatti": [
     {
       "id": 1,
@@ -2045,10 +2045,10 @@
       "escluso": false,
       "in_pausa": false,
       "inviato": "2026-07-07 08:53",
-      "risposto": false,
-      "gestito": false,
+      "risposto": true,
+      "gestito": true,
       "prenotato": false,
-      "note": "IN target propria attivita immobiliare. Primo tocco inviato 2026-07-07 08:53 | ERRORE 2026-07-07 09:01: il bot Stefania aveva GIA consegnato questa guida nel thread prima del mio messaggio. Ho rimandato il link inutilmente (duplicato). Segnalato da Davide su Carrabba. Non rimandare una terza volta.",
+      "note": "IN target propria attivita immobiliare. Primo tocco inviato 2026-07-07 08:53 | ERRORE 2026-07-07 09:01: il bot Stefania aveva GIA consegnato questa guida nel thread prima del mio messaggio. Ho rimandato il link inutilmente (duplicato). Segnalato da Davide su Carrabba. Non rimandare una terza volta. | Risposta rilevata 16/07 (era rimasta letta ma non gestita da sessione precedente, mai marcata risposto): lei rimanda, deve ancora leggere la guida. Gestita con conferma calda senza link.",
       "seguiti": [
         {
           "n": 1,
@@ -2065,8 +2065,17 @@
       ],
       "doppio_controllo": {
         "esito": "ok",
-        "quando": "2026-07-11T19:04:53.437500+02:00",
-        "tipo": "seguito"
+        "quando": "2026-07-16T14:27:48.468664+02:00",
+        "tipo": "gestione risposta calda - verificatore indipendente INVIA"
+      },
+      "risposta_at": "2026-07-15T00:08:00+02:00",
+      "risposta_testo": "Ciao Davide, ho seguito tuoi percorsi anche a pagamento. Ti conosco dal 2020, ora sono giorni che non entro su linkedin. Non sono una che guarda solo. Devo ancora leggere il venditore che non dorme. Appena letto ti saprò informare meglio in merito alla tua osservazione. A presto! Elena",
+      "gestito_il": "2026-07-16T14:27:48.468664+02:00",
+      "risposta_conferma": "Perfetto Elena Maria, nessuna fretta. Quando hai letto la guida scrivimi pure cosa ne pensi, resto qui.\n\nStefania",
+      "stop_seguiti": true,
+      "prossima_azione": {
+        "quando": "2026-07-23",
+        "cosa": "Se nessun suo messaggio nel thread dopo aver letto la guida, riprendere IO su LinkedIn con un tocco leggero a parole (mai link Calendly se non lo chiede lei). Email a Stefania solo se a quel punto serve una chiamata telefonica."
       }
     },
     {
@@ -5847,6 +5856,26 @@
     {
       "quando": "2026-07-16T09:34:20.061937+02:00",
       "testo": "controllo ore 09:20: rilevata risposta calda Francesco Cerchiara (problema email/task management ammesso), inviata proposta call a parole senza link. Rilevata anche risposta non letta di Franco Nieddu (da gestire, tempo massimo raggiunto). Altri 39 contatti attivi controllati: nessuna altra risposta."
+    },
+    {
+      "quando": "2026-07-16T09:34:46.510692+02:00",
+      "testo": "fine controllo ore 09:20 (tempo massimo 15min raggiunto): copiato registro su cartella cliente davide-caiazzo, SALTATO git push per tempo massimo (da fare al prossimo giro). pubblica-dashboard.sh lanciato in background."
+    },
+    {
+      "quando": "2026-07-16T14:21:17.553446+02:00",
+      "testo": "[AVVIO SESSIONE] outreach-linkedin-verifica-risposte"
+    },
+    {
+      "quando": "2026-07-16T14:27:48.468664+02:00",
+      "testo": "invio gestione risposta calda: Elena Maria Foglia (conferma calda, nessun link, rimanda dopo lettura guida)"
+    },
+    {
+      "quando": "2026-07-16T14:27:48.468664+02:00",
+      "testo": "controllo ore 14:20: 1 nuova risposta gestita (Elena Maria Foglia, orfana da sessione precedente), 0 collegamenti accettati, 0 prenotazioni Calendly, 46 contatti in attesa senza novita, 2 thread estranei al registro ignorati (Roberta Montella, Maresa Conte)"
+    },
+    {
+      "quando": "2026-07-16T14:28:42.138201+02:00",
+      "testo": "segna-non-letto: RE-MARK fallito 400 su thread Roberta Montella (endpoint noto in errore dal 12/07, non nostro registro, mai aperto via UI in questa sessione: nessun danno reale, thread rimasto di per se non letto)"
     }
   ],
   "diario": [
