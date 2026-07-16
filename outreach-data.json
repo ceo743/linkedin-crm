@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-16T14:27:48.468664+02:00",
+  "aggiornato": "2026-07-16T20:30:23.287255+02:00",
   "contatti": [
     {
       "id": 1,
@@ -1669,7 +1669,7 @@
       "inviato": "2026-07-06T10:42:00+02:00",
       "risposto": true,
       "prenotato": false,
-      "note": "06/07 INVIATO opener automazione. Professionista con propria attività (regola allargata Davide 06/07). | 06/07 HA RISPOSTO (1h dopo!): \"scaricata per approfondimento professionale\". Risposto scavando (te la giro al contrario, c'è una cosa che ti porta via tempo?). Aspetto che riveli il problema, poi call 30 min con Davide. | 11/07: risposta FREDDA 6/07 (scaricata per approfondimento professionale). Nostra follow-up domanda 6/07 13:44 ancora senza risposta. Poco probabile conversione. | 2026-07-11 07:30 MERGE: 3o tocco esplorativo INVIATO oggi 07:15 su LinkedIn da sessione Davide (esempio concreto per sbloccare risposta). La pa runtime del 13/07 (chiudi) e superata: nuova pa 15/07.",
+      "note": "06/07 INVIATO opener automazione. Professionista con propria attività (regola allargata Davide 06/07). | 06/07 HA RISPOSTO (1h dopo!): \"scaricata per approfondimento professionale\". Risposto scavando (te la giro al contrario, c'è una cosa che ti porta via tempo?). Aspetto che riveli il problema, poi call 30 min con Davide. | 11/07: risposta FREDDA 6/07 (scaricata per approfondimento professionale). Nostra follow-up domanda 6/07 13:44 ancora senza risposta. Poco probabile conversione. | 2026-07-11 07:30 MERGE: 3o tocco esplorativo INVIATO oggi 07:15 su LinkedIn da sessione Davide (esempio concreto per sbloccare risposta). La pa runtime del 13/07 (chiudi) e superata: nuova pa 15/07. | 2026-07-16T20:30:23.287255+02:00 PRESIDIO: prossima_azione scaduta verificata (nessuna nuova risposta nel thread), tocco leggero DA INVIARE ma NON eseguito in questo giro per tempo massimo 15min, riprendere al prossimo controllo.",
       "seguiti": [],
       "risposta_at": "2026-07-06T11:27:00+02:00",
       "risposta_testo": "Buon giorno, scaricata per approfondimento professionale",
@@ -1744,7 +1744,7 @@
       "inviato": "2026-07-06T10:51:00+02:00",
       "risposto": true,
       "prenotato": false,
-      "note": "06/07 INVIATO opener automazione (regola allargata: propria attivita = in). | 2026-07-13: risposto con PREVENTIVI in DM, guida inviata da Stefania",
+      "note": "06/07 INVIATO opener automazione (regola allargata: propria attivita = in). | 2026-07-13: risposto con PREVENTIVI in DM, guida inviata da Stefania | 2026-07-16T20:30:23.287255+02:00 verificato: nessuna risposta ulteriore nel thread, chiuso silenzioso, nessuna azione necessaria.",
       "seguiti": [
         {
           "n": 1,
@@ -1767,10 +1767,7 @@
       "risposta_at": "2026-07-13T07:15:00+02:00",
       "gestito": true,
       "gestito_il": "2026-07-13T07:15:00+02:00",
-      "prossima_azione": {
-        "quando": "2026-07-16",
-        "cosa": "Richiesta guida gestita: ha scritto PREVENTIVI, l'automazione ha riconosciuto il trigger e inviato la guida L'Agente Preventivi firmata Stefania (orario stimato in mattinata, non verificato al minuto su LinkedIn). Non e' un vero seguito di vendita, solo invio materiale. Al 16/07 (data del seguito n.2 gia in coda) verificare se Paolo ha scritto altro nel thread: se si, valutare risposta manuale (mai link Calendly se non lo chiede lui); se resta silente, nessuna ulteriore azione necessaria."
-      }
+      "prossima_azione": null
     },
     {
       "id": 51,
@@ -3004,7 +3001,7 @@
       "risposto": true,
       "gestito": true,
       "prenotato": false,
-      "note": "Verificato 07/07/2026: IN target. CEO at Stalea srl and OMP srl Mechanical Components. Founder di due aziende. Da scrivere messaggio esplorativo prima dell invio. | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard. | Inviato 2026-07-07 14:52 | 09/07 14:06: rispose ammettendo problema (gestione preventivi/tempo), rimandata guida (non arrivata), proposta call con link Calendly AI.",
+      "note": "Verificato 07/07/2026: IN target. CEO at Stalea srl and OMP srl Mechanical Components. Founder di due aziende. Da scrivere messaggio esplorativo prima dell invio. | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard. | Inviato 2026-07-07 14:52 | 09/07 14:06: rispose ammettendo problema (gestione preventivi/tempo), rimandata guida (non arrivata), proposta call con link Calendly AI. | 2026-07-16T20:30:23.287255+02:00 PRESIDIO: prossima_azione scaduta verificata (nessuna nuova risposta nel thread), tocco leggero DA INVIARE ma NON eseguito in questo giro per tempo massimo 15min, riprendere al prossimo controllo.",
       "seguiti": [],
       "risposta_testo": "Non trovo nulla era arrivata via mail o qui su LinkedIn? Comunque la risposta è che porta via tempo.",
       "risposta_at": "2026-07-08T18:34:00+02:00",
@@ -4783,7 +4780,7 @@
         "quando": "2026-07-16",
         "cosa": "Link Calendly gia inviato. Se non prenota entro 2 giorni, ripresa leggera a parole su LinkedIn."
       },
-      "note": "2026-07-14T18:38:52 LEAD CALDO INBOUND: DM spontaneo oggi 10:10 (Premium Open Profile) 'vorremmo sviluppare visibilita e contatti, puoi darci indicazioni? GIUSTO?'. Rimasto NON gestito dalle routine fino alle 16:2x, segnalato da Davide (GRAVE). Gestito da chat: verificatore INVIA, risposta Stefania con call proposta a parole (no link finche non dice si). Tema = LinkedIn -> Calendly DC quando accetta."
+      "note": "2026-07-14T18:38:52 LEAD CALDO INBOUND: DM spontaneo oggi 10:10 (Premium Open Profile) 'vorremmo sviluppare visibilita e contatti, puoi darci indicazioni? GIUSTO?'. Rimasto NON gestito dalle routine fino alle 16:2x, segnalato da Davide (GRAVE). Gestito da chat: verificatore INVIA, risposta Stefania con call proposta a parole (no link finche non dice si). Tema = LinkedIn -> Calendly DC quando accetta. | 2026-07-16T20:30:23.287255+02:00 PRESIDIO: prossima_azione scaduta verificata (nessuna nuova risposta nel thread), tocco leggero DA INVIARE ma NON eseguito in questo giro per tempo massimo 15min, riprendere al prossimo controllo."
     },
     {
       "id": 154,
@@ -5876,6 +5873,22 @@
     {
       "quando": "2026-07-16T14:28:42.138201+02:00",
       "testo": "segna-non-letto: RE-MARK fallito 400 su thread Roberta Montella (endpoint noto in errore dal 12/07, non nostro registro, mai aperto via UI in questa sessione: nessun danno reale, thread rimasto di per se non letto)"
+    },
+    {
+      "quando": "2026-07-16T14:34:20.630697+02:00",
+      "testo": "ANOMALIA: push GitHub outreach-new-claude (cartella cliente davide-caiazzo) non completato per tempo massimo 15min raggiunto - chiave SSH ceo743 non risolta al volo. Salvataggio locale su Drive (outreach-data.json + memoria-azioni.md) COMPLETATO. Da ritentare al prossimo giro."
+    },
+    {
+      "quando": "2026-07-16T14:34:20.630697+02:00",
+      "testo": "controllo interrotto per tempo massimo (15 min) dopo aver completato gestione risposta + pubblicazione dashboard"
+    },
+    {
+      "quando": "2026-07-16T20:24:34.712516+02:00",
+      "testo": "[AVVIO SESSIONE] outreach-linkedin-verifica-risposte"
+    },
+    {
+      "quando": "2026-07-16T20:30:23.287255+02:00",
+      "testo": "controllo ore 20:24: 0 nuove risposte (solo 2 thread non letti, entrambi estranei al registro: Luciano Liguori, Roberta Montella), 0 nuovi collegamenti verificati, 0 prenotazioni Calendly nuove dal registro (Egon Mariconda e Rodica Lazar in Gmail ma non presenti nel registro). Marciante chiuso silenzioso. 3 scadenze presidio (Menci, Pianzi Mirco, D'Imperio) rilevate ma tocco leggero rimandato al prossimo giro per tempo massimo."
     }
   ],
   "diario": [
