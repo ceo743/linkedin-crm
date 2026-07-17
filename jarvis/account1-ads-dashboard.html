@@ -3,12 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Consulenza 1:1 · Ads · DC Academy</title>
+<title>Consulenza 1:1 Ads Dashboard — DC Academy</title>
 <style>
   :root{
     --bg:#0e1420; --card:#161f30; --card-2:#1c2740; --ink:#f4f6fb; --muted:#8b96ad;
-    --teal:#2ea8a8; --teal-soft:#12313380; --orange:#ff6b35; --green:#3ddc84; --red:#ff5c5c; --amber:#f5b942;
-    --radius:18px; --shadow:0 1px 3px rgba(0,0,0,.3),0 12px 30px rgba(0,0,0,.35); --border:#26314a;
+    --teal:#2ea8a8; --teal-soft:#12313380; --orange:#ff6b35; --orange-soft:#ff6b3520;
+    --green:#3ddc84; --red:#ff5c5c; --amber:#f5b942;
+    --radius:18px; --shadow:0 1px 3px rgba(0,0,0,.3),0 12px 30px rgba(0,0,0,.35);
+    --border:#26314a;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;background:
@@ -26,71 +28,46 @@
   @keyframes pulse{50%{opacity:.3}}
   .fade{opacity:0;transform:translateY(14px);animation:rise .55s cubic-bezier(.2,.7,.3,1) forwards}
   @keyframes rise{to{opacity:1;transform:none}}
-  .section-title{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:34px 0 14px;display:flex;align-items:center;gap:10px}
+  .section-title{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:36px 0 14px;display:flex;align-items:center;gap:10px}
   .section-title .line{flex:1;height:1px;background:var(--border)}
   .card{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px}
 
-  /* C-level band */
-  .clevel{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-  .role{padding:18px 20px}
-  .role .head{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:800}
-  .role .head .ico{font-size:20px}
-  .role .head .who{color:var(--ink)} .role .head .what{color:var(--muted);font-weight:600;font-size:11.5px}
-  .role .rows{margin-top:14px;display:flex;flex-direction:column;gap:10px}
-  .role .r{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
-  .role .r .k{font-size:12.5px;color:var(--muted)}
-  .role .r .v{font-size:19px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--ink)}
-  .role .r .v.accent{color:var(--orange)} .role .r .v.good{color:var(--green)} .role .r .v.warn{color:var(--amber)}
-  .role .verdict{margin-top:14px;font-size:12px;line-height:1.45;border-radius:10px;padding:10px 12px}
-  .verdict.ok{color:var(--green);background:#3ddc8412;border:1px solid #3ddc8433}
-  .verdict.warn{color:var(--amber);background:#f5b94212;border:1px solid #f5b94233}
-
-  /* funnel */
-  .funnel{display:flex;flex-direction:column;gap:8px;margin-top:4px}
-  .fstep{position:relative;border-radius:12px;padding:14px 18px;background:linear-gradient(90deg,var(--teal),var(--orange));color:#08131a;font-weight:800;display:flex;justify-content:space-between;align-items:center;overflow:hidden}
-  .fstep .lbl{font-size:13px} .fstep .val{font-size:18px;font-variant-numeric:tabular-nums}
-  .fdrop{font-size:11.5px;color:var(--muted);text-align:center;padding:1px 0}
-  .fdrop b{color:var(--teal)}
+  /* hero */
+  .hero{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;margin-top:22px}
+  @media(max-width:900px){.hero{grid-template-columns:1fr}}
+  .hero .big{font-size:15px;color:var(--muted);line-height:1.5}
+  .hero .big b{color:var(--ink)}
+  .countdown{display:flex;gap:14px;align-items:center;justify-content:center}
+  .countdown .num{font-size:40px;font-weight:800;color:var(--orange);line-height:1}
+  .countdown .lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:4px}
 
   /* KPI */
-  .grid-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px}
+  .grid-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin-top:0}
   .kpi .label{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
-  .kpi .value{font-size:24px;font-weight:800;margin-top:8px;font-variant-numeric:tabular-nums;color:var(--ink)}
+  .kpi .value{font-size:27px;font-weight:800;margin-top:8px;font-variant-numeric:tabular-nums;color:var(--ink)}
   .kpi .value.accent{color:var(--orange)}
 
-  /* campaigns */
-  .grid-camp{display:grid;grid-template-columns:1fr;gap:14px}
-  .campcard{padding:18px 20px}
-  .campcard .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
-  .campcard .nome{font-size:16px;font-weight:800;color:var(--ink);line-height:1.25}
-  .campcard .obj{font-size:11px;color:var(--muted);margin-top:3px}
-  .campcard .stato{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;white-space:nowrap}
-  .campcard .stato.on{color:var(--green);background:#3ddc8415;border:1px solid #3ddc8440}
-  .campcard .stato.off{color:var(--amber);background:#f5b94215;border:1px solid #f5b94240}
-  .campcard .stato::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
-  .campcard .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(84px,1fr));gap:10px 14px;margin-top:16px}
-  .campcard .m{font-size:11px;color:var(--muted)}
-  .campcard .m b{display:block;font-size:16px;color:var(--ink);font-weight:800;font-variant-numeric:tabular-nums;margin-top:2px}
-  .campcard .m.res b{color:var(--teal)} .campcard .m.cpr b{color:var(--orange)}
-  .campcard a.openlink{display:inline-block;margin-top:14px;font-size:11.5px;font-weight:700;color:var(--teal);text-decoration:none;border:1px solid var(--border);border-radius:10px;padding:7px 14px}
-  .campcard a.openlink:hover{background:var(--teal-soft);border-color:var(--teal)}
-
-  /* simulator */
-  .sim-ipo{font-size:10.5px;font-weight:800;letter-spacing:.1em;color:var(--amber);background:#f5b94215;border:1px solid #f5b94240;border-radius:20px;padding:4px 11px;display:inline-block;margin-bottom:6px}
-  .sim{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-  @media(max-width:760px){.sim{grid-template-columns:1fr}}
-  .sim .controls{display:flex;flex-direction:column;gap:18px}
-  .sim label{font-size:12.5px;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}
-  .sim label b{color:var(--ink)}
-  .sim input[type=range]{width:100%;margin-top:8px;accent-color:var(--orange)}
-  .sim .out{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  .sim .o{border:1px solid var(--border);border-radius:12px;padding:12px 14px;background:#0f1729}
-  .sim .o .k{font-size:11px;color:var(--muted)} .sim .o .v{font-size:20px;font-weight:800;margin-top:4px;font-variant-numeric:tabular-nums}
-  .sim .o .v.roas{color:var(--teal)} .sim .o .v.prof{color:var(--green)} .sim .o .v.prof.neg{color:var(--red)}
+  /* campaign cards (stessa struttura delle card creatività) */
+  .grid-ads{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .adcard{padding:0;overflow:hidden;position:relative;display:flex;flex-direction:column}
+  .adcard .rank{position:absolute;top:10px;right:10px;background:#0c1420cc;color:var(--amber);font-size:11px;font-weight:800;padding:4px 9px;border-radius:20px;z-index:2;border:1px solid var(--border)}
+  .adcard .head{padding:16px 18px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .adcard .angolo{font-size:15px;font-weight:800;color:var(--ink);line-height:1.25}
+  .adcard .stato{font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap}
+  .adcard .stato.on{color:var(--green);background:#3ddc8415;border:1px solid #3ddc8440}
+  .adcard .stato.off{color:var(--amber);background:#f5b94215;border:1px solid #f5b94240}
+  .adcard .body{padding:14px 18px 18px}
+  .adcard .metrics{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px 12px}
+  .adcard .m{font-size:11px;color:var(--muted)}
+  .adcard .m b{display:block;font-size:15px;color:var(--ink);font-weight:800;font-variant-numeric:tabular-nums}
+  .adcard .m.cpl b{color:var(--orange)} .adcard .m.res b{color:var(--teal)}
+  .adcard a.openlink{display:block;text-align:center;margin-top:14px;font-size:11.5px;font-weight:700;color:var(--teal);text-decoration:none;border:1px solid var(--border);border-radius:10px;padding:8px;transition:all .15s}
+  .adcard a.openlink:hover{background:var(--teal-soft);border-color:var(--teal)}
 
   footer{margin-top:44px;font-size:11px;color:var(--muted);line-height:1.7;border-top:1px solid var(--border);padding-top:16px}
   footer a{color:var(--teal);text-decoration:none}
-  .badge-static{color:var(--amber)} .badge-static::before{background:var(--amber) !important}
+  .badge-static{color:var(--amber)}
+  .badge-static::before{background:var(--amber) !important}
   #jarvis-voce-btn{font-family:inherit;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
     background:var(--teal-soft);color:var(--teal);border:1px solid var(--border);border-radius:10px;
     padding:8px 16px;cursor:pointer}
@@ -104,224 +81,115 @@
 <div class="fade">
   <a class="back" href="index.html">← Tutte le dashboard</a>
   <div class="kicker">DC ACADEMY · AD PERFORMANCE</div>
-  <h1><span class="ia">Consulenza 1:1</span> <span class="rest">Ads</span></h1>
+  <h1><span class="ia">Consulenza 1:1</span> <span class="rest">Ads Dashboard</span></h1>
   <div class="sub">
-    <span id="h-periodo">…</span>
-    <span id="h-obiettivo" style="color:var(--amber);font-weight:700"></span>
+    <span id="h-obiettivo">analisi gratuita + call su Calendly</span>
     <span class="live" id="h-live">caricamento…</span>
     <span id="h-aggiornato"></span>
-    <button id="jarvis-voce-btn">🎙 Leggi il funnel</button>
+    <button id="jarvis-voce-btn">🎙 Leggi il rapporto</button>
   </div>
 </div>
 
-<div class="section-title fade" style="animation-delay:.1s">Cosa guardare · CFO · CSO · CMO <div class="line"></div></div>
-<div class="clevel fade" id="clevel-row" style="animation-delay:.15s"></div>
-
-<div class="section-title fade" style="animation-delay:.25s">Funnel · dall'impressione alla call <div class="line"></div></div>
-<div class="card fade" style="animation-delay:.3s"><div class="funnel" id="funnel"></div></div>
-
-<div class="section-title fade" style="animation-delay:.38s">Totali · <span id="periodo-inline"></span> <div class="line"></div></div>
-<div class="grid-kpi fade" id="kpi-row" style="animation-delay:.42s"></div>
-
-<div class="section-title fade" style="animation-delay:.5s">Campagne · ordinate per spesa <div class="line"></div></div>
-<div class="grid-camp fade" id="camp-row" style="animation-delay:.54s"></div>
-
-<div class="section-title fade" style="animation-delay:.6s">Ritorno stimato · muovi le leve <div class="line"></div></div>
-<div class="card fade" style="animation-delay:.64s">
-  <span class="sim-ipo">IPOTESI · non sono dati Meta, li imposti tu</span>
-  <div class="sim">
-    <div class="controls">
-      <div>
-        <label>Valore medio di un cliente <b id="l-val">€1.500</b></label>
-        <input type="range" id="s-val" min="500" max="3500" step="100" value="1500">
-      </div>
-      <div>
-        <label>Call che diventano cliente <b id="l-clo">25%</b></label>
-        <input type="range" id="s-clo" min="5" max="60" step="1" value="25">
-      </div>
-      <div style="font-size:11.5px;color:var(--muted);line-height:1.5">
-        Su <b id="sim-call">13</b> call prenotate in 30 giorni, con una spesa di <b id="sim-spesa">€3.144</b>.
-      </div>
-    </div>
-    <div class="out">
-      <div class="o"><div class="k">Clienti stimati</div><div class="v" id="o-cli">—</div></div>
-      <div class="o"><div class="k">Costo per cliente</div><div class="v" id="o-cac">—</div></div>
-      <div class="o"><div class="k">Ricavo stimato</div><div class="v" id="o-ric">—</div></div>
-      <div class="o"><div class="k">ROAS</div><div class="v roas" id="o-roas">—</div></div>
-      <div class="o" style="grid-column:1/-1"><div class="k">Profitto stimato (ricavo − spesa ads)</div><div class="v prof" id="o-prof">—</div></div>
+<div class="hero">
+  <div class="card fade" style="animation-delay:.1s">
+    <div class="section-title" style="margin-top:0">Andamento <div class="line"></div></div>
+    <div class="big" id="hero-testo">…</div>
+  </div>
+  <div class="card fade" style="animation-delay:.2s;display:flex;flex-direction:column;justify-content:center">
+    <div class="countdown">
+      <div><div class="num" id="cd-call">–</div><div class="lbl">call prenotate</div></div>
+      <div style="width:1px;height:50px;background:var(--border)"></div>
+      <div><div class="num" id="cd-costo">–</div><div class="lbl">costo per call</div></div>
     </div>
   </div>
 </div>
 
-<footer class="fade" style="animation-delay:.72s">
-  Funnel consulenza 1:1 (analisi gratuita + call Calendly) · account Meta 465327538443110 · via JARVIS · finestra ultimi 30 giorni.<br>
+<div class="section-title fade" style="animation-delay:.3s">Totali · <span id="periodo-inline"></span> <div class="line"></div></div>
+<div class="grid-kpi fade" id="kpi-row" style="animation-delay:.35s"></div>
+
+<div class="section-title fade" style="animation-delay:.4s">Le campagne · ordinate per spesa <div class="line"></div></div>
+<div class="grid-ads fade" id="ads-row" style="animation-delay:.45s"></div>
+
+<footer class="fade" style="animation-delay:.6s">
+  Dati da Meta Ads (account 465327538443110 · funnel consulenza 1:1) via JARVIS · finestra ultimi 30 giorni.<br>
   <a id="link-ads-manager" href="#" target="_blank">Apri in Meta Ads Manager →</a> · <a href="account1-ads-dati.json" target="_blank">dati grezzi (JSON)</a>
 </footer>
 
 <script>
 const num = (n, dec=0) => n === null || n === undefined ? '—' : Number(n).toLocaleString('it-IT', {minimumFractionDigits:dec, maximumFractionDigits:dec});
 const eur = (n, dec=2) => n === null || n === undefined ? '—' : '€' + Number(n).toLocaleString('it-IT', {minimumFractionDigits:dec, maximumFractionDigits:dec});
-const eur0 = (n) => eur(n,0);
-const pct = (n, dec=2) => n === null || n === undefined ? '—' : Number(n).toLocaleString('it-IT', {minimumFractionDigits:dec, maximumFractionDigits:dec}) + '%';
-let D = null;
+const pct = (n) => n === null || n === undefined ? '—' : Number(n).toLocaleString('it-IT', {minimumFractionDigits:2, maximumFractionDigits:2}) + '%';
 
-async function carica(){
-  let d, live=true;
-  try{ const r=await fetch('account1-ads-dati.json',{cache:'no-store'}); if(!r.ok) throw 0; d=await r.json(); }
-  catch(e){ live=false; d=EMBEDDED; }
+async function carica() {
+  let d, live = true;
+  try {
+    const r = await fetch('account1-ads-dati.json', {cache:'no-store'});
+    if (!r.ok) throw new Error('no fetch');
+    d = await r.json();
+  } catch (e) { live = false; d = EMBEDDED; }
   render(d, live);
 }
 
-function render(d, live){
-  D = d;
-  // 17/07: il file dati è passato a schema per-periodo (d.periodi.oggi/ieri/7g/30g), scoperto rotto
-  // (render leggeva ancora d.totali/d.campagne diretti, inesistenti nel nuovo schema — pagina bianca
-  // sui dati veri) mentre testavo la voce JARVIS su questa dashboard. Fallback al vecchio schema piatto
-  // se periodi non c'è (es. EMBEDDED offline), così non si rompe nulla di già funzionante.
+function render(d, live) {
   const P = d.periodi ? d.periodi[d.periodo_default || Object.keys(d.periodi)[0]] : d;
-  window._iaPeriodo = P;
-  const t = P.totali, g = P.giorni || 30;
-  document.getElementById('h-periodo').textContent = d.account.nome;
-  if (d.account.obiettivo) document.getElementById('h-obiettivo').textContent = 'Obiettivo: ' + d.account.obiettivo;
-  document.getElementById('periodo-inline').textContent = P.descrizione || P.label || '';
-  document.getElementById('h-live').textContent = live ? 'dati live' : 'ultimo snapshot salvato';
-  if(!live) document.getElementById('h-live').classList.add('badge-static');
-  document.getElementById('h-aggiornato').textContent = 'aggiornato ' + new Date(d.aggiornato).toLocaleString('it-IT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
-  document.getElementById('link-ads-manager').href = d.account.link_ads_manager;
-
-  // derivati
+  window._caPeriodo = P;
+  const t = P.totali;
   const costoCall = t.call ? t.spesa / t.call : null;
-  const spesaGiorno = t.spesa / g;
-  const clickCall = t.click ? (t.call / t.click) * 100 : null;
-  const callGiorno = t.call / g;
-  const sprecata = P.campagne.filter(c => c.stato !== 'ACTIVE' && (c.risultati||0) === 0).reduce((s,c)=>s+(c.spesa||0),0);
-  const attive = P.campagne.filter(c=>c.stato==='ACTIVE');
-  const migliore = [...P.campagne].filter(c=>c.risultati>0).sort((a,b)=>a.costo_risultato-b.costo_risultato)[0];
-  const peggiore = [...P.campagne].filter(c=> (c.spesa||0)>0 && (c.risultati||0)===0).sort((a,b)=>b.spesa-a.spesa)[0];
+  document.getElementById('h-obiettivo').textContent = d.account.obiettivo || 'analisi gratuita + call su Calendly';
+  document.getElementById('h-live').textContent = live ? 'dati live' : 'ultimo snapshot salvato';
+  if (!live) document.getElementById('h-live').classList.add('badge-static');
+  document.getElementById('h-aggiornato').textContent = 'aggiornato ' + new Date(d.aggiornato).toLocaleString('it-IT', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'});
+  document.getElementById('link-ads-manager').href = d.account.link_ads_manager;
+  document.getElementById('periodo-inline').textContent = P.descrizione || 'ultimi 30 giorni';
 
-  // C-level
-  document.getElementById('clevel-row').innerHTML = `
-    <div class="card role">
-      <div class="head"><span class="ico">👔</span><span class="who">CFO</span> <span class="what">quanto spendo, quanto costa</span></div>
-      <div class="rows">
-        <div class="r"><span class="k">Spesa 30 giorni</span><span class="v accent">${eur0(t.spesa)}</span></div>
-        <div class="r"><span class="k">Media al giorno</span><span class="v">${eur(spesaGiorno,0)}</span></div>
-        <div class="r"><span class="k">Costo per call</span><span class="v">${eur(costoCall,0)}</span></div>
-        <div class="r"><span class="k">Migliore campagna</span><span class="v good">${eur(t.costo_call_migliore,0)}</span></div>
-      </div>
-      ${sprecata>0 ? `<div class="verdict warn">${eur0(sprecata)} spesi in una campagna con 0 call: budget da spostare sulla campagna che converte.</div>` : `<div class="verdict ok">Nessuna spesa buttata: tutte le campagne producono call.</div>`}
-    </div>
-    <div class="card role">
-      <div class="head"><span class="ico">📈</span><span class="who">CSO</span> <span class="what">quante call, a che ritmo</span></div>
-      <div class="rows">
-        <div class="r"><span class="k">Call prenotate (30gg)</span><span class="v good">${num(t.call)}</span></div>
-        <div class="r"><span class="k">Call al giorno</span><span class="v">${num(callGiorno,1)}</span></div>
-        <div class="r"><span class="k">Click → call</span><span class="v">${pct(clickCall,2)}</span></div>
-        <div class="r"><span class="k">Costo per call</span><span class="v accent">${eur(costoCall,0)}</span></div>
-      </div>
-      <div class="verdict ok">${num(t.call)} call in 30 giorni. Le call si chiudono in vendita da Stefania: qui misuri quante ne entrano e a che costo.</div>
-    </div>
-    <div class="card role">
-      <div class="head"><span class="ico">🎯</span><span class="who">CMO</span> <span class="what">creatività e pubblico</span></div>
-      <div class="rows">
-        <div class="r"><span class="k">CTR</span><span class="v ${t.ctr>=1?'good':''}">${pct(t.ctr)}</span></div>
-        <div class="r"><span class="k">CPM</span><span class="v">${eur(t.cpm,2)}</span></div>
-        <div class="r"><span class="k">Frequenza</span><span class="v ${t.frequency>3.2?'warn':''}">${num(t.frequency,2)}</span></div>
-        <div class="r"><span class="k">Reach</span><span class="v">${num(t.reach)}</span></div>
-      </div>
-      <div class="verdict ${t.ctr>=1?'ok':'warn'}">CTR ${pct(t.ctr)} (benchmark lead gen ~1%). Frequenza ${num(t.frequency,2)}: ${t.frequency>3.2?'pubblico un po\' saturo, valuta di allargarlo':'pubblico ancora fresco'}.${migliore?` Top: ${migliore.nome}.`:''}</div>
-    </div>`;
+  document.getElementById('hero-testo').innerHTML =
+    `Campagne che portano <b>call su Calendly</b> (obiettivo: consulenza 1:1). Nel periodo <b>${P.descrizione||'ultimi 30 giorni'}</b> spesi <b>${eur(t.spesa)}</b>, ` +
+    `entrate <b>${num(t.call)} call</b> a un costo di <b>${eur(costoCall,0)}</b> ciascuna. CTR medio <b>${pct(t.ctr)}</b>.`;
 
-  // Funnel
-  const steps = [
-    {lbl:'Impressioni', val:t.impressions},
-    {lbl:'Reach (account raggiunti)', val:t.reach},
-    {lbl:'Click', val:t.click},
-    {lbl:'Call prenotate', val:t.call}
+  document.getElementById('cd-call').textContent = num(t.call);
+  document.getElementById('cd-costo').textContent = eur(costoCall, 0);
+
+  const kpis = [
+    {label:'Spesa totale', value: eur(t.spesa)},
+    {label:'Impression', value: num(t.impressions)},
+    {label:'Click', value: num(t.click)},
+    {label:'CTR medio', value: pct(t.ctr)},
+    {label:'CPC medio', value: eur(t.cpc)},
+    {label:'Call prenotate', value: num(t.call), accent:true},
+    {label:'Costo/call', value: eur(costoCall,0), accent:true},
   ];
-  let fh='';
-  steps.forEach((s,i)=>{
-    fh += `<div class="fstep" style="opacity:${1-i*0.14}"><span class="lbl">${s.lbl}</span><span class="val">${num(s.val)}</span></div>`;
-    if(i<steps.length-1){
-      const nextRef = steps[i+1].val, base = s.val;
-      const r = base ? (nextRef/base)*100 : 0;
-      fh += `<div class="fdrop">↓ <b>${pct(r, r<1?2:1)}</b> passa allo step dopo</div>`;
-    }
-  });
-  document.getElementById('funnel').innerHTML = fh;
+  document.getElementById('kpi-row').innerHTML = kpis.map(k =>
+    `<div class="card kpi"><div class="label">${k.label}</div><div class="value ${k.accent?'accent':''}">${k.value}</div></div>`
+  ).join('');
 
-  // KPI
-  const kpis=[
-    {label:'Spesa', value:eur0(t.spesa), accent:true},
-    {label:'Impression', value:num(t.impressions)},
-    {label:'Reach', value:num(t.reach)},
-    {label:'Click', value:num(t.click)},
-    {label:'CTR', value:pct(t.ctr)},
-    {label:'CPC', value:eur(t.cpc)},
-    {label:'CPM', value:eur(t.cpm)},
-    {label:'Frequenza', value:num(t.frequency,2)},
-    {label:'Call', value:num(t.call), accent:true},
-    {label:'Costo/call', value:eur(costoCall,0), accent:true},
-  ];
-  document.getElementById('kpi-row').innerHTML = kpis.map(k=>`<div class="card kpi"><div class="label">${k.label}</div><div class="value ${k.accent?'accent':''}">${k.value}</div></div>`).join('');
-
-  // Campagne
-  const ord=[...P.campagne].sort((a,b)=>(b.spesa||0)-(a.spesa||0));
-  document.getElementById('camp-row').innerHTML = ord.map(c=>{
-    const on=c.stato==='ACTIVE';
-    return `<div class="card campcard">
-      <div class="top"><div><div class="nome">${c.nome}</div><div class="obj">Obiettivo: ${c.obiettivo} · risultato: ${c.tipo_risultato}</div></div>
-      <div class="stato ${on?'on':'off'}">${on?'attiva':'in pausa'}</div></div>
-      <div class="metrics">
-        <div class="m">Spesa<b>${eur(c.spesa)}</b></div>
-        <div class="m">Impression<b>${num(c.impressions)}</b></div>
-        <div class="m">Reach<b>${num(c.reach)}</b></div>
-        <div class="m">Freq.<b>${num(c.frequency,2)}</b></div>
-        <div class="m">Click<b>${num(c.click)}</b></div>
-        <div class="m">CTR<b>${pct(c.ctr)}</b></div>
-        <div class="m">CPC<b>${eur(c.cpc)}</b></div>
-        <div class="m">CPM<b>${eur(c.cpm)}</b></div>
-        <div class="m res">${c.tipo_risultato}<b>${num(c.risultati)}</b></div>
-        <div class="m cpr">Costo/call<b>${eur(c.costo_risultato)}</b></div>
+  const ordinate = [...(P.campagne||[])].sort((a,b) => (b.spesa||0) - (a.spesa||0));
+  document.getElementById('ads-row').innerHTML = ordinate.map((c, i) => {
+    const on = c.stato === 'ACTIVE';
+    return `
+    <div class="card adcard">
+      ${i===0 && c.risultati ? '<div class="rank">🏆 più call</div>' : ''}
+      <div class="head">
+        <div class="angolo">${c.nome}</div>
+        <div class="stato ${on?'on':'off'}">${on?'attiva':'in pausa'}</div>
       </div>
-      <a class="openlink" href="https://business.facebook.com/adsmanager/manage/campaigns?act=${d.account.id}&selected_campaign_ids=${c.id}" target="_blank">Apri campagna in Ads Manager →</a>
+      <div class="body">
+        <div class="metrics">
+          <div class="m">Spesa<b>${eur(c.spesa)}</b></div>
+          <div class="m">Impression<b>${num(c.impressions)}</b></div>
+          <div class="m">Click<b>${num(c.click)}</b></div>
+          <div class="m">CTR<b>${pct(c.ctr)}</b></div>
+          <div class="m res">Call<b>${num(c.risultati)}</b></div>
+          <div class="m cpl">Costo/call<b>${eur(c.costo_risultato,0)}</b></div>
+        </div>
+        <a class="openlink" href="https://business.facebook.com/adsmanager/manage/campaigns?act=${d.account.id}&selected_campaign_ids=${c.id}" target="_blank">Apri in Ads Manager →</a>
+      </div>
     </div>`;
   }).join('');
 
-  // Simulator
-  const ipo = d.ipotesi_default || {valore_cliente:1500, tasso_chiusura:25};
-  document.getElementById('s-val').value = ipo.valore_cliente;
-  document.getElementById('s-clo').value = ipo.tasso_chiusura;
-  document.getElementById('sim-call').textContent = num(t.call);
-  document.getElementById('sim-spesa').textContent = eur0(t.spesa);
-  document.getElementById('s-val').oninput = simula;
-  document.getElementById('s-clo').oninput = simula;
-  simula();
+  window._caData = d; window._caOrdinate = ordinate; window._caCostoCall = costoCall;
 }
 
-function simula(){
-  const t = D.totali;
-  const val = +document.getElementById('s-val').value;
-  const clo = +document.getElementById('s-clo').value;
-  document.getElementById('l-val').textContent = eur0(val);
-  document.getElementById('l-clo').textContent = clo + '%';
-  const clienti = t.call * clo/100;
-  const cac = clienti>0 ? t.spesa/clienti : null;
-  const ricavo = clienti*val;
-  const roas = t.spesa>0 ? ricavo/t.spesa : 0;
-  const prof = ricavo - t.spesa;
-  document.getElementById('o-cli').textContent = num(clienti,1);
-  document.getElementById('o-cac').textContent = eur(cac,0);
-  document.getElementById('o-ric').textContent = eur0(ricavo);
-  document.getElementById('o-roas').textContent = num(roas,2) + '×';
-  const pe = document.getElementById('o-prof');
-  pe.textContent = (prof>=0?'+':'') + eur0(prof);
-  pe.classList.toggle('neg', prof<0);
-}
-
-// ------- VOCE JARVIS (17/07, "metti jarvis su ogni dashboard") -------
-// legge dai DATI (D), non dal DOM; ogni frase porta il riferimento esatto alla card da illuminare.
-// Il simulatore NON si legge: è un'IPOTESI che Davide imposta lui, non un dato reale da riportare.
+// ------- VOCE JARVIS -------
 let jvSpeaking=false, jvPlayer=null, jvElementoAcceso=null;
 function jvEvidenzia(el){
   if(jvElementoAcceso) jvElementoAcceso.classList.remove('jv-acceso');
@@ -329,29 +197,19 @@ function jvEvidenzia(el){
   if(el) el.classList.add('jv-acceso');
 }
 function jvFrasi(){
-  if(!D || !window._iaPeriodo) return [{testo:"Non ho ancora i dati, Signore.", el:null}];
-  const P=window._iaPeriodo, t=P.totali, g=P.giorni||30;
-  const costoCall = t.call ? t.spesa/t.call : null;
-  const clickCall = t.click ? (t.call/t.click)*100 : null;
-  const cardsRuolo=[...document.getElementById('clevel-row').children];
-  // il verdetto (testo di sintesi tipo "budget da spostare"/"pubblico saturo") è già scritto nel
-  // DOM da render(): lo rileggo da lì invece di ricalcolare la stessa logica una seconda volta qui
-  // (stessa fonte, mai due punti che possono disallinearsi)
-  function verdettoDi(card){ const v=card&&card.querySelector('.verdict'); return v?v.textContent.trim():''; }
+  const d=window._caData; if(!d) return [{testo:"Non ho ancora i dati, Signore.", el:null}];
+  const P=window._caPeriodo; const t=P.totali;
+  const heroCard=document.querySelector('.hero .card');
+  const adCards=[...document.getElementById('ads-row').children];
+  const ordinate=window._caOrdinate||[];
   const out=[];
-  out.push({testo:D.account.nome+", "+(P.descrizione||P.label||'')+", "+(document.getElementById('h-live').textContent)+".", el:null});
-  out.push({testo:"CFO. Spesa "+eur0(t.spesa)+" in "+g+" giorni, media "+eur(t.spesa/g,0)+" al giorno. Costo per call "+eur(costoCall,0)+". "+verdettoDi(cardsRuolo[0]), el:cardsRuolo[0]||null});
-  out.push({testo:"CSO. "+num(t.call)+" call prenotate, "+num(t.call/g,1)+" al giorno. Dal click alla call, "+pct(clickCall,2)+". "+verdettoDi(cardsRuolo[1]), el:cardsRuolo[1]||null});
-  out.push({testo:"CMO. CTR "+pct(t.ctr)+", CPM "+eur(t.cpm,2)+", frequenza "+num(t.frequency,2)+", copertura "+num(t.reach)+" account. "+verdettoDi(cardsRuolo[2]), el:cardsRuolo[2]||null});
-  const funnelEl=document.getElementById('funnel');
-  out.push({testo:"Funnel completo: "+num(t.impressions)+" impressioni, "+num(t.reach)+" account raggiunti, "+num(t.click)+" click, "+num(t.call)+" call prenotate.", el:funnelEl});
-  const ord=[...P.campagne].sort(function(a,b){return (b.spesa||0)-(a.spesa||0)});
-  const campCards=[...document.getElementById('camp-row').children];
-  if(ord.length){
-    out.push({testo:"Le "+ord.length+" campagne, ordinate per spesa.", el:null});
-    ord.forEach(function(c,i){
-      const testo=c.nome+", "+(c.stato==='ACTIVE'?'attiva':'in pausa')+". Spesa "+eur(c.spesa)+", "+num(c.impressions)+" impression, "+num(c.click)+" click, CTR "+pct(c.ctr)+", "+c.tipo_risultato+" "+num(c.risultati)+", costo "+eur(c.costo_risultato)+".";
-      out.push({testo:testo, el:campCards[i]||null});
+  out.push({testo:"Consulenza uno a uno, "+document.getElementById('h-live').textContent+".", el:null});
+  out.push({testo:"Nel periodo "+(P.descrizione||"ultimi trenta giorni")+": spesa "+eur(t.spesa)+", "+num(t.call)+" call prenotate, costo per call "+eur(window._caCostoCall,0)+".", el:heroCard});
+  out.push({testo:"Totali: spesa "+eur(t.spesa)+", "+num(t.impressions)+" impression, "+num(t.click)+" click, CTR "+pct(t.ctr)+", CPC "+eur(t.cpc)+", "+num(t.call)+" call, costo per call "+eur(window._caCostoCall,0)+".", el:document.getElementById('kpi-row')});
+  if(ordinate.length){
+    out.push({testo:"Le "+ordinate.length+" campagne, ordinate per spesa.", el:null});
+    ordinate.forEach(function(c,i){
+      out.push({testo:(i+1)+". "+c.nome+". Spesa "+eur(c.spesa)+", "+num(c.risultati)+" call, costo per call "+eur(c.costo_risultato,0)+", CTR "+pct(c.ctr)+".", el:adCards[i]||null});
     });
   }
   out.push({testo:"Fine del rapporto, Signore.", el:null});
@@ -366,7 +224,7 @@ function jvStop(){
   jvSpeaking=false; jvEvidenzia(null);
   if(jvPlayer){ jvPlayer.pause(); jvPlayer=null; }
   speechSynthesis.cancel();
-  document.getElementById('jarvis-voce-btn').textContent='🎙 Leggi il funnel';
+  document.getElementById('jarvis-voce-btn').textContent='🎙 Leggi il rapporto';
 }
 function jvAvvia(){
   if(jvSpeaking){ jvStop(); return; }
@@ -396,7 +254,7 @@ function jvAvvia(){
 }
 document.getElementById('jarvis-voce-btn').addEventListener('click', jvAvvia);
 
-const EMBEDDED = {"aggiornato":"2026-07-17T08:20:00+02:00","account":{"nome":"Consulenza 1:1","obiettivo":"Analisi gratuita + call su Calendly","id":"465327538443110","valuta":"EUR","periodo":"ultimi 30 giorni","giorni_periodo":30,"link_ads_manager":"https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110"},"totali":{"spesa":3144.35,"impressions":155837,"reach":61499,"frequency":2.53,"click":3664,"ctr":2.35,"cpc":0.86,"cpm":20.18,"call":13,"costo_call_migliore":210.55},"ipotesi_default":{"valore_cliente":1500,"tasso_chiusura":25},"campagne":[]};
+const EMBEDDED = {"aggiornato":"2026-07-17T08:35:00+02:00","account":{"nome":"Consulenza 1:1","obiettivo":"analisi gratuita + call su Calendly","id":"465327538443110","link_ads_manager":"https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110"},"periodo_default":"30g","periodi":{"30g":{"label":"Ultimi 30 giorni","descrizione":"ultimi 30 giorni","giorni":30,"totali":{"spesa":3144.35,"impressions":155837,"reach":61499,"frequency":2.53,"click":3664,"ctr":2.35,"cpc":0.86,"cpm":20.18,"call":13,"costo_call_migliore":210.55},"campagne":[]}}};
 
 carica();
 </script>
