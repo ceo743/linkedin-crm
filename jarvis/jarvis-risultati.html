@@ -1241,47 +1241,54 @@ function costruisciDatiTrend(){
   // 18/07, "ha letto 799 mila" (era 79.946): i numeri arrivavano al modello come cifre grezze senza
   // separatori ("79946"), ambigue da interpretare in fretta per un LLM che riassume — usa parlaNumero
   // (già esistente, stessa funzione delle card in alto) che scrive "79 mila 946", zero ambiguità.
-  // Anche "dato non confrontabile" veniva da qui: prima scrivevo esplicitamente la frase "nessun
-  // periodo precedente disponibile" nei DATI stessi, e il modello la ripeteva quasi parola per parola
-  // invece di seguire la regola "se manca, saltalo senza dirlo" — ora quella riga semplicemente non
-  // menziona il confronto, niente testo da ripetere a vuoto.
-  function riga(label,val,prec,fmt){
+  // 18/07, "non deve ignorarlo, deve approfondire": prima quando mancava il periodo precedente la riga
+  // taceva e basta — Davide non vuole il silenzio, vuole che qualcuno vada a VERIFICARE il dato vero
+  // (live, non stimato). Ogni dato senza confronto diventa un incarico reale al reparto (stesso
+  // meccanismo automatico degli "incarichi", vedi mostraIncarichi) invece di sparire senza traccia.
+  const lacune=[];
+  function riga(label,val,prec,fmt,reparto){
     fmt=fmt||parlaNumero;
+    if(prec==null){
+      lacune.push({reparto:reparto||'cmo', compito:'Il dato "'+label+'" del periodo precedente (7-14 giorni fa) non è nell\'archivio automatico — valore attuale: '+fmt(val)+' negli ultimi 7 giorni. Verificarlo LIVE con i tuoi strumenti (non stimarlo) per completare il confronto col periodo corrente.'});
+    }
     return label+': '+fmt(val)+' negli ultimi 7 giorni'+(prec!=null?(', contro '+fmt(prec)+' nei 7 giorni precedenti.'):'.');
   }
   const righe=[];
-  if(A.liImpr!=null) righe.push(riga('Impressioni LinkedIn', A.liImpr, P?P.liImpr:null));
-  righe.push(riga('Spesa Meta Ads', A.spesa, P?P.spesa:null, euro));
-  righe.push(riga('Click Ads', A.click, P?P.click:null));
-  righe.push(riga('Lead (funnel + guide)', A.lead, P?P.lead:null));
-  righe.push(riga('Call prenotate', A.call, P?P.call:null));
-  righe.push(riga('Call in target dopo pre qualifica', A.intarget, P?P.intarget:null));
-  return righe.join('\n');
+  if(A.liImpr!=null) righe.push(riga('Impressioni LinkedIn', A.liImpr, P?P.liImpr:null, null, 'cmo'));
+  righe.push(riga('Spesa Meta Ads', A.spesa, P?P.spesa:null, euro, 'cmo'));
+  righe.push(riga('Click Ads', A.click, P?P.click:null, null, 'cmo'));
+  righe.push(riga('Lead (funnel + guide)', A.lead, P?P.lead:null, null, 'cso'));
+  righe.push(riga('Call prenotate', A.call, P?P.call:null, null, 'cso'));
+  righe.push(riga('Call in target dopo pre qualifica', A.intarget, P?P.intarget:null, null, 'cso'));
+  return {testo: righe.join('\n'), lacune: lacune};
 }
 async function costruisciBriefing(periodo){
   const oggi=new Date(), dataOggiIT=oggi.getDate()+' '+MON[oggi.getMonth()];
   if(!GIORNI||!GIORNI.length){
     return [{who:'jarvis', testo:"Non ho ancora l'archivio giornaliero pronto, Signore. Riprovi tra poco."}];
   }
-  const datiTesto=costruisciDatiTrend();
-  if(!datiTesto){
+  const trend=costruisciDatiTrend();
+  if(!trend){
     return [{who:'jarvis', testo:"Non ho ancora abbastanza giorni in archivio per un confronto, Signore. Riprovi tra qualche giorno."}];
   }
   // 18/07, "come cazzo fa a dire che non ha i dati!!!!": il reparto riceveva SOLO la frase del compito
   // ("verificare il calo del 36%..."), non i numeri veri che la dashboard ha già sotto mano — diceva
   // "non ho dati" perché letteralmente non gliene passavamo nessuno, anche se erano proprio qui.
   // Ora li teniamo pronti (stesso blocco già usato per /report) per passarli anche a /proposta.
-  ultimoDatiTrend=datiTesto;
+  ultimoDatiTrend=trend.testo;
   const battute=[{who:'jarvis', testo:"Buongiorno, Signore. Ecco il report aggiornato oggi "+dataOggiIT+"."}];
-  ultimiIncarichi=[];
+  // 18/07, "non deve ignorarlo, deve approfondire": le lacune di confronto (dato mancante nel periodo
+  // precedente) diventano SEMPRE un incarico reale, non solo quando il modello decide di segnalarlo —
+  // deterministico, non lasciato alla discrezione dell'AI che genera il report.
+  ultimiIncarichi=trend.lacune.slice();
   try{
-    const r=await fetch(REPORT_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({dati:datiTesto})});
+    const r=await fetch(REPORT_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({dati:trend.testo})});
     const j=await r.json();
     if(!j.ok||!j.testo) throw new Error('report vuoto');
     battute.push({who:'jarvis', testo:j.testo, sezione:'hero'});
     // 18/07: "certo che deve essere vero" — ogni incarico citato a voce va anche mostrato in dashboard,
     // così il Signore può far generare la proposta vera al reparto e approvarla o rifiutarla
-    ultimiIncarichi=Array.isArray(j.incarichi)?j.incarichi:[];
+    if(Array.isArray(j.incarichi)) ultimiIncarichi=ultimiIncarichi.concat(j.incarichi);
   }catch(e){
     battute.push({who:'jarvis', testo:"Non sono riuscito a preparare il report questa volta, Signore. Riprovi tra poco."});
   }
