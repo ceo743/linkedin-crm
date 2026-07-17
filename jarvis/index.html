@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JARVIS · Dashboard DC Academy</title>
+<style>
+  :root{
+    --bg:#0e1420; --card:#161f30; --card-2:#1c2740; --ink:#f4f6fb; --muted:#8b96ad;
+    --teal:#2ea8a8; --orange:#ff6b35; --green:#3ddc84; --amber:#f5b942;
+    --radius:18px; --shadow:0 1px 3px rgba(0,0,0,.3),0 12px 30px rgba(0,0,0,.35); --border:#26314a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;background:
+    radial-gradient(ellipse at 20% -10%, #16324a55, transparent 60%),
+    radial-gradient(ellipse at 90% 0%, #6b2f1f44, transparent 55%), var(--bg);
+    color:var(--ink);padding:44px 5vw 70px;min-height:100vh}
+  .kicker{font-size:11px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;font-weight:700}
+  h1{font-size:clamp(28px,3.6vw,42px);font-weight:800;margin:6px 0 4px;letter-spacing:-.01em}
+  h1 .a{color:var(--orange)} h1 .b{color:var(--teal)}
+  .sub{color:var(--muted);font-size:14px;margin-top:4px}
+  .fade{opacity:0;transform:translateY(14px);animation:rise .55s cubic-bezier(.2,.7,.3,1) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .section-title{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:38px 0 16px;display:flex;align-items:center;gap:10px}
+  .section-title .line{flex:1;height:1px;background:var(--border)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  a.card{display:block;text-decoration:none;background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 24px;transition:transform .16s,border-color .16s}
+  a.card:hover{transform:translateY(-3px);border-color:var(--teal)}
+  a.card .ico{font-size:26px}
+  a.card .t{font-size:18px;font-weight:800;color:var(--ink);margin-top:12px}
+  a.card .d{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
+  a.card .go{font-size:12px;font-weight:700;color:var(--teal);margin-top:14px;display:inline-block}
+  a.card.soft{opacity:.85}
+  .tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.06em;padding:3px 9px;border-radius:20px;margin-top:2px}
+  .tag.live{color:var(--green);background:#3ddc8415;border:1px solid #3ddc8440}
+  .tag.int{color:var(--amber);background:#f5b94215;border:1px solid #f5b94240}
+  footer{margin-top:48px;font-size:11px;color:var(--muted);border-top:1px solid var(--border);padding-top:16px}
+</style>
+</head>
+<body>
+
+<div class="fade">
+  <div class="kicker">DC ACADEMY</div>
+  <h1><span class="a">JARVIS</span> <span class="b">· Dashboard</span></h1>
+  <div class="sub">Tutti i cruscotti in un posto solo. Aggiornati in automatico.</div>
+</div>
+
+<div class="section-title fade" style="animation-delay:.1s">Meta Ads <div class="line"></div></div>
+<div class="grid fade" style="animation-delay:.15s">
+  <a class="card" href="account1-ads-dashboard.html">
+    <div class="ico">📊</div>
+    <div class="t">Account 1 — Ads</div>
+    <span class="tag live">LIVE</span>
+    <div class="d">Tutte le campagne di DC Academy Account 1: spesa, click, CTR, costo per risultato. Finestra ultimi 30 giorni.</div>
+    <span class="go">Apri →</span>
+  </a>
+  <a class="card" href="iainsieme-ads-dashboard.html">
+    <div class="ico">🧒</div>
+    <div class="t">IAinsieme — Test 3 fasce</div>
+    <span class="tag live">LIVE</span>
+    <div class="d">Test 5 creatività per il corso AI ragazzi 8-16. Spesa, lead, costo per lead giorno per giorno. 17-23 luglio.</div>
+    <span class="go">Apri →</span>
+  </a>
+</div>
+
+<div class="section-title fade" style="animation-delay:.25s">Altre dashboard <div class="line"></div></div>
+<div class="grid fade" style="animation-delay:.3s">
+  <a class="card soft" href="../">
+    <div class="ico">📇</div>
+    <div class="t">Outreach CRM LinkedIn</div>
+    <span class="tag int">INTERNA</span>
+    <div class="d">Stato dei contatti LinkedIn, conversazioni e risposte del sistema outreach.</div>
+    <span class="go">Apri →</span>
+  </a>
+</div>
+
+<footer class="fade" style="animation-delay:.45s">
+  JARVIS · DC Academy · dati da Meta Ads. Cruscotti interni: chiunque abbia il link può vederli.
+</footer>
+</body>
+</html>

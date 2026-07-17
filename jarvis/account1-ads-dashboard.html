@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Account 1 Ads Dashboard — DC Academy</title>
+<style>
+  :root{
+    --bg:#0e1420; --card:#161f30; --card-2:#1c2740; --ink:#f4f6fb; --muted:#8b96ad;
+    --teal:#2ea8a8; --teal-soft:#12313380; --orange:#ff6b35; --orange-soft:#ff6b3520;
+    --green:#3ddc84; --red:#ff5c5c; --amber:#f5b942;
+    --radius:18px; --shadow:0 1px 3px rgba(0,0,0,.3),0 12px 30px rgba(0,0,0,.35);
+    --border:#26314a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;background:
+    radial-gradient(ellipse at 20% -10%, #16324a55, transparent 60%),
+    radial-gradient(ellipse at 90% 0%, #6b2f1f44, transparent 55%), var(--bg);
+    color:var(--ink);padding:36px 4vw 70px;min-height:100vh}
+  a.back{display:inline-block;color:var(--muted);font-size:12px;text-decoration:none;margin-bottom:14px}
+  a.back:hover{color:var(--teal)}
+  .kicker{font-size:11px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;font-weight:700}
+  h1{font-size:clamp(26px,3.2vw,38px);font-weight:800;margin:6px 0 4px;letter-spacing:-.01em}
+  h1 .ia{color:var(--orange)} h1 .rest{color:var(--teal)}
+  .sub{color:var(--muted);font-size:13.5px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:6px}
+  .live{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--green)}
+  .live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+  @keyframes pulse{50%{opacity:.3}}
+  .fade{opacity:0;transform:translateY(14px);animation:rise .55s cubic-bezier(.2,.7,.3,1) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .section-title{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:36px 0 14px;display:flex;align-items:center;gap:10px}
+  .section-title .line{flex:1;height:1px;background:var(--border)}
+  .card{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px}
+
+  .grid-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin-top:0}
+  .kpi .label{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .kpi .value{font-size:27px;font-weight:800;margin-top:8px;font-variant-numeric:tabular-nums;color:var(--ink)}
+  .kpi .value.accent{color:var(--orange)}
+  .kpi .note{font-size:11.5px;color:var(--muted);margin-top:4px}
+
+  .grid-camp{display:grid;grid-template-columns:1fr;gap:14px}
+  .campcard{padding:18px 20px;position:relative}
+  .campcard .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+  .campcard .nome{font-size:16px;font-weight:800;color:var(--ink);line-height:1.25}
+  .campcard .obj{font-size:11px;color:var(--muted);margin-top:3px}
+  .campcard .stato{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;white-space:nowrap}
+  .campcard .stato.on{color:var(--green);background:#3ddc8415;border:1px solid #3ddc8440}
+  .campcard .stato.off{color:var(--amber);background:#f5b94215;border:1px solid #f5b94240}
+  .campcard .stato::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+  .campcard .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:10px 14px;margin-top:16px}
+  .campcard .m{font-size:11px;color:var(--muted)}
+  .campcard .m b{display:block;font-size:17px;color:var(--ink);font-weight:800;font-variant-numeric:tabular-nums;margin-top:2px}
+  .campcard .m.res b{color:var(--teal)}
+  .campcard .m.cpr b{color:var(--orange)}
+  .campcard a.openlink{display:inline-block;margin-top:14px;font-size:11.5px;font-weight:700;color:var(--teal);text-decoration:none;border:1px solid var(--border);border-radius:10px;padding:7px 14px;transition:all .15s}
+  .campcard a.openlink:hover{background:var(--teal-soft);border-color:var(--teal)}
+
+  footer{margin-top:44px;font-size:11px;color:var(--muted);line-height:1.7;border-top:1px solid var(--border);padding-top:16px}
+  footer a{color:var(--teal);text-decoration:none}
+  .badge-static{color:var(--amber)}
+  .badge-static::before{background:var(--amber) !important}
+</style>
+</head>
+<body>
+
+<div class="fade">
+  <a class="back" href="index.html">← Tutte le dashboard</a>
+  <div class="kicker">DC ACADEMY · AD PERFORMANCE</div>
+  <h1><span class="ia">Account 1</span> <span class="rest">Ads Dashboard</span></h1>
+  <div class="sub">
+    <span id="h-periodo">…</span>
+    <span class="live" id="h-live">caricamento…</span>
+    <span id="h-aggiornato"></span>
+  </div>
+</div>
+
+<div class="section-title fade" style="animation-delay:.2s">Totali account · <span id="periodo-inline"></span> <div class="line"></div></div>
+<div class="grid-kpi fade" id="kpi-row" style="animation-delay:.25s"></div>
+
+<div class="section-title fade" style="animation-delay:.35s">Campagne · ordinate per spesa <div class="line"></div></div>
+<div class="grid-camp fade" id="camp-row" style="animation-delay:.4s"></div>
+
+<footer class="fade" style="animation-delay:.6s">
+  Dati da Meta Ads (account 465327538443110 · DC Academy Account 1) via JARVIS · finestra ultimi 30 giorni.<br>
+  <a id="link-ads-manager" href="#" target="_blank">Apri in Meta Ads Manager →</a> · <a href="account1-ads-dati.json" target="_blank">dati grezzi (JSON)</a>
+</footer>
+
+<script>
+const num = (n, dec=0) => n === null || n === undefined ? '—' : Number(n).toLocaleString('it-IT', {minimumFractionDigits:dec, maximumFractionDigits:dec});
+const eur = (n, dec=2) => n === null || n === undefined ? '—' : '€' + Number(n).toLocaleString('it-IT', {minimumFractionDigits:dec, maximumFractionDigits:dec});
+const pct = (n) => n === null || n === undefined ? '—' : Number(n).toLocaleString('it-IT', {minimumFractionDigits:2, maximumFractionDigits:2}) + '%';
+
+async function carica() {
+  let d, live = true;
+  try {
+    const r = await fetch('account1-ads-dati.json', {cache:'no-store'});
+    if (!r.ok) throw new Error('no fetch');
+    d = await r.json();
+  } catch (e) { live = false; d = EMBEDDED; }
+  render(d, live);
+}
+
+function render(d, live) {
+  document.getElementById('h-periodo').textContent = d.account.nome;
+  document.getElementById('periodo-inline').textContent = d.account.periodo;
+  document.getElementById('h-live').textContent = live ? 'dati live' : 'ultimo snapshot salvato';
+  if (!live) document.getElementById('h-live').classList.add('badge-static');
+  document.getElementById('h-aggiornato').textContent = 'aggiornato ' + new Date(d.aggiornato).toLocaleString('it-IT', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'});
+  document.getElementById('link-ads-manager').href = d.account.link_ads_manager;
+
+  const kpis = [
+    {label:'Spesa totale', value: eur(d.totali.spesa), accent:true},
+    {label:'Impression', value: num(d.totali.impressions)},
+    {label:'Click', value: num(d.totali.click)},
+    {label:'CTR medio', value: pct(d.totali.ctr)},
+    {label:'CPC medio', value: eur(d.totali.cpc)},
+    {label:'Campagne attive', value: d.campagne.filter(c=>c.stato==='ACTIVE').length + ' / ' + d.campagne.length},
+  ];
+  document.getElementById('kpi-row').innerHTML = kpis.map(k =>
+    `<div class="card kpi"><div class="label">${k.label}</div><div class="value ${k.accent?'accent':''}">${k.value}</div></div>`
+  ).join('');
+
+  const ordinate = [...d.campagne].sort((a,b) => (b.spesa||0) - (a.spesa||0));
+  document.getElementById('camp-row').innerHTML = ordinate.map(c => {
+    const on = c.stato === 'ACTIVE';
+    return `
+    <div class="card campcard">
+      <div class="top">
+        <div>
+          <div class="nome">${c.nome}</div>
+          <div class="obj">Obiettivo: ${c.obiettivo} · risultato tracciato: ${c.tipo_risultato}</div>
+        </div>
+        <div class="stato ${on?'on':'off'}">${on?'attiva':'in pausa'}</div>
+      </div>
+      <div class="metrics">
+        <div class="m">Spesa<b>${eur(c.spesa)}</b></div>
+        <div class="m">Impression<b>${num(c.impressions)}</b></div>
+        <div class="m">Click<b>${num(c.click)}</b></div>
+        <div class="m">CTR<b>${pct(c.ctr)}</b></div>
+        <div class="m">CPC<b>${eur(c.cpc)}</b></div>
+        <div class="m res">${c.tipo_risultato}<b>${num(c.risultati)}</b></div>
+        <div class="m cpr">Costo/risultato<b>${eur(c.costo_risultato)}</b></div>
+      </div>
+      <a class="openlink" href="https://business.facebook.com/adsmanager/manage/campaigns?act=${d.account.id}&selected_campaign_ids=${c.id}" target="_blank">Apri campagna in Ads Manager →</a>
+    </div>`;
+  }).join('');
+}
+
+const EMBEDDED = {"aggiornato":"2026-07-17T07:08:23+02:00","account":{"nome":"DC Academy — Account 1","id":"465327538443110","valuta":"EUR","periodo":"ultimi 30 giorni","link_ads_manager":"https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110"},"totali":{"spesa":3144.07,"impressions":155833,"click":3664,"ctr":2.35,"cpc":0.86},"campagne":[]};
+
+carica();
+</script>
+</body>
+</html>

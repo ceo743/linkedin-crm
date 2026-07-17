@@ -1,0 +1,61 @@
+{
+  "aggiornato": "2026-07-17T07:08:23+02:00",
+  "account": {
+    "nome": "DC Academy — Account 1",
+    "id": "465327538443110",
+    "valuta": "EUR",
+    "periodo": "ultimi 30 giorni (17 giu — 16 lug 2026)",
+    "link_ads_manager": "https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110"
+  },
+  "totali": {
+    "spesa": 3144.07,
+    "impressions": 155833,
+    "click": 3664,
+    "ctr": 2.35,
+    "cpc": 0.86
+  },
+  "campagne": [
+    {
+      "id": "120248200215460348",
+      "nome": "25.03 | Lead Gen Consulenza LinkedIn 1:1",
+      "stato": "ACTIVE",
+      "obiettivo": "Contatti",
+      "spesa": 2736.81,
+      "impressions": 145318,
+      "click": 3441,
+      "ctr": 2.37,
+      "cpc": 0.80,
+      "risultati": 13,
+      "tipo_risultato": "call prenotate",
+      "costo_risultato": 210.52
+    },
+    {
+      "id": "120252595942170348",
+      "nome": "2026-06-14 Lead Gen | Lookalike Buyers + Broad",
+      "stato": "PAUSED",
+      "obiettivo": "Contatti",
+      "spesa": 407.26,
+      "impressions": 10514,
+      "click": 223,
+      "ctr": 2.12,
+      "cpc": 1.83,
+      "risultati": 0,
+      "tipo_risultato": "call prenotate",
+      "costo_risultato": null
+    },
+    {
+      "id": "120254252946660348",
+      "nome": "IAinsieme — Test 3 fasce",
+      "stato": "ACTIVE",
+      "obiettivo": "Vendite",
+      "spesa": 0,
+      "impressions": 1,
+      "click": 0,
+      "ctr": null,
+      "cpc": null,
+      "risultati": 0,
+      "tipo_risultato": "acquisti sito",
+      "costo_risultato": null
+    }
+  ]
+}
