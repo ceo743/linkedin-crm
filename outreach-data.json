@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-17T09:53:18.531650+02:00",
+  "aggiornato": "2026-07-17T16:00:13.757014+02:00",
   "contatti": [
     {
       "id": 1,
@@ -4834,6 +4834,37 @@
         "budget": "sconosciuto",
         "fonte": "dm-guida"
       }
+    },
+    {
+      "id": 155,
+      "nome": "Franco Nieddu",
+      "ruolo": "Titolare affitti brevi / Guest House (2 strutture, 7 camere tot, Sardegna)",
+      "profilo": "",
+      "fonte": "inbound_dm_diretto",
+      "angolo": "ai",
+      "qualifica": {
+        "ruolo": "si",
+        "geografia": "Italia",
+        "budget": "dubbio",
+        "fonte": "DM inbound spontaneo - ha risposto chiedendo tipo colloquio"
+      },
+      "inviato": true,
+      "inviato_il": "2026-07-17T15:57:00",
+      "approvato": true,
+      "risposto": true,
+      "risposta_at": "2026-07-17T13:54:00",
+      "risposta_testo": "Ciao Stefania, che tipo di colloquio? Senza impegno? Io sarei interessato, mi piace la tecnologia e capire come usarla, pero adesso non riuscirei ad implementarla. Siamo proprio nel mezzo della stagione...",
+      "link_call_inviato": true,
+      "gestito": true,
+      "gestito_il": "2026-07-17T15:57:00",
+      "escluso": false,
+      "stop_seguiti": false,
+      "thread_url": "https://www.linkedin.com/messaging/thread/2-ZTk1MDMwYjUtNmVhMC00ZDU3LWI4NDctMTMzYmNhNzQ2Yjk0XzEwMA==/",
+      "prossima_azione": {
+        "quando": "2026-07-24",
+        "cosa": "Se Franco non ha risposto al Calendly: tocco leggero su possibile interesse settembre. Se ha risposto: gestione risposta calda."
+      },
+      "note": "2026-07-17T15:57:00 CASO C INBOUND: risposta spontanea al DM di Stefania chiedendo tipo colloquio. 2 strutture affitti brevi, 7 camere tot, stagione luglio-agosto piena. Proposta prenotazione Calendly AI per settembre quando ha piu respiro. Verificatore INVIA. Messaggio Stefania inviato 15:57."
     }
   ],
   "servizio": [
