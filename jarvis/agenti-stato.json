@@ -1,0 +1,139 @@
+{
+  "aggiornato": "17 luglio, ore 9:25",
+  "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
+  "agenti": [
+    {
+      "id": "newsletter-martedi",
+      "nome": "Newsletter Martedì",
+      "sottotitolo": "LinkedIn e IA — Guida 006 \"Follow-up IA Contatti\"",
+      "colore": "cyan",
+      "stato": "attenzione",
+      "ultima_run": "15 luglio, ore 8:20",
+      "prossima_run": "22 luglio, ore 7:38",
+      "verifiche": [
+        {
+          "ok": true,
+          "testo": "Articolo Doc nativo e guida PDF (12 pagine, CTA doppia) creati"
+        },
+        {
+          "ok": true,
+          "testo": "Landing live, verificata ora: HTTP 200 — clienti.davidecaiazzo.it/guida-follow-up-ia-contatti-linkedin.html"
+        },
+        {
+          "ok": true,
+          "testo": "PDF guida live, verificato ora: HTTP 200"
+        },
+        {
+          "ok": true,
+          "testo": "Form Kajabi duplicato e automazione email aggiornata (link alla cartella Drive corretto)"
+        },
+        {
+          "ok": true,
+          "testo": "Card aggiunta in cima alla hub newsletterguide.davidecaiazzo.it"
+        },
+        {
+          "ok": false,
+          "testo": "Submission test end-to-end NON confermata: Cloudflare ha risposto con una sfida reCAPTCHA a ogni tentativo automatico (successo anche sul form #005 gia funzionante, quindi sembra un blocco sul traffico automatico, non un funnel rotto) — non ho potuto verificare la ricezione email reale"
+        },
+        {
+          "ok": true,
+          "testo": "Video ricevuto da Davide 15/07 ore 8:24, sottotitolato e caricato in pipeline completata"
+        },
+        {
+          "ok": null,
+          "testo": "Pubblicata su LinkedIn martedì mattina — verifica manuale, nessun controllo automatico"
+        }
+      ],
+      "azioni": [
+        {
+          "testo": "Apri cartella Newsletter-Claude-Martedì",
+          "url": "https://drive.google.com/drive/folders/1a8XCuzdUWR7Z_hOsq7Yl8zX61-2TAs_T"
+        },
+        {
+          "testo": "Apri articolo Doc #006",
+          "url": "https://docs.google.com/document/d/1FPLltvektGTRm-sJp1OJwJ51RDS3MzGMBFEKdRI-Ha8/edit"
+        },
+        {
+          "testo": "Apri landing guida #006",
+          "url": "https://clienti.davidecaiazzo.it/guida-follow-up-ia-contatti-linkedin.html"
+        }
+      ],
+      "nota": "Guida di questa settimana: Follow-up con l'IA per i contatti LinkedIn (#006). Oggi la routine si e interrotta piu volte creando cartelle duplicate (NNN Newsletter Claude interno): consolidate e pulite nel pomeriggio, tutte le guide 001-006 tornate a struttura pulita Guida NNN. Eliminata anche una bozza articolo LinkedIn lasciata a meta su Chrome di Davide. Aggiunta regola anti-duplicato tra newsletter martedi e rubrica Azienda Automatica del venerdi."
+    },
+    {
+      "id": "newsletter-venerdi",
+      "nome": "Newsletter Venerdì",
+      "sottotitolo": "LinkedIn e IA — verifica prenotazioni e CTA",
+      "colore": "amber",
+      "stato": "attenzione",
+      "ultima_run": "17 luglio, ore 9:25",
+      "prossima_run": "24 luglio, ore 9:25",
+      "verifiche": [
+        {
+          "ok": true,
+          "testo": "Prenotazioni contate dal grezzo (tab Lead, foglio KPI): 1 su guida-linkedin-ai-search (14/07), 0 sulle 3 guide precedenti — trend in linea/leggermente meglio"
+        },
+        {
+          "ok": true,
+          "testo": "Bottone CTA nel PDF (guida_pdf/cta_finale): confermato 0 conversioni su tutto lo storico, coerente con diagnosi 14/07 — nessuna modifica al bottone proposta"
+        },
+        {
+          "ok": true,
+          "testo": "Agente CMO consultato: conferma nessuna modifica CTA, propone estendere il redirect post-optin (unica leva che converte) a tutte le guide attive"
+        },
+        {
+          "ok": true,
+          "testo": "Sintesi inviata a Davide in chat per approvazione"
+        }
+      ],
+      "azioni": [],
+      "nota": "In attesa decisione Davide su: A) sequenza nurturing (proposta 14/07, non ancora approvata) B) estendere redirect post-optin a tutte le guide (proposta CMO 17/07, nuova)."
+    },
+    {
+      "id": "taplio-post-virali",
+      "nome": "Taplio — post virali",
+      "sottotitolo": "Traduzione e schedulazione giornaliera",
+      "colore": "pink",
+      "stato": "attenzione",
+      "ultima_run": "16 luglio, ore 05:45",
+      "prossima_run": "17 luglio, ore 05:01",
+      "verifiche": [
+        {
+          "ok": true,
+          "testo": "16/07 — Dr. Brigette Hyacinth \"Nessuno lascia un lavoro dove è rispettato, ben pagato e in crescita\": schedulato ULTIMO in coda (9 novembre 08:04, 17 post totali, banner Taplio confermato), testo 1187/3000 completo e immagine tradotta (nano-banana, 1 tentativo) verificati dopo riapertura, recap inviato e confermato in Inviate. Incidente in sessione, risolto: dopo la prima schedulazione riuscita un mio click di verifica (coordinate di riga scivolate per rendering lazy della lista schedulata) ha riaperto per errore il composer e un \"Cancel\" l'ha riportato in bozza — accortomi subito confrontando il banner posts-count, ritrovato intatto nei Drafts, riaperto e rischedulato correttamente, verificato due volte. Ripulito anche un duplicato del log taplio-translated-posts-log.md su Drive creato per errore durante l'upload (nessun tool di update disponibile, ricreato file pulito e cestinate le due versioni vecchie/errate)"
+        },
+        {
+          "ok": true,
+          "testo": "15/07 (TERZO recupero, agente risolutore — stessa causa) — Leadership First \"La tua arma più potente è la tua mente\": schedulato 26 ottobre 08:04, testo 1525/3000 e immagine tradotta verificati dopo riapertura (firma originale nell'immagine lasciata intatta), recap inviato e confermato in Inviate. Durante il lavoro un errore mio (ho cancellato per sbaglio il post Eric Partaker \"7 verità\" del recupero parallelo, scambiandolo per un mio errore) è stato scoperto e corretto entro la stessa sessione: post ripristinato e rischedulato nello stesso slot (26/10 08:04), verificato di nuovo integro. Tre agenti diversi hanno recuperato la stessa run saltata di oggi: risultato 3 post diversi in coda (19/10, 26/10 x2), nessun duplicato di contenuto ma più del necessario per un solo giorno — segnalato a Davide, decide lui se accorpare"
+        },
+        {
+          "ok": true,
+          "testo": "15/07 (SECONDO recupero manuale, stesso giorno) — Eric Partaker \"7 verità che i nuovi CEO imparano troppo tardi\": schedulato ULTIMO in coda (26 ottobre 08:04, 15 post totali), testo 2312/3000 completo e immagine tradotta verificati dopo riapertura, recap inviato e confermato in Inviate. Run parallela indipendente rispetto al recupero delle 7:28 (post diverso, nessun duplicato)"
+        },
+        {
+          "ok": true,
+          "testo": "15/07 (primo recupero manuale) — Eric Partaker \"5 priorità dei CEO\": schedulato 19 ottobre 08:04, testo+immagine verificati, recap inviato e confermato in Inviate. La run automatica delle 5:01 era saltata per estensione Chrome non connessa"
+        },
+        {
+          "ok": false,
+          "testo": "15/07 — immagine Eric Partaker (post del 19/10) ha un piccolo refuso al punto 2 (\"Definisce chiare\" invece di \"Definisci aspettative chiare\"), segnalato a Davide via email — nessuna azione automatica ulteriore, decide lui se correggere"
+        },
+        {
+          "ok": false,
+          "testo": "13/07 — Ben Sands: caricamento immagine fallito, post uscito SOLO TESTO (bug ora corretto per il futuro) — immagine pronta su Drive, va attaccata a mano"
+        }
+      ],
+      "azioni": [
+        {
+          "testo": "Apri coda Taplio per sistemare Ben Sands",
+          "url": "https://app.taplio.com/post-schedule"
+        },
+        {
+          "testo": "Apri cartella immagini pronte (taplio-outputs)",
+          "url": "https://drive.google.com/drive/folders/1pmw78VurMkYlcn0YpyWEllSAqrzvUBaU"
+        }
+      ],
+      "nota": "16/07: post di oggi schedulato e verificato con successo (vedi riga in cima), nessuna azione richiesta a Davide per il giro odierno. Restano aperti dai giorni precedenti: refuso minore sull'immagine Eric Partaker del 19/10 (punto 2) e il post Ben Sands del 13/07 ancora senza immagine (va attaccata a mano, link in azioni)."
+    }
+  ]
+}

@@ -1,0 +1,436 @@
+{
+  "aggiornato": "2026-07-09 19:42",
+  "giorni": [
+    {
+      "data": "2026-07-09",
+      "stato": "✅ Tutto regolare",
+      "kpi": {
+        "attive": 20,
+        "in_pausa": 7,
+        "esecuzioni": 16,
+        "errori_nuovi": 0,
+        "risolutore_interventi": 0,
+        "attendono_davide": 2
+      },
+      "per_ora": {
+        "4": 1,
+        "5": 2,
+        "6": 2,
+        "7": 3,
+        "8": 1,
+        "12": 1,
+        "13": 2,
+        "14": 1,
+        "18": 2,
+        "19": 1
+      },
+      "registro": [
+        {
+          "ora": "04:06",
+          "r": "pulizia-sessioni-zombie",
+          "esito": "ok"
+        },
+        {
+          "ora": "05:01",
+          "r": "taplio-viral-posts-daily",
+          "esito": "ok",
+          "nota": "post schedulato",
+          "url": "https://app.taplio.com/dashboard"
+        },
+        {
+          "ora": "05:08",
+          "r": "audit-meta-ads-daily",
+          "esito": "ok",
+          "nota": "recap 05:19",
+          "url": "https://adsmanager.facebook.com/adsmanager/manage/campaigns?act=465327538443110"
+        },
+        {
+          "ora": "06:01",
+          "r": "reel-virali-3-format",
+          "esito": "ok",
+          "nota": "recap 06:10"
+        },
+        {
+          "ora": "06:04",
+          "r": "gestione-inbox giro 6:00",
+          "esito": "ok",
+          "url": "https://mail.google.com/mail/u/0/#inbox"
+        },
+        {
+          "ora": "07:02",
+          "r": "outreach-pipeline-giornaliera",
+          "esito": "ok",
+          "url": "http://localhost:8766/outreach-dashboard.html"
+        },
+        {
+          "ora": "07:15",
+          "r": "jarvis-dashboard-daily",
+          "esito": "ok",
+          "url": "http://localhost:8765/jarvis-risultati.html"
+        },
+        {
+          "ora": "07:35",
+          "r": "ceo-audit giro 1",
+          "esito": "ok"
+        },
+        {
+          "ora": "08:08",
+          "r": "articolo-blog-giornaliero",
+          "esito": "ok",
+          "nota": "pubblicato, cover e SEO verificati",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-assicuratori-nel-2026-come-trovare-clienti"
+        },
+        {
+          "ora": "12:02",
+          "r": "articolo-blog-ai-giornaliero",
+          "esito": "ok",
+          "nota": "pubblicato, cover e SEO verificati",
+          "url": "https://www.davidecaiazzo.it/blog/definire-prezzi-intelligenza-artificiale"
+        },
+        {
+          "ora": "13:04",
+          "r": "gestione-inbox giro 13:00",
+          "esito": "ok",
+          "url": "https://mail.google.com/mail/u/0/#inbox"
+        },
+        {
+          "ora": "13:35",
+          "r": "ceo-audit giro 2",
+          "esito": "ok"
+        },
+        {
+          "ora": "14:00",
+          "r": "outreach-verifica-risposte",
+          "esito": "ok",
+          "url": "http://localhost:8766/outreach-dashboard.html"
+        },
+        {
+          "ora": "18:04",
+          "r": "gestione-inbox giro 18:00",
+          "esito": "ok",
+          "url": "https://mail.google.com/mail/u/0/#inbox"
+        },
+        {
+          "ora": "18:45",
+          "r": "outreach-invio-giornaliero",
+          "esito": "ok",
+          "nota": "6 inviati, 2 esclusi in autonomia",
+          "url": "http://localhost:8766/outreach-dashboard.html"
+        },
+        {
+          "ora": "19:42",
+          "r": "ceo-audit giro 3",
+          "esito": "ok",
+          "nota": "email di fine giornata inviata"
+        }
+      ],
+      "richiede_davide": [
+        {
+          "titolo": "Meta Ads: 5 creativi del 2 luglio, 364€ senza prenotazioni",
+          "nota": "decisione di budget, aperta dall'8/7",
+          "tipo": "budget",
+          "cosa_fare": "Ferma subito i 5 creativi del 2 luglio, zero prenotazioni in 7 giorni pieni. Non chiudere la campagna, non scalare il budget (CPA reale 482€ contro target 40 70€). Riscrivi l'hook dei nuovi creativi copiando lo stile del creativo La Sfida, l'unico che converte ancora. Parere completo di CMO e CFO nella conversazione qui sotto.",
+          "url": "https://adsmanager.facebook.com/adsmanager/manage/campaigns?act=465327538443110",
+          "url_label": "apri Meta Ads Manager"
+        },
+        {
+          "titolo": "SEO: 2 slug rotti in sitemap, serve ok al reslug",
+          "nota": "segnalati il 3/7, pagine Antitrust e DC #071 Outbound",
+          "tipo": "seo",
+          "cosa_fare": "Decidi il nuovo slug per i 2 articoli con URL rotto (quello sull'Antitrust e DC #071 Sfrutta l'Outbound Marketing), poi lo applico io. Nessun'altra fonte ha il dettaglio degli URL originali oltre al titolo: leggi la conversazione qui sotto per il contesto completo.",
+          "url": "https://search.google.com/search-console?resource_id=https%3A%2F%2Fwww.davidecaiazzo.it%2F",
+          "url_label": "apri Google Search Console"
+        }
+      ]
+    }
+  ],
+  "gruppi": {
+    "writer": {
+      "stato": "attiva",
+      "pills": [
+        {
+          "v": "2",
+          "l": "routine"
+        },
+        {
+          "v": "05:01",
+          "l": "prima del giorno"
+        }
+      ],
+      "routine": [
+        {
+          "nome": "taplio-viral-posts-daily",
+          "orario": "ogni giorno 05:01",
+          "stato": "attiva",
+          "ultimo": "oggi 05:01 ok",
+          "cosa": "trova post virale, traduce, replica grafica, schedula su Taplio",
+          "url": "https://app.taplio.com/dashboard",
+          "id": "taplio-viral-posts-daily"
+        },
+        {
+          "nome": "reel-virali-3-format",
+          "orario": "ogni giorno 06:01",
+          "stato": "attiva",
+          "ultimo": "oggi 06:01 ok",
+          "cosa": "replica struttura di un reel virale estero con script italiano originale",
+          "id": "reel-virali-3-format"
+        }
+      ]
+    },
+    "outreach": {
+      "stato": "attiva",
+      "pills": [
+        {
+          "v": "3",
+          "l": "routine"
+        },
+        {
+          "v": "6",
+          "l": "inviati oggi"
+        }
+      ],
+      "routine": [
+        {
+          "nome": "outreach-pipeline-giornaliera",
+          "orario": "lun sab 07:02",
+          "stato": "attiva",
+          "ultimo": "oggi 07:02 ok",
+          "cosa": "trova fino a 10 candidati in target, li mette in dashboard da approvare",
+          "url": "http://localhost:8766/outreach-dashboard.html",
+          "id": "outreach-pipeline-giornaliera"
+        },
+        {
+          "nome": "outreach-invio-giornaliero",
+          "orario": "lun sab 18:40",
+          "stato": "attiva",
+          "ultimo": "oggi 18:45 ok, 6 inviati, 2 in trattativa esclusi",
+          "cosa": "invia i messaggi approvati con ritmo anti ban",
+          "url": "http://localhost:8766/outreach-dashboard.html",
+          "id": "outreach-invio-giornaliero"
+        },
+        {
+          "nome": "outreach-verifica-risposte",
+          "orario": "ogni giorno 14:00",
+          "stato": "attiva",
+          "ultimo": "oggi 14:00 ok",
+          "cosa": "controlla le risposte ai DM e aggiorna outreach data",
+          "url": "http://localhost:8766/outreach-dashboard.html",
+          "id": "outreach-linkedin-verifica-risposte"
+        }
+      ]
+    },
+    "inbox": {
+      "stato": "attiva",
+      "pills": [
+        {
+          "v": "3x/g",
+          "l": "giri email"
+        },
+        {
+          "v": "2",
+          "l": "in pausa"
+        }
+      ],
+      "routine": [
+        {
+          "nome": "gestione-inbox-dc-academy",
+          "orario": "6:00, 13:00, 18:00",
+          "stato": "attiva",
+          "ultimo": "oggi 18:04 ok, inbox pulita",
+          "cosa": "smista la posta di ceo@, risponde all'azionabile, Ccn sempre attivo",
+          "url": "https://mail.google.com/mail/u/0/#inbox",
+          "id": "gestione-inbox-dc-academy"
+        },
+        {
+          "nome": "linkedin-risposte-commenti",
+          "orario": "ogni ora 8 17",
+          "stato": "in pausa",
+          "ultimo": "7 luglio",
+          "cosa": "risponde ai commenti sotto i post",
+          "url": "https://www.linkedin.com/notifications/",
+          "id": "linkedin-risposte-commenti"
+        },
+        {
+          "nome": "linkedin-risposte-dm",
+          "orario": "ogni ora 8:30 17:30",
+          "stato": "in pausa",
+          "ultimo": "3 luglio",
+          "cosa": "invia le guide a chi le chiede in DM",
+          "url": "https://www.linkedin.com/messaging/",
+          "id": "linkedin-risposte-dm"
+        }
+      ]
+    },
+    "publisher": {
+      "stato": "attiva",
+      "pills": [
+        {
+          "v": "7",
+          "l": "routine"
+        },
+        {
+          "v": "2/g",
+          "l": "articoli"
+        }
+      ],
+      "routine": [
+        {
+          "nome": "articolo-blog-giornaliero",
+          "orario": "ogni giorno 08:07",
+          "stato": "attiva",
+          "ultimo": "oggi 08:08 ok, pubblicato",
+          "cosa": "articolo SEO tema LinkedIn",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-assicuratori-nel-2026-come-trovare-clienti",
+          "id": "articolo-blog-giornaliero"
+        },
+        {
+          "nome": "articolo-blog-ai-giornaliero",
+          "orario": "ogni giorno 12:01",
+          "stato": "attiva",
+          "ultimo": "oggi 12:02 ok, pubblicato",
+          "cosa": "articolo SEO tema IA per PMI",
+          "url": "https://www.davidecaiazzo.it/blog/definire-prezzi-intelligenza-artificiale",
+          "id": "articolo-blog-ai-giornaliero"
+        },
+        {
+          "nome": "articolo-blog-newsletter-linkedin",
+          "orario": "martedì 11:50",
+          "stato": "attiva",
+          "ultimo": "7 luglio ok",
+          "cosa": "trasforma l'ultimo post LinkedIn in articolo",
+          "id": "articolo-blog-newsletter-linkedin"
+        },
+        {
+          "nome": "newsletter-martedi-produzione",
+          "orario": "mercoledì 07:30",
+          "stato": "attiva",
+          "ultimo": "8 luglio ok",
+          "cosa": "produce articolo, guida PDF e funnel della newsletter",
+          "id": "newsletter-martedi-produzione"
+        },
+        {
+          "nome": "newsletter-hub-sync",
+          "orario": "mercoledì 06:03",
+          "stato": "attiva",
+          "ultimo": "8 luglio ok",
+          "cosa": "aggiunge la guida nuova alla hub newsletterguide",
+          "url": "https://newsletterguide.davidecaiazzo.it",
+          "id": "newsletter-hub-sync-settimanale"
+        },
+        {
+          "nome": "newsletter-cta-review",
+          "orario": "venerdì 09:14",
+          "stato": "attiva",
+          "ultimo": "prima esecuzione domani",
+          "cosa": "valuta cambio CTA guida con parere CMO",
+          "id": "newsletter-cta-review"
+        },
+        {
+          "nome": "newsletter-martedi-pubblicazione",
+          "orario": "prima: ogni sera 21:00",
+          "stato": "in pausa",
+          "ultimo": "8 luglio, disattivata il 9/7, girava a vuoto 6 sere su 7",
+          "cosa": "sottotitola il video copertina quando lo carichi",
+          "id": "newsletter-martedi-pubblicazione"
+        }
+      ]
+    },
+    "analyst": {
+      "stato": "attiva",
+      "pills": [
+        {
+          "v": "4",
+          "l": "routine"
+        },
+        {
+          "v": "lun",
+          "l": "comitato"
+        }
+      ],
+      "routine": [
+        {
+          "nome": "jarvis-dashboard-daily",
+          "orario": "ogni giorno 07:12",
+          "stato": "attiva",
+          "ultimo": "oggi 07:15 ok",
+          "cosa": "aggiorna KPI Jarvis e dashboard LinkedIn",
+          "url": "http://localhost:8765/jarvis-risultati.html",
+          "id": "jarvis-dashboard-daily"
+        },
+        {
+          "nome": "audit-meta-ads-daily",
+          "orario": "ogni giorno 05:07",
+          "stato": "attiva",
+          "ultimo": "oggi 05:08 ok",
+          "cosa": "verdetto chiudi tieni scala su tutte le campagne con parere CMO e CFO",
+          "url": "https://adsmanager.facebook.com/adsmanager/manage/campaigns?act=465327538443110",
+          "id": "audit-meta-ads-daily"
+        },
+        {
+          "nome": "comitato-direzione-settimanale",
+          "orario": "lunedì 07:00",
+          "stato": "attiva",
+          "ultimo": "6 luglio ok",
+          "cosa": "riunisce CMO, CSO, CTO, CFO in un documento di direzione",
+          "id": "comitato-direzione-settimanale"
+        },
+        {
+          "nome": "seo-audit-settimanale",
+          "orario": "lunedì 09:07",
+          "stato": "attiva",
+          "ultimo": "6 luglio ok",
+          "cosa": "audit e fix automatico SEO e GEO di davidecaiazzo.it",
+          "url": "https://www.davidecaiazzo.it",
+          "id": "seo-audit-settimanale-davidecaiazzo"
+        }
+      ]
+    },
+    "guardian": {
+      "stato": "attiva",
+      "pills": [
+        {
+          "v": "3x/g",
+          "l": "audit ceo"
+        },
+        {
+          "v": "0",
+          "l": "errori oggi"
+        }
+      ],
+      "routine": [
+        {
+          "nome": "ceo-audit-routine",
+          "orario": "07:35, 13:35, 19:35",
+          "stato": "attiva",
+          "ultimo": "oggi 19:42 ok, giornata pulita, email inviata",
+          "cosa": "controlla che ogni routine abbia girato, delega i fix al risolutore",
+          "id": "ceo-audit-routine"
+        },
+        {
+          "nome": "pulizia-sessioni-zombie",
+          "orario": "ogni notte 04:00",
+          "stato": "attiva",
+          "ultimo": "oggi 04:06 ok",
+          "cosa": "chiude i processi congelati e i task esauriti",
+          "id": "pulizia-sessioni-zombie"
+        },
+        {
+          "nome": "pulizia-cartelle-root-weekly",
+          "orario": "venerdì 15:00",
+          "stato": "attiva",
+          "ultimo": "3 luglio ok",
+          "cosa": "tiene in ordine la root di 2. Claude secondo la mappa",
+          "id": "pulizia-cartelle-root-weekly"
+        },
+        {
+          "nome": "aggiorna-second-brain",
+          "orario": "domenica 19:00",
+          "stato": "attiva",
+          "ultimo": "5 luglio ok",
+          "cosa": "aggiorna il vault Obsidian con decisioni e lezioni della settimana",
+          "id": "aggiorna-second-brain"
+        }
+      ]
+    }
+  }
+}

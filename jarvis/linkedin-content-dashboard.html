@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkedIn Content Dashboard — DC Academy</title>
+<style>
+  :root{
+    --bg:#f4f5f7; --card:#ffffff; --ink:#0f1222; --muted:#8a8f9e;
+    --blue:#2563eb; --blue-soft:#eaf0fe; --green:#16a34a; --amber:#d97706; --red:#dc2626;
+    --radius:18px; --shadow:0 1px 3px rgba(15,18,34,.06),0 8px 24px rgba(15,18,34,.05);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;background:var(--bg);color:var(--ink);padding:36px 4vw 60px}
+  .kicker{font-size:11px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;font-weight:600}
+  h1{font-size:clamp(26px,3.4vw,40px);font-weight:800;margin:6px 0 4px}
+  h1 .accent{color:var(--blue)}
+  .sub{color:var(--muted);font-size:14px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .live{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--green)}
+  .live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+  .live.static{color:var(--amber)} .live.static::before{background:var(--amber)}
+  @keyframes pulse{50%{opacity:.35}}
+  .fade{opacity:0;transform:translateY(14px);animation:rise .55s cubic-bezier(.2,.7,.3,1) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .section-title{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:34px 0 14px}
+  .grid-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:24px}
+  .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;transition:transform .18s,box-shadow .18s}
+  .kpi .label{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .kpi .value{font-size:30px;font-weight:800;margin-top:8px;font-variant-numeric:tabular-nums}
+  .kpi .value small{font-size:16px;color:var(--blue);font-weight:800}
+  .kpi .note{font-size:12px;color:var(--muted);margin-top:4px}
+  .up{color:var(--green);font-weight:700}
+  .grid-agents{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .agent{display:flex;flex-direction:column;gap:10px;position:relative;cursor:pointer}
+  .agent:hover{transform:translateY(-4px);box-shadow:0 4px 8px rgba(15,18,34,.08),0 16px 36px rgba(15,18,34,.1)}
+  .agent .role{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:700}
+  .agent .who{display:flex;align-items:center;gap:10px}
+  .agent .avatar{width:44px;height:44px;border-radius:12px;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;font-size:22px}
+  .agent .name{font-size:16px;font-weight:750}
+  .agent .desc{font-size:12.5px;color:var(--muted);line-height:1.45}
+  .agent .open{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-top:2px}
+  .pills{display:flex;gap:8px;flex-wrap:wrap}
+  .pill{background:var(--blue-soft);color:var(--blue);border-radius:9px;padding:6px 10px;font-size:12px;font-weight:700;text-align:center}
+  .pill span{display:block;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:2px}
+  .status{position:absolute;top:18px;right:18px;font-size:10px;font-weight:700;letter-spacing:.06em;padding:4px 9px;border-radius:20px}
+  .on{background:#e8f7ee;color:var(--green)} .off{background:#fdf2e3;color:var(--amber)}
+  .grid-bottom{display:grid;grid-template-columns:1.25fr 1fr;gap:14px}
+  @media(max-width:900px){.grid-bottom{grid-template-columns:1fr}}
+  .controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+  .seg{display:inline-flex;background:#eef0f4;border-radius:10px;padding:3px}
+  .seg button{border:none;background:transparent;font:inherit;font-size:11.5px;font-weight:700;color:var(--muted);padding:6px 12px;border-radius:8px;cursor:pointer;transition:all .15s}
+  .seg button.sel{background:#fff;color:var(--blue);box-shadow:0 1px 4px rgba(15,18,34,.12)}
+  .chart{display:flex;align-items:flex-end;gap:6px;height:190px;margin-top:16px}
+  .bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;height:100%;justify-content:flex-end;cursor:pointer}
+  .bar{width:100%;max-width:36px;background:var(--blue);border-radius:6px 6px 3px 3px;position:relative;transition:height .5s cubic-bezier(.2,.7,.3,1),opacity .15s}
+  .bar.low{background:#c7d6fb}
+  .bar-wrap:hover .bar{opacity:.7}
+  .bar .tip{position:absolute;top:-22px;left:50%;transform:translateX(-50%);font-size:10.5px;font-weight:700;color:var(--ink);white-space:nowrap}
+  .bar-day{font-size:9.5px;color:var(--muted);white-space:nowrap}
+  .calls-dot{font-size:9px;color:var(--amber);font-weight:700;min-height:12px}
+  .legend{font-size:11px;color:var(--muted);margin-top:10px}
+  .legend b{color:var(--blue)} .legend i{color:var(--amber);font-style:normal;font-weight:700}
+  .toplist{display:flex;flex-direction:column;margin-top:6px}
+  .toppost{display:flex;justify-content:space-between;gap:12px;padding:13px 2px;border-bottom:1px solid #f0f1f4;align-items:center}
+  .toppost:last-child{border-bottom:none}
+  .toppost .t{font-size:13.5px;font-weight:600;line-height:1.35}
+  .toppost .m{font-size:11px;color:var(--muted);margin-top:3px}
+  .toppost .v{font-size:16px;font-weight:800;color:var(--blue);white-space:nowrap}
+  .toppost .v span{display:block;font-size:10px;color:var(--muted);font-weight:600;text-align:right}
+  .bench-row{display:flex;align-items:center;gap:12px;padding:9px 0}
+  .bench-row .who{width:150px;font-size:12.5px;color:var(--ink);font-weight:600}
+  .bench-row .track{flex:1;height:10px;background:#eef0f4;border-radius:6px;overflow:hidden}
+  .bench-row .fill{height:100%;border-radius:6px;background:var(--blue);width:0;transition:width .8s cubic-bezier(.2,.7,.3,1)}
+  .bench-row .num{width:60px;text-align:right;font-size:12px;font-weight:700}
+  #overlay{position:fixed;inset:0;background:rgba(15,18,34,.35);opacity:0;pointer-events:none;transition:opacity .25s;z-index:40}
+  #overlay.show{opacity:1;pointer-events:auto}
+  #drawer{position:fixed;top:0;right:0;bottom:0;width:min(480px,92vw);background:#fff;z-index:50;box-shadow:-12px 0 40px rgba(15,18,34,.18);transform:translateX(105%);transition:transform .32s cubic-bezier(.2,.7,.3,1);padding:30px 28px;overflow-y:auto}
+  #drawer.show{transform:none}
+  #drawer .close{position:absolute;top:18px;right:18px;border:none;background:#eef0f4;width:32px;height:32px;border-radius:10px;font-size:15px;cursor:pointer;color:var(--muted)}
+  #drawer .d-role{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:700}
+  #drawer h2{font-size:24px;font-weight:800;margin:4px 0 2px}
+  #drawer .d-sub{font-size:12.5px;color:var(--muted);margin-bottom:18px}
+  #drawer .d-sec{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:20px 0 8px}
+  #drawer .item{padding:11px 0;border-bottom:1px solid #f0f1f4;font-size:13.5px;line-height:1.4}
+  #drawer .item:last-child{border-bottom:none}
+  #drawer .item .im{font-size:11px;color:var(--muted);margin-top:2px}
+  #drawer .item a{color:var(--blue);text-decoration:none;font-weight:600}
+  #drawer .item a:hover{text-decoration:underline}
+  #drawer .badge{display:inline-block;font-size:10px;font-weight:700;padding:3px 8px;border-radius:12px;margin-left:6px}
+  #drawer .b-ok{background:#e8f7ee;color:var(--green)} #drawer .b-no{background:#fdeaea;color:var(--red)} #drawer .b-mid{background:#fdf2e3;color:var(--amber)}
+  #drawer .bignum{display:flex;gap:10px;margin:6px 0}
+  #drawer .bignum .pill{flex:1}
+  footer{margin-top:40px;font-size:11px;color:var(--muted);line-height:1.6}
+  #jarvis-voce-btn{font-family:inherit;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    background:var(--blue-soft);color:var(--blue);border:1px solid #d7e0fb;border-radius:10px;
+    padding:7px 14px;cursor:pointer}
+  #jarvis-voce-btn:hover{background:#dde7fe}
+  @keyframes jvpulse{0%,100%{box-shadow:inset 3px 0 0 0 var(--blue),0 0 0 1px var(--blue)}50%{box-shadow:inset 3px 0 0 0 var(--blue),0 0 22px rgba(37,99,235,.25)}}
+  .jv-acceso{animation:jvpulse 1.3s ease-in-out infinite}
+</style>
+</head>
+<body>
+
+<div class="fade">
+  <div class="kicker">DC ACADEMY · CONTENT COMMAND</div>
+  <h1>LinkedIn <span class="accent">Content</span> Dashboard</h1>
+  <div class="sub">
+    <span>Davide Caiazzo · <b id="h-follower">…</b></span>
+    <span class="live" id="h-live">caricamento…</span>
+    <span id="h-periodo"></span>
+    <button id="jarvis-voce-btn">🎙 Leggi LinkedIn</button>
+  </div>
+</div>
+
+<div class="grid-kpi" id="kpi-row"></div>
+
+<div class="section-title fade" style="animation-delay:.3s">Il tuo agent team · clicca una card</div>
+<div class="grid-agents" id="agents-row"></div>
+
+<div class="grid-bottom" style="margin-top:34px">
+  <div class="card fade" style="animation-delay:.65s">
+    <div class="section-title" style="margin:0 0 8px">Andamento giornaliero · clicca una barra per il dettaglio</div>
+    <div class="controls">
+      <div class="seg" id="seg-metric">
+        <button data-m="lead" class="sel">Lead</button>
+        <button data-m="call">Call</button>
+        <button data-m="impr">Impr. ads</button>
+        <button data-m="click">Click ads</button>
+        <button data-m="spesa">Spesa €</button>
+      </div>
+      <div class="seg" id="seg-period">
+        <button data-p="7" class="sel">7 giorni</button>
+        <button data-p="0">Tutto</button>
+      </div>
+    </div>
+    <div class="chart" id="chart"></div>
+    <div class="legend" id="legend"></div>
+  </div>
+
+  <div class="card fade" style="animation-delay:.7s">
+    <div class="section-title" style="margin:0 0 4px">Top post · 7 giorni</div>
+    <div class="toplist" id="toplist"></div>
+    <div class="section-title" style="margin:18px 0 4px" id="comp-title">Composizione interazioni</div>
+    <div id="bench"></div>
+  </div>
+</div>
+
+<footer class="fade" style="animation-delay:.75s" id="foot"></footer>
+
+<div id="overlay" onclick="closeDrawer()"></div>
+<aside id="drawer" role="dialog" aria-modal="true">
+  <button class="close" onclick="closeDrawer()">✕</button>
+  <div id="drawer-content"></div>
+</aside>
+
+<script>
+/* ════ FALLBACK (snapshot 9/7/2026) — usato solo se i JSON non sono raggiungibili ════ */
+const FB_DATI={"aggiornato":"2026-07-09 07:15","periodo":"2–8 luglio 2026","kpi":{"follower":233095,"follower_delta":"+18","impressioni":107296,"impressioni_delta":"+5%","reach":60569,"interazioni":700,"engagement":"0,65%","reazioni":621,"commenti":69,"call":11,"call_target":6},"interazioni_composizione":[{"label":"Reazioni","n":621},{"label":"Commenti","n":69},{"label":"Click sui link","n":21},{"label":"Salvataggi","n":6},{"label":"Invii in privato","n":3},{"label":"Condivisioni","n":1}],"top_post":[{"titolo":"«Non volevo figli» — storia personale su paternità e famiglia","tema":"storia · organico","impressioni":68181,"interazioni":506},{"titolo":"«Quante ore passi ogni settimana a cercare potenziali clienti su LinkedIn?»","tema":"agenti IA · lead magnet","impressioni":11058,"interazioni":45},{"titolo":"«Ci sono due strategie sull'IA completamente diverse» — storia IKEA","tema":"strategia · storytelling","impressioni":6459,"interazioni":58}],"agenti":{"writer":{"stato":"attiva","pills":[{"v":"1/giorno","l":"cadenza"},{"v":"05:01","l":"orario"}]},"outreach":{"stato":"attiva","pills":[{"v":"144","l":"contatti"},{"v":"38","l":"inviati"},{"v":"8","l":"risposte"}],"ultime_risposte":[{"nome":"Andrea Palmese","ruolo":"Venditore fotovoltaico (propria attività)","data":"7/7"},{"nome":"Stefano","ruolo":"Consulente","data":"6/7"},{"nome":"Alberto Repetto","ruolo":"Founding Partner Syntonia SpA","data":"4/7"},{"nome":"Gianluca Sanchioni","ruolo":"CFO e titolare T.I.B.F. srl","data":"3/7"},{"nome":"Luciano Liguori","ruolo":"Notaio, tutela legale e fiscale","data":"3/7"}]},"inbox":{"stato":"in pausa","pills":[{"v":"8–17","l":"fascia oraria"}],"note":"Routine commenti e DM disattivate. Ultima esecuzione DM: 3 luglio."},"newsletter":{"stato":"attiva","pills":[{"v":"1/sett","l":"cadenza"},{"v":"mer 07:30","l":"produzione"}],"in_corso":"#005 — Newsletter Claude (Google Doc)","ultime":["#004 — «Qualificare i contatti LinkedIn con l'IA» — guida PDF + video sottotitolato","#003 — video sottotitolato pubblicato"]},"blog":{"stato":"attiva","pills":[{"v":"2/giorno","l":"articoli"},{"v":"259","l":"a catalogo"},{"v":"15","l":"questa sett."}],"articoli":[{"data":"9 luglio","titolo":"LinkedIn per Assicuratori nel 2026","url":"https://www.davidecaiazzo.it/blog/linkedin-per-assicuratori-nel-2026-come-trovare-clienti"},{"data":"8 luglio","titolo":"LinkedIn per Osteopati nel 2026","url":"https://www.davidecaiazzo.it/blog/linkedin-per-osteopati-nel-2026-come-trovare-pazienti"},{"data":"7 luglio","titolo":"LinkedIn per Formatori nel 2026","url":"https://www.davidecaiazzo.it/blog/linkedin-per-formatori-nel-2026-come-trovare-clienti"},{"data":"7 luglio","titolo":"Agente IA per Trovare Clienti su LinkedIn","url":"https://www.davidecaiazzo.it/blog/agente-ia-trovare-clienti-linkedin-2026"},{"data":"6 luglio","titolo":"LinkedIn Creator Marketplace nel 2026","url":"https://www.davidecaiazzo.it/blog/linkedin-creator-marketplace-2026"},{"data":"5 luglio","titolo":"LinkedIn per Fisioterapisti nel 2026","url":"https://davidecaiazzo.it/blog/linkedin-fisioterapisti-2026"}]},"analyst":{"stato":"attiva","pills":[{"v":"07:12","l":"kpi giorno"},{"v":"3x/g","l":"audit ceo"}],"ieri":{"data":"8 luglio","call":2,"spesa":"106€","click":155,"dettaglio":"Call: Marco Viola (Meta Ads, per il 15/7) · Manuel Cesa (chatbot, per il 9/7)"},"agenda":["Oggi 9/7 · 09:00 — Manuel Cesa (chatbot)","Lun 13/7 · 09:30 — Luca Cappellacci · 10:30 — Davide Bile (chatbot)","Mar 15/7 · 09:30 — Marco Viola (Meta Ads)"]}}};
+const FB_GIORNI=[
+ {"data":"2026-06-27","ads_spesa":181.40,"ads_impressioni":14075,"ads_click":270,"call":2,"lead_funnel":6,"guide":2,"call_nomi":["Busetto (chatbot, scartata)","Spaghetti (chatbot, scartata)"]},
+ {"data":"2026-06-28","ads_spesa":208.74,"ads_impressioni":11496,"ads_click":283,"call":1,"lead_funnel":3,"guide":3,"call_nomi":["Magaletta (Meta Ads)"]},
+ {"data":"2026-06-29","ads_spesa":183.33,"ads_impressioni":11711,"ads_click":234,"call":2,"lead_funnel":0,"guide":2,"call_nomi":["Meldolesi (email flusso 6)","Agostini (LinkedIn, scartata)"]},
+ {"data":"2026-06-30","ads_spesa":110.29,"ads_impressioni":6896,"ads_click":135,"call":1,"lead_funnel":23,"guide":2,"call_nomi":["Sinisi (sito, scartata)"]},
+ {"data":"2026-07-01","ads_spesa":95.69,"ads_impressioni":8314,"ads_click":177,"call":1,"lead_funnel":3,"guide":1,"call_nomi":["Giaconia (chatbot)"]},
+ {"data":"2026-07-02","ads_spesa":81.62,"ads_impressioni":4166,"ads_click":139,"call":2,"lead_funnel":2,"guide":3,"call_nomi":["Cappellacci (chatbot)","Devetta (chatbot)"]},
+ {"data":"2026-07-03","ads_spesa":87.43,"ads_impressioni":6430,"ads_click":170,"call":2,"lead_funnel":0,"guide":1,"call_nomi":["Arena (chatbot)","Bile (chatbot)"]},
+ {"data":"2026-07-04","ads_spesa":97.27,"ads_impressioni":6967,"ads_click":159,"call":1,"lead_funnel":0,"guide":1,"call_nomi":["Carlotta Carlotta (chatbot)"]},
+ {"data":"2026-07-05","ads_spesa":103.91,"ads_impressioni":7204,"ads_click":174,"call":1,"lead_funnel":0,"guide":1,"call_nomi":["Stefano Venneri (chatbot)"]},
+ {"data":"2026-07-06","ads_spesa":110.37,"ads_impressioni":9297,"ads_click":215,"call":3,"lead_funnel":1,"guide":3,"call_nomi":["Alberto Di Meo (chatbot, scartata)","Tiziana Segato (Meta Ads, scartata)","Mario Polverino (chatbot)"]},
+ {"data":"2026-07-07","ads_spesa":100.58,"ads_impressioni":6872,"ads_click":149,"call":0,"lead_funnel":25,"guide":12,"call_nomi":["Mario Polverino (annullata da noi)"]},
+ {"data":"2026-07-08","ads_spesa":106.26,"ads_impressioni":7006,"ads_click":155,"call":2,"lead_funnel":1,"guide":2,"call_nomi":["Marco Viola (Meta Ads, prenotata per il 15/7)","Manuel Cesa (chatbot, prenotata per il 9/7)"]},
+ {"data":"2026-07-09","ads_spesa":17.88,"ads_impressioni":1226,"ads_click":28,"call":0,"lead_funnel":0,"guide":0,"call_nomi":[],"parziale":true}
+];
+
+/* ════ STATO ════ */
+let DATI=null, G=[], curM="lead", curP=7, isLive=false;
+const METRIC={lead:{lab:"lead (funnel + guide)",fmt:v=>v},call:{lab:"call prenotate",fmt:v=>v},impr:{lab:"impressioni Meta Ads",fmt:v=>v.toLocaleString("it-IT")},click:{lab:"click Meta Ads",fmt:v=>v},spesa:{lab:"spesa Meta Ads €",fmt:v=>v.toFixed(0)+"€"}};
+const fmtN=n=>n==null?"—":n.toLocaleString("it-IT");
+
+/* ════ CARICAMENTO DATI (live via server JARVIS, fallback snapshot) ════ */
+async function loadData(){
+  try{
+    const [rd,rg]=await Promise.all([
+      fetch("linkedin-dashboard-dati.json",{cache:"no-store"}),
+      fetch("jarvis-giorni.json",{cache:"no-store"})
+    ]);
+    if(!rd.ok||!rg.ok) throw 0;
+    DATI=await rd.json();
+    const gj=await rg.json();
+    G=(gj.giorni||gj).map(mapDay);
+    isLive=true;
+  }catch(e){
+    DATI=FB_DATI; G=FB_GIORNI.map(mapDay); isLive=false;
+  }
+  renderAll();
+}
+function mapDay(g){
+  return {d:g.data, dd:g.data.slice(8,10).replace(/^0/,"")+"/"+g.data.slice(5,7).replace(/^0/,""),
+    lead:(g.lead_funnel||0)+(g.guide||0), call:g.call||0, impr:g.ads_impressioni||0,
+    click:g.ads_click||0, spesa:g.ads_spesa||0, nomi:g.call_nomi||[], parz:!!g.parziale};
+}
+
+/* ════ RENDER ════ */
+function renderAll(){
+  const k=DATI.kpi;
+  document.getElementById("h-follower").textContent=fmtN(k.follower)+" follower";
+  const live=document.getElementById("h-live");
+  if(isLive){live.textContent="dati live";live.classList.remove("static");}
+  else{live.textContent="snapshot — apri con JARVIS.command per dati live";live.classList.add("static");}
+  document.getElementById("h-periodo").textContent="Periodo: "+DATI.periodo+" · aggiornato "+DATI.aggiornato;
+
+  document.getElementById("kpi-row").innerHTML=[
+    {l:"Follower",v:k.follower,n:`<span class="up">${k.follower_delta}</span> vs settimana precedente`},
+    {l:"Impressioni · 7gg",v:k.impressioni,n:`<span class="up">${k.impressioni_delta}</span> vs 7 giorni precedenti`},
+    {l:"Utenti raggiunti",v:k.reach,n:"reach organica 7 giorni"},
+    {l:"Interazioni · 7gg",v:k.interazioni,n:`engagement ${k.engagement} · ${k.reazioni} reazioni · ${k.commenti} commenti`},
+    {l:"Call prenotate · 7gg",v:k.call,extra:` <small>→ ${k.call_target} in target</small>`,n:"l'obiettivo di tutto: la call"}
+  ].map((c,i)=>`<div class="card kpi fade" style="animation-delay:${.05+i*.05}s">
+    <div class="label">${c.l}</div>
+    <div class="value"><span data-count="${c.v}">0</span>${c.extra||""}</div>
+    <div class="note">${c.n}</div></div>`).join("");
+
+  const A=DATI.agenti||{}; // 18/07: se il JSON manca "agenti" non deve far crashare tutto il render
+  const CARD=[
+    {k:"writer",role:"Writer",av:"✍️",nm:"Post Taplio",desc:"Trova un post virale, lo traduce in italiano naturale, replica la grafica e lo schedula su Taplio."},
+    {k:"outreach",role:"Outreach",av:"🎯",nm:"Pipeline & Invio",desc:"Ogni mattina trova candidati in target, la sera invia i messaggi approvati con ritmo anti-ban."},
+    {k:"inbox",role:"Inbox",av:"💬",nm:"DM & Commenti",desc:"Risponde ai commenti sotto i post e invia le guide a chi le chiede in DM."},
+    {k:"newsletter",role:"Newsletter",av:"📬",nm:"Martedì LinkedIn",desc:"Produce articolo + guida PDF + funnel Kajabi della newsletter settimanale e sincronizza la hub."},
+    {k:"blog",role:"SEO",av:"📰",nm:"Blog Engine",desc:"Due articoli SEO al giorno su davidecaiazzo.it, ottimizzati per AI search, CTA verso la call."},
+    {k:"analyst",role:"Analyst",av:"📊",nm:"Jarvis + CEO",desc:"Aggiorna i KPI ogni mattina e controlla 3 volte al giorno che tutte le routine abbiano girato."}
+  ];
+  document.getElementById("agents-row").innerHTML=CARD.map((c,i)=>{
+    const a=A[c.k]||{stato:"?",pills:[]};
+    const on=a.stato==="attiva";
+    return `<div class="card agent fade" style="animation-delay:${.35+i*.05}s" onclick="openDrawer('${c.k}')">
+      <span class="status ${on?"on":"off"}">${on?"ATTIVA":"IN PAUSA"}</span>
+      <div class="role">${c.role}</div>
+      <div class="who"><div class="avatar">${c.av}</div><div class="name">${c.nm}</div></div>
+      <div class="pills">${(a.pills||[]).map(p=>`<div class="pill">${p.v}<span>${p.l}</span></div>`).join("")}</div>
+      <div class="desc">${c.desc}</div>
+      <div class="open">apri →</div></div>`;
+  }).join("");
+
+  // 18/07: top_post/interazioni_composizione mancanti nel JSON non devono far crashare tutto il render
+  const topPost=DATI.top_post||[];
+  document.getElementById("toplist").innerHTML=topPost.map(p=>
+    `<div class="toppost"><div><div class="t">${p.titolo}</div><div class="m">${p.tema}</div></div>
+     <div class="v">${fmtN(p.impressioni)}<span>${p.interazioni} interazioni</span></div></div>`).join("");
+
+  const comp=DATI.interazioni_composizione||[], mx=Math.max(...comp.map(c=>c.n),1);
+  document.getElementById("comp-title").textContent=`Composizione ${DATI.kpi.interazioni} interazioni`;
+  document.getElementById("bench").innerHTML=comp.map(c=>
+    `<div class="bench-row"><div class="who">${c.label}</div>
+     <div class="track"><div class="fill" data-w="${Math.max(c.n/mx*100,.5)}"></div></div>
+     <div class="num">${c.n}</div></div>`).join("");
+
+  document.getElementById("foot").innerHTML=`Fonti dati: linkedin-dashboard-dati.json · jarvis-giorni.json (aggiornati ogni mattina alle 07:12 dalla routine Jarvis) · ${isLive?"lettura live dal server JARVIS (porta 8765)":"snapshot incorporato del 9/7/2026 — per i dati live avvia JARVIS.command"}.<br>Tutti i numeri sono reali e verificati alla fonte. Engagement = interazioni / impressioni 7gg.`;
+
+  countUp(); renderChart();
+  setTimeout(()=>{document.querySelectorAll("#bench .fill").forEach(f=>f.style.width=f.dataset.w+"%")},400);
+}
+
+// ------- VOCE JARVIS (17/07, "metti jarvis su ogni dashboard") -------
+// legge da DATI (dati veri, stessa fonte del rendering), ogni frase porta il riferimento esatto
+// alla card da illuminare. Salta il grafico giorno-per-giorno (si legge meglio a schermo che a voce).
+let jvSpeaking=false, jvPlayer=null, jvElementoAcceso=null;
+function jvEvidenzia(el){
+  if(jvElementoAcceso) jvElementoAcceso.classList.remove('jv-acceso');
+  jvElementoAcceso=el||null;
+  if(el) el.classList.add('jv-acceso');
+}
+function jvFrasi(){
+  if(!DATI) return [{testo:"Non ho ancora i dati, Signore.", el:null}];
+  const k=DATI.kpi;
+  const agentCards=[...document.getElementById('agents-row').children];
+  const out=[];
+  out.push({testo:DATI.periodo+", "+(document.getElementById('h-live').textContent)+".", el:null});
+  // 17/07, "non serve che leggi ogni riga, dammi punti salienti": una frase sola coi 5 KPI in cima
+  out.push({testo:"Follower: "+fmtN(k.follower)+" ("+k.follower_delta+" questa settimana). Impressioni 7 giorni: "+fmtN(k.impressioni)+" ("+k.impressioni_delta+"). Utenti raggiunti: "+(k.reach==null?"non disponibile":fmtN(k.reach))+". Interazioni: "+fmtN(k.interazioni)+" (engagement "+k.engagement+", "+k.reazioni+" reazioni, "+k.commenti+" commenti). Call prenotate: "+fmtN(k.call)+", "+k.call_target+" in target.", el:document.getElementById('kpi-row')});
+  out.push({testo:"La squadra dietro LinkedIn, sei gruppi.", el:null});
+  const A=DATI.agenti;
+  const CARD2=[
+    {k:"writer",role:"Writer",nm:"Post Taplio",desc:"Trova un post virale, lo traduce in italiano naturale, replica la grafica e lo schedula su Taplio."},
+    {k:"outreach",role:"Outreach",nm:"Pipeline & Invio",desc:"Ogni mattina trova candidati in target, la sera invia i messaggi approvati con ritmo anti ban."},
+    {k:"inbox",role:"Inbox",nm:"DM & Commenti",desc:"Risponde ai commenti sotto i post e invia le guide a chi le chiede in DM."},
+    {k:"newsletter",role:"Newsletter",nm:"Martedì LinkedIn",desc:"Produce articolo, guida PDF e funnel Kajabi della newsletter settimanale."},
+    {k:"blog",role:"SEO",nm:"Blog Engine",desc:"Due articoli SEO al giorno, ottimizzati per la ricerca IA, con CTA verso la call."},
+    {k:"analyst",role:"Analyst",nm:"Jarvis + CEO",desc:"Aggiorna i KPI ogni mattina e controlla tre volte al giorno che tutte le routine abbiano girato."}
+  ];
+  CARD2.forEach(function(c,i){
+    const a=A[c.k]||{stato:'?',pills:[]};
+    const pillTxt=(a.pills||[]).map(function(p){return p.v+' '+p.l}).join(', ');
+    out.push({testo:c.role+", "+c.nm+": "+(a.stato==='attiva'?'attiva':'in pausa')+". "+pillTxt+". "+c.desc, el:agentCards[i]||null});
+  });
+  const topCards=[...document.getElementById('toplist').children];
+  if(DATI.top_post&&DATI.top_post.length){
+    out.push({testo:"I post migliori della settimana.", el:null});
+    DATI.top_post.forEach(function(p,i){
+      out.push({testo:p.titolo+", tema "+p.tema+". "+fmtN(p.impressioni)+" impressioni, "+p.interazioni+" interazioni.", el:topCards[i]||null});
+    });
+  }
+  if(DATI.interazioni_composizione&&DATI.interazioni_composizione.length){
+    const voci=DATI.interazioni_composizione.map(function(c){return c.label+' '+c.n}).join(', ');
+    out.push({testo:"Composizione delle interazioni: "+voci+".", el:document.getElementById('bench')});
+  }
+  out.push({testo:"Fine del rapporto, Signore.", el:null});
+  return out;
+}
+function jvParla(who,testo){
+  return fetch('/parla?who='+encodeURIComponent(who)+'&testo='+encodeURIComponent(testo))
+    .then(function(r){ if(!r.ok) throw new Error('tts'); return r.blob(); })
+    .then(function(b){ return URL.createObjectURL(b); }).catch(function(){ return null; });
+}
+function jvStop(){
+  jvSpeaking=false; jvEvidenzia(null);
+  if(jvPlayer){ jvPlayer.pause(); jvPlayer=null; }
+  speechSynthesis.cancel();
+  document.getElementById('jarvis-voce-btn').textContent='🎙 Leggi LinkedIn';
+}
+function jvAvvia(){
+  if(jvSpeaking){ jvStop(); return; }
+  jvSpeaking=true;
+  document.getElementById('jarvis-voce-btn').textContent='◼ Ferma';
+  const seq=jvFrasi();
+  let prossimo=seq.length?jvParla('jarvis',seq[0].testo):Promise.resolve(null);
+  (function go(i){
+    if(!jvSpeaking || i>=seq.length){ jvStop(); return; }
+    const S=seq[i], attuale=prossimo;
+    prossimo=(i+1<seq.length && jvSpeaking)?jvParla('jarvis',seq[i+1].testo):Promise.resolve(null);
+    attuale.then(function(src){
+      if(!jvSpeaking) return;
+      jvEvidenzia(S.el);
+      if(!src){
+        const u=new SpeechSynthesisUtterance(S.testo); u.lang='it-IT'; u.rate=0.98;
+        u.onend=function(){ setTimeout(function(){go(i+1)},180); };
+        u.onerror=function(){ setTimeout(function(){go(i+1)},150); };
+        speechSynthesis.speak(u); return;
+      }
+      jvPlayer=new Audio(src);
+      jvPlayer.onended=function(){ setTimeout(function(){go(i+1)},150); };
+      jvPlayer.onerror=function(){ setTimeout(function(){go(i+1)},150); };
+      jvPlayer.play();
+    });
+  })(0);
+}
+document.getElementById('jarvis-voce-btn').addEventListener('click', jvAvvia);
+
+function renderChart(){
+  const set=curP===7?G.slice(-8):G;
+  const max=Math.max(...set.map(g=>g[curM]||0),1);
+  document.getElementById("chart").innerHTML=set.map(g=>{
+    const v=g[curM]||0, h=Math.max(4,Math.round(v/max*135));
+    return `<div class="bar-wrap" onclick="openDay('${g.d}')">
+      <div class="calls-dot">${"▲".repeat(Math.min(g.call,4))||"&nbsp;"}</div>
+      <div class="bar ${v/max<.15?"low":""}" style="height:4px" data-h="${h}"><div class="tip">${METRIC[curM].fmt(v)}</div></div>
+      <div class="bar-day">${g.dd}${g.parz?"*":""}</div></div>`;
+  }).join("");
+  document.getElementById("legend").innerHTML=`<b>barre</b> = ${METRIC[curM].lab} · <i>▲</i> = call prenotate · *giorno parziale`;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    document.querySelectorAll("#chart .bar").forEach(b=>b.style.height=b.dataset.h+"px");
+  }));
+}
+document.getElementById("seg-metric").addEventListener("click",e=>{
+  if(!e.target.dataset.m)return; curM=e.target.dataset.m;
+  document.querySelectorAll("#seg-metric button").forEach(b=>b.classList.toggle("sel",b===e.target));
+  renderChart();
+});
+document.getElementById("seg-period").addEventListener("click",e=>{
+  if(e.target.dataset.p===undefined)return; curP=+e.target.dataset.p||0;
+  document.querySelectorAll("#seg-period button").forEach(b=>b.classList.toggle("sel",b===e.target));
+  renderChart();
+});
+
+/* ════ DRAWER ════ */
+function drawerAgent(k){
+  const a=DATI.agenti[k]; if(!a)return "";
+  const H={
+    writer:()=>`<div class="d-sec">Come lavora</div>
+      <div class="item">1. Trova un post virale su Taplio nella nicchia AI<div class="im">2. Traduzione italiana naturale · 3. Grafica replicata in italiano · 4. Schedulazione su Taplio · 5. Email di recap</div></div>
+      <div class="d-sec">Top post della settimana</div>
+      ${(DATI.top_post||[]).map(p=>`<div class="item">${p.titolo}<div class="im">${fmtN(p.impressioni)} impressioni · ${p.interazioni} interazioni</div></div>`).join("")}`,
+    outreach:()=>`<div class="bignum">${a.pills.map(p=>`<div class="pill">${p.v}<span>${p.l}</span></div>`).join("")}</div>
+      <div class="d-sec">Ultime risposte ricevute</div>
+      ${(a.ultime_risposte||[]).map(r=>`<div class="item">${r.nome} <span class="badge b-ok">${r.data}</span><div class="im">${r.ruolo}</div></div>`).join("")}
+      <div class="d-sec">Regole attive</div>
+      <div class="item">Max 10 messaggi/giorno, ritmo anti-ban, solo candidati approvati. Target: titolari, professionisti, consulenti — mai dipendenti o concorrenti.</div>`,
+    inbox:()=>`<div class="d-sec">Stato</div>
+      <div class="item">Risposte commenti (ogni ora 8–17) <span class="badge b-no">disattivata</span></div>
+      <div class="item">Risposte DM con guide (8:30–17:30) <span class="badge b-no">disattivata</span></div>
+      ${a.note?`<div class="item"><div class="im">${a.note}</div></div>`:""}
+      <div class="d-sec">Cosa fa quando è attiva</div>
+      <div class="item">Risponde ai commenti con 1 frase autentica, invia le guide a chi commenta la parola chiave, gestisce i DM e segna non-letto ciò che richiede te. Max 25 risposte/giorno.</div>`,
+    newsletter:()=>`<div class="d-sec">In lavorazione</div>
+      <div class="item">${a.in_corso} <span class="badge b-mid">in corso</span></div>
+      <div class="d-sec">Ultime uscite</div>
+      ${(a.ultime||[]).map(u=>`<div class="item">${u}</div>`).join("")}
+      <div class="d-sec">Pipeline per ogni numero</div>
+      <div class="item">Articolo + guida PDF + landing/funnel Kajabi + video copertina sottotitolato + card sulla hub newsletterguide.davidecaiazzo.it</div>`,
+    blog:()=>`<div class="d-sec">Ultimi articoli pubblicati</div>
+      ${(a.articoli||[]).map(ar=>`<div class="item"><a href="${ar.url}" target="_blank">${ar.titolo}</a><div class="im">${ar.data}</div></div>`).join("")}
+      <div class="d-sec">Ogni articolo include</div>
+      <div class="item">SEO per AI search (schema JSON-LD, FAQ) · 4 link interni · cover Canva · CTA unica: prenota la call strategica gratuita</div>`,
+    analyst:()=>`<div class="d-sec">Ieri — ${a.ieri.data}</div>
+      <div class="bignum"><div class="pill">${a.ieri.call}<span>call prenotate</span></div><div class="pill">${a.ieri.spesa}<span>spesa ads</span></div><div class="pill">${a.ieri.click}<span>click ads</span></div></div>
+      <div class="item">${a.ieri.dettaglio}</div>
+      <div class="d-sec">Agenda call confermata</div>
+      ${(a.agenda||[]).map(x=>`<div class="item">${x}</div>`).join("")}
+      <div class="d-sec">Controllo qualità</div>
+      <div class="item">Il CEO verifica 3 volte al giorno che le routine abbiano girato; gli errori vengono risolti dal risolutore prima del recap serale (una sola email alle 19:35).</div>`
+  };
+  const TITLES={writer:["Writer","Post Taplio","Ogni mattina alle 05:01"],outreach:["Outreach","Pipeline & Invio","Pipeline 07:02 · invio 18:40 (lun–sab)"],inbox:["Inbox","DM & Commenti","Routine attualmente disattivate"],newsletter:["Newsletter","Martedì LinkedIn","Produzione mercoledì 07:30 · hub sync 06:03"],blog:["SEO","Blog Engine","Due articoli al giorno · 08:07 e 12:01"],analyst:["Analyst","Jarvis + CEO","KPI 07:12 · audit CEO 07:35, 13:35, 19:35"]};
+  const t=TITLES[k];
+  return `<div class="d-role">${t[0]} · ${a.stato}</div><h2>${t[1]}</h2><div class="d-sub">${t[2]}</div>${H[k]()}`;
+}
+function openDrawer(k){
+  document.getElementById("drawer-content").innerHTML=drawerAgent(k);
+  showDrawer();
+}
+function openDay(d){
+  const g=G.find(x=>x.d===d); if(!g)return;
+  const nomi=g.nomi.length?g.nomi.map(n=>`<div class="item">${n}</div>`).join(""):`<div class="item" style="color:var(--muted)">nessuna call prenotata</div>`;
+  document.getElementById("drawer-content").innerHTML=`
+    <div class="d-role">Dettaglio giorno${g.parz?" · dati parziali":""}</div>
+    <h2>${new Date(g.d).toLocaleDateString("it-IT",{weekday:"long",day:"numeric",month:"long"})}</h2>
+    <div class="d-sub">Fonte: jarvis-giorni.json${isLive?" (live)":" (snapshot)"}</div>
+    <div class="bignum"><div class="pill">${g.lead}<span>lead</span></div><div class="pill">${g.call}<span>call</span></div><div class="pill">${g.spesa.toFixed(0)}€<span>spesa ads</span></div></div>
+    <div class="bignum"><div class="pill">${fmtN(g.impr)}<span>impr. ads</span></div><div class="pill">${g.click}<span>click ads</span></div></div>
+    <div class="d-sec">Call del giorno</div>${nomi}`;
+  showDrawer();
+}
+function showDrawer(){
+  document.getElementById("overlay").classList.add("show");
+  document.getElementById("drawer").classList.add("show");
+}
+function closeDrawer(){
+  document.getElementById("overlay").classList.remove("show");
+  document.getElementById("drawer").classList.remove("show");
+}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDrawer()});
+
+/* ════ COUNT-UP ════ */
+function countUp(){
+  document.querySelectorAll("[data-count]").forEach(el=>{
+    const target=+el.dataset.count, dur=900, t0=performance.now();
+    const step=t=>{
+      const p=Math.min((t-t0)/dur,1), eased=1-Math.pow(1-p,3);
+      el.textContent=Math.round(target*eased).toLocaleString("it-IT");
+      if(p<1)requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  });
+}
+
+loadData();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Command · DC Academy</title>
+<style>
+  :root{
+    --bg:#f4f5f7; --card:#ffffff; --ink:#0f1222; --muted:#8a8f9e;
+    --blue:#2563eb; --blue-soft:#eaf0fe; --green:#16a34a; --amber:#d97706; --red:#dc2626;
+    --radius:18px; --shadow:0 1px 3px rgba(15,18,34,.06),0 8px 24px rgba(15,18,34,.05);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;background:var(--bg);color:var(--ink);padding:36px 4vw 60px}
+  .kicker{font-size:11px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;font-weight:600}
+  h1{font-size:clamp(26px,3.4vw,40px);font-weight:800;margin:6px 0 4px}
+  h1 .accent{color:var(--blue)}
+  .sub{color:var(--muted);font-size:14px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .live{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--green)}
+  .live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+  .live.static{color:var(--amber)} .live.static::before{background:var(--amber)}
+  @keyframes pulse{50%{opacity:.35}}
+  .sub .dot{color:#d5d8e0}
+  .hint{font-size:11.5px;color:var(--muted);font-weight:500;text-transform:none;letter-spacing:0}
+  .fade{opacity:0;transform:translateY(14px);animation:rise .55s cubic-bezier(.2,.7,.3,1) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .section-title{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:34px 0 14px}
+  .grid-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-top:24px}
+  .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;transition:transform .18s,box-shadow .18s}
+  .kpi .label{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .kpi .value{font-size:30px;font-weight:800;margin-top:8px;font-variant-numeric:tabular-nums}
+  .kpi .value small{font-size:16px;color:var(--blue);font-weight:800}
+  .kpi .note{font-size:12px;color:var(--muted);margin-top:4px}
+  .kpi.clickable{cursor:pointer}
+  .kpi.clickable:hover{transform:translateY(-3px);box-shadow:0 4px 8px rgba(15,18,34,.08),0 16px 36px rgba(15,18,34,.1)}
+  @keyframes flash{0%,100%{box-shadow:var(--shadow)}30%{box-shadow:0 0 0 3px var(--blue),var(--shadow)}}
+  .flash{animation:flash 1s ease}
+  .ok{color:var(--green);font-weight:700} .warn{color:var(--amber);font-weight:700}
+  .grid-agents{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;padding-top:26px}
+  .agent{display:flex;flex-direction:column;position:relative;cursor:pointer;padding:20px 20px 0;overflow:visible;border:1px solid #eef0f4}
+  .agent:hover{transform:translateY(-5px);box-shadow:0 6px 14px rgba(15,18,34,.1),0 22px 44px rgba(15,18,34,.12)}
+  .agent:hover .avatar{transform:rotate(-2deg) scale(1.04)}
+  .agent:hover .open{color:var(--ink);gap:8px}
+  .agent-top{display:flex;flex-direction:column;gap:2px;max-width:64%}
+  .agent .cat-ico{width:26px;height:26px;border-radius:8px;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;font-size:13px;margin-bottom:8px}
+  .agent .role{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:750}
+  .agent .name{font-size:16.5px;font-weight:800;line-height:1.2}
+  .agent-avatar-wrap{position:absolute;top:-18px;right:16px}
+  .spark{position:absolute;left:50%;transform:translateX(-50%);bottom:100%;margin-bottom:2px;display:flex;align-items:flex-end;justify-content:center;gap:2.5px;height:26px;opacity:.5;pointer-events:none}
+  .spark i{display:block;width:4px;border-radius:2px 2px 0 0;background:var(--blue);height:0;transition:height .7s cubic-bezier(.2,.8,.3,1)}
+  .agent .avatar{width:66px;height:66px;border-radius:50%;object-fit:cover;object-position:center 12%;background:var(--blue-soft);border:3px solid #fff;box-shadow:0 3px 10px rgba(15,18,34,.14);transition:transform .3s cubic-bezier(.3,.7,.3,1.3);display:block}
+  .pills{display:flex;gap:6px;flex-wrap:wrap;margin-top:16px}
+  .pill{background:var(--blue-soft);color:var(--blue);border-radius:9px;padding:7px 10px;font-size:13px;font-weight:800;text-align:center;min-width:46px}
+  .pill span{display:block;font-size:8.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:2px}
+  .agent .desc{font-size:12px;color:var(--muted);line-height:1.4;margin-top:12px;display:flex;align-items:center;gap:6px}
+  .agent .desc::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0}
+  .agent .open{display:flex;align-items:center;gap:5px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);font-weight:750;padding:13px 0;margin-top:14px;border-top:1px solid #f0f1f4;transition:gap .15s,color .15s}
+  .status{position:absolute;top:-11px;left:20px;font-size:9px;font-weight:750;letter-spacing:.06em;padding:4px 10px;border-radius:20px;z-index:2;box-shadow:0 2px 6px rgba(15,18,34,.12)}
+  .on{background:#16a34a;color:#fff} .off{background:#d97706;color:#fff}
+  .controls{display:flex;gap:8px;flex-wrap:wrap}
+  .seg{display:inline-flex;background:#eef0f4;border-radius:10px;padding:3px}
+  .seg button{border:none;background:transparent;font:inherit;font-size:12px;font-weight:700;color:var(--muted);padding:6px 14px;border-radius:8px;cursor:pointer;transition:all .15s}
+  .seg button.sel{background:#fff;color:var(--blue);box-shadow:0 1px 4px rgba(15,18,34,.12)}
+  .seg button:disabled{opacity:.35;cursor:default}
+  .grid-bottom{display:grid;grid-template-columns:1.25fr 1fr;gap:14px}
+  @media(max-width:900px){.grid-bottom{grid-template-columns:1fr}}
+  .chart{display:flex;align-items:flex-end;gap:4px;height:180px;margin-top:16px}
+  .bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;height:100%;justify-content:flex-end;cursor:pointer}
+  .bar{width:100%;max-width:30px;background:var(--blue);border-radius:5px 5px 2px 2px;position:relative;transition:height .5s cubic-bezier(.2,.7,.3,1),opacity .15s}
+  .bar.empty{background:#e8eaef;cursor:default}
+  .bar-wrap:hover .bar:not(.empty){opacity:.7}
+  .bar .tip{position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-size:10px;font-weight:700;color:var(--ink)}
+  .bar-day{font-size:9px;color:var(--muted)}
+  .legend{font-size:11px;color:var(--muted);margin-top:10px}
+  .legend b{color:var(--blue)}
+  .loglist{display:flex;flex-direction:column;margin-top:6px;max-height:330px;overflow-y:auto}
+  .logrow{display:flex;gap:12px;padding:9px 2px;border-bottom:1px solid #f0f1f4;font-size:13px;align-items:baseline}
+  .logrow:last-child{border-bottom:none}
+  .logrow .lt{font-weight:800;color:var(--blue);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .logrow .lr{flex:1;font-weight:600}
+  .logrow .lr .im{display:block;font-size:11px;color:var(--muted);font-weight:500;margin-top:1px}
+  .logrow .lv{font-size:14px;display:flex;align-items:center;gap:6px}
+  .clickable-row{cursor:pointer;border-radius:10px;transition:background .12s}
+  .clickable-row:hover{background:var(--blue-soft)}
+  .rowlink{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);font-weight:750;white-space:nowrap}
+  .todo .rowlink{margin-top:6px}
+  .todo{display:flex;gap:10px;padding:12px 2px;border-bottom:1px solid #f0f1f4;font-size:13.5px;align-items:flex-start}
+  .todo:last-child{border-bottom:none}
+  .todo .ico{font-size:16px}
+  .todo .tt{font-weight:650;line-height:1.35}
+  .todo .tm{font-size:11px;color:var(--muted);margin-top:2px}
+  .todo-full{padding:16px 4px;border-bottom:1px solid #f0f1f4}
+  .todo-full:last-child{border-bottom:none}
+  .todo-head{display:flex;gap:10px;align-items:flex-start}
+  .todo-head .ico{font-size:18px}
+  .todo-head .tt{font-weight:700;font-size:14.5px;line-height:1.35}
+  .todo-head .tm{font-size:11.5px;color:var(--muted);margin-top:2px}
+  .cosa-fare{font-size:13px;line-height:1.55;color:var(--ink);background:var(--blue-soft);border-radius:10px;padding:12px 14px;margin:12px 0 0}
+  .cosa-fare b{color:var(--blue)}
+  .todo-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .act-btn{border:1px solid #e2e5ec;background:#fff;color:var(--ink);font:inherit;font-size:12px;font-weight:700;padding:9px 14px;border-radius:10px;cursor:pointer;transition:transform .12s,box-shadow .12s}
+  .act-btn:hover{transform:translateY(-2px);box-shadow:0 4px 10px rgba(15,18,34,.1)}
+  .act-primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+  #overlay{position:fixed;inset:0;background:rgba(15,18,34,.35);opacity:0;pointer-events:none;transition:opacity .25s;z-index:40}
+  #overlay.show{opacity:1;pointer-events:auto}
+  #drawer{position:fixed;top:0;right:0;bottom:0;width:min(500px,92vw);background:#fff;z-index:50;box-shadow:-12px 0 40px rgba(15,18,34,.18);transform:translateX(105%);transition:transform .32s cubic-bezier(.2,.7,.3,1);padding:30px 28px;overflow-y:auto}
+  #drawer.show{transform:none}
+  #drawer .close{position:absolute;top:18px;right:18px;border:none;background:#eef0f4;width:32px;height:32px;border-radius:10px;font-size:15px;cursor:pointer;color:var(--muted)}
+  #drawer .d-role{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:700}
+  #drawer h2{font-size:24px;font-weight:800;margin:4px 0 2px}
+  #drawer .d-sub{font-size:12.5px;color:var(--muted);margin-bottom:18px}
+  #drawer .d-sec{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:20px 0 8px}
+  #drawer .item{padding:11px 0;border-bottom:1px solid #f0f1f4;font-size:13.5px;line-height:1.45}
+  #drawer .item:last-child{border-bottom:none}
+  #drawer .item .im{font-size:11px;color:var(--muted);margin-top:2px}
+  #drawer .badge{display:inline-block;font-size:10px;font-weight:700;padding:3px 8px;border-radius:12px;margin-left:6px;vertical-align:1px}
+  #drawer .b-ok{background:#e8f7ee;color:var(--green)} #drawer .b-no{background:#fdf2e3;color:var(--amber)}
+  #drawer .bignum{display:flex;gap:10px;margin:6px 0}
+  #drawer .bignum .pill{flex:1}
+  footer{margin-top:40px;font-size:11px;color:var(--muted);line-height:1.6}
+  #jarvis-voce-btn{font-family:inherit;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    background:var(--blue-soft);color:var(--blue);border:1px solid #d7e0fb;border-radius:10px;
+    padding:7px 14px;cursor:pointer}
+  #jarvis-voce-btn:hover{background:#dde7fe}
+  @keyframes jvpulse{0%,100%{box-shadow:inset 3px 0 0 0 var(--blue),0 0 0 1px var(--blue)}50%{box-shadow:inset 3px 0 0 0 var(--blue),0 0 22px rgba(37,99,235,.25)}}
+  .jv-acceso{animation:jvpulse 1.3s ease-in-out infinite}
+</style>
+</head>
+<body>
+
+<div class="fade">
+  <div class="kicker">DC ACADEMY · CLAUDE COMMAND</div>
+  <h1>Claude <span class="accent">Agent</span> Dashboard</h1>
+  <div class="sub">
+    <button id="jarvis-voce-btn">🎙 Leggi lo stato</button>
+    <span class="dot">·</span>
+    <span id="h-stato">…</span>
+    <span class="dot">·</span>
+    <span class="live" id="h-live">caricamento…</span>
+    <span class="dot">·</span>
+    <span id="h-agg"></span>
+  </div>
+</div>
+
+<div class="controls fade" style="margin-top:20px;animation-delay:.12s;align-items:center">
+  <div class="seg" id="seg-view">
+    <button data-v="giorno" class="sel">Giorno</button>
+    <button data-v="settimana">Settimana</button>
+  </div>
+  <div class="seg">
+    <button id="d-prev" title="periodo precedente">‹</button>
+    <button class="sel" id="d-label" style="cursor:default;min-width:170px">…</button>
+    <button id="d-next" title="periodo successivo">›</button>
+  </div>
+  <span id="d-note" style="font-size:11.5px;color:var(--amber);font-weight:600"></span>
+</div>
+
+<div class="grid-kpi" id="kpi-row"></div>
+
+<div class="section-title fade" style="animation-delay:.3s;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px">
+  <span>Il tuo agent team</span>
+  <span class="hint">clicca un agente per vedere cosa sta facendo →</span>
+</div>
+<div class="grid-agents" id="agents-row"></div>
+
+<div class="grid-bottom" style="margin-top:34px">
+  <div class="card fade" style="animation-delay:.65s">
+    <div class="section-title" style="margin:0 0 8px">Esecuzioni di oggi per ora · clicca una barra</div>
+    <div class="chart" id="chart"></div>
+    <div class="legend"><b>barre</b> = routine eseguite in quella fascia oraria (fonte: report CEO + registro schedulazioni)</div>
+  </div>
+
+  <div class="card fade" style="animation-delay:.7s">
+    <div class="section-title" style="margin:0 0 4px" id="reg-title">Registro di oggi</div>
+    <div class="loglist" id="loglist"></div>
+  </div>
+</div>
+
+<div class="card fade" style="margin-top:14px;animation-delay:.75s">
+  <div class="section-title" style="margin:0 0 6px">⚠ Richiede una tua decisione</div>
+  <div id="todos"></div>
+</div>
+
+<footer class="fade" style="animation-delay:.8s" id="foot"></footer>
+
+<div id="overlay" onclick="closeDrawer()"></div>
+<aside id="drawer" role="dialog" aria-modal="true">
+  <button class="close" onclick="closeDrawer()">✕</button>
+  <div id="drawer-content"></div>
+</aside>
+
+<script>
+/* FALLBACK snapshot 9/7/2026 19:42, usato se il JSON non è raggiungibile */
+const FB={"aggiornato":"2026-07-09 19:42","giorni":[{"data":"2026-07-09","stato":"✅ Tutto regolare","kpi":{"attive":20,"in_pausa":7,"esecuzioni":16,"errori_nuovi":0,"risolutore_interventi":0,"attendono_davide":2},"per_ora":{"4":1,"5":2,"6":2,"7":3,"8":1,"12":1,"13":2,"14":1,"18":2,"19":1},"registro":[{"ora":"04:06","r":"pulizia-sessioni-zombie","esito":"ok"},{"ora":"05:01","r":"taplio-viral-posts-daily","esito":"ok","nota":"post schedulato","url":"https://app.taplio.com/dashboard"},{"ora":"05:08","r":"audit-meta-ads-daily","esito":"ok","nota":"recap 05:19","url":"https://adsmanager.facebook.com/adsmanager/manage/campaigns?act=465327538443110"},{"ora":"06:01","r":"reel-virali-3-format","esito":"ok","nota":"recap 06:10"},{"ora":"06:04","r":"gestione-inbox giro 6:00","esito":"ok","url":"https://mail.google.com/mail/u/0/#inbox"},{"ora":"07:02","r":"outreach-pipeline-giornaliera","esito":"ok","url":"http://localhost:8766/outreach-dashboard.html"},{"ora":"07:15","r":"jarvis-dashboard-daily","esito":"ok","url":"http://localhost:8765/jarvis-risultati.html"},{"ora":"07:35","r":"ceo-audit giro 1","esito":"ok"},{"ora":"08:08","r":"articolo-blog-giornaliero","esito":"ok","nota":"pubblicato, cover e SEO verificati","url":"https://www.davidecaiazzo.it/blog/linkedin-per-assicuratori-nel-2026-come-trovare-clienti"},{"ora":"12:02","r":"articolo-blog-ai-giornaliero","esito":"ok","nota":"pubblicato, cover e SEO verificati","url":"https://www.davidecaiazzo.it/blog/definire-prezzi-intelligenza-artificiale"},{"ora":"13:04","r":"gestione-inbox giro 13:00","esito":"ok","url":"https://mail.google.com/mail/u/0/#inbox"},{"ora":"13:35","r":"ceo-audit giro 2","esito":"ok"},{"ora":"14:00","r":"outreach-verifica-risposte","esito":"ok","url":"http://localhost:8766/outreach-dashboard.html"},{"ora":"18:04","r":"gestione-inbox giro 18:00","esito":"ok","url":"https://mail.google.com/mail/u/0/#inbox"},{"ora":"18:45","r":"outreach-invio-giornaliero","esito":"ok","nota":"6 inviati, 2 esclusi in autonomia","url":"http://localhost:8766/outreach-dashboard.html"},{"ora":"19:42","r":"ceo-audit giro 3","esito":"ok","nota":"email di fine giornata inviata"}],"richiede_davide":[{"titolo":"Meta Ads: 5 creativi del 2 luglio, 364€ senza prenotazioni","nota":"decisione di budget, aperta dall'8/7","tipo":"budget","cosa_fare":"Ferma subito i 5 creativi del 2 luglio, zero prenotazioni in 7 giorni pieni. Non chiudere la campagna, non scalare il budget (CPA reale 482€ contro target 40 70€). Riscrivi l'hook dei nuovi creativi copiando lo stile del creativo La Sfida, l'unico che converte ancora. Parere completo di CMO e CFO nella conversazione qui sotto.","url":"https://adsmanager.facebook.com/adsmanager/manage/campaigns?act=465327538443110","url_label":"apri Meta Ads Manager","conversazione":"https://mail.google.com/mail/u/0/#inbox/19f44e1892d14628","conversazione_label":"apri l'email con l'analisi completa (Comparazione Meta Ads, 9 luglio)"},{"titolo":"SEO: 2 slug rotti in sitemap, serve ok al reslug","nota":"segnalati il 3/7, pagine Antitrust e DC #071 Outbound","tipo":"seo","cosa_fare":"Decidi il nuovo slug per i 2 articoli con URL rotto (quello sull'Antitrust e DC #071 Sfrutta l'Outbound Marketing), poi lo applico io. Nessun'altra fonte ha il dettaglio degli URL originali oltre al titolo: leggi la conversazione qui sotto per il contesto completo.","url":"https://search.google.com/search-console?resource_id=https%3A%2F%2Fwww.davidecaiazzo.it%2F","url_label":"apri Google Search Console","conversazione":"https://mail.google.com/mail/u/0/#inbox/19f47ff60157d3d7","conversazione_label":"apri il report CEO del 9 luglio"}]}],"gruppi":{"writer":{"stato":"attiva","pills":[{"v":"2","l":"routine"},{"v":"05:01","l":"prima del giorno"}],"routine":[{"nome":"taplio-viral-posts-daily","orario":"ogni giorno 05:01","stato":"attiva","ultimo":"oggi 05:01 ok","cosa":"trova post virale, traduce, replica grafica, schedula su Taplio","url":"https://app.taplio.com/dashboard","id":"taplio-viral-posts-daily"},{"nome":"reel-virali-3-format","orario":"ogni giorno 06:01","stato":"attiva","ultimo":"oggi 06:01 ok","cosa":"replica struttura di un reel virale estero con script italiano originale","id":"reel-virali-3-format"}]},"outreach":{"stato":"attiva","pills":[{"v":"3","l":"routine"},{"v":"6","l":"inviati oggi"}],"routine":[{"nome":"outreach-pipeline-giornaliera","orario":"lun sab 07:02","stato":"attiva","ultimo":"oggi 07:02 ok","cosa":"trova fino a 10 candidati in target, li mette in dashboard da approvare","url":"http://localhost:8766/outreach-dashboard.html","id":"outreach-pipeline-giornaliera"},{"nome":"outreach-invio-giornaliero","orario":"lun sab 18:40","stato":"attiva","ultimo":"oggi 18:45 ok, 6 inviati, 2 in trattativa esclusi","cosa":"invia i messaggi approvati con ritmo anti ban","url":"http://localhost:8766/outreach-dashboard.html","id":"outreach-invio-giornaliero"},{"nome":"outreach-verifica-risposte","orario":"ogni giorno 14:00","stato":"attiva","ultimo":"oggi 14:00 ok","cosa":"controlla le risposte ai DM e aggiorna outreach data","url":"http://localhost:8766/outreach-dashboard.html","id":"outreach-linkedin-verifica-risposte"}]},"inbox":{"stato":"attiva","pills":[{"v":"3x/g","l":"giri email"},{"v":"2","l":"in pausa"}],"routine":[{"nome":"gestione-inbox-dc-academy","orario":"6:00, 13:00, 18:00","stato":"attiva","ultimo":"oggi 18:04 ok, inbox pulita","cosa":"smista la posta di ceo@, risponde all'azionabile, Ccn sempre attivo","url":"https://mail.google.com/mail/u/0/#inbox","id":"gestione-inbox-dc-academy"},{"nome":"linkedin-risposte-commenti","orario":"ogni ora 8 17","stato":"in pausa","ultimo":"7 luglio","cosa":"risponde ai commenti sotto i post","url":"https://www.linkedin.com/notifications/","id":"linkedin-risposte-commenti"},{"nome":"linkedin-risposte-dm","orario":"ogni ora 8:30 17:30","stato":"in pausa","ultimo":"3 luglio","cosa":"invia le guide a chi le chiede in DM","url":"https://www.linkedin.com/messaging/","id":"linkedin-risposte-dm"}]},"publisher":{"stato":"attiva","pills":[{"v":"7","l":"routine"},{"v":"2/g","l":"articoli"}],"routine":[{"nome":"articolo-blog-giornaliero","orario":"ogni giorno 08:07","stato":"attiva","ultimo":"oggi 08:08 ok, pubblicato","cosa":"articolo SEO tema LinkedIn","url":"https://www.davidecaiazzo.it/blog/linkedin-per-assicuratori-nel-2026-come-trovare-clienti","id":"articolo-blog-giornaliero"},{"nome":"articolo-blog-ai-giornaliero","orario":"ogni giorno 12:01","stato":"attiva","ultimo":"oggi 12:02 ok, pubblicato","cosa":"articolo SEO tema IA per PMI","url":"https://www.davidecaiazzo.it/blog/definire-prezzi-intelligenza-artificiale","id":"articolo-blog-ai-giornaliero"},{"nome":"articolo-blog-newsletter-linkedin","orario":"martedì 11:50","stato":"attiva","ultimo":"7 luglio ok","cosa":"trasforma l'ultimo post LinkedIn in articolo","id":"articolo-blog-newsletter-linkedin"},{"nome":"newsletter-martedi-produzione","orario":"mercoledì 07:30","stato":"attiva","ultimo":"8 luglio ok","cosa":"produce articolo, guida PDF e funnel della newsletter","id":"newsletter-martedi-produzione"},{"nome":"newsletter-hub-sync","orario":"mercoledì 06:03","stato":"attiva","ultimo":"8 luglio ok","cosa":"aggiunge la guida nuova alla hub newsletterguide","url":"https://newsletterguide.davidecaiazzo.it","id":"newsletter-hub-sync-settimanale"},{"nome":"newsletter-cta-review","orario":"venerdì 09:14","stato":"attiva","ultimo":"prima esecuzione domani","cosa":"valuta cambio CTA guida con parere CMO","id":"newsletter-cta-review"},{"nome":"newsletter-martedi-pubblicazione","orario":"prima: ogni sera 21:00","stato":"in pausa","ultimo":"8 luglio, disattivata il 9/7, girava a vuoto 6 sere su 7","cosa":"sottotitola il video copertina quando lo carichi","id":"newsletter-martedi-pubblicazione"}]},"analyst":{"stato":"attiva","pills":[{"v":"4","l":"routine"},{"v":"lun","l":"comitato"}],"routine":[{"nome":"jarvis-dashboard-daily","orario":"ogni giorno 07:12","stato":"attiva","ultimo":"oggi 07:15 ok","cosa":"aggiorna KPI Jarvis e dashboard LinkedIn","url":"http://localhost:8765/jarvis-risultati.html","id":"jarvis-dashboard-daily"},{"nome":"audit-meta-ads-daily","orario":"ogni giorno 05:07","stato":"attiva","ultimo":"oggi 05:08 ok","cosa":"verdetto chiudi tieni scala su tutte le campagne con parere CMO e CFO","url":"https://adsmanager.facebook.com/adsmanager/manage/campaigns?act=465327538443110","id":"audit-meta-ads-daily"},{"nome":"comitato-direzione-settimanale","orario":"lunedì 07:00","stato":"attiva","ultimo":"6 luglio ok","cosa":"riunisce CMO, CSO, CTO, CFO in un documento di direzione","id":"comitato-direzione-settimanale"},{"nome":"seo-audit-settimanale","orario":"lunedì 09:07","stato":"attiva","ultimo":"6 luglio ok","cosa":"audit e fix automatico SEO e GEO di davidecaiazzo.it","url":"https://www.davidecaiazzo.it","id":"seo-audit-settimanale-davidecaiazzo"}]},"guardian":{"stato":"attiva","pills":[{"v":"3x/g","l":"audit ceo"},{"v":"0","l":"errori oggi"}],"routine":[{"nome":"ceo-audit-routine","orario":"07:35, 13:35, 19:35","stato":"attiva","ultimo":"oggi 19:42 ok, giornata pulita, email inviata","cosa":"controlla che ogni routine abbia girato, delega i fix al risolutore","id":"ceo-audit-routine"},{"nome":"pulizia-sessioni-zombie","orario":"ogni notte 04:00","stato":"attiva","ultimo":"oggi 04:06 ok","cosa":"chiude i processi congelati e i task esauriti","id":"pulizia-sessioni-zombie"},{"nome":"pulizia-cartelle-root-weekly","orario":"venerdì 15:00","stato":"attiva","ultimo":"3 luglio ok","cosa":"tiene in ordine la root di 2. Claude secondo la mappa","id":"pulizia-cartelle-root-weekly"},{"nome":"aggiorna-second-brain","orario":"domenica 19:00","stato":"attiva","ultimo":"5 luglio ok","cosa":"aggiorna il vault Obsidian con decisioni e lezioni della settimana","id":"aggiorna-second-brain"}]}}};
+
+let D=null,isLive=false,curDay=0,curView="giorno",curWeek=0;
+
+/* settimane ISO (lun–dom) a partire dai giorni disponibili */
+function weekKey(dateStr){
+  const d=new Date(dateStr+"T00:00:00");
+  const day=(d.getDay()+6)%7; // 0=lunedì
+  const mon=new Date(d); mon.setDate(d.getDate()-day);
+  const sun=new Date(mon); sun.setDate(mon.getDate()+6);
+  return {key:mon.toISOString().slice(0,10), mon, sun};
+}
+function buildWeeks(giorni){
+  const map=new Map();
+  giorni.forEach((g,i)=>{
+    const w=weekKey(g.data);
+    if(!map.has(w.key)) map.set(w.key,{mon:w.mon,sun:w.sun,idx:[]});
+    map.get(w.key).idx.push(i);
+  });
+  return [...map.values()].sort((a,b)=>a.mon-b.mon);
+}
+function aggregateWeek(week){
+  const giorni=week.idx.map(i=>D.giorni[i]);
+  const last=giorni[giorni.length-1];
+  const sum=f=>giorni.reduce((s,g)=>s+(f(g)||0),0);
+  const per_ora={};
+  giorni.forEach(g=>Object.entries(g.per_ora||{}).forEach(([h,v])=>per_ora[h]=(per_ora[h]||0)+v));
+  const registro=giorni.flatMap(g=>g.registro.map(e=>({...e,ora:g.data.slice(8,10)+"/"+g.data.slice(5,7)+" "+e.ora})));
+  const todosMap=new Map();
+  giorni.forEach(g=>(g.richiede_davide||[]).forEach(t=>todosMap.set(t.titolo,t)));
+  return {
+    stato: giorni.every(g=>g.stato.includes("✅"))?"✅ Tutto regolare":"⚠️ Verifica dettagli",
+    kpi:{ attive:last.kpi.attive, in_pausa:last.kpi.in_pausa,
+      esecuzioni:sum(g=>g.kpi.esecuzioni), errori_nuovi:sum(g=>g.kpi.errori_nuovi),
+      risolutore_interventi:sum(g=>g.kpi.risolutore_interventi), attendono_davide:last.kpi.attendono_davide },
+    per_ora, registro, richiede_davide:[...todosMap.values()],
+    _giorniCount:giorni.length
+  };
+}
+
+/* accetta sia il formato nuovo {giorni:[...]} sia il vecchio piatto (fallback) */
+function normalize(x){
+  if(x.giorni) return x;
+  return {aggiornato:x.aggiornato, gruppi:x.gruppi, giorni:[{
+    data:"2026-07-09", stato:x.stato,
+    kpi:{...x.kpi, esecuzioni:x.kpi.esecuzioni_oggi},
+    per_ora:x.esecuzioni_oggi_per_ora, registro:x.registro_oggi,
+    richiede_davide:x.richiede_davide}]};
+}
+
+async function loadData(){
+  try{
+    const r=await fetch("claude-command-dati.json",{cache:"no-store"});
+    if(!r.ok)throw 0;
+    D=normalize(await r.json()); isLive=true;
+  }catch(e){ D=normalize(FB); isLive=false; }
+  curDay=D.giorni.length-1;
+  render();
+}
+
+const CARD=[
+  {k:"writer",role:"Writer",av:"✍️",nm:"Contenuti",desc:"scrive un post e uno script al giorno"},
+  {k:"outreach",role:"Outreach",av:"🎯",nm:"Pipeline & Invio",desc:"trova, approva, invia ogni giorno"},
+  {k:"inbox",role:"Inbox",av:"💬",nm:"Email & DM",desc:"3 giri al giorno sulla posta ceo@"},
+  {k:"publisher",role:"Publisher",av:"📰",nm:"Blog & Newsletter",desc:"2 articoli al giorno + newsletter"},
+  {k:"analyst",role:"Analyst",av:"📊",nm:"KPI & Direzione",desc:"KPI ogni mattina, comitato il lunedì"},
+  {k:"guardian",role:"Guardian",av:"🛡️",nm:"CEO & Pulizie",desc:"controlla tutto 3 volte al giorno"}
+];
+
+/* stessa foto di Davide ripetuta su ogni card, come il personaggio del video */
+const AVATAR_IMG=`<img class="avatar" src="davide-avatar.png" alt="Davide">`;
+
+/* routine reali che appartengono a ciascun gruppo, per costruire lo sparkline dalle ore vere del registro */
+const GROUP_ROUTINES={
+  writer:["taplio-viral-posts-daily","reel-virali-3-format"],
+  outreach:["outreach-pipeline-giornaliera","outreach-invio-giornaliero","outreach-verifica-risposte"],
+  inbox:["gestione-inbox"],
+  publisher:["articolo-blog-giornaliero","articolo-blog-ai-giornaliero","articolo-blog-newsletter-linkedin","newsletter"],
+  analyst:["jarvis-dashboard-daily","audit-meta-ads-daily","comitato-direzione-settimanale","seo-audit"],
+  guardian:["ceo-audit","pulizia-sessioni-zombie","pulizia-cartelle-root-weekly","aggiorna-second-brain"]
+};
+function sparkFor(k,registro){
+  const names=GROUP_ROUTINES[k]||[];
+  const hits=registro.filter(e=>names.some(n=>e.r.includes(n)));
+  if(hits.length<2) return "";
+  const bars=hits.slice(-8).map(e=>e.esito==="ok"?1:0.4);
+  const max=Math.max(...bars,1);
+  return `<div class="spark">${bars.map(v=>`<i data-h="${Math.max(6,Math.round(v/max*34))}"></i>`).join("")}</div>`;
+}
+
+function render(){
+  const weeks=buildWeeks(D.giorni);
+  let day, dLbl, oggi, soloUnGiorno=false;
+
+  if(curView==="settimana"){
+    const w=weeks[curWeek];
+    day=aggregateWeek(w);
+    dLbl=w.mon.toLocaleDateString("it-IT",{day:"numeric",month:"short"})+" – "+w.sun.toLocaleDateString("it-IT",{day:"numeric",month:"short"});
+    oggi=curWeek===weeks.length-1;
+    document.getElementById("d-label").textContent=(oggi?"Questa settimana · ":"")+dLbl;
+    document.getElementById("d-prev").disabled=curWeek===0;
+    document.getElementById("d-next").disabled=oggi;
+    soloUnGiorno = weeks.length===1 && day._giorniCount===1;
+  } else {
+    day=D.giorni[curDay];
+    oggi=curDay===D.giorni.length-1;
+    dLbl=new Date(day.data).toLocaleDateString("it-IT",{weekday:"short",day:"numeric",month:"long"});
+    document.getElementById("d-label").textContent=(oggi?"Oggi · ":"")+dLbl;
+    document.getElementById("d-prev").disabled=curDay===0;
+    document.getElementById("d-next").disabled=oggi;
+    soloUnGiorno = D.giorni.length===1;
+  }
+  document.getElementById("d-note").textContent = soloUnGiorno
+    ? "solo oggi disponibile, l'archivio cresce da domani"
+    : "";
+
+  document.getElementById("h-stato").innerHTML="<b>"+day.stato+"</b>";
+  const live=document.getElementById("h-live");
+  if(isLive){live.textContent="dati live";live.classList.remove("static");}
+  else{live.textContent="snapshot, apri con CLAUDE-COMMAND.command per dati live";live.classList.add("static");}
+  document.getElementById("h-agg").textContent="Aggiornato: "+D.aggiornato+" (report CEO)";
+
+  const k=day.kpi;
+  /* attive/in_pausa ricalcolate dai gruppi (unica fonte), non da un numero statico separato */
+  const allRoutineNow=CARD.flatMap(c=>(D.gruppi[c.k]?.routine)||[]);
+  const nAttive=allRoutineNow.filter(r=>r.stato==="attiva").length;
+  const nPausa=allRoutineNow.length-nAttive;
+  document.getElementById("kpi-row").innerHTML=[
+    {l:"Routine attive",v:nAttive,n:`${nPausa} in pausa <span class="rowlink">vedi tutte →</span>`,action:"openAllRoutine()"},
+    {l:oggi?"Esecuzioni oggi":"Esecuzioni del giorno",v:k.esecuzioni,n:'<span class="rowlink">vedi registro →</span>',action:"jumpTo('loglist')"},
+    {l:"Errori nuovi",v:k.errori_nuovi,n:k.errori_nuovi==0?'<span class="ok">giornata pulita</span> <span class="rowlink">vedi registro →</span>':'<span class="warn">vedi registro →</span>',action:"jumpTo('loglist')"},
+    {l:"Interventi risolutore",v:k.risolutore_interventi,n:'<span class="rowlink">vedi registro →</span>',action:"jumpTo('loglist')"},
+    {l:"Attendono te",v:k.attendono_davide,n:k.attendono_davide>0?'<span class="warn">decisioni aperte →</span>':'<span class="ok">niente in coda</span>',action:"jumpTo('todos')"}
+  ].map((c,i)=>`<div class="card kpi fade clickable" style="animation-delay:${.05+i*.05}s" onclick="${c.action}">
+    <div class="label">${c.l}</div>
+    <div class="value"><span data-count="${c.v}">0</span></div>
+    <div class="note">${c.n}</div></div>`).join("");
+
+  document.getElementById("agents-row").innerHTML=CARD.map((c,i)=>{
+    const g=D.gruppi[c.k]; if(!g)return "";
+    const on=g.stato==="attiva";
+    return `<div class="card agent fade" style="animation-delay:${.35+i*.05}s" onclick="openGroup('${c.k}')">
+      <span class="status ${on?"on":"off"}">${on?"attiva":"in pausa"}</span>
+      <div class="agent-top">
+        <div class="cat-ico">${c.av}</div>
+        <div class="role">${c.role}</div>
+        <div class="name">${c.nm}</div>
+      </div>
+      <div class="agent-avatar-wrap">
+        ${sparkFor(c.k,day.registro)}
+        ${AVATAR_IMG}
+      </div>
+      <div class="pills">${g.pills.map(p=>`<div class="pill">${p.v}<span>${p.l}</span></div>`).join("")}</div>
+      <div class="desc">${c.desc}</div>
+      <div class="open">click to open <span style="font-size:12px">→</span></div></div>`;
+  }).join("");
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    document.querySelectorAll(".spark i").forEach(b=>b.style.height=b.dataset.h+"px");
+  }));
+
+  /* chart 24h */
+  const per=day.per_ora;
+  const max=Math.max(...Object.values(per),1);
+  let bars="";
+  for(let h=4;h<=21;h++){
+    const v=per[h]||0, hh=v?Math.max(10,Math.round(v/max*125)):4;
+    bars+=`<div class="bar-wrap" ${v?`onclick="openHour(${h})"`:""}>
+      <div class="bar ${v?"":"empty"}" style="height:4px" data-h="${hh}">${v?`<div class="tip">${v}</div>`:""}</div>
+      <div class="bar-day">${h}</div></div>`;
+  }
+  document.getElementById("chart").innerHTML=bars;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    document.querySelectorAll("#chart .bar").forEach(b=>b.style.height=b.dataset.h+"px");
+  }));
+
+  document.getElementById("reg-title").textContent=`Registro ${oggi?"di oggi":"del "+dLbl} · ${day.registro.length} esecuzioni`;
+  document.getElementById("loglist").innerHTML=day.registro.map(e=>
+    `<div class="logrow${e.url?" clickable-row":""}"${e.url?` onclick="window.open('${e.url}','_blank')"`:""}>
+     <div class="lt">${e.ora}</div>
+     <div class="lr">${e.r}${e.nota?`<span class="im">${e.nota}</span>`:""}</div>
+     <div class="lv">${e.esito==="ok"?"✅":"⚠️"}${e.url?' <span class="rowlink">apri →</span>':""}</div></div>`).join("");
+
+  document.getElementById("todos").innerHTML=(day.richiede_davide||[]).length
+    ? day.richiede_davide.map(t=>`<div class="todo-full">
+        <div class="todo-head"><div class="ico">${t.tipo==="budget"?"💶":"🔧"}</div>
+          <div><div class="tt">${t.titolo}</div><div class="tm">${t.nota}</div></div></div>
+        ${t.cosa_fare?`<div class="cosa-fare"><b>Cosa fare:</b> ${t.cosa_fare}</div>`:""}
+        <div class="todo-actions">
+          ${t.url?`<button class="act-btn act-primary" onclick="window.open('${t.url}','_blank')">${t.url_label||"apri lo strumento"}</button>`:""}
+          ${t.conversazione?`<button class="act-btn" onclick="window.open('${t.conversazione}','_blank')">${t.conversazione_label||"apri la conversazione"}</button>`:""}
+        </div>
+      </div>`).join("")
+    : '<div class="todo"><div class="ico">✅</div><div class="tt">Niente in coda. Nessuna decisione aperta.</div></div>';
+
+  document.getElementById("foot").innerHTML=`Fonti: report CEO (~/.claude/ceo/report.md, 3 giri al giorno) + registro schedulazioni · ${isLive?"lettura live dal server JARVIS (porta 8765)":"snapshot incorporato del 9/7/2026"}.<br>Tutti i dati sono reali, verificati dal giro di audit del CEO. Zero numeri inventati.`;
+
+  lastDay=day;
+  countUp();
+}
+let lastDay=null;
+
+// ------- VOCE JARVIS (17/07, "metti jarvis su ogni dashboard") -------
+// legge da `lastDay`/`D.gruppi` (dati veri, stessa fonte del rendering), ogni frase porta il
+// riferimento esatto alla card da illuminare. Salta il registro riga-per-riga e il grafico orario
+// (troppo lunghi da elencare a voce): legge KPI, i 6 gruppi agenti, e soprattutto le decisioni che
+// aspettano Davide per intero (titolo+nota+cosa fare), quelle sì vanno dette tutte.
+let jvSpeaking=false, jvPlayer=null, jvElementoAcceso=null;
+function jvEvidenzia(el){
+  if(jvElementoAcceso) jvElementoAcceso.classList.remove('jv-acceso');
+  jvElementoAcceso=el||null;
+  if(el) el.classList.add('jv-acceso');
+}
+function jvFrasi(){
+  if(!lastDay) return [{testo:"Non ho ancora i dati, Signore.", el:null}];
+  const day=lastDay;
+  const agentCards=[...document.getElementById('agents-row').children];
+  const out=[];
+  // .trim() dopo aver tolto l'emoji: senza, restava uno spazio in testa ("Stato:  Tutto regolare",
+  // pausa anomala nel parlato — trovato 18/07 nell'analisi approfondita)
+  out.push({testo:document.getElementById('d-label').textContent+". Stato: "+day.stato.replace(/[✅⚠️]/g,'').trim()+". "+(document.getElementById('h-live').textContent)+".", el:null});
+  const k=day.kpi;
+  const allRoutineNow=CARD.flatMap(function(c){ return (D.gruppi[c.k]&&D.gruppi[c.k].routine)||[]; });
+  const nAttive=allRoutineNow.filter(function(r){return r.stato==='attiva'}).length;
+  const nPausa=allRoutineNow.length-nAttive;
+  // 17/07, "non serve che leggi ogni riga, dammi punti salienti": una frase sola coi 5 KPI
+  out.push({testo:"Routine attive: "+nAttive+" ("+nPausa+" in pausa). Esecuzioni: "+k.esecuzioni+". Errori nuovi: "+k.errori_nuovi+(k.errori_nuovi===0?" (giornata pulita)":" (da guardare)")+". Interventi del risolutore: "+k.risolutore_interventi+". Decisioni che aspettano lei: "+k.attendono_davide+".", el:document.getElementById('kpi-row')});
+  out.push({testo:"La squadra, sei gruppi.", el:null});
+  CARD.forEach(function(c,i){
+    const g=D.gruppi[c.k]; if(!g) return;
+    const pillTxt=(g.pills||[]).map(function(p){return p.v+' '+p.l}).join(', ');
+    out.push({testo:c.role+", "+c.nm+": "+(g.stato==='attiva'?'attiva':'in pausa')+". "+pillTxt+". "+c.desc+".", el:agentCards[i]||null});
+  });
+  const todos=day.richiede_davide||[];
+  const todoCards=[...document.getElementById('todos').children];
+  if(todos.length){
+    out.push({testo:"Attenzione, Signore: "+todos.length+(todos.length===1?" decisione aperta.":" decisioni aperte."), el:null});
+    todos.forEach(function(t,i){
+      out.push({testo:t.titolo+". "+t.nota+(t.cosa_fare?(" Cosa fare: "+t.cosa_fare):""), el:todoCards[i]||null});
+    });
+  } else {
+    out.push({testo:"Niente in coda: nessuna decisione aperta per lei.", el:todoCards[0]||null});
+  }
+  out.push({testo:"Fine del rapporto, Signore.", el:null});
+  return out;
+}
+function jvParla(who,testo){
+  return fetch('/parla?who='+encodeURIComponent(who)+'&testo='+encodeURIComponent(testo))
+    .then(function(r){ if(!r.ok) throw new Error('tts'); return r.blob(); })
+    .then(function(b){ return URL.createObjectURL(b); }).catch(function(){ return null; });
+}
+function jvStop(){
+  jvSpeaking=false; jvEvidenzia(null);
+  if(jvPlayer){ jvPlayer.pause(); jvPlayer=null; }
+  speechSynthesis.cancel();
+  document.getElementById('jarvis-voce-btn').textContent='🎙 Leggi lo stato';
+}
+function jvAvvia(){
+  if(jvSpeaking){ jvStop(); return; }
+  jvSpeaking=true;
+  document.getElementById('jarvis-voce-btn').textContent='◼ Ferma';
+  const seq=jvFrasi();
+  let prossimo=seq.length?jvParla('jarvis',seq[0].testo):Promise.resolve(null);
+  (function go(i){
+    if(!jvSpeaking || i>=seq.length){ jvStop(); return; }
+    const S=seq[i], attuale=prossimo;
+    prossimo=(i+1<seq.length && jvSpeaking)?jvParla('jarvis',seq[i+1].testo):Promise.resolve(null);
+    attuale.then(function(src){
+      if(!jvSpeaking) return;
+      jvEvidenzia(S.el);
+      if(!src){
+        const u=new SpeechSynthesisUtterance(S.testo); u.lang='it-IT'; u.rate=0.98;
+        u.onend=function(){ setTimeout(function(){go(i+1)},180); };
+        u.onerror=function(){ setTimeout(function(){go(i+1)},150); };
+        speechSynthesis.speak(u); return;
+      }
+      jvPlayer=new Audio(src);
+      jvPlayer.onended=function(){ setTimeout(function(){go(i+1)},150); };
+      jvPlayer.onerror=function(){ setTimeout(function(){go(i+1)},150); };
+      jvPlayer.play();
+    });
+  })(0);
+}
+document.getElementById('jarvis-voce-btn').addEventListener('click', jvAvvia);
+
+/* la routine stessa: servita dal server locale (file:// e bloccato da Chrome da pagine http) */
+function skillLink(r){
+  return r.id?`http://localhost:8765/routine?id=${encodeURIComponent(r.id)}`:null;
+}
+function openAllRoutine(){
+  const rows=[];
+  CARD.forEach(c=>{
+    const g=D.gruppi[c.k]; if(!g)return;
+    g.routine.forEach(r=>rows.push({...r, gruppo:c.nm}));
+  });
+  document.getElementById("drawer-content").innerHTML=`
+    <div class="d-role">Tutte le routine</div><h2>${rows.length} totali</h2>
+    <div class="d-sub">${rows.filter(r=>r.stato==="attiva").length} attive, ${rows.filter(r=>r.stato!=="attiva").length} in pausa</div>
+    ${rows.map(r=>`<div class="item clickable-row" onclick="window.open('${skillLink(r)}','_blank')"><b>${r.nome}</b>
+      <span class="badge ${r.stato==="attiva"?"b-ok":"b-no"}">${r.stato}</span>
+      <div class="im">${r.gruppo} · ${r.orario}</div>
+      <div class="im">ultimo: ${r.ultimo}</div><div class="rowlink">apri la routine →</div></div>`).join("")}`;
+  showDrawer();
+}
+function openGroup(k){
+  const g=D.gruppi[k], c=CARD.find(x=>x.k===k);
+  document.getElementById("drawer-content").innerHTML=`
+    <div class="d-role">${c.role} · ${g.stato}</div><h2>${c.nm}</h2>
+    <div class="d-sub">${g.routine.length} routine in questo gruppo</div>
+    ${g.routine.map(r=>`<div class="item clickable-row" onclick="window.open('${skillLink(r)}','_blank')"><b>${r.nome}</b>
+      <span class="badge ${r.stato==="attiva"?"b-ok":"b-no"}">${r.stato}</span>
+      <div class="im">${r.orario}, ultimo: ${r.ultimo}</div>
+      <div class="im">${r.cosa}</div><div class="rowlink">apri la routine →</div></div>`).join("")}`;
+  showDrawer();
+}
+function openHour(h){
+  const rows=(lastDay?lastDay.registro:D.giorni[curDay].registro).filter(e=>+e.ora.slice(-5,-3)===h);
+  document.getElementById("drawer-content").innerHTML=`
+    <div class="d-role">Fascia oraria</div><h2>Ore ${h}:00</h2>
+    <div class="d-sub">${rows.length} esecuzioni</div>
+    ${rows.map(e=>`<div class="item${e.url?" clickable-row":""}"${e.url?` onclick="window.open('${e.url}','_blank')"`:""}><b>${e.ora}</b> ${e.r} ${e.esito==="ok"?"✅":"⚠️"}${e.nota?`<div class="im">${e.nota}</div>`:""}${e.url?'<div class="rowlink">apri →</div>':""}</div>`).join("")}`;
+  showDrawer();
+}
+function jumpTo(id){
+  const el=document.getElementById(id);
+  if(!el)return;
+  const card=el.closest(".card")||el;
+  card.scrollIntoView({behavior:"smooth",block:"center"});
+  card.classList.remove("flash"); void card.offsetWidth; card.classList.add("flash");
+}
+function showDrawer(){document.getElementById("overlay").classList.add("show");document.getElementById("drawer").classList.add("show");}
+function closeDrawer(){document.getElementById("overlay").classList.remove("show");document.getElementById("drawer").classList.remove("show");}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDrawer()});
+
+function countUp(){
+  document.querySelectorAll("[data-count]").forEach(el=>{
+    const target=+el.dataset.count, dur=900, t0=performance.now();
+    const step=t=>{
+      const p=Math.min((t-t0)/dur,1), eased=1-Math.pow(1-p,3);
+      el.textContent=Math.round(target*eased).toLocaleString("it-IT");
+      if(p<1)requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  });
+}
+
+document.getElementById("d-prev").addEventListener("click",()=>{
+  if(curView==="giorno"){ if(curDay>0){curDay--;render();} }
+  else { if(curWeek>0){curWeek--;render();} }
+});
+document.getElementById("d-next").addEventListener("click",()=>{
+  if(curView==="giorno"){ if(curDay<D.giorni.length-1){curDay++;render();} }
+  else { const n=buildWeeks(D.giorni).length; if(curWeek<n-1){curWeek++;render();} }
+});
+document.getElementById("seg-view").addEventListener("click",e=>{
+  if(!e.target.dataset.v)return;
+  curView=e.target.dataset.v;
+  document.querySelectorAll("#seg-view button").forEach(b=>b.classList.toggle("sel",b===e.target));
+  if(curView==="settimana") curWeek=buildWeeks(D.giorni).length-1;
+  else curDay=D.giorni.length-1;
+  render();
+});
+
+loadData();
+</script>
+
+</body>
+</html>
