@@ -1,7 +1,8 @@
 {
   "aggiornato": "2026-07-17T07:08:23+02:00",
   "account": {
-    "nome": "DC Academy Account 1",
+    "nome": "Consulenza 1:1",
+    "obiettivo": "Analisi gratuita + call su Calendly",
     "id": "465327538443110",
     "valuta": "EUR",
     "periodo": "ultimi 30 giorni (dal 17 giugno al 16 luglio 2026)",
@@ -9,7 +10,7 @@
   },
   "totali": {
     "spesa": 3144.07,
-    "impressions": 155833,
+    "impressions": 155832,
     "click": 3664,
     "ctr": 2.35,
     "cpc": 0.86
@@ -41,20 +42,6 @@
       "cpc": 1.83,
       "risultati": 0,
       "tipo_risultato": "call prenotate",
-      "costo_risultato": null
-    },
-    {
-      "id": "120254252946660348",
-      "nome": "IAinsieme Test 3 fasce",
-      "stato": "ACTIVE",
-      "obiettivo": "Vendite",
-      "spesa": 0,
-      "impressions": 1,
-      "click": 0,
-      "ctr": null,
-      "cpc": null,
-      "risultati": 0,
-      "tipo_risultato": "acquisti sito",
       "costo_risultato": null
     }
   ]
