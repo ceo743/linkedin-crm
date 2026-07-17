@@ -943,7 +943,12 @@ function speakLines(lines, done){
   // musicaAvviataDalParlato è globale (non locale a questa chiamata) perché stopVoce() — richiamato da
   // un'interruzione manuale a metà frase — deve sapere se toccare a lei spegnere la musica o solo
   // riportarla al volume normale, e stopVoce() non ha altrimenti modo di saperlo.
-  musicaAvviataDalParlato=!musicOn;
+  // ⛔ 18/07, dalla versione pubblicata online: senza il server locale (porta 8765) /parla non risponde,
+  // quindi la voce ripiega SEMPRE sulla voce di sistema del browser (robotica) — la musica sintetica
+  // sopra a quella voce suona pessima ("voce e musica di merda", Davide). Fuori da localhost la musica
+  // resta spenta di default: meglio solo la voce di sistema pulita che la combinazione.
+  const serverLocaleDisponibile=/^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+  musicaAvviataDalParlato = serverLocaleDisponibile && !musicOn;
   if(musicaAvviataDalParlato) startMusic();
   duckMusic(true);
   // sequenza PIATTA di frasi: ogni frase è un pezzo audio a sé → la luce si accende quando quella frase inizia davvero
