@@ -846,7 +846,7 @@ const PARLA_URL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? '/parla' 
 const REPORT_URL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? '/report' : 'https://dc-chatbot-vswb.onrender.com/report';
 const PROPOSTA_URL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? '/proposta' : 'https://dc-chatbot-vswb.onrender.com/proposta';
 const DECISIONE_URL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? '/decisione' : 'https://dc-chatbot-vswb.onrender.com/decisione';
-let ultimiIncarichi=[];
+let ultimiIncarichi=[], ultimoDatiTrend='';
 const NOME_REPARTO={cmo:'CMO · Marketing', cso:'CSO · Vendite', cto:'CTO · Sistemi'};
 // 18/07: "certo che deve essere vero!... lo metti anche dentro la dashboard così si confronta il
 // management team e io decido se approvare" — ogni incarico del report diventa una card con un
@@ -861,7 +861,8 @@ const NOME_REPARTO={cmo:'CMO · Marketing', cso:'CSO · Vendite', cto:'CTO · Si
 // e ogni incarico/proposta/decisione viene salvato in localStorage così resta visibile anche dopo un
 // ricarico della pagina, senza dover rifare il briefing per ritrovarli.
 const INCARICHI_LS='jarvis-incarichi';
-function salvaIncarichiLS(){ try{ localStorage.setItem(INCARICHI_LS, JSON.stringify(ultimiIncarichi)); }catch(e){} }
+const DATI_TREND_LS='jarvis-dati-trend';
+function salvaIncarichiLS(){ try{ localStorage.setItem(INCARICHI_LS, JSON.stringify(ultimiIncarichi)); localStorage.setItem(DATI_TREND_LS, ultimoDatiTrend||''); }catch(e){} }
 function caricaIncarichiLS(){ try{ return JSON.parse(localStorage.getItem(INCARICHI_LS)||'[]'); }catch(e){ return []; } }
 function cardIncaricoHTML(inc,i){
   let corpo;
@@ -900,7 +901,7 @@ async function generaProposta(i){
   const inc=ultimiIncarichi[i]; if(!inc||inc.proposta||inc.decisione) return;
   delete inc.errore; renderIncarichi();
   try{
-    const r=await fetch(PROPOSTA_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({reparto:inc.reparto,compito:inc.compito})});
+    const r=await fetch(PROPOSTA_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({reparto:inc.reparto,compito:inc.compito,dati:ultimoDatiTrend})});
     const j=await r.json();
     if(!j.ok||!j.proposta) throw new Error('proposta vuota');
     inc.proposta=j.proposta;
@@ -934,6 +935,7 @@ async function decidiIncarico(i, decisione){
   const salvati=caricaIncarichiLS();
   if(!salvati.length) return;
   ultimiIncarichi=salvati;
+  try{ ultimoDatiTrend=localStorage.getItem(DATI_TREND_LS)||''; }catch(e){}
   renderIncarichi();
   ultimiIncarichi.forEach(function(inc,i){ if(!inc.proposta&&!inc.decisione) generaProposta(i); });
 })();
@@ -1258,6 +1260,11 @@ async function costruisciBriefing(periodo){
   if(!datiTesto){
     return [{who:'jarvis', testo:"Non ho ancora abbastanza giorni in archivio per un confronto, Signore. Riprovi tra qualche giorno."}];
   }
+  // 18/07, "come cazzo fa a dire che non ha i dati!!!!": il reparto riceveva SOLO la frase del compito
+  // ("verificare il calo del 36%..."), non i numeri veri che la dashboard ha già sotto mano — diceva
+  // "non ho dati" perché letteralmente non gliene passavamo nessuno, anche se erano proprio qui.
+  // Ora li teniamo pronti (stesso blocco già usato per /report) per passarli anche a /proposta.
+  ultimoDatiTrend=datiTesto;
   const battute=[{who:'jarvis', testo:"Buongiorno, Signore. Ecco il report aggiornato oggi "+dataOggiIT+"."}];
   ultimiIncarichi=[];
   try{
