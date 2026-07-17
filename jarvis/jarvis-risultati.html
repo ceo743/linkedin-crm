@@ -804,6 +804,7 @@ function vocePer(who){
 // 18/07: localhost usa il server di Davide (voce+cache locale); pubblico usa il proxy su Render
 // (stessa voce ElevenLabs, vedi server.py di dc-chatbot) così l'esperienza resta identica ovunque.
 const PARLA_URL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? '/parla' : 'https://dc-chatbot-vswb.onrender.com/parla';
+const REPORT_URL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? '/report' : 'https://dc-chatbot-vswb.onrender.com/report';
 let qaSpeaking=false, qaTimer=null, vocePlayer=null, qaPaused=false, musicaAvviataDalParlato=false;
 // RIFLETTORE SEMPLIFICATO (17/07, Davide: "stai facendo solo casino... per il vocale lascia perdere se
 // non sei in grado"). Prima: indovinava a quale singolo box (.panel/.toppost/.kpi) apparteneva OGNI
@@ -1089,34 +1090,51 @@ function parlaNumero(n){
 // Ora: un'intro breve sul periodo scelto (impressioni/spesa/lead/call, gli stessi numeri delle card in
 // cima) SEGUITA dalla lettura COMPLETA di tutte e 5 le sezioni (stessa funzione dei bottoni "Briefing
 // sezione", `costruisciBriefingSezione`) — nessuna sezione saltata, nessun numero scelto a mano.
-function costruisciBriefing(periodo){
+// 18/07, quinta richiesta sullo stesso bottone: "non mi serve che mi legge i dati. mi devono dare
+// una visione di come vanno le cose, come un report: comparazione al periodo uguale precedente, il
+// trend, i numeri, la visione futura, suggerimenti per il futuro" — non più un elenco (anche se
+// accorpato in poche frasi): un report vero, con interpretazione. I NUMERI restano calcolati qui,
+// deterministici, dallo stesso archivio (jarvis-giorni.json) che alimenta il grafico in alto — solo
+// l'INTERPRETAZIONE (trend, suggerimento) la scrive Claude via /report (stesso endpoint su localhost
+// e sul proxy pubblico, vedi REPORT_URL), mai numeri inventati dal modello.
+function costruisciDatiTrend(){
+  if(!GIORNI||GIORNI.length<2) return null;
+  const oggiStr=(function(){const n=new Date();return n.getFullYear()+'-'+pad(n.getMonth()+1)+'-'+pad(n.getDate());})();
+  const pieni=GIORNI.filter(function(x){return x.data!==oggiStr;}), n=7;
+  const attuale=pieni.slice(-n), precedente=pieni.length>=n*2 ? pieni.slice(-n*2,-n) : [];
+  if(!attuale.length) return null;
+  const A=aggrega(attuale), P=precedente.length?aggrega(precedente):null;
+  function riga(label,val,prec,fmt){
+    fmt=fmt||function(x){return x;};
+    return label+': '+fmt(val)+' negli ultimi 7 giorni'+(prec!=null?(', contro '+fmt(prec)+' nei 7 giorni precedenti'):', nessun periodo precedente disponibile per il confronto');
+  }
+  const righe=[];
+  if(A.liImpr!=null) righe.push(riga('Impressioni LinkedIn', A.liImpr, P?P.liImpr:null));
+  righe.push(riga('Spesa Meta Ads', A.spesa, P?P.spesa:null, euro));
+  righe.push(riga('Click Ads', A.click, P?P.click:null));
+  righe.push(riga('Lead (funnel + guide)', A.lead, P?P.lead:null));
+  righe.push(riga('Call prenotate', A.call, P?P.call:null));
+  righe.push(riga('Call in target dopo pre qualifica', A.intarget, P?P.intarget:null));
+  return righe.join('\n');
+}
+async function costruisciBriefing(periodo){
   const oggi=new Date(), dataOggiIT=oggi.getDate()+' '+MON[oggi.getMonth()];
   if(!GIORNI||!GIORNI.length){
     return [{who:'jarvis', testo:"Non ho ancora l'archivio giornaliero pronto, Signore. Riprovi tra poco."}];
   }
-  // 18/07, terza segnalazione sullo stesso punto: il digest sul periodo scelto (impressioni/spesa/
-  // lead/call) e la lettura integrale delle sezioni sotto raccontavano LO STESSO ARGOMENTO a pochi
-  // secondi di distanza con numeri diversi (il digest usava il periodo scelto in alto, le sezioni
-  // sono SEMPRE su base settimanale fissa) — sembrava che leggesse tutto due volte. Il gate precedente
-  // (skip solo se periodo==='7') non bastava: il periodo di default all'apertura è '1' (ieri), non
-  // '7', quindi il digest partiva comunque quasi sempre. Le sezioni sotto sono già complete e più
-  // dettagliate del digest: il digest è stato tolto, non solo condizionato.
-  // 18/07, quarta richiesta: "non voglio che legge tutte le righe ma un riassunto dei dati principali"
-  // — anche con le righe accorpate in una frase sola per pannello, leggere OGNI pannello di OGNI
-  // sezione (LinkedIn, Ads, Lead e call, SEO, Sistemi) restava un rapporto lunghissimo. Il briefing
-  // principale ora dice SOLO i numeri grandi (bignum) di ogni sezione, uno accanto all'altro — il
-  // dettaglio riga per riga resta nei bottoni "Briefing sezione", dove Davide lo chiede esplicitamente.
-  const battute=[{who:'jarvis', testo:"Buongiorno, Signore. Ecco il riassunto, aggiornato oggi "+dataOggiIT+"."}];
-  SEZIONI_BRIEFING.forEach(function(S){
-    const contenitori=contenitoriDiSezione(S.nome);
-    const boxes=contenitori.flatMap(function(c){ return [...c.querySelectorAll('.panel')]; });
-    const pezzi=[];
-    boxes.forEach(function(box){
-      riassuntoFrammenti(box).forEach(function(fr){ pezzi.push(fr.testo.replace(/\.$/,'')); });
-    });
-    if(pezzi.length) battute.push({who:S.who, testo:S.nome+': '+pezzi.join(', ')+'.', sezione:S.nome});
-  });
-  battute.push({who:'jarvis', testo:"Il rapporto è concluso, Signore. Se desidera approfondire, mi chieda pure. Posso anche aprirle le schede."});
+  const datiTesto=costruisciDatiTrend();
+  if(!datiTesto){
+    return [{who:'jarvis', testo:"Non ho ancora abbastanza giorni in archivio per un confronto, Signore. Riprovi tra qualche giorno."}];
+  }
+  const battute=[{who:'jarvis', testo:"Buongiorno, Signore. Ecco il report aggiornato oggi "+dataOggiIT+"."}];
+  try{
+    const r=await fetch(REPORT_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({dati:datiTesto})});
+    const j=await r.json();
+    if(!j.ok||!j.testo) throw new Error('report vuoto');
+    battute.push({who:'jarvis', testo:j.testo, sezione:'hero'});
+  }catch(e){
+    battute.push({who:'jarvis', testo:"Non sono riuscito a preparare il report questa volta, Signore. Riprovi tra poco."});
+  }
   return battute;
 }
 
@@ -1224,16 +1242,6 @@ function leggiFrammenti(box, saltaNote){
   flush(); // righe/barre rimaste in coda a fine pannello (nessun elemento successivo a far scattare il flush)
   return out;
 }
-// 18/07: SOLO il numero grande di un pannello (titolo + bignum), per il riassunto del briefing
-// principale — i pannelli senza bignum (solo righe/tabelle: demografia follower, badge SEO...) sono
-// dettaglio puro e restano fuori dal riassunto, disponibili nel bottone "Briefing sezione".
-function riassuntoFrammenti(box){
-  const h3=box.querySelector(':scope > h3'), big=box.querySelector(':scope > .bignum');
-  if(!big) return [];
-  const titolo=h3 ? pulisciTestoVoce(testoSenzaFonte(h3)) : '';
-  const valore=big.dataset.count ? Number(big.dataset.count).toLocaleString('it-IT') : pulisciTestoVoce(big.textContent);
-  return [{testo:(titolo?titolo+': ':'')+valore+'.', elemento:big}];
-}
 const SEZIONI_BRIEFING=[
   {nome:'LinkedIn', who:'cmo'},
   {nome:'Meta Ads', who:'cmo'},
@@ -1277,19 +1285,22 @@ SEZIONI_BRIEFING.forEach(function(S){
 });
 
 const btn=$('#voice');
-btn.addEventListener('click',()=>{
+btn.addEventListener('click',async()=>{
   // la musica (avvio/stop) la gestisce SEMPRE speakLines/stopVoce ora, centralizzata: qui non se ne occupa più
   if(qaSpeaking){ stopVoce(); btn.classList.remove('speaking'); btn.textContent='🎙 Briefing vocale'; return; }
-  btn.classList.add('speaking'); btn.textContent='◼ Ferma briefing';
+  btn.classList.add('speaking'); btn.textContent='⏳ Preparo il report...';
   // rispetta il periodo che il Signore ha già scelto (mai forzare 7g sopra la sua selezione),
   // e rinfresca la card in cima con lo STESSO calcolo live che sta per essere letto ad alta voce:
   // stessa fonte, stesso numero, il faro non perde più la card
   mostraPeriodo(ULTIMO_G);
-  const SCALETTA=costruisciBriefing(ULTIMO_G);
+  // 18/07: il report ora passa da Claude (/report, vedi costruisciBriefing) per l'interpretazione
+  // del trend — non è più istantaneo come la lettura diretta del DOM, da qui l'attesa e il testo del bottone
+  const SCALETTA=await costruisciBriefing(ULTIMO_G);
+  btn.textContent='◼ Ferma briefing';
   SCALETTA.forEach(L=>addMsg(L.testo,'a',AGENTI[L.who].label));
-  setTimeout(()=>speakLines(SCALETTA, ()=>{
+  speakLines(SCALETTA, ()=>{
     btn.classList.remove('speaking'); btn.textContent='🎙 Briefing vocale';
-  }),1200);
+  });
 });
 speechSynthesis.getVoices(); // precarica
 
