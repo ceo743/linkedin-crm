@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-16T20:30:23.287255+02:00",
+  "aggiornato": "2026-07-17T09:31:39.099470+02:00",
   "contatti": [
     {
       "id": 1,
@@ -357,7 +357,7 @@
       "link_call_inviato": null,
       "tipo_call": null,
       "prenotato": null,
-      "note": "1° grado, email nota: marketing@tibf.it | in coda per il 03/07 | 04/07: risposta calda gestita (conferma inviata voce Stefania), seguiti automatici SOSPESI (ha risposto: si fa sentire lui tra 2 settimane). Promemoria Stefania: se silenzio entro 20/07, riprende lei. Email avviso a stefania.carini@ inviata 04/07. | 04/07 bis: presidio automatico attivo, scadenza 20/07 gestita dalla routine (non da Stefania). | Verificato 2026-07-07 11:28: Sanchioni: email specifica del 20/07 NON ancora dovuta (oggi 07/07, scadenza 20/07). Email generale di avviso gia inviata a Stefania il 04/07 (diversa, non il richiamo). Nessuna azione oggi. | 11/07 analisi: risposta CALDA 3/7 (farsi sentire tra 2 settimane), nostra risposta 4/7 ok.",
+      "note": "1° grado, email nota: marketing@tibf.it | in coda per il 03/07 | 04/07: risposta calda gestita (conferma inviata voce Stefania), seguiti automatici SOSPESI (ha risposto: si fa sentire lui tra 2 settimane). Promemoria Stefania: se silenzio entro 20/07, riprende lei. Email avviso a stefania.carini@ inviata 04/07. | 04/07 bis: presidio automatico attivo, scadenza 20/07 gestita dalla routine (non da Stefania). | Verificato 2026-07-07 11:28: Sanchioni: email specifica del 20/07 NON ancora dovuta (oggi 07/07, scadenza 20/07). Email generale di avviso gia inviata a Stefania il 04/07 (diversa, non il richiamo). Nessuna azione oggi. | 11/07 analisi: risposta CALDA 3/7 (farsi sentire tra 2 settimane), nostra risposta 4/7 ok. | 17/07 09:26: presidio inviato (scadenza prossima_azione raggiunta, nessuna risposta dal 4/07): tocco di ripresa senza link.",
       "messaggio": "Ciao Gianluca! Sono Stefania, lavoro con Davide Caiazzo. Sono passata dal tuo profilo: 30.000 follower e contenuti da CFO vero, roba rara qui su LinkedIn. A maggio avevi provato a prenotare una chiamata con Davide ma gli orari non ti tornavano, e la cosa mi è rimasta in sospeso. Se ti fa ancora piacere te la organizzo io su misura, anche fuori orario. Che dici?",
       "approvato": true,
       "programmato": "2026-07-03T13:35:00+02:00",
@@ -404,14 +404,19 @@
       ],
       "risposta_at": "2026-07-03T20:07:17+02:00",
       "gestito": true,
-      "gestito_il": "2026-07-04",
-      "risposta_conferma": "Perfetto Gianluca, ti aspetto allora! Se nel frattempo preferisci bloccare già ora un orario su misura, scrivimi pure qui e ci penso io. A presto, Stefania",
+      "gestito_il": "2026-07-17T09:31:21.659685+02:00",
+      "risposta_conferma": "Gianluca, ci sei ancora? Ti tengo lo spazio con Davide. Stefania",
       "stop_seguiti": true,
       "prossima_azione": {
-        "quando": "2026-07-17",
-        "cosa": "Sanchioni ha detto 'tra un paio di settimane mi faccio sentire 👍' (3 lug). Stefania rispose 4/07 'ti aspetto allora'. Se non scrive entro 17/07: DM 'Gianluca, ci sei ancora? Ti tengo lo spazio con Davide.'"
+        "quando": "2026-07-24",
+        "cosa": "Presidio inviato 17/07 (tocco di ripresa, nessuna risposta da 4/07). Se ancora silenzio: ultimo tocco leggero poi chiudere la trattativa."
       },
-      "risposta_gestita": true
+      "risposta_gestita": true,
+      "doppio_controllo": {
+        "esito": "ok",
+        "quando": "2026-07-17T09:31:21.659685+02:00",
+        "motivo": "verificatore INVIA: scaduti i 2 tempi annunciati, tocco leggero senza link, firma presente"
+      }
     },
     {
       "id": 14,
@@ -1664,24 +1669,27 @@
       },
       "messaggio": "Stefano, a suo tempo ti avevo mandato la guida Il Venditore che non Dorme. Ti chiedo per curiosità, l'hai scaricata più per capire come funziona o perché c'è già una cosa nella tua consulenza che ti porta via troppo tempo ogni settimana?",
       "approvato": true,
-      "escluso": false,
+      "escluso": true,
       "in_pausa": false,
       "inviato": "2026-07-06T10:42:00+02:00",
       "risposto": true,
       "prenotato": false,
-      "note": "06/07 INVIATO opener automazione. Professionista con propria attività (regola allargata Davide 06/07). | 06/07 HA RISPOSTO (1h dopo!): \"scaricata per approfondimento professionale\". Risposto scavando (te la giro al contrario, c'è una cosa che ti porta via tempo?). Aspetto che riveli il problema, poi call 30 min con Davide. | 11/07: risposta FREDDA 6/07 (scaricata per approfondimento professionale). Nostra follow-up domanda 6/07 13:44 ancora senza risposta. Poco probabile conversione. | 2026-07-11 07:30 MERGE: 3o tocco esplorativo INVIATO oggi 07:15 su LinkedIn da sessione Davide (esempio concreto per sbloccare risposta). La pa runtime del 13/07 (chiudi) e superata: nuova pa 15/07. | 2026-07-16T20:30:23.287255+02:00 PRESIDIO: prossima_azione scaduta verificata (nessuna nuova risposta nel thread), tocco leggero DA INVIARE ma NON eseguito in questo giro per tempo massimo 15min, riprendere al prossimo controllo.",
+      "note": "06/07 INVIATO opener automazione. Professionista con propria attività (regola allargata Davide 06/07). | 06/07 HA RISPOSTO (1h dopo!): \"scaricata per approfondimento professionale\". Risposto scavando (te la giro al contrario, c'è una cosa che ti porta via tempo?). Aspetto che riveli il problema, poi call 30 min con Davide. | 11/07: risposta FREDDA 6/07 (scaricata per approfondimento professionale). Nostra follow-up domanda 6/07 13:44 ancora senza risposta. Poco probabile conversione. | 2026-07-11 07:30 MERGE: 3o tocco esplorativo INVIATO oggi 07:15 su LinkedIn da sessione Davide (esempio concreto per sbloccare risposta). La pa runtime del 13/07 (chiudi) e superata: nuova pa 15/07. | 2026-07-16T20:30:23.287255+02:00 PRESIDIO: prossima_azione scaduta verificata (nessuna nuova risposta nel thread), tocco leggero DA INVIARE ma NON eseguito in questo giro per tempo massimo 15min, riprendere al prossimo controllo. | 17/07 09:31: ultimo tocco leggero inviato (silenzio confermato da 11/07), trattativa CHIUSA per silenzio, nessun altro seguito programmato.",
       "seguiti": [],
       "risposta_at": "2026-07-06T11:27:00+02:00",
       "risposta_testo": "Buon giorno, scaricata per approfondimento professionale",
       "gestito": true,
       "risposta_gestita": true,
       "tipo_risposta": "fredda",
-      "prossima_azione": {
-        "quando": "2026-07-15",
-        "cosa": "Se Menci risponde nominando il problema: proporre la call con Davide A PAROLE (nessun link). Se silenzio ancora, un ultimo tocco leggero poi chiudere. MAI mandare Calendly se non lo chiede lui."
-      },
-      "gestito_il": "2026-07-11 07:15",
-      "risposta_conferma": "Stefano, nessun problema se sei stato preso. Ti faccio un esempio concreto così è più facile, di solito nella consulenza è rispondere alle stesse richieste dei clienti via email o preparare le proposte e i materiali a mano. È una di queste, o è un'altra la cosa che ti porta via più tempo? Stefania"
+      "prossima_azione": null,
+      "gestito_il": "2026-07-17T09:31:21.659685+02:00",
+      "risposta_conferma": "Stefano, nessun problema se questo periodo non è quello giusto. Resto qui se in futuro ti va di riparlarne. Stefania",
+      "stop_seguiti": true,
+      "doppio_controllo": {
+        "esito": "ok",
+        "quando": "2026-07-17T09:31:21.659685+02:00",
+        "motivo": "verificatore INVIA: ultimo tocco leggero come da prossima_azione, poi chiusura trattativa"
+      }
     },
     {
       "id": 49,
@@ -3204,10 +3212,10 @@
       "escluso": false,
       "in_pausa": false,
       "inviato": "2026-07-07 15:00",
-      "risposto": false,
-      "gestito": false,
+      "risposto": true,
+      "gestito": true,
       "prenotato": false,
-      "note": "Verificato 07/07/2026: IN target. Affitti Brevi/Guest House. Propria attivita gestione immobili turistici. Da scrivere messaggio esplorativo prima dell invio. | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard. | Inviato 2026-07-07 15:00",
+      "note": "Verificato 07/07/2026: IN target. Affitti Brevi/Guest House. Propria attivita gestione immobili turistici. Da scrivere messaggio esplorativo prima dell invio. | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard. | Inviato 2026-07-07 15:00 | 2026-07-17 09:xx RICONCILIATO: risposta di Franco (16/07 08:14) e proposta call (16/07 09:43) erano gia avvenute su LinkedIn ma non registrate su JSON (sessione precedente terminata per tempo massimo prima del salvataggio) - errore trovato e RISOLTO, nessun secondo messaggio inviato, solo allineamento dati.",
       "seguiti": [
         {
           "n": 1,
@@ -3223,9 +3231,18 @@
         }
       ],
       "doppio_controllo": {
-        "esito": "ok",
-        "quando": "2026-07-11T19:11:30.937500+02:00",
-        "tipo": "seguito"
+        "esito": "riconciliato",
+        "quando": "2026-07-17T09:00:00+02:00",
+        "motivo": "ORFANO: messaggio gia inviato dalla sessione del 16/07 09:43 ma mai scritto su registro (sessione finita per tempo massimo prima del salvataggio). Verificato oggi via thread reale, JSON allineato alla realta, nessun secondo invio effettuato."
+      },
+      "risposta_at": "2026-07-16T08:14:00+02:00",
+      "risposta_testo": "Il calendario delle prenotazioni é gia automatizzato, uso il channel manager. Più che altro per rispondere e dare più informazioni possibili ai clienti. Ho gia impostato dei template automatici, ma ricevo qualche messaggio ogni tanto.",
+      "gestito_il": "2026-07-16T09:43:00+02:00",
+      "risposta_conferma": "Franco, capito. Rispondere ai messaggi degli ospiti che escono dai template standard è esattamente il tipo di sfida che l'intelligenza artificiale riesce a gestire bene, anche per le comunicazioni più personali. Davide lavora spesso con chi gestisce affitti brevi. Posso passarti il link per una chiamata di 30 minuti direttamente con lui? Stefania",
+      "stop_seguiti": true,
+      "prossima_azione": {
+        "quando": "2026-07-23",
+        "cosa": "Proposta call inviata 16/07 (nessun link, ha ammesso problema parziale su risposte fuori template). Se Franco non ha risposto: riprendere IO su LinkedIn chiedendo se vuole che organizzi la call; email a Stefania solo se a quel punto serve una chiamata telefonica."
       }
     },
     {
@@ -5889,6 +5906,22 @@
     {
       "quando": "2026-07-16T20:30:23.287255+02:00",
       "testo": "controllo ore 20:24: 0 nuove risposte (solo 2 thread non letti, entrambi estranei al registro: Luciano Liguori, Roberta Montella), 0 nuovi collegamenti verificati, 0 prenotazioni Calendly nuove dal registro (Egon Mariconda e Rodica Lazar in Gmail ma non presenti nel registro). Marciante chiuso silenzioso. 3 scadenze presidio (Menci, Pianzi Mirco, D'Imperio) rilevate ma tocco leggero rimandato al prossimo giro per tempo massimo."
+    },
+    {
+      "quando": "2026-07-17T09:21:05.351702+02:00",
+      "testo": "[AVVIO SESSIONE] outreach-linkedin-verifica-risposte"
+    },
+    {
+      "quando": "2026-07-17T09:29:14.606004+02:00",
+      "testo": "ERRORE TROVATO E RISOLTO: Franco Nieddu aveva risposto e ricevuto la proposta call il 16/07 09:43 ma il JSON non era mai stato aggiornato (sessione precedente interrotta per tempo massimo prima del salvataggio). Riconciliato oggi leggendo il thread reale: nessun secondo messaggio inviato, solo dati allineati. Causa: la scrittura JSON va fatta SUBITO dopo ogni invio, non solo a fine giro."
+    },
+    {
+      "quando": "2026-07-17T09:31:21.659685+02:00",
+      "testo": "controllo ore 09:21: presidio Sanchioni (tocco ripresa) e Menci (ultimo tocco, chiusura) inviati e verificati con doppio controllo indipendente. Franco Nieddu riconciliato (orfano dal 16/07). Pianzi Mirco e D'Imperio ancora da fare (tempo massimo in avvicinamento, rimandati al prossimo giro)."
+    },
+    {
+      "quando": "2026-07-17T09:31:39.099470+02:00",
+      "testo": "controllo ore 09:21 CONCLUSO: filtro unread=0 (nessuna nuova risposta), 0 nuovi collegamenti, 0 prenotazioni Calendly nuove dal registro. 2 presidi gestiti (Sanchioni ripresa, Menci ultimo tocco+chiusura), 1 orfano riconciliato (Franco Nieddu). Pianzi Mirco e D'Imperio (scadute anche loro) NON gestiti per tempo massimo 15min: riprendere OBBLIGATORIAMENTE al prossimo giro come priorita 1."
     }
   ],
   "diario": [
