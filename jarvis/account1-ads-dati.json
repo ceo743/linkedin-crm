@@ -1,10 +1,10 @@
 {
   "aggiornato": "2026-07-17T07:08:23+02:00",
   "account": {
-    "nome": "DC Academy — Account 1",
+    "nome": "DC Academy Account 1",
     "id": "465327538443110",
     "valuta": "EUR",
-    "periodo": "ultimi 30 giorni (17 giu — 16 lug 2026)",
+    "periodo": "ultimi 30 giorni (dal 17 giugno al 16 luglio 2026)",
     "link_ads_manager": "https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110"
   },
   "totali": {
@@ -31,7 +31,7 @@
     },
     {
       "id": "120252595942170348",
-      "nome": "2026-06-14 Lead Gen | Lookalike Buyers + Broad",
+      "nome": "Lead Gen Lookalike Buyers + Broad (giu 2026)",
       "stato": "PAUSED",
       "obiettivo": "Contatti",
       "spesa": 407.26,
@@ -45,7 +45,7 @@
     },
     {
       "id": "120254252946660348",
-      "nome": "IAinsieme — Test 3 fasce",
+      "nome": "IAinsieme Test 3 fasce",
       "stato": "ACTIVE",
       "obiettivo": "Vendite",
       "spesa": 0,

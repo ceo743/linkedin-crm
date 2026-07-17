@@ -1,7 +1,7 @@
 {
-  "aggiornato": "2026-07-17T07:08:23+02:00",
+  "aggiornato": "2026-07-17T08:05:00+02:00",
   "campagna": {
-    "nome": "IAinsieme — Test 3 fasce",
+    "nome": "IAinsieme Test 3 fasce",
     "stato": "ACTIVE",
     "budget_giornaliero": 50,
     "valuta": "EUR",
@@ -15,12 +15,12 @@
     "link_ads_manager": "https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110&selected_campaign_ids=120254252946660348"
   },
   "totali": {
-    "spesa": 6.18,
+    "spesa": 22.65,
     "budget_totale_previsto": 300,
-    "impressions": 671,
-    "click": 14,
-    "ctr": 2.09,
-    "cpc": 0.44,
+    "impressions": 2905,
+    "click": 65,
+    "ctr": 2.24,
+    "cpc": 0.35,
     "lead": 0,
     "costo_per_lead": null
   },
@@ -32,7 +32,7 @@
       "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-problema-v13-1080x1080.png",
       "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=problema",
       "stato": "ACTIVE",
-      "spesa": 2.03, "impressions": 286, "click": 8, "ctr": 2.80, "cpc": 0.25, "lead": 0, "costo_per_lead": null
+      "spesa": 7.48, "impressions": 1290, "click": 36, "ctr": 2.79, "cpc": 0.21, "lead": 0, "costo_per_lead": null
     },
     {
       "id": "120254306950840348",
@@ -41,7 +41,7 @@
       "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-sicurezza-v13-1080x1080.png",
       "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=sicurezza",
       "stato": "ACTIVE",
-      "spesa": 2.25, "impressions": 226, "click": 1, "ctr": 0.44, "cpc": 2.25, "lead": 0, "costo_per_lead": null
+      "spesa": 5.16, "impressions": 628, "click": 9, "ctr": 1.43, "cpc": 0.57, "lead": 0, "costo_per_lead": null
     },
     {
       "id": "120254306951400348",
@@ -50,7 +50,7 @@
       "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-unico-v13-1080x1080.png",
       "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=dalvivo",
       "stato": "ACTIVE",
-      "spesa": 0.34, "impressions": 49, "click": 2, "ctr": 4.08, "cpc": 0.17, "lead": 0, "costo_per_lead": null
+      "spesa": 3.56, "impressions": 448, "click": 7, "ctr": 1.56, "cpc": 0.51, "lead": 0, "costo_per_lead": null
     },
     {
       "id": "120254306951970348",
@@ -59,7 +59,7 @@
       "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-garanzia-v13-1080x1080.png",
       "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=garanzia",
       "stato": "ACTIVE",
-      "spesa": 1.36, "impressions": 72, "click": 2, "ctr": 2.78, "cpc": 0.68, "lead": 0, "costo_per_lead": null
+      "spesa": 4.12, "impressions": 288, "click": 7, "ctr": 2.43, "cpc": 0.59, "lead": 0, "costo_per_lead": null
     },
     {
       "id": "120254306953090348",
@@ -68,12 +68,12 @@
       "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-beneficio-v13-1080x1080.png",
       "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=beneficio",
       "stato": "ACTIVE",
-      "spesa": 0.20, "impressions": 37, "click": 1, "ctr": 2.70, "cpc": 0.20, "lead": 0, "costo_per_lead": null
+      "spesa": 2.33, "impressions": 251, "click": 6, "ctr": 2.39, "cpc": 0.39, "lead": 0, "costo_per_lead": null
     }
   ],
   "trend_giornaliero": [
     { "data": "2026-07-14", "spesa": 0, "lead": 0 },
-    { "data": "2026-07-17", "spesa": 6.18, "lead": 0 }
+    { "data": "2026-07-17", "spesa": 22.65, "lead": 0 }
   ],
   "sito": {
     "fix_funnel_applicato": true,
