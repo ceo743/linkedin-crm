@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IAinsieme Ads Dashboard — DC Academy</title>
+<title>IAinsieme Ads Dashboard · DC Academy</title>
 <style>
   :root{
     --bg:#0e1420; --card:#161f30; --card-2:#1c2740; --ink:#f4f6fb; --muted:#8b96ad;
-    --teal:#2ea8a8; --teal-soft:#12313380; --orange:#ff6b35; --orange-soft:#ff6b3520;
-    --green:#3ddc84; --red:#ff5c5c; --amber:#f5b942;
-    --radius:18px; --shadow:0 1px 3px rgba(0,0,0,.3),0 12px 30px rgba(0,0,0,.35);
-    --border:#26314a;
+    --teal:#2ea8a8; --teal-soft:#12313380; --orange:#ff6b35; --green:#3ddc84; --red:#ff5c5c; --amber:#f5b942;
+    --radius:18px; --shadow:0 1px 3px rgba(0,0,0,.3),0 12px 30px rgba(0,0,0,.35); --border:#26314a;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;background:
     radial-gradient(ellipse at 20% -10%, #16324a55, transparent 60%),
     radial-gradient(ellipse at 90% 0%, #6b2f1f44, transparent 55%), var(--bg);
     color:var(--ink);padding:36px 4vw 70px;min-height:100vh}
+  a.back{display:inline-block;color:var(--muted);font-size:12px;text-decoration:none;margin-bottom:14px}
+  a.back:hover{color:var(--teal)}
   .kicker{font-size:11px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;font-weight:700}
   h1{font-size:clamp(26px,3.2vw,38px);font-weight:800;margin:6px 0 4px;letter-spacing:-.01em}
   h1 .ia{color:var(--orange)} h1 .rest{color:var(--teal)}
@@ -26,15 +26,28 @@
   @keyframes pulse{50%{opacity:.3}}
   .fade{opacity:0;transform:translateY(14px);animation:rise .55s cubic-bezier(.2,.7,.3,1) forwards}
   @keyframes rise{to{opacity:1;transform:none}}
-  .section-title{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:36px 0 14px;display:flex;align-items:center;gap:10px}
+  .section-title{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:34px 0 14px;display:flex;align-items:center;gap:10px}
   .section-title .line{flex:1;height:1px;background:var(--border)}
   .card{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px}
 
-  /* countdown / hero */
-  .hero{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;margin-top:22px}
+  .clevel{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .role{padding:18px 20px}
+  .role .head{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:800}
+  .role .head .ico{font-size:20px}
+  .role .head .who{color:var(--ink)} .role .head .what{color:var(--muted);font-weight:600;font-size:11.5px}
+  .role .rows{margin-top:14px;display:flex;flex-direction:column;gap:10px}
+  .role .r{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .role .r .k{font-size:12.5px;color:var(--muted)}
+  .role .r .v{font-size:19px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--ink)}
+  .role .r .v.accent{color:var(--orange)} .role .r .v.good{color:var(--green)} .role .r .v.warn{color:var(--amber)}
+  .role .verdict{margin-top:14px;font-size:12px;line-height:1.45;border-radius:10px;padding:10px 12px}
+  .verdict.ok{color:var(--green);background:#3ddc8412;border:1px solid #3ddc8433}
+  .verdict.warn{color:var(--amber);background:#f5b94212;border:1px solid #f5b94233}
+  .verdict.neutral{color:var(--muted);background:#1c274080;border:1px solid var(--border)}
+
+  .hero{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;margin-top:4px}
   @media(max-width:900px){.hero{grid-template-columns:1fr}}
-  .hero .big{font-size:15px;color:var(--muted);line-height:1.5}
-  .hero .big b{color:var(--ink)}
+  .hero .big{font-size:15px;color:var(--muted);line-height:1.5}.hero .big b{color:var(--ink)}
   .progress-wrap{margin-top:14px}
   .progress-track{height:10px;border-radius:6px;background:#0c1420;overflow:hidden;border:1px solid var(--border)}
   .progress-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--teal),var(--orange));width:0%;transition:width .8s cubic-bezier(.2,.7,.3,1)}
@@ -43,14 +56,16 @@
   .countdown .num{font-size:44px;font-weight:800;color:var(--orange);line-height:1}
   .countdown .lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:4px}
 
-  /* KPI */
-  .grid-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin-top:0}
-  .kpi .label{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
-  .kpi .value{font-size:27px;font-weight:800;margin-top:8px;font-variant-numeric:tabular-nums;color:var(--ink)}
-  .kpi .value.accent{color:var(--orange)}
-  .kpi .note{font-size:11.5px;color:var(--muted);margin-top:4px}
+  .funnel{display:flex;flex-direction:column;gap:8px}
+  .fstep{border-radius:12px;padding:14px 18px;background:linear-gradient(90deg,var(--teal),var(--orange));color:#08131a;font-weight:800;display:flex;justify-content:space-between;align-items:center}
+  .fstep .lbl{font-size:13px} .fstep .val{font-size:18px;font-variant-numeric:tabular-nums}
+  .fdrop{font-size:11.5px;color:var(--muted);text-align:center}.fdrop b{color:var(--teal)}
 
-  /* ad cards */
+  .grid-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px}
+  .kpi .label{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .kpi .value{font-size:24px;font-weight:800;margin-top:8px;font-variant-numeric:tabular-nums;color:var(--ink)}
+  .kpi .value.accent{color:var(--orange)}
+
   .grid-ads{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
   .adcard{padding:0;overflow:hidden;position:relative;display:flex;flex-direction:column}
   .adcard .rank{position:absolute;top:10px;left:10px;background:#0c1420cc;color:var(--amber);font-size:11px;font-weight:800;padding:4px 9px;border-radius:20px;z-index:2;border:1px solid var(--border)}
@@ -63,52 +78,65 @@
   .adcard .m{font-size:11px;color:var(--muted)}
   .adcard .m b{display:block;font-size:15px;color:var(--ink);font-weight:800;font-variant-numeric:tabular-nums}
   .adcard .m.cpl b{color:var(--orange)}
-  .adcard a.openlink{display:block;text-align:center;margin-top:12px;font-size:11.5px;font-weight:700;color:var(--teal);text-decoration:none;border:1px solid var(--border);border-radius:10px;padding:8px;transition:all .15s}
+  .adcard a.openlink{display:block;text-align:center;margin-top:12px;font-size:11.5px;font-weight:700;color:var(--teal);text-decoration:none;border:1px solid var(--border);border-radius:10px;padding:8px}
   .adcard a.openlink:hover{background:var(--teal-soft);border-color:var(--teal)}
 
-  /* trend chart */
-  .chart{display:flex;align-items:flex-end;gap:8px;height:160px;margin-top:18px}
+  .sim-ipo{font-size:10.5px;font-weight:800;letter-spacing:.1em;color:var(--amber);background:#f5b94215;border:1px solid #f5b94240;border-radius:20px;padding:4px 11px;display:inline-block;margin-bottom:6px}
+  .sim{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  @media(max-width:760px){.sim{grid-template-columns:1fr}}
+  .sim label{font-size:12.5px;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}
+  .sim label b{color:var(--ink)}
+  .sim input[type=range]{width:100%;margin-top:8px;accent-color:var(--orange)}
+  .sim .out{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .sim .o{border:1px solid var(--border);border-radius:12px;padding:12px 14px;background:#0f1729}
+  .sim .o .k{font-size:11px;color:var(--muted)} .sim .o .v{font-size:20px;font-weight:800;margin-top:4px;font-variant-numeric:tabular-nums}
+  .sim .o .v.roas{color:var(--teal)} .sim .o .v.prof{color:var(--green)} .sim .o .v.prof.neg{color:var(--red)}
+
+  .chart{display:flex;align-items:flex-end;gap:8px;height:160px;margin-top:6px}
   .bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;height:100%;justify-content:flex-end}
-  .bar{width:100%;max-width:40px;background:linear-gradient(180deg,var(--teal),var(--orange));border-radius:6px 6px 3px 3px;min-height:3px;position:relative}
+  .bar{width:100%;max-width:40px;background:linear-gradient(180deg,var(--teal),var(--orange));border-radius:6px 6px 3px 3px;min-height:3px}
   .bar-day{font-size:10px;color:var(--muted);white-space:nowrap}
   .empty-note{font-size:12.5px;color:var(--muted);text-align:center;padding:30px 0}
 
-  /* funnel */
   .funnel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:14px}
   .funnel-item{border:1px solid var(--border);border-radius:12px;padding:12px 14px;background:#0f1729}
   .funnel-item .eta{font-size:10px;color:var(--orange);font-weight:800;letter-spacing:.08em}
   .funnel-item a{color:var(--teal);font-size:12px;word-break:break-all;text-decoration:none}
   .funnel-item a:hover{text-decoration:underline}
-  .fix-note{margin-top:14px;font-size:12.5px;color:var(--green);background:#3ddc8415;border:1px solid #3ddc8440;border-radius:10px;padding:10px 14px}
+  .fix-note{margin-top:2px;font-size:12.5px;color:var(--green);background:#3ddc8415;border:1px solid #3ddc8440;border-radius:10px;padding:10px 14px}
 
   footer{margin-top:44px;font-size:11px;color:var(--muted);line-height:1.7;border-top:1px solid var(--border);padding-top:16px}
   footer a{color:var(--teal);text-decoration:none}
-  .badge-static{color:var(--amber)}
-  .badge-static::before{background:var(--amber) !important}
+  .badge-static{color:var(--amber)} .badge-static::before{background:var(--amber) !important}
 </style>
 </head>
 <body>
 
 <div class="fade">
+  <a class="back" href="index.html">← Tutte le dashboard</a>
   <div class="kicker">DC ACADEMY · AD PERFORMANCE</div>
   <h1><span class="ia">IA</span>insieme <span class="rest">Ads Dashboard</span></h1>
   <div class="sub">
     <span id="h-campagna">Test 3 fasce</span>
+    <span style="color:var(--amber);font-weight:700">Obiettivo: vendita corso (checkout sito)</span>
     <span class="live" id="h-live">caricamento…</span>
     <span id="h-aggiornato"></span>
   </div>
 </div>
 
-<div class="hero">
-  <div class="card fade" style="animation-delay:.1s">
-    <div class="section-title" style="margin-top:0">Andamento test <div class="line"></div></div>
+<div class="section-title fade" style="animation-delay:.1s">Cosa guardare · CFO · CSO · CMO <div class="line"></div></div>
+<div class="clevel fade" id="clevel-row" style="animation-delay:.15s"></div>
+
+<div class="section-title fade" style="animation-delay:.25s">Andamento test <div class="line"></div></div>
+<div class="hero fade" style="animation-delay:.3s">
+  <div class="card">
     <div class="big" id="hero-testo">…</div>
     <div class="progress-wrap">
       <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
       <div class="progress-labels"><span id="prog-left">Giorno 0</span><span id="prog-right">6 giorni</span></div>
     </div>
   </div>
-  <div class="card fade" style="animation-delay:.2s;display:flex;flex-direction:column;justify-content:center">
+  <div class="card" style="display:flex;flex-direction:column;justify-content:center">
     <div class="countdown">
       <div><div class="num" id="cd-giorni">–</div><div class="lbl">giorni rimasti</div></div>
       <div style="width:1px;height:50px;background:var(--border)"></div>
@@ -117,138 +145,205 @@
   </div>
 </div>
 
-<div class="section-title fade" style="animation-delay:.3s">Totali test <div class="line"></div></div>
-<div class="grid-kpi fade" id="kpi-row" style="animation-delay:.35s"></div>
+<div class="section-title fade" style="animation-delay:.4s">Funnel · dall'impressione all'acquisto <div class="line"></div></div>
+<div class="card fade" style="animation-delay:.44s"><div class="funnel" id="funnel"></div></div>
 
-<div class="section-title fade" style="animation-delay:.4s">Le 5 creatività · ordinate per costo/lead <div class="line"></div></div>
-<div class="grid-ads fade" id="ads-row" style="animation-delay:.45s"></div>
+<div class="section-title fade" style="animation-delay:.5s">Totali test <div class="line"></div></div>
+<div class="grid-kpi fade" id="kpi-row" style="animation-delay:.54s"></div>
 
-<div class="section-title fade" style="animation-delay:.5s">Spesa e lead giorno per giorno <div class="line"></div></div>
-<div class="card fade" style="animation-delay:.55s">
-  <div class="chart" id="chart"></div>
+<div class="section-title fade" style="animation-delay:.6s">Le 5 creatività · ordinate per costo/acquisto <div class="line"></div></div>
+<div class="grid-ads fade" id="ads-row" style="animation-delay:.64s"></div>
+
+<div class="section-title fade" style="animation-delay:.7s">Ritorno · quanti acquisti servono <div class="line"></div></div>
+<div class="card fade" style="animation-delay:.74s">
+  <span class="sim-ipo">IPOTESI · muovi la leva per vedere il ritorno</span>
+  <div class="sim">
+    <div class="controls">
+      <div>
+        <label>Acquisti immaginati <b id="l-acq">2</b></label>
+        <input type="range" id="s-acq" min="0" max="30" step="1" value="2">
+      </div>
+      <div style="font-size:11.5px;color:var(--muted);line-height:1.5">
+        Prezzo corso <b id="sim-prezzo">€249</b> · spesa test finora <b id="sim-spesa">€24</b> · budget pieno test <b id="sim-budget">€300</b>.
+        Pareggio spesa attuale: <b id="sim-be">1</b> acquisto.
+      </div>
+    </div>
+    <div class="out">
+      <div class="o"><div class="k">Ricavo</div><div class="v" id="o-ric">—</div></div>
+      <div class="o"><div class="k">ROAS (su spesa attuale)</div><div class="v roas" id="o-roas">—</div></div>
+      <div class="o"><div class="k">Costo per acquisto</div><div class="v" id="o-cpa">—</div></div>
+      <div class="o"><div class="k">Profitto vs spesa attuale</div><div class="v prof" id="o-prof">—</div></div>
+    </div>
+  </div>
 </div>
 
-<div class="section-title fade" style="animation-delay:.6s">Funnel sito <div class="line"></div></div>
-<div class="card fade" style="animation-delay:.65s">
+<div class="section-title fade" style="animation-delay:.8s">Spesa giorno per giorno <div class="line"></div></div>
+<div class="card fade" style="animation-delay:.84s"><div class="chart" id="chart"></div></div>
+
+<div class="section-title fade" style="animation-delay:.9s">Funnel sito <div class="line"></div></div>
+<div class="card fade" style="animation-delay:.94s">
   <div class="fix-note" id="fix-note"></div>
   <div class="funnel-grid" id="funnel-grid"></div>
 </div>
 
-<footer class="fade" style="animation-delay:.7s">
-  Dati da Meta Ads (account 465327538443110) via JARVIS · aggiornata ogni mattina durante i 6 giorni di test.<br>
+<footer class="fade" style="animation-delay:1s">
+  Dati da Meta Ads (account 465327538443110) via JARVIS · test 3 fasce, 17-23 luglio.<br>
   <a id="link-ads-manager" href="#" target="_blank">Apri in Meta Ads Manager →</a> · <a href="iainsieme-ads-dati.json" target="_blank">dati grezzi (JSON)</a>
 </footer>
 
 <script>
-const num = (n, dec=0) => n === null || n === undefined ? '—' : Number(n).toLocaleString('it-IT', {minimumFractionDigits:dec, maximumFractionDigits:dec});
-const eur = (n, dec=2) => n === null || n === undefined ? '—' : '€' + Number(n).toLocaleString('it-IT', {minimumFractionDigits:dec, maximumFractionDigits:dec});
-const pct = (n) => n === null || n === undefined ? '—' : Number(n).toLocaleString('it-IT', {minimumFractionDigits:2, maximumFractionDigits:2}) + '%';
+const num=(n,dec=0)=>n===null||n===undefined?'—':Number(n).toLocaleString('it-IT',{minimumFractionDigits:dec,maximumFractionDigits:dec});
+const eur=(n,dec=2)=>n===null||n===undefined?'—':'€'+Number(n).toLocaleString('it-IT',{minimumFractionDigits:dec,maximumFractionDigits:dec});
+const eur0=(n)=>eur(n,0);
+const pct=(n,dec=2)=>n===null||n===undefined?'—':Number(n).toLocaleString('it-IT',{minimumFractionDigits:dec,maximumFractionDigits:dec})+'%';
+const giorniTra=(a,b)=>Math.round((new Date(b)-new Date(a))/86400000);
+let D=null;
 
-function giorniTra(a, b) {
-  return Math.round((new Date(b) - new Date(a)) / 86400000);
+async function carica(){
+  let d,live=true;
+  try{const r=await fetch('iainsieme-ads-dati.json',{cache:'no-store'});if(!r.ok)throw 0;d=await r.json();}
+  catch(e){live=false;d=EMBEDDED;}
+  render(d,live);
 }
 
-async function carica() {
-  let d, live = true;
-  try {
-    const r = await fetch('iainsieme-ads-dati.json', {cache:'no-store'});
-    if (!r.ok) throw new Error('no fetch');
-    d = await r.json();
-  } catch (e) {
-    live = false;
-    d = EMBEDDED;
-  }
-  render(d, live);
-}
+function render(d,live){
+  D=d; const t=d.totali, c=d.campagna;
+  document.getElementById('h-campagna').textContent=c.nome;
+  document.getElementById('h-live').textContent=live?'dati live':'ultimo snapshot salvato';
+  if(!live)document.getElementById('h-live').classList.add('badge-static');
+  document.getElementById('h-aggiornato').textContent='aggiornato '+new Date(d.aggiornato).toLocaleString('it-IT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
+  document.getElementById('link-ads-manager').href=c.link_ads_manager;
 
-function render(d, live) {
-  document.getElementById('h-campagna').textContent = d.campagna.nome;
-  document.getElementById('h-live').textContent = live ? 'dati live' : 'ultimo snapshot salvato';
-  if (!live) document.getElementById('h-live').classList.add('badge-static');
-  document.getElementById('h-aggiornato').textContent = 'aggiornato ' + new Date(d.aggiornato).toLocaleString('it-IT', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'});
-  document.getElementById('link-ads-manager').href = d.campagna.link_ads_manager;
+  const oggi=new Date(), inizio=new Date(c.inizio_test), fine=new Date(c.fine_test);
+  const giornoCorrente=Math.max(0,Math.min(c.giorni_totali,giorniTra(c.inizio_test,oggi.toISOString().slice(0,10))));
+  const giorniRimasti=Math.max(0,giorniTra(oggi.toISOString().slice(0,10),c.fine_test));
+  const prezzo=t.prezzo_corso||249;
+  const breakeven=Math.max(1,Math.ceil(t.spesa/prezzo));
+  const cpa=t.lead?t.spesa/t.lead:null;
 
-  const oggi = new Date();
-  const inizio = new Date(d.campagna.inizio_test);
-  const fine = new Date(d.campagna.fine_test);
-  const giornoCorrente = Math.max(0, Math.min(d.campagna.giorni_totali, giorniTra(d.campagna.inizio_test, oggi.toISOString().slice(0,10))));
-  const giorniRimasti = Math.max(0, giorniTra(oggi.toISOString().slice(0,10), d.campagna.fine_test));
+  document.getElementById('clevel-row').innerHTML=`
+    <div class="card role">
+      <div class="head"><span class="ico">👔</span><span class="who">CFO</span> <span class="what">quanto spendo, quando rientro</span></div>
+      <div class="rows">
+        <div class="r"><span class="k">Spesa test</span><span class="v accent">${eur(t.spesa)}</span></div>
+        <div class="r"><span class="k">Budget pieno test</span><span class="v">${eur0(t.budget_totale_previsto)}</span></div>
+        <div class="r"><span class="k">Prezzo corso</span><span class="v">${eur0(prezzo)}</span></div>
+        <div class="r"><span class="k">Costo per acquisto</span><span class="v">${eur(cpa,0)}</span></div>
+      </div>
+      <div class="verdict ${t.lead>0?'ok':'neutral'}">Pareggio della spesa attuale con <b>${num(breakeven)}</b> acquisto${breakeven>1?'i':''} (a ${eur0(prezzo)}). ${t.lead>0?'Già in vendita.':'Ancora 0 acquisti: test appena partito.'}</div>
+    </div>
+    <div class="card role">
+      <div class="head"><span class="ico">📈</span><span class="who">CSO</span> <span class="what">quante vendite entrano</span></div>
+      <div class="rows">
+        <div class="r"><span class="k">Acquisti</span><span class="v ${t.lead>0?'good':''}">${num(t.lead)}</span></div>
+        <div class="r"><span class="k">Click sul sito</span><span class="v">${num(t.click)}</span></div>
+        <div class="r"><span class="k">Click → acquisto</span><span class="v">${t.click&&t.lead?pct(t.lead/t.click*100):'—'}</span></div>
+        <div class="r"><span class="k">Costo per acquisto</span><span class="v accent">${eur(cpa,0)}</span></div>
+      </div>
+      <div class="verdict neutral">${num(t.click)} click portati al sito. L'acquisto si chiude sul checkout: se i click salgono ma gli acquisti no, il collo di bottiglia è la pagina, non l'inserzione.</div>
+    </div>
+    <div class="card role">
+      <div class="head"><span class="ico">🎯</span><span class="who">CMO</span> <span class="what">quale creatività tira</span></div>
+      <div class="rows">
+        <div class="r"><span class="k">CTR</span><span class="v ${t.ctr>=1?'good':''}">${pct(t.ctr)}</span></div>
+        <div class="r"><span class="k">CPM</span><span class="v">${eur(t.cpm)}</span></div>
+        <div class="r"><span class="k">Frequenza</span><span class="v">${num(t.frequency,2)}</span></div>
+        <div class="r"><span class="k">Reach</span><span class="v">${num(t.reach)}</span></div>
+      </div>
+      <div class="verdict ${t.ctr>=1?'ok':'warn'}" id="cmo-verdict"></div>
+    </div>`;
 
-  document.getElementById('hero-testo').innerHTML =
-    `Test partito il <b>${inizio.toLocaleDateString('it-IT',{day:'2-digit',month:'long'})}</b>, finisce il <b>${fine.toLocaleDateString('it-IT',{day:'2-digit',month:'long'})}</b>. ` +
-    `Budget <b>${eur(d.campagna.budget_giornaliero,0)}/giorno</b> su 5 creatività, bid strategy <b>${d.campagna.bid_strategy}</b>. ` +
-    `Spesi finora <b>${eur(d.totali.spesa)}</b> su un budget previsto di <b>${eur(d.totali.budget_totale_previsto,0)}</b>.`;
+  document.getElementById('hero-testo').innerHTML=
+    `Test partito il <b>${inizio.toLocaleDateString('it-IT',{day:'2-digit',month:'long'})}</b>, finisce il <b>${fine.toLocaleDateString('it-IT',{day:'2-digit',month:'long'})}</b>. `+
+    `Budget <b>${eur0(c.budget_giornaliero)}/giorno</b> su 5 creatività. Spesi finora <b>${eur(t.spesa)}</b> su un budget previsto di <b>${eur0(t.budget_totale_previsto)}</b>.`;
+  document.getElementById('progress-fill').style.width=Math.min(100,(giornoCorrente/c.giorni_totali)*100)+'%';
+  document.getElementById('prog-left').textContent=`Giorno ${giornoCorrente} di ${c.giorni_totali}`;
+  document.getElementById('prog-right').textContent=`fine ${fine.toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit'})}`;
+  document.getElementById('cd-giorni').textContent=giorniRimasti;
+  document.getElementById('cd-budget').textContent=eur0(c.budget_giornaliero);
 
-  const progressPct = Math.min(100, (giornoCorrente / d.campagna.giorni_totali) * 100);
-  document.getElementById('progress-fill').style.width = progressPct + '%';
-  document.getElementById('prog-left').textContent = `Giorno ${giornoCorrente} di ${d.campagna.giorni_totali}`;
-  document.getElementById('prog-right').textContent = `fine ${fine.toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit'})}`;
-
-  document.getElementById('cd-giorni').textContent = giorniRimasti;
-  document.getElementById('cd-budget').textContent = eur(d.campagna.budget_giornaliero, 0);
-
-  const kpis = [
-    {label:'Spesa totale', value: eur(d.totali.spesa)},
-    {label:'Impression', value: num(d.totali.impressions)},
-    {label:'Click', value: num(d.totali.click)},
-    {label:'CTR medio', value: pct(d.totali.ctr)},
-    {label:'CPC medio', value: eur(d.totali.cpc)},
-    {label:'Lead totali', value: num(d.totali.lead), accent:true},
-    {label:'Costo/lead', value: eur(d.totali.costo_per_lead), accent:true},
-  ];
-  document.getElementById('kpi-row').innerHTML = kpis.map(k =>
-    `<div class="card kpi"><div class="label">${k.label}</div><div class="value ${k.accent?'accent':''}">${k.value}</div></div>`
-  ).join('');
-
-  const ordinati = [...d.ads].sort((a,b) => {
-    const ca = a.costo_per_lead ?? Infinity, cb = b.costo_per_lead ?? Infinity;
-    if (ca !== cb) return ca - cb;
-    return (b.click||0) - (a.click||0);
+  const steps=[{lbl:'Impressioni',val:t.impressions},{lbl:'Reach (account raggiunti)',val:t.reach},{lbl:'Click sul sito',val:t.click},{lbl:'Acquisti',val:t.lead}];
+  let fh='';
+  steps.forEach((s,i)=>{
+    fh+=`<div class="fstep" style="opacity:${1-i*0.14}"><span class="lbl">${s.lbl}</span><span class="val">${num(s.val)}</span></div>`;
+    if(i<steps.length-1){const r=s.val?(steps[i+1].val/s.val)*100:0;fh+=`<div class="fdrop">↓ <b>${pct(r,r<1?2:1)}</b> passa allo step dopo</div>`;}
   });
-  document.getElementById('ads-row').innerHTML = ordinati.map((a, i) => `
+  document.getElementById('funnel').innerHTML=fh;
+
+  const kpis=[
+    {label:'Spesa',value:eur(t.spesa),accent:true},
+    {label:'Impression',value:num(t.impressions)},
+    {label:'Reach',value:num(t.reach)},
+    {label:'Click',value:num(t.click)},
+    {label:'CTR',value:pct(t.ctr)},
+    {label:'CPC',value:eur(t.cpc)},
+    {label:'CPM',value:eur(t.cpm)},
+    {label:'Frequenza',value:num(t.frequency,2)},
+    {label:'Acquisti',value:num(t.lead),accent:true},
+    {label:'Costo/acquisto',value:eur(cpa,0),accent:true},
+  ];
+  document.getElementById('kpi-row').innerHTML=kpis.map(k=>`<div class="card kpi"><div class="label">${k.label}</div><div class="value ${k.accent?'accent':''}">${k.value}</div></div>`).join('');
+
+  const ord=[...d.ads].sort((a,b)=>{const ca=a.costo_per_lead??Infinity,cb=b.costo_per_lead??Infinity;if(ca!==cb)return ca-cb;return (b.ctr||0)-(a.ctr||0);});
+  const topCtr=[...d.ads].sort((a,b)=>(b.ctr||0)-(a.ctr||0))[0];
+  document.getElementById('ads-row').innerHTML=ord.map(a=>`
     <div class="card adcard">
-      ${i===0 && a.click ? '<div class="rank">🏆 migliore</div>' : ''}
+      ${topCtr&&a.id===topCtr.id?'<div class="rank">🏆 miglior CTR</div>':''}
       <img src="${a.immagine}" alt="${a.angolo}" loading="lazy">
       <div class="body">
         <div class="angolo">${a.angolo}</div>
-        <div class="stato">${a.stato === 'ACTIVE' ? 'attiva' : a.stato.toLowerCase()}</div>
+        <div class="stato">${a.stato==='ACTIVE'?'attiva':a.stato.toLowerCase()}</div>
         <div class="metrics">
           <div class="m">Spesa<b>${eur(a.spesa)}</b></div>
           <div class="m">Impression<b>${num(a.impressions)}</b></div>
           <div class="m">Click<b>${num(a.click)}</b></div>
           <div class="m">CTR<b>${pct(a.ctr)}</b></div>
-          <div class="m">Lead<b>${num(a.lead)}</b></div>
-          <div class="m cpl">Costo/lead<b>${eur(a.costo_per_lead)}</b></div>
+          <div class="m">CPC<b>${eur(a.cpc)}</b></div>
+          <div class="m">CPM<b>${eur(a.cpm)}</b></div>
+          <div class="m">Acquisti<b>${num(a.lead)}</b></div>
+          <div class="m cpl">Costo/acq.<b>${eur(a.costo_per_lead)}</b></div>
         </div>
         <a class="openlink" href="${a.link}" target="_blank">Vedi landing →</a>
       </div>
-    </div>
-  `).join('');
+    </div>`).join('');
 
-  const trend = d.trend_giornaliero || [];
-  if (!trend.length) {
-    document.getElementById('chart').innerHTML = '<div class="empty-note">Nessun dato giornaliero ancora — arriva dal secondo giorno di test.</div>';
-  } else {
-    const maxSpesa = Math.max(...trend.map(t => t.spesa || 0), 1);
-    document.getElementById('chart').innerHTML = trend.map(t => `
-      <div class="bar-wrap">
-        <div style="font-size:11px;font-weight:700;color:var(--ink)">${eur(t.spesa)}</div>
-        <div class="bar" style="height:${Math.max(4, (t.spesa/maxSpesa)*130)}px"></div>
-        <div class="bar-day">${new Date(t.data).toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit'})}</div>
-      </div>
-    `).join('');
-  }
+  document.getElementById('cmo-verdict').innerHTML=`CTR ${pct(t.ctr)} (benchmark ~1%), CPM ${eur(t.cpm)} basso, frequenza ${num(t.frequency,2)} (pubblico fresco).${topCtr?` Creatività che tira di più: <b>${topCtr.angolo}</b> (CTR ${pct(topCtr.ctr)}).`:''}`;
 
-  document.getElementById('fix-note').textContent = '✓ ' + d.sito.nota_fix;
-  document.getElementById('funnel-grid').innerHTML = `
+  const be=document.getElementById('sim-be'); if(be)be.textContent=num(breakeven);
+  document.getElementById('sim-prezzo').textContent=eur0(prezzo);
+  document.getElementById('sim-spesa').textContent=eur(t.spesa);
+  document.getElementById('sim-budget').textContent=eur0(t.budget_totale_previsto);
+  document.getElementById('s-acq').oninput=simula; simula();
+
+  const trend=d.trend_giornaliero||[];
+  if(!trend.length){document.getElementById('chart').innerHTML='<div class="empty-note">Nessun dato giornaliero ancora.</div>';}
+  else{const maxS=Math.max(...trend.map(x=>x.spesa||0),1);
+    document.getElementById('chart').innerHTML=trend.map(x=>`<div class="bar-wrap"><div style="font-size:11px;font-weight:700;color:var(--ink)">${eur(x.spesa)}</div><div class="bar" style="height:${Math.max(4,(x.spesa/maxS)*130)}px"></div><div class="bar-day">${new Date(x.data).toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit'})}</div></div>`).join('');}
+
+  document.getElementById('fix-note').textContent='✓ '+d.sito.nota_fix;
+  document.getElementById('funnel-grid').innerHTML=`
     <div class="funnel-item"><div class="eta">FASCIA 8-10</div><a href="${d.sito.checkout_8_10}" target="_blank">${d.sito.checkout_8_10}</a></div>
     <div class="funnel-item"><div class="eta">FASCIA 11-13</div><a href="${d.sito.checkout_11_13}" target="_blank">${d.sito.checkout_11_13}</a></div>
     <div class="funnel-item"><div class="eta">FASCIA 14-16</div><a href="${d.sito.checkout_14_16}" target="_blank">${d.sito.checkout_14_16}</a></div>
-    <div class="funnel-item"><div class="eta">SITO</div><a href="${d.sito.sito_url}" target="_blank">${d.sito.sito_url}</a></div>
-  `;
+    <div class="funnel-item"><div class="eta">SITO</div><a href="${d.sito.sito_url}" target="_blank">${d.sito.sito_url}</a></div>`;
 }
 
-const EMBEDDED = {"aggiornato":"2026-07-17T05:58:00+02:00","campagna":{"nome":"IAinsieme — Test 3 fasce","stato":"ACTIVE","budget_giornaliero":50,"valuta":"EUR","bid_strategy":"Highest volume","inizio_test":"2026-07-17","fine_test":"2026-07-23","giorni_totali":6,"link_ads_manager":"https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110&selected_campaign_ids=120254252946660348"},"totali":{"spesa":0,"budget_totale_previsto":300,"impressions":0,"click":0,"ctr":null,"cpc":null,"lead":0,"costo_per_lead":null},"ads":[],"trend_giornaliero":[],"sito":{"nota_fix":"Bottone header portava sempre al checkout fascia 11/13 (fix 17/07): ora punta al selettore delle 3 fasce.","checkout_8_10":"https://www.davidecaiazzo.it/offers/R3f5LZPR/checkout","checkout_11_13":"https://www.davidecaiazzo.it/offers/qzjqZZzy/checkout","checkout_14_16":"https://www.davidecaiazzo.it/offers/bLzWy4g3/checkout","sito_url":"https://iainsieme.davidecaiazzo.it/"}};
+function simula(){
+  const t=D.totali, prezzo=t.prezzo_corso||249;
+  const acq=+document.getElementById('s-acq').value;
+  document.getElementById('l-acq').textContent=num(acq);
+  const ricavo=acq*prezzo;
+  const roas=t.spesa>0?ricavo/t.spesa:0;
+  const cpa=acq>0?t.spesa/acq:null;
+  const prof=ricavo-t.spesa;
+  document.getElementById('o-ric').textContent=eur0(ricavo);
+  document.getElementById('o-roas').textContent=num(roas,1)+'×';
+  document.getElementById('o-cpa').textContent=eur(cpa,0);
+  const pe=document.getElementById('o-prof');
+  pe.textContent=(prof>=0?'+':'')+eur0(prof); pe.classList.toggle('neg',prof<0);
+}
+
+const EMBEDDED={"aggiornato":"2026-07-17T08:20:00+02:00","campagna":{"nome":"IAinsieme Test 3 fasce","stato":"ACTIVE","budget_giornaliero":50,"valuta":"EUR","bid_strategy":"Highest volume","inizio_test":"2026-07-17","fine_test":"2026-07-23","giorni_totali":6,"link_ads_manager":"https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110&selected_campaign_ids=120254252946660348"},"totali":{"spesa":24.03,"budget_totale_previsto":300,"impressions":2972,"reach":2558,"frequency":1.16,"click":66,"ctr":2.22,"cpc":0.36,"cpm":8.09,"lead":0,"costo_per_lead":null,"prezzo_corso":249},"ads":[],"trend_giornaliero":[],"sito":{"nota_fix":"Bottone header ora punta al selettore delle 3 fasce.","checkout_8_10":"https://www.davidecaiazzo.it/offers/R3f5LZPR/checkout","checkout_11_13":"https://www.davidecaiazzo.it/offers/qzjqZZzy/checkout","checkout_14_16":"https://www.davidecaiazzo.it/offers/bLzWy4g3/checkout","sito_url":"https://iainsieme.davidecaiazzo.it/"}};
 
 carica();
 </script>
