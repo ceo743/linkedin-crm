@@ -604,9 +604,18 @@ setTimeout(()=>{document.querySelectorAll('.fill').forEach(f=>f.style.width=f.da
 // 2) Altrimenti: groove synthwave generato (cassa, basso, accordi, arpeggio).
 let AC=null, musicOn=false, seqTimer=null, synthMaster=null;
 const audioEl=new Audio('jarvis-music.mp3'); audioEl.loop=true; audioEl.volume=0;
-let mp3ok=null; // null=da scoprire
+let mp3ok=null, tentativiMp3=0; // null=da scoprire
+// 18/07, "la musica non era quella del localhost": al primo carico della pagina il file mp3 gareggia
+// per banda con GLI ALTRI fetch (jarvis-giorni.json, dati ads, ecc.) e su una CDN ancora fredda può
+// fallire (verificato: transferSize 300 byte, 0 decodificati — richiesta abortita, non un vero 404).
+// Un errore isolato al primo colpo bloccava mp3ok=false per sempre, niente retry: da lì in poi solo
+// synth generato, pur essendo il file vero raggiungibile un secondo dopo. Ora ritenta fino a 3 volte.
 audioEl.addEventListener('canplaythrough',()=>{ if(mp3ok===null) mp3ok=true; });
-audioEl.addEventListener('error',()=>{ mp3ok=false; });
+audioEl.addEventListener('error',()=>{
+  tentativiMp3++;
+  if(tentativiMp3<3){ setTimeout(()=>audioEl.load(),1500); }
+  else mp3ok=false;
+});
 audioEl.load();
 const musicBtn=$('#music');
 function ensureAC(){ if(!AC) AC=new (window.AudioContext||window.webkitAudioContext)(); if(AC.state==='suspended') AC.resume(); return AC; }
