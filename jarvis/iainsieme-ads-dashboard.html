@@ -171,6 +171,11 @@ async function carica() {
 }
 
 function render(d, live) {
+  // 17/07: come account1-ads-dati.json, anche questo file è passato a schema per-periodo
+  // (d.periodi.oggi/ieri/max) — scoperto rotto (pagina bianca sui dati veri) mentre risistemavo la
+  // voce JARVIS. Fallback allo schema piatto se periodi non c'è (EMBEDDED offline).
+  const P = d.periodi ? d.periodi[d.periodo_default || Object.keys(d.periodi)[0]] : d;
+  window._iaPeriodo = P;
   document.getElementById('h-campagna').textContent = d.campagna.nome;
   document.getElementById('h-live').textContent = live ? 'dati live' : 'ultimo snapshot salvato';
   if (!live) document.getElementById('h-live').classList.add('badge-static');
@@ -186,7 +191,7 @@ function render(d, live) {
   document.getElementById('hero-testo').innerHTML =
     `Test partito il <b>${inizio.toLocaleDateString('it-IT',{day:'2-digit',month:'long'})}</b>, finisce il <b>${fine.toLocaleDateString('it-IT',{day:'2-digit',month:'long'})}</b>. ` +
     `Budget <b>${eur(d.campagna.budget_giornaliero,0)}/giorno</b> su 5 creatività, bid strategy <b>${d.campagna.bid_strategy}</b>. ` +
-    `Spesi finora <b>${eur(d.totali.spesa)}</b> su un budget previsto di <b>${eur(d.totali.budget_totale_previsto,0)}</b>.`;
+    `Spesi finora <b>${eur(P.totali.spesa)}</b> su un budget previsto di <b>${eur(P.totali.budget_totale_previsto,0)}</b>.`;
 
   const progressPct = Math.min(100, (giornoCorrente / d.campagna.giorni_totali) * 100);
   document.getElementById('progress-fill').style.width = progressPct + '%';
@@ -197,19 +202,19 @@ function render(d, live) {
   document.getElementById('cd-budget').textContent = eur(d.campagna.budget_giornaliero, 0);
 
   const kpis = [
-    {label:'Spesa totale', value: eur(d.totali.spesa)},
-    {label:'Impression', value: num(d.totali.impressions)},
-    {label:'Click', value: num(d.totali.click)},
-    {label:'CTR medio', value: pct(d.totali.ctr)},
-    {label:'CPC medio', value: eur(d.totali.cpc)},
-    {label:'Lead totali', value: num(d.totali.lead), accent:true},
-    {label:'Costo/lead', value: eur(d.totali.costo_per_lead), accent:true},
+    {label:'Spesa totale', value: eur(P.totali.spesa)},
+    {label:'Impression', value: num(P.totali.impressions)},
+    {label:'Click', value: num(P.totali.click)},
+    {label:'CTR medio', value: pct(P.totali.ctr)},
+    {label:'CPC medio', value: eur(P.totali.cpc)},
+    {label:'Lead totali', value: num(P.totali.lead), accent:true},
+    {label:'Costo/lead', value: eur(P.totali.costo_per_lead), accent:true},
   ];
   document.getElementById('kpi-row').innerHTML = kpis.map(k =>
     `<div class="card kpi"><div class="label">${k.label}</div><div class="value ${k.accent?'accent':''}">${k.value}</div></div>`
   ).join('');
 
-  const ordinati = [...d.ads].sort((a,b) => {
+  const ordinati = [...P.ads].sort((a,b) => {
     const ca = a.costo_per_lead ?? Infinity, cb = b.costo_per_lead ?? Infinity;
     if (ca !== cb) return ca - cb;
     return (b.click||0) - (a.click||0);
@@ -278,10 +283,10 @@ function jvFrasi(){
   const out=[];
   out.push({testo:"Test "+d.campagna.nome+", "+(document.getElementById('h-live').textContent)+".", el:null});
   out.push({testo:"Giorno "+window._iaGiornoCorrente+" di "+d.campagna.giorni_totali+", "+window._iaGiorniRimasti+" giorni rimasti. Budget "+eur(d.campagna.budget_giornaliero,0)+" al giorno.", el:heroCard});
-  out.push({testo:"Spesi finora "+eur(d.totali.spesa)+" su un budget previsto di "+eur(d.totali.budget_totale_previsto,0)+".", el:heroCard});
-  const kpiLabels=['Spesa totale','Impression','Click','CTR medio','CPC medio','Lead totali','Costo per lead'];
-  const kpiVals=[eur(d.totali.spesa), num(d.totali.impressions), num(d.totali.click), pct(d.totali.ctr), eur(d.totali.cpc), num(d.totali.lead), eur(d.totali.costo_per_lead)];
-  kpiLabels.forEach(function(lbl,i){ out.push({testo:lbl+': '+kpiVals[i]+'.', el:kpiCards[i]||null}); });
+  // 17/07, "non serve che leggi ogni riga, dammi punti salienti": una frase sola coi 7 totali invece
+  // di 7 frasi separate una per numero — stessi dati, meno elenco puntato letto ad alta voce
+  const P2=window._iaPeriodo||d; const kpiLabels=['spesa totale '+eur(P2.totali.spesa), num(P2.totali.impressions)+' impression', num(P2.totali.click)+' click', 'CTR '+pct(P2.totali.ctr), 'CPC '+eur(P2.totali.cpc), num(P2.totali.lead)+' lead', 'costo per lead '+eur(P2.totali.costo_per_lead)];
+  out.push({testo:"Totali del test: "+kpiLabels.join(', ')+".", el:document.getElementById('kpi-row')});
   if(ordinati.length){
     out.push({testo:"Le "+ordinati.length+" creatività, ordinate per costo per lead, dalla migliore.", el:null});
     ordinati.forEach(function(a,i){
