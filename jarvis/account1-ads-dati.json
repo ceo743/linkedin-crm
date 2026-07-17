@@ -1,64 +1,61 @@
 {
-  "aggiornato": "2026-07-17T08:20:00+02:00",
+  "aggiornato": "2026-07-17T08:35:00+02:00",
   "account": {
     "nome": "Consulenza 1:1",
     "obiettivo": "Analisi gratuita + call su Calendly",
     "id": "465327538443110",
     "valuta": "EUR",
-    "periodo": "ultimi 30 giorni (dal 17 giugno al 16 luglio 2026)",
-    "giorni_periodo": 30,
     "link_ads_manager": "https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110"
   },
-  "totali": {
-    "spesa": 3144.35,
-    "impressions": 155837,
-    "reach": 61499,
-    "frequency": 2.53,
-    "click": 3664,
-    "ctr": 2.35,
-    "cpc": 0.86,
-    "cpm": 20.18,
-    "call": 13,
-    "costo_call_migliore": 210.55
-  },
-  "ipotesi_default": {
-    "valore_cliente": 1500,
-    "tasso_chiusura": 25
-  },
-  "campagne": [
-    {
-      "id": "120248200215460348",
-      "nome": "25.03 | Lead Gen Consulenza LinkedIn 1:1",
-      "stato": "ACTIVE",
-      "obiettivo": "Contatti",
-      "spesa": 2737.09,
-      "impressions": 145323,
-      "reach": 54483,
-      "frequency": 2.67,
-      "click": 3441,
-      "ctr": 2.37,
-      "cpc": 0.80,
-      "cpm": 18.83,
-      "risultati": 13,
-      "tipo_risultato": "call prenotate",
-      "costo_risultato": 210.55
+  "ipotesi_default": { "valore_cliente": 1500, "tasso_chiusura": 25 },
+  "periodo_default": "30g",
+  "periodi": {
+    "oggi": {
+      "label": "Oggi",
+      "descrizione": "oggi 17 luglio 2026",
+      "giorni": 1,
+      "totali": { "spesa": 52.22, "impressions": 1910, "reach": 1760, "frequency": 1.09, "click": 34, "ctr": 1.78, "cpc": 1.54, "cpm": 27.34, "call": 0, "costo_call_migliore": null },
+      "campagne": [
+        { "id": "120248200215460348", "nome": "25.03 | Lead Gen Consulenza LinkedIn 1:1", "stato": "ACTIVE", "obiettivo": "Contatti", "spesa": 52.22, "impressions": 1910, "reach": 1760, "frequency": 1.09, "click": 34, "ctr": 1.78, "cpc": 1.54, "cpm": 27.34, "risultati": 0, "tipo_risultato": "call prenotate", "costo_risultato": null }
+      ]
     },
-    {
-      "id": "120252595942170348",
-      "nome": "Lead Gen Lookalike Buyers + Broad (giu 2026)",
-      "stato": "PAUSED",
-      "obiettivo": "Contatti",
-      "spesa": 407.26,
-      "impressions": 10514,
-      "reach": 7016,
-      "frequency": 1.50,
-      "click": 223,
-      "ctr": 2.12,
-      "cpc": 1.83,
-      "cpm": 38.74,
-      "risultati": 0,
-      "tipo_risultato": "call prenotate",
-      "costo_risultato": null
+    "ieri": {
+      "label": "Ieri",
+      "descrizione": "ieri 16 luglio 2026",
+      "giorni": 1,
+      "totali": { "spesa": 161.23, "impressions": 8065, "reach": 6915, "frequency": 1.17, "click": 174, "ctr": 2.16, "cpc": 0.93, "cpm": 19.99, "call": 2, "costo_call_migliore": 80.62 },
+      "campagne": [
+        { "id": "120248200215460348", "nome": "25.03 | Lead Gen Consulenza LinkedIn 1:1", "stato": "ACTIVE", "obiettivo": "Contatti", "spesa": 161.23, "impressions": 8065, "reach": 6915, "frequency": 1.17, "click": 174, "ctr": 2.16, "cpc": 0.93, "cpm": 19.99, "risultati": 2, "tipo_risultato": "call prenotate", "costo_risultato": 80.62 }
+      ]
+    },
+    "7g": {
+      "label": "Ultimi 7 giorni",
+      "descrizione": "ultimi 7 giorni (10-16 luglio 2026)",
+      "giorni": 7,
+      "totali": { "spesa": 842.85, "impressions": 27501, "reach": 16872, "frequency": 1.63, "click": 735, "ctr": 2.67, "cpc": 1.15, "cpm": 30.65, "call": 6, "costo_call_migliore": 140.48 },
+      "campagne": [
+        { "id": "120248200215460348", "nome": "25.03 | Lead Gen Consulenza LinkedIn 1:1", "stato": "ACTIVE", "obiettivo": "Contatti", "spesa": 842.85, "impressions": 27501, "reach": 16872, "frequency": 1.63, "click": 735, "ctr": 2.67, "cpc": 1.15, "cpm": 30.65, "risultati": 6, "tipo_risultato": "call prenotate", "costo_risultato": 140.48 }
+      ]
+    },
+    "30g": {
+      "label": "Ultimi 30 giorni",
+      "descrizione": "ultimi 30 giorni (17 giugno - 16 luglio 2026)",
+      "giorni": 30,
+      "totali": { "spesa": 3144.35, "impressions": 155837, "reach": 61499, "frequency": 2.53, "click": 3664, "ctr": 2.35, "cpc": 0.86, "cpm": 20.18, "call": 13, "costo_call_migliore": 210.55 },
+      "campagne": [
+        { "id": "120248200215460348", "nome": "25.03 | Lead Gen Consulenza LinkedIn 1:1", "stato": "ACTIVE", "obiettivo": "Contatti", "spesa": 2737.09, "impressions": 145323, "reach": 54483, "frequency": 2.67, "click": 3441, "ctr": 2.37, "cpc": 0.80, "cpm": 18.83, "risultati": 13, "tipo_risultato": "call prenotate", "costo_risultato": 210.55 },
+        { "id": "120252595942170348", "nome": "Lead Gen Lookalike Buyers + Broad (giu 2026)", "stato": "PAUSED", "obiettivo": "Contatti", "spesa": 407.26, "impressions": 10514, "reach": 7016, "frequency": 1.50, "click": 223, "ctr": 2.12, "cpc": 1.83, "cpm": 38.74, "risultati": 0, "tipo_risultato": "call prenotate", "costo_risultato": null }
+      ]
+    },
+    "max": {
+      "label": "Dall'inizio",
+      "descrizione": "tutto lo storico (dal 25 marzo 2026)",
+      "giorni": 114,
+      "totali": { "spesa": 7794.29, "impressions": 376504, "reach": 122158, "frequency": 3.08, "click": 9583, "ctr": 2.55, "cpc": 0.81, "cpm": 20.70, "call": 117, "costo_call_migliore": 62.92 },
+      "campagne": [
+        { "id": "120248200215460348", "nome": "25.03 | Lead Gen Consulenza LinkedIn 1:1", "stato": "ACTIVE", "obiettivo": "Contatti", "spesa": 7235.32, "impressions": 362458, "reach": 113288, "frequency": 3.20, "click": 9263, "ctr": 2.56, "cpc": 0.78, "cpm": 19.96, "risultati": 115, "tipo_risultato": "call prenotate", "costo_risultato": 62.92 },
+        { "id": "120252595942170348", "nome": "Lead Gen Lookalike Buyers + Broad (giu 2026)", "stato": "PAUSED", "obiettivo": "Contatti", "spesa": 558.97, "impressions": 14046, "reach": 8870, "frequency": 1.58, "click": 320, "ctr": 2.28, "cpc": 1.75, "cpm": 39.80, "risultati": 2, "tipo_risultato": "call prenotate", "costo_risultato": 279.49 }
+      ]
     }
-  ]
+  }
 }
