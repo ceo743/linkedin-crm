@@ -618,20 +618,31 @@ setTimeout(()=>{document.querySelectorAll('.fill').forEach(f=>f.style.width=f.da
 // 1) Se accanto al file c'è "jarvis-music.mp3", usa quello (mettici la traccia che vuoi).
 // 2) Altrimenti: groove synthwave generato (cassa, basso, accordi, arpeggio).
 let AC=null, musicOn=false, seqTimer=null, synthMaster=null;
-const audioEl=new Audio('jarvis-music.mp3'); audioEl.loop=true; audioEl.volume=0;
+const audioEl=new Audio('jarvis-music.mp3'); audioEl.loop=true; audioEl.volume=0; audioEl.preload='auto';
 let mp3ok=null, tentativiMp3=0; // null=da scoprire
-// 18/07, "la musica non era quella del localhost": al primo carico della pagina il file mp3 gareggia
-// per banda con GLI ALTRI fetch (jarvis-giorni.json, dati ads, ecc.) e su una CDN ancora fredda può
-// fallire (verificato: transferSize 300 byte, 0 decodificati — richiesta abortita, non un vero 404).
-// Un errore isolato al primo colpo bloccava mp3ok=false per sempre, niente retry: da lì in poi solo
-// synth generato, pur essendo il file vero raggiungibile un secondo dopo. Ora ritenta fino a 3 volte.
-audioEl.addEventListener('canplaythrough',()=>{ if(mp3ok===null) mp3ok=true; });
-audioEl.addEventListener('error',()=>{
+// 18/07, "la musica non è quella del localhost" (segnalato 2 volte): al primo carico della pagina il
+// file mp3 gareggia per banda con GLI ALTRI fetch (jarvis-giorni.json, dati ads, ecc.) e su una CDN
+// ancora fredda può STALLARE senza mai emettere un evento 'error' (verificato dal vivo: transferSize
+// 300 byte, 0 decodificati, richiesta che resta appesa) — il primo fix ritentava solo sull'evento
+// 'error', ma uno stallo silenzioso non lo emette mai: nessun retry scattava, mp3ok restava null per
+// sempre, startMusic() lo trattava come "non disponibile" e restava sul synth per tutta la sessione.
+// Ora: 1) 'canplay' invece di 'canplaythrough' (basta poter iniziare a suonare, non bufferizzare TUTTO
+// il file da 8,5MB prima di dare l'ok — molto più veloce) 2) un watchdog a tempo che ritenta anche
+// senza un evento 'error' esplicito, fino a 4 tentativi.
+function provaCaricoMp3(){
   tentativiMp3++;
-  if(tentativiMp3<3){ setTimeout(()=>audioEl.load(),1500); }
-  else mp3ok=false;
-});
-audioEl.load();
+  let deciso=false;
+  const timeoutId=setTimeout(function(){ if(!deciso) scaduto(); }, 6000);
+  function pulisci(){ audioEl.removeEventListener('canplay',onOk); audioEl.removeEventListener('error',onErr); clearTimeout(timeoutId); }
+  function onOk(){ if(deciso) return; deciso=true; pulisci(); mp3ok=true; }
+  function onErr(){ if(deciso) return; deciso=true; pulisci(); riprova(); }
+  function scaduto(){ if(deciso) return; deciso=true; pulisci(); riprova(); }
+  function riprova(){ if(tentativiMp3<4) setTimeout(provaCaricoMp3,1000); else mp3ok=false; }
+  audioEl.addEventListener('canplay',onOk);
+  audioEl.addEventListener('error',onErr);
+  audioEl.load();
+}
+provaCaricoMp3();
 const musicBtn=$('#music');
 function ensureAC(){ if(!AC) AC=new (window.AudioContext||window.webkitAudioContext)(); if(AC.state==='suspended') AC.resume(); return AC; }
 
@@ -716,8 +727,12 @@ function synthStop(){
   synthMaster=null;
 }
 let usingMp3=false;
-function startMusic(){
+function startMusic(attesaMs){
   if(musicOn) return;
+  // il mp3 può ancora essere in fase di verifica (vedi provaCaricoMp3) quando la voce parte: se si
+  // sceglie il synth troppo presto, resta synth per tutta la sessione anche se il vero file sarebbe
+  // stato pronto un attimo dopo — aspetta fino a 3s che mp3ok si stabilizzi prima di scegliere
+  if(mp3ok===null && (attesaMs||0)<3000){ setTimeout(function(){startMusic((attesaMs||0)+250)},250); return; }
   musicOn=true;
   usingMp3 = mp3ok===true;
   if(usingMp3){
