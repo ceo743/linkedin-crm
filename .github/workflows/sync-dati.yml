@@ -1,0 +1,36 @@
+name: Sincronizza dati Davide Caiazzo
+
+on:
+  schedule:
+    - cron: "*/20 * * * *"
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Scarica outreach-data.json da outreach-new-claude
+        env:
+          SYNC_TOKEN: ${{ secrets.SYNC_TOKEN }}
+        run: |
+          curl -fsSL \
+            -H "Authorization: token ${SYNC_TOKEN}" \
+            -H "Accept: application/vnd.github.raw" \
+            "https://api.github.com/repos/ceo743/outreach-new-claude/contents/Outreach-Clienti/clienti/davide-caiazzo/outreach-data.json?ref=main" \
+            -o outreach-data.json.new
+          python3 -c "import json; json.load(open('outreach-data.json.new'))"
+          mv outreach-data.json.new outreach-data.json
+
+      - name: Commit se cambiato
+        run: |
+          git config user.name "sync-bot"
+          git config user.email "sync-bot@users.noreply.github.com"
+          if ! git diff --quiet -- outreach-data.json; then
+            git add outreach-data.json
+            git commit -m "Sync outreach-data.json da outreach-new-claude"
+            git push
+          else
+            echo "Nessuna modifica, salto il commit."
+          fi

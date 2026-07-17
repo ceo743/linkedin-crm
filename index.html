@@ -108,7 +108,8 @@
   <div class="kpis">
     <div class="kpi" onclick="setFiltro('prenotato')"><div class="v verde" id="k_pren">–</div><div class="e">🎯 Call prenotate</div></div>
     <div class="kpi" onclick="setFiltro('tutti')"><div class="v" id="k_tot">–</div><div class="e">Lead totali</div></div>
-    <div class="kpi" onclick="setFiltro('inviati')"><div class="v" id="k_inv">–</div><div class="e">Contattati</div></div>
+    <div class="kpi" onclick="setFiltro('inviti')"><div class="v" id="k_invito">–</div><div class="e">🤝 Inviti (collegamento)</div></div>
+    <div class="kpi" onclick="setFiltro('inviati')"><div class="v" id="k_inv">–</div><div class="e">📨 Messaggi inviati</div></div>
     <div class="kpi" onclick="setFiltro('risposto')"><div class="v" id="k_ris">–</div><div class="e">Hanno risposto</div></div>
     <div class="kpi" onclick="setFiltro('calendly')"><div class="v acc" id="k_cal">–</div><div class="e">🔗 Calendly inviati</div></div>
     <div class="kpi" onclick="setFiltro('approvare')"><div class="v rosso" id="k_app">–</div><div class="e">Da approvare</div></div>
@@ -151,7 +152,11 @@ function dateSeguiti(x){
   });
   return out;
 }
-function msgCount(x){return (x.inviato?1:0)+(x.seguiti||[]).filter(function(f){return f.inviato}).length;}
+function isInvito(x){return x.tipo==='collegamento'&&!!x.inviato;}
+function msgCount(x){
+  const primo=(x.inviato&&x.tipo!=='collegamento')?1:0; // per 'collegamento' l'inviato e' la richiesta, non un messaggio
+  return primo+(x.seguiti||[]).filter(function(f){return f.inviato}).length;
+}
 function calCount(x){
   let n=0;
   if(x.inviato&&(x.messaggio||'').indexOf('calendly.com')>-1)n++;
@@ -187,6 +192,7 @@ function statoIcone(x){
   if(x.escluso)return '<span class="ic-riga">✕ escluso</span>';
   if(x.prenotato)return '<span class="ic-riga ic-ok">📅 call prenotata</span>';
   const parti=[];
+  if(isInvito(x))parti.push('🤝 invito inviato'+(x.collegamento_accettato?' · accettato':''));
   const cnt=msgCount(x); if(cnt>0)parti.push('📨&nbsp;'+cnt);
   const cal=calCount(x); if(cal>0)parti.push('<span class="ic-ok">🔗&nbsp;'+cal+'</span>');
   if(x.risposto){
@@ -246,40 +252,13 @@ function listaFatto(c){
   return ev.sort(function(a,b){return b.t-a.t}).slice(0,12);
 }
 
-/* ---- azioni server ---- */
-// Il server con i pulsanti gira in locale sul Mac (porta 8766). Se la pagina è sul sito
-// live, i POST vanno comunque al server locale via http://localhost:8766 (Chrome lo permette).
-const LOCALE=(location.hostname==='localhost'||location.hostname==='127.0.0.1');
-const API=LOCALE?'':'http://localhost:8766';
-// il JSON: da locale relativo, dal sito live prima prova il server locale (dati freschi), poi il file statico
-const DATA_URL=LOCALE?'outreach-data.json':'http://localhost:8766/outreach-data.json';
-async function post(url,body,esitoId){
-  const es=document.getElementById(esitoId);
-  if(es){es.textContent='…';es.style.color='var(--dim)';}
-  try{
-    const r=await fetch(API+url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
-    const j=await r.json();
-    if(es){es.textContent=j.ok?'fatto ✓':'errore: '+j.errore;es.style.color=j.ok?'var(--verde)':'var(--rosso)';}
-    if(j.ok)setTimeout(carica,400);
-    return j.ok;
-  }catch(e){if(es){es.textContent='server locale spento — avvia outreach-server.py sul Mac';es.style.color='var(--rosso)';}return false;}
-}
-function salva(id){post('/salva',{id:id,messaggio:document.getElementById('ta'+id).value,quando:new Date().toISOString()},'es'+id);}
-function approva(id,val){post('/approva',{id:id,approvato:val,quando:new Date().toISOString()},'es'+id);}
-function riformula(id){
-  if(!confirm('Rimando questo messaggio a Claude perche lo riscriva col metodo nuovo.\n\nVuoi aggiungere un commento per guidarlo? Premi OK per scriverlo, Annulla per rimandarlo senza commento.')){
-    post('/riformula',{id:id,motivo:'',quando:new Date().toISOString()},'es'+id);return;
-  }
-  var motivo=prompt('Scrivi il commento per Claude (cosa non va / cosa vuoi diverso):','');
-  if(motivo===null)return;
-  post('/riformula',{id:id,motivo:motivo,quando:new Date().toISOString()},'es'+id);
-}
-function escludi(ev,id,nome){
-  ev.stopPropagation();
-  if(!confirm('Escludere PER SEMPRE '+nome+'?'))return;
-  post('/escludi',{id:id,quando:new Date().toISOString()},'es'+id);
-}
-function salvaSeguito(id,n){post('/salva_seguito',{id:id,n:n,testo:document.getElementById('fu'+id+'_'+n).value,quando:new Date().toISOString()},'esfu'+id+'_'+n);}
+/* ---- sola lettura, niente server locale sul Mac ----
+   outreach-data.json in QUESTO repo è tenuto allineato da una GitHub Action
+   schedulata (.github/workflows/sync-dati.yml) che lo copia dal repo privato
+   ceo743/outreach-new-claude (cartella Outreach-Clienti/clienti/davide-caiazzo/,
+   aggiornata dalle routine cloud) e fa commit+push qui. La dashboard legge
+   solo questo file statico: nessuna scrittura, nessuna dipendenza dal Mac. */
+const DATA_URL='outreach-data.json';
 function toggle(id){
   aperti[id]=!aperti[id];
   const el=document.getElementById('sch'+id);
@@ -309,7 +288,8 @@ let filtroAttivo='tutti';
 const FILTRI=[
   {k:'tutti',n:'Tutti',f:function(x){return true}},
   {k:'risposto',n:'Ha risposto',f:function(x){return !!x.risposto}},
-  {k:'inviati',n:'Contattati',f:function(x){return !!x.inviato}},
+  {k:'inviti',n:'🤝 Inviti',f:isInvito},
+  {k:'inviati',n:'📨 Messaggi',f:function(x){return msgCount(x)>0}},
   {k:'approvare',n:'Da approvare',f:daApprovare},
   {k:'verificare',n:'⏳ Da verificare',f:daVerificare},
   {k:'calendly',n:'🔗 Con Calendly',f:function(x){return calCount(x)>0}},
@@ -334,17 +314,7 @@ function schedaHtml(x){
   if(x.risposta_conferma)
     corpo+='<div class="box-msg"><b>Nostra risposta</b>'+esc(x.risposta_conferma)+'</div>';
   if(!bloccato&&!x.escluso){
-    corpo+='<div class="box-msg"><b>Messaggio da inviare (modificabile)</b></div>'+
-      '<textarea id="ta'+x.id+'">'+esc(x.messaggio)+'</textarea>'+
-      '<div class="azioni">'+
-        '<button class="btn" onclick="salva('+x.id+')">Salva</button>'+
-        (x.approvato?'<button class="btn ghost" onclick="approva('+x.id+',false)">Metti in revisione</button>'
-                    :'<button class="btn verde" onclick="approva('+x.id+',true)">Approva ✓</button>')+
-        '<button class="btn arancio" onclick="riformula('+x.id+')" title="Rimanda a Claude per riscriverlo col metodo nuovo (analisi profilo + aggancio specifico)">🔄 Riformula</button>'+
-        '<button class="btn pericolo" onclick="escludi(event,'+x.id+',\''+esc(x.nome).replace(/'/g,'')+'\')">Escludi</button>'+
-        (x.da_riformulare?'<span class="badge-rif">in coda per riformulazione</span>':'')+
-        '<span class="esito" id="es'+x.id+'"></span>'+
-      '</div>';
+    corpo+='<div class="box-msg"><b>Bozza in attesa di invio'+(x.approvato?' · approvata':' · da approvare (routine)')+'</b>'+esc(x.messaggio)+'</div>';
   }else if(bloccato&&x.messaggio&&!x.risposta_conferma&&!x.risposta_testo){
     corpo+='<div class="box-msg"><b>Messaggio inviato '+fmt(x.inviato)+'</b>'+esc(x.messaggio)+'</div>';
   }
@@ -363,8 +333,7 @@ function schedaHtml(x){
           corpo+='<div class="box-msg" style="opacity:.6"><b>Seguito '+f.n+' · '+quando+'</b>'+esc(f.testo)+'</div>';
         }else{
           corpo+='<div class="nota-msg">Seguito '+f.n+' · '+quando+'</div>'+
-            '<textarea id="fu'+x.id+'_'+f.n+'" style="min-height:60px">'+esc(f.testo)+'</textarea>'+
-            '<div class="azioni"><button class="btn ghost" onclick="salvaSeguito('+x.id+','+f.n+')">Salva seguito</button><span class="esito" id="esfu'+x.id+'_'+f.n+'"></span></div>';
+            '<div class="box-msg" style="opacity:.75">'+esc(f.testo)+'</div>';
         }
       });
     }
@@ -374,7 +343,6 @@ function schedaHtml(x){
       '<span class="pallino '+classePallino(x)+'"></span>'+
       '<div class="chi"><span class="n">'+esc(x.nome)+'</span><span class="r'+(nonVerificato(x)?' r-attesa':'')+'">'+esc(ruoloVisibile(x).slice(0,55))+'</span>'+statoIcone(x)+'</div>'+
       (x.profilo?'<a class="profilo-l" href="'+esc(x.profilo)+'" target="_blank" onclick="event.stopPropagation()">Apri ↗</a>':'')+
-      (x.escluso?'':'<button class="x" title="Escludi" onclick="escludi(event,'+x.id+',\''+esc(x.nome).replace(/'/g,'')+'\')">✕</button>')+
     '</div>'+
     '<div class="corpo">'+corpo+'</div>'+
   '</div>';
@@ -383,17 +351,18 @@ function schedaHtml(x){
 /* ---- render ---- */
 async function carica(){
   try{
-    let r;
-    try{ r=await fetch(DATA_URL+'?t='+Date.now()); if(!r.ok)throw 0; }
-    catch(_){ r=await fetch('outreach-data.json?t='+Date.now()); } // server locale spento → file statico
+    const r=await fetch(DATA_URL+'?t='+Date.now());
+    if(!r.ok)throw new Error('GitHub ha risposto '+r.status);
     const d=await r.json();
     const c=d.contatti;
     const attivi=c.filter(function(x){return !x.escluso});
     const fuori=c.filter(function(x){return x.escluso});
-    const inv=attivi.filter(function(x){return x.inviato}).length;
+    const inviti=attivi.filter(isInvito).length;
+    const inv=attivi.filter(function(x){return msgCount(x)>0}).length;
     const ris=attivi.filter(function(x){return x.risposto}).length;
     document.getElementById('k_pren').textContent=attivi.filter(function(x){return x.prenotato}).length;
     document.getElementById('k_tot').textContent=c.length;
+    document.getElementById('k_invito').textContent=inviti;
     document.getElementById('k_inv').textContent=inv;
     document.getElementById('k_ris').innerHTML=ris+(inv?'<small> · '+Math.round(ris/inv*100)+'%</small>':'');
     document.getElementById('k_cal').textContent=c.reduce(function(s,x){return s+calCount(x)},0);
