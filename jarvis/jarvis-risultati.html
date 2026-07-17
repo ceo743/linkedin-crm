@@ -1101,12 +1101,20 @@ function costruisciBriefing(periodo){
   // (skip solo se periodo==='7') non bastava: il periodo di default all'apertura è '1' (ieri), non
   // '7', quindi il digest partiva comunque quasi sempre. Le sezioni sotto sono già complete e più
   // dettagliate del digest: il digest è stato tolto, non solo condizionato.
-  const battute=[{who:'jarvis', testo:"Buongiorno, Signore. Rapporto completo, sezione per sezione, aggiornato oggi "+dataOggiIT+"."}];
-  // niente note lunghe nel briefing principale (17/07, "sta sparando mille numeri senza fermarsi"):
-  // qui solo i numeri diretti (h3/bignum/row/bar/toppost). Le note restano complete nei bottoni "Briefing
-  // sezione" per chi vuole il dettaglio fine di UNA sezione sola.
+  // 18/07, quarta richiesta: "non voglio che legge tutte le righe ma un riassunto dei dati principali"
+  // — anche con le righe accorpate in una frase sola per pannello, leggere OGNI pannello di OGNI
+  // sezione (LinkedIn, Ads, Lead e call, SEO, Sistemi) restava un rapporto lunghissimo. Il briefing
+  // principale ora dice SOLO i numeri grandi (bignum) di ogni sezione, uno accanto all'altro — il
+  // dettaglio riga per riga resta nei bottoni "Briefing sezione", dove Davide lo chiede esplicitamente.
+  const battute=[{who:'jarvis', testo:"Buongiorno, Signore. Ecco il riassunto, aggiornato oggi "+dataOggiIT+"."}];
   SEZIONI_BRIEFING.forEach(function(S){
-    costruisciBriefingSezione(S.nome, S.who, true).forEach(function(L){ battute.push(L); });
+    const contenitori=contenitoriDiSezione(S.nome);
+    const boxes=contenitori.flatMap(function(c){ return [...c.querySelectorAll('.panel')]; });
+    const pezzi=[];
+    boxes.forEach(function(box){
+      riassuntoFrammenti(box).forEach(function(fr){ pezzi.push(fr.testo.replace(/\.$/,'')); });
+    });
+    if(pezzi.length) battute.push({who:S.who, testo:S.nome+': '+pezzi.join(', ')+'.', sezione:S.nome});
   });
   battute.push({who:'jarvis', testo:"Il rapporto è concluso, Signore. Se desidera approfondire, mi chieda pure. Posso anche aprirle le schede."});
   return battute;
@@ -1215,6 +1223,16 @@ function leggiFrammenti(box, saltaNote){
   });
   flush(); // righe/barre rimaste in coda a fine pannello (nessun elemento successivo a far scattare il flush)
   return out;
+}
+// 18/07: SOLO il numero grande di un pannello (titolo + bignum), per il riassunto del briefing
+// principale — i pannelli senza bignum (solo righe/tabelle: demografia follower, badge SEO...) sono
+// dettaglio puro e restano fuori dal riassunto, disponibili nel bottone "Briefing sezione".
+function riassuntoFrammenti(box){
+  const h3=box.querySelector(':scope > h3'), big=box.querySelector(':scope > .bignum');
+  if(!big) return [];
+  const titolo=h3 ? pulisciTestoVoce(testoSenzaFonte(h3)) : '';
+  const valore=big.dataset.count ? Number(big.dataset.count).toLocaleString('it-IT') : pulisciTestoVoce(big.textContent);
+  return [{testo:(titolo?titolo+': ':'')+valore+'.', elemento:big}];
 }
 const SEZIONI_BRIEFING=[
   {nome:'LinkedIn', who:'cmo'},
