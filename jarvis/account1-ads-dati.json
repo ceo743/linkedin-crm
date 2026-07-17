@@ -8,6 +8,11 @@
     "link_ads_manager": "https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110"
   },
   "ipotesi_default": { "valore_cliente": 1500, "tasso_chiusura": 25 },
+  "creativi_attivi": [
+    { "id": "120254235685090348", "nome": "Video 4 · La Diagnosi", "titolo": "Analisi Gratuita del Tuo Profilo — 30 Min", "immagine": "creativi/diagnosi.jpg", "stato": "ACTIVE", "spesa": 264.34, "impressions": 11277, "click": 238, "ctr": 2.11, "cpc": 1.11, "call": 4, "costo_call": 66.09 },
+    { "id": "120254235677590348", "nome": "Video Zucchetti · Analisi Gratuita", "titolo": "Analisi gratuita: dove stai perdendo soldi ogni giorno", "immagine": "creativi/zucchetti.jpg", "stato": "ACTIVE", "spesa": 153.72, "impressions": 4995, "click": 191, "ctr": 3.82, "cpc": 0.80, "call": 1, "costo_call": 153.72 },
+    { "id": "120254235680370348", "nome": "Video 1 · I Risultati", "titolo": "Il Metodo LinkedIn da €1,2M — 30 Min Gratis", "immagine": "creativi/risultati.jpg", "stato": "ACTIVE", "spesa": 35.48, "impressions": 1254, "click": 43, "ctr": 3.43, "cpc": 0.83, "call": 0, "costo_call": null }
+  ],
   "periodo_default": "30g",
   "periodi": {
     "oggi": {

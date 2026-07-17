@@ -32,7 +32,6 @@
   .section-title .line{flex:1;height:1px;background:var(--border)}
   .card{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px}
 
-  /* hero */
   .hero{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;margin-top:22px}
   @media(max-width:900px){.hero{grid-template-columns:1fr}}
   .hero .big{font-size:15px;color:var(--muted);line-height:1.5}
@@ -41,27 +40,26 @@
   .countdown .num{font-size:40px;font-weight:800;color:var(--orange);line-height:1}
   .countdown .lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:4px}
 
-  /* KPI */
   .grid-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin-top:0}
   .kpi .label{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
   .kpi .value{font-size:27px;font-weight:800;margin-top:8px;font-variant-numeric:tabular-nums;color:var(--ink)}
   .kpi .value.accent{color:var(--orange)}
 
-  /* campaign cards (stessa struttura delle card creatività) */
-  .grid-ads{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  /* creative cards (identiche a IAinsieme) */
+  .grid-ads{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
   .adcard{padding:0;overflow:hidden;position:relative;display:flex;flex-direction:column}
-  .adcard .rank{position:absolute;top:10px;right:10px;background:#0c1420cc;color:var(--amber);font-size:11px;font-weight:800;padding:4px 9px;border-radius:20px;z-index:2;border:1px solid var(--border)}
-  .adcard .head{padding:16px 18px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
-  .adcard .angolo{font-size:15px;font-weight:800;color:var(--ink);line-height:1.25}
-  .adcard .stato{font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap}
-  .adcard .stato.on{color:var(--green);background:#3ddc8415;border:1px solid #3ddc8440}
-  .adcard .stato.off{color:var(--amber);background:#f5b94215;border:1px solid #f5b94240}
-  .adcard .body{padding:14px 18px 18px}
-  .adcard .metrics{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px 12px}
+  .adcard .rank{position:absolute;top:10px;left:10px;background:#0c1420cc;color:var(--amber);font-size:11px;font-weight:800;padding:4px 9px;border-radius:20px;z-index:2;border:1px solid var(--border)}
+  .adcard img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#0c1420}
+  .adcard .body{padding:14px 16px 16px}
+  .adcard .titolo{font-size:12px;color:var(--muted);line-height:1.35;min-height:32px}
+  .adcard .angolo{font-size:14.5px;font-weight:800;color:var(--ink);margin-top:6px}
+  .adcard .stato{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;color:var(--green);margin-top:2px}
+  .adcard .stato::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green)}
+  .adcard .metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;margin-top:12px}
   .adcard .m{font-size:11px;color:var(--muted)}
   .adcard .m b{display:block;font-size:15px;color:var(--ink);font-weight:800;font-variant-numeric:tabular-nums}
   .adcard .m.cpl b{color:var(--orange)} .adcard .m.res b{color:var(--teal)}
-  .adcard a.openlink{display:block;text-align:center;margin-top:14px;font-size:11.5px;font-weight:700;color:var(--teal);text-decoration:none;border:1px solid var(--border);border-radius:10px;padding:8px;transition:all .15s}
+  .adcard a.openlink{display:block;text-align:center;margin-top:12px;font-size:11.5px;font-weight:700;color:var(--teal);text-decoration:none;border:1px solid var(--border);border-radius:10px;padding:8px;transition:all .15s}
   .adcard a.openlink:hover{background:var(--teal-soft);border-color:var(--teal)}
 
   footer{margin-top:44px;font-size:11px;color:var(--muted);line-height:1.7;border-top:1px solid var(--border);padding-top:16px}
@@ -107,11 +105,11 @@
 <div class="section-title fade" style="animation-delay:.3s">Totali · <span id="periodo-inline"></span> <div class="line"></div></div>
 <div class="grid-kpi fade" id="kpi-row" style="animation-delay:.35s"></div>
 
-<div class="section-title fade" style="animation-delay:.4s">Le campagne · ordinate per spesa <div class="line"></div></div>
+<div class="section-title fade" style="animation-delay:.4s">Le creatività attive · ordinate per spesa <div class="line"></div></div>
 <div class="grid-ads fade" id="ads-row" style="animation-delay:.45s"></div>
 
 <footer class="fade" style="animation-delay:.6s">
-  Dati da Meta Ads (account 465327538443110 · funnel consulenza 1:1) via JARVIS · finestra ultimi 30 giorni.<br>
+  Dati da Meta Ads (account 465327538443110 · funnel consulenza 1:1) via JARVIS · totali sugli ultimi 30 giorni, creatività attive ad oggi.<br>
   <a id="link-ads-manager" href="#" target="_blank">Apri in Meta Ads Manager →</a> · <a href="account1-ads-dati.json" target="_blank">dati grezzi (JSON)</a>
 </footer>
 
@@ -132,7 +130,6 @@ async function carica() {
 
 function render(d, live) {
   const P = d.periodi ? d.periodi[d.periodo_default || Object.keys(d.periodi)[0]] : d;
-  window._caPeriodo = P;
   const t = P.totali;
   const costoCall = t.call ? t.spesa / t.call : null;
   document.getElementById('h-obiettivo').textContent = d.account.obiettivo || 'analisi gratuita + call su Calendly';
@@ -145,7 +142,6 @@ function render(d, live) {
   document.getElementById('hero-testo').innerHTML =
     `Campagne che portano <b>call su Calendly</b> (obiettivo: consulenza 1:1). Nel periodo <b>${P.descrizione||'ultimi 30 giorni'}</b> spesi <b>${eur(t.spesa)}</b>, ` +
     `entrate <b>${num(t.call)} call</b> a un costo di <b>${eur(costoCall,0)}</b> ciascuna. CTR medio <b>${pct(t.ctr)}</b>.`;
-
   document.getElementById('cd-call').textContent = num(t.call);
   document.getElementById('cd-costo').textContent = eur(costoCall, 0);
 
@@ -162,31 +158,29 @@ function render(d, live) {
     `<div class="card kpi"><div class="label">${k.label}</div><div class="value ${k.accent?'accent':''}">${k.value}</div></div>`
   ).join('');
 
-  const ordinate = [...(P.campagne||[])].sort((a,b) => (b.spesa||0) - (a.spesa||0));
-  document.getElementById('ads-row').innerHTML = ordinate.map((c, i) => {
-    const on = c.stato === 'ACTIVE';
-    return `
+  const creativi = [...(d.creativi_attivi||[])].sort((a,b) => (b.spesa||0) - (a.spesa||0));
+  document.getElementById('ads-row').innerHTML = creativi.map((c, i) => `
     <div class="card adcard">
-      ${i===0 && c.risultati ? '<div class="rank">🏆 più call</div>' : ''}
-      <div class="head">
-        <div class="angolo">${c.nome}</div>
-        <div class="stato ${on?'on':'off'}">${on?'attiva':'in pausa'}</div>
-      </div>
+      ${i===0 && c.call ? '<div class="rank">🏆 più call</div>' : ''}
+      <img src="${c.immagine}" alt="${c.nome}" loading="lazy">
       <div class="body">
+        <div class="titolo">${c.titolo||''}</div>
+        <div class="angolo">${c.nome}</div>
+        <div class="stato">attiva</div>
         <div class="metrics">
           <div class="m">Spesa<b>${eur(c.spesa)}</b></div>
           <div class="m">Impression<b>${num(c.impressions)}</b></div>
           <div class="m">Click<b>${num(c.click)}</b></div>
           <div class="m">CTR<b>${pct(c.ctr)}</b></div>
-          <div class="m res">Call<b>${num(c.risultati)}</b></div>
-          <div class="m cpl">Costo/call<b>${eur(c.costo_risultato,0)}</b></div>
+          <div class="m res">Call<b>${num(c.call)}</b></div>
+          <div class="m cpl">Costo/call<b>${eur(c.costo_call,0)}</b></div>
         </div>
-        <a class="openlink" href="https://business.facebook.com/adsmanager/manage/campaigns?act=${d.account.id}&selected_campaign_ids=${c.id}" target="_blank">Apri in Ads Manager →</a>
+        <a class="openlink" href="https://business.facebook.com/adsmanager/manage/ads?act=${d.account.id}&selected_ad_ids=${c.id}" target="_blank">Apri in Ads Manager →</a>
       </div>
-    </div>`;
-  }).join('');
+    </div>
+  `).join('');
 
-  window._caData = d; window._caOrdinate = ordinate; window._caCostoCall = costoCall;
+  window._caData = d; window._caPeriodo = P; window._caCreativi = creativi; window._caCostoCall = costoCall;
 }
 
 // ------- VOCE JARVIS -------
@@ -201,15 +195,15 @@ function jvFrasi(){
   const P=window._caPeriodo; const t=P.totali;
   const heroCard=document.querySelector('.hero .card');
   const adCards=[...document.getElementById('ads-row').children];
-  const ordinate=window._caOrdinate||[];
+  const creativi=window._caCreativi||[];
   const out=[];
   out.push({testo:"Consulenza uno a uno, "+document.getElementById('h-live').textContent+".", el:null});
   out.push({testo:"Nel periodo "+(P.descrizione||"ultimi trenta giorni")+": spesa "+eur(t.spesa)+", "+num(t.call)+" call prenotate, costo per call "+eur(window._caCostoCall,0)+".", el:heroCard});
-  out.push({testo:"Totali: spesa "+eur(t.spesa)+", "+num(t.impressions)+" impression, "+num(t.click)+" click, CTR "+pct(t.ctr)+", CPC "+eur(t.cpc)+", "+num(t.call)+" call, costo per call "+eur(window._caCostoCall,0)+".", el:document.getElementById('kpi-row')});
-  if(ordinate.length){
-    out.push({testo:"Le "+ordinate.length+" campagne, ordinate per spesa.", el:null});
-    ordinate.forEach(function(c,i){
-      out.push({testo:(i+1)+". "+c.nome+". Spesa "+eur(c.spesa)+", "+num(c.risultati)+" call, costo per call "+eur(c.costo_risultato,0)+", CTR "+pct(c.ctr)+".", el:adCards[i]||null});
+  out.push({testo:"Totali: spesa "+eur(t.spesa)+", "+num(t.impressions)+" impression, "+num(t.click)+" click, CTR "+pct(t.ctr)+", CPC "+eur(t.cpc)+", "+num(t.call)+" call.", el:document.getElementById('kpi-row')});
+  if(creativi.length){
+    out.push({testo:"Le "+creativi.length+" creatività attive, ordinate per spesa.", el:null});
+    creativi.forEach(function(c,i){
+      out.push({testo:(i+1)+". "+c.nome+". Spesa "+eur(c.spesa)+", "+num(c.click)+" click, CTR "+pct(c.ctr)+", "+num(c.call)+" call, costo per call "+eur(c.costo_call,0)+".", el:adCards[i]||null});
     });
   }
   out.push({testo:"Fine del rapporto, Signore.", el:null});
@@ -254,7 +248,7 @@ function jvAvvia(){
 }
 document.getElementById('jarvis-voce-btn').addEventListener('click', jvAvvia);
 
-const EMBEDDED = {"aggiornato":"2026-07-17T08:35:00+02:00","account":{"nome":"Consulenza 1:1","obiettivo":"analisi gratuita + call su Calendly","id":"465327538443110","link_ads_manager":"https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110"},"periodo_default":"30g","periodi":{"30g":{"label":"Ultimi 30 giorni","descrizione":"ultimi 30 giorni","giorni":30,"totali":{"spesa":3144.35,"impressions":155837,"reach":61499,"frequency":2.53,"click":3664,"ctr":2.35,"cpc":0.86,"cpm":20.18,"call":13,"costo_call_migliore":210.55},"campagne":[]}}};
+const EMBEDDED = {"aggiornato":"2026-07-17T08:35:00+02:00","account":{"nome":"Consulenza 1:1","obiettivo":"analisi gratuita + call su Calendly","id":"465327538443110","link_ads_manager":"https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110"},"creativi_attivi":[],"periodo_default":"30g","periodi":{"30g":{"label":"Ultimi 30 giorni","descrizione":"ultimi 30 giorni","giorni":30,"totali":{"spesa":3144.35,"impressions":155837,"reach":61499,"frequency":2.53,"click":3664,"ctr":2.35,"cpc":0.86,"cpm":20.18,"call":13,"costo_call_migliore":210.55},"campagne":[]}}};
 
 carica();
 </script>
