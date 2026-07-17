@@ -95,6 +95,17 @@ h2.sec::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(
 .row span{color:var(--steel)}
 .row b{font-family:'JetBrains Mono',monospace;font-weight:500}
 
+/* 18/07: incarichi del report — il Signore deve poter far generare la proposta vera al reparto e
+   approvarla/rifiutarla, non solo sentirla detta a voce (Davide: "certo che deve essere vero") */
+.incarico-card{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--cyan);padding:14px 16px;margin-bottom:10px}
+.incarico-reparto{font-family:'Chakra Petch',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan)}
+.incarico-compito{font-size:13px;color:var(--steel);margin:6px 0 10px}
+.incarico-proposta{font-size:13px;line-height:1.5;background:rgba(56,224,248,.05);border:1px dashed var(--line-strong);padding:10px 12px;margin:8px 0;white-space:pre-wrap}
+.incarico-btn{font-family:'Chakra Petch',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line-strong);padding:6px 14px;cursor:pointer;margin-right:8px;background:rgba(56,224,248,.08);color:var(--cyan)}
+.incarico-btn.approva{background:rgba(74,222,128,.1);color:var(--green);border-color:var(--green)}
+.incarico-btn.rifiuta{background:rgba(248,113,113,.1);color:#f87171;border-color:#f87171}
+.incarico-esito{font-size:12px;color:var(--muted);margin-top:8px;font-style:italic}
+
 /* box agenti: controllo centrale */
 .agente-head{display:flex;align-items:center;gap:8px;margin-bottom:4px}
 .agente-dot{width:9px;height:9px;border-radius:50%;flex:none;box-shadow:0 0 8px currentColor}
@@ -332,6 +343,9 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
   <div class="chips" style="margin-top:0" id="routine-chips"><span class="note">carico…</span></div>
 </div>
 
+
+<!-- INCARICHI DEL REPORT: proposta vera del reparto + approvazione del Signore -->
+<div id="incarichi-panel" style="display:none;margin:0 0 16px"></div>
 
 <!-- KPI PRINCIPALI -->
 <div class="hero">
@@ -814,6 +828,60 @@ function vocePer(who){
 // (stessa voce ElevenLabs, vedi server.py di dc-chatbot) così l'esperienza resta identica ovunque.
 const PARLA_URL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? '/parla' : 'https://dc-chatbot-vswb.onrender.com/parla';
 const REPORT_URL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? '/report' : 'https://dc-chatbot-vswb.onrender.com/report';
+const PROPOSTA_URL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? '/proposta' : 'https://dc-chatbot-vswb.onrender.com/proposta';
+const DECISIONE_URL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? '/decisione' : 'https://dc-chatbot-vswb.onrender.com/decisione';
+let ultimiIncarichi=[];
+const NOME_REPARTO={cmo:'CMO · Marketing', cso:'CSO · Vendite', cto:'CTO · Sistemi'};
+// 18/07: "certo che deve essere vero!... lo metti anche dentro la dashboard così si confronta il
+// management team e io decido se approvare" — ogni incarico del report diventa una card con un
+// bottone che invoca DAVVERO il reparto (stesso agente del comitato di direzione settimanale, con
+// accesso reale agli strumenti su localhost) e produce una proposta vera, non un testo di comodo.
+function mostraIncarichi(lista){
+  const box=$('#incarichi-panel');
+  if(!lista||!lista.length){ box.style.display='none'; box.innerHTML=''; return; }
+  box.style.display='block';
+  box.innerHTML=lista.map(function(inc,i){
+    return '<div class="incarico-card" data-i="'+i+'">'
+      +'<div class="incarico-reparto">'+(NOME_REPARTO[inc.reparto]||inc.reparto)+'</div>'
+      +'<div class="incarico-compito">'+inc.compito.replace(/</g,'&lt;')+'</div>'
+      +'<div class="incarico-corpo"><button class="incarico-btn" onclick="generaProposta('+i+')">Genera proposta vera</button></div>'
+      +'</div>';
+  }).join('');
+}
+async function generaProposta(i){
+  const inc=ultimiIncarichi[i]; if(!inc) return;
+  const card=document.querySelector('.incarico-card[data-i="'+i+'"] .incarico-corpo');
+  card.innerHTML='<span class="incarico-esito">Il '+(NOME_REPARTO[inc.reparto]||inc.reparto)+' sta verificando'
+    +(/^(localhost|127\.0\.0\.1)$/.test(location.hostname)?' con i suoi strumenti reali':' (dati limitati, fuori da localhost)')+'…</span>';
+  try{
+    const r=await fetch(PROPOSTA_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({reparto:inc.reparto,compito:inc.compito})});
+    const j=await r.json();
+    if(!j.ok||!j.proposta) throw new Error('proposta vuota');
+    inc.proposta=j.proposta;
+    card.innerHTML='<div class="incarico-proposta">'+j.proposta.replace(/</g,'&lt;')+'</div>'
+      +'<button class="incarico-btn approva" onclick="decidiIncarico('+i+',\'approva\')">✓ Approva</button>'
+      +'<button class="incarico-btn rifiuta" onclick="decidiIncarico('+i+',\'rifiuta\')">✗ Rifiuta</button>';
+  }catch(e){
+    card.innerHTML='<span class="incarico-esito">Non sono riuscito a ottenere la proposta, Signore. Riprovi.</span>'
+      +'<button class="incarico-btn" onclick="generaProposta('+i+')">Riprova</button>';
+  }
+}
+async function decidiIncarico(i, decisione){
+  const inc=ultimiIncarichi[i]; if(!inc) return;
+  const card=document.querySelector('.incarico-card[data-i="'+i+'"] .incarico-corpo');
+  card.innerHTML='<span class="incarico-esito">Registro la decisione…</span>';
+  try{
+    const r=await fetch(DECISIONE_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({reparto:inc.reparto,compito:inc.compito,proposta:inc.proposta||'',decisione:decisione})});
+    const j=await r.json();
+    if(!j.ok) throw new Error('decisione non salvata');
+    const esito = decisione==='approva' ? ('✅ Approvato.'+(j.esecuzione?(' Esito: '+j.esecuzione):(j.avviso?(' '+j.avviso):' In esecuzione dal reparto.'))) : '✗ Rifiutato.';
+    card.innerHTML='<span class="incarico-esito">'+esito.replace(/</g,'&lt;')+'</span>';
+  }catch(e){
+    card.innerHTML='<span class="incarico-esito">Non sono riuscito a registrare la decisione, Signore. Riprovi.</span>'
+      +'<button class="incarico-btn approva" onclick="decidiIncarico('+i+',\'approva\')">✓ Approva</button>'
+      +'<button class="incarico-btn rifiuta" onclick="decidiIncarico('+i+',\'rifiuta\')">✗ Rifiuta</button>';
+  }
+}
 let qaSpeaking=false, qaTimer=null, vocePlayer=null, qaPaused=false, musicaAvviataDalParlato=false;
 // RIFLETTORE SEMPLIFICATO (17/07, Davide: "stai facendo solo casino... per il vocale lascia perdere se
 // non sei in grado"). Prima: indovinava a quale singolo box (.panel/.toppost/.kpi) apparteneva OGNI
@@ -1136,14 +1204,19 @@ async function costruisciBriefing(periodo){
     return [{who:'jarvis', testo:"Non ho ancora abbastanza giorni in archivio per un confronto, Signore. Riprovi tra qualche giorno."}];
   }
   const battute=[{who:'jarvis', testo:"Buongiorno, Signore. Ecco il report aggiornato oggi "+dataOggiIT+"."}];
+  ultimiIncarichi=[];
   try{
     const r=await fetch(REPORT_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({dati:datiTesto})});
     const j=await r.json();
     if(!j.ok||!j.testo) throw new Error('report vuoto');
     battute.push({who:'jarvis', testo:j.testo, sezione:'hero'});
+    // 18/07: "certo che deve essere vero" — ogni incarico citato a voce va anche mostrato in dashboard,
+    // così il Signore può far generare la proposta vera al reparto e approvarla o rifiutarla
+    ultimiIncarichi=Array.isArray(j.incarichi)?j.incarichi:[];
   }catch(e){
     battute.push({who:'jarvis', testo:"Non sono riuscito a preparare il report questa volta, Signore. Riprovi tra poco."});
   }
+  mostraIncarichi(ultimiIncarichi);
   return battute;
 }
 
