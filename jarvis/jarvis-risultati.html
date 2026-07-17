@@ -95,17 +95,6 @@ h2.sec::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(
 .row span{color:var(--steel)}
 .row b{font-family:'JetBrains Mono',monospace;font-weight:500}
 
-/* 18/07: incarichi del report — il Signore deve poter far generare la proposta vera al reparto e
-   approvarla/rifiutarla, non solo sentirla detta a voce (Davide: "certo che deve essere vero") */
-.incarico-card{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--cyan);padding:14px 16px;margin-bottom:10px}
-.incarico-reparto{font-family:'Chakra Petch',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan)}
-.incarico-compito{font-size:13px;color:var(--steel);margin:6px 0 10px}
-.incarico-proposta{font-size:13px;line-height:1.5;background:rgba(56,224,248,.05);border:1px dashed var(--line-strong);padding:10px 12px;margin:8px 0;white-space:pre-wrap}
-.incarico-btn{font-family:'Chakra Petch',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line-strong);padding:6px 14px;cursor:pointer;margin-right:8px;background:rgba(56,224,248,.08);color:var(--cyan)}
-.incarico-btn.approva{background:rgba(74,222,128,.1);color:var(--green);border-color:var(--green)}
-.incarico-btn.rifiuta{background:rgba(248,113,113,.1);color:#f87171;border-color:#f87171}
-.incarico-esito{font-size:12px;color:var(--muted);margin-top:8px;font-style:italic}
-
 /* box agenti: controllo centrale */
 .agente-head{display:flex;align-items:center;gap:8px;margin-bottom:4px}
 .agente-dot{width:9px;height:9px;border-radius:50%;flex:none;box-shadow:0 0 8px currentColor}
@@ -344,9 +333,9 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
 </div>
 
 
-<!-- INCARICHI DEL REPORT: proposta vera del reparto + approvazione del Signore -->
-<h2 class="sec reveal" id="incarichi-titolo" style="display:none;color:var(--amber);animation-delay:.08s">📋 Incarichi al management team</h2>
-<div id="incarichi-panel" style="display:none;margin:0 0 16px"></div>
+<!-- 18/07: il pannello incarichi in dashboard è stato tolto (Davide: "questi non devono stare lì...
+     è inutile così") — il management team genera comunque la proposta reale in automatico, ma il
+     Signore la riceve via email di riepilogo, non deve andarsela a cercare qui. Vedi inviaRecapEmail(). -->
 
 <!-- KPI PRINCIPALI -->
 <div class="hero">
@@ -845,100 +834,38 @@ function vocePer(who){
 const PARLA_URL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? '/parla' : 'https://dc-chatbot-vswb.onrender.com/parla';
 const REPORT_URL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? '/report' : 'https://dc-chatbot-vswb.onrender.com/report';
 const PROPOSTA_URL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? '/proposta' : 'https://dc-chatbot-vswb.onrender.com/proposta';
-const DECISIONE_URL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? '/decisione' : 'https://dc-chatbot-vswb.onrender.com/decisione';
 let ultimiIncarichi=[], ultimoDatiTrend='';
-const NOME_REPARTO={cmo:'CMO · Marketing', cso:'CSO · Vendite', cto:'CTO · Sistemi'};
-// 18/07: "certo che deve essere vero!... lo metti anche dentro la dashboard così si confronta il
-// management team e io decido se approvare" — ogni incarico del report diventa una card con un
-// bottone che invoca DAVVERO il reparto (stesso agente del comitato di direzione settimanale, con
-// accesso reale agli strumenti su localhost) e produce una proposta vera, non un testo di comodo.
-// 18/07, correzione: "non voglio che sia automatico [da cliccare]. lui trova problemi e li segnala
-// alla squadra per risolverli e farmi proposte" — niente bottone "Genera proposta": appena JARVIS
-// individua un incarico, la squadra ci lavora SUBITO da sola, e il Signore trova la proposta già
-// pronta quando arriva a leggerla (o vede "sta verificando" se non ha ancora finito).
-// 18/07, "dove le vedo?": il pannello compariva SOLO dopo aver premuto Briefing vocale e spariva al
-// refresh — niente titolo, niente persistenza. Ora: titolo fisso "📋 Incarichi al management team",
-// e ogni incarico/proposta/decisione viene salvato in localStorage così resta visibile anche dopo un
-// ricarico della pagina, senza dover rifare il briefing per ritrovarli.
-const INCARICHI_LS='jarvis-incarichi';
-const DATI_TREND_LS='jarvis-dati-trend';
-function salvaIncarichiLS(){ try{ localStorage.setItem(INCARICHI_LS, JSON.stringify(ultimiIncarichi)); localStorage.setItem(DATI_TREND_LS, ultimoDatiTrend||''); }catch(e){} }
-function caricaIncarichiLS(){ try{ return JSON.parse(localStorage.getItem(INCARICHI_LS)||'[]'); }catch(e){ return []; } }
-function cardIncaricoHTML(inc,i){
-  let corpo;
-  if(inc.decisione){
-    corpo='<span class="incarico-esito">'+((inc.decisione==='approva'?'✅ Approvato.':'✗ Rifiutato.')+(inc.esito?(' '+inc.esito):'')).replace(/</g,'&lt;')+'</span>';
-  }else if(inc.proposta){
-    corpo='<div class="incarico-proposta">'+inc.proposta.replace(/</g,'&lt;')+'</div>'
-      +'<button class="incarico-btn approva" onclick="decidiIncarico('+i+',\'approva\')">✓ Approva</button>'
-      +'<button class="incarico-btn rifiuta" onclick="decidiIncarico('+i+',\'rifiuta\')">✗ Rifiuta</button>';
-  }else if(inc.errore){
-    corpo='<span class="incarico-esito">Non sono riuscito a ottenere la proposta, Signore. Riprovi.</span>'
-      +'<button class="incarico-btn" onclick="generaProposta('+i+')">Riprova</button>';
-  }else{
-    corpo='<span class="incarico-esito">Il '+(NOME_REPARTO[inc.reparto]||inc.reparto)+' sta verificando'
-      +(/^(localhost|127\.0\.0\.1)$/.test(location.hostname)?' con i suoi strumenti reali':' (dati limitati, fuori da localhost)')+'…</span>';
-  }
-  return '<div class="incarico-card" data-i="'+i+'">'
-    +'<div class="incarico-reparto">'+(NOME_REPARTO[inc.reparto]||inc.reparto)+'</div>'
-    +'<div class="incarico-compito">'+inc.compito.replace(/</g,'&lt;')+'</div>'
-    +'<div class="incarico-corpo">'+corpo+'</div>'
-    +'</div>';
-}
-function renderIncarichi(){
-  const box=$('#incarichi-panel'), titolo=$('#incarichi-titolo');
-  if(!ultimiIncarichi.length){ box.style.display='none'; box.innerHTML=''; titolo.style.display='none'; return; }
-  titolo.style.display='flex'; box.style.display='block';
-  box.innerHTML=ultimiIncarichi.map(cardIncaricoHTML).join('');
-}
+// 18/07: "certo che deve essere vero!" — ogni incarico del report invoca DAVVERO il reparto (stesso
+// agente del comitato di direzione settimanale, con accesso reale agli strumenti su localhost) e
+// produce una proposta vera, non un testo di comodo. Parte tutto da sola, appena JARVIS individua un
+// incarico — nessun bottone da cliccare (Davide, stessa giornata: "non voglio che sia automatico [da
+// cliccare]. lui trova problemi e li segnala alla squadra per risolverli e farmi proposte").
+// 18/07, dopo un pannello in dashboard (tolto): "questi non devono stare lì... se ha già le risposte
+// allora me le deve suggerire e poi mandare un recap via email, toglila da lì è inutile così" — appena
+// tutte le proposte sono pronte parte un'unica email di riepilogo, invece di lasciarle lì ad aspettare
+// che il Signore le vada a cercare.
 function mostraIncarichi(lista){
   ultimiIncarichi=(lista||[]).map(function(inc){ return {reparto:inc.reparto, compito:inc.compito}; });
-  renderIncarichi();
-  salvaIncarichiLS();
-  ultimiIncarichi.forEach(function(inc,i){ generaProposta(i); });
+  if(!ultimiIncarichi.length) return;
+  Promise.all(ultimiIncarichi.map(function(inc,i){ return generaProposta(i); }))
+    .then(function(){ inviaRecapEmail(ultimiIncarichi); });
 }
 async function generaProposta(i){
-  const inc=ultimiIncarichi[i]; if(!inc||inc.proposta||inc.decisione) return;
-  delete inc.errore; renderIncarichi();
+  const inc=ultimiIncarichi[i]; if(!inc) return;
   try{
     const r=await fetch(PROPOSTA_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({reparto:inc.reparto,compito:inc.compito,dati:ultimoDatiTrend})});
     const j=await r.json();
-    if(!j.ok||!j.proposta) throw new Error('proposta vuota');
-    inc.proposta=j.proposta;
+    inc.proposta = (j.ok&&j.proposta) ? j.proposta : '(non sono riuscito a ottenere una proposta per questo punto)';
   }catch(e){
-    inc.errore=true;
+    inc.proposta='(non sono riuscito a ottenere una proposta per questo punto)';
   }
-  renderIncarichi(); salvaIncarichiLS();
 }
-async function decidiIncarico(i, decisione){
-  const inc=ultimiIncarichi[i]; if(!inc) return;
-  const card=document.querySelector('.incarico-card[data-i="'+i+'"] .incarico-corpo');
-  if(card) card.innerHTML='<span class="incarico-esito">Registro la decisione…</span>';
-  try{
-    const r=await fetch(DECISIONE_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({reparto:inc.reparto,compito:inc.compito,proposta:inc.proposta||'',decisione:decisione})});
-    const j=await r.json();
-    if(!j.ok) throw new Error('decisione non salvata');
-    inc.decisione=decisione;
-    inc.esito = j.esecuzione || j.avviso || (decisione==='approva' ? 'In esecuzione dal reparto.' : '');
-  }catch(e){
-    if(card) card.innerHTML='<span class="incarico-esito">Non sono riuscito a registrare la decisione, Signore. Riprovi.</span>'
-      +'<button class="incarico-btn approva" onclick="decidiIncarico('+i+',\'approva\')">✓ Approva</button>'
-      +'<button class="incarico-btn rifiuta" onclick="decidiIncarico('+i+',\'rifiuta\')">✗ Rifiuta</button>';
-    return;
-  }
-  renderIncarichi(); salvaIncarichiLS();
+// l'email può partire solo da localhost: serve l'agente reale con accesso Gmail (stesso motivo per
+// cui /proposta ha dati reali solo in locale — Render non ha le credenziali del Signore).
+async function inviaRecapEmail(lista){
+  if(!lista.length || !/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) return;
+  try{ await fetch('/recap-email',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({incarichi:lista})}); }catch(e){}
 }
-// al carico pagina: ripristina gli incarichi dell'ultimo report, se c'erano — così si vedono subito,
-// senza dover rifare il briefing. Solo quelli ancora "in verifica" (senza proposta né decisione già
-// salvata) vengono richiesti di nuovo: gli altri sono già completi, nessuna richiesta ripetuta.
-(function ripristinaIncarichi(){
-  const salvati=caricaIncarichiLS();
-  if(!salvati.length) return;
-  ultimiIncarichi=salvati;
-  try{ ultimoDatiTrend=localStorage.getItem(DATI_TREND_LS)||''; }catch(e){}
-  renderIncarichi();
-  ultimiIncarichi.forEach(function(inc,i){ if(!inc.proposta&&!inc.decisione) generaProposta(i); });
-})();
 let qaSpeaking=false, qaTimer=null, vocePlayer=null, qaPaused=false, musicaAvviataDalParlato=false;
 // RIFLETTORE SEMPLIFICATO (17/07, Davide: "stai facendo solo casino... per il vocale lascia perdere se
 // non sei in grado"). Prima: indovinava a quale singolo box (.panel/.toppost/.kpi) apparteneva OGNI
