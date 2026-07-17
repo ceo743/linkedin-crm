@@ -24,9 +24,17 @@
   .live{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--green)}
   .live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
   @keyframes pulse{50%{opacity:.3}}
+  .periodo-bar{display:flex;align-items:center;gap:10px;margin-top:16px;flex-wrap:wrap}
+  .periodo-bar .lab{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .seg{display:inline-flex;background:#0f1729;border:1px solid var(--border);border-radius:12px;padding:4px;gap:3px;flex-wrap:wrap}
+  .seg button{border:0;background:transparent;color:var(--muted);font-size:12.5px;font-weight:700;padding:7px 13px;border-radius:9px;cursor:pointer;transition:all .15s;font-family:inherit}
+  .seg button:hover{color:var(--ink)}
+  .seg button.on{background:linear-gradient(180deg,var(--orange),#e85a28);color:#0c0f16}
   .fade{opacity:0;transform:translateY(14px);animation:rise .55s cubic-bezier(.2,.7,.3,1) forwards}
   @keyframes rise{to{opacity:1;transform:none}}
-  .section-title{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:34px 0 14px;display:flex;align-items:center;gap:10px}
+  #content.swap{animation:swap .35s ease}
+  @keyframes swap{from{opacity:.2;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .section-title{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:30px 0 14px;display:flex;align-items:center;gap:10px}
   .section-title .line{flex:1;height:1px;background:var(--border)}
   .card{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px}
 
@@ -45,7 +53,7 @@
   .verdict.warn{color:var(--amber);background:#f5b94212;border:1px solid #f5b94233}
   .verdict.neutral{color:var(--muted);background:#1c274080;border:1px solid var(--border)}
 
-  .hero{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;margin-top:4px}
+  .hero{display:grid;grid-template-columns:1.3fr 1fr;gap:16px}
   @media(max-width:900px){.hero{grid-template-columns:1fr}}
   .hero .big{font-size:15px;color:var(--muted);line-height:1.5}.hero .big b{color:var(--ink)}
   .progress-wrap{margin-top:14px}
@@ -122,13 +130,41 @@
     <span class="live" id="h-live">caricamento…</span>
     <span id="h-aggiornato"></span>
   </div>
+  <div class="periodo-bar">
+    <span class="lab">Periodo</span>
+    <div class="seg" id="seg"></div>
+  </div>
 </div>
 
-<div class="section-title fade" style="animation-delay:.1s">Cosa guardare · CFO · CSO · CMO <div class="line"></div></div>
-<div class="clevel fade" id="clevel-row" style="animation-delay:.15s"></div>
+<div id="content">
+  <div class="section-title">Cosa guardare · CFO · CSO · CMO <div class="line"></div></div>
+  <div class="clevel" id="clevel-row"></div>
+  <div class="section-title">Funnel · dall'impressione all'acquisto <div class="line"></div></div>
+  <div class="card"><div class="funnel" id="funnel"></div></div>
+  <div class="section-title">Totali periodo <div class="line"></div></div>
+  <div class="grid-kpi" id="kpi-row"></div>
+  <div class="section-title">Le 5 creatività · ordinate per costo/acquisto <div class="line"></div></div>
+  <div class="grid-ads" id="ads-row"></div>
+  <div class="section-title">Ritorno · quanti acquisti servono <div class="line"></div></div>
+  <div class="card">
+    <span class="sim-ipo">IPOTESI · muovi la leva per vedere il ritorno</span>
+    <div class="sim">
+      <div class="controls">
+        <div><label>Acquisti immaginati <b id="l-acq">2</b></label><input type="range" id="s-acq" min="0" max="30" step="1" value="2"></div>
+        <div style="font-size:11.5px;color:var(--muted);line-height:1.5">Prezzo corso <b id="sim-prezzo">€249</b> · spesa periodo <b id="sim-spesa">€24</b> · budget pieno test <b id="sim-budget">€300</b>. Pareggio spesa: <b id="sim-be">1</b> acquisto.</div>
+      </div>
+      <div class="out">
+        <div class="o"><div class="k">Ricavo</div><div class="v" id="o-ric">—</div></div>
+        <div class="o"><div class="k">ROAS (su spesa periodo)</div><div class="v roas" id="o-roas">—</div></div>
+        <div class="o"><div class="k">Costo per acquisto</div><div class="v" id="o-cpa">—</div></div>
+        <div class="o"><div class="k">Profitto vs spesa periodo</div><div class="v prof" id="o-prof">—</div></div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<div class="section-title fade" style="animation-delay:.25s">Andamento test <div class="line"></div></div>
-<div class="hero fade" style="animation-delay:.3s">
+<div class="section-title fade">Andamento test <div class="line"></div></div>
+<div class="hero fade">
   <div class="card">
     <div class="big" id="hero-testo">…</div>
     <div class="progress-wrap">
@@ -145,48 +181,16 @@
   </div>
 </div>
 
-<div class="section-title fade" style="animation-delay:.4s">Funnel · dall'impressione all'acquisto <div class="line"></div></div>
-<div class="card fade" style="animation-delay:.44s"><div class="funnel" id="funnel"></div></div>
+<div class="section-title fade">Spesa giorno per giorno <div class="line"></div></div>
+<div class="card fade"><div class="chart" id="chart"></div></div>
 
-<div class="section-title fade" style="animation-delay:.5s">Totali test <div class="line"></div></div>
-<div class="grid-kpi fade" id="kpi-row" style="animation-delay:.54s"></div>
-
-<div class="section-title fade" style="animation-delay:.6s">Le 5 creatività · ordinate per costo/acquisto <div class="line"></div></div>
-<div class="grid-ads fade" id="ads-row" style="animation-delay:.64s"></div>
-
-<div class="section-title fade" style="animation-delay:.7s">Ritorno · quanti acquisti servono <div class="line"></div></div>
-<div class="card fade" style="animation-delay:.74s">
-  <span class="sim-ipo">IPOTESI · muovi la leva per vedere il ritorno</span>
-  <div class="sim">
-    <div class="controls">
-      <div>
-        <label>Acquisti immaginati <b id="l-acq">2</b></label>
-        <input type="range" id="s-acq" min="0" max="30" step="1" value="2">
-      </div>
-      <div style="font-size:11.5px;color:var(--muted);line-height:1.5">
-        Prezzo corso <b id="sim-prezzo">€249</b> · spesa test finora <b id="sim-spesa">€24</b> · budget pieno test <b id="sim-budget">€300</b>.
-        Pareggio spesa attuale: <b id="sim-be">1</b> acquisto.
-      </div>
-    </div>
-    <div class="out">
-      <div class="o"><div class="k">Ricavo</div><div class="v" id="o-ric">—</div></div>
-      <div class="o"><div class="k">ROAS (su spesa attuale)</div><div class="v roas" id="o-roas">—</div></div>
-      <div class="o"><div class="k">Costo per acquisto</div><div class="v" id="o-cpa">—</div></div>
-      <div class="o"><div class="k">Profitto vs spesa attuale</div><div class="v prof" id="o-prof">—</div></div>
-    </div>
-  </div>
-</div>
-
-<div class="section-title fade" style="animation-delay:.8s">Spesa giorno per giorno <div class="line"></div></div>
-<div class="card fade" style="animation-delay:.84s"><div class="chart" id="chart"></div></div>
-
-<div class="section-title fade" style="animation-delay:.9s">Funnel sito <div class="line"></div></div>
-<div class="card fade" style="animation-delay:.94s">
+<div class="section-title fade">Funnel sito <div class="line"></div></div>
+<div class="card fade">
   <div class="fix-note" id="fix-note"></div>
   <div class="funnel-grid" id="funnel-grid"></div>
 </div>
 
-<footer class="fade" style="animation-delay:1s">
+<footer class="fade">
   Dati da Meta Ads (account 465327538443110) via JARVIS · test 3 fasce, 17-23 luglio.<br>
   <a id="link-ads-manager" href="#" target="_blank">Apri in Meta Ads Manager →</a> · <a href="iainsieme-ads-dati.json" target="_blank">dati grezzi (JSON)</a>
 </footer>
@@ -197,17 +201,18 @@ const eur=(n,dec=2)=>n===null||n===undefined?'—':'€'+Number(n).toLocaleStrin
 const eur0=(n)=>eur(n,0);
 const pct=(n,dec=2)=>n===null||n===undefined?'—':Number(n).toLocaleString('it-IT',{minimumFractionDigits:dec,maximumFractionDigits:dec})+'%';
 const giorniTra=(a,b)=>Math.round((new Date(b)-new Date(a))/86400000);
-let D=null;
+let D=null, KEY=null, P=null;
+const ORD=['oggi','ieri','7g','30g','max'];
 
 async function carica(){
   let d,live=true;
   try{const r=await fetch('iainsieme-ads-dati.json',{cache:'no-store'});if(!r.ok)throw 0;d=await r.json();}
   catch(e){live=false;d=EMBEDDED;}
-  render(d,live);
+  boot(d,live);
 }
 
-function render(d,live){
-  D=d; const t=d.totali, c=d.campagna;
+function boot(d,live){
+  D=d; const c=d.campagna;
   document.getElementById('h-campagna').textContent=c.nome;
   document.getElementById('h-live').textContent=live?'dati live':'ultimo snapshot salvato';
   if(!live)document.getElementById('h-live').classList.add('badge-static');
@@ -217,20 +222,58 @@ function render(d,live){
   const oggi=new Date(), inizio=new Date(c.inizio_test), fine=new Date(c.fine_test);
   const giornoCorrente=Math.max(0,Math.min(c.giorni_totali,giorniTra(c.inizio_test,oggi.toISOString().slice(0,10))));
   const giorniRimasti=Math.max(0,giorniTra(oggi.toISOString().slice(0,10),c.fine_test));
+  document.getElementById('progress-fill').style.width=Math.min(100,(giornoCorrente/c.giorni_totali)*100)+'%';
+  document.getElementById('prog-left').textContent=`Giorno ${giornoCorrente} di ${c.giorni_totali}`;
+  document.getElementById('prog-right').textContent=`fine ${fine.toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit'})}`;
+  document.getElementById('cd-giorni').textContent=giorniRimasti;
+  document.getElementById('cd-budget').textContent=eur0(c.budget_giornaliero);
+
+  const trend=d.trend_giornaliero||[];
+  if(!trend.length){document.getElementById('chart').innerHTML='<div class="empty-note">Nessun dato giornaliero ancora.</div>';}
+  else{const maxS=Math.max(...trend.map(x=>x.spesa||0),1);
+    document.getElementById('chart').innerHTML=trend.map(x=>`<div class="bar-wrap"><div style="font-size:11px;font-weight:700;color:var(--ink)">${eur(x.spesa)}</div><div class="bar" style="height:${Math.max(4,(x.spesa/maxS)*130)}px"></div><div class="bar-day">${new Date(x.data).toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit'})}</div></div>`).join('');}
+  document.getElementById('fix-note').textContent='✓ '+d.sito.nota_fix;
+  document.getElementById('funnel-grid').innerHTML=`
+    <div class="funnel-item"><div class="eta">FASCIA 8-10</div><a href="${d.sito.checkout_8_10}" target="_blank">${d.sito.checkout_8_10}</a></div>
+    <div class="funnel-item"><div class="eta">FASCIA 11-13</div><a href="${d.sito.checkout_11_13}" target="_blank">${d.sito.checkout_11_13}</a></div>
+    <div class="funnel-item"><div class="eta">FASCIA 14-16</div><a href="${d.sito.checkout_14_16}" target="_blank">${d.sito.checkout_14_16}</a></div>
+    <div class="funnel-item"><div class="eta">SITO</div><a href="${d.sito.sito_url}" target="_blank">${d.sito.sito_url}</a></div>`;
+
+  const keys=ORD.filter(k=>d.periodi&&d.periodi[k]);
+  document.getElementById('seg').innerHTML=keys.map(k=>`<button data-k="${k}">${d.periodi[k].label}</button>`).join('');
+  document.querySelectorAll('#seg button').forEach(b=>b.onclick=()=>seleziona(b.dataset.k));
+
+  document.getElementById('hero-testo').innerHTML=
+    `Test partito il <b>${inizio.toLocaleDateString('it-IT',{day:'2-digit',month:'long'})}</b>, finisce il <b>${fine.toLocaleDateString('it-IT',{day:'2-digit',month:'long'})}</b>. `+
+    `Budget <b>${eur0(c.budget_giornaliero)}/giorno</b> su 5 creatività.`;
+
+  seleziona(d.periodo_default && d.periodi[d.periodo_default] ? d.periodo_default : keys[keys.length-1]);
+}
+
+function seleziona(k){
+  KEY=k; P=D.periodi[k];
+  document.querySelectorAll('#seg button').forEach(b=>b.classList.toggle('on',b.dataset.k===k));
+  const c=document.getElementById('content'); c.classList.remove('swap'); void c.offsetWidth; c.classList.add('swap');
+  renderPeriodo();
+}
+
+function renderPeriodo(){
+  const t=P.totali, ads=P.ads||[];
   const prezzo=t.prezzo_corso||249;
   const breakeven=Math.max(1,Math.ceil(t.spesa/prezzo));
   const cpa=t.lead?t.spesa/t.lead:null;
+  const topCtr=[...ads].filter(a=>a.ctr!=null).sort((a,b)=>(b.ctr||0)-(a.ctr||0))[0];
 
   document.getElementById('clevel-row').innerHTML=`
     <div class="card role">
       <div class="head"><span class="ico">👔</span><span class="who">CFO</span> <span class="what">quanto spendo, quando rientro</span></div>
       <div class="rows">
-        <div class="r"><span class="k">Spesa test</span><span class="v accent">${eur(t.spesa)}</span></div>
+        <div class="r"><span class="k">Spesa periodo</span><span class="v accent">${eur(t.spesa)}</span></div>
         <div class="r"><span class="k">Budget pieno test</span><span class="v">${eur0(t.budget_totale_previsto)}</span></div>
         <div class="r"><span class="k">Prezzo corso</span><span class="v">${eur0(prezzo)}</span></div>
         <div class="r"><span class="k">Costo per acquisto</span><span class="v">${eur(cpa,0)}</span></div>
       </div>
-      <div class="verdict ${t.lead>0?'ok':'neutral'}">Pareggio della spesa attuale con <b>${num(breakeven)}</b> acquisto${breakeven>1?'i':''} (a ${eur0(prezzo)}). ${t.lead>0?'Già in vendita.':'Ancora 0 acquisti: test appena partito.'}</div>
+      <div class="verdict ${t.lead>0?'ok':'neutral'}">${t.spesa>0?`Pareggio della spesa con <b>${num(breakeven)}</b> acquisto${breakeven>1?'i':''} (a ${eur0(prezzo)}).`:'Nessuna spesa in questo periodo.'} ${t.lead>0?'Già in vendita.':(t.spesa>0?'Ancora 0 acquisti.':'')}</div>
     </div>
     <div class="card role">
       <div class="head"><span class="ico">📈</span><span class="who">CSO</span> <span class="what">quante vendite entrano</span></div>
@@ -240,7 +283,7 @@ function render(d,live){
         <div class="r"><span class="k">Click → acquisto</span><span class="v">${t.click&&t.lead?pct(t.lead/t.click*100):'—'}</span></div>
         <div class="r"><span class="k">Costo per acquisto</span><span class="v accent">${eur(cpa,0)}</span></div>
       </div>
-      <div class="verdict neutral">${num(t.click)} click portati al sito. L'acquisto si chiude sul checkout: se i click salgono ma gli acquisti no, il collo di bottiglia è la pagina, non l'inserzione.</div>
+      <div class="verdict neutral">${num(t.click)} click portati al sito. Se i click salgono ma gli acquisti no, il collo di bottiglia è la pagina, non l'inserzione.</div>
     </div>
     <div class="card role">
       <div class="head"><span class="ico">🎯</span><span class="who">CMO</span> <span class="what">quale creatività tira</span></div>
@@ -250,42 +293,19 @@ function render(d,live){
         <div class="r"><span class="k">Frequenza</span><span class="v">${num(t.frequency,2)}</span></div>
         <div class="r"><span class="k">Reach</span><span class="v">${num(t.reach)}</span></div>
       </div>
-      <div class="verdict ${t.ctr>=1?'ok':'warn'}" id="cmo-verdict"></div>
+      <div class="verdict ${t.ctr>=1?'ok':'warn'}">${t.impressions>0?`CTR ${pct(t.ctr)} (benchmark ~1%), CPM ${eur(t.cpm)}, frequenza ${num(t.frequency,2)}.${topCtr?` Tira di più: <b>${topCtr.angolo}</b> (CTR ${pct(topCtr.ctr)}).`:''}`:'Nessuna impression in questo periodo.'}</div>
     </div>`;
-
-  document.getElementById('hero-testo').innerHTML=
-    `Test partito il <b>${inizio.toLocaleDateString('it-IT',{day:'2-digit',month:'long'})}</b>, finisce il <b>${fine.toLocaleDateString('it-IT',{day:'2-digit',month:'long'})}</b>. `+
-    `Budget <b>${eur0(c.budget_giornaliero)}/giorno</b> su 5 creatività. Spesi finora <b>${eur(t.spesa)}</b> su un budget previsto di <b>${eur0(t.budget_totale_previsto)}</b>.`;
-  document.getElementById('progress-fill').style.width=Math.min(100,(giornoCorrente/c.giorni_totali)*100)+'%';
-  document.getElementById('prog-left').textContent=`Giorno ${giornoCorrente} di ${c.giorni_totali}`;
-  document.getElementById('prog-right').textContent=`fine ${fine.toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit'})}`;
-  document.getElementById('cd-giorni').textContent=giorniRimasti;
-  document.getElementById('cd-budget').textContent=eur0(c.budget_giornaliero);
 
   const steps=[{lbl:'Impressioni',val:t.impressions},{lbl:'Reach (account raggiunti)',val:t.reach},{lbl:'Click sul sito',val:t.click},{lbl:'Acquisti',val:t.lead}];
   let fh='';
-  steps.forEach((s,i)=>{
-    fh+=`<div class="fstep" style="opacity:${1-i*0.14}"><span class="lbl">${s.lbl}</span><span class="val">${num(s.val)}</span></div>`;
-    if(i<steps.length-1){const r=s.val?(steps[i+1].val/s.val)*100:0;fh+=`<div class="fdrop">↓ <b>${pct(r,r<1?2:1)}</b> passa allo step dopo</div>`;}
-  });
+  steps.forEach((s,i)=>{fh+=`<div class="fstep" style="opacity:${1-i*0.14}"><span class="lbl">${s.lbl}</span><span class="val">${num(s.val)}</span></div>`;
+    if(i<steps.length-1){const r=s.val?(steps[i+1].val/s.val)*100:0;fh+=`<div class="fdrop">↓ <b>${pct(r,r<1?2:1)}</b> passa allo step dopo</div>`;}});
   document.getElementById('funnel').innerHTML=fh;
 
-  const kpis=[
-    {label:'Spesa',value:eur(t.spesa),accent:true},
-    {label:'Impression',value:num(t.impressions)},
-    {label:'Reach',value:num(t.reach)},
-    {label:'Click',value:num(t.click)},
-    {label:'CTR',value:pct(t.ctr)},
-    {label:'CPC',value:eur(t.cpc)},
-    {label:'CPM',value:eur(t.cpm)},
-    {label:'Frequenza',value:num(t.frequency,2)},
-    {label:'Acquisti',value:num(t.lead),accent:true},
-    {label:'Costo/acquisto',value:eur(cpa,0),accent:true},
-  ];
+  const kpis=[{label:'Spesa',value:eur(t.spesa),accent:true},{label:'Impression',value:num(t.impressions)},{label:'Reach',value:num(t.reach)},{label:'Click',value:num(t.click)},{label:'CTR',value:pct(t.ctr)},{label:'CPC',value:eur(t.cpc)},{label:'CPM',value:eur(t.cpm)},{label:'Frequenza',value:num(t.frequency,2)},{label:'Acquisti',value:num(t.lead),accent:true},{label:'Costo/acquisto',value:eur(cpa,0),accent:true}];
   document.getElementById('kpi-row').innerHTML=kpis.map(k=>`<div class="card kpi"><div class="label">${k.label}</div><div class="value ${k.accent?'accent':''}">${k.value}</div></div>`).join('');
 
-  const ord=[...d.ads].sort((a,b)=>{const ca=a.costo_per_lead??Infinity,cb=b.costo_per_lead??Infinity;if(ca!==cb)return ca-cb;return (b.ctr||0)-(a.ctr||0);});
-  const topCtr=[...d.ads].sort((a,b)=>(b.ctr||0)-(a.ctr||0))[0];
+  const ord=[...ads].sort((a,b)=>{const ca=a.costo_per_lead??Infinity,cb=b.costo_per_lead??Infinity;if(ca!==cb)return ca-cb;return (b.ctr||0)-(a.ctr||0);});
   document.getElementById('ads-row').innerHTML=ord.map(a=>`
     <div class="card adcard">
       ${topCtr&&a.id===topCtr.id?'<div class="rank">🏆 miglior CTR</div>':''}
@@ -307,43 +327,27 @@ function render(d,live){
       </div>
     </div>`).join('');
 
-  document.getElementById('cmo-verdict').innerHTML=`CTR ${pct(t.ctr)} (benchmark ~1%), CPM ${eur(t.cpm)} basso, frequenza ${num(t.frequency,2)} (pubblico fresco).${topCtr?` Creatività che tira di più: <b>${topCtr.angolo}</b> (CTR ${pct(topCtr.ctr)}).`:''}`;
-
   const be=document.getElementById('sim-be'); if(be)be.textContent=num(breakeven);
   document.getElementById('sim-prezzo').textContent=eur0(prezzo);
   document.getElementById('sim-spesa').textContent=eur(t.spesa);
   document.getElementById('sim-budget').textContent=eur0(t.budget_totale_previsto);
-  document.getElementById('s-acq').oninput=simula; simula();
-
-  const trend=d.trend_giornaliero||[];
-  if(!trend.length){document.getElementById('chart').innerHTML='<div class="empty-note">Nessun dato giornaliero ancora.</div>';}
-  else{const maxS=Math.max(...trend.map(x=>x.spesa||0),1);
-    document.getElementById('chart').innerHTML=trend.map(x=>`<div class="bar-wrap"><div style="font-size:11px;font-weight:700;color:var(--ink)">${eur(x.spesa)}</div><div class="bar" style="height:${Math.max(4,(x.spesa/maxS)*130)}px"></div><div class="bar-day">${new Date(x.data).toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit'})}</div></div>`).join('');}
-
-  document.getElementById('fix-note').textContent='✓ '+d.sito.nota_fix;
-  document.getElementById('funnel-grid').innerHTML=`
-    <div class="funnel-item"><div class="eta">FASCIA 8-10</div><a href="${d.sito.checkout_8_10}" target="_blank">${d.sito.checkout_8_10}</a></div>
-    <div class="funnel-item"><div class="eta">FASCIA 11-13</div><a href="${d.sito.checkout_11_13}" target="_blank">${d.sito.checkout_11_13}</a></div>
-    <div class="funnel-item"><div class="eta">FASCIA 14-16</div><a href="${d.sito.checkout_14_16}" target="_blank">${d.sito.checkout_14_16}</a></div>
-    <div class="funnel-item"><div class="eta">SITO</div><a href="${d.sito.sito_url}" target="_blank">${d.sito.sito_url}</a></div>`;
+  const sa=document.getElementById('s-acq');
+  if(!sa.dataset.init){sa.dataset.init='1';sa.oninput=simula;}
+  simula();
 }
 
 function simula(){
-  const t=D.totali, prezzo=t.prezzo_corso||249;
+  const t=P.totali, prezzo=t.prezzo_corso||249;
   const acq=+document.getElementById('s-acq').value;
   document.getElementById('l-acq').textContent=num(acq);
-  const ricavo=acq*prezzo;
-  const roas=t.spesa>0?ricavo/t.spesa:0;
-  const cpa=acq>0?t.spesa/acq:null;
-  const prof=ricavo-t.spesa;
+  const ricavo=acq*prezzo, roas=t.spesa>0?ricavo/t.spesa:0, cpa=acq>0?t.spesa/acq:null, prof=ricavo-t.spesa;
   document.getElementById('o-ric').textContent=eur0(ricavo);
-  document.getElementById('o-roas').textContent=num(roas,1)+'×';
+  document.getElementById('o-roas').textContent=t.spesa>0?num(roas,1)+'×':'—';
   document.getElementById('o-cpa').textContent=eur(cpa,0);
-  const pe=document.getElementById('o-prof');
-  pe.textContent=(prof>=0?'+':'')+eur0(prof); pe.classList.toggle('neg',prof<0);
+  const pe=document.getElementById('o-prof');pe.textContent=(prof>=0?'+':'')+eur0(prof);pe.classList.toggle('neg',prof<0);
 }
 
-const EMBEDDED={"aggiornato":"2026-07-17T08:20:00+02:00","campagna":{"nome":"IAinsieme Test 3 fasce","stato":"ACTIVE","budget_giornaliero":50,"valuta":"EUR","bid_strategy":"Highest volume","inizio_test":"2026-07-17","fine_test":"2026-07-23","giorni_totali":6,"link_ads_manager":"https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110&selected_campaign_ids=120254252946660348"},"totali":{"spesa":24.03,"budget_totale_previsto":300,"impressions":2972,"reach":2558,"frequency":1.16,"click":66,"ctr":2.22,"cpc":0.36,"cpm":8.09,"lead":0,"costo_per_lead":null,"prezzo_corso":249},"ads":[],"trend_giornaliero":[],"sito":{"nota_fix":"Bottone header ora punta al selettore delle 3 fasce.","checkout_8_10":"https://www.davidecaiazzo.it/offers/R3f5LZPR/checkout","checkout_11_13":"https://www.davidecaiazzo.it/offers/qzjqZZzy/checkout","checkout_14_16":"https://www.davidecaiazzo.it/offers/bLzWy4g3/checkout","sito_url":"https://iainsieme.davidecaiazzo.it/"}};
+const EMBEDDED={"aggiornato":"2026-07-17T08:35:00+02:00","campagna":{"nome":"IAinsieme Test 3 fasce","stato":"ACTIVE","budget_giornaliero":50,"valuta":"EUR","bid_strategy":"Highest volume","inizio_test":"2026-07-17","fine_test":"2026-07-23","giorni_totali":6,"link_ads_manager":"https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110&selected_campaign_ids=120254252946660348"},"trend_giornaliero":[],"sito":{"nota_fix":"Bottone header ora punta al selettore delle 3 fasce.","checkout_8_10":"#","checkout_11_13":"#","checkout_14_16":"#","sito_url":"https://iainsieme.davidecaiazzo.it/"},"periodo_default":"max","periodi":{"max":{"label":"Dall'inizio","totali":{"spesa":24.69,"budget_totale_previsto":300,"impressions":3013,"reach":2572,"frequency":1.17,"click":67,"ctr":2.22,"cpc":0.37,"cpm":8.19,"lead":0,"costo_per_lead":null,"prezzo_corso":249},"ads":[]}}};
 
 carica();
 </script>
