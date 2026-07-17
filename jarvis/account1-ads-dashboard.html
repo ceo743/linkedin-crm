@@ -20,7 +20,7 @@
   .kicker{font-size:11px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;font-weight:700}
   h1{font-size:clamp(26px,3.2vw,38px);font-weight:800;margin:6px 0 4px;letter-spacing:-.01em}
   h1 .ia{color:var(--orange)} h1 .rest{color:var(--teal)}
-  .sub{color:var(--muted);font-size:13.5px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:6px}
+  .sub{color:var(--muted);font-size:13px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:6px}
   .live{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--green)}
   .live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
   @keyframes pulse{50%{opacity:.3}}
@@ -28,241 +28,145 @@
   .periodo-bar .lab{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
   .seg{display:inline-flex;background:#0f1729;border:1px solid var(--border);border-radius:12px;padding:4px;gap:3px;flex-wrap:wrap}
   .seg button{border:0;background:transparent;color:var(--muted);font-size:12.5px;font-weight:700;padding:7px 13px;border-radius:9px;cursor:pointer;transition:all .15s;font-family:inherit}
-  .seg button:hover{color:var(--ink)}
-  .seg button.on{background:linear-gradient(180deg,var(--orange),#e85a28);color:#0c0f16}
+  .seg button:hover{color:var(--ink)} .seg button.on{background:linear-gradient(180deg,var(--orange),#e85a28);color:#0c0f16}
   .periodo-desc{font-size:12px;color:var(--muted)}
-  .fade{opacity:0;transform:translateY(14px);animation:rise .55s cubic-bezier(.2,.7,.3,1) forwards}
-  @keyframes rise{to{opacity:1;transform:none}}
   #content.swap{animation:swap .35s ease}
-  @keyframes swap{from{opacity:.2;transform:translateY(6px)}to{opacity:1;transform:none}}
-  .section-title{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:30px 0 14px;display:flex;align-items:center;gap:10px}
+  @keyframes swap{from{opacity:.25;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .section-title{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:32px 0 14px;display:flex;align-items:center;gap:10px}
   .section-title .line{flex:1;height:1px;background:var(--border)}
   .card{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px}
 
-  .clevel{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-  .role{padding:18px 20px}
-  .role .head{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:800}
-  .role .head .ico{font-size:20px}
-  .role .head .who{color:var(--ink)} .role .head .what{color:var(--muted);font-weight:600;font-size:11.5px}
-  .role .rows{margin-top:14px;display:flex;flex-direction:column;gap:10px}
-  .role .r{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
-  .role .r .k{font-size:12.5px;color:var(--muted)}
-  .role .r .v{font-size:19px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--ink)}
-  .role .r .v.accent{color:var(--orange)} .role .r .v.good{color:var(--green)} .role .r .v.warn{color:var(--amber)}
-  .role .verdict{margin-top:14px;font-size:12px;line-height:1.45;border-radius:10px;padding:10px 12px}
-  .verdict.ok{color:var(--green);background:#3ddc8412;border:1px solid #3ddc8433}
-  .verdict.warn{color:var(--amber);background:#f5b94212;border:1px solid #f5b94233}
-  .verdict.neutral{color:var(--muted);background:#1c274080;border:1px solid var(--border)}
+  .sintesi{display:flex;gap:26px;flex-wrap:wrap;background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;margin-top:22px;box-shadow:var(--shadow)}
+  .sintesi .s{min-width:90px}
+  .sintesi .s .k{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .sintesi .s .v{font-size:28px;font-weight:800;margin-top:6px;font-variant-numeric:tabular-nums}
+  .sintesi .s .v.accent{color:var(--orange)} .sintesi .s .v.good{color:var(--green)}
 
-  .funnel{display:flex;flex-direction:column;gap:8px}
-  .fstep{border-radius:12px;padding:14px 18px;background:linear-gradient(90deg,var(--teal),var(--orange));color:#08131a;font-weight:800;display:flex;justify-content:space-between;align-items:center}
-  .fstep .lbl{font-size:13px} .fstep .val{font-size:18px;font-variant-numeric:tabular-nums}
-  .fdrop{font-size:11.5px;color:var(--muted);text-align:center}.fdrop b{color:var(--teal)}
+  .mtoggle{display:inline-flex;background:#0f1729;border:1px solid var(--border);border-radius:10px;padding:3px;gap:2px;margin-bottom:16px;flex-wrap:wrap}
+  .mtoggle button{border:0;background:transparent;color:var(--muted);font-size:12px;font-weight:700;padding:6px 12px;border-radius:8px;cursor:pointer;font-family:inherit}
+  .mtoggle button.on{background:var(--teal);color:#08131a}
+  .barrow{display:flex;align-items:center;gap:12px;margin:12px 0}
+  .barrow .bname{width:150px;font-size:13px;font-weight:700;color:var(--ink);flex-shrink:0;line-height:1.2}
+  .barrow .btrack{flex:1;background:#0f1729;border-radius:9px;height:30px;border:1px solid var(--border);overflow:hidden}
+  .barrow .bfill{height:100%;border-radius:9px;background:linear-gradient(90deg,var(--teal),var(--orange));display:flex;align-items:center;justify-content:flex-end;padding-right:10px;font-size:12.5px;font-weight:800;color:#08131a;min-width:42px;transition:width .5s cubic-bezier(.2,.7,.3,1)}
+  .barrow.best .bname::after{content:" 🏆";font-size:12px}
+  .barrow.off .bfill{background:linear-gradient(90deg,#5b6785,#7a869f)}
 
-  .grid-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px}
-  .kpi .label{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
-  .kpi .value{font-size:24px;font-weight:800;margin-top:8px;font-variant-numeric:tabular-nums;color:var(--ink)}
-  .kpi .value.accent{color:var(--orange)}
-
-  .grid-camp{display:grid;grid-template-columns:1fr;gap:14px}
-  .campcard{padding:18px 20px}
-  .campcard .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
-  .campcard .nome{font-size:16px;font-weight:800;color:var(--ink);line-height:1.25}
-  .campcard .obj{font-size:11px;color:var(--muted);margin-top:3px}
-  .campcard .stato{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;white-space:nowrap}
+  .grid-camp{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+  .campcard{padding:16px 18px}
+  .campcard .top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .campcard .nome{font-size:15px;font-weight:800;line-height:1.25}
+  .campcard .stato{font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap}
   .campcard .stato.on{color:var(--green);background:#3ddc8415;border:1px solid #3ddc8440}
   .campcard .stato.off{color:var(--amber);background:#f5b94215;border:1px solid #f5b94240}
-  .campcard .stato::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
-  .campcard .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(84px,1fr));gap:10px 14px;margin-top:16px}
-  .campcard .m{font-size:11px;color:var(--muted)}
-  .campcard .m b{display:block;font-size:16px;color:var(--ink);font-weight:800;font-variant-numeric:tabular-nums;margin-top:2px}
-  .campcard .m.res b{color:var(--teal)} .campcard .m.cpr b{color:var(--orange)}
-  .campcard a.openlink{display:inline-block;margin-top:14px;font-size:11.5px;font-weight:700;color:var(--teal);text-decoration:none;border:1px solid var(--border);border-radius:10px;padding:7px 14px}
-  .campcard a.openlink:hover{background:var(--teal-soft);border-color:var(--teal)}
-
-  .sim-ipo{font-size:10.5px;font-weight:800;letter-spacing:.1em;color:var(--amber);background:#f5b94215;border:1px solid #f5b94240;border-radius:20px;padding:4px 11px;display:inline-block;margin-bottom:6px}
-  .sim{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-  @media(max-width:760px){.sim{grid-template-columns:1fr}}
-  .sim .controls{display:flex;flex-direction:column;gap:18px}
-  .sim label{font-size:12.5px;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}
-  .sim label b{color:var(--ink)}
-  .sim input[type=range]{width:100%;margin-top:8px;accent-color:var(--orange)}
-  .sim .out{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  .sim .o{border:1px solid var(--border);border-radius:12px;padding:12px 14px;background:#0f1729}
-  .sim .o .k{font-size:11px;color:var(--muted)} .sim .o .v{font-size:20px;font-weight:800;margin-top:4px;font-variant-numeric:tabular-nums}
-  .sim .o .v.roas{color:var(--teal)} .sim .o .v.prof{color:var(--green)} .sim .o .v.prof.neg{color:var(--red)}
+  .campcard .mini{display:flex;gap:16px;margin-top:12px;font-size:11px;color:var(--muted);flex-wrap:wrap}
+  .campcard .mini b{display:block;font-size:15px;color:var(--ink);font-weight:800}
+  .campcard .mini .cpr b{color:var(--orange)}
+  .campcard a{display:inline-block;margin-top:12px;font-size:11px;font-weight:700;color:var(--teal);text-decoration:none;border:1px solid var(--border);border-radius:9px;padding:6px 12px}
+  .campcard a:hover{background:var(--teal-soft);border-color:var(--teal)}
 
   footer{margin-top:44px;font-size:11px;color:var(--muted);line-height:1.7;border-top:1px solid var(--border);padding-top:16px}
   footer a{color:var(--teal);text-decoration:none}
-  .badge-static{color:var(--amber)} .badge-static::before{background:var(--amber) !important}
 </style>
 </head>
 <body>
 
-<div class="fade">
+<div>
   <a class="back" href="index.html">← Tutte le dashboard</a>
   <div class="kicker">DC ACADEMY · AD PERFORMANCE</div>
   <h1><span class="ia">Consulenza 1:1</span> <span class="rest">Ads</span></h1>
   <div class="sub">
-    <span style="color:var(--amber);font-weight:700">Obiettivo: analisi gratuita + call su Calendly</span>
-    <span class="live" id="h-live">caricamento…</span>
+    <span style="color:var(--amber);font-weight:700">obiettivo: call su Calendly</span>
+    <span class="live" id="h-live">…</span>
     <span id="h-aggiornato"></span>
   </div>
-  <div class="periodo-bar">
-    <span class="lab">Periodo</span>
-    <div class="seg" id="seg"></div>
-    <span class="periodo-desc" id="periodo-desc"></span>
-  </div>
+  <div class="periodo-bar"><span class="lab">Periodo</span><div class="seg" id="seg"></div><span class="periodo-desc" id="periodo-desc"></span></div>
 </div>
 
 <div id="content">
-  <div class="section-title">Cosa guardare · CFO · CSO · CMO <div class="line"></div></div>
-  <div class="clevel" id="clevel-row"></div>
-  <div class="section-title">Funnel · dall'impressione alla call <div class="line"></div></div>
-  <div class="card"><div class="funnel" id="funnel"></div></div>
-  <div class="section-title">Totali periodo <div class="line"></div></div>
-  <div class="grid-kpi" id="kpi-row"></div>
-  <div class="section-title">Campagne · ordinate per spesa <div class="line"></div></div>
-  <div class="grid-camp" id="camp-row"></div>
-  <div class="section-title">Ritorno stimato · muovi le leve <div class="line"></div></div>
+  <div class="sintesi" id="sintesi"></div>
+  <div class="section-title">Confronto tra le campagne <div class="line"></div></div>
   <div class="card">
-    <span class="sim-ipo">IPOTESI · non sono dati Meta, li imposti tu</span>
-    <div class="sim">
-      <div class="controls">
-        <div><label>Valore medio di un cliente <b id="l-val">€1.500</b></label><input type="range" id="s-val" min="500" max="3500" step="100" value="1500"></div>
-        <div><label>Call che diventano cliente <b id="l-clo">25%</b></label><input type="range" id="s-clo" min="5" max="60" step="1" value="25"></div>
-        <div style="font-size:11.5px;color:var(--muted);line-height:1.5">Su <b id="sim-call">13</b> call prenotate nel periodo, con una spesa di <b id="sim-spesa">€3.144</b>.</div>
-      </div>
-      <div class="out">
-        <div class="o"><div class="k">Clienti stimati</div><div class="v" id="o-cli">—</div></div>
-        <div class="o"><div class="k">Costo per cliente</div><div class="v" id="o-cac">—</div></div>
-        <div class="o"><div class="k">Ricavo stimato</div><div class="v" id="o-ric">—</div></div>
-        <div class="o"><div class="k">ROAS</div><div class="v roas" id="o-roas">—</div></div>
-        <div class="o" style="grid-column:1/-1"><div class="k">Profitto stimato (ricavo − spesa ads)</div><div class="v prof" id="o-prof">—</div></div>
-      </div>
-    </div>
+    <div class="mtoggle" id="mtoggle"></div>
+    <div id="bars"></div>
   </div>
+  <div class="section-title">Le campagne <div class="line"></div></div>
+  <div class="grid-camp" id="camp-row"></div>
 </div>
 
-<footer class="fade" style="animation-delay:.3s">
-  Funnel consulenza 1:1 (analisi gratuita + call Calendly) · account Meta 465327538443110 · via JARVIS.<br>
-  <a id="link-ads-manager" href="#" target="_blank">Apri in Meta Ads Manager →</a> · <a href="account1-ads-dati.json" target="_blank">dati grezzi (JSON)</a>
+<footer>
+  Consulenza 1:1 (analisi gratuita + call Calendly) · account Meta 465327538443110 · via JARVIS.<br>
+  <a id="link-ads-manager" href="#" target="_blank">Apri in Meta Ads Manager →</a> · <a href="account1-ads-dati.json" target="_blank">dati (JSON)</a>
 </footer>
 
 <script>
-const num=(n,dec=0)=>n===null||n===undefined?'—':Number(n).toLocaleString('it-IT',{minimumFractionDigits:dec,maximumFractionDigits:dec});
-const eur=(n,dec=2)=>n===null||n===undefined?'—':'€'+Number(n).toLocaleString('it-IT',{minimumFractionDigits:dec,maximumFractionDigits:dec});
+const num=(n,d=0)=>n==null?'—':Number(n).toLocaleString('it-IT',{minimumFractionDigits:d,maximumFractionDigits:d});
+const eur=(n,d=2)=>n==null?'—':'€'+Number(n).toLocaleString('it-IT',{minimumFractionDigits:d,maximumFractionDigits:d});
 const eur0=(n)=>eur(n,0);
-const pct=(n,dec=2)=>n===null||n===undefined?'—':Number(n).toLocaleString('it-IT',{minimumFractionDigits:dec,maximumFractionDigits:dec})+'%';
-let D=null, KEY=null, P=null;
+const pct=(n,d=2)=>n==null?'—':Number(n).toLocaleString('it-IT',{minimumFractionDigits:d,maximumFractionDigits:d})+'%';
+let D=null,P=null,METRIC='call';
 const ORD=['oggi','ieri','7g','30g','max'];
+const METRICS=[{k:'call',lab:'Call',get:c=>c.risultati,fmt:v=>num(v),hi:true},{k:'spesa',lab:'Spesa',get:c=>c.spesa,fmt:v=>eur(v),hi:false},{k:'costo',lab:'Costo/call',get:c=>c.costo_risultato,fmt:v=>eur(v,0),hi:false,low:true},{k:'ctr',lab:'CTR',get:c=>c.ctr,fmt:v=>pct(v),hi:true},{k:'click',lab:'Click',get:c=>c.click,fmt:v=>num(v),hi:true}];
 
-async function carica(){
-  let d,live=true;
-  try{const r=await fetch('account1-ads-dati.json',{cache:'no-store'});if(!r.ok)throw 0;d=await r.json();}
-  catch(e){live=false;d=EMBEDDED;}
-  boot(d,live);
-}
+async function carica(){let d,live=true;try{const r=await fetch('account1-ads-dati.json',{cache:'no-store'});if(!r.ok)throw 0;d=await r.json();}catch(e){live=false;d=EMBEDDED;}boot(d,live);}
 
 function boot(d,live){
   D=d;
-  document.getElementById('h-live').textContent=live?'dati live':'ultimo snapshot salvato';
-  if(!live)document.getElementById('h-live').classList.add('badge-static');
-  document.getElementById('h-aggiornato').textContent='aggiornato '+new Date(d.aggiornato).toLocaleString('it-IT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
+  document.getElementById('h-live').textContent=live?'dati live':'ultimo snapshot';
+  document.getElementById('h-aggiornato').textContent='agg. '+new Date(d.aggiornato).toLocaleString('it-IT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
   document.getElementById('link-ads-manager').href=d.account.link_ads_manager;
   const keys=ORD.filter(k=>d.periodi&&d.periodi[k]);
   document.getElementById('seg').innerHTML=keys.map(k=>`<button data-k="${k}">${d.periodi[k].label}</button>`).join('');
-  document.querySelectorAll('#seg button').forEach(b=>b.onclick=()=>seleziona(b.dataset.k));
-  seleziona(d.periodo_default && d.periodi[d.periodo_default] ? d.periodo_default : keys[keys.length-1]);
+  document.querySelectorAll('#seg button').forEach(b=>b.onclick=()=>sel(b.dataset.k));
+  document.getElementById('mtoggle').innerHTML=METRICS.map(m=>`<button data-m="${m.k}">${m.lab}</button>`).join('');
+  document.querySelectorAll('#mtoggle button').forEach(b=>b.onclick=()=>{METRIC=b.dataset.m;renderBars();markMetric();});
+  sel(d.periodo_default&&d.periodi[d.periodo_default]?d.periodo_default:keys[keys.length-1]);
 }
 
-function seleziona(k){
-  KEY=k; P=D.periodi[k];
+function markMetric(){document.querySelectorAll('#mtoggle button').forEach(b=>b.classList.toggle('on',b.dataset.m===METRIC));}
+
+function sel(k){
+  P=D.periodi[k];
   document.querySelectorAll('#seg button').forEach(b=>b.classList.toggle('on',b.dataset.k===k));
-  document.getElementById('periodo-desc').textContent = P.descrizione ? '· '+P.descrizione : '';
-  const c=document.getElementById('content'); c.classList.remove('swap'); void c.offsetWidth; c.classList.add('swap');
-  renderPeriodo();
+  document.getElementById('periodo-desc').textContent=P.descrizione?'· '+P.descrizione:'';
+  const c=document.getElementById('content');c.classList.remove('swap');void c.offsetWidth;c.classList.add('swap');
+  render();
 }
 
-function renderPeriodo(){
-  const t=P.totali, g=P.giorni||1, camp=P.campagne||[];
-  const costoCall=t.call?t.spesa/t.call:null;
-  const spesaGiorno=t.spesa/g;
-  const clickCall=t.click?(t.call/t.click)*100:null;
-  const callGiorno=t.call/g;
-  const sprecata=camp.filter(c=>(c.spesa||0)>0 && (c.risultati||0)===0).reduce((s,c)=>s+(c.spesa||0),0);
-  const migliore=[...camp].filter(c=>c.risultati>0).sort((a,b)=>a.costo_risultato-b.costo_risultato)[0];
-
-  document.getElementById('clevel-row').innerHTML=`
-    <div class="card role">
-      <div class="head"><span class="ico">👔</span><span class="who">CFO</span> <span class="what">quanto spendo, quanto costa</span></div>
-      <div class="rows">
-        <div class="r"><span class="k">Spesa periodo</span><span class="v accent">${eur0(t.spesa)}</span></div>
-        <div class="r"><span class="k">Media al giorno</span><span class="v">${eur(spesaGiorno,0)}</span></div>
-        <div class="r"><span class="k">Costo per call</span><span class="v">${eur(costoCall,0)}</span></div>
-        <div class="r"><span class="k">Migliore campagna</span><span class="v good">${eur(t.costo_call_migliore,0)}</span></div>
-      </div>
-      ${sprecata>0?`<div class="verdict warn">${eur0(sprecata)} spesi in campagne con 0 call in questo periodo: budget da spostare su chi converte.</div>`:`<div class="verdict ok">Nessuna spesa a vuoto in questo periodo.</div>`}
-    </div>
-    <div class="card role">
-      <div class="head"><span class="ico">📈</span><span class="who">CSO</span> <span class="what">quante call, a che ritmo</span></div>
-      <div class="rows">
-        <div class="r"><span class="k">Call prenotate</span><span class="v good">${num(t.call)}</span></div>
-        <div class="r"><span class="k">Call al giorno</span><span class="v">${num(callGiorno,1)}</span></div>
-        <div class="r"><span class="k">Click → call</span><span class="v">${pct(clickCall,2)}</span></div>
-        <div class="r"><span class="k">Costo per call</span><span class="v accent">${eur(costoCall,0)}</span></div>
-      </div>
-      <div class="verdict ok">Le call si chiudono in vendita da Stefania: qui misuri quante ne entrano dalle ads e a che costo.</div>
-    </div>
-    <div class="card role">
-      <div class="head"><span class="ico">🎯</span><span class="who">CMO</span> <span class="what">creatività e pubblico</span></div>
-      <div class="rows">
-        <div class="r"><span class="k">CTR</span><span class="v ${t.ctr>=1?'good':''}">${pct(t.ctr)}</span></div>
-        <div class="r"><span class="k">CPM</span><span class="v">${eur(t.cpm,2)}</span></div>
-        <div class="r"><span class="k">Frequenza</span><span class="v ${t.frequency>3.2?'warn':''}">${num(t.frequency,2)}</span></div>
-        <div class="r"><span class="k">Reach</span><span class="v">${num(t.reach)}</span></div>
-      </div>
-      <div class="verdict ${t.ctr>=1?'ok':'warn'}">CTR ${pct(t.ctr)} (benchmark lead gen ~1%). Frequenza ${num(t.frequency,2)}: ${t.frequency>3.2?'pubblico saturo, valuta di allargarlo':'pubblico ancora fresco'}.${migliore?` Top: ${migliore.nome}.`:''}</div>
-    </div>`;
-
-  const steps=[{lbl:'Impressioni',val:t.impressions},{lbl:'Reach (account raggiunti)',val:t.reach},{lbl:'Click',val:t.click},{lbl:'Call prenotate',val:t.call}];
-  let fh='';
-  steps.forEach((s,i)=>{fh+=`<div class="fstep" style="opacity:${1-i*0.14}"><span class="lbl">${s.lbl}</span><span class="val">${num(s.val)}</span></div>`;
-    if(i<steps.length-1){const r=s.val?(steps[i+1].val/s.val)*100:0;fh+=`<div class="fdrop">↓ <b>${pct(r,r<1?2:1)}</b> passa allo step dopo</div>`;}});
-  document.getElementById('funnel').innerHTML=fh;
-
-  const kpis=[{label:'Spesa',value:eur0(t.spesa),accent:true},{label:'Impression',value:num(t.impressions)},{label:'Reach',value:num(t.reach)},{label:'Click',value:num(t.click)},{label:'CTR',value:pct(t.ctr)},{label:'CPC',value:eur(t.cpc)},{label:'CPM',value:eur(t.cpm)},{label:'Frequenza',value:num(t.frequency,2)},{label:'Call',value:num(t.call),accent:true},{label:'Costo/call',value:eur(costoCall,0),accent:true}];
-  document.getElementById('kpi-row').innerHTML=kpis.map(k=>`<div class="card kpi"><div class="label">${k.label}</div><div class="value ${k.accent?'accent':''}">${k.value}</div></div>`).join('');
-
-  const ord=[...camp].sort((a,b)=>(b.spesa||0)-(a.spesa||0));
-  document.getElementById('camp-row').innerHTML=ord.map(c=>{const on=c.stato==='ACTIVE';return `<div class="card campcard">
-    <div class="top"><div><div class="nome">${c.nome}</div><div class="obj">Obiettivo: ${c.obiettivo} · risultato: ${c.tipo_risultato}</div></div><div class="stato ${on?'on':'off'}">${on?'attiva':'in pausa'}</div></div>
-    <div class="metrics"><div class="m">Spesa<b>${eur(c.spesa)}</b></div><div class="m">Impression<b>${num(c.impressions)}</b></div><div class="m">Reach<b>${num(c.reach)}</b></div><div class="m">Freq.<b>${num(c.frequency,2)}</b></div><div class="m">Click<b>${num(c.click)}</b></div><div class="m">CTR<b>${pct(c.ctr)}</b></div><div class="m">CPC<b>${eur(c.cpc)}</b></div><div class="m">CPM<b>${eur(c.cpm)}</b></div><div class="m res">${c.tipo_risultato}<b>${num(c.risultati)}</b></div><div class="m cpr">Costo/call<b>${eur(c.costo_risultato)}</b></div></div>
-    <a class="openlink" href="https://business.facebook.com/adsmanager/manage/campaigns?act=${D.account.id}&selected_campaign_ids=${c.id}" target="_blank">Apri campagna in Ads Manager →</a></div>`;}).join('');
-
-  const ipo=D.ipotesi_default||{valore_cliente:1500,tasso_chiusura:25};
-  const sv=document.getElementById('s-val'), sc=document.getElementById('s-clo');
-  if(!sv.dataset.init){sv.value=ipo.valore_cliente;sc.value=ipo.tasso_chiusura;sv.dataset.init='1';sv.oninput=simula;sc.oninput=simula;}
-  document.getElementById('sim-call').textContent=num(t.call);
-  document.getElementById('sim-spesa').textContent=eur0(t.spesa);
-  simula();
-}
-
-function simula(){
+function render(){
   const t=P.totali;
-  const val=+document.getElementById('s-val').value, clo=+document.getElementById('s-clo').value;
-  document.getElementById('l-val').textContent=eur0(val);
-  document.getElementById('l-clo').textContent=clo+'%';
-  const clienti=t.call*clo/100, cac=clienti>0?t.spesa/clienti:null, ricavo=clienti*val, roas=t.spesa>0?ricavo/t.spesa:0, prof=ricavo-t.spesa;
-  document.getElementById('o-cli').textContent=num(clienti,1);
-  document.getElementById('o-cac').textContent=eur(cac,0);
-  document.getElementById('o-ric').textContent=eur0(ricavo);
-  document.getElementById('o-roas').textContent=num(roas,2)+'×';
-  const pe=document.getElementById('o-prof');pe.textContent=(prof>=0?'+':'')+eur0(prof);pe.classList.toggle('neg',prof<0);
+  const costoCall=t.call?t.spesa/t.call:null;
+  document.getElementById('sintesi').innerHTML=`
+    <div class="s"><div class="k">Spesa</div><div class="v accent">${eur0(t.spesa)}</div></div>
+    <div class="s"><div class="k">Call prenotate</div><div class="v good">${num(t.call)}</div></div>
+    <div class="s"><div class="k">Costo per call</div><div class="v">${eur(costoCall,0)}</div></div>
+    <div class="s"><div class="k">CTR</div><div class="v">${pct(t.ctr)}</div></div>`;
+  markMetric();renderBars();
+  document.getElementById('camp-row').innerHTML=[...(P.campagne||[])].sort((a,b)=>(b.spesa||0)-(a.spesa||0)).map(c=>{const on=c.stato==='ACTIVE';return `
+    <div class="card campcard"><div class="top"><div class="nome">${c.nome}</div><div class="stato ${on?'on':'off'}">${on?'attiva':'in pausa'}</div></div>
+      <div class="mini"><div>Spesa<b>${eur(c.spesa)}</b></div><div>Call<b>${num(c.risultati)}</b></div><div class="cpr">Costo/call<b>${eur(c.costo_risultato,0)}</b></div><div>CTR<b>${pct(c.ctr)}</b></div></div>
+      <a href="https://business.facebook.com/adsmanager/manage/campaigns?act=${D.account.id}&selected_campaign_ids=${c.id}" target="_blank">Apri in Ads Manager →</a>
+    </div>`;}).join('');
 }
 
-const EMBEDDED={"aggiornato":"2026-07-17T08:35:00+02:00","account":{"nome":"Consulenza 1:1","obiettivo":"Analisi gratuita + call su Calendly","id":"465327538443110","valuta":"EUR","link_ads_manager":"https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110"},"ipotesi_default":{"valore_cliente":1500,"tasso_chiusura":25},"periodo_default":"30g","periodi":{"30g":{"label":"Ultimi 30 giorni","descrizione":"ultimi 30 giorni","giorni":30,"totali":{"spesa":3144.35,"impressions":155837,"reach":61499,"frequency":2.53,"click":3664,"ctr":2.35,"cpc":0.86,"cpm":20.18,"call":13,"costo_call_migliore":210.55},"campagne":[]}}};
+function renderBars(){
+  const camp=P.campagne||[];const M=METRICS.find(m=>m.k===METRIC);
+  const vals=camp.map(c=>({c,v:M.get(c)}));
+  const nums=vals.map(x=>x.v||0);
+  const max=Math.max(...nums,0.0001);
+  const pos=nums.filter(v=>v>0);
+  const best=M.low?(pos.length?Math.min(...pos):null):Math.max(...nums);
+  vals.sort((x,y)=>(y.v||0)-(x.v||0));
+  document.getElementById('bars').innerHTML=vals.map(({c,v})=>{
+    const isBest=M.hi&&(v||0)===best&&(v||0)>0 || (M.low&&v===best&&v>0);
+    const off=c.stato!=='ACTIVE';
+    return `<div class="barrow ${isBest?'best':''} ${off?'off':''}">
+      <div class="bname">${c.nome}</div>
+      <div class="btrack"><div class="bfill" style="width:${v?Math.max(8,(v/max)*100):8}%">${v!=null?M.fmt(v):'—'}</div></div>
+    </div>`;}).join('');
+}
 
+const EMBEDDED={"aggiornato":"2026-07-17T08:35:00+02:00","account":{"id":"465327538443110","link_ads_manager":"#"},"periodo_default":"30g","periodi":{"30g":{"label":"Ultimi 30 giorni","descrizione":"ultimi 30 giorni","totali":{"spesa":3144.35,"click":3664,"ctr":2.35,"call":13},"campagne":[]}}};
 carica();
 </script>
 </body>
