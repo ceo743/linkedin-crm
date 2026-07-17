@@ -1238,9 +1238,16 @@ function costruisciDatiTrend(){
   const attuale=pieni.slice(-n), precedente=pieni.length>=n*2 ? pieni.slice(-n*2,-n) : [];
   if(!attuale.length) return null;
   const A=aggrega(attuale), P=precedente.length?aggrega(precedente):null;
+  // 18/07, "ha letto 799 mila" (era 79.946): i numeri arrivavano al modello come cifre grezze senza
+  // separatori ("79946"), ambigue da interpretare in fretta per un LLM che riassume — usa parlaNumero
+  // (già esistente, stessa funzione delle card in alto) che scrive "79 mila 946", zero ambiguità.
+  // Anche "dato non confrontabile" veniva da qui: prima scrivevo esplicitamente la frase "nessun
+  // periodo precedente disponibile" nei DATI stessi, e il modello la ripeteva quasi parola per parola
+  // invece di seguire la regola "se manca, saltalo senza dirlo" — ora quella riga semplicemente non
+  // menziona il confronto, niente testo da ripetere a vuoto.
   function riga(label,val,prec,fmt){
-    fmt=fmt||function(x){return x;};
-    return label+': '+fmt(val)+' negli ultimi 7 giorni'+(prec!=null?(', contro '+fmt(prec)+' nei 7 giorni precedenti'):', nessun periodo precedente disponibile per il confronto');
+    fmt=fmt||parlaNumero;
+    return label+': '+fmt(val)+' negli ultimi 7 giorni'+(prec!=null?(', contro '+fmt(prec)+' nei 7 giorni precedenti.'):'.');
   }
   const righe=[];
   if(A.liImpr!=null) righe.push(riga('Impressioni LinkedIn', A.liImpr, P?P.liImpr:null));
