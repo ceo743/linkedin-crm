@@ -1,0 +1,87 @@
+{
+  "aggiornato": "2026-07-17T07:08:23+02:00",
+  "campagna": {
+    "nome": "IAinsieme — Test 3 fasce",
+    "stato": "ACTIVE",
+    "budget_giornaliero": 50,
+    "valuta": "EUR",
+    "bid_strategy": "Highest volume",
+    "inizio_test": "2026-07-17",
+    "fine_test": "2026-07-23",
+    "giorni_totali": 6,
+    "ad_account_id": "465327538443110",
+    "campaign_id": "120254252946660348",
+    "adset_id": "120254252963540348",
+    "link_ads_manager": "https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110&selected_campaign_ids=120254252946660348"
+  },
+  "totali": {
+    "spesa": 6.18,
+    "budget_totale_previsto": 300,
+    "impressions": 671,
+    "click": 14,
+    "ctr": 2.09,
+    "cpc": 0.44,
+    "lead": 0,
+    "costo_per_lead": null
+  },
+  "ads": [
+    {
+      "id": "120254306950110348",
+      "angolo": "Problema",
+      "headline": "Corso di intelligenza artificiale per bambini 8-16",
+      "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-problema-v13-1080x1080.png",
+      "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=problema",
+      "stato": "ACTIVE",
+      "spesa": 2.03, "impressions": 286, "click": 8, "ctr": 2.80, "cpc": 0.25, "lead": 0, "costo_per_lead": null
+    },
+    {
+      "id": "120254306950840348",
+      "angolo": "Sicurezza",
+      "headline": "Corso di intelligenza artificiale per bambini 8-16",
+      "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-sicurezza-v13-1080x1080.png",
+      "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=sicurezza",
+      "stato": "ACTIVE",
+      "spesa": 2.25, "impressions": 226, "click": 1, "ctr": 0.44, "cpc": 2.25, "lead": 0, "costo_per_lead": null
+    },
+    {
+      "id": "120254306951400348",
+      "angolo": "Dal vivo",
+      "headline": "Corso di intelligenza artificiale per bambini 8-16",
+      "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-unico-v13-1080x1080.png",
+      "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=dalvivo",
+      "stato": "ACTIVE",
+      "spesa": 0.34, "impressions": 49, "click": 2, "ctr": 4.08, "cpc": 0.17, "lead": 0, "costo_per_lead": null
+    },
+    {
+      "id": "120254306951970348",
+      "angolo": "Garanzia",
+      "headline": "Corso di intelligenza artificiale per bambini 8-16",
+      "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-garanzia-v13-1080x1080.png",
+      "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=garanzia",
+      "stato": "ACTIVE",
+      "spesa": 1.36, "impressions": 72, "click": 2, "ctr": 2.78, "cpc": 0.68, "lead": 0, "costo_per_lead": null
+    },
+    {
+      "id": "120254306953090348",
+      "angolo": "Beneficio",
+      "headline": "Corso di intelligenza artificiale per bambini 8-16",
+      "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-beneficio-v13-1080x1080.png",
+      "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=beneficio",
+      "stato": "ACTIVE",
+      "spesa": 0.20, "impressions": 37, "click": 1, "ctr": 2.70, "cpc": 0.20, "lead": 0, "costo_per_lead": null
+    }
+  ],
+  "trend_giornaliero": [
+    { "data": "2026-07-14", "spesa": 0, "lead": 0 },
+    { "data": "2026-07-17", "spesa": 6.18, "lead": 0 }
+  ],
+  "sito": {
+    "fix_funnel_applicato": true,
+    "nota_fix": "Bottone header portava sempre al checkout fascia 11/13 (fix 17/07): ora punta al selettore delle 3 fasce.",
+    "checkout_8_10": "https://www.davidecaiazzo.it/offers/R3f5LZPR/checkout",
+    "checkout_11_13": "https://www.davidecaiazzo.it/offers/qzjqZZzy/checkout",
+    "checkout_14_16": "https://www.davidecaiazzo.it/offers/bLzWy4g3/checkout",
+    "prezzo": "249€",
+    "sito_url": "https://iainsieme.davidecaiazzo.it/"
+  }
+}
