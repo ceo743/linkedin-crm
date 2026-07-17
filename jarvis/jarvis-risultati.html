@@ -801,6 +801,9 @@ function vocePer(who){
 }
 
 // ------- MOTORE VOCALE: voci neurali dal server (edge-tts), ripiego su voce di sistema -------
+// 18/07: localhost usa il server di Davide (voce+cache locale); pubblico usa il proxy su Render
+// (stessa voce ElevenLabs, vedi server.py di dc-chatbot) così l'esperienza resta identica ovunque.
+const PARLA_URL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? '/parla' : 'https://dc-chatbot-vswb.onrender.com/parla';
 let qaSpeaking=false, qaTimer=null, vocePlayer=null, qaPaused=false, musicaAvviataDalParlato=false;
 // RIFLETTORE SEMPLIFICATO (17/07, Davide: "stai facendo solo casino... per il vocale lascia perdere se
 // non sei in grado"). Prima: indovinava a quale singolo box (.panel/.toppost/.kpi) apparteneva OGNI
@@ -943,12 +946,9 @@ function speakLines(lines, done){
   // musicaAvviataDalParlato è globale (non locale a questa chiamata) perché stopVoce() — richiamato da
   // un'interruzione manuale a metà frase — deve sapere se toccare a lei spegnere la musica o solo
   // riportarla al volume normale, e stopVoce() non ha altrimenti modo di saperlo.
-  // ⛔ 18/07, dalla versione pubblicata online: senza il server locale (porta 8765) /parla non risponde,
-  // quindi la voce ripiega SEMPRE sulla voce di sistema del browser (robotica) — la musica sintetica
-  // sopra a quella voce suona pessima ("voce e musica di merda", Davide). Fuori da localhost la musica
-  // resta spenta di default: meglio solo la voce di sistema pulita che la combinazione.
-  const serverLocaleDisponibile=/^(localhost|127\.0\.0\.1)$/.test(location.hostname);
-  musicaAvviataDalParlato = serverLocaleDisponibile && !musicOn;
+  // 18/07: fuori da localhost /parla ora passa dal proxy pubblico su Render (stessa voce ElevenLabs,
+  // vedi PARLA_URL sotto) — "deve essere uguale", Davide — quindi la musica riparte anche lì.
+  musicaAvviataDalParlato = !musicOn;
   if(musicaAvviataDalParlato) startMusic();
   duckMusic(true);
   // sequenza PIATTA di frasi: ogni frase è un pezzo audio a sé → la luce si accende quando quella frase inizia davvero
@@ -959,7 +959,7 @@ function speakLines(lines, done){
     });
   });
   function scaricaAudio(who,testo){
-    return fetch('/parla?who='+encodeURIComponent(who)+'&testo='+encodeURIComponent(testo))
+    return fetch(PARLA_URL+'?who='+encodeURIComponent(who)+'&testo='+encodeURIComponent(testo))
       .then(function(r){ if(!r.ok) throw new Error('tts'); return r.blob(); })
       .then(function(b){ return URL.createObjectURL(b); });
   }
