@@ -1094,42 +1094,14 @@ function costruisciBriefing(periodo){
   if(!GIORNI||!GIORNI.length){
     return [{who:'jarvis', testo:"Non ho ancora l'archivio giornaliero pronto, Signore. Riprovi tra poco."}];
   }
-  const oggiStr=oggi.getFullYear()+'-'+pad(oggi.getMonth()+1)+'-'+pad(oggi.getDate());
-  let sel, nome;
-  if(periodo==='oggi'){ sel=GIORNI.filter(x=>x.data===oggiStr); nome='di oggi'; }
-  else{
-    const n=parseInt(periodo,10)||7, pieni=GIORNI.filter(x=>x.data!==oggiStr);
-    sel=pieni.slice(-n);
-    nome = n===1 ? 'di ieri' : ('degli ultimi '+n+' giorni');
-  }
-  // UNA sola frase d'apertura (18/07, "ripete due volte la stessa frase parafrasata"): prima "Rapporto
-  // completo..." era seguita poco dopo da "Ora il dettaglio completo, sezione per sezione." — quando il
-  // periodo è "7" (il digest in mezzo salta, vedi sotto) le due si sentivano una via l'altra, stesso
-  // concetto ("completo") detto due volte con parole diverse. Ora è una frase sola.
+  // 18/07, terza segnalazione sullo stesso punto: il digest sul periodo scelto (impressioni/spesa/
+  // lead/call) e la lettura integrale delle sezioni sotto raccontavano LO STESSO ARGOMENTO a pochi
+  // secondi di distanza con numeri diversi (il digest usava il periodo scelto in alto, le sezioni
+  // sono SEMPRE su base settimanale fissa) — sembrava che leggesse tutto due volte. Il gate precedente
+  // (skip solo se periodo==='7') non bastava: il periodo di default all'apertura è '1' (ieri), non
+  // '7', quindi il digest partiva comunque quasi sempre. Le sezioni sotto sono già complete e più
+  // dettagliate del digest: il digest è stato tolto, non solo condizionato.
   const battute=[{who:'jarvis', testo:"Buongiorno, Signore. Rapporto completo, sezione per sezione, aggiornato oggi "+dataOggiIT+"."}];
-  // il digest sul periodo scelto (impressioni/spesa/lead/call) e la lettura integrale delle sezioni
-  // sotto dicono LO STESSO DATO quando il periodo è "ultimi 7 giorni" (il caso più comune, quello di
-  // default): stesso numero due volte in pochi secondi (17/07, Davide: "hai detto 2 volte l'analisi
-  // LinkedIn... impressioni riletto da ogni agente"). Il digest ha senso SOLO quando il periodo scelto
-  // è diverso dalla settimana fissa delle sezioni (oggi/ieri/3 giorni) — lì i numeri sono davvero altri.
-  if(periodo!=='7'){
-    if(sel.length){
-      const A=aggrega(sel), parziale=sel.some(x=>x.parziale);
-      const liCompleto=sel.every(x=>typeof x.li_impressioni==='number');
-      const liTot=liCompleto ? sel.reduce((a,x)=>a+(x.li_impressioni||0),0) : null;
-      const cmoTesto="CMO. Il periodo selezionato, "+nome+(parziale?', dati parziali ancora in corso':'')+". "
-        +(liCompleto ? ("LinkedIn: "+parlaNumero(liTot)+" impressioni "+nome+". ") : "Impressioni LinkedIn per singolo giorno non disponibili in questo periodo: il dato resta a parte, su base settimanale. ")
-        +"Meta Ads: "+euro(A.spesa)+" investiti, "+parlaNumero(A.click)+" click"+(A.click?(", costo per click "+euro(A.spesa/A.click)):"")+".";
-      const csoTesto="CSO. Il periodo selezionato, "+nome+". "+A.lead+" lead. "
-        +A.call+" call prenotate"+(A.call?(", "+A.scart+" scartate da noi dopo pre qualifica, "+A.intarget+" in target"):"")+".";
-      battute.push({who:'cmo', testo:cmoTesto, sezione:'hero'});
-      battute.push({who:'cso', testo:csoTesto, sezione:'hero'});
-    } else {
-      battute.push({who:'jarvis', testo:"Non ho ancora dati "+nome+" per il periodo selezionato, Signore."});
-    }
-  }
-  // (niente frase di transizione qui: "sezione per sezione" è già nell'intro, ripeterlo subito dopo
-  // era la causa del "ripete due volte parafrasata" — si passa dritti alla prima sezione)
   // niente note lunghe nel briefing principale (17/07, "sta sparando mille numeri senza fermarsi"):
   // qui solo i numeri diretti (h3/bignum/row/bar/toppost). Le note restano complete nei bottoni "Briefing
   // sezione" per chi vuole il dettaglio fine di UNA sezione sola.
@@ -1391,9 +1363,9 @@ function rispondi(domandaTxt){
 function presentaSquadra(){
   const battute=[
     {who:'jarvis', testo:"Con piacere, Signore. Le presento la sua squadra."},
-    {who:'cmo', testo:"CMO. Mi occupo del marketing: LinkedIn, contenuti e inserzioni Meta. Ogni impressione passa da me."},
-    {who:'cso', testo:"CSO. Vendite: lead, guide, call e pre qualifica. Se non è in target, non le arriva in agenda."},
-    {who:'cto', testo:"CTO. Sistemi: SEO, blog e le 20 routine attive su 28 che lavorano mentre lei dorme."},
+    {who:'cmo', testo:"Direttore marketing. Mi occupo del marketing: LinkedIn, contenuti e inserzioni Meta. Ogni impressione passa da me."},
+    {who:'cso', testo:"Direttore vendite. Vendite: lead, guide, call e pre qualifica. Se non è in target, non le arriva in agenda."},
+    {who:'cto', testo:"Direttore tecnico. Sistemi: SEO, blog e le 20 routine attive su 28 che lavorano mentre lei dorme."},
     {who:'jarvis', testo:"E io coordino, Signore. Siamo operativi 24 ore su 24. Mi dica pure cosa le serve."},
   ];
   battute.forEach(L=>addMsg(L.testo,'a',AGENTI[L.who].label));
