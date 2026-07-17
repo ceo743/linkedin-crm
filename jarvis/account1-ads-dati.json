@@ -1,19 +1,29 @@
 {
-  "aggiornato": "2026-07-17T07:08:23+02:00",
+  "aggiornato": "2026-07-17T08:20:00+02:00",
   "account": {
     "nome": "Consulenza 1:1",
     "obiettivo": "Analisi gratuita + call su Calendly",
     "id": "465327538443110",
     "valuta": "EUR",
     "periodo": "ultimi 30 giorni (dal 17 giugno al 16 luglio 2026)",
+    "giorni_periodo": 30,
     "link_ads_manager": "https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110"
   },
   "totali": {
-    "spesa": 3144.07,
-    "impressions": 155832,
+    "spesa": 3144.35,
+    "impressions": 155837,
+    "reach": 61499,
+    "frequency": 2.53,
     "click": 3664,
     "ctr": 2.35,
-    "cpc": 0.86
+    "cpc": 0.86,
+    "cpm": 20.18,
+    "call": 13,
+    "costo_call_migliore": 210.55
+  },
+  "ipotesi_default": {
+    "valore_cliente": 1500,
+    "tasso_chiusura": 25
   },
   "campagne": [
     {
@@ -21,14 +31,17 @@
       "nome": "25.03 | Lead Gen Consulenza LinkedIn 1:1",
       "stato": "ACTIVE",
       "obiettivo": "Contatti",
-      "spesa": 2736.81,
-      "impressions": 145318,
+      "spesa": 2737.09,
+      "impressions": 145323,
+      "reach": 54483,
+      "frequency": 2.67,
       "click": 3441,
       "ctr": 2.37,
       "cpc": 0.80,
+      "cpm": 18.83,
       "risultati": 13,
       "tipo_risultato": "call prenotate",
-      "costo_risultato": 210.52
+      "costo_risultato": 210.55
     },
     {
       "id": "120252595942170348",
@@ -37,9 +50,12 @@
       "obiettivo": "Contatti",
       "spesa": 407.26,
       "impressions": 10514,
+      "reach": 7016,
+      "frequency": 1.50,
       "click": 223,
       "ctr": 2.12,
       "cpc": 1.83,
+      "cpm": 38.74,
       "risultati": 0,
       "tipo_risultato": "call prenotate",
       "costo_risultato": null
