@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-17T09:31:39.099470+02:00",
+  "aggiornato": "2026-07-17T09:53:18.531650+02:00",
   "contatti": [
     {
       "id": 1,
@@ -3009,7 +3009,7 @@
       "risposto": true,
       "gestito": true,
       "prenotato": false,
-      "note": "Verificato 07/07/2026: IN target. CEO at Stalea srl and OMP srl Mechanical Components. Founder di due aziende. Da scrivere messaggio esplorativo prima dell invio. | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard. | Inviato 2026-07-07 14:52 | 09/07 14:06: rispose ammettendo problema (gestione preventivi/tempo), rimandata guida (non arrivata), proposta call con link Calendly AI. | 2026-07-16T20:30:23.287255+02:00 PRESIDIO: prossima_azione scaduta verificata (nessuna nuova risposta nel thread), tocco leggero DA INVIARE ma NON eseguito in questo giro per tempo massimo 15min, riprendere al prossimo controllo.",
+      "note": "Verificato 07/07/2026: IN target. CEO at Stalea srl and OMP srl Mechanical Components. Founder di due aziende. Da scrivere messaggio esplorativo prima dell invio. | Messaggio scritto 2026-07-07 11:14, in attesa di approvazione di Davide dalla dashboard. | Inviato 2026-07-07 14:52 | 09/07 14:06: rispose ammettendo problema (gestione preventivi/tempo), rimandata guida (non arrivata), proposta call con link Calendly AI. | 2026-07-16T20:30:23.287255+02:00 PRESIDIO: prossima_azione scaduta verificata (nessuna nuova risposta nel thread), tocco leggero DA INVIARE ma NON eseguito in questo giro per tempo massimo 15min, riprendere al prossimo controllo. | 2026-07-17T09:52:42.770135+02:00 PRESIDIO SCADENZE (manuale su richiesta Davide): verificato thread reale, nessuna nuova risposta dal 09/07 (lastActivityAt = nostro ultimo invio). Inviato tocco leggero di ripresa SENZA nuovo link Calendly (gia inviato). Verificatore indipendente: INVIA. Messaggio confermato ultimo nel thread alle 09:52.",
       "seguiti": [],
       "risposta_testo": "Non trovo nulla era arrivata via mail o qui su LinkedIn? Comunque la risposta è che porta via tempo.",
       "risposta_at": "2026-07-08T18:34:00+02:00",
@@ -3019,8 +3019,13 @@
       "link_call_inviato": "https://calendly.com/dc-academy-team/consulenza-strategica-gratuita-ai",
       "tipo_call": "ai",
       "prossima_azione": {
-        "quando": "2026-07-14",
-        "cosa": "Se Mirco non ha scritto altro nel thread: riprendere IO su LinkedIn con un tocco leggero a parole. NON mandare altro Calendly (gia inviato). Email a Stefania solo se serve telefono."
+        "quando": "2026-07-24",
+        "cosa": "Se Mirco non ha scritto altro nel thread: chiudere silenzioso (nessun altro tocco), note='trattativa fredda, nessuna risposta dopo tocco di ripresa'. Se risponde: gestione risposta calda completa."
+      },
+      "doppio_controllo": {
+        "esito": "ok",
+        "quando": "2026-07-17T09:52:42.770135+02:00",
+        "motivo": "coerente con stadio conversazione, firma Stefania, nessun link ripetuto, presidio previsto da prossima_azione"
       }
     },
     {
@@ -4794,10 +4799,15 @@
       "stop_seguiti": true,
       "escluso": false,
       "prossima_azione": {
-        "quando": "2026-07-16",
-        "cosa": "Link Calendly gia inviato. Se non prenota entro 2 giorni, ripresa leggera a parole su LinkedIn."
+        "quando": "2026-07-21",
+        "cosa": "Se Giuseppe non ha scritto altro nel thread: chiudere silenzioso (nessun altro tocco), note='trattativa fredda, nessuna risposta dopo 2 riprese'. Se risponde: gestione risposta calda completa."
       },
-      "note": "2026-07-14T18:38:52 LEAD CALDO INBOUND: DM spontaneo oggi 10:10 (Premium Open Profile) 'vorremmo sviluppare visibilita e contatti, puoi darci indicazioni? GIUSTO?'. Rimasto NON gestito dalle routine fino alle 16:2x, segnalato da Davide (GRAVE). Gestito da chat: verificatore INVIA, risposta Stefania con call proposta a parole (no link finche non dice si). Tema = LinkedIn -> Calendly DC quando accetta. | 2026-07-16T20:30:23.287255+02:00 PRESIDIO: prossima_azione scaduta verificata (nessuna nuova risposta nel thread), tocco leggero DA INVIARE ma NON eseguito in questo giro per tempo massimo 15min, riprendere al prossimo controllo."
+      "note": "2026-07-14T18:38:52 LEAD CALDO INBOUND: DM spontaneo oggi 10:10 (Premium Open Profile) 'vorremmo sviluppare visibilita e contatti, puoi darci indicazioni? GIUSTO?'. Rimasto NON gestito dalle routine fino alle 16:2x, segnalato da Davide (GRAVE). Gestito da chat: verificatore INVIA, risposta Stefania con call proposta a parole (no link finche non dice si). Tema = LinkedIn -> Calendly DC quando accetta. | 2026-07-16T20:30:23.287255+02:00 PRESIDIO: prossima_azione scaduta verificata (nessuna nuova risposta nel thread), tocco leggero DA INVIARE ma NON eseguito in questo giro per tempo massimo 15min, riprendere al prossimo controllo. | 2026-07-17T09:51:20.172357+02:00 PRESIDIO SCADENZE (manuale su richiesta Davide): verificato thread reale, nessuna nuova risposta dal 14/07 (lastActivityAt = nostro ultimo invio). Inviato tocco leggero di ripresa SENZA nuovo link Calendly (gia inviato). Verificatore indipendente: INVIA. Messaggio confermato ultimo nel thread alle 09:50.",
+      "doppio_controllo": {
+        "esito": "ok",
+        "quando": "2026-07-17T09:51:20.172357+02:00",
+        "motivo": "coerente con stadio conversazione, firma Stefania, nessun link ripetuto, presidio previsto da prossima_azione"
+      }
     },
     {
       "id": 154,
@@ -5922,6 +5932,26 @@
     {
       "quando": "2026-07-17T09:31:39.099470+02:00",
       "testo": "controllo ore 09:21 CONCLUSO: filtro unread=0 (nessuna nuova risposta), 0 nuovi collegamenti, 0 prenotazioni Calendly nuove dal registro. 2 presidi gestiti (Sanchioni ripresa, Menci ultimo tocco+chiusura), 1 orfano riconciliato (Franco Nieddu). Pianzi Mirco e D'Imperio (scadute anche loro) NON gestiti per tempo massimo 15min: riprendere OBBLIGATORIAMENTE al prossimo giro come priorita 1."
+    },
+    {
+      "quando": "2026-07-17T09:44:04.274025+02:00",
+      "testo": "[AVVIO SESSIONE] outreach-linkedin-verifica-risposte (manuale, solo presidio scadenze Pianzi Mirco + Giuseppe D-Imperio)"
+    },
+    {
+      "quando": "2026-07-17T09:51:20.172357+02:00",
+      "testo": "invio gestione/presidio: Giuseppe D'Imperio (tocco leggero ripresa, no link)"
+    },
+    {
+      "quando": "2026-07-17T09:52:42.770135+02:00",
+      "testo": "invio gestione/presidio: Pianzi Mirco (tocco leggero ripresa, no link)"
+    },
+    {
+      "quando": "2026-07-17T09:53:18.531650+02:00",
+      "testo": "segna-non-letto: RE-MARK fallito (endpoint noto in errore dal 12/07) su 1 thread estraneo al registro, mai aperto in questa sessione (apertiLegittimi=[Pianzi Mirco, Giuseppe D-Imperio], entrambi presidiati regolarmente): nessun danno reale, thread rimasto di per se non letto."
+    },
+    {
+      "quando": "2026-07-17T09:53:18.531650+02:00",
+      "testo": "controllo ore 09:44 (manuale, solo presidio scadenze): 2/2 presidi gestiti (Pianzi Mirco, Giuseppe D-Imperio), entrambi tocco leggero di ripresa inviato e verificato con doppio controllo indipendente, nessun link Calendly ripetuto. Nessun altro contatto toccato."
     }
   ],
   "diario": [
