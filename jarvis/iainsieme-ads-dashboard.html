@@ -174,7 +174,7 @@ function render(d, live) {
   // 17/07: come account1-ads-dati.json, anche questo file è passato a schema per-periodo
   // (d.periodi.oggi/ieri/max) — scoperto rotto (pagina bianca sui dati veri) mentre risistemavo la
   // voce JARVIS. Fallback allo schema piatto se periodi non c'è (EMBEDDED offline).
-  const P = d.periodi ? d.periodi[d.periodo_default || Object.keys(d.periodi)[0]] : d;
+  const P = d.periodi ? (d.periodi[d.periodo_default] || d.periodi[Object.keys(d.periodi)[0]]) : d;
   window._iaPeriodo = P;
   document.getElementById('h-campagna').textContent = d.campagna.nome;
   document.getElementById('h-live').textContent = live ? 'dati live' : 'ultimo snapshot salvato';
@@ -214,7 +214,7 @@ function render(d, live) {
     `<div class="card kpi"><div class="label">${k.label}</div><div class="value ${k.accent?'accent':''}">${k.value}</div></div>`
   ).join('');
 
-  const ordinati = [...P.ads].sort((a,b) => {
+  const ordinati = [...(P.ads||[])].sort((a,b) => {
     const ca = a.costo_per_lead ?? Infinity, cb = b.costo_per_lead ?? Infinity;
     if (ca !== cb) return ca - cb;
     return (b.click||0) - (a.click||0);
@@ -253,12 +253,13 @@ function render(d, live) {
     `).join('');
   }
 
-  document.getElementById('fix-note').textContent = '✓ ' + d.sito.nota_fix;
+  const sito = d.sito||{}; // 18/07: se il JSON manca "sito" non deve far crashare tutto il render
+  document.getElementById('fix-note').textContent = sito.nota_fix ? ('✓ ' + sito.nota_fix) : '';
   document.getElementById('funnel-grid').innerHTML = `
-    <div class="funnel-item"><div class="eta">FASCIA 8-10</div><a href="${d.sito.checkout_8_10}" target="_blank">${d.sito.checkout_8_10}</a></div>
-    <div class="funnel-item"><div class="eta">FASCIA 11-13</div><a href="${d.sito.checkout_11_13}" target="_blank">${d.sito.checkout_11_13}</a></div>
-    <div class="funnel-item"><div class="eta">FASCIA 14-16</div><a href="${d.sito.checkout_14_16}" target="_blank">${d.sito.checkout_14_16}</a></div>
-    <div class="funnel-item"><div class="eta">SITO</div><a href="${d.sito.sito_url}" target="_blank">${d.sito.sito_url}</a></div>
+    <div class="funnel-item"><div class="eta">FASCIA 8-10</div><a href="${sito.checkout_8_10||'#'}" target="_blank">${sito.checkout_8_10||'—'}</a></div>
+    <div class="funnel-item"><div class="eta">FASCIA 11-13</div><a href="${sito.checkout_11_13||'#'}" target="_blank">${sito.checkout_11_13||'—'}</a></div>
+    <div class="funnel-item"><div class="eta">FASCIA 14-16</div><a href="${sito.checkout_14_16||'#'}" target="_blank">${sito.checkout_14_16||'—'}</a></div>
+    <div class="funnel-item"><div class="eta">SITO</div><a href="${sito.sito_url||'#'}" target="_blank">${sito.sito_url||'—'}</a></div>
   `;
   // per la voce JARVIS sotto: dati e ordine card usati per costruire e per illuminare l'elemento giusto
   window._iaData = d; window._iaOrdinati = ordinati; window._iaGiornoCorrente = giornoCorrente; window._iaGiorniRimasti = giorniRimasti;
@@ -296,7 +297,7 @@ function jvFrasi(){
   } else {
     out.push({testo:"Nessuna creatività attiva ancora, Signore.", el:null});
   }
-  out.push({testo:d.sito.nota_fix, el:document.querySelector('.funnel-grid')?document.querySelector('.funnel-grid').closest('.card'):null});
+  if(d.sito&&d.sito.nota_fix) out.push({testo:d.sito.nota_fix, el:document.querySelector('.funnel-grid')?document.querySelector('.funnel-grid').closest('.card'):null});
   out.push({testo:"Fine del rapporto sul test, Signore.", el:null});
   return out;
 }
