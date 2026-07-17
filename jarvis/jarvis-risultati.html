@@ -345,6 +345,7 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
 
 
 <!-- INCARICHI DEL REPORT: proposta vera del reparto + approvazione del Signore -->
+<h2 class="sec reveal" id="incarichi-titolo" style="display:none;color:var(--amber);animation-delay:.08s">📋 Incarichi al management team</h2>
 <div id="incarichi-panel" style="display:none;margin:0 0 16px"></div>
 
 <!-- KPI PRINCIPALI -->
@@ -840,54 +841,87 @@ const NOME_REPARTO={cmo:'CMO · Marketing', cso:'CSO · Vendite', cto:'CTO · Si
 // alla squadra per risolverli e farmi proposte" — niente bottone "Genera proposta": appena JARVIS
 // individua un incarico, la squadra ci lavora SUBITO da sola, e il Signore trova la proposta già
 // pronta quando arriva a leggerla (o vede "sta verificando" se non ha ancora finito).
+// 18/07, "dove le vedo?": il pannello compariva SOLO dopo aver premuto Briefing vocale e spariva al
+// refresh — niente titolo, niente persistenza. Ora: titolo fisso "📋 Incarichi al management team",
+// e ogni incarico/proposta/decisione viene salvato in localStorage così resta visibile anche dopo un
+// ricarico della pagina, senza dover rifare il briefing per ritrovarli.
+const INCARICHI_LS='jarvis-incarichi';
+function salvaIncarichiLS(){ try{ localStorage.setItem(INCARICHI_LS, JSON.stringify(ultimiIncarichi)); }catch(e){} }
+function caricaIncarichiLS(){ try{ return JSON.parse(localStorage.getItem(INCARICHI_LS)||'[]'); }catch(e){ return []; } }
+function cardIncaricoHTML(inc,i){
+  let corpo;
+  if(inc.decisione){
+    corpo='<span class="incarico-esito">'+((inc.decisione==='approva'?'✅ Approvato.':'✗ Rifiutato.')+(inc.esito?(' '+inc.esito):'')).replace(/</g,'&lt;')+'</span>';
+  }else if(inc.proposta){
+    corpo='<div class="incarico-proposta">'+inc.proposta.replace(/</g,'&lt;')+'</div>'
+      +'<button class="incarico-btn approva" onclick="decidiIncarico('+i+',\'approva\')">✓ Approva</button>'
+      +'<button class="incarico-btn rifiuta" onclick="decidiIncarico('+i+',\'rifiuta\')">✗ Rifiuta</button>';
+  }else if(inc.errore){
+    corpo='<span class="incarico-esito">Non sono riuscito a ottenere la proposta, Signore. Riprovi.</span>'
+      +'<button class="incarico-btn" onclick="generaProposta('+i+')">Riprova</button>';
+  }else{
+    corpo='<span class="incarico-esito">Il '+(NOME_REPARTO[inc.reparto]||inc.reparto)+' sta verificando'
+      +(/^(localhost|127\.0\.0\.1)$/.test(location.hostname)?' con i suoi strumenti reali':' (dati limitati, fuori da localhost)')+'…</span>';
+  }
+  return '<div class="incarico-card" data-i="'+i+'">'
+    +'<div class="incarico-reparto">'+(NOME_REPARTO[inc.reparto]||inc.reparto)+'</div>'
+    +'<div class="incarico-compito">'+inc.compito.replace(/</g,'&lt;')+'</div>'
+    +'<div class="incarico-corpo">'+corpo+'</div>'
+    +'</div>';
+}
+function renderIncarichi(){
+  const box=$('#incarichi-panel'), titolo=$('#incarichi-titolo');
+  if(!ultimiIncarichi.length){ box.style.display='none'; box.innerHTML=''; titolo.style.display='none'; return; }
+  titolo.style.display='flex'; box.style.display='block';
+  box.innerHTML=ultimiIncarichi.map(cardIncaricoHTML).join('');
+}
 function mostraIncarichi(lista){
-  const box=$('#incarichi-panel');
-  if(!lista||!lista.length){ box.style.display='none'; box.innerHTML=''; return; }
-  box.style.display='block';
-  box.innerHTML=lista.map(function(inc,i){
-    return '<div class="incarico-card" data-i="'+i+'">'
-      +'<div class="incarico-reparto">'+(NOME_REPARTO[inc.reparto]||inc.reparto)+'</div>'
-      +'<div class="incarico-compito">'+inc.compito.replace(/</g,'&lt;')+'</div>'
-      +'<div class="incarico-corpo"><span class="incarico-esito">Il '+(NOME_REPARTO[inc.reparto]||inc.reparto)+' sta verificando'
-        +(/^(localhost|127\.0\.0\.1)$/.test(location.hostname)?' con i suoi strumenti reali':' (dati limitati, fuori da localhost)')+'…</span></div>'
-      +'</div>';
-  }).join('');
-  lista.forEach(function(inc,i){ generaProposta(i); });
+  ultimiIncarichi=(lista||[]).map(function(inc){ return {reparto:inc.reparto, compito:inc.compito}; });
+  renderIncarichi();
+  salvaIncarichiLS();
+  ultimiIncarichi.forEach(function(inc,i){ generaProposta(i); });
 }
 async function generaProposta(i){
-  const inc=ultimiIncarichi[i]; if(!inc) return;
-  const card=document.querySelector('.incarico-card[data-i="'+i+'"] .incarico-corpo');
-  card.innerHTML='<span class="incarico-esito">Il '+(NOME_REPARTO[inc.reparto]||inc.reparto)+' sta verificando'
-    +(/^(localhost|127\.0\.0\.1)$/.test(location.hostname)?' con i suoi strumenti reali':' (dati limitati, fuori da localhost)')+'…</span>';
+  const inc=ultimiIncarichi[i]; if(!inc||inc.proposta||inc.decisione) return;
+  delete inc.errore; renderIncarichi();
   try{
     const r=await fetch(PROPOSTA_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({reparto:inc.reparto,compito:inc.compito})});
     const j=await r.json();
     if(!j.ok||!j.proposta) throw new Error('proposta vuota');
     inc.proposta=j.proposta;
-    card.innerHTML='<div class="incarico-proposta">'+j.proposta.replace(/</g,'&lt;')+'</div>'
-      +'<button class="incarico-btn approva" onclick="decidiIncarico('+i+',\'approva\')">✓ Approva</button>'
-      +'<button class="incarico-btn rifiuta" onclick="decidiIncarico('+i+',\'rifiuta\')">✗ Rifiuta</button>';
   }catch(e){
-    card.innerHTML='<span class="incarico-esito">Non sono riuscito a ottenere la proposta, Signore. Riprovi.</span>'
-      +'<button class="incarico-btn" onclick="generaProposta('+i+')">Riprova</button>';
+    inc.errore=true;
   }
+  renderIncarichi(); salvaIncarichiLS();
 }
 async function decidiIncarico(i, decisione){
   const inc=ultimiIncarichi[i]; if(!inc) return;
   const card=document.querySelector('.incarico-card[data-i="'+i+'"] .incarico-corpo');
-  card.innerHTML='<span class="incarico-esito">Registro la decisione…</span>';
+  if(card) card.innerHTML='<span class="incarico-esito">Registro la decisione…</span>';
   try{
     const r=await fetch(DECISIONE_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({reparto:inc.reparto,compito:inc.compito,proposta:inc.proposta||'',decisione:decisione})});
     const j=await r.json();
     if(!j.ok) throw new Error('decisione non salvata');
-    const esito = decisione==='approva' ? ('✅ Approvato.'+(j.esecuzione?(' Esito: '+j.esecuzione):(j.avviso?(' '+j.avviso):' In esecuzione dal reparto.'))) : '✗ Rifiutato.';
-    card.innerHTML='<span class="incarico-esito">'+esito.replace(/</g,'&lt;')+'</span>';
+    inc.decisione=decisione;
+    inc.esito = j.esecuzione || j.avviso || (decisione==='approva' ? 'In esecuzione dal reparto.' : '');
   }catch(e){
-    card.innerHTML='<span class="incarico-esito">Non sono riuscito a registrare la decisione, Signore. Riprovi.</span>'
+    if(card) card.innerHTML='<span class="incarico-esito">Non sono riuscito a registrare la decisione, Signore. Riprovi.</span>'
       +'<button class="incarico-btn approva" onclick="decidiIncarico('+i+',\'approva\')">✓ Approva</button>'
       +'<button class="incarico-btn rifiuta" onclick="decidiIncarico('+i+',\'rifiuta\')">✗ Rifiuta</button>';
+    return;
   }
+  renderIncarichi(); salvaIncarichiLS();
 }
+// al carico pagina: ripristina gli incarichi dell'ultimo report, se c'erano — così si vedono subito,
+// senza dover rifare il briefing. Solo quelli ancora "in verifica" (senza proposta né decisione già
+// salvata) vengono richiesti di nuovo: gli altri sono già completi, nessuna richiesta ripetuta.
+(function ripristinaIncarichi(){
+  const salvati=caricaIncarichiLS();
+  if(!salvati.length) return;
+  ultimiIncarichi=salvati;
+  renderIncarichi();
+  ultimiIncarichi.forEach(function(inc,i){ if(!inc.proposta&&!inc.decisione) generaProposta(i); });
+})();
 let qaSpeaking=false, qaTimer=null, vocePlayer=null, qaPaused=false, musicaAvviataDalParlato=false;
 // RIFLETTORE SEMPLIFICATO (17/07, Davide: "stai facendo solo casino... per il vocale lascia perdere se
 // non sei in grado"). Prima: indovinava a quale singolo box (.panel/.toppost/.kpi) apparteneva OGNI
