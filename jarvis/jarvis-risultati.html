@@ -1097,7 +1097,11 @@ function costruisciBriefing(periodo){
     sel=pieni.slice(-n);
     nome = n===1 ? 'di ieri' : ('degli ultimi '+n+' giorni');
   }
-  const battute=[{who:'jarvis', testo:"Buongiorno, Signore. Rapporto completo, aggiornato oggi "+dataOggiIT+"."}];
+  // UNA sola frase d'apertura (18/07, "ripete due volte la stessa frase parafrasata"): prima "Rapporto
+  // completo..." era seguita poco dopo da "Ora il dettaglio completo, sezione per sezione." — quando il
+  // periodo è "7" (il digest in mezzo salta, vedi sotto) le due si sentivano una via l'altra, stesso
+  // concetto ("completo") detto due volte con parole diverse. Ora è una frase sola.
+  const battute=[{who:'jarvis', testo:"Buongiorno, Signore. Rapporto completo, sezione per sezione, aggiornato oggi "+dataOggiIT+"."}];
   // il digest sul periodo scelto (impressioni/spesa/lead/call) e la lettura integrale delle sezioni
   // sotto dicono LO STESSO DATO quando il periodo è "ultimi 7 giorni" (il caso più comune, quello di
   // default): stesso numero due volte in pochi secondi (17/07, Davide: "hai detto 2 volte l'analisi
@@ -1119,7 +1123,8 @@ function costruisciBriefing(periodo){
       battute.push({who:'jarvis', testo:"Non ho ancora dati "+nome+" per il periodo selezionato, Signore."});
     }
   }
-  battute.push({who:'jarvis', testo:"Ora il dettaglio completo, sezione per sezione."});
+  // (niente frase di transizione qui: "sezione per sezione" è già nell'intro, ripeterlo subito dopo
+  // era la causa del "ripete due volte parafrasata" — si passa dritti alla prima sezione)
   // niente note lunghe nel briefing principale (17/07, "sta sparando mille numeri senza fermarsi"):
   // qui solo i numeri diretti (h3/bignum/row/bar/toppost). Le note restano complete nei bottoni "Briefing
   // sezione" per chi vuole il dettaglio fine di UNA sezione sola.
