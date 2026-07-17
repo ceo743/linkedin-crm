@@ -836,6 +836,10 @@ const NOME_REPARTO={cmo:'CMO · Marketing', cso:'CSO · Vendite', cto:'CTO · Si
 // management team e io decido se approvare" — ogni incarico del report diventa una card con un
 // bottone che invoca DAVVERO il reparto (stesso agente del comitato di direzione settimanale, con
 // accesso reale agli strumenti su localhost) e produce una proposta vera, non un testo di comodo.
+// 18/07, correzione: "non voglio che sia automatico [da cliccare]. lui trova problemi e li segnala
+// alla squadra per risolverli e farmi proposte" — niente bottone "Genera proposta": appena JARVIS
+// individua un incarico, la squadra ci lavora SUBITO da sola, e il Signore trova la proposta già
+// pronta quando arriva a leggerla (o vede "sta verificando" se non ha ancora finito).
 function mostraIncarichi(lista){
   const box=$('#incarichi-panel');
   if(!lista||!lista.length){ box.style.display='none'; box.innerHTML=''; return; }
@@ -844,9 +848,11 @@ function mostraIncarichi(lista){
     return '<div class="incarico-card" data-i="'+i+'">'
       +'<div class="incarico-reparto">'+(NOME_REPARTO[inc.reparto]||inc.reparto)+'</div>'
       +'<div class="incarico-compito">'+inc.compito.replace(/</g,'&lt;')+'</div>'
-      +'<div class="incarico-corpo"><button class="incarico-btn" onclick="generaProposta('+i+')">Genera proposta vera</button></div>'
+      +'<div class="incarico-corpo"><span class="incarico-esito">Il '+(NOME_REPARTO[inc.reparto]||inc.reparto)+' sta verificando'
+        +(/^(localhost|127\.0\.0\.1)$/.test(location.hostname)?' con i suoi strumenti reali':' (dati limitati, fuori da localhost)')+'…</span></div>'
       +'</div>';
   }).join('');
+  lista.forEach(function(inc,i){ generaProposta(i); });
 }
 async function generaProposta(i){
   const inc=ultimiIncarichi[i]; if(!inc) return;
