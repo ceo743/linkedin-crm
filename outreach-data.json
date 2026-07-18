@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-18T11:45:00+02:00",
+  "aggiornato": "2026-07-18T17:42:00+02:00",
   "contatti": [
     {
       "id": 1,
@@ -4874,6 +4874,33 @@
         "cosa": "Se Franco non ha risposto al Calendly: tocco leggero su possibile interesse settembre. Se ha risposto: gestione risposta calda."
       },
       "note": "2026-07-17T15:57:00 CASO C INBOUND: risposta spontanea al DM di Stefania chiedendo tipo colloquio. 2 strutture affitti brevi, 7 camere tot, stagione luglio-agosto piena. Proposta prenotazione Calendly AI per settembre quando ha piu respiro. Verificatore INVIA. Messaggio Stefania inviato 15:57."
+    },
+    {
+      "id": 156,
+      "nome": "Samuel Bordignon",
+      "profilo": "https://www.linkedin.com/in/samuel-bordignon-843302166/",
+      "tipo": "dm-guida",
+      "angolo": "ai",
+      "fonte": "inbound_dm_diretto",
+      "inviato": null,
+      "risposto": true,
+      "risposta_testo": "Chiede preventivi per consulenza automazione AI - risposto con Calendly AI e spiegazione che prezzi si definiscono in call",
+      "link_call_inviato": true,
+      "tipo_call": "consulenza-strategica-gratuita-ai",
+      "prenotato": null,
+      "note": "Lead da DM guida — 2026-07-18 — LEAD CALDO INBOUND: ha risposto Preventivi allofferta consulenza automazione. Risposto con Calendly AI link.",
+      "messaggio": "",
+      "approvato": true,
+      "programmato": null,
+      "prossima_azione": "2026-07-20",
+      "ruolo": "Responsabile Rete Commerciale Italia, SellUp Sales&Sourcing",
+      "escluso": false,
+      "qualifica": {
+        "ruolo": "in target - responsabile commerciale/network manager",
+        "geografia": "Bassano del Grappa, Veneto, Italia",
+        "budget": "sconosciuto",
+        "fonte": "inbound_dm_diretto"
+      }
     }
   ],
   "servizio": [
