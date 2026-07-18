@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-17T16:00:13.757014+02:00",
+  "aggiornato": "2026-07-18T11:45:00+02:00",
   "contatti": [
     {
       "id": 1,
@@ -2182,7 +2182,7 @@
       "risposto": false,
       "gestito": false,
       "prenotato": false,
-      "note": "CALDO. Consulente strategico propria attivita. Bot non aveva risposto. Primo tocco 2026-07-07 08:57 | ESCLUSO 11/07 19:14: verificato su calendario Davide, Dominik Engel (dominik_engel@yahoo.de) e' CLIENTE ATTIVO in coaching 1:1 con Tania Zandonadi dal 2026-04-16 (doc 'CLIENTE: DOMINIK ENGEL'). Il seguito outreach NON va inviato: sarebbe un messaggio da bot a un cliente pagante gia' seguito dal team. Sequenza fermata definitivamente.",
+      "note": "CALDO. Consulente strategico propria attivita. Bot non aveva risposto. Primo tocco 2026-07-07 08:57 | ESCLUSO 11/07 19:14: verificato su calendario Davide, Dominik Engel (dominik_engel@yahoo.de) e' CLIENTE ATTIVO in coaching 1:1 con Tania Zandonadi dal 2026-04-16 (doc 'CLIENTE: DOMINIK ENGEL'). Il seguito outreach NON va inviato: sarebbe un messaggio da bot a un cliente pagante gia' seguito dal team. Sequenza fermata definitivamente. | 2026-07-18 NUOVO MESSAGGIO: proposta collaborazione su AInsieme (ha figli 10-13 anni, ha sviluppato 2 mini-corsi AI, vuole contribuire al team formazione). Thread segnato NON LETTO per Davide. Richiede risposta personale di Davide, non di Stefania.",
       "seguiti": [
         {
           "n": 1,
@@ -4543,14 +4543,23 @@
       "escluso": false,
       "in_pausa": false,
       "inviato": true,
-      "risposto": false,
-      "gestito": false,
+      "risposto": true,
+      "gestito": true,
       "prenotato": false,
-      "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare. | 2026-07-12 05:35 METODO NUOVO. profilo: Founder & Architect Argovance (Veterinary AI, Real World Evidence, clinical data), ex-Ferrari GT/automotive R&D, EMBA Bologna Business School, costruisce la startup accanto a lavoro full-time (R&D manager Esautomotion). Milestone recente: ammesso Google for Startups Cloud Program. IN TARGET (founder). Nota: lui stesso e architetto AI, quindi NIENTE pitch automazione (se la costruisce da solo). Aggancio = suo traguardo Google + sue parole sul full-time, domanda peer-founder a due vie (costruire vs go-to-market cliniche), no link. DA APPROVARE. | 2026-07-12 06:07 VERIFICATO Gmail+Calendar: nessuna call prenotata, nessuna email diretta/risposta (solo form guida Kajabi). Nessun doppione, ok procedere.",
-      "seguiti": [],
+      "note": "Scoperto da sweep inbox 07/07/2026, ruolo NON verificato. Verificare headline/profilo PRIMA di approvare. | 2026-07-12 05:35 METODO NUOVO. profilo: Founder & Architect Argovance (Veterinary AI, Real World Evidence, clinical data), ex-Ferrari GT/automotive R&D, EMBA Bologna Business School, costruisce la startup accanto a lavoro full-time (R&D manager Esautomotion). Milestone recente: ammesso Google for Startups Cloud Program. IN TARGET (founder). Nota: lui stesso e architetto AI, quindi NIENTE pitch automazione (se la costruisce da solo). Aggancio = suo traguardo Google + sue parole sul full-time, domanda peer-founder a due vie (costruire vs go-to-market cliniche), no link. DA APPROVARE. | 2026-07-12 06:07 VERIFICATO Gmail+Calendar: nessuna call prenotata, nessuna email diretta/risposta (solo form guida Kajabi). Nessun doppione, ok procedere. | 2026-07-18 RISPOSTA RICEVUTA: aggiornamento Argovance (sviluppo lento, validazione con veterinari in corso). Risposto da Stefania con messaggio empatico, niente Calendly.",
+      "seguiti": [
+        {
+          "n": 1,
+          "inviato": "2026-07-18T11:45:00+02:00",
+          "testo": "Ciao Simone, grazie per la risposta onesta. Costruire Argovance insieme a un lavoro in R&D e alla famiglia richiede un equilibrio non da poco. L'ingresso nel Google Cloud Program è comunque un segnale concreto che la direzione è quella giusta. In bocca al lupo per le prime sessioni di validazione con i veterinari!\n\nStefania",
+          "tipo": "risposta_calda"
+        }
+      ],
       "qualificato_il": "2026-07-13T07:03:36+02:00",
       "programmato": "2026-07-14T19:10:00+02:00",
-      "inviato_il": "2026-07-14T07:54:11"
+      "inviato_il": "2026-07-14T07:54:11",
+      "risposto_il": "2026-07-18",
+      "risposta_testo": "Buongiorno Stefania, grazie per l'interessamento. Al momento sto sviluppando le ultime funzionalità della piattaforma e sto pianificando con dei veterinari delle sessioni di prova su casi reali per la validazione del modello. Ad essere sincero in questo periodo, considerando il doppio lavoro e problemi familiari, lo sviluppo di argovance va un pò a rilento."
     },
     {
       "id": 145,
