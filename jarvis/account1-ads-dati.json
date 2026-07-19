@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-19T15:26:14+02:00",
+  "aggiornato": "2026-07-19T17:23:11+02:00",
   "account": {
     "nome": "Consulenza 1:1",
     "obiettivo": "Analisi gratuita + call su Calendly",
@@ -46,8 +46,8 @@
       "titolo": "Il Metodo LinkedIn da €1,2M — 30 Min Gratis",
       "immagine": "creativi/risultati.jpg",
       "stato": "ACTIVE",
-      "spesa": 58.95,
-      "impressions": 1984,
+      "spesa": 59.01,
+      "impressions": 1985,
       "click": 70,
       "ctr": 3.53,
       "cpc": 0.84,
@@ -62,16 +62,16 @@
       "descrizione": "oggi 19 luglio 2026",
       "giorni": 1,
       "totali": {
-        "spesa": 62.26,
-        "impressions": 1579,
-        "reach": 1339,
-        "frequency": 1.18,
-        "click": 52,
-        "ctr": 3.29,
-        "cpc": 1.2,
-        "cpm": 39.43,
-        "call": 2,
-        "costo_call_migliore": 31.13
+        "spesa": 79.34,
+        "impressions": 2091,
+        "reach": 1728,
+        "frequency": 1.21,
+        "click": 67,
+        "ctr": 3.2,
+        "cpc": 1.18,
+        "cpm": 37.94,
+        "call": 3,
+        "costo_call_migliore": 26.45
       },
       "campagne": [
         {
@@ -79,17 +79,17 @@
           "nome": "25.03 | Lead Gen Consulenza LinkedIn 1:1",
           "stato": "ACTIVE",
           "obiettivo": "Contatti",
-          "spesa": 62.26,
-          "impressions": 1579,
-          "reach": 1339,
-          "frequency": 1.18,
-          "click": 52,
-          "ctr": 3.29,
-          "cpc": 1.2,
-          "cpm": 39.43,
-          "risultati": 2,
+          "spesa": 79.34,
+          "impressions": 2091,
+          "reach": 1728,
+          "frequency": 1.21,
+          "click": 67,
+          "ctr": 3.2,
+          "cpc": 1.18,
+          "cpm": 37.94,
+          "risultati": 3,
           "tipo_risultato": "call prenotate",
-          "costo_risultato": 31.13
+          "costo_risultato": 26.45
         }
       ]
     },
@@ -98,16 +98,16 @@
       "descrizione": "ieri 18 luglio 2026",
       "giorni": 1,
       "totali": {
-        "spesa": 115.46,
-        "impressions": 4344,
+        "spesa": 115.52,
+        "impressions": 4345,
         "reach": 3802,
         "frequency": 1.14,
         "click": 96,
         "ctr": 2.21,
         "cpc": 1.2,
-        "cpm": 26.58,
+        "cpm": 26.59,
         "call": 1,
-        "costo_call_migliore": 115.46
+        "costo_call_migliore": 115.52
       },
       "campagne": [
         {
@@ -115,27 +115,27 @@
           "nome": "25.03 | Lead Gen Consulenza LinkedIn 1:1",
           "stato": "ACTIVE",
           "obiettivo": "Contatti",
-          "spesa": 115.46,
-          "impressions": 4344,
+          "spesa": 115.52,
+          "impressions": 4345,
           "reach": 3802,
           "frequency": 1.14,
           "click": 96,
           "ctr": 2.21,
           "cpc": 1.2,
-          "cpm": 26.58,
+          "cpm": 26.59,
           "risultati": 1,
           "tipo_risultato": "call prenotate",
-          "costo_risultato": 115.46
+          "costo_risultato": 115.52
         }
       ]
     },
     "7g": {
       "label": "Ultimi 7 giorni",
-      "descrizione": "ultimi 7 giorni (12-18 luglio 2026)",
+      "descrizione": "ultimi 7 giorni (13-19 luglio 2026)",
       "giorni": 7,
       "totali": {
-        "spesa": 923.19,
-        "impressions": 34018,
+        "spesa": 923.25,
+        "impressions": 34019,
         "reach": 20966,
         "frequency": 1.62,
         "click": 898,
@@ -143,7 +143,7 @@
         "cpc": 1.03,
         "cpm": 27.14,
         "call": 7,
-        "costo_call_migliore": 131.88
+        "costo_call_migliore": 131.89
       },
       "campagne": [
         {
@@ -151,8 +151,8 @@
           "nome": "25.03 | Lead Gen Consulenza LinkedIn 1:1",
           "stato": "ACTIVE",
           "obiettivo": "Contatti",
-          "spesa": 923.19,
-          "impressions": 34018,
+          "spesa": 923.25,
+          "impressions": 34019,
           "reach": 20966,
           "frequency": 1.62,
           "click": 898,
@@ -161,17 +161,17 @@
           "cpm": 27.14,
           "risultati": 7,
           "tipo_risultato": "call prenotate",
-          "costo_risultato": 131.88
+          "costo_risultato": 131.89
         }
       ]
     },
     "30g": {
       "label": "Ultimi 30 giorni",
-      "descrizione": "ultimi 30 giorni (19 giugno - 18 luglio 2026)",
+      "descrizione": "ultimi 30 giorni (20 giugno - 19 luglio 2026)",
       "giorni": 30,
       "totali": {
-        "spesa": 3216.47,
-        "impressions": 160389,
+        "spesa": 3216.53,
+        "impressions": 160390,
         "reach": 63927,
         "frequency": 2.51,
         "click": 3803,
@@ -179,7 +179,7 @@
         "cpc": 0.85,
         "cpm": 20.05,
         "call": 14,
-        "costo_call_migliore": 207.47
+        "costo_call_migliore": 207.48
       },
       "campagne": [
         {
@@ -187,8 +187,8 @@
           "nome": "25.03 | Lead Gen Consulenza LinkedIn 1:1",
           "stato": "ACTIVE",
           "obiettivo": "Contatti",
-          "spesa": 2904.63,
-          "impressions": 152369,
+          "spesa": 2904.69,
+          "impressions": 152370,
           "reach": 58242,
           "frequency": 2.62,
           "click": 3639,
@@ -197,7 +197,7 @@
           "cpm": 19.06,
           "risultati": 14,
           "tipo_risultato": "call prenotate",
-          "costo_risultato": 207.47
+          "costo_risultato": 207.48
         },
         {
           "id": "120252595942170348",
@@ -223,16 +223,16 @@
       "descrizione": "tutto lo storico (dal 25 marzo 2026)",
       "giorni": 117,
       "totali": {
-        "spesa": 8062.53,
-        "impressions": 387396,
-        "reach": 124627,
-        "frequency": 3.11,
-        "click": 9868,
+        "spesa": 8079.5,
+        "impressions": 387902,
+        "reach": 122660,
+        "frequency": 3.16,
+        "click": 9882,
         "ctr": 2.55,
         "cpc": 0.82,
-        "cpm": 20.81,
+        "cpm": 20.83,
         "call": 121,
-        "costo_call_migliore": 63.06
+        "costo_call_migliore": 63.2
       },
       "campagne": [
         {
@@ -240,17 +240,17 @@
           "nome": "25.03 | Lead Gen Consulenza LinkedIn 1:1",
           "stato": "ACTIVE",
           "obiettivo": "Contatti",
-          "spesa": 7503.56,
-          "impressions": 373350,
-          "reach": 115757,
-          "frequency": 3.23,
-          "click": 9548,
+          "spesa": 7520.53,
+          "impressions": 373856,
+          "reach": 113483,
+          "frequency": 3.29,
+          "click": 9562,
           "ctr": 2.56,
           "cpc": 0.79,
-          "cpm": 20.1,
+          "cpm": 20.12,
           "risultati": 119,
           "tipo_risultato": "call prenotate",
-          "costo_risultato": 63.06
+          "costo_risultato": 63.2
         },
         {
           "id": "120252595942170348",
@@ -259,8 +259,8 @@
           "obiettivo": "Contatti",
           "spesa": 558.97,
           "impressions": 14046,
-          "reach": 8870,
-          "frequency": 1.58,
+          "reach": 9177,
+          "frequency": 1.53,
           "click": 320,
           "ctr": 2.28,
           "cpc": 1.75,
