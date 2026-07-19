@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-19T17:23:11+02:00",
+  "aggiornato": "2026-07-19T18:04:27+02:00",
   "account": {
     "nome": "Consulenza 1:1",
     "obiettivo": "Analisi gratuita + call su Calendly",
@@ -62,34 +62,34 @@
       "descrizione": "oggi 19 luglio 2026",
       "giorni": 1,
       "totali": {
-        "spesa": 79.34,
-        "impressions": 2091,
-        "reach": 1728,
-        "frequency": 1.21,
-        "click": 67,
-        "ctr": 3.2,
-        "cpc": 1.18,
-        "cpm": 37.94,
+        "spesa": 84.14,
+        "impressions": 2317,
+        "reach": 1867,
+        "frequency": 1.24,
+        "click": 75,
+        "ctr": 3.24,
+        "cpc": 1.12,
+        "cpm": 36.31,
         "call": 3,
-        "costo_call_migliore": 26.45
+        "costo_call_migliore": 28.05
       },
       "campagne": [
         {
           "id": "120248200215460348",
-          "nome": "25.03 | Lead Gen Consulenza LinkedIn 1:1",
+          "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1",
           "stato": "ACTIVE",
           "obiettivo": "Contatti",
-          "spesa": 79.34,
-          "impressions": 2091,
-          "reach": 1728,
-          "frequency": 1.21,
-          "click": 67,
-          "ctr": 3.2,
-          "cpc": 1.18,
-          "cpm": 37.94,
+          "spesa": 84.14,
+          "impressions": 2317,
+          "reach": 1867,
+          "frequency": 1.24,
+          "click": 75,
+          "ctr": 3.24,
+          "cpc": 1.12,
+          "cpm": 36.31,
           "risultati": 3,
           "tipo_risultato": "call prenotate",
-          "costo_risultato": 26.45
+          "costo_risultato": 28.05
         }
       ]
     },
@@ -112,7 +112,7 @@
       "campagne": [
         {
           "id": "120248200215460348",
-          "nome": "25.03 | Lead Gen Consulenza LinkedIn 1:1",
+          "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1",
           "stato": "ACTIVE",
           "obiettivo": "Contatti",
           "spesa": 115.52,
@@ -148,7 +148,7 @@
       "campagne": [
         {
           "id": "120248200215460348",
-          "nome": "25.03 | Lead Gen Consulenza LinkedIn 1:1",
+          "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1",
           "stato": "ACTIVE",
           "obiettivo": "Contatti",
           "spesa": 923.25,
@@ -184,7 +184,7 @@
       "campagne": [
         {
           "id": "120248200215460348",
-          "nome": "25.03 | Lead Gen Consulenza LinkedIn 1:1",
+          "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1",
           "stato": "ACTIVE",
           "obiettivo": "Contatti",
           "spesa": 2904.69,
@@ -223,34 +223,34 @@
       "descrizione": "tutto lo storico (dal 25 marzo 2026)",
       "giorni": 117,
       "totali": {
-        "spesa": 8079.5,
-        "impressions": 387902,
-        "reach": 122660,
-        "frequency": 3.16,
-        "click": 9882,
+        "spesa": 8084.66,
+        "impressions": 388139,
+        "reach": 124627,
+        "frequency": 3.11,
+        "click": 9891,
         "ctr": 2.55,
         "cpc": 0.82,
         "cpm": 20.83,
         "call": 121,
-        "costo_call_migliore": 63.2
+        "costo_call_migliore": 63.24
       },
       "campagne": [
         {
           "id": "120248200215460348",
-          "nome": "25.03 | Lead Gen Consulenza LinkedIn 1:1",
+          "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1",
           "stato": "ACTIVE",
           "obiettivo": "Contatti",
-          "spesa": 7520.53,
-          "impressions": 373856,
-          "reach": 113483,
-          "frequency": 3.29,
-          "click": 9562,
+          "spesa": 7525.69,
+          "impressions": 374093,
+          "reach": 115757,
+          "frequency": 3.23,
+          "click": 9571,
           "ctr": 2.56,
           "cpc": 0.79,
           "cpm": 20.12,
           "risultati": 119,
           "tipo_risultato": "call prenotate",
-          "costo_risultato": 63.2
+          "costo_risultato": 63.24
         },
         {
           "id": "120252595942170348",
@@ -259,8 +259,8 @@
           "obiettivo": "Contatti",
           "spesa": 558.97,
           "impressions": 14046,
-          "reach": 9177,
-          "frequency": 1.53,
+          "reach": 8870,
+          "frequency": 1.58,
           "click": 320,
           "ctr": 2.28,
           "cpc": 1.75,
