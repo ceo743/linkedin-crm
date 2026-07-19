@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-18T17:42:00+02:00",
+  "aggiornato": "2026-07-19T16:57:00+02:00",
   "contatti": [
     {
       "id": 1,
@@ -4900,6 +4900,32 @@
         "geografia": "Bassano del Grappa, Veneto, Italia",
         "budget": "sconosciuto",
         "fonte": "inbound_dm_diretto"
+      }
+    },
+    {
+      "id": 157,
+      "nome": "Francesco Olivo",
+      "profilo": "https://www.linkedin.com/in/ACoAABboCacBmL6SN13r96ozOmkRFaPTuolQPsM",
+      "tipo": "dm-guida",
+      "angolo": "ai",
+      "fonte": "guida-agente-preventivi",
+      "inviato": null,
+      "risposto": null,
+      "risposta_testo": "",
+      "link_call_inviato": null,
+      "tipo_call": null,
+      "prenotato": null,
+      "note": "Lead da DM guida — 2026-07-19 — guida inviata: guida-agente-preventivi (ha richiesto anche guide: automazioni, 6 plugin claude code, avvocato ai). In funnel da maggio 2026.",
+      "messaggio": "",
+      "approvato": false,
+      "programmato": null,
+      "ruolo": "Marketing Automation Specialist - SEO Specialist - Back-end Developer",
+      "escluso": false,
+      "qualifica": {
+        "ruolo": "da verificare",
+        "geografia": "da verificare",
+        "budget": "sconosciuto",
+        "fonte": "dm-guida"
       }
     }
   ],
