@@ -1412,7 +1412,10 @@ btn.addEventListener('click',async()=>{
   // report non era pronto (diversi secondi di silenzio). Ora l'annuncio parte SUBITO e in parallelo
   // si prepara il report vero — il Signore sente qualcosa da subito invece di aspettare al buio.
   const oggi=new Date(), dataOggiIT=oggi.getDate()+' '+MON[oggi.getMonth()];
-  const introTesto="Buongiorno, Signore. Sto preparando il report aggiornato oggi "+dataOggiIT+".";
+  // 21/07, "mi dice sto preparando il report... non serve dirlo, parte subito": non vuole sentire
+  // annunci sul processo interno (che sta preparando qualcosa) — vuole solo che parta a parlare.
+  // Il saluto resta immediato (parte comunque prima che il report sia pronto) ma senza spiegare perché.
+  const introTesto="Buongiorno, Signore. Rapporto del "+dataOggiIT+".";
   addMsg(introTesto,'a',AGENTI['jarvis'].label);
   const [SCALETTA]=await Promise.all([costruisciBriefing(ULTIMO_G), parlaSubito(introTesto)]);
   btn.textContent='◼ Ferma briefing';
