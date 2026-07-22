@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-19T16:57:00+02:00",
+  "aggiornato": "2026-07-22T09:47:00+02:00",
   "contatti": [
     {
       "id": 1,
@@ -4923,6 +4923,32 @@
       "escluso": false,
       "qualifica": {
         "ruolo": "da verificare",
+        "geografia": "da verificare",
+        "budget": "sconosciuto",
+        "fonte": "dm-guida"
+      }
+    },
+    {
+      "id": 158,
+      "nome": "Massimo Favaro",
+      "profilo": "https://www.linkedin.com/in/massimo-favaro-studio-tecnico/",
+      "tipo": "dm-guida",
+      "angolo": "ai",
+      "fonte": "guida L'Agente Preventivi",
+      "inviato": null,
+      "risposto": null,
+      "risposta_testo": "",
+      "link_call_inviato": null,
+      "tipo_call": null,
+      "prenotato": null,
+      "note": "Lead da DM guida — 2026-07-22 — guida inviata: guida L'Agente Preventivi",
+      "messaggio": "",
+      "approvato": false,
+      "programmato": null,
+      "ruolo": "Perito Industriale — Studio Tecnico proprio",
+      "escluso": false,
+      "qualifica": {
+        "ruolo": "professionista autonomo",
         "geografia": "da verificare",
         "budget": "sconosciuto",
         "fonte": "dm-guida"
