@@ -575,7 +575,12 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
 
 <footer>
   <span>Dati statici 15 – 21 luglio 2026 (pannelli LinkedIn, Call, Ads, SEO) · Archivio giornaliero aggiornato il 22/07/2026: dati 21/7 definitivi (222,38 €, 4 call, 6 guide) + 22/7 parziali (12,64 €, dati ancora in corso) · Musica: "Cut and Run" Kevin MacLeod (incompetech.com), CC BY 4.0</span>
-  <span><a href="jarvis-dashboard.html">→ Dashboard routine</a></span>
+  <span><a href="jarvis-dashboard.html" id="link-dashboard-routine">→ Dashboard routine</a></span>
+  <script>
+  // jarvis-dashboard.html esiste solo sul server locale: sul sito pubblico il link punterebbe a un
+  // 404 (22/07, "non funzionano i link che rimandano") — lì si va sulla dashboard routine pubblica
+  if(!/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) document.getElementById('link-dashboard-routine').href='claude-command-dashboard.html';
+  </script>
 </footer>
 
 </div>
@@ -1101,13 +1106,31 @@ function pausaVoce(){ if(!qaSpeaking||qaPaused) return; qaPaused=true; if(vocePl
 function riprendiVoce(){ if(!qaSpeaking||!qaPaused) return; qaPaused=false; if(musicOn) duckMusic(true); if(vocePlayer&&vocePlayer.paused) vocePlayer.play(); try{speechSynthesis.resume()}catch(e){} pauseBtn.textContent='⏸ Pausa'; }
 if(pauseBtn) pauseBtn.addEventListener('click',function(){ qaPaused?riprendiVoce():pausaVoce(); });
 
-// ------- APERTURA SCHEDE (via server locale /apri) -------
+// ------- APERTURA SCHEDE -------
+// 22/07, Davide: "non funzionano i link che rimandano" — il click sui pannelli chiamava /apri, una
+// rotta che esiste SOLO sul server locale (apre la scheda nel Chrome vero via osascript): sul sito
+// pubblico la fetch falliva in silenzio e il click non faceva nulla. Fuori da localhost ora si apre
+// direttamente la fonte in una scheda nuova del browser, stessa mappa del server.
+const SCHEDE_URL={
+  linkedin:'https://www.linkedin.com/analytics/creator/content/?timeRange=past_7_days',
+  ads:'https://adsmanager.facebook.com/adsmanager/manage/campaigns?act=465327538443110',
+  foglio:'https://docs.google.com/spreadsheets/d/1MvMCY98s1LDxQ9AEkDvJSW8qUmbEQtD0XOMX95kaqas/edit?gid=1506261193#gid=1506261193',
+  calendly:'https://calendly.com/app/scheduled_events/user/me?period=upcoming',
+  blog:'https://www.davidecaiazzo.it/blog',
+  gsc:'https://search.google.com/search-console',
+  routine:'claude-command-dashboard.html', // la dashboard routine pubblica (jarvis-dashboard.html è solo locale)
+};
 const aperturaRecenti={};
 function apriScheda(k){
   const ora=Date.now();
   if(aperturaRecenti[k] && ora-aperturaRecenti[k]<60000) return;
   aperturaRecenti[k]=ora;
-  fetch('/apri?k='+encodeURIComponent(k)).catch(()=>{});
+  if(/^(localhost|127\.0\.0\.1)$/.test(location.hostname)){
+    fetch('/apri?k='+encodeURIComponent(k)).catch(()=>{});
+  }else{
+    const u=SCHEDE_URL[k];
+    if(u) window.open(u,'_blank','noopener');
+  }
 }
 
 // ------- OGNI DATO È ANALIZZABILE: click sul riquadro → apre la fonte viva in Chrome -------
