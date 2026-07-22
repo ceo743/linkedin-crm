@@ -1,5 +1,5 @@
 {
-  "aggiornato": "17 luglio 2026, ore 10:15",
+  "aggiornato": "22 luglio 2026, ore 07:13 (recupero dopo run 05:00 uccisa da pulizia-sessioni-zombie: record 21/7 finalizzato, 22/7 aggiunto parziale — verificato da agente risolutore)",
   "nota": "Un record per giorno. ads = entrambi gli account Meta. call = prenotazioni Calendly ARRIVATE quel giorno (mai retroattivo). call_scartate = SOLO le prenotazioni ricevute quel giorno e poi scartate lo stesso giorno (mai riferito a prenotazioni di giorni precedenti: se una call di un giorno passato viene annullata dopo, il numero del giorno passato non si tocca, si aggiunge solo una nota testuale in call_nomi di quel giorno). lead_funnel = optin dal foglio KPI. guide = form Kajabi. li_impressioni (opzionale) = impressioni LinkedIn del giorno, dal grafico Rendimento contenuti in modalità Giornaliero. Motivazioni di annullamento call: fonte foglio Google 'Report Calendly Giornaliero (Stefania)' (id 1bPJih5riHWqz86hwkfbYybmwhCKkiWVyKxqMD9ppwDU, colonna ESITO), match per giorno di PRENOTAZIONE della call.",
   "giorni": [
     {
@@ -211,9 +211,9 @@
     },
     {
       "data": "2026-07-16",
-      "ads_spesa": 161.23,
+      "ads_spesa": 161.36,
       "ads_click": 174,
-      "ads_impressioni": 8065,
+      "ads_impressioni": 8071,
       "call": 3,
       "call_scartate": 0,
       "call_nomi": [],
@@ -223,15 +223,74 @@
     },
     {
       "data": "2026-07-17",
-      "ads_spesa": 76.06,
-      "ads_click": 100,
-      "ads_impressioni": 4860,
+      "ads_spesa": 221.66,
+      "ads_click": 320,
+      "ads_impressioni": 15120,
       "call": 0,
       "call_scartate": 0,
       "call_nomi": [],
       "lead_funnel": 0,
+      "guide": 4,
+      "li_impressioni": 10990
+    },
+    {
+      "data": "2026-07-18",
+      "ads_spesa": 189.41,
+      "ads_click": 240,
+      "ads_impressioni": 11619,
+      "call": 2,
+      "call_scartate": 0,
+      "call_nomi": [],
+      "lead_funnel": 0,
+      "guide": 3,
+      "li_impressioni": 4138
+    },
+    {
+      "data": "2026-07-19",
+      "ads_spesa": 180.57,
+      "ads_click": 286,
+      "ads_impressioni": 9202,
+      "call": 5,
+      "call_scartate": 0,
+      "call_nomi": [],
+      "lead_funnel": 1,
       "guide": 1,
-      "li_impressioni": 3177,
+      "li_impressioni": 4327
+    },
+    {
+      "data": "2026-07-20",
+      "ads_spesa": 223.12,
+      "ads_click": 298,
+      "ads_impressioni": 13567,
+      "call": 2,
+      "call_scartate": 0,
+      "call_nomi": [],
+      "lead_funnel": 0,
+      "guide": 2,
+      "li_impressioni": 131875
+    },
+    {
+      "data": "2026-07-21",
+      "ads_spesa": 222.38,
+      "ads_click": 345,
+      "ads_impressioni": 17060,
+      "call": 6,
+      "call_scartate": 1,
+      "call_nomi": [],
+      "lead_funnel": 0,
+      "guide": 6
+    },
+    {
+      "data": "2026-07-22",
+      "ads_spesa": 12.57,
+      "ads_click": 11,
+      "ads_impressioni": 477,
+      "call": 0,
+      "call_scartate": 0,
+      "call_nomi": [],
+      "lead_funnel": 0,
+      "guide": 0,
+      "li_impressioni": 1863,
       "parziale": true
     }
   ]
