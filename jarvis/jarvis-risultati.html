@@ -839,26 +839,8 @@ function vocePer(who){
 // 18/07: localhost usa il server di Davide (voce+cache locale); pubblico usa il proxy su Render
 // (stessa voce ElevenLabs, vedi server.py di dc-chatbot) così l'esperienza resta identica ovunque.
 const PARLA_URL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? '/parla' : 'https://dc-chatbot-vswb.onrender.com/parla';
-// 21/07: lettore leggero per UNA battuta isolata (l'annuncio "sto preparando il report" mentre il vero
-// report si prepara in parallelo) — apposta FUORI da speakLines: quella gestisce musica/spotlight/coda
-// per l'intera sequenza, e richiamarla due volte di fila (intro poi contenuto) farebbe partire e
-// fermare la musica tra le due chiamate (stacco udibile). Qui: solo audio, nessun altro stato toccato.
-function parlaSubito(testo){
-  return fetch(PARLA_URL+'?who=jarvis&testo='+encodeURIComponent(testo))
-    .then(function(r){ if(!r.ok) throw new Error('tts'); return r.blob(); })
-    .then(function(b){ return new Promise(function(res){
-      const a=new Audio(URL.createObjectURL(b));
-      a.addEventListener('ended',res); a.addEventListener('error',res);
-      a.play().catch(res);
-    }); })
-    .catch(function(){ return new Promise(function(res){
-      try{
-        const u=new SpeechSynthesisUtterance(testo); u.lang='it-IT';
-        u.addEventListener('end',res); u.addEventListener('error',res);
-        speechSynthesis.speak(u);
-      }catch(e){ res(); }
-    }); });
-}
+// (23/07: rimosso parlaSubito e l'annuncio-intro che leggeva — "sta continuando a fare
+// un'introduzione invece di partire subito": ora il report è pregenerato e si parte diretti)
 const REPORT_URL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? '/report' : 'https://dc-chatbot-vswb.onrender.com/report';
 const PROPOSTA_URL=/^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? '/proposta' : 'https://dc-chatbot-vswb.onrender.com/proposta';
 let ultimiIncarichi=[], ultimoDatiTrend='';
@@ -1234,41 +1216,37 @@ function costruisciDatiTrend(){
   righe.push(riga('Call in target dopo pre qualifica', A.intarget, P?P.intarget:null, null, 'cso'));
   return {testo: righe.join('\n'), lacune: lacune};
 }
+// 23/07, "STA CONTINUANDO A FARE UN'INTRODUZIONE INVECE DI PARTIRE SUBITO": qualsiasi frase-ponte
+// (saluto, "preparo il report") è un'introduzione che Davide non vuole. L'unico modo per partire
+// SUBITO col contenuto è avere il report GIÀ PRONTO al click: viene pregenerato al caricamento della
+// pagina (prefetchReport, chiamato da caricaGiorni) e rigenerato dopo ogni briefing per il prossimo.
+// Questa funzione ora è PURA: nessun effetto collaterale (niente mostraIncarichi qui), così il
+// prefetch non fa partire proposte ed email da solo a ogni apertura pagina — quelle solo al click.
 async function costruisciBriefing(periodo){
   if(!GIORNI||!GIORNI.length){
-    return [{who:'jarvis', testo:"Non ho ancora l'archivio giornaliero pronto, Signore. Riprovi tra poco."}];
+    return {battute:[{who:'jarvis', testo:"Non ho ancora l'archivio giornaliero pronto, Signore. Riprovi tra poco."}], incarichi:[], dati:''};
   }
   const trend=costruisciDatiTrend();
   if(!trend){
-    return [{who:'jarvis', testo:"Non ho ancora abbastanza giorni in archivio per un confronto, Signore. Riprovi tra qualche giorno."}];
+    return {battute:[{who:'jarvis', testo:"Non ho ancora abbastanza giorni in archivio per un confronto, Signore. Riprovi tra qualche giorno."}], incarichi:[], dati:''};
   }
-  // 18/07, "come cazzo fa a dire che non ha i dati!!!!": il reparto riceveva SOLO la frase del compito
-  // ("verificare il calo del 36%..."), non i numeri veri che la dashboard ha già sotto mano — diceva
-  // "non ho dati" perché letteralmente non gliene passavamo nessuno, anche se erano proprio qui.
-  // Ora li teniamo pronti (stesso blocco già usato per /report) per passarli anche a /proposta.
-  ultimoDatiTrend=trend.testo;
-  // 21/07, "ci mette tanto a partire prima di rispondere": l'annuncio iniziale ora parla SUBITO dal
-  // click del bottone, in parallelo alla chiamata a Claude — qui il testo comincia vuoto, il "Buongiorno"
-  // non serve più ripeterlo (già detto mentre il report si preparava).
   const battute=[];
   // 18/07, "non deve ignorarlo, deve approfondire": le lacune di confronto (dato mancante nel periodo
-  // precedente) diventano SEMPRE un incarico reale, non solo quando il modello decide di segnalarlo —
-  // deterministico, non lasciato alla discrezione dell'AI che genera il report.
-  ultimiIncarichi=trend.lacune.slice();
+  // precedente) diventano SEMPRE un incarico reale, deterministico, non a discrezione del modello.
+  let incarichi=trend.lacune.slice();
   try{
     const r=await fetch(REPORT_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({dati:trend.testo})});
     const j=await r.json();
     if(!j.ok||!j.testo) throw new Error('report vuoto');
     battute.push({who:'jarvis', testo:j.testo, sezione:'hero'});
-    // 18/07: "certo che deve essere vero" — ogni incarico citato a voce va anche mostrato in dashboard,
-    // così il Signore può far generare la proposta vera al reparto e approvarla o rifiutarla
-    if(Array.isArray(j.incarichi)) ultimiIncarichi=ultimiIncarichi.concat(j.incarichi);
+    if(Array.isArray(j.incarichi)) incarichi=incarichi.concat(j.incarichi);
   }catch(e){
     battute.push({who:'jarvis', testo:"Non sono riuscito a preparare il report questa volta, Signore. Riprovi tra poco."});
   }
-  mostraIncarichi(ultimiIncarichi);
-  return battute;
+  return {battute:battute, incarichi:incarichi, dati:trend.testo};
 }
+let reportPrefetch=null;
+function prefetchReport(){ reportPrefetch=costruisciBriefing(ULTIMO_G).catch(function(){ return null; }); }
 
 // ------- BRIEFING DI UNA SOLA SEZIONE (bottone per sezione, 15/07: "leggi tutti i numeri, ne stai
 // saltando parecchie") — invece di riscrivere a mano un riassunto (che per forza sceglie solo alcuni
@@ -1420,28 +1398,23 @@ const btn=$('#voice');
 btn.addEventListener('click',async()=>{
   // la musica (avvio/stop) la gestisce SEMPRE speakLines/stopVoce ora, centralizzata: qui non se ne occupa più
   if(qaSpeaking){ stopVoce(); btn.classList.remove('speaking'); btn.textContent='🎙 Briefing vocale'; return; }
-  btn.classList.add('speaking'); btn.textContent='⏳ Preparo il report...';
-  // rispetta il periodo che il Signore ha già scelto (mai forzare 7g sopra la sua selezione),
-  // e rinfresca la card in cima con lo STESSO calcolo live che sta per essere letto ad alta voce:
-  // stessa fonte, stesso numero, il faro non perde più la card
+  // 23/07, "STA CONTINUANDO A FARE UN'INTRODUZIONE INVECE DI PARTIRE SUBITO": zero frasi-ponte, zero
+  // "preparo il report" (nemmeno sul bottone). Il report è GIÀ pronto: pregenerato al carico pagina
+  // (prefetchReport), qui si consuma e si parla immediatamente col contenuto vero.
+  btn.classList.add('speaking'); btn.textContent='◼ Ferma briefing';
+  // rispetta il periodo che il Signore ha già scelto (mai forzare 7g sopra la sua selezione)
   mostraPeriodo(ULTIMO_G);
-  // 18/07: il report ora passa da Claude (/report, vedi costruisciBriefing) per l'interpretazione
-  // del trend — non è più istantaneo come la lettura diretta del DOM.
-  // 21/07, "ci mette tanto a partire prima di rispondere": prima si stava zitti fino a quando il
-  // report non era pronto (diversi secondi di silenzio). Ora l'annuncio parte SUBITO e in parallelo
-  // si prepara il report vero — il Signore sente qualcosa da subito invece di aspettare al buio.
-  const oggi=new Date(), dataOggiIT=oggi.getDate()+' '+MON[oggi.getMonth()];
-  // 21/07, "mi dice sto preparando il report... non serve dirlo, parte subito": non vuole sentire
-  // annunci sul processo interno (che sta preparando qualcosa) — vuole solo che parta a parlare.
-  // Il saluto resta immediato (parte comunque prima che il report sia pronto) ma senza spiegare perché.
-  const introTesto="Buongiorno, Signore. Rapporto del "+dataOggiIT+".";
-  addMsg(introTesto,'a',AGENTI['jarvis'].label);
-  const [SCALETTA]=await Promise.all([costruisciBriefing(ULTIMO_G), parlaSubito(introTesto)]);
-  btn.textContent='◼ Ferma briefing';
-  SCALETTA.forEach(L=>addMsg(L.testo,'a',AGENTI[L.who].label));
-  speakLines(SCALETTA, ()=>{
+  const R=await (reportPrefetch || costruisciBriefing(ULTIMO_G));
+  const pronto = R || await costruisciBriefing(ULTIMO_G); // prefetch fallito: ritenta fresco
+  reportPrefetch=null;
+  ultimoDatiTrend=pronto.dati;
+  pronto.battute.forEach(L=>addMsg(L.testo,'a',AGENTI[L.who].label));
+  speakLines(pronto.battute, ()=>{
     btn.classList.remove('speaking'); btn.textContent='🎙 Briefing vocale';
+    prefetchReport(); // pronto per il prossimo click, di nuovo senza attesa
   });
+  // proposte del management team + email recap: SOLO al click (mai dal prefetch a ogni apertura pagina)
+  mostraIncarichi(pronto.incarichi);
 });
 speechSynthesis.getVoices(); // precarica
 
@@ -2041,6 +2014,9 @@ function caricaGiorni(){
     } else {
       mostraPeriodo(ULTIMO_G); // ricarica dopo "Aggiorna adesso": resta sul periodo che Davide stava guardando
     }
+    // 23/07: report pregenerato appena i dati ci sono (e rigenerato se i dati cambiano dopo "Aggiorna
+    // adesso") — al click del briefing si parla SUBITO, senza introduzioni né attese
+    prefetchReport();
   });
 }
 caricaGiorni().catch(()=>{ $('#p-nota').textContent='Archivio giornaliero non raggiungibile: aprire con JARVIS.command.'; });
