@@ -1214,7 +1214,28 @@ function costruisciDatiTrend(){
   righe.push(riga('Lead (funnel + guide)', A.lead, P?P.lead:null, null, 'cso'));
   righe.push(riga('Call prenotate', A.call, P?P.call:null, null, 'cso'));
   righe.push(riga('Call in target dopo pre qualifica', A.intarget, P?P.intarget:null, null, 'cso'));
-  return {testo: righe.join('\n'), lacune: lacune};
+  // 23/07, Davide: "i lead totali non penso dipendano dalle ads... sta facendo confusione tra
+  // newsletter e ads?" — l'archivio giornaliero ha solo i TOTALI (lead_funnel+guide), senza fonte:
+  // il modello, non sapendo da dove arrivano, li attribuiva a caso (spesso alle ads). La ripartizione
+  // per fonte esiste già nei pannelli della dashboard (Call Calendly · da dove arrivano, Lead funnel,
+  // Guide scaricate): la alleghiamo ai dati così l'attribuzione è quella VERA, non indovinata.
+  const dettagli=[];
+  ['Lead e call'].forEach(function(nomeSez){
+    contenitoriDiSezione(nomeSez).forEach(function(c){
+      c.querySelectorAll('.panel').forEach(function(p){
+        const h3=p.querySelector('h3');
+        const titolo=h3?pulisciTestoVoce(testoSenzaFonte(h3)):'';
+        const corpo=[...p.querySelectorAll('.row,.bar')].map(function(r){
+          const s=r.querySelector('span,.lbl span'), b=r.querySelector('b,.lbl b');
+          return (s&&b)?(pulisciTestoVoce(s.textContent)+': '+pulisciTestoVoce(b.textContent)):'';
+        }).filter(Boolean).join('; ');
+        if(titolo&&corpo) dettagli.push(titolo+' — '+corpo);
+      });
+    });
+  });
+  const testo = righe.join('\n')
+    +(dettagli.length?('\n\n=== RIPARTIZIONE PER FONTE (settimana corrente, dai pannelli della dashboard: questa è l\'attribuzione VERA, usala — mai attribuire lead o call a una fonte diversa da queste) ===\n'+dettagli.join('\n')):'');
+  return {testo: testo, lacune: lacune};
 }
 // 23/07, "STA CONTINUANDO A FARE UN'INTRODUZIONE INVECE DI PARTIRE SUBITO": qualsiasi frase-ponte
 // (saluto, "preparo il report") è un'introduzione che Davide non vuole. L'unico modo per partire
