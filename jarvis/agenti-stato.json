@@ -1,5 +1,5 @@
 {
-  "aggiornato": "21 luglio, ore 08:12",
+  "aggiornato": "22 luglio, ore 07:45",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
@@ -95,40 +95,12 @@
       "sottotitolo": "Traduzione e schedulazione giornaliera",
       "colore": "pink",
       "stato": "attenzione",
-      "ultima_run": "21 luglio, ore 08:12",
-      "prossima_run": "22 luglio, ore 05:01",
+      "ultima_run": "22 luglio, ore 07:45",
+      "prossima_run": "23 luglio, ore 05:01",
       "verifiche": [
         {
           "ok": true,
-          "testo": "21/07 — nessun post idoneo trovato oggi (non un errore: ricerca esaustiva svolta comunque, 10 minuti). Verificato For You (6 match freschi, tutti sotto 300 like), Explore more con 3 ricerche testuali (organic LinkedIn strategies for client acquisition / why most entrepreneurs fail to get clients / the mindset that separates founders who make it from those who quit), 3-6 mesi: tetto reale ~800 like nel topic B2B/imprenditoria. Confermato di nuovo il bug noto: sort \"Likes\" ignora la query, mostra sempre lo stesso pool fisso di celebrità (Sundar Pichai, Barack Obama, Richard Branson, Lewis Hamilton), tutte scartate per regola \"mai persone famose\". Email ⚠️ inviata a Davide e confermata in Inviate (search_threads), log aggiornato"
-        },
-        {
-          "ok": true,
-          "testo": "20/07 — nessun post idoneo trovato oggi (non un errore: ricerca esaustiva svolta comunque). Verificato For You, 4 ricerche libere, Saved posts (12 post salvati, tutti solo testo) e 2 topic SUGGERITI da Taplio stesso (lezione del 13/07): \"Organic LinkedIn Strategies For Client Acquisition\" e \"Social Selling Techniques For Business Owners\", sia Most Relevant che Likes. Confermato di nuovo il bug noto: sort \"Likes\" ignora la query e mostra sempre lo stesso pool fisso di celebrità globali. Nella nicchia B2B/acquisizione clienti oggi il tetto reale dei like è ~770-1000, nessun post con immagine citazione sopra soglia 1500. Email ⚠️ inviata a Davide e confermata in Inviate, log aggiornato"
-        },
-        {
-          "ok": true,
-          "testo": "19/07 (recupero, agente risolutore — run 05:01 saltata per interruzione internet 03:00-13:34, scheduler l'ha marcata \"confermata\" ma zero lavoro reale svolto, nessun processo/bozza/file residuo trovato) — Tim Stoddart \"La cosa più pericolosa che un imprenditore può perdere è la capacità di stare da solo\": schedulato ULTIMO in coda (23 novembre 08:04, 19 post totali, banner Taplio confermato), testo 2264/3000 completo e immagine tradotta (nano-banana, 1 tentativo perfetto) verificati dopo riapertura, recap inviato e confermato in Inviate. Nessun incidente in sessione. Primo candidato trovato (Charlie Lass, 3.2k like su Taplio) scartato perché il post reale su LinkedIn era solo testo senza immagine — non idoneo per la regola ferrea"
-        },
-        {
-          "ok": true,
-          "testo": "18/07 — Jitender Girdhar \"Il 58% lascia il lavoro per colpa di una cultura aziendale tossica\": schedulato ULTIMO in coda (16 novembre 08:04, 18 post totali, banner Taplio confermato), testo 1971/3000 completo e immagine tradotta (nano-banana, 1 tentativo perfetto) verificati dopo riapertura, recap inviato e confermato in Inviate. Nessun incidente in sessione. Controllo duplicati sul log: nessun match (l'autore aveva ripubblicato lo stesso hook in passato ma con activity ID diversi, mai usati prima da questa routine)"
-        },
-        {
-          "ok": true,
-          "testo": "16/07 — Dr. Brigette Hyacinth \"Nessuno lascia un lavoro dove è rispettato, ben pagato e in crescita\": schedulato ULTIMO in coda (9 novembre 08:04, 17 post totali, banner Taplio confermato), testo 1187/3000 completo e immagine tradotta (nano-banana, 1 tentativo) verificati dopo riapertura, recap inviato e confermato in Inviate. Incidente in sessione, risolto: dopo la prima schedulazione riuscita un mio click di verifica (coordinate di riga scivolate per rendering lazy della lista schedulata) ha riaperto per errore il composer e un \"Cancel\" l'ha riportato in bozza — accortomi subito confrontando il banner posts-count, ritrovato intatto nei Drafts, riaperto e rischedulato correttamente, verificato due volte. Ripulito anche un duplicato del log taplio-translated-posts-log.md su Drive creato per errore durante l'upload (nessun tool di update disponibile, ricreato file pulito e cestinate le due versioni vecchie/errate)"
-        },
-        {
-          "ok": true,
-          "testo": "15/07 (TERZO recupero, agente risolutore — stessa causa) — Leadership First \"La tua arma più potente è la tua mente\": schedulato 26 ottobre 08:04, testo 1525/3000 e immagine tradotta verificati dopo riapertura (firma originale nell'immagine lasciata intatta), recap inviato e confermato in Inviate. Durante il lavoro un errore mio (ho cancellato per sbaglio il post Eric Partaker \"7 verità\" del recupero parallelo, scambiandolo per un mio errore) è stato scoperto e corretto entro la stessa sessione: post ripristinato e rischedulato nello stesso slot (26/10 08:04), verificato di nuovo integro. Tre agenti diversi hanno recuperato la stessa run saltata di oggi: risultato 3 post diversi in coda (19/10, 26/10 x2), nessun duplicato di contenuto ma più del necessario per un solo giorno — segnalato a Davide, decide lui se accorpare"
-        },
-        {
-          "ok": true,
-          "testo": "15/07 (SECONDO recupero manuale, stesso giorno) — Eric Partaker \"7 verità che i nuovi CEO imparano troppo tardi\": schedulato ULTIMO in coda (26 ottobre 08:04, 15 post totali), testo 2312/3000 completo e immagine tradotta verificati dopo riapertura, recap inviato e confermato in Inviate. Run parallela indipendente rispetto al recupero delle 7:28 (post diverso, nessun duplicato)"
-        },
-        {
-          "ok": true,
-          "testo": "15/07 (primo recupero manuale) — Eric Partaker \"5 priorità dei CEO\": schedulato 19 ottobre 08:04, testo+immagine verificati, recap inviato e confermato in Inviate. La run automatica delle 5:01 era saltata per estensione Chrome non connessa"
+          "testo": "22/07 — Stuart Neilson \"Si parla di una carenza di talenti. Io non la vedo\" (9.151 reazioni verificate su LinkedIn): schedulato ULTIMO in coda (7 dicembre 08:04, 20 post totali, banner Taplio confermato), testo 1595/3000 completo e immagine tradotta (nano-banana, 1 tentativo perfetto: quote-card stile giornale, rossi/sottolineatura/firma intatti) verificati in coda, recap inviato e confermato in Inviate. Incidente risolto in sessione: primo upload FilePond restituiva serverId \"undefined\" (S3 503) lasciando un placeholder rotto sul post — rimosso, riprovato da composer pulito, secondo upload riuscito e immagine attaccata da My assets con verifica identità"
         },
         {
           "ok": false,
@@ -149,7 +121,7 @@
           "url": "https://drive.google.com/drive/folders/1pmw78VurMkYlcn0YpyWEllSAqrzvUBaU"
         }
       ],
-      "nota": "21/07: nessun post idoneo, sessione saltata per soglia like non raggiunta (email inviata, non un errore tecnico). Restano aperti dai giorni precedenti (non riverificati in questo giro): refuso minore sull'immagine Eric Partaker del 19/10 (punto 2) e il post Ben Sands del 13/07 ancora probabilmente senza immagine (andrebbe controllato e attaccata a mano, link in azioni)."
+      "nota": "22/07: post Stuart Neilson schedulato e verificato, tutto ok. Restano aperti dai giorni precedenti (non riverificati in questo giro): refuso minore sull'immagine Eric Partaker del 19/10 (punto 2) e il post Ben Sands del 13/07 probabilmente ancora senza immagine (da controllare e attaccare a mano, link in azioni)."
     }
   ]
 }
