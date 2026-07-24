@@ -1,5 +1,5 @@
 {
-  "aggiornato": "22 luglio, ore 07:45",
+  "aggiornato": "23 luglio, ore 16:25",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
@@ -94,10 +94,14 @@
       "nome": "Taplio — post virali",
       "sottotitolo": "Traduzione e schedulazione giornaliera",
       "colore": "pink",
-      "stato": "attenzione",
-      "ultima_run": "22 luglio, ore 07:45",
-      "prossima_run": "23 luglio, ore 05:01",
+      "stato": "errore",
+      "ultima_run": "23 luglio, ore 16:25 (recupero)",
+      "prossima_run": "24 luglio, ore 05:01",
       "verifiche": [
+        {
+          "ok": false,
+          "testo": "23/07 — run 05:01 saltata (interrotta alle 10:01 da chiusura app Claude Desktop + blackout rete). 2° e ultimo tentativo di recupero: rete tornata online, ma a metà ricerca del post lo strumento browser claude-in-chrome è caduto (\"No Chrome extension connected\", oltre 10 minuti di retry). L'alternativa Control_Chrome in questa sessione ha solo JavaScript, non click reali/screenshot: insufficiente per editor Lexical e upload immagine, quindi NON forzato per non rischiare di rompere la coda. Nessun post trovato/tradotto/schedulato. Email ⚠️ inviata e verificata in Inviate — serve Davide per riconnettere l'estensione Claude in Chrome"
+        },
         {
           "ok": true,
           "testo": "22/07 — Stuart Neilson \"Si parla di una carenza di talenti. Io non la vedo\" (9.151 reazioni verificate su LinkedIn): schedulato ULTIMO in coda (7 dicembre 08:04, 20 post totali, banner Taplio confermato), testo 1595/3000 completo e immagine tradotta (nano-banana, 1 tentativo perfetto: quote-card stile giornale, rossi/sottolineatura/firma intatti) verificati in coda, recap inviato e confermato in Inviate. Incidente risolto in sessione: primo upload FilePond restituiva serverId \"undefined\" (S3 503) lasciando un placeholder rotto sul post — rimosso, riprovato da composer pulito, secondo upload riuscito e immagine attaccata da My assets con verifica identità"
@@ -121,7 +125,7 @@
           "url": "https://drive.google.com/drive/folders/1pmw78VurMkYlcn0YpyWEllSAqrzvUBaU"
         }
       ],
-      "nota": "22/07: post Stuart Neilson schedulato e verificato, tutto ok. Restano aperti dai giorni precedenti (non riverificati in questo giro): refuso minore sull'immagine Eric Partaker del 19/10 (punto 2) e il post Ben Sands del 13/07 probabilmente ancora senza immagine (da controllare e attaccare a mano, link in azioni)."
+      "nota": "23/07: run saltata per estensione Claude in Chrome irraggiungibile (guasto tecnico esterno, non un bug della routine) — richiede a Davide di riconnettere l'estensione prima della prossima run (24/07 05:01). Restano aperti dai giorni precedenti (non riverificati in questo giro): refuso minore sull'immagine Eric Partaker del 19/10 (punto 2) e il post Ben Sands del 13/07 probabilmente ancora senza immagine (da controllare e attaccare a mano, link in azioni)."
     }
   ]
 }

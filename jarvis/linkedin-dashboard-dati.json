@@ -1,229 +1,232 @@
 {
-  "aggiornato": "2026-07-22 07:20",
-  "periodo": "15–21 luglio 2026",
-  "kpi": {
-    "follower": 233082,
-    "follower_delta": "+172",
-    "impressioni": 218713,
-    "impressioni_delta": "+114%",
-    "reach": 108882,
-    "interazioni": 1122,
-    "engagement": "0,51%",
-    "reazioni": 908,
-    "commenti": 180,
-    "call": 19,
-    "call_target": 19
-  },
-  "interazioni_composizione": [
-    {
-      "label": "Reazioni",
-      "n": 908
+    "aggiornato": "2026-07-24 08:25",
+    "periodo": "17–23 luglio 2026",
+    "kpi": {
+        "follower": 233119,
+        "follower_delta": "+203",
+        "impressioni": 268259,
+        "impressioni_delta": "+245%",
+        "reach": 135968,
+        "interazioni": 1363,
+        "engagement": "0,51%",
+        "reazioni": 1132,
+        "commenti": 197,
+        "call": 22,
+        "call_target": 20
     },
-    {
-      "label": "Commenti",
-      "n": 180
-    },
-    {
-      "label": "Click sui link",
-      "n": 77
-    },
-    {
-      "label": "Salvataggi",
-      "n": 24
-    },
-    {
-      "label": "Invii in privato",
-      "n": 10
-    },
-    {
-      "label": "Condivisioni",
-      "n": 0
+    "interazioni_composizione": [
+        {
+            "label": "Reazioni",
+            "n": 1132
+        },
+        {
+            "label": "Commenti",
+            "n": 197
+        },
+        {
+            "label": "Click sui link",
+            "n": 93
+        },
+        {
+            "label": "Salvataggi",
+            "n": 27
+        },
+        {
+            "label": "Invii in privato",
+            "n": 7
+        },
+        {
+            "label": "Condivisioni",
+            "n": 0
+        }
+    ],
+    "top_post": [
+        {
+            "titolo": "Storia personale sulla moglie Ambra, per il suo compleanno",
+            "tema": "storia · organico",
+            "impressioni": 207422,
+            "interazioni": 1057,
+            "url": "https://www.linkedin.com/feed/update/urn:li:share:7484838893167656960/"
+        },
+        {
+            "titolo": "Il 53% dei post LinkedIn è scritto dall'IA: come farti notare",
+            "tema": "articolo · newsletter I.A. e LinkedIn",
+            "impressioni": 22423,
+            "interazioni": 162,
+            "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7482768726673575936/"
+        },
+        {
+            "titolo": "Intervento al Senato con la Senatrice Gelmini sulle PMI",
+            "tema": "storia · organico",
+            "impressioni": 15112,
+            "interazioni": 83,
+            "url": "https://www.linkedin.com/feed/update/urn:li:share:7485378932725276672/"
+        }
+    ],
+    "agenti": {
+        "writer": {
+            "stato": "attiva",
+            "pills": [
+                {
+                    "v": "1/giorno",
+                    "l": "cadenza"
+                },
+                {
+                    "v": "05:01",
+                    "l": "orario"
+                }
+            ]
+        },
+        "outreach": {
+            "stato": "attiva",
+            "pills": [
+                {
+                    "v": "59",
+                    "l": "contatti"
+                },
+                {
+                    "v": "59",
+                    "l": "inviati"
+                },
+                {
+                    "v": "15",
+                    "l": "risposte"
+                }
+            ],
+            "ultime_risposte": [
+                {
+                    "nome": "",
+                    "ruolo": "Commercialista (Cosenza)",
+                    "data": "recente"
+                },
+                {
+                    "nome": "",
+                    "ruolo": "attività immobiliare propria",
+                    "data": "recente"
+                },
+                {
+                    "nome": "",
+                    "ruolo": "Applied Management",
+                    "data": "recente"
+                },
+                {
+                    "nome": "",
+                    "ruolo": "",
+                    "data": "recente"
+                },
+                {
+                    "nome": "",
+                    "ruolo": "",
+                    "data": "recente"
+                }
+            ]
+        },
+        "inbox": {
+            "stato": "in pausa",
+            "pills": [
+                {
+                    "v": "8–17",
+                    "l": "fascia oraria"
+                }
+            ],
+            "note": "Routine DM e risposte ai commenti entrambe in pausa (24/7)."
+        },
+        "newsletter": {
+            "stato": "attiva",
+            "pills": [
+                {
+                    "v": "1/sett",
+                    "l": "cadenza"
+                },
+                {
+                    "v": "mer 07:30",
+                    "l": "produzione"
+                }
+            ],
+            "in_corso": "#006 — «Follow-up con l'IA per i contatti LinkedIn» — nessuna nuova guida questa settimana",
+            "ultime": [
+                "#005 — «Barra di Ricerca LinkedIn: come farti trovare nella ricerca IA»",
+                "#004 — «Qualificare i contatti LinkedIn con l'IA» — guida PDF + video sottotitolato"
+            ]
+        },
+        "blog": {
+            "stato": "attiva",
+            "pills": [
+                {
+                    "v": "4/giorno",
+                    "l": "articoli"
+                },
+                {
+                    "v": "300",
+                    "l": "a catalogo (audit 20/7)"
+                },
+                {
+                    "v": "6",
+                    "l": "tema LinkedIn+IA, questa sett."
+                }
+            ],
+            "articoli": [
+                {
+                    "data": "23 luglio (sera)",
+                    "titolo": "LinkedIn per Traduttori nel 2026: Come Trovare Clienti",
+                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-traduttori-nel-2026-come-trovare-clienti"
+                },
+                {
+                    "data": "23 luglio (mattina)",
+                    "titolo": "LinkedIn per Infermieri nel 2026: Come Trovare Clienti",
+                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-infermieri-nel-2026-come-trovare-clienti"
+                },
+                {
+                    "data": "22 luglio (seconda run)",
+                    "titolo": "LinkedIn per Social Media Manager nel 2026: Trovare Clienti",
+                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-social-media-manager-nel-2026-trovare-clienti"
+                },
+                {
+                    "data": "22 luglio (mattina)",
+                    "titolo": "Post LinkedIn Scritti dall'IA: Come Restare Autentico nel 2026",
+                    "url": "https://www.davidecaiazzo.it/blog/post-linkedin-scritti-dall-ia-2026"
+                },
+                {
+                    "data": "21 luglio (sera)",
+                    "titolo": "LinkedIn per Recruiter nel 2026: Come Trovare Clienti",
+                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-recruiter-nel-2026-come-trovare-clienti"
+                },
+                {
+                    "data": "21 luglio (mattina)",
+                    "titolo": "LinkedIn per Logopedisti nel 2026: Come Trovare Clienti",
+                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-logopedisti-nel-2026-come-trovare-clienti"
+                }
+            ]
+        },
+        "analyst": {
+            "stato": "attiva",
+            "pills": [
+                {
+                    "v": "05:00",
+                    "l": "kpi giorno"
+                },
+                {
+                    "v": "3x/g",
+                    "l": "audit ceo"
+                }
+            ],
+            "ieri": {
+                "data": "23 luglio",
+                "call": 3,
+                "spesa": "177,62€",
+                "click": 4329,
+                "dettaglio": "3 prenotazioni nuove (1 Meta Ads, 2 LinkedIn), 1 scartata lo stesso giorno per fuori target"
+            },
+            "agenda": [
+                "Lun 27/7 · 12:30 — SEO",
+                "Mar 28/7 · 11:00 — LinkedIn",
+                "Mar 28/7 · 12:00 — LinkedIn",
+                "Mer 29/7 · 09:30 — LinkedIn",
+                "Mer 29/7 · 12:30 — Meta Ads",
+                "Gio 30/7 · 11:30 — Meta Ads",
+                "Gio 30/7 · 12:00 — Meta Ads",
+                "Gio 30/7 · 12:30 — Meta Ads"
+            ]
+        }
     }
-  ],
-  "top_post": [
-    {
-      "titolo": "Storia personale sulla moglie Ambra, per il suo compleanno",
-      "tema": "storia · organico",
-      "impressioni": 169100,
-      "interazioni": 896,
-      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7484853349377531904/"
-    },
-    {
-      "titolo": "Il 53% dei post LinkedIn è scritto dall'IA: come farti notare",
-      "tema": "articolo · newsletter I.A. e LinkedIn",
-      "impressioni": 15783,
-      "interazioni": 123,
-      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7485211997035204608/"
-    },
-    {
-      "titolo": "«L'Azienda Automatica» — primo numero della rubrica",
-      "tema": "rubrica · storytelling operativo",
-      "impressioni": 10682,
-      "interazioni": 58,
-      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7483762502175096832/"
-    }
-  ],
-  "agenti": {
-    "writer": {
-      "stato": "attiva",
-      "pills": [
-        {
-          "v": "1/giorno",
-          "l": "cadenza"
-        },
-        {
-          "v": "05:01",
-          "l": "orario"
-        }
-      ]
-    },
-    "outreach": {
-      "stato": "attiva",
-      "pills": [
-        {
-          "v": "59",
-          "l": "contatti"
-        },
-        {
-          "v": "59",
-          "l": "inviati"
-        },
-        {
-          "v": "15",
-          "l": "risposte"
-        }
-      ],
-      "ultime_risposte": [
-        {
-          "nome": "",
-          "ruolo": "Commercialista (Cosenza)",
-          "data": "recente"
-        },
-        {
-          "nome": "",
-          "ruolo": "attività immobiliare propria",
-          "data": "recente"
-        },
-        {
-          "nome": "",
-          "ruolo": "Applied Management",
-          "data": "recente"
-        },
-        {
-          "nome": "",
-          "ruolo": "",
-          "data": "recente"
-        },
-        {
-          "nome": "",
-          "ruolo": "",
-          "data": "recente"
-        }
-      ]
-    },
-    "inbox": {
-      "stato": "attiva",
-      "pills": [
-        {
-          "v": "8–17",
-          "l": "fascia oraria"
-        }
-      ],
-      "note": "Routine DM attiva (ogni 2h, 8:30-17:30). Risposte ai commenti attiva ogni ora 8-17."
-    },
-    "newsletter": {
-      "stato": "attiva",
-      "pills": [
-        {
-          "v": "1/sett",
-          "l": "cadenza"
-        },
-        {
-          "v": "mer 07:30",
-          "l": "produzione"
-        }
-      ],
-      "in_corso": "#006 — «Follow-up con l'IA per i contatti LinkedIn» — nessuna nuova guida questa settimana",
-      "ultime": [
-        "#005 — «Barra di Ricerca LinkedIn: come farti trovare nella ricerca IA»",
-        "#004 — «Qualificare i contatti LinkedIn con l'IA» — guida PDF + video sottotitolato"
-      ]
-    },
-    "blog": {
-      "stato": "attiva",
-      "pills": [
-        {
-          "v": "4/giorno",
-          "l": "articoli"
-        },
-        {
-          "v": "300",
-          "l": "a catalogo (audit 20/7)"
-        },
-        {
-          "v": "5",
-          "l": "tema LinkedIn, questa sett."
-        }
-      ],
-      "articoli": [
-        {
-          "data": "21 luglio (sera)",
-          "titolo": "LinkedIn per Recruiter nel 2026: Come Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-recruiter-nel-2026-come-trovare-clienti"
-        },
-        {
-          "data": "21 luglio (mattina)",
-          "titolo": "LinkedIn per Logopedisti nel 2026: Come Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-logopedisti-nel-2026-come-trovare-clienti"
-        },
-        {
-          "data": "19 luglio",
-          "titolo": "LinkedIn per Grafici nel 2026: Come Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-grafici-nel-2026-come-trovare-clienti"
-        },
-        {
-          "data": "17 luglio",
-          "titolo": "LinkedIn per Project Manager nel 2026: Come Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-project-manager-nel-2026-come-trovare-clienti"
-        },
-        {
-          "data": "15 luglio",
-          "titolo": "LinkedIn per Notai nel 2026: Come Trovare Clienti",
-          "url": "https://davidecaiazzo.it/blog/linkedin-per-notai-2026"
-        }
-      ]
-    },
-    "analyst": {
-      "stato": "attiva",
-      "pills": [
-        {
-          "v": "05:00",
-          "l": "kpi giorno"
-        },
-        {
-          "v": "3x/g",
-          "l": "audit ceo"
-        }
-      ],
-      "ieri": {
-        "data": "21 luglio",
-        "call": 4,
-        "spesa": "222,38€",
-        "click": 345,
-        "dettaglio": "4 prenotazioni nuove (3 Meta Ads, 1 LinkedIn), nessuna annullazione lo stesso giorno"
-      },
-      "agenda": [
-        "Gio 23/7 · 09:30 — Meta Ads",
-        "Gio 23/7 · 10:00 — Meta Ads",
-        "Gio 23/7 · 10:30 — Meta Ads",
-        "Gio 23/7 · 11:30 — Meta Ads",
-        "Gio 23/7 · 12:00 — Meta Ads",
-        "Lun 27/7 · 09:30 — Meta Ads",
-        "Lun 27/7 · 12:30 — SEO",
-        "Mar 28/7 · 10:00 — LinkedIn",
-        "Mer 29/7 · 09:30 — LinkedIn",
-        "Mer 29/7 · 12:30 — Meta Ads"
-      ]
-    }
-  }
 }
