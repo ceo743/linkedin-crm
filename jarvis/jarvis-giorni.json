@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-24 08:10",
+  "aggiornato": "2026-07-25 07:40",
   "nota": "Un record per giorno. ads = entrambi gli account Meta. call = prenotazioni Calendly ARRIVATE quel giorno (mai retroattivo). call_scartate = SOLO le prenotazioni ricevute quel giorno e poi scartate lo stesso giorno (mai riferito a prenotazioni di giorni precedenti: se una call di un giorno passato viene annullata dopo, il numero del giorno passato non si tocca, si aggiunge solo una nota testuale in call_nomi di quel giorno). lead_funnel = optin dal foglio KPI. guide = form Kajabi. li_impressioni (opzionale) = impressioni LinkedIn del giorno, dal grafico Rendimento contenuti in modalità Giornaliero. Motivazioni di annullamento call: fonte foglio Google 'Report Calendly Giornaliero (Stefania)' (id 1bPJih5riHWqz86hwkfbYybmwhCKkiWVyKxqMD9ppwDU, colonna ESITO), match per giorno di PRENOTAZIONE della call.",
   "giorni": [
     {
@@ -307,14 +307,25 @@
     },
     {
       "data": "2026-07-24",
-      "ads_spesa": 22.78,
-      "ads_click": 15,
+      "ads_spesa": 135.76,
+      "ads_click": 153,
+      "ads_impressioni": 5850,
+      "call": 2,
+      "call_scartate": 0,
+      "call_nomi": [],
+      "lead_funnel": 2,
+      "guide": 3
+    },
+    {
+      "data": "2026-07-25",
+      "ads_spesa": 23.69,
+      "ads_click": 20,
       "ads_impressioni": 764,
       "call": 0,
       "call_scartate": 0,
       "call_nomi": [],
       "lead_funnel": 0,
-      "guide": 0,
+      "guide": 1,
       "parziale": true
     }
   ]
