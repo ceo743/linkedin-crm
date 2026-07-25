@@ -1270,7 +1270,7 @@ async function costruisciBriefing(periodo){
       const pre=await rp.json();
       const oggiStr=(function(){const n=new Date();return n.getFullYear()+'-'+pad(n.getMonth()+1)+'-'+pad(n.getDate());})();
       if(pre && pre.testo && (pre.generato||'').slice(0,10)===oggiStr){
-        battute.push({who:'jarvis', testo:pre.testo, sezione:'hero'});
+        battute.push({who:'jarvis', testo:pulisciNumeriVoce(pre.testo), sezione:'hero'});
         if(Array.isArray(pre.incarichi)) incarichi=incarichi.concat(pre.incarichi);
         return {battute:battute, incarichi:incarichi, dati:(pre.dati||trend.testo)};
       }
@@ -1280,7 +1280,7 @@ async function costruisciBriefing(periodo){
     const r=await fetch(REPORT_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({dati:trend.testo})});
     const j=await r.json();
     if(!j.ok||!j.testo) throw new Error('report vuoto');
-    battute.push({who:'jarvis', testo:j.testo, sezione:'hero'});
+    battute.push({who:'jarvis', testo:pulisciNumeriVoce(j.testo), sezione:'hero'});
     if(Array.isArray(j.incarichi)) incarichi=incarichi.concat(j.incarichi);
   }catch(e){
     battute.push({who:'jarvis', testo:"Non sono riuscito a preparare il report questa volta, Signore. Riprovi tra poco."});
@@ -1315,6 +1315,33 @@ function pulisciTestoVoce(s){
   t=t.replace(/\s+\+\s+/g,' e ');
   // "meta+alt" senza spazi: stessa congiunzione, nessuno spazio da usare come appiglio
   t=t.replace(/([a-zàèéìòù])\+([a-zàèéìòù])/gi,'$1 e $2');
+  return pulisciNumeriVoce(t);
+}
+// 24/07, Davide: "sta leggendo i numeri in maniera strana... il parlato è perfetto, sono i numeri con
+// la virgola il problema, gli altri li legge bene". Gli importi con decimali ("1.297,53 €", "0,16 €")
+// e le percentuali col segno ("+60%") arrivavano al TTS così come sono: il punto delle migliaia e la
+// virgola decimale venivano letti come segni di punteggiatura, e il "+" tornava "plus" in inglese.
+// Qui i numeri diventano parole italiane PRIMA di essere pronunciati — la UI resta identica.
+function pulisciNumeriVoce(t){
+  const senzaMigliaia=function(n){ return n.replace(/\./g,''); };
+  // importi con centesimi: "1.297,53 €" → "1297 euro e 53 centesimi"; ",00" si tace
+  t=t.replace(/(\d[\d.]*),(\d{2})\s*(?:€|euro)/gi, function(_, intero, cent){
+    const i=senzaMigliaia(intero);
+    if(cent==='00') return i+' euro';
+    if(i==='0') return parseInt(cent,10)+' centesimi';
+    return i+' euro e '+parseInt(cent,10)+' centesimi';
+  });
+  // importi interi: "1.353 €" → "1353 euro" (il punto delle migliaia confondeva il TTS)
+  t=t.replace(/(\d[\d.]*)\s*(?:€|euro)/gi, function(_, intero){ return senzaMigliaia(intero)+' euro'; });
+  // percentuali col segno: "+60%" → "più 60 per cento", "-26%" → "meno 26 per cento"
+  t=t.replace(/([+-]?)\s*(\d[\d.]*(?:,\d+)?)\s*%/g, function(_, segno, num){
+    const n=senzaMigliaia(num).replace(',', ' virgola ');
+    return (segno==='+'?'più ':segno==='-'?'meno ':'')+n+' per cento';
+  });
+  // decimali rimasti fuori dagli importi: "0,51" → "0 virgola 51"
+  t=t.replace(/(\d),(\d)/g, '$1 virgola $2');
+  // migliaia col punto in numeri nudi: "8.045" → "8045", letto correttamente come numero intero
+  t=t.replace(/(\d)\.(\d{3})(?!\d)/g, '$1$2');
   return t;
 }
 // molti h3 hanno dentro <a class="fonte">fonte ↗</a> (link cliccabile verso la fonte, aggiunto dalle
@@ -1732,7 +1759,47 @@ async function prendiMicrofono(){
     return micStream;
   }catch(e){ avvisoContesto(); return null; }
 }
+// 24/07, Davide dal sito pubblico: "non riesco a comunicare, non esiste una libreria o altro per il
+// mio parlato?" — il microfono registrava e mandava l'audio a /trascrivi (Whisper sul suo Mac), che
+// fuori da localhost non esiste: "Trascrizione non raggiungibile". La libreria giusta c'è ed è già
+// dentro Chrome: il riconoscimento vocale nativo (SpeechRecognition), gratuito e senza server.
+// Su localhost resta Whisper (più preciso sull'italiano tecnico), fuori si usa quello del browser.
+const RICONOSCIMENTO = window.SpeechRecognition || window.webkitSpeechRecognition || null;
+const usaRiconoscimentoBrowser = !/^(localhost|127\.0\.0\.1)$/.test(location.hostname) && !!RICONOSCIMENTO;
+let ricAttivo=null;
+function ascoltaConBrowser(){
+  if(ricAttivo){ try{ ricAttivo.stop(); }catch(e){} ricAttivo=null; return; }
+  const ric=new RICONOSCIMENTO();
+  ric.lang='it-IT'; ric.interimResults=true; ric.continuous=false; ric.maxAlternatives=1;
+  ricAttivo=ric;
+  stopVoce(); if(musicOn) duckMusic(true);
+  micBtn.classList.add('rec');
+  ask.placeholder='Parli pure, Signore…';
+  let definitivo='';
+  ric.onresult=function(ev){
+    let parziale='';
+    for(let i=ev.resultIndex;i<ev.results.length;i++){
+      const r=ev.results[i];
+      if(r.isFinal) definitivo+=r[0].transcript; else parziale+=r[0].transcript;
+    }
+    ask.value=(definitivo+parziale).trim(); // il Signore vede le parole mentre le dice
+  };
+  ric.onerror=function(ev){
+    micBtn.classList.remove('rec'); ask.placeholder='Es: quante call sono in target?';
+    if(musicOn) duckMusic(false); ricAttivo=null;
+    if(ev.error==='not-allowed') addMsg('Il microfono è bloccato per questo sito, Signore: lo autorizzi dall\'icona del lucchetto nella barra degli indirizzi.','a','Jarvis');
+    else if(ev.error!=='aborted' && ev.error!=='no-speech') addMsg('Non sono riuscito ad ascoltare, Signore. Riprovi.','a','Jarvis');
+  };
+  ric.onend=function(){
+    micBtn.classList.remove('rec'); ask.placeholder='Es: quante call sono in target?';
+    if(musicOn) duckMusic(false); ricAttivo=null;
+    const t=(definitivo||ask.value||'').trim();
+    if(t.length>=3){ ask.value=t; domanda(t); }
+  };
+  try{ ric.start(); }catch(e){ micBtn.classList.remove('rec'); ricAttivo=null; }
+}
 async function startAsk(){
+  if(usaRiconoscimentoBrowser){ ascoltaConBrowser(); return; }
   if(trascrivendo){ if(trascriviCtrl) trascriviCtrl.abort(); return; } // click durante "Trascrivo...": annulla
   if(recOn){ if(mediaRec&&mediaRec.state==='recording') mediaRec.stop(); return; } // click durante registrazione: interrompi
   const stream=await prendiMicrofono(); if(!stream) return;
