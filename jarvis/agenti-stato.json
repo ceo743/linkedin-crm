@@ -1,5 +1,5 @@
 {
-  "aggiornato": "26 luglio, ore 05:17",
+  "aggiornato": "27 luglio, ore 05:14",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
@@ -95,9 +95,13 @@
       "sottotitolo": "Traduzione e schedulazione giornaliera",
       "colore": "pink",
       "stato": "ok",
-      "ultima_run": "26 luglio, ore 05:17",
-      "prossima_run": "27 luglio, ore 05:01",
+      "ultima_run": "27 luglio, ore 05:14",
+      "prossima_run": "28 luglio, ore 05:01",
       "verifiche": [
+        {
+          "ok": true,
+          "testo": "27/07 — post trovato (John Brewton, \"Spotify's bold statement...\" / citazione billboard \"Our employees are not children\", 70.872 reazioni reali verificate su LinkedIn, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, billboard fotografico identico) e schedulato ULTIMO in coda (23 post, banner \"last one Monday December 28th\", uscita 28 dicembre 2026 08:04). Incidente risolto in sessione: primo upload FilePond rimasto con serverId undefined oltre 15s, rimosso e ripetuto con successo; il secondo upload ha lasciato una doppia thumbnail (placeholder vuoto + immagine vera), rimossa quella vuota e verificato in Preview che restasse 1 sola immagine corretta. Nessun problema da segnalare, email recap saltata come da regola 25/07 (niente email se tutto ok)"
+        },
         {
           "ok": true,
           "testo": "26/07 — post trovato (Mike Leber, \"Choose places where people see your value without you having to prove it all the time\", 13.421 reazioni reali verificate su LinkedIn, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo) e schedulato ULTIMO in coda (22 post, banner \"last one Monday December 21st\", uscita 21 dicembre 2026 08:04). Incidente risolto in sessione: il paste via clipboard (cmd+v) corrompeva gli accenti italiani nel DOM (mojibake) — risolto passando al metodo `type` diretto, verificato via JS che il testo nel DOM fosse pulito prima di procedere. Anche un doppio upload immagine (placeholder vuoto residuo) risolto rimuovendo la thumbnail vuota e verificando in Preview che restasse 1 sola immagine. Recap inviato e verificato in Inviate (thread 19f9c745847293ce)"
@@ -109,10 +113,6 @@
         {
           "ok": true,
           "testo": "25/07 — la run 05:01 è partita ma è stata uccisa dopo 75 secondi da un evento app_quit (chiusura/riavvio di Claude Desktop), prima di iniziare la ricerca del post. Ho rifatto la ricerca da zero oggi: Explore more su più argomenti (incl. quello suggerito da Taplio \"Executive Leadership Lessons From Serial Founders\"), finestra a 6 mesi, tab For You. Massimo trovato in tema B2B/imprenditoria con autore non famoso: 421 reazioni (sotto soglia 1500). Confermato di nuovo il bug sort \"Likes\" (mostra pool fisso di celebrità, ignora la query). Nessun candidato valido: sessione correttamente saltata per soglia non raggiunta, non un errore. Log aggiornato, email inviata nello stesso recap del 24/07"
-        },
-        {
-          "ok": null,
-          "testo": "Non riverificati in questo giro (aperti da prima, restano segnalati): refuso minore sull'immagine Eric Partaker del 19/10 (punto 2, \"Definisce chiare\" invece di \"Definisci aspettative chiare\") e il post Ben Sands del 13/07 — ultimo stato noto: immagine da attaccare a mano su Drive taplio-outputs"
         }
       ],
       "azioni": [
@@ -125,7 +125,7 @@
           "url": "https://drive.google.com/drive/folders/1pmw78VurMkYlcn0YpyWEllSAqrzvUBaU"
         }
       ],
-      "nota": "26/07: post di oggi schedulato e verificato correttamente (testo+immagine+posizione+recap). Restano aperti da prima (non riverificati oggi, fuori scope): refuso minore immagine Eric Partaker 19/10 e Ben Sands 13/07 (immagine da attaccare a mano)."
+      "nota": "27/07: post di oggi schedulato e verificato correttamente (testo+immagine+posizione), nessuna email inviata (nessun problema, regola 25/07). Restano aperti da prima (non riverificati oggi, fuori scope): refuso minore immagine Eric Partaker 19/10 e Ben Sands 13/07 (immagine da attaccare a mano)."
     }
   ]
 }
