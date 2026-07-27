@@ -1,39 +1,39 @@
 {
-    "aggiornato": "2026-07-26 05:35",
-    "periodo": "19–25 luglio 2026",
+    "aggiornato": "2026-07-27 05:35",
+    "periodo": "21–27 luglio 2026",
     "kpi": {
-        "follower": 233127,
-        "follower_delta": "+214",
-        "impressioni": 299848,
-        "impressioni_delta": "+385%",
-        "reach": 143865,
-        "interazioni": 1435,
-        "engagement": "0,48%",
-        "reazioni": 1211,
-        "commenti": 192,
-        "call": 25,
-        "call_target": 23
+        "follower": 233126,
+        "follower_delta": "+181",
+        "impressioni": 177493,
+        "impressioni_delta": "+4%",
+        "reach": 93780,
+        "interazioni": 875,
+        "engagement": "0,49%",
+        "reazioni": 723,
+        "commenti": 130,
+        "call": 20,
+        "call_target": 17
     },
     "interazioni_composizione": [
         {
             "label": "Reazioni",
-            "n": 1211
+            "n": 723
         },
         {
             "label": "Commenti",
-            "n": 192
+            "n": 130
         },
         {
             "label": "Click sui link",
-            "n": 98
+            "n": 60
         },
         {
             "label": "Salvataggi",
-            "n": 24
+            "n": 19
         },
         {
             "label": "Invii in privato",
-            "n": 8
+            "n": 3
         },
         {
             "label": "Condivisioni",
@@ -42,25 +42,25 @@
     ],
     "top_post": [
         {
-            "titolo": "Storia personale sulla moglie Ambra, per il suo compleanno",
+            "titolo": "Come ho conosciuto mia moglie, 8 anni fa — storia personale",
             "tema": "storia · organico",
-            "impressioni": 218944,
-            "interazioni": 1110,
-            "url": "https://www.linkedin.com/feed/update/urn:li:activity:7484853349377531904/"
+            "impressioni": 96752,
+            "interazioni": 821,
+            "url": "https://www.linkedin.com/feed/update/urn:li:share:7484838893167656960/"
         },
         {
-            "titolo": "Il 53% dei post LinkedIn è scritto dall'IA: come farti notare",
+            "titolo": "Post scritti dall'IA su LinkedIn: come restare autentici",
             "tema": "articolo · newsletter I.A. e LinkedIn",
-            "impressioni": 24714,
-            "interazioni": 135,
-            "url": "https://www.linkedin.com/feed/update/urn:li:activity:7485211997035204608/"
+            "impressioni": 25368,
+            "interazioni": 81,
+            "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7482768726673575936/"
         },
         {
-            "titolo": "Il mio blog pubblica 4 articoli al giorno, io non scrivo una riga",
+            "titolo": "Il blog che pubblica articoli automaticamente",
             "tema": "rubrica · Azienda Automatica",
-            "impressioni": 21091,
-            "interazioni": 79,
-            "url": "https://www.linkedin.com/feed/update/urn:li:activity:7486299134317162496/"
+            "impressioni": 23155,
+            "interazioni": 56,
+            "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7484103257691209728/"
         }
     ],
     "agenti": {
@@ -143,7 +143,7 @@
                     "l": "produzione"
                 }
             ],
-            "in_corso": "#007 — «Smart Links su LinkedIn» — invariata, prossima produzione mercoledì 29/7",
+            "in_corso": "Guida 009 — «Analisi Competitor IA LinkedIn» — ultima prodotta, prossima produzione mercoledì 29/7",
             "ultime": [
                 "#006 — «Follow-up con l'IA per i contatti LinkedIn»",
                 "#005 — «Barra di Ricerca LinkedIn: come farti trovare nella ricerca IA»"
@@ -161,8 +161,8 @@
                     "l": "a catalogo (audit 20/7)"
                 },
                 {
-                    "v": "11",
-                    "l": "tema LinkedIn, questa sett. (0 il 24/7, errore già risolto)"
+                    "v": "6",
+                    "l": "pubblicati questa sett. (21-27/7), nessun errore aperto"
                 }
             ],
             "articoli": [
@@ -177,16 +177,6 @@
                     "url": "https://www.davidecaiazzo.it/blog/linkedin-per-web-designer-nel-2026-come-trovare-clienti"
                 },
                 {
-                    "data": "23 luglio (sera)",
-                    "titolo": "LinkedIn per Traduttori nel 2026: Come Trovare Clienti",
-                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-traduttori-nel-2026-come-trovare-clienti"
-                },
-                {
-                    "data": "23 luglio (mattina)",
-                    "titolo": "LinkedIn per Infermieri nel 2026: Come Trovare Clienti",
-                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-infermieri-nel-2026-come-trovare-clienti"
-                },
-                {
                     "data": "22 luglio (seconda run)",
                     "titolo": "LinkedIn per Social Media Manager nel 2026: Trovare Clienti",
                     "url": "https://www.davidecaiazzo.it/blog/linkedin-per-social-media-manager-nel-2026-trovare-clienti"
@@ -195,6 +185,16 @@
                     "data": "22 luglio (mattina)",
                     "titolo": "Post LinkedIn Scritti dall'IA: Come Restare Autentico nel 2026",
                     "url": "https://www.davidecaiazzo.it/blog/post-linkedin-scritti-dall-ia-2026"
+                },
+                {
+                    "data": "21 luglio",
+                    "titolo": "LinkedIn per Recruiter nel 2026: Come Trovare Clienti",
+                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-recruiter-nel-2026-come-trovare-clienti"
+                },
+                {
+                    "data": "21 luglio",
+                    "titolo": "LinkedIn per Logopedisti nel 2026: Trovare Clienti",
+                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-logopedisti-nel-2026-come-trovare-clienti"
                 }
             ]
         },
@@ -211,20 +211,28 @@
                 }
             ],
             "ieri": {
-                "data": "25 luglio",
-                "call": 3,
-                "spesa": "131,64€",
-                "click": 119,
-                "dettaglio": "3 prenotazioni nuove (2 Meta Ads, 1 fonte non tracciata nel foglio), 0 scartate lo stesso giorno"
+                "data": "26 luglio",
+                "call": 5,
+                "spesa": "180,47€",
+                "click": 152,
+                "dettaglio": "5 prenotazioni nuove (1 Meta Ads confermata per nome, 4 dal conteggio Gmail New Event), 0 scartate lo stesso giorno"
             },
             "agenda": [
+                "Lun 27/7 · 09:30 — Meta Ads",
                 "Lun 27/7 · 11:00 — Meta Ads",
-                "Lun 27/7 · 11:30 — Meta Ads",
+                "Lun 27/7 · 11:30 — fonte diretta/non tracciata",
                 "Lun 27/7 · 12:00 — Meta Ads",
+                "Mar 28/7 · 09:30 — Meta Ads",
+                "Mar 28/7 · 10:30 — Meta Ads",
                 "Mar 28/7 · 11:00 — Meta Ads",
+                "Mar 28/7 · 12:00 — LinkedIn (DM inbound)",
                 "Mer 29/7 · 12:00 — Meta Ads",
+                "Mer 29/7 · 12:30 — Meta Ads",
                 "Gio 30/7 · 10:30 — Meta Ads",
-                "Gio 30/7 · 11:30 — Meta Ads"
+                "Gio 30/7 · 11:00 — Meta Ads",
+                "Gio 30/7 · 11:30 — Meta Ads",
+                "Gio 30/7 · 12:00 — Meta Ads",
+                "Gio 30/7 · 12:30 — Meta Ads"
             ]
         }
     }
