@@ -1,237 +1,230 @@
 {
-    "aggiornato": "2026-07-28 05:03",
-    "periodo": "21–27 luglio 2026",
-    "kpi": {
-        "follower": 233127,
-        "follower_delta": "+173",
-        "impressioni": 190987,
-        "impressioni_delta": "+4%",
-        "reach": 70485,
-        "interazioni": 673,
-        "engagement": "0,51%",
-        "reazioni": 559,
-        "commenti": 101,
-        "call": 23,
-        "call_target": 21
+  "aggiornato": "2026-07-29 05:03",
+  "periodo": "22–28 luglio 2026",
+  "kpi": {
+    "follower": 233105,
+    "follower_delta": "+160",
+    "impressioni": 148457,
+    "impressioni_delta": "-34%",
+    "reach": 58867,
+    "interazioni": 547,
+    "engagement": "0,37%",
+    "reazioni": 425,
+    "commenti": 101,
+    "call": 23,
+    "call_target": 21
+  },
+  "interazioni_composizione": [
+    {
+      "label": "Reazioni",
+      "n": 425
     },
-    "interazioni_composizione": [
-        {
-            "label": "Reazioni",
-            "n": 559
-        },
-        {
-            "label": "Commenti",
-            "n": 101
-        },
-        {
-            "label": "Click sui link",
-            "n": 32
-        },
-        {
-            "label": "Salvataggi",
-            "n": 9
-        },
-        {
-            "label": "Invii in privato",
-            "n": 4
-        },
-        {
-            "label": "Condivisioni",
-            "n": 0
-        }
-    ],
-    "top_post": [
-        {
-            "titolo": "Otto anni fa quando ho conosciuto mia moglie — storia personale",
-            "tema": "storia · organico",
-            "impressioni": 58963,
-            "interazioni": 326,
-            "url": "https://www.linkedin.com/feed/update/urn:li:share:7484838893167656960/"
-        },
-        {
-            "titolo": "Il blog che pubblica 4 articoli al giorno",
-            "tema": "rubrica · Azienda Automatica",
-            "impressioni": 25120,
-            "interazioni": 73,
-            "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7484103257691209728/"
-        },
-        {
-            "titolo": "Al Senato con la Senatrice Gelmini — 5 minuti per le PMI italiane",
-            "tema": "articolo · organico",
-            "impressioni": 16938,
-            "interazioni": 160,
-            "url": "https://www.linkedin.com/feed/update/urn:li:share:7485378932725276672/"
-        }
-    ],
-    "agenti": {
-        "writer": {
-            "stato": "attiva",
-            "pills": [
-                {
-                    "v": "1/giorno",
-                    "l": "cadenza"
-                },
-                {
-                    "v": "05:01",
-                    "l": "orario"
-                }
-            ]
-        },
-        "outreach": {
-            "stato": "attiva",
-            "pills": [
-                {
-                    "v": "59",
-                    "l": "contatti"
-                },
-                {
-                    "v": "59",
-                    "l": "inviati"
-                },
-                {
-                    "v": "15",
-                    "l": "risposte"
-                }
-            ],
-            "ultime_risposte": [
-                {
-                    "nome": "",
-                    "ruolo": "Commercialista (Cosenza)",
-                    "data": "recente"
-                },
-                {
-                    "nome": "",
-                    "ruolo": "attività immobiliare propria",
-                    "data": "recente"
-                },
-                {
-                    "nome": "",
-                    "ruolo": "Applied Management",
-                    "data": "recente"
-                },
-                {
-                    "nome": "",
-                    "ruolo": "",
-                    "data": "recente"
-                },
-                {
-                    "nome": "",
-                    "ruolo": "",
-                    "data": "recente"
-                }
-            ]
-        },
-        "inbox": {
-            "stato": "in pausa",
-            "pills": [
-                {
-                    "v": "8–17",
-                    "l": "fascia oraria"
-                }
-            ],
-            "note": "Routine DM e risposte ai commenti entrambe in pausa (24/7)."
-        },
-        "newsletter": {
-            "stato": "attiva",
-            "pills": [
-                {
-                    "v": "1/sett",
-                    "l": "cadenza"
-                },
-                {
-                    "v": "mer 07:30",
-                    "l": "produzione"
-                }
-            ],
-            "in_corso": "Guida 009 — «Analisi Competitor IA LinkedIn» — ultima prodotta, prossima produzione mercoledì 29/7",
-            "ultime": [
-                "#006 — «Follow-up con l'IA per i contatti LinkedIn»",
-                "#005 — «Barra di Ricerca LinkedIn: come farti trovare nella ricerca IA»"
-            ]
-        },
-        "blog": {
-            "stato": "attiva",
-            "pills": [
-                {
-                    "v": "4/giorno",
-                    "l": "articoli"
-                },
-                {
-                    "v": "322",
-                    "l": "a catalogo (audit 27/7)"
-                },
-                {
-                    "v": "22",
-                    "l": "pubblicati questa sett. (21-27/7), 1 incidente risolto il 24/7"
-                }
-            ],
-            "articoli": [
-                {
-                    "data": "26 luglio (pomeriggio)",
-                    "titolo": "LinkedIn per Tributaristi nel 2026: Come Trovare Clienti",
-                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-tributaristi-nel-2026-come-trovare-clienti"
-                },
-                {
-                    "data": "25 luglio (pomeriggio)",
-                    "titolo": "LinkedIn per Wedding Planner nel 2026: Come Trovare Clienti",
-                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-wedding-planner-nel-2026-come-trovare-clienti"
-                },
-                {
-                    "data": "25 luglio (mattina)",
-                    "titolo": "LinkedIn per Web Designer nel 2026: Come Trovare Clienti",
-                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-web-designer-nel-2026-come-trovare-clienti"
-                },
-                {
-                    "data": "23 luglio",
-                    "titolo": "LinkedIn per Infermieri nel 2026: Come Trovare Clienti",
-                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-infermieri-nel-2026-come-trovare-clienti"
-                },
-                {
-                    "data": "22 luglio (seconda run)",
-                    "titolo": "LinkedIn per Social Media Manager nel 2026: Trovare Clienti",
-                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-social-media-manager-nel-2026-trovare-clienti"
-                },
-                {
-                    "data": "21 luglio",
-                    "titolo": "LinkedIn per Recruiter nel 2026: Come Trovare Clienti",
-                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-recruiter-nel-2026-come-trovare-clienti"
-                }
-            ]
-        },
-        "analyst": {
-            "stato": "attiva",
-            "pills": [
-                {
-                    "v": "05:00",
-                    "l": "kpi giorno"
-                },
-                {
-                    "v": "3x/g",
-                    "l": "audit ceo"
-                }
-            ],
-            "ieri": {
-                "data": "27 luglio",
-                "call": 3,
-                "spesa": "183,98€",
-                "click": 122,
-                "dettaglio": "3 prenotazioni nuove confermate per nome (fonte non tracciata, Meta Ads, SEO), 0 scartate lo stesso giorno"
-            },
-            "agenda": [
-                "Mar 28/7 · 09:30 — Meta Ads",
-                "Mar 28/7 · 10:00 — SEO",
-                "Mar 28/7 · 10:30 — Meta Ads",
-                "Mar 28/7 · 10:30 — Meta Ads",
-                "Mar 28/7 · 11:00 — Meta Ads",
-                "Mar 28/7 · 12:00 — LinkedIn (DM inbound)",
-                "Mer 29/7 · 12:00 — Meta Ads",
-                "Mer 29/7 · 12:30 — Meta Ads",
-                "Gio 30/7 · 10:30 — Meta Ads",
-                "Gio 30/7 · 11:00 — Meta Ads",
-                "Gio 30/7 · 11:30 — Meta Ads",
-                "Gio 30/7 · 12:30 — Meta Ads",
-                "Mer 5/8 · 11:00 — fonte non tracciata"
-            ]
-        }
+    {
+      "label": "Commenti",
+      "n": 101
+    },
+    {
+      "label": "Click sui link",
+      "n": 23
+    },
+    {
+      "label": "Salvataggi",
+      "n": 12
+    },
+    {
+      "label": "Invii in privato",
+      "n": 9
+    },
+    {
+      "label": "Condivisioni",
+      "n": 0
     }
+  ],
+  "top_post": [
+    {
+      "titolo": "Buon compleanno amore mio — storia personale",
+      "tema": "storia · organico",
+      "impressioni": 39458,
+      "interazioni": 860,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7484853349377531904/"
+    },
+    {
+      "titolo": "Il mio blog pubblica 4 articoli al giorno. Io non scrivo una riga.",
+      "tema": "rubrica · Azienda Automatica",
+      "impressioni": 26444,
+      "interazioni": 57,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7486299134317162496/"
+    },
+    {
+      "titolo": "LinkedIn ha iniziato a nascondere i commenti scritti con l'IA",
+      "tema": "articolo · organico",
+      "impressioni": 16034,
+      "interazioni": 58,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7487748866155483137/"
+    }
+  ],
+  "agenti": {
+    "writer": {
+      "stato": "attiva",
+      "pills": [
+        {
+          "v": "1/giorno",
+          "l": "cadenza"
+        },
+        {
+          "v": "05:01",
+          "l": "orario"
+        }
+      ]
+    },
+    "outreach": {
+      "stato": "attiva",
+      "pills": [
+        {
+          "v": "59",
+          "l": "contatti"
+        },
+        {
+          "v": "59",
+          "l": "inviati"
+        },
+        {
+          "v": "15",
+          "l": "risposte"
+        }
+      ],
+      "ultime_risposte": [
+        {
+          "nome": "",
+          "ruolo": "Commercialista (Cosenza)",
+          "data": "recente"
+        },
+        {
+          "nome": "",
+          "ruolo": "attività immobiliare propria",
+          "data": "recente"
+        },
+        {
+          "nome": "",
+          "ruolo": "Applied Management",
+          "data": "recente"
+        },
+        {
+          "nome": "",
+          "ruolo": "",
+          "data": "recente"
+        },
+        {
+          "nome": "",
+          "ruolo": "",
+          "data": "recente"
+        }
+      ]
+    },
+    "inbox": {
+      "stato": "in pausa",
+      "pills": [
+        {
+          "v": "8–17",
+          "l": "fascia oraria"
+        }
+      ],
+      "note": "Routine DM e risposte ai commenti entrambe in pausa (24/7)."
+    },
+    "newsletter": {
+      "stato": "attiva",
+      "pills": [
+        {
+          "v": "1/sett",
+          "l": "cadenza"
+        },
+        {
+          "v": "mer 07:30",
+          "l": "produzione"
+        }
+      ],
+      "in_corso": "Guida 009 — «Analisi Competitor IA LinkedIn» — ultima prodotta, nessuna nuova guida prodotta questa settimana",
+      "ultime": [
+        "#006 — «Follow-up con l'IA per i contatti LinkedIn»",
+        "#005 — «Barra di Ricerca LinkedIn: come farti trovare nella ricerca IA»"
+      ]
+    },
+    "blog": {
+      "stato": "attiva",
+      "pills": [
+        {
+          "v": "4/giorno",
+          "l": "articoli"
+        },
+        {
+          "v": "322",
+          "l": "a catalogo (audit 27/7, invariato)"
+        },
+        {
+          "v": "3",
+          "l": "pubblicati questa sett. (22-28/7, possibile sottostima)"
+        }
+      ],
+      "articoli": [
+        {
+          "data": "28 luglio (sera)",
+          "titolo": "LinkedIn per Videomaker nel 2026: Come Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-videomaker-nel-2026-come-trovare-clienti"
+        },
+        {
+          "data": "28 luglio (pomeriggio, newsletter)",
+          "titolo": "Commenti LinkedIn e IA nel 2026: Come Non Perdere Visibilità",
+          "url": "https://www.davidecaiazzo.it/blog/commenti-linkedin-ia-2026-come-non-perdere-visibilita"
+        },
+        {
+          "data": "28 luglio (mattina)",
+          "titolo": "LinkedIn per UX Designer nel 2026: Come Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ux-designer-nel-2026-come-trovare-clienti"
+        },
+        {
+          "data": "27 luglio (sera)",
+          "titolo": "LinkedIn per Marketing Manager nel 2026: Come Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-marketing-manager-nel-2026-trovare-clienti"
+        },
+        {
+          "data": "27 luglio (mattina)",
+          "titolo": "LinkedIn per SEO Specialist nel 2026: Come Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-seo-specialist-nel-2026-come-trovare-clienti"
+        },
+        {
+          "data": "26 luglio (sera)",
+          "titolo": "LinkedIn per Tributaristi nel 2026: Come Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-tributaristi-nel-2026-come-trovare-clienti"
+        }
+      ]
+    },
+    "analyst": {
+      "stato": "attiva",
+      "pills": [
+        {
+          "v": "05:00",
+          "l": "kpi giorno"
+        },
+        {
+          "v": "3x/g",
+          "l": "audit ceo"
+        }
+      ],
+      "ieri": {
+        "data": "28 luglio",
+        "call": 5,
+        "spesa": "294,75€",
+        "click": 476,
+        "dettaglio": "5 prenotazioni nuove arrivate quel giorno, 1 scartata lo stesso giorno"
+      },
+      "agenda": [
+        "Mer 29/7 · 11:30 — LinkedIn",
+        "Mer 29/7 · 12:00 — Meta Ads",
+        "Gio 30/7 · 09:30 — Meta Ads",
+        "Gio 30/7 · 10:30 — Meta Ads",
+        "Gio 30/7 · 12:30 — Meta Ads",
+        "Mer 5/8 · 11:00 — LinkedIn"
+      ]
+    }
+  }
 }
