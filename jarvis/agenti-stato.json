@@ -1,5 +1,5 @@
 {
-  "aggiornato": "27 luglio, ore 05:14",
+  "aggiornato": "29 luglio, ore 05:18",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
@@ -95,9 +95,17 @@
       "sottotitolo": "Traduzione e schedulazione giornaliera",
       "colore": "pink",
       "stato": "ok",
-      "ultima_run": "27 luglio, ore 05:14",
-      "prossima_run": "28 luglio, ore 05:01",
+      "ultima_run": "29 luglio, ore 05:18",
+      "prossima_run": "30 luglio, ore 05:01",
       "verifiche": [
+        {
+          "ok": true,
+          "testo": "29/07 — post trovato (Dr. Brigette Hyacinth, \"People don't quit jobs. They quit toxic cultures\" / citazione lavagna \"Nobody leaves a job where they are respected, well-paid and growing\", 16.994 reazioni reali verificate su LinkedIn, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, lavagna/sala riunioni identica, firma \"- Oliver Ramirez G.\" intatta) e schedulato ULTIMO in coda (24 post, banner \"last one Monday January 11th 2027\", uscita 11 gennaio 2027 08:04) — verificato testo 1461/3000 completo, 1 sola immagine corretta. Primo candidato scartato prima di procedere: Mike Leber \"kindness isn't a strategy\" era duplicato esatto del 28/07 (controllo log preventivo). Nessun incidente: solo un normale retry upload FilePond e rimozione di una thumbnail placeholder vuota residua. Nessun problema da segnalare, email recap saltata come da regola 25/07"
+        },
+        {
+          "ok": true,
+          "testo": "28/07 — post trovato (Mike Leber, \"Shoutout to people whose kindness isn't a strategy, but a way of life\" / testo post su leadership e gentilezza sotto pressione, 18.257 reazioni reali verificate su LinkedIn, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, insegna al neon su cemento identica) e schedulato ULTIMO in coda (23 post, banner \"last one Monday January 4th 2027\", uscita 4 gennaio 2027 08:04) — verificato con scroll diretto alla data: testo completo 2405/3000, 1 sola immagine corretta, slot successivo (11/01) vuoto. Nessun incidente: solo un normale retry dell'upload FilePond (primo tentativo con serverId ancora in elaborazione dopo 15s, rimosso e ripetuto con successo). Nessun problema da segnalare, email recap saltata come da regola 25/07 (niente email se tutto ok)"
+        },
         {
           "ok": true,
           "testo": "27/07 — post trovato (John Brewton, \"Spotify's bold statement...\" / citazione billboard \"Our employees are not children\", 70.872 reazioni reali verificate su LinkedIn, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, billboard fotografico identico) e schedulato ULTIMO in coda (23 post, banner \"last one Monday December 28th\", uscita 28 dicembre 2026 08:04). Incidente risolto in sessione: primo upload FilePond rimasto con serverId undefined oltre 15s, rimosso e ripetuto con successo; il secondo upload ha lasciato una doppia thumbnail (placeholder vuoto + immagine vera), rimossa quella vuota e verificato in Preview che restasse 1 sola immagine corretta. Nessun problema da segnalare, email recap saltata come da regola 25/07 (niente email se tutto ok)"
@@ -105,14 +113,6 @@
         {
           "ok": true,
           "testo": "26/07 — post trovato (Mike Leber, \"Choose places where people see your value without you having to prove it all the time\", 13.421 reazioni reali verificate su LinkedIn, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo) e schedulato ULTIMO in coda (22 post, banner \"last one Monday December 21st\", uscita 21 dicembre 2026 08:04). Incidente risolto in sessione: il paste via clipboard (cmd+v) corrompeva gli accenti italiani nel DOM (mojibake) — risolto passando al metodo `type` diretto, verificato via JS che il testo nel DOM fosse pulito prima di procedere. Anche un doppio upload immagine (placeholder vuoto residuo) risolto rimuovendo la thumbnail vuota e verificando in Preview che restasse 1 sola immagine. Recap inviato e verificato in Inviate (thread 19f9c745847293ce)"
-        },
-        {
-          "ok": true,
-          "testo": "24/07 — RECUPERATO: la run 05:01 era partita regolarmente e aveva lavorato 48 minuti (post trovato, tradotto, immagine generata, caricata, schedulata) ma è morta alle 08:33 per \"Unable to connect to API - ECONNRESET\" prima di mandare il recap e aggiornare il log. Ho trovato il post già completo su Taplio e verificato di persona: Dr. Brigette Hyacinth, testo italiano 1240/3000 completo con CTA/hashtag/firma, immagine tradotta corretta (auto coperta di neve, frase scritta a mano, identica all'originale), ULTIMO in coda (21 post, banner \"last one Monday December 14th\"), uscita 14 dicembre 2026 08:04. Log aggiornato, recap inviato e verificato in Inviate (thread 19f97d7bfd25e8c9)"
-        },
-        {
-          "ok": true,
-          "testo": "25/07 — la run 05:01 è partita ma è stata uccisa dopo 75 secondi da un evento app_quit (chiusura/riavvio di Claude Desktop), prima di iniziare la ricerca del post. Ho rifatto la ricerca da zero oggi: Explore more su più argomenti (incl. quello suggerito da Taplio \"Executive Leadership Lessons From Serial Founders\"), finestra a 6 mesi, tab For You. Massimo trovato in tema B2B/imprenditoria con autore non famoso: 421 reazioni (sotto soglia 1500). Confermato di nuovo il bug sort \"Likes\" (mostra pool fisso di celebrità, ignora la query). Nessun candidato valido: sessione correttamente saltata per soglia non raggiunta, non un errore. Log aggiornato, email inviata nello stesso recap del 24/07"
         }
       ],
       "azioni": [
@@ -125,7 +125,7 @@
           "url": "https://drive.google.com/drive/folders/1pmw78VurMkYlcn0YpyWEllSAqrzvUBaU"
         }
       ],
-      "nota": "27/07: post di oggi schedulato e verificato correttamente (testo+immagine+posizione), nessuna email inviata (nessun problema, regola 25/07). Restano aperti da prima (non riverificati oggi, fuori scope): refuso minore immagine Eric Partaker 19/10 e Ben Sands 13/07 (immagine da attaccare a mano)."
+      "nota": "29/07: post di oggi schedulato e verificato correttamente (testo+immagine+posizione), nessuna email inviata (nessun problema, regola 25/07). Restano aperti da prima (non riverificati oggi, fuori scope): refuso minore immagine Eric Partaker 19/10 e Ben Sands 13/07 (immagine da attaccare a mano)."
     }
   ]
 }

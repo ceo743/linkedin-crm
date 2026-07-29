@@ -1,18 +1,7 @@
 {
-  "aggiornato": "28 luglio 2026, ore 18:15 (recupero risolutore dopo sessione madre uccisa da zombie-cleanup: dati del giorno ricollezionati da zero alle 18:xx - ads Meta today, call/cancellazioni da Gmail Calendly, lead da foglio KPI, guide da Gmail Kajabi dedup per nome, li_impressioni da differenza cumulativo LinkedIn 27/7->28/7; parziale resta true perche' la giornata non e' finita, verra' finalizzato dal giro delle 5:00 di domani)",
+  "aggiornato": "29 luglio 2026, ore 05:xx (routine jarvis-dashboard-daily: 22-28/7 già verificati non toccati, aggiunto/completato il record parziale di oggi 29/7; record del 29/6 rimosso per mantenere il tetto di 30 giorni)",
   "nota": "Un record per giorno. ads = entrambi gli account Meta. call = prenotazioni Calendly ARRIVATE quel giorno (mai retroattivo). call_scartate = SOLO le prenotazioni ricevute quel giorno e poi scartate lo stesso giorno (mai riferito a prenotazioni di giorni precedenti: se una call di un giorno passato viene annullata dopo, il numero del giorno passato non si tocca, si aggiunge solo una nota testuale in call_nomi di quel giorno). lead_funnel = optin dal foglio KPI. guide = form Kajabi. li_impressioni (opzionale) = impressioni LinkedIn del giorno, dal grafico Rendimento contenuti in modalità Giornaliero. Motivazioni di annullamento call: fonte foglio Google 'Report Calendly Giornaliero (Stefania)' (id 1bPJih5riHWqz86hwkfbYybmwhCKkiWVyKxqMD9ppwDU, colonna ESITO), match per giorno di PRENOTAZIONE della call.",
   "giorni": [
-    {
-      "data": "2026-06-29",
-      "ads_spesa": 183.33,
-      "ads_click": 234,
-      "ads_impressioni": 11711,
-      "call": 2,
-      "call_scartate": 1,
-      "call_nomi": [],
-      "lead_funnel": 0,
-      "guide": 2
-    },
     {
       "data": "2026-06-30",
       "ads_spesa": 110.29,
@@ -353,6 +342,19 @@
       "lead_funnel": 2,
       "guide": 7,
       "li_impressioni": 17758
+    },
+    {
+      "data": "2026-07-29",
+      "ads_spesa": 36.36,
+      "ads_click": 55,
+      "ads_impressioni": 2140,
+      "call": 1,
+      "call_scartate": 0,
+      "call_nomi": [],
+      "lead_funnel": 0,
+      "guide": 0,
+      "li_impressioni": 257,
+      "parziale": true
     }
   ]
 }
