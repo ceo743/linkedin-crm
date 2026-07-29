@@ -1,47 +1,51 @@
 {
-  "aggiornato": "29 luglio, ore 05:18",
+  "aggiornato": "29 luglio, ore 05:52",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
       "id": "newsletter-martedi",
       "nome": "Newsletter Martedì",
-      "sottotitolo": "LinkedIn e IA — Guida 006 \"Follow-up IA Contatti\"",
+      "sottotitolo": "LinkedIn e IA — Guida 007 \"Smart Links su LinkedIn\"",
       "colore": "cyan",
       "stato": "attenzione",
-      "ultima_run": "15 luglio, ore 8:20",
-      "prossima_run": "22 luglio, ore 7:38",
+      "ultima_run": "29 luglio, ore 05:52",
+      "prossima_run": "prossimo mercoledì",
       "verifiche": [
         {
           "ok": true,
-          "testo": "Articolo Doc nativo e guida PDF (12 pagine, CTA doppia) creati"
+          "testo": "Articolo Doc nativo #007 e guida PDF (12 pagine, CTA doppia) — già creati in un giro precedente (22/07), verificati ora"
         },
         {
           "ok": true,
-          "testo": "Landing live, verificata ora: HTTP 200 — clienti.davidecaiazzo.it/guida-follow-up-ia-contatti-linkedin.html"
+          "testo": "Repo dedicato ceo743/guida-smart-links-ia-linkedin creato, DNS CNAME + GitHub Pages configurati, certificato emesso"
         },
         {
           "ok": true,
-          "testo": "PDF guida live, verificato ora: HTTP 200"
+          "testo": "Landing live, verificata: HTTP 200 — guida-smart-links-ia-linkedin.davidecaiazzo.it"
         },
         {
           "ok": true,
-          "testo": "Form Kajabi duplicato e automazione email aggiornata (link alla cartella Drive corretto)"
+          "testo": "PDF guida live, verificato: HTTP 200"
         },
         {
           "ok": true,
-          "testo": "Card aggiunta in cima alla hub newsletterguide.davidecaiazzo.it"
+          "testo": "Form Kajabi (trovato già duplicato ma senza automazione) completato con automazione email — testato: submission 302, email arrivata, link risolto correttamente al PDF"
+        },
+        {
+          "ok": true,
+          "testo": "Card #07 aggiunta in cima alla hub newsletterguide.davidecaiazzo.it, verificata online"
         },
         {
           "ok": false,
-          "testo": "Submission test end-to-end NON confermata: Cloudflare ha risposto con una sfida reCAPTCHA a ogni tentativo automatico (successo anche sul form #005 gia funzionante, quindi sembra un blocco sul traffico automatico, non un funnel rotto) — non ho potuto verificare la ricezione email reale"
-        },
-        {
-          "ok": true,
-          "testo": "Video ricevuto da Davide 15/07 ore 8:24, sottotitolato e caricato in pipeline completata"
+          "testo": "WhatsApp a Davide NON inviato: routine non presidiata, permesso computer-use per WhatsApp negato in automatico senza utente al computer — messaggio con link Doc/cartella video da inviare a mano o alla prossima sessione interattiva"
         },
         {
           "ok": null,
-          "testo": "Pubblicata su LinkedIn martedì mattina — verifica manuale, nessun controllo automatico"
+          "testo": "Video, sottotitoli e pubblicazione LinkedIn della guida #007 — non ancora, manca il video di Davide"
+        },
+        {
+          "ok": false,
+          "testo": "Backlog: guide #008 (CRM minimo) e #009 (Competitor IA) hanno solo il Doc articolo, mancano PDF/repo/landing/funnel — da completare nei prossimi giri prima di iniziare una guida nuova"
         }
       ],
       "azioni": [
@@ -50,15 +54,15 @@
           "url": "https://drive.google.com/drive/folders/1a8XCuzdUWR7Z_hOsq7Yl8zX61-2TAs_T"
         },
         {
-          "testo": "Apri articolo Doc #006",
-          "url": "https://docs.google.com/document/d/1FPLltvektGTRm-sJp1OJwJ51RDS3MzGMBFEKdRI-Ha8/edit"
+          "testo": "Apri articolo Doc #007",
+          "url": "https://docs.google.com/document/d/1WnG1csbFMzfQVUL1Ph-wh5J_mCWV7gkgqSwgdDJB4VY/edit"
         },
         {
-          "testo": "Apri landing guida #006",
-          "url": "https://clienti.davidecaiazzo.it/guida-follow-up-ia-contatti-linkedin.html"
+          "testo": "Apri landing guida #007",
+          "url": "https://guida-smart-links-ia-linkedin.davidecaiazzo.it/"
         }
       ],
-      "nota": "Guida di questa settimana: Follow-up con l'IA per i contatti LinkedIn (#006). Oggi la routine si e interrotta piu volte creando cartelle duplicate (NNN Newsletter Claude interno): consolidate e pulite nel pomeriggio, tutte le guide 001-006 tornate a struttura pulita Guida NNN. Eliminata anche una bozza articolo LinkedIn lasciata a meta su Chrome di Davide. Aggiunta regola anti-duplicato tra newsletter martedi e rubrica Azienda Automatica del venerdi."
+      "nota": "Guida di questa settimana: Smart Links su LinkedIn (#007), backlog trovato e completato (repo+landing+funnel+hub) dal giro del 22/07 che si era fermato al solo Doc+PDF. Restano in coda #008 e #009 con solo il Doc. WhatsApp a Davide non inviato: limite strutturale delle routine non presidiate, permesso GUI computer-use sempre negato senza utente al computer."
     },
     {
       "id": "newsletter-venerdi",
