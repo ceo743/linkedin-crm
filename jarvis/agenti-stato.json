@@ -1,5 +1,5 @@
 {
-  "aggiornato": "29 luglio, ore 05:52",
+  "aggiornato": "30 luglio, ore 05:14",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
@@ -98,10 +98,14 @@
       "nome": "Taplio — post virali",
       "sottotitolo": "Traduzione e schedulazione giornaliera",
       "colore": "pink",
-      "stato": "ok",
-      "ultima_run": "29 luglio, ore 05:18",
-      "prossima_run": "30 luglio, ore 05:01",
+      "stato": "errore",
+      "ultima_run": "30 luglio, ore 05:01 (fallita)",
+      "prossima_run": "31 luglio, ore 05:01",
       "verifiche": [
+        {
+          "ok": false,
+          "testo": "30/07 — sessione saltata: l'estensione Claude in Chrome non risultava connessa per l'intera sessione (6 tentativi di connessione in ~1 minuto, mai riuscita una volta, non un blip transitorio). Tentato fallback su Control_Chrome (Chrome reale nativo): list_tabs funzionava ma apertura pagine ed esecuzione JS andavano sempre in timeout su piu URL diversi (bridge nativo non responsivo oggi, non solo l'estensione). Nessuna ricerca Taplio effettuata (impossibile senza browser), nessun WebSearch usato come ripiego (vietato). Email di segnalazione creata come bozza in Gmail ma NON inviata (invio richiede il browser, entrambi i canali erano giu) - richiede azione di Davide: riconnettere l'estensione Claude in Chrome e/o verificare il bridge Control_Chrome, poi inviare la bozza a mano."
+        },
         {
           "ok": true,
           "testo": "29/07 — post trovato (Dr. Brigette Hyacinth, \"People don't quit jobs. They quit toxic cultures\" / citazione lavagna \"Nobody leaves a job where they are respected, well-paid and growing\", 16.994 reazioni reali verificate su LinkedIn, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, lavagna/sala riunioni identica, firma \"- Oliver Ramirez G.\" intatta) e schedulato ULTIMO in coda (24 post, banner \"last one Monday January 11th 2027\", uscita 11 gennaio 2027 08:04) — verificato testo 1461/3000 completo, 1 sola immagine corretta. Primo candidato scartato prima di procedere: Mike Leber \"kindness isn't a strategy\" era duplicato esatto del 28/07 (controllo log preventivo). Nessun incidente: solo un normale retry upload FilePond e rimozione di una thumbnail placeholder vuota residua. Nessun problema da segnalare, email recap saltata come da regola 25/07"
@@ -121,6 +125,10 @@
       ],
       "azioni": [
         {
+          "testo": "Invia a mano la bozza email 'Taplio — sessione saltata (Chrome non disponibile) — 30/07' in Gmail",
+          "url": "https://mail.google.com/mail/u/0/#search/in%3Adrafts+Taplio"
+        },
+        {
           "testo": "Apri coda Taplio per controllare/sistemare Ben Sands ed Eric Partaker",
           "url": "https://app.taplio.com/post-schedule"
         },
@@ -129,7 +137,7 @@
           "url": "https://drive.google.com/drive/folders/1pmw78VurMkYlcn0YpyWEllSAqrzvUBaU"
         }
       ],
-      "nota": "29/07: post di oggi schedulato e verificato correttamente (testo+immagine+posizione), nessuna email inviata (nessun problema, regola 25/07). Restano aperti da prima (non riverificati oggi, fuori scope): refuso minore immagine Eric Partaker 19/10 e Ben Sands 13/07 (immagine da attaccare a mano)."
+      "nota": "30/07: sessione saltata per Chrome non disponibile (estensione e bridge nativo entrambi non responsivi), nessun post schedulato oggi, bozza email da inviare a mano. Restano aperti da prima (fuori scope): refuso minore immagine Eric Partaker 19/10 e Ben Sands 13/07."
     }
   ]
 }
