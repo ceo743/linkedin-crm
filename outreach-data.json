@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-22T09:47:00+02:00",
+  "aggiornato": "2026-07-30T17:40:28+02:00",
   "contatti": [
     {
       "id": 1,
@@ -4952,6 +4952,32 @@
         "geografia": "da verificare",
         "budget": "sconosciuto",
         "fonte": "dm-guida"
+      }
+    },
+    {
+      "id": 159,
+      "nome": "Luca Montefusco",
+      "profilo": "https://www.linkedin.com/in/luca-montefusco",
+      "tipo": "dm-guida",
+      "angolo": "ai",
+      "fonte": "dm-inbound-opener",
+      "inviato": null,
+      "risposto": null,
+      "risposta_testo": "",
+      "link_call_inviato": null,
+      "tipo_call": null,
+      "prenotato": null,
+      "note": "Lead da DM inbound — 2026-07-30 — ha scritto 'clienti', risposto con opener Stefania 17:39. Franchise Owner Jean Louis David Roma Eur",
+      "messaggio": "Ciao Luca! Sono Stefania del team di Davide Caiazzo. Cercavi qualcosa di specifico sui clienti? 😊",
+      "approvato": false,
+      "programmato": null,
+      "ruolo": "Franchise Owner Jean Louis David Roma Eur",
+      "escluso": false,
+      "qualifica": {
+        "ruolo": "franchise_owner",
+        "geografia": "Roma",
+        "budget": "sconosciuto",
+        "fonte": "dm-inbound"
       }
     }
   ],
