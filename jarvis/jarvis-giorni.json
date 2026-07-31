@@ -1,18 +1,7 @@
 {
-  "aggiornato": "30 luglio 2026, ore 05:50 (jarvis-dashboard-daily). Control_Chrome irraggiungibile stamattina (execute_javascript/get_page_content in timeout anche su example.com, CDP bloccato): LinkedIn non aggiornato oggi (fonte non raggiungibile), foglio KPI e Report Calendly letti via Zapier Google Sheets (fallback documentato). BUG TROVATO E RISOLTO: lead_funnel di 23/7, 24/7, 25/7, 28/7, 29/7 era sottostimato (stesso bug tipologia-vuota gia visto il 24/07 e 28/07, ricomparso su questo giro): ricontato riga per riga dal foglio Lead (esclusione CALENDLY, non solo Tipologia=OPTIN). Valori corretti: 23/7 2->1, 24/7 5->3, 25/7 1->4, 28/7 2->36 (spike vero da flusso newsletter Commentare su LinkedIn con IA, verificato 2 volte sul grezzo), 29/7 5->6. call/call_scartate erano gia corretti (basati su email Gmail New Event, non sul foglio).",
+  "aggiornato": "31 luglio 2026, ore 14:15 (recupero routine saltata delle 05:40: scheduler fermo dalla sera del 30/7, caso documentato in SKILL.md FASE 3 punto 6; due agenti di recupero hanno lavorato in parallelo, versioni unite rileggendo Drive prima di scrivere). Record 30/7 FINALIZZATO: Meta Ads via time_range 30/7 sui 2 account, call da email Gmail New Event (ora Italia), guide da email Kajabi (dedup persona+guida), li_impressioni 10.301 dal grafico LinkedIn. CORREZIONI su questo giro: lead_funnel 30/7 0->2 e 31/7 0->2 (righe del foglio KPI lette via Zapier: 30/7 Gottardo con doppio invio form contato 2 per coerenza con la convenzione a righe; 31/7 Marabese h.01:02 + Benaglio h.11:12 — il conteggio a 0 era lo stesso bug di sottostima gia visto il 24/07 e 28/07); fonte delle 4 call 30-31/7 corretta da 'LinkedIn adv' a Meta Ads (l'utm nel foglio KPI dice meta/paid: 'LinkedIn adv' e solo il nome dell'evento Calendly); li_impressioni 28/7 17758->24116 e 29/7 7190->10283 (LinkedIn ha riconsolidato al rialzo: verificato sulla serie cumulativa, i delta di 25/26/27 coincidono esattamente con l'archivio).",
   "nota": "Un record per giorno. ads = entrambi gli account Meta. call = prenotazioni Calendly ARRIVATE quel giorno (mai retroattivo). call_scartate = SOLO le prenotazioni ricevute quel giorno e poi scartate lo stesso giorno (mai riferito a prenotazioni di giorni precedenti: se una call di un giorno passato viene annullata dopo, il numero del giorno passato non si tocca, si aggiunge solo una nota testuale in call_nomi di quel giorno). lead_funnel = optin dal foglio KPI. guide = form Kajabi. li_impressioni (opzionale) = impressioni LinkedIn del giorno, dal grafico Rendimento contenuti in modalità Giornaliero. Motivazioni di annullamento call: fonte foglio Google 'Report Calendly Giornaliero (Stefania)' (id 1bPJih5riHWqz86hwkfbYybmwhCKkiWVyKxqMD9ppwDU, colonna ESITO), match per giorno di PRENOTAZIONE della call.",
   "giorni": [
-    {
-      "data": "2026-07-01",
-      "ads_spesa": 95.69,
-      "ads_click": 177,
-      "ads_impressioni": 8314,
-      "call": 1,
-      "call_scartate": 0,
-      "call_nomi": [],
-      "lead_funnel": 3,
-      "guide": 1
-    },
     {
       "data": "2026-07-02",
       "ads_spesa": 81.62,
@@ -330,7 +319,7 @@
       "call_nomi": [],
       "lead_funnel": 36,
       "guide": 7,
-      "li_impressioni": 17758
+      "li_impressioni": 24116
     },
     {
       "data": "2026-07-29",
@@ -342,18 +331,30 @@
       "call_nomi": [],
       "lead_funnel": 6,
       "guide": 0,
-      "li_impressioni": 7190
+      "li_impressioni": 10283
     },
     {
       "data": "2026-07-30",
-      "ads_spesa": 26.47,
-      "ads_click": 26,
-      "ads_impressioni": 1029,
-      "call": 0,
+      "ads_spesa": 303.62,
+      "ads_click": 358,
+      "ads_impressioni": 16378,
+      "call": 2,
       "call_scartate": 0,
       "call_nomi": [],
-      "lead_funnel": 0,
-      "guide": 0,
+      "lead_funnel": 2,
+      "guide": 3,
+      "li_impressioni": 10301
+    },
+    {
+      "data": "2026-07-31",
+      "ads_spesa": 121.36,
+      "ads_click": 122,
+      "ads_impressioni": 5568,
+      "call": 2,
+      "call_scartate": 0,
+      "call_nomi": [],
+      "lead_funnel": 2,
+      "guide": 2,
       "parziale": true
     }
   ]
