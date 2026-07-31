@@ -122,14 +122,14 @@
             ]
         },
         "inbox": {
-            "stato": "in pausa",
+            "stato": "attiva",
             "pills": [
                 {
                     "v": "8–17",
                     "l": "fascia oraria"
                 }
             ],
-            "note": "Risposte DM attive (9:30/11:30/15:30/17:30), risposte ai commenti in pausa."
+            "note": "Risposte DM attive (9:30/11:30/15:30/17:30), risposte ai commenti attive (9:00–17:00). Entrambe operative."
         },
         "newsletter": {
             "stato": "attiva",
@@ -162,10 +162,20 @@
                 },
                 {
                     "v": "3",
-                    "l": "pubblicati questa sett. (23-29/7, possibile sottostima)"
+                    "l": "pubblicati questa sett. (24-30/7, possibile sottostima)"
                 }
             ],
             "articoli": [
+                {
+                    "data": "30 luglio (sera)",
+                    "titolo": "LinkedIn per Export Manager nel 2026: Come Trovare Clienti",
+                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-export-manager-nel-2026-come-trovare-clienti"
+                },
+                {
+                    "data": "30 luglio (mattina)",
+                    "titolo": "LinkedIn per Account Manager nel 2026: Come Trovare Clienti",
+                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-account-manager-nel-2026-come-trovare-clienti"
+                },
                 {
                     "data": "28 luglio (sera)",
                     "titolo": "LinkedIn per Videomaker nel 2026: Come Trovare Clienti",
@@ -185,16 +195,6 @@
                     "data": "27 luglio (sera)",
                     "titolo": "LinkedIn per Marketing Manager nel 2026: Come Trovare Clienti",
                     "url": "https://www.davidecaiazzo.it/blog/linkedin-per-marketing-manager-nel-2026-trovare-clienti"
-                },
-                {
-                    "data": "27 luglio (mattina)",
-                    "titolo": "LinkedIn per SEO Specialist nel 2026: Come Trovare Clienti",
-                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-seo-specialist-nel-2026-come-trovare-clienti"
-                },
-                {
-                    "data": "26 luglio (sera)",
-                    "titolo": "LinkedIn per Tributaristi nel 2026: Come Trovare Clienti",
-                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-tributaristi-nel-2026-come-trovare-clienti"
                 }
             ]
         },
