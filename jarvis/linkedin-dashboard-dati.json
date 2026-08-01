@@ -1,6 +1,6 @@
 {
-    "aggiornato": "2026-07-31 14:20 (recupero manuale, routine delle 05:40 saltata)",
-    "periodo": "24–30 luglio 2026",
+    "aggiornato": "2026-08-01 11:35 (giro di recupero: sessione precedente bloccata dopo aver aggiornato jarvis-risultati.html, ripresa da qui)",
+    "periodo": "25–31 luglio 2026",
     "kpi": {
         "follower": 233107,
         "follower_delta": "+135",
@@ -11,8 +11,8 @@
         "engagement": "0,40%",
         "reazioni": 342,
         "commenti": 75,
-        "call": 22,
-        "call_target": 20
+        "call": 23,
+        "call_target": 21
     },
     "interazioni_composizione": [
         {
@@ -211,13 +211,14 @@
                 }
             ],
             "ieri": {
-                "data": "30 luglio",
-                "call": 2,
-                "spesa": "303,62€",
-                "click": 358,
-                "dettaglio": "2 prenotazioni nuove arrivate quel giorno (entrambe Meta Ads), nessuna scartata; 3 guide scaricate, 2 lead funnel"
+                "data": "31 luglio",
+                "call": 3,
+                "spesa": "288,21€",
+                "click": 326,
+                "dettaglio": "3 prenotazioni nuove arrivate quel giorno (2 Meta Ads, 1 non tracciata nel foglio), nessuna scartata lo stesso giorno; 3 guide scaricate, 3 lead funnel (stesse persone)"
             },
             "agenda": [
+                "Lun 3/8 · 09:30 — Meta Ads",
                 "Mar 4/8 · 10:00 — Meta Ads",
                 "Mer 5/8 · 09:30 — link LinkedIn (DC)",
                 "Mer 5/8 · 11:00 — non tracciato",

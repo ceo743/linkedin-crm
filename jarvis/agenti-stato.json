@@ -1,143 +1,151 @@
 {
- "aggiornato": "31 luglio, ore 13:55",
- "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
- "agenti": [
-  {
-   "id": "newsletter-martedi",
-   "nome": "Newsletter Martedì",
-   "sottotitolo": "LinkedIn e IA — Guida 007 \"Smart Links su LinkedIn\"",
-   "colore": "cyan",
-   "stato": "attenzione",
-   "ultima_run": "29 luglio, ore 05:52",
-   "prossima_run": "prossimo mercoledì",
-   "verifiche": [
+  "aggiornato": "1 agosto, ore 10:38",
+  "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
+  "agenti": [
     {
-     "ok": true,
-     "testo": "Articolo Doc nativo #007 e guida PDF (12 pagine, CTA doppia) — già creati in un giro precedente (22/07), verificati ora"
+      "id": "newsletter-martedi",
+      "nome": "Newsletter Martedì",
+      "sottotitolo": "LinkedIn e IA — Guida 007 \"Smart Links su LinkedIn\"",
+      "colore": "cyan",
+      "stato": "attenzione",
+      "ultima_run": "29 luglio, ore 05:52",
+      "prossima_run": "prossimo mercoledì",
+      "verifiche": [
+        {
+          "ok": true,
+          "testo": "Articolo Doc nativo #007 e guida PDF (12 pagine, CTA doppia) — già creati in un giro precedente (22/07), verificati ora"
+        },
+        {
+          "ok": true,
+          "testo": "Repo dedicato ceo743/guida-smart-links-ia-linkedin creato, DNS CNAME + GitHub Pages configurati, certificato emesso"
+        },
+        {
+          "ok": true,
+          "testo": "Landing live, verificata: HTTP 200 — guida-smart-links-ia-linkedin.davidecaiazzo.it"
+        },
+        {
+          "ok": true,
+          "testo": "PDF guida live, verificato: HTTP 200"
+        },
+        {
+          "ok": true,
+          "testo": "Form Kajabi (trovato già duplicato ma senza automazione) completato con automazione email — testato: submission 302, email arrivata, link risolto correttamente al PDF"
+        },
+        {
+          "ok": true,
+          "testo": "Card #07 aggiunta in cima alla hub newsletterguide.davidecaiazzo.it, verificata online"
+        },
+        {
+          "ok": false,
+          "testo": "WhatsApp a Davide NON inviato: routine non presidiata, permesso computer-use per WhatsApp negato in automatico senza utente al computer — messaggio con link Doc/cartella video da inviare a mano o alla prossima sessione interattiva"
+        },
+        {
+          "ok": null,
+          "testo": "Video, sottotitoli e pubblicazione LinkedIn della guida #007 — non ancora, manca il video di Davide"
+        },
+        {
+          "ok": false,
+          "testo": "Backlog: guide #008 (CRM minimo) e #009 (Competitor IA) hanno solo il Doc articolo, mancano PDF/repo/landing/funnel — da completare nei prossimi giri prima di iniziare una guida nuova"
+        }
+      ],
+      "azioni": [
+        {
+          "testo": "Apri cartella Newsletter-Claude-Martedì",
+          "url": "https://drive.google.com/drive/folders/1a8XCuzdUWR7Z_hOsq7Yl8zX61-2TAs_T"
+        },
+        {
+          "testo": "Apri articolo Doc #007",
+          "url": "https://docs.google.com/document/d/1WnG1csbFMzfQVUL1Ph-wh5J_mCWV7gkgqSwgdDJB4VY/edit"
+        },
+        {
+          "testo": "Apri landing guida #007",
+          "url": "https://guida-smart-links-ia-linkedin.davidecaiazzo.it/"
+        }
+      ],
+      "nota": "Guida di questa settimana: Smart Links su LinkedIn (#007), backlog trovato e completato (repo+landing+funnel+hub) dal giro del 22/07 che si era fermato al solo Doc+PDF. Restano in coda #008 e #009 con solo il Doc. WhatsApp a Davide non inviato: limite strutturale delle routine non presidiate, permesso GUI computer-use sempre negato senza utente al computer."
     },
     {
-     "ok": true,
-     "testo": "Repo dedicato ceo743/guida-smart-links-ia-linkedin creato, DNS CNAME + GitHub Pages configurati, certificato emesso"
+      "id": "newsletter-venerdi",
+      "nome": "Newsletter Venerdì",
+      "sottotitolo": "LinkedIn e IA — verifica prenotazioni e CTA",
+      "colore": "amber",
+      "stato": "attenzione",
+      "ultima_run": "31 luglio, ore 13:55",
+      "prossima_run": "7 agosto, ore 9:14",
+      "verifiche": [
+        {
+          "ok": true,
+          "testo": "Giro eseguito a mano (scheduler fermo 30/07 21:05 → 31/07 13:26): dati dal grezzo tab Lead foglio KPI via Zapier"
+        },
+        {
+          "ok": true,
+          "testo": "Guida #004 (28/07) guida-commenti-ia-linkedin: 37 optin unici (43 righe, esclusi 2 test); trend optin 50→52→43→37"
+        },
+        {
+          "ok": false,
+          "testo": "Prenotazioni: 1 (Gardis, redirect post-optin) ma annullata da noi, report Stefania = NON IN TARGET → 0 in target; bottone PDF sempre 0"
+        },
+        {
+          "ok": true,
+          "testo": "CMO: nessuna modifica CTA brochure; priorità nurturing 7 email, poi redirect post-optin ovunque, hook #005 in chiave risultato economico"
+        },
+        {
+          "ok": true,
+          "testo": "Sintesi inviata a Davide via email (id 19fb80383c5aaaa8, oggetto Newsletter CTA review — 31/07/2026)"
+        }
+      ],
+      "azioni": [],
+      "nota": "3 sì/no attesi da Davide: A) nurturing 7 email B) redirect post-optin su tutte le guide C) hook #005 riformulato."
     },
     {
-     "ok": true,
-     "testo": "Landing live, verificata: HTTP 200 — guida-smart-links-ia-linkedin.davidecaiazzo.it"
-    },
-    {
-     "ok": true,
-     "testo": "PDF guida live, verificato: HTTP 200"
-    },
-    {
-     "ok": true,
-     "testo": "Form Kajabi (trovato già duplicato ma senza automazione) completato con automazione email — testato: submission 302, email arrivata, link risolto correttamente al PDF"
-    },
-    {
-     "ok": true,
-     "testo": "Card #07 aggiunta in cima alla hub newsletterguide.davidecaiazzo.it, verificata online"
-    },
-    {
-     "ok": false,
-     "testo": "WhatsApp a Davide NON inviato: routine non presidiata, permesso computer-use per WhatsApp negato in automatico senza utente al computer — messaggio con link Doc/cartella video da inviare a mano o alla prossima sessione interattiva"
-    },
-    {
-     "ok": null,
-     "testo": "Video, sottotitoli e pubblicazione LinkedIn della guida #007 — non ancora, manca il video di Davide"
-    },
-    {
-     "ok": false,
-     "testo": "Backlog: guide #008 (CRM minimo) e #009 (Competitor IA) hanno solo il Doc articolo, mancano PDF/repo/landing/funnel — da completare nei prossimi giri prima di iniziare una guida nuova"
+      "id": "taplio-post-virali",
+      "nome": "Taplio — post virali",
+      "sottotitolo": "Traduzione e schedulazione giornaliera",
+      "colore": "pink",
+      "stato": "ok",
+      "ultima_run": "1 agosto, ore 10:38",
+      "prossima_run": "2 agosto, ore 05:01",
+      "verifiche": [
+        {
+          "ok": true,
+          "testo": "01/08 — post trovato (Mike Leber, \"Success is a poor teacher. It rewards what worked once and hides what stopped working\" / lettere 3D su parete bianca \"Stay coachable through all phases of life. Never stop learning and listening\", 13.429 reazioni reali verificate sul post originale su LinkedIn, non un repost, non celebrita), tradotto fedele in italiano, immagine tradotta (nano-banana, 2 tentativi: il primo ha reso testo misto inglese/italiano con refusi \"AE\" e \"ACOLTARE\" mancante una lettera, il secondo perfetto: parete testurizzata, lettere 3D, font, prospettiva e ombre tutti intatti) e schedulato ULTIMO in coda col pulsante blu (27 post, banner passato da \"26, last one Monday January 25th 2027\" a \"27, last one Monday February 1st 2027\") — verificato in Preview prima dello schedule: testo 1935/3000 completo, 1 sola immagine corretta. URL diretto recuperato dal pannello dettaglio di Taplio (icona apri originale) e confermato sul profilo LinkedIn dell'autore. Incidente minore risolto: 3 tentativi upload FilePond con serverId undefined (il 3o e' comunque riuscito lato server), 2 placeholder vuoti residui nel composer rimossi col cestino, poi allegata l'unica immagine corretta da My assets con verifica identita. Nessun problema da segnalare, email recap saltata come da regola 25/07"
+        },
+        {
+          "ok": true,
+          "testo": "31/07 — RECUPERO pomeridiano/serale (agente risolutore): la run 05:01 risultava partita (lastRunAt 13:27) ma senza aver prodotto nulla — zero righe di log, zero file nuovi in taplio-outputs, zero bozze email \"Taplio\", zero processi residui: sessione morta prima di qualunque lavoro utile. Controllo guardia coda vs log ha però rivelato 26 post in coda invece dei 25 attesi: un post EXTRA non tracciato su lunedì 5 ottobre 2026, testo italiano completo (attribuito a Dr. Brigette Hyacinth, \"I veri leader non creano seguaci\") ma con immagine ANCORA in inglese e serverId rotto (\".../userUpload/undefined\", bug upload noto). Verificato che il testo derivava da un post reale di Brigette Hyacinth (9.3k reazioni) ma SENZA immagine propria su LinkedIn: candidato non valido a monte (niente immagine citazione), relitto di una sessione precedente non loggata — eliminato dalla coda, non recuperabile come bozza. Ripartita la ricerca da zero: post trovato (Eric Partaker, \"When you promote toxic people, you lose your best people\" / \"6 Green Flags of a Great Company Culture\", 13.558 reazioni reali verificate sul profilo personale, non celebrità, mai usato con questo contenuto), tradotto fedele in italiano, immagine tradotta (nano-banana, 3 tentativi: le prime due versioni avevano etichette \"TITLE/SUBTITLE\" visibili o un accento mancante e un residuo \"by\" in inglese, terza perfetta) e schedulata ULTIMO in coda col pulsante blu (26 post, banner \"last one Monday January 25th 2027\") — verificato riaprendo l'editor: testo 2483/3000 completo, 1 sola immagine corretta, byte S3 identici al file locale. Incidente minore upload: 3 tentativi FilePond con serverId undefined prima del 4° riuscito, 2 placeholder vuoti rimossi dal composer. Nessuna email: successo, nessun problema aperto (regola 25/07)"
+        },
+        {
+          "ok": true,
+          "testo": "30/07 — RECUPERO riuscito ore 11:00 (agente risolutore): la run 05:01 era saltata perché l'estensione Chrome non era connessa; alle 10:35 la connessione era tornata e il giro è stato rifatto per intero. Post trovato (Sandra Pellumbi, \"Employees don't quit jobs. They quit the way they're treated\" / citazione su carta \"Make it a habit to respect people without knowing their qualifications, title, or position\", 2.053 reazioni reali verificate su LinkedIn, autrice mai usata prima, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, texture carta e corsivi rossi identici, badge autrice intatto) e schedulato ULTIMO in coda col pulsante blu (25 post, banner \"last one Monday January 18th 2027\", uscita 18 gennaio 2027 08:04) — verificato riaprendo l'editor: testo 1806/3000 completo, 1 sola immagine, byte S3 identici al file locale. Candidati scartati per duplicato: Mike Leber 17.4k (stessa immagine del 28/07), Josh Bob 5.8k (stessa immagine neve del 24/07), Jitender Girdhar 2.2k (stesso post del 18/07), Brigette Hyacinth 14.7k (post di ieri). Incidente minore risolto: 2 placeholder vuoti da upload FilePond rimossi, immagine attaccata da My assets dopo verifica byte. La bozza email di segnalazione delle 05:14 in Gmail è superata: nessuna azione necessaria"
+        },
+        {
+          "ok": true,
+          "testo": "29/07 — post trovato (Dr. Brigette Hyacinth, \"People don't quit jobs. They quit toxic cultures\" / citazione lavagna \"Nobody leaves a job where they are respected, well-paid and growing\", 16.994 reazioni reali verificate su LinkedIn, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, lavagna/sala riunioni identica, firma \"- Oliver Ramirez G.\" intatta) e schedulato ULTIMO in coda (24 post, banner \"last one Monday January 11th 2027\", uscita 11 gennaio 2027 08:04) — verificato testo 1461/3000 completo, 1 sola immagine corretta. Primo candidato scartato prima di procedere: Mike Leber \"kindness isn't a strategy\" era duplicato esatto del 28/07 (controllo log preventivo). Nessun incidente: solo un normale retry upload FilePond e rimozione di una thumbnail placeholder vuota residua. Nessun problema da segnalare, email recap saltata come da regola 25/07"
+        },
+        {
+          "ok": true,
+          "testo": "28/07 — post trovato (Mike Leber, \"Shoutout to people whose kindness isn't a strategy, but a way of life\" / testo post su leadership e gentilezza sotto pressione, 18.257 reazioni reali verificate su LinkedIn, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, insegna al neon su cemento identica) e schedulato ULTIMO in coda (23 post, banner \"last one Monday January 4th 2027\", uscita 4 gennaio 2027 08:04) — verificato con scroll diretto alla data: testo completo 2405/3000, 1 sola immagine corretta, slot successivo (11/01) vuoto. Nessun incidente: solo un normale retry dell'upload FilePond (primo tentativo con serverId ancora in elaborazione dopo 15s, rimosso e ripetuto con successo). Nessun problema da segnalare, email recap saltata come da regola 25/07 (niente email se tutto ok)"
+        },
+        {
+          "ok": true,
+          "testo": "27/07 — post trovato (John Brewton, \"Spotify's bold statement...\" / citazione billboard \"Our employees are not children\", 70.872 reazioni reali verificate su LinkedIn, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, billboard fotografico identico) e schedulato ULTIMO in coda (23 post, banner \"last one Monday December 28th\", uscita 28 dicembre 2026 08:04). Incidente risolto in sessione: primo upload FilePond rimasto con serverId undefined oltre 15s, rimosso e ripetuto con successo; il secondo upload ha lasciato una doppia thumbnail (placeholder vuoto + immagine vera), rimossa quella vuota e verificato in Preview che restasse 1 sola immagine corretta. Nessun problema da segnalare, email recap saltata come da regola 25/07 (niente email se tutto ok)"
+        },
+        {
+          "ok": true,
+          "testo": "26/07 — post trovato (Mike Leber, \"Choose places where people see your value without you having to prove it all the time\", 13.421 reazioni reali verificate su LinkedIn, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo) e schedulato ULTIMO in coda (22 post, banner \"last one Monday December 21st\", uscita 21 dicembre 2026 08:04). Incidente risolto in sessione: il paste via clipboard (cmd+v) corrompeva gli accenti italiani nel DOM (mojibake) — risolto passando al metodo `type` diretto, verificato via JS che il testo nel DOM fosse pulito prima di procedere. Anche un doppio upload immagine (placeholder vuoto residuo) risolto rimuovendo la thumbnail vuota e verificando in Preview che restasse 1 sola immagine. Recap inviato e verificato in Inviate (thread 19f9c745847293ce)"
+        }
+      ],
+      "azioni": [
+        {
+          "testo": "Apri coda Taplio per controllare/sistemare Ben Sands ed Eric Partaker",
+          "url": "https://app.taplio.com/post-schedule"
+        },
+        {
+          "testo": "Apri cartella immagini pronte (taplio-outputs)",
+          "url": "https://drive.google.com/drive/folders/1pmw78VurMkYlcn0YpyWEllSAqrzvUBaU"
+        }
+      ],
+      "nota": "01/08: giornata senza problemi, post schedulato per il 1 febbraio 2027. Restano aperti da prima (fuori scope oggi): refuso minore immagine Eric Partaker 19/10 e Ben Sands 13/07 senza immagine caricata."
     }
-   ],
-   "azioni": [
-    {
-     "testo": "Apri cartella Newsletter-Claude-Martedì",
-     "url": "https://drive.google.com/drive/folders/1a8XCuzdUWR7Z_hOsq7Yl8zX61-2TAs_T"
-    },
-    {
-     "testo": "Apri articolo Doc #007",
-     "url": "https://docs.google.com/document/d/1WnG1csbFMzfQVUL1Ph-wh5J_mCWV7gkgqSwgdDJB4VY/edit"
-    },
-    {
-     "testo": "Apri landing guida #007",
-     "url": "https://guida-smart-links-ia-linkedin.davidecaiazzo.it/"
-    }
-   ],
-   "nota": "Guida di questa settimana: Smart Links su LinkedIn (#007), backlog trovato e completato (repo+landing+funnel+hub) dal giro del 22/07 che si era fermato al solo Doc+PDF. Restano in coda #008 e #009 con solo il Doc. WhatsApp a Davide non inviato: limite strutturale delle routine non presidiate, permesso GUI computer-use sempre negato senza utente al computer."
-  },
-  {
-   "id": "newsletter-venerdi",
-   "nome": "Newsletter Venerdì",
-   "sottotitolo": "LinkedIn e IA — verifica prenotazioni e CTA",
-   "colore": "amber",
-   "stato": "attenzione",
-   "ultima_run": "31 luglio, ore 13:55",
-   "prossima_run": "7 agosto, ore 9:14",
-   "verifiche": [
-    {
-     "ok": true,
-     "testo": "Giro eseguito a mano (scheduler fermo 30/07 21:05 → 31/07 13:26): dati dal grezzo tab Lead foglio KPI via Zapier"
-    },
-    {
-     "ok": true,
-     "testo": "Guida #004 (28/07) guida-commenti-ia-linkedin: 37 optin unici (43 righe, esclusi 2 test); trend optin 50→52→43→37"
-    },
-    {
-     "ok": false,
-     "testo": "Prenotazioni: 1 (Gardis, redirect post-optin) ma annullata da noi, report Stefania = NON IN TARGET → 0 in target; bottone PDF sempre 0"
-    },
-    {
-     "ok": true,
-     "testo": "CMO: nessuna modifica CTA brochure; priorità nurturing 7 email, poi redirect post-optin ovunque, hook #005 in chiave risultato economico"
-    },
-    {
-     "ok": true,
-     "testo": "Sintesi inviata a Davide via email (id 19fb80383c5aaaa8, oggetto Newsletter CTA review — 31/07/2026)"
-    }
-   ],
-   "azioni": [],
-   "nota": "3 sì/no attesi da Davide: A) nurturing 7 email B) redirect post-optin su tutte le guide C) hook #005 riformulato."
-  },
-  {
-   "id": "taplio-post-virali",
-   "nome": "Taplio — post virali",
-   "sottotitolo": "Traduzione e schedulazione giornaliera",
-   "colore": "pink",
-   "stato": "ok",
-   "ultima_run": "30 luglio, ore 11:00 (recupero riuscito)",
-   "prossima_run": "31 luglio, ore 05:01",
-   "verifiche": [
-    {
-     "ok": true,
-     "testo": "30/07 — RECUPERO riuscito ore 11:00 (agente risolutore): la run 05:01 era saltata perché l'estensione Chrome non era connessa; alle 10:35 la connessione era tornata e il giro è stato rifatto per intero. Post trovato (Sandra Pellumbi, \"Employees don't quit jobs. They quit the way they're treated\" / citazione su carta \"Make it a habit to respect people without knowing their qualifications, title, or position\", 2.053 reazioni reali verificate su LinkedIn, autrice mai usata prima, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, texture carta e corsivi rossi identici, badge autrice intatto) e schedulato ULTIMO in coda col pulsante blu (25 post, banner \"last one Monday January 18th 2027\", uscita 18 gennaio 2027 08:04) — verificato riaprendo l'editor: testo 1806/3000 completo, 1 sola immagine, byte S3 identici al file locale. Candidati scartati per duplicato: Mike Leber 17.4k (stessa immagine del 28/07), Josh Bob 5.8k (stessa immagine neve del 24/07), Jitender Girdhar 2.2k (stesso post del 18/07), Brigette Hyacinth 14.7k (post di ieri). Incidente minore risolto: 2 placeholder vuoti da upload FilePond rimossi, immagine attaccata da My assets dopo verifica byte. La bozza email di segnalazione delle 05:14 in Gmail è superata: nessuna azione necessaria"
-    },
-    {
-     "ok": true,
-     "testo": "29/07 — post trovato (Dr. Brigette Hyacinth, \"People don't quit jobs. They quit toxic cultures\" / citazione lavagna \"Nobody leaves a job where they are respected, well-paid and growing\", 16.994 reazioni reali verificate su LinkedIn, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, lavagna/sala riunioni identica, firma \"- Oliver Ramirez G.\" intatta) e schedulato ULTIMO in coda (24 post, banner \"last one Monday January 11th 2027\", uscita 11 gennaio 2027 08:04) — verificato testo 1461/3000 completo, 1 sola immagine corretta. Primo candidato scartato prima di procedere: Mike Leber \"kindness isn't a strategy\" era duplicato esatto del 28/07 (controllo log preventivo). Nessun incidente: solo un normale retry upload FilePond e rimozione di una thumbnail placeholder vuota residua. Nessun problema da segnalare, email recap saltata come da regola 25/07"
-    },
-    {
-     "ok": true,
-     "testo": "28/07 — post trovato (Mike Leber, \"Shoutout to people whose kindness isn't a strategy, but a way of life\" / testo post su leadership e gentilezza sotto pressione, 18.257 reazioni reali verificate su LinkedIn, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, insegna al neon su cemento identica) e schedulato ULTIMO in coda (23 post, banner \"last one Monday January 4th 2027\", uscita 4 gennaio 2027 08:04) — verificato con scroll diretto alla data: testo completo 2405/3000, 1 sola immagine corretta, slot successivo (11/01) vuoto. Nessun incidente: solo un normale retry dell'upload FilePond (primo tentativo con serverId ancora in elaborazione dopo 15s, rimosso e ripetuto con successo). Nessun problema da segnalare, email recap saltata come da regola 25/07 (niente email se tutto ok)"
-    },
-    {
-     "ok": true,
-     "testo": "27/07 — post trovato (John Brewton, \"Spotify's bold statement...\" / citazione billboard \"Our employees are not children\", 70.872 reazioni reali verificate su LinkedIn, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, billboard fotografico identico) e schedulato ULTIMO in coda (23 post, banner \"last one Monday December 28th\", uscita 28 dicembre 2026 08:04). Incidente risolto in sessione: primo upload FilePond rimasto con serverId undefined oltre 15s, rimosso e ripetuto con successo; il secondo upload ha lasciato una doppia thumbnail (placeholder vuoto + immagine vera), rimossa quella vuota e verificato in Preview che restasse 1 sola immagine corretta. Nessun problema da segnalare, email recap saltata come da regola 25/07 (niente email se tutto ok)"
-    },
-    {
-     "ok": true,
-     "testo": "26/07 — post trovato (Mike Leber, \"Choose places where people see your value without you having to prove it all the time\", 13.421 reazioni reali verificate su LinkedIn, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo) e schedulato ULTIMO in coda (22 post, banner \"last one Monday December 21st\", uscita 21 dicembre 2026 08:04). Incidente risolto in sessione: il paste via clipboard (cmd+v) corrompeva gli accenti italiani nel DOM (mojibake) — risolto passando al metodo `type` diretto, verificato via JS che il testo nel DOM fosse pulito prima di procedere. Anche un doppio upload immagine (placeholder vuoto residuo) risolto rimuovendo la thumbnail vuota e verificando in Preview che restasse 1 sola immagine. Recap inviato e verificato in Inviate (thread 19f9c745847293ce)"
-    }
-   ],
-   "azioni": [
-    {
-     "testo": "Apri coda Taplio per controllare/sistemare Ben Sands ed Eric Partaker",
-     "url": "https://app.taplio.com/post-schedule"
-    },
-    {
-     "testo": "Apri cartella immagini pronte (taplio-outputs)",
-     "url": "https://drive.google.com/drive/folders/1pmw78VurMkYlcn0YpyWEllSAqrzvUBaU"
-    }
-   ],
-   "nota": "30/07: giro recuperato alle 11:00 dal risolutore, post in coda per il 18 gennaio 2027. Restano aperti da prima (fuori scope): refuso minore immagine Eric Partaker 19/10 e Ben Sands 13/07."
-  }
- ]
+  ]
 }
