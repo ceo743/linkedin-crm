@@ -1,5 +1,5 @@
 {
-  "aggiornato": "31 luglio 2026, ore 14:15 (recupero routine saltata delle 05:40: scheduler fermo dalla sera del 30/7, caso documentato in SKILL.md FASE 3 punto 6; due agenti di recupero hanno lavorato in parallelo, versioni unite rileggendo Drive prima di scrivere). Record 30/7 FINALIZZATO: Meta Ads via time_range 30/7 sui 2 account, call da email Gmail New Event (ora Italia), guide da email Kajabi (dedup persona+guida), li_impressioni 10.301 dal grafico LinkedIn. CORREZIONI su questo giro: lead_funnel 30/7 0->2 e 31/7 0->2 (righe del foglio KPI lette via Zapier: 30/7 Gottardo con doppio invio form contato 2 per coerenza con la convenzione a righe; 31/7 Marabese h.01:02 + Benaglio h.11:12 — il conteggio a 0 era lo stesso bug di sottostima gia visto il 24/07 e 28/07); fonte delle 4 call 30-31/7 corretta da 'LinkedIn adv' a Meta Ads (l'utm nel foglio KPI dice meta/paid: 'LinkedIn adv' e solo il nome dell'evento Calendly); li_impressioni 28/7 17758->24116 e 29/7 7190->10283 (LinkedIn ha riconsolidato al rialzo: verificato sulla serie cumulativa, i delta di 25/26/27 coincidono esattamente con l'archivio).",
+  "aggiornato": "1 agosto 2026, ore 18:10 (recupero routine jarvis-dashboard-daily delle 05:40: uccisa da zombie-cleanup dopo 192 minuti prima di scrivere i dati di oggi, vedi SKILL.md FASE 3 punto 5). Record 31/7: aggiunto li_impressioni 13.639 (mancante, letto ora dal grafico LinkedIn Giornaliero). Record 01/08 aggiornato con dati raccolti alle 18:06 (non e' il record finale del giorno, si completa col giro delle 05:40 di domani quando 01/08 diventa 'ieri'): Meta Ads date_preset=today sui 2 account (189,45 EUR / 256 click / 11.567 impressioni), call e lead_funnel riverificati sul foglio KPI (1 CALENDLY, 0 OPTIN: nessun altro movimento oggi), guide Kajabi riverificate su Gmail (0 oggi), li_impressioni 5.874 dal grafico LinkedIn Giornaliero (fuso UTC, giornata in corso). 'parziale':true mantenuto di proposito sul record 01/08: per il modello dati di questa routine (FASE 2 SKILL.md) il giorno in corso resta sempre parziale fino al giro del giorno dopo.",
   "nota": "Un record per giorno. ads = entrambi gli account Meta. call = prenotazioni Calendly ARRIVATE quel giorno (mai retroattivo). call_scartate = SOLO le prenotazioni ricevute quel giorno e poi scartate lo stesso giorno (mai riferito a prenotazioni di giorni precedenti: se una call di un giorno passato viene annullata dopo, il numero del giorno passato non si tocca, si aggiunge solo una nota testuale in call_nomi di quel giorno). lead_funnel = optin dal foglio KPI. guide = form Kajabi. li_impressioni (opzionale) = impressioni LinkedIn del giorno, dal grafico Rendimento contenuti in modalità Giornaliero. Motivazioni di annullamento call: fonte foglio Google 'Report Calendly Giornaliero (Stefania)' (id 1bPJih5riHWqz86hwkfbYybmwhCKkiWVyKxqMD9ppwDU, colonna ESITO), match per giorno di PRENOTAZIONE della call.",
   "giorni": [
     {
@@ -343,19 +343,21 @@
       "call_scartate": 0,
       "call_nomi": [],
       "lead_funnel": 3,
-      "guide": 3
+      "guide": 3,
+      "li_impressioni": 13639
     },
     {
       "data": "2026-08-01",
-      "ads_spesa": 153.75,
-      "ads_click": 212,
-      "ads_impressioni": 8468,
+      "ads_spesa": 189.45,
+      "ads_click": 256,
+      "ads_impressioni": 11567,
       "call": 1,
       "call_scartate": 0,
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 0,
-      "parziale": true
+      "parziale": true,
+      "li_impressioni": 5874
     }
   ]
 }
