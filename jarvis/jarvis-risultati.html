@@ -347,9 +347,9 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
   </div>
   <div class="kpi corner reveal" style="animation-delay:.15s">
     <label>Call prenotate · 7g</label>
-    <b class="mono" style="color:var(--green)" data-count="22">0</b>
+    <b class="mono" style="color:var(--green)" data-count="23">0</b>
     <span class="delta flat">2 scartate da noi lo stesso giorno (fuori target)</span>
-    <div class="sub">In target reali: 20 su 22 · fonte n.1 Meta Ads (13 su 22 tracciate)</div>
+    <div class="sub">In target reali: 21 su 23 · fonte n.1 Meta Ads (14 su 23)</div>
   </div>
   <div class="kpi corner reveal" style="animation-delay:.2s">
     <label>Lead totali · 7g</label>
@@ -465,7 +465,7 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
 <div class="panelgrid g2">
   <div class="panel corner reveal" style="animation-delay:.66s">
     <h3>Vendite · da dove arrivano · 0<a class="fonte" href="https://docs.google.com/spreadsheets/d/1MvMCY98s1LDxQ9AEkDvJSW8qUmbEQtD0XOMX95kaqas/edit?gid=2090445470#gid=2090445470" target="_blank" rel="noopener">fonte ↗</a></h3>
-    <div class="note">Non riverificato in questo giro di recupero mirato (solo 31/7 e 1/8): ultimo dato noto, nessuna vendita chiusa nella finestra 24-30/7, l'ultima vendita resta quella del 23/7 (fonte: Sito). Da ricontrollare al prossimo giro completo della routine. Gli importi non compaiono qui per scelta del Signore: il fatturato non va in dashboard, si chiede a voce quando serve.</div>
+    <div class="note">Riverificato: 0 vendite chiuse nella finestra 25-31/7 (tab Consulenza del foglio KPI). Nella settimana precedente (18-24/7) 1 vendita, fonte Sito/Chatbot. Nessun rinnovo nella finestra (tab Rinnovi, ultimo il 22/6). Gli importi non compaiono qui per scelta del Signore: il fatturato non va in dashboard, si chiede a voce quando serve.</div>
   </div>
 </div>
 
@@ -480,7 +480,7 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
     <div class="row"><span>Click</span><b>1.835</b></div>
     <div class="row"><span>CTR medio</span><b>2,30%</b></div>
     <div class="row"><span>CPC medio</span><b>0,89 €</b></div>
-    <div class="note" style="margin-top:10px">Totale calcolato dalla somma calendario 25-31/7 dell'archivio (jarvis-giorni.json, ora corretto): 288,21 € il 31/7 (era rimasto a 121,36 € parziale, finalizzato in questo giro). Dettaglio campagne non riverificato in questo giro mirato. Oggi (1/8, parziale): 105,59 € finora tra i due account (Account 1 58,54 €, Account 3 47,05 €).</div>
+    <div class="note" style="margin-top:10px">Totale calcolato dalla somma calendario 25-31/7 dell'archivio (jarvis-giorni.json, ora corretto): 288,21 € il 31/7 (era rimasto a 121,36 € parziale, finalizzato in questo giro). Oggi (1/8, parziale): 105,59 € finora tra i due account (Account 1 58,54 €, Account 3 47,05 €). Campagna che guida la spesa 7g su Account 1: "[CLAUDE] 25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1" (quasi tutto il budget, 1.074,07 €, CPC 1,15 €). Su Account 3: "[DOC] Quiz LinkedIn - Leads - 9/6/26" (560,50 €, CPC 0,62 €) — su entrambi gli account è di fatto l'unica campagna con spesa reale nella finestra, le altre attive sono a 0 €.</div>
   </div>
   <div class="panel corner reveal" style="animation-delay:.75s">
     <h3>Account 1 · DC Academy<a class="fonte" href="https://adsmanager.facebook.com/adsmanager/manage/campaigns?act=465327538443110" target="_blank" rel="noopener">fonte ↗</a></h3>
@@ -1531,13 +1531,13 @@ const RISPOSTE=[
   {k:['post migliore','top post','post più','miglior post'], who:'cmo', tab:'linkedin', t:()=>
     "Top post della settimana per impressioni: il post sui commenti scritti con l'IA che LinkedIn ha iniziato a nascondere, 24 mila 213 impressioni e 67 interazioni. Secondo, il post personale per il compleanno di sua moglie, 22 mila 549 impressioni e 894 interazioni. Terzo, il numero della rubrica Azienda Automatica sul blog, 11 mila 18 impressioni e 58 interazioni. Le apro LinkedIn, Signore."},
   {k:['in target','fuori target','scartat','qualificat'], who:'cso', tab:'foglio', t:()=>
-    "Delle 22 call arrivate nella finestra, Signore, 2 sono state scartate lo stesso giorno della prenotazione. Le call in target reali sono 20 su 22. 10 annullamenti totali sono arrivati nella finestra: 9 decisi da noi dopo pre qualifica, 1 vera disdetta dal prospect. Le ho aperto il foglio."},
+    "Delle 23 call arrivate nella finestra, Signore, 2 sono state scartate lo stesso giorno della prenotazione. Le call in target reali sono 21 su 23. 9 annullamenti totali sono arrivati nella finestra: 8 decisi da noi dopo pre qualifica, 1 vera disdetta dal prospect. Le ho aperto il foglio."},
   {k:['chi ha annullato','annullat','cancellat','disdett'], who:'cso', tab:'calendly', t:()=>
-    "Nell'ultima settimana 10 annullamenti totali, Signore: 9 decisi da noi dopo pre qualifica, 1 vera disdetta dal prospect. Le apro Calendly."},
+    "Nell'ultima settimana 9 annullamenti totali, Signore: 8 decisi da noi dopo pre qualifica, 1 vera disdetta dal prospect. Le apro Calendly."},
   {k:['da dove arrivano le call','fonte call','provenienza call','da dove vengono'], who:'cso', tab:'foglio', t:()=>
-    "Le 22 call arrivate nella finestra, Signore, arrivano da: Meta Ads 13, LinkedIn 1, SEO 1, una da guida, 2 non tracciate nel foglio e 4 contate senza dettaglio fonte nel giro del 26 luglio. Meta Ads resta la fonte principale."},
+    "Le 23 call arrivate nella finestra, Signore, arrivano da: Meta Ads 14, 4 senza dettaglio fonte (giro del 26/7), 3 non tracciate nel foglio, LinkedIn 1, SEO 1. Meta Ads resta la fonte principale."},
   {k:['call','appuntament','prenotat','calendly'], who:'cso', tab:'calendly', t:()=>
-    "22 call prenotate su Calendly negli ultimi 7 giorni, Signore. 2 scartate da noi lo stesso giorno, in target reali 20 su 22. Fonte principale Meta Ads. Le ho aperto Calendly."},
+    "23 call prenotate su Calendly negli ultimi 7 giorni, Signore. 2 scartate da noi lo stesso giorno, in target reali 21 su 23. Fonte principale Meta Ads. Le ho aperto Calendly."},
   {k:['lead','contatti','optin','iscri'], who:'cso', tab:'foglio', t:()=>
     "53 lead dal funnel del foglio KPI negli ultimi 7 giorni, Signore, più 24 guide scaricate da Kajabi, in gran parte le stesse persone. Le ho aperto il foglio."},
   {k:['guide','guida','magnete','download'], who:'cso', tab:'foglio', t:()=>
