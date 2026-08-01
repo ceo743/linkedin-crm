@@ -348,16 +348,15 @@
     },
     {
       "data": "2026-08-01",
-      "ads_spesa": 189.45,
-      "ads_click": 256,
-      "ads_impressioni": 11567,
+      "ads_spesa": 245.49,
+      "ads_click": 377,
+      "ads_impressioni": 16168,
       "call": 1,
       "call_scartate": 0,
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 0,
-      "parziale": true,
-      "li_impressioni": 5874
+      "li_impressioni": 8614
     }
   ]
 }
