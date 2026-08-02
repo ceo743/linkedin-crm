@@ -1,5 +1,5 @@
 {
-    "aggiornato": "2026-08-02 05:43 (routine regolare; Control_Chrome caduto a metà run, foglio KPI letto via fallback Zapier)",
+    "aggiornato": "2026-08-02 18:10 (recupero agente risolutore dopo kill zombie-cleanup della routine 05:43; Control_Chrome irraggiungibile anche in questo giro, foglio KPI letto via fallback Zapier; LinkedIn non aggiornato, valori delle 05:43 mantenuti)",
     "periodo": "26 luglio – 1 agosto 2026",
     "kpi": {
         "follower": 233114,
@@ -219,12 +219,15 @@
             },
             "agenda": [
                 "Lun 3/8 · 09:30 — Meta Ads",
+                "Lun 3/8 · 11:00 — Meta Ads",
+                "Lun 3/8 · 11:30 — Meta Ads",
                 "Mar 4/8 · 10:00 — Meta Ads",
                 "Mer 5/8 · 09:00 — Meta Ads",
                 "Mer 5/8 · 09:30 — link LinkedIn (DC)",
                 "Mer 5/8 · 11:00 — link LinkedIn (DC)",
                 "Gio 6/8 · 12:00 — Meta Ads",
-                "Lun 10/8 · 09:30 — Meta Ads"
+                "Lun 10/8 · 09:30 — Meta Ads",
+                "Lun 10/8 · 11:00 — Meta Ads"
             ]
         }
     }
