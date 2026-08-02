@@ -102,10 +102,14 @@
       "nome": "Taplio — post virali",
       "sottotitolo": "Traduzione e schedulazione giornaliera",
       "colore": "pink",
-      "stato": "ok",
-      "ultima_run": "1 agosto, ore 10:38",
-      "prossima_run": "2 agosto, ore 05:01",
+      "stato": "attenzione",
+      "ultima_run": "2 agosto, ore 05:03",
+      "prossima_run": "3 agosto, ore 05:01",
       "verifiche": [
+        {
+          "ok": false,
+          "testo": "02/08 — sessione SALTATA: l'estensione Claude in Chrome non risultava connessa (5 tentativi ravvicinati, sempre stesso errore, non un blip transitorio). Verificato che non fosse Chrome in generale: il bridge nativo Control_Chrome rispondeva regolarmente, ma da solo non basta per questa routine (editor Lexical, upload FilePond e pulsante Schedule Post richiedono eventi di click/tasto reali che solo l'estensione genera) — non forzato per non rischiare di corrompere la coda, stesso limite gia' incontrato il 23/07 e 30/07. Nessuna ricerca Taplio effettuata, nessuna traduzione, nessuno schedule. Email inviata a Davide (usando Control_Chrome per aprire la bozza Gmail e cliccare Invia, dato che quel bridge era comunque disponibile) per chiedere di riconnettere l'estensione prima della prossima run"
+        },
         {
           "ok": true,
           "testo": "01/08 — post trovato (Mike Leber, \"Success is a poor teacher. It rewards what worked once and hides what stopped working\" / lettere 3D su parete bianca \"Stay coachable through all phases of life. Never stop learning and listening\", 13.429 reazioni reali verificate sul post originale su LinkedIn, non un repost, non celebrita), tradotto fedele in italiano, immagine tradotta (nano-banana, 2 tentativi: il primo ha reso testo misto inglese/italiano con refusi \"AE\" e \"ACOLTARE\" mancante una lettera, il secondo perfetto: parete testurizzata, lettere 3D, font, prospettiva e ombre tutti intatti) e schedulato ULTIMO in coda col pulsante blu (27 post, banner passato da \"26, last one Monday January 25th 2027\" a \"27, last one Monday February 1st 2027\") — verificato in Preview prima dello schedule: testo 1935/3000 completo, 1 sola immagine corretta. URL diretto recuperato dal pannello dettaglio di Taplio (icona apri originale) e confermato sul profilo LinkedIn dell'autore. Incidente minore risolto: 3 tentativi upload FilePond con serverId undefined (il 3o e' comunque riuscito lato server), 2 placeholder vuoti residui nel composer rimossi col cestino, poi allegata l'unica immagine corretta da My assets con verifica identita. Nessun problema da segnalare, email recap saltata come da regola 25/07"
@@ -145,7 +149,7 @@
           "url": "https://drive.google.com/drive/folders/1pmw78VurMkYlcn0YpyWEllSAqrzvUBaU"
         }
       ],
-      "nota": "01/08: giornata senza problemi, post schedulato per il 1 febbraio 2027. Restano aperti da prima (fuori scope oggi): refuso minore immagine Eric Partaker 19/10 e Ben Sands 13/07 senza immagine caricata."
+      "nota": "02/08: estensione Claude in Chrome disconnessa, run saltata, email inviata a Davide per riconnetterla. Restano aperti da prima (fuori scope oggi): refuso minore immagine Eric Partaker 19/10 e Ben Sands 13/07 senza immagine caricata."
     }
   ]
 }
