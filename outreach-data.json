@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-07-30T17:40:28+02:00",
+  "aggiornato": "2026-08-03T15:46:00+02:00",
   "contatti": [
     {
       "id": 1,
@@ -4978,6 +4978,32 @@
         "geografia": "Roma",
         "budget": "sconosciuto",
         "fonte": "dm-inbound"
+      }
+    },
+    {
+      "id": 160,
+      "nome": "Edoardo Freddi",
+      "profilo": "https://www.linkedin.com/in/edoardofreddi/",
+      "tipo": "dm-risposta",
+      "angolo": "ai",
+      "fonte": "inbound_dm",
+      "inviato": null,
+      "risposto": true,
+      "risposta_testo": "Ha chiesto di sentirsi con Davide, Davide ha chiesto num+email, lui ha dato solo email. Bot ha risposto chiedendo numero.",
+      "link_call_inviato": null,
+      "tipo_call": null,
+      "prenotato": null,
+      "note": "Lead inbound DM 2026-08-03. CEO & Founder FreedL Group (settore vino). Ha dato email: info@edoardofreddi.it. Manca numero. Follow-up: chiedere numero.",
+      "messaggio": "Ciao Edoardo, sono Stefania del team di Davide! Manca solo il numero di telefono e ti contatto subito per organizzare la call 😊",
+      "approvato": false,
+      "programmato": null,
+      "ruolo": "CEO & Founder @ FreedL Group",
+      "escluso": false,
+      "qualifica": {
+        "ruolo": "ceo_founder",
+        "geografia": "Lombardia",
+        "budget": "sconosciuto",
+        "fonte": "inbound_dm"
       }
     }
   ],
