@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-08-03T15:46:00+02:00",
+  "aggiornato": "2026-08-03T20:04:38+02:00",
   "contatti": [
     {
       "id": 1,
@@ -4987,16 +4987,16 @@
       "tipo": "dm-risposta",
       "angolo": "ai",
       "fonte": "inbound_dm",
-      "inviato": null,
+      "inviato": "2026-08-03T15:46:00+02:00",
       "risposto": true,
       "risposta_testo": "Ha chiesto di sentirsi con Davide, Davide ha chiesto num+email, lui ha dato solo email. Bot ha risposto chiedendo numero.",
       "link_call_inviato": null,
       "tipo_call": null,
       "prenotato": null,
-      "note": "Lead inbound DM 2026-08-03. CEO & Founder FreedL Group (settore vino). Ha dato email: info@edoardofreddi.it. Manca numero. Follow-up: chiedere numero.",
+      "note": "Lead inbound DM 2026-08-03. CEO & Founder FreedL Group (settore vino). Ha dato email: info@edoardofreddi.it. Manca numero. Follow-up: chiedere numero. | 03/08 20:xx (risolutore, audit CEO 19:35): verificato su LinkedIn reale, il messaggio risulta GIA INVIATO oggi alle 15:46 (visibile nel thread come messaggio di Davide Caiazzo/Stefania, ultimo turno conversazione). CRM non era stato aggiornato dalla sessione delle 15:30 dopo l invio (bug: invio riuscito, scrittura CRM approvato/inviato mancata). Corretto ora senza reinviare (nessun duplicato). In attesa che Edoardo risponda con il numero di telefono.",
       "messaggio": "Ciao Edoardo, sono Stefania del team di Davide! Manca solo il numero di telefono e ti contatto subito per organizzare la call 😊",
-      "approvato": false,
-      "programmato": null,
+      "approvato": true,
+      "programmato": "2026-08-03T15:46:00+02:00",
       "ruolo": "CEO & Founder @ FreedL Group",
       "escluso": false,
       "qualifica": {
