@@ -1,5 +1,5 @@
 {
-  "aggiornato": "1 agosto, ore 10:38",
+  "aggiornato": "3 agosto, ore 05:41",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
@@ -103,12 +103,12 @@
       "sottotitolo": "Traduzione e schedulazione giornaliera",
       "colore": "pink",
       "stato": "attenzione",
-      "ultima_run": "2 agosto, ore 05:03",
-      "prossima_run": "3 agosto, ore 05:01",
+      "ultima_run": "3 agosto, ore 05:41",
+      "prossima_run": "4 agosto, ore 05:01",
       "verifiche": [
         {
-          "ok": false,
-          "testo": "02/08 — sessione SALTATA: l'estensione Claude in Chrome non risultava connessa (5 tentativi ravvicinati, sempre stesso errore, non un blip transitorio). Verificato che non fosse Chrome in generale: il bridge nativo Control_Chrome rispondeva regolarmente, ma da solo non basta per questa routine (editor Lexical, upload FilePond e pulsante Schedule Post richiedono eventi di click/tasto reali che solo l'estensione genera) — non forzato per non rischiare di corrompere la coda, stesso limite gia' incontrato il 23/07 e 30/07. Nessuna ricerca Taplio effettuata, nessuna traduzione, nessuno schedule. Email inviata a Davide (usando Control_Chrome per aprire la bozza Gmail e cliccare Invia, dato che quel bridge era comunque disponibile) per chiedere di riconnettere l'estensione prima della prossima run"
+          "ok": true,
+          "testo": "03/08 — nessun post schedulato oggi: incidente trovato e risolto in sessione (primo candidato, Mike Leber \"kindness isn't a strategy, but a way of life\", era un duplicato per contenuto del post gia' usato il 28/07 con activity ID diverso — scoperto DOPO averlo gia' tradotto/caricato/schedulato in fondo alla coda, rimosso subito: de-schedulato, bozza eliminata, coda verificata tornata a 27 post identica al log del 01/08). Cercati poi altri candidati con 4 query diverse su Explore e For You, sort Most Relevant e Likes: nessun autore non famoso sopra 1500 like reali (max 823). Confermato che il sort \"Likes\" di Taplio oggi mostra sempre lo stesso pool fisso di celebrita' indipendentemente da query/topic — bug gia' noto, oggi 0 variazione su 3 ricerche diverse. Email di avviso inviata e verificata in Inviate. Estensione Claude in Chrome tornata regolarmente connessa oggi (il problema del 02/08 non si e' ripresentato)"
         },
         {
           "ok": true,
@@ -149,7 +149,7 @@
           "url": "https://drive.google.com/drive/folders/1pmw78VurMkYlcn0YpyWEllSAqrzvUBaU"
         }
       ],
-      "nota": "02/08: estensione Claude in Chrome disconnessa, run saltata, email inviata a Davide per riconnetterla. Restano aperti da prima (fuori scope oggi): refuso minore immagine Eric Partaker 19/10 e Ben Sands 13/07 senza immagine caricata."
+      "nota": "03/08: nessun post trovato sopra soglia 1500 like (bug sort Likes confermato ancora oggi, pool fisso di celebrita'); incidente duplicato Mike Leber individuato e risolto in autonomia. Restano aperti da prima (fuori scope oggi): refuso minore immagine Eric Partaker 19/10 e Ben Sands 13/07 senza immagine caricata."
     }
   ]
 }
