@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-08-04T13:47:07+02:00",
+  "aggiornato": "2026-08-04T14:02:17+02:00",
   "account": {
     "nome": "Consulenza 1:1",
     "obiettivo": "Analisi gratuita + call su Calendly",
@@ -25,6 +25,34 @@
       "cpc": 1.14,
       "call": 32,
       "costo_call": 66.75
+    },
+    {
+      "id": "120248251324670348",
+      "nome": "Video 3 · La Sfida",
+      "titolo": "Accetti la Sfida LinkedIn? 30 Min Gratis",
+      "immagine": "creativi/sfida.jpg",
+      "stato": "ACTIVE",
+      "spesa": 576.94,
+      "impressions": 29329,
+      "click": 629,
+      "ctr": 2.14,
+      "cpc": 0.92,
+      "call": 2,
+      "costo_call": 288.47
+    },
+    {
+      "id": "120254680178490348",
+      "nome": "Video 8 · Agosto Palco Vuoto",
+      "titolo": "Ad Agosto il Palco È Vuoto: Prenditelo — 30 Min Gratis",
+      "immagine": "creativi/agosto-palco-vuoto.jpg",
+      "stato": "ACTIVE",
+      "spesa": 306.84,
+      "impressions": 17073,
+      "click": 472,
+      "ctr": 2.76,
+      "cpc": 0.65,
+      "call": 7,
+      "costo_call": 43.83
     },
     {
       "id": "120254235680370348",
@@ -69,18 +97,18 @@
       "costo_call": null
     },
     {
-      "id": "120254680178490348",
-      "nome": "Video 8 · Agosto Palco Vuoto",
-      "titolo": "Ad Agosto il Palco È Vuoto: Prenditelo — 30 Min Gratis",
-      "immagine": "creativi/agosto-palco-vuoto.jpg",
+      "id": "120248251324660348",
+      "nome": "Video 1 · I Risultati (25.03)",
+      "titolo": "Il Metodo LinkedIn da €1,2M — 30 Min Gratis",
+      "immagine": "creativi/risultati-old.jpg",
       "stato": "ACTIVE",
-      "spesa": 306.84,
-      "impressions": 17073,
-      "click": 472,
-      "ctr": 2.76,
-      "cpc": 0.65,
-      "call": 7,
-      "costo_call": 43.83
+      "spesa": 52.44,
+      "impressions": 1112,
+      "click": 34,
+      "ctr": 3.06,
+      "cpc": 1.54,
+      "call": 0,
+      "costo_call": null
     },
     {
       "id": "120254685094430348",
@@ -118,16 +146,16 @@
       "descrizione": "oggi",
       "giorni": 1,
       "totali": {
-        "spesa": 96.49,
-        "impressions": 2693,
-        "reach": 2211,
-        "click": 86,
-        "ctr": 3.19,
-        "cpc": 1.12,
-        "cpm": 35.83,
-        "frequency": 1.22,
+        "spesa": 99.42,
+        "impressions": 2788,
+        "reach": 2316,
+        "click": 92,
+        "ctr": 3.3,
+        "cpc": 1.08,
+        "cpm": 35.66,
+        "frequency": 1.2,
         "call": 3,
-        "costo_call_migliore": 32.16
+        "costo_call_migliore": 33.14
       },
       "campagne": [
         {
@@ -135,17 +163,17 @@
           "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1",
           "stato": "ACTIVE",
           "obiettivo": "Contatti",
-          "spesa": 96.49,
-          "impressions": 2693,
-          "reach": 2211,
-          "frequency": 1.22,
-          "click": 86,
-          "ctr": 3.19,
-          "cpc": 1.12,
-          "cpm": 35.83,
+          "spesa": 99.42,
+          "impressions": 2788,
+          "reach": 2316,
+          "frequency": 1.2,
+          "click": 92,
+          "ctr": 3.3,
+          "cpc": 1.08,
+          "cpm": 35.66,
           "risultati": 3,
           "tipo_risultato": "call prenotate",
-          "costo_risultato": 32.16
+          "costo_risultato": 33.14
         }
       ]
     },
@@ -262,16 +290,16 @@
       "descrizione": "tutto lo storico (dal 25 marzo 2026)",
       "giorni": 133,
       "totali": {
-        "spesa": 10514.67,
-        "impressions": 481760,
-        "reach": 143846,
-        "click": 12233,
+        "spesa": 10517.6,
+        "impressions": 481855,
+        "reach": 148817,
+        "click": 12239,
         "ctr": 2.54,
         "cpc": 0.86,
         "cpm": 21.83,
-        "frequency": 3.35,
+        "frequency": 3.24,
         "call": 161,
-        "costo_call_migliore": 62.61
+        "costo_call_migliore": 62.63
       },
       "campagne": [
         {
@@ -279,17 +307,17 @@
           "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1",
           "stato": "ACTIVE",
           "obiettivo": "Contatti",
-          "spesa": 9955.7,
-          "impressions": 467714,
-          "reach": 134669,
-          "frequency": 3.47,
-          "click": 11913,
+          "spesa": 9958.63,
+          "impressions": 467809,
+          "reach": 139947,
+          "frequency": 3.34,
+          "click": 11919,
           "ctr": 2.55,
           "cpc": 0.84,
           "cpm": 21.29,
           "risultati": 159,
           "tipo_risultato": "call prenotate",
-          "costo_risultato": 62.61
+          "costo_risultato": 62.63
         },
         {
           "id": "120252595942170348",
@@ -298,8 +326,8 @@
           "obiettivo": "Contatti",
           "spesa": 558.97,
           "impressions": 14046,
-          "reach": 9177,
-          "frequency": 1.53,
+          "reach": 8870,
+          "frequency": 1.58,
           "click": 320,
           "ctr": 2.28,
           "cpc": 1.75,
