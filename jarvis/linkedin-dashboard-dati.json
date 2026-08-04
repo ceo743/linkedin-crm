@@ -1,209 +1,235 @@
 {
-  "aggiornato": "2026-08-03 05:44",
-  "periodo": "27 luglio – 2 agosto 2026",
-  "kpi": {
-    "follower": 233114,
-    "follower_delta": "+127",
-    "impressioni": 90409,
-    "impressioni_delta": "-71%",
-    "reach": 38685,
-    "interazioni": 348,
-    "engagement": "0,45%",
-    "reazioni": 260,
-    "commenti": 65,
-    "call": 19,
-    "call_target": 17
-  },
-  "interazioni_composizione": [
-    {
-      "label": "Reazioni",
-      "n": 260
+    "aggiornato": "2026-08-04 14:22",
+    "periodo": "28 luglio – 3 agosto 2026",
+    "kpi": {
+        "follower": 233108,
+        "follower_delta": "+126",
+        "impressioni": 84777,
+        "impressioni_delta": "+45%",
+        "reach": 37849,
+        "interazioni": 397,
+        "engagement": "0,47%",
+        "reazioni": 308,
+        "commenti": 75,
+        "call": 19,
+        "call_target": 17
     },
-    {
-      "label": "Commenti",
-      "n": 65
-    },
-    {
-      "label": "Click sui link",
-      "n": 10
-    },
-    {
-      "label": "Salvataggi",
-      "n": 16
-    },
-    {
-      "label": "Invii in privato",
-      "n": 6
-    },
-    {
-      "label": "Condivisioni",
-      "n": 1
+    "interazioni_composizione": [
+        {
+            "label": "Reazioni",
+            "n": 308
+        },
+        {
+            "label": "Commenti",
+            "n": 75
+        },
+        {
+            "label": "Click sui link",
+            "n": 12
+        },
+        {
+            "label": "Salvataggi",
+            "n": 13
+        },
+        {
+            "label": "Invii in privato",
+            "n": 1
+        },
+        {
+            "label": "Condivisioni",
+            "n": 0
+        }
+    ],
+    "top_post": [
+        {
+            "titolo": "LinkedIn nasconde i commenti scritti con l'IA: come restare visibile",
+            "tema": "articolo · organico",
+            "impressioni": 16865,
+            "interazioni": 25,
+            "url": "https://www.linkedin.com/analytics/creator/top-posts/"
+        },
+        {
+            "titolo": "Post personale — otto anni con mia moglie, il suo compleanno in piscina",
+            "tema": "storia · organico",
+            "impressioni": 14153,
+            "interazioni": 62,
+            "url": "https://www.linkedin.com/analytics/creator/top-posts/"
+        },
+        {
+            "titolo": "La parola data non vale più niente: le regole che vengono dalla famiglia",
+            "tema": "post · organico",
+            "impressioni": 12297,
+            "interazioni": 149,
+            "url": "https://www.linkedin.com/analytics/creator/top-posts/"
+        }
+    ],
+    "agenti": {
+        "writer": {
+            "stato": "attiva",
+            "pills": [
+                {
+                    "v": "1/giorno",
+                    "l": "cadenza"
+                },
+                {
+                    "v": "05:01",
+                    "l": "orario"
+                }
+            ]
+        },
+        "outreach": {
+            "stato": "attiva",
+            "pills": [
+                {
+                    "v": "59",
+                    "l": "contatti"
+                },
+                {
+                    "v": "59",
+                    "l": "inviati"
+                },
+                {
+                    "v": "15",
+                    "l": "risposte"
+                }
+            ],
+            "ultime_risposte": [
+                {
+                    "nome": "",
+                    "ruolo": "Commercialista (Cosenza)",
+                    "data": "recente"
+                },
+                {
+                    "nome": "",
+                    "ruolo": "attività immobiliare propria",
+                    "data": "recente"
+                },
+                {
+                    "nome": "",
+                    "ruolo": "Applied Management",
+                    "data": "recente"
+                },
+                {
+                    "nome": "",
+                    "ruolo": "",
+                    "data": "recente"
+                },
+                {
+                    "nome": "",
+                    "ruolo": "",
+                    "data": "recente"
+                }
+            ]
+        },
+        "inbox": {
+            "stato": "attiva",
+            "pills": [
+                {
+                    "v": "9–17",
+                    "l": "fascia oraria"
+                }
+            ],
+            "note": "Risposte DM attive (9:30/11:30/15:30/17:30), risposte ai commenti attive (9:00–17:00). Entrambe operative."
+        },
+        "newsletter": {
+            "stato": "attiva",
+            "pills": [
+                {
+                    "v": "1/sett",
+                    "l": "cadenza"
+                },
+                {
+                    "v": "mer 07:30",
+                    "l": "produzione"
+                }
+            ],
+            "in_corso": "Guida 009 — «Analisi Competitor IA LinkedIn» — ultima prodotta, nessuna nuova guida prodotta questa settimana",
+            "ultime": [
+                "#008 — «CRM IA LinkedIn»",
+                "#007 — «Smart Links IA LinkedIn»"
+            ]
+        },
+        "blog": {
+            "stato": "attiva",
+            "pills": [
+                {
+                    "v": "2/giorno",
+                    "l": "articoli"
+                },
+                {
+                    "v": "322",
+                    "l": "a catalogo (audit 27/7, invariato)"
+                },
+                {
+                    "v": "9",
+                    "l": "pubblicati questa sett. (28/7-3/8)"
+                }
+            ],
+            "articoli": [
+                {
+                    "data": "4 agosto",
+                    "titolo": "Chi Visita la Tua Pagina Aziendale LinkedIn nel 2026",
+                    "url": "https://www.davidecaiazzo.it/blog/chi-visita-la-tua-pagina-aziendale-linkedin-nel-2026"
+                },
+                {
+                    "data": "3 agosto (sera)",
+                    "titolo": "LinkedIn per Supply Chain Manager nel 2026: Trovare Clienti",
+                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-supply-chain-manager-nel-2026-trovare-clienti"
+                },
+                {
+                    "data": "3 agosto (mattina)",
+                    "titolo": "LinkedIn per Operations Manager nel 2026: Trovare Clienti",
+                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-operations-manager-nel-2026-trovare-clienti"
+                },
+                {
+                    "data": "2 agosto (sera)",
+                    "titolo": "LinkedIn per Finance Manager nel 2026: Trovare Clienti",
+                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-finance-manager-nel-2026-trovare-clienti"
+                },
+                {
+                    "data": "2 agosto (mattina)",
+                    "titolo": "LinkedIn per Direttore Commerciale nel 2026: Trovare Clienti",
+                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-direttore-commerciale-nel-2026-trovare-clienti"
+                },
+                {
+                    "data": "1 agosto (sera)",
+                    "titolo": "LinkedIn per Business Analyst nel 2026: Come Trovare Clienti",
+                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-business-analyst-nel-2026-come-trovare-clienti"
+                }
+            ]
+        },
+        "analyst": {
+            "stato": "attiva",
+            "pills": [
+                {
+                    "v": "05:00",
+                    "l": "kpi giorno"
+                },
+                {
+                    "v": "3x/g",
+                    "l": "audit ceo"
+                }
+            ],
+            "ieri": {
+                "data": "3 agosto",
+                "call": 3,
+                "spesa": "222,10€",
+                "click": 382,
+                "dettaglio": "3 prenotazioni nuove arrivate quel giorno (tutte Meta Ads), nessuna scartata; 2 guide scaricate, 0 lead funnel (verificato riga per riga sul foglio KPI)"
+            },
+            "agenda": [
+                "Mer 5/8 · 09:00 — Meta Ads",
+                "Mer 5/8 · 09:30 — link LinkedIn (DC)",
+                "Mer 5/8 · 11:00 — link LinkedIn (DC)",
+                "Mer 5/8 · 11:30 — Chatbot del sito",
+                "Mer 5/8 · 12:00 — Meta Ads",
+                "Gio 6/8 · 11:30 — Meta Ads",
+                "Gio 6/8 · 12:00 — Meta Ads",
+                "Lun 10/8 · 09:30 — Meta Ads",
+                "Lun 10/8 · 11:00 — Meta Ads",
+                "Mar 11/8 · 09:30 — Meta Ads",
+                "Mar 11/8 · 12:00 — Meta Ads"
+            ]
+        }
     }
-  ],
-  "top_post": [
-    {
-      "titolo": "LinkedIn ha iniziato a nascondere i commenti scritti con l'IA",
-      "tema": "articolo · organico",
-      "impressioni": 29978,
-      "interazioni": 93,
-      "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7482771274709024768/"
-    },
-    {
-      "titolo": "Post personale — storia, compleanno moglie",
-      "tema": "storia · organico",
-      "impressioni": 16155,
-      "interazioni": 100,
-      "url": "https://www.linkedin.com/feed/update/urn:li:share:7484838893167656960/"
-    },
-    {
-      "titolo": "Il mio blog pubblica 4 articoli al giorno. Io non scrivo una riga.",
-      "tema": "post · organico",
-      "impressioni": 5109,
-      "interazioni": 5,
-      "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7484103257691209728/"
-    }
-  ],
-  "agenti": {
-    "writer": {
-      "stato": "attiva",
-      "pills": [
-        {
-          "v": "1/giorno",
-          "l": "cadenza"
-        },
-        {
-          "v": "05:01",
-          "l": "orario"
-        }
-      ]
-    },
-    "outreach": {
-      "stato": "attiva",
-      "pills": [
-        {
-          "v": "59",
-          "l": "contatti"
-        },
-        {
-          "v": "59",
-          "l": "inviati"
-        },
-        {
-          "v": "15",
-          "l": "risposte"
-        }
-      ],
-      "ultime_risposte": [
-        {
-          "nome": "",
-          "ruolo": "Commercialista (Cosenza)",
-          "data": "recente"
-        },
-        {
-          "nome": "",
-          "ruolo": "attività immobiliare propria",
-          "data": "recente"
-        },
-        {
-          "nome": "",
-          "ruolo": "Applied Management",
-          "data": "recente"
-        },
-        {
-          "nome": "",
-          "ruolo": "",
-          "data": "recente"
-        },
-        {
-          "nome": "",
-          "ruolo": "",
-          "data": "recente"
-        }
-      ]
-    },
-    "inbox": {
-      "stato": "attiva",
-      "pills": [
-        {
-          "v": "9–17",
-          "l": "fascia oraria"
-        }
-      ],
-      "note": "Risposte DM attive (9:30/11:30/15:30/17:30), risposte ai commenti attive (9:00–17:00). Entrambe operative."
-    },
-    "newsletter": {
-      "stato": "attiva",
-      "pills": [
-        {
-          "v": "1/sett",
-          "l": "cadenza"
-        },
-        {
-          "v": "mer 07:30",
-          "l": "produzione"
-        }
-      ],
-      "in_corso": "Guida 009 — «Analisi Competitor IA LinkedIn» — ultima prodotta, nessuna nuova guida prodotta questa settimana",
-      "ultime": [
-        "#008 — «CRM IA LinkedIn»",
-        "#007 — «Smart Links IA LinkedIn»"
-      ]
-    },
-    "blog": {
-      "stato": "attiva",
-      "pills": [
-        {
-          "v": "2/giorno",
-          "l": "articoli"
-        },
-        {
-          "v": "322",
-          "l": "a catalogo (audit 27/7, invariato)"
-        },
-        {
-          "v": "1",
-          "l": "pubblicati questa sett. (27/7-2/8) — guasto Control Chrome 30/7 e 2/8"
-        }
-      ],
-      "articoli": [
-        {
-          "data": "28 luglio",
-          "titolo": "Commenti LinkedIn e IA nel 2026: Come Non Perdere Visibilità",
-          "url": "https://www.davidecaiazzo.it/blog/commenti-linkedin-e-ia-nel-2026-come-non-perdere-visibilita"
-        }
-      ]
-    },
-    "analyst": {
-      "stato": "attiva",
-      "pills": [
-        {
-          "v": "05:00",
-          "l": "kpi giorno"
-        },
-        {
-          "v": "3x/g",
-          "l": "audit ceo"
-        }
-      ],
-      "ieri": {
-        "data": "2 agosto",
-        "call": 3,
-        "spesa": "307,18€",
-        "click": 462,
-        "dettaglio": "3 prenotazioni nuove arrivate quel giorno (tutte Meta Ads), nessuna scartata; 3 guide scaricate, 0 lead funnel"
-      },
-      "agenda": [
-        "Lun 3/8 · 09:30 — Meta Ads",
-        "Lun 3/8 · 11:00 — Meta Ads",
-        "Lun 3/8 · 11:30 — Meta Ads",
-        "Mar 4/8 · 10:00 — Meta Ads",
-        "Mer 5/8 · 09:00 — Meta Ads",
-        "Mer 5/8 · 09:30 — link LinkedIn (DC)",
-        "Mer 5/8 · 11:00 — link LinkedIn (DC)",
-        "Gio 6/8 · 12:00 — Meta Ads",
-        "Lun 10/8 · 09:30 — Meta Ads",
-        "Lun 10/8 · 11:00 — Meta Ads"
-      ]
-    }
-  }
 }
