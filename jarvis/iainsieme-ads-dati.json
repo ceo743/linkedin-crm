@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-08-04T14:02:17+02:00",
+  "aggiornato": "2026-08-05T07:07:23+02:00",
   "campagna": {
     "nome": "IAinsieme Test 3 fasce",
     "stato": "PAUSED",
@@ -107,6 +107,11 @@
     },
     {
       "data": "2026-08-04",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-08-05",
       "spesa": 0,
       "lead": 0
     }
