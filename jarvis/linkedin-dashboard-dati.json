@@ -1,6 +1,6 @@
 {
-    "aggiornato": "2026-08-04 14:22",
-    "periodo": "28 luglio – 3 agosto 2026",
+    "aggiornato": "2026-08-05 05:50 (LinkedIn live: 4/8, non aggiornato oggi — tab occupata da altra automazione)",
+    "periodo": "29 luglio – 4 agosto 2026",
     "kpi": {
         "follower": 233108,
         "follower_delta": "+126",
@@ -11,8 +11,8 @@
         "engagement": "0,47%",
         "reazioni": 308,
         "commenti": 75,
-        "call": 19,
-        "call_target": 17
+        "call": 17,
+        "call_target": 16
     },
     "interazioni_composizione": [
         {
@@ -157,17 +157,22 @@
                     "l": "articoli"
                 },
                 {
-                    "v": "322",
-                    "l": "a catalogo (audit 27/7, invariato)"
+                    "v": "352",
+                    "l": "a catalogo (audit 3/8)"
                 },
                 {
-                    "v": "9",
-                    "l": "pubblicati questa sett. (28/7-3/8)"
+                    "v": "28",
+                    "l": "pubblicati questa sett. (29/7-4/8)"
                 }
             ],
             "articoli": [
                 {
-                    "data": "4 agosto",
+                    "data": "4 agosto (sera)",
+                    "titolo": "LinkedIn per Giornalisti nel 2026: Come Trovare Clienti",
+                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-giornalisti-nel-2026-come-trovare-clienti"
+                },
+                {
+                    "data": "4 agosto (mattina)",
                     "titolo": "Chi Visita la Tua Pagina Aziendale LinkedIn nel 2026",
                     "url": "https://www.davidecaiazzo.it/blog/chi-visita-la-tua-pagina-aziendale-linkedin-nel-2026"
                 },
@@ -190,11 +195,6 @@
                     "data": "2 agosto (mattina)",
                     "titolo": "LinkedIn per Direttore Commerciale nel 2026: Trovare Clienti",
                     "url": "https://www.davidecaiazzo.it/blog/linkedin-per-direttore-commerciale-nel-2026-trovare-clienti"
-                },
-                {
-                    "data": "1 agosto (sera)",
-                    "titolo": "LinkedIn per Business Analyst nel 2026: Come Trovare Clienti",
-                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-business-analyst-nel-2026-come-trovare-clienti"
                 }
             ]
         },
@@ -211,16 +211,14 @@
                 }
             ],
             "ieri": {
-                "data": "3 agosto",
+                "data": "4 agosto",
                 "call": 3,
-                "spesa": "222,10€",
-                "click": 382,
-                "dettaglio": "3 prenotazioni nuove arrivate quel giorno (tutte Meta Ads), nessuna scartata; 2 guide scaricate, 0 lead funnel (verificato riga per riga sul foglio KPI)"
+                "spesa": "249,46€",
+                "click": 376,
+                "dettaglio": "3 prenotazioni nuove arrivate quel giorno (chatbot del sito, Meta Ads con 2 riprenotazioni stesso giorno, guida lead magnet), nessuna scartata; 5 guide scaricate, 0 lead funnel (verificato riga per riga sul foglio KPI)"
             },
             "agenda": [
-                "Mer 5/8 · 09:00 — Meta Ads",
-                "Mer 5/8 · 09:30 — link LinkedIn (DC)",
-                "Mer 5/8 · 11:00 — link LinkedIn (DC)",
+                "Mer 5/8 · 09:30 — Diretto/non tracciato",
                 "Mer 5/8 · 11:30 — Chatbot del sito",
                 "Mer 5/8 · 12:00 — Meta Ads",
                 "Gio 6/8 · 11:30 — Meta Ads",
@@ -228,7 +226,8 @@
                 "Lun 10/8 · 09:30 — Meta Ads",
                 "Lun 10/8 · 11:00 — Meta Ads",
                 "Mar 11/8 · 09:30 — Meta Ads",
-                "Mar 11/8 · 12:00 — Meta Ads"
+                "Mar 11/8 · 12:00 — Meta Ads",
+                "Gio 13/8 · 12:00 — Guida/lead magnet"
             ]
         }
     }
