@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-08-03T20:04:38+02:00",
+  "aggiornato": "2026-08-07T09:49:13+02:00",
   "contatti": [
     {
       "id": 1,
@@ -4811,7 +4811,7 @@
         "quando": "2026-07-21",
         "cosa": "Se Giuseppe non ha scritto altro nel thread: chiudere silenzioso (nessun altro tocco), note='trattativa fredda, nessuna risposta dopo 2 riprese'. Se risponde: gestione risposta calda completa."
       },
-      "note": "2026-07-14T18:38:52 LEAD CALDO INBOUND: DM spontaneo oggi 10:10 (Premium Open Profile) 'vorremmo sviluppare visibilita e contatti, puoi darci indicazioni? GIUSTO?'. Rimasto NON gestito dalle routine fino alle 16:2x, segnalato da Davide (GRAVE). Gestito da chat: verificatore INVIA, risposta Stefania con call proposta a parole (no link finche non dice si). Tema = LinkedIn -> Calendly DC quando accetta. | 2026-07-16T20:30:23.287255+02:00 PRESIDIO: prossima_azione scaduta verificata (nessuna nuova risposta nel thread), tocco leggero DA INVIARE ma NON eseguito in questo giro per tempo massimo 15min, riprendere al prossimo controllo. | 2026-07-17T09:51:20.172357+02:00 PRESIDIO SCADENZE (manuale su richiesta Davide): verificato thread reale, nessuna nuova risposta dal 14/07 (lastActivityAt = nostro ultimo invio). Inviato tocco leggero di ripresa SENZA nuovo link Calendly (gia inviato). Verificatore indipendente: INVIA. Messaggio confermato ultimo nel thread alle 09:50.",
+      "note": "2026-07-14T18:38:52 LEAD CALDO INBOUND: DM spontaneo oggi 10:10 (Premium Open Profile) 'vorremmo sviluppare visibilita e contatti, puoi darci indicazioni? GIUSTO?'. Rimasto NON gestito dalle routine fino alle 16:2x, segnalato da Davide (GRAVE). Gestito da chat: verificatore INVIA, risposta Stefania con call proposta a parole (no link finche non dice si). Tema = LinkedIn -> Calendly DC quando accetta. | 2026-07-16T20:30:23.287255+02:00 PRESIDIO: prossima_azione scaduta verificata (nessuna nuova risposta nel thread), tocco leggero DA INVIARE ma NON eseguito in questo giro per tempo massimo 15min, riprendere al prossimo controllo. | 2026-07-17T09:51:20.172357+02:00 PRESIDIO SCADENZE (manuale su richiesta Davide): verificato thread reale, nessuna nuova risposta dal 14/07 (lastActivityAt = nostro ultimo invio). Inviato tocco leggero di ripresa SENZA nuovo link Calendly (gia inviato). Verificatore indipendente: INVIA. Messaggio confermato ultimo nel thread alle 09:50. | 2026-08-07: follow-up Stefania inviato (non aveva prenotato dopo scambio 28/lug).",
       "doppio_controllo": {
         "esito": "ok",
         "quando": "2026-07-17T09:51:20.172357+02:00",
@@ -5004,6 +5004,32 @@
         "geografia": "Lombardia",
         "budget": "sconosciuto",
         "fonte": "inbound_dm"
+      }
+    },
+    {
+      "id": 161,
+      "nome": "Giulia Adriana Di Fonzo",
+      "profilo": "",
+      "tipo": "inbound_dm_diretto",
+      "angolo": "linkedin",
+      "fonte": "inbound_dm_linkedin",
+      "inviato": true,
+      "risposto": true,
+      "risposta_testo": "Siquap@gmail.com\n3925982473",
+      "link_call_inviato": null,
+      "tipo_call": "consulenza-strategica-gratuita-linkedin-dc-academy",
+      "prenotato": null,
+      "note": "Lead inbound da DM LinkedIn — 2026-08-07. Ha lasciato email (Siquap@gmail.com) e tel (3925982473) su richiesta di Davide. Notificato team (Stefania/Tania/Roberta) via email.",
+      "messaggio": "Ciao Davide, sarei interessata a comprendere meglio il tuo metodo di acquisizione clienti.",
+      "approvato": true,
+      "programmato": "2026-08-07T09:49:13+02:00",
+      "ruolo": "da verificare",
+      "escluso": false,
+      "qualifica": {
+        "ruolo": "da verificare",
+        "geografia": "da verificare",
+        "budget": "sconosciuto",
+        "fonte": "inbound_dm_linkedin"
       }
     }
   ],
