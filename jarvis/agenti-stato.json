@@ -1,5 +1,5 @@
 {
-  "aggiornato": "4 agosto, ore 14:30",
+  "aggiornato": "7 agosto, ore 09:50",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
@@ -70,32 +70,36 @@
       "sottotitolo": "LinkedIn e IA — verifica prenotazioni e CTA",
       "colore": "amber",
       "stato": "attenzione",
-      "ultima_run": "31 luglio, ore 13:55",
-      "prossima_run": "7 agosto, ore 9:14",
+      "ultima_run": "7 agosto, ore 09:50",
+      "prossima_run": "14 agosto, ore 9:14",
       "verifiche": [
         {
-          "ok": true,
-          "testo": "Giro eseguito a mano (scheduler fermo 30/07 21:05 → 31/07 13:26): dati dal grezzo tab Lead foglio KPI via Zapier"
-        },
-        {
-          "ok": true,
-          "testo": "Guida #004 (28/07) guida-commenti-ia-linkedin: 37 optin unici (43 righe, esclusi 2 test); trend optin 50→52→43→37"
-        },
-        {
           "ok": false,
-          "testo": "Prenotazioni: 1 (Gardis, redirect post-optin) ma annullata da noi, report Stefania = NON IN TARGET → 0 in target; bottone PDF sempre 0"
+          "testo": "Foglio KPI confermato INAFFIDABILE per questo conteggio (pivot filtrato fino a maggio 2026, tab Lead troncato dal tool Drive) — abbandonato, SKILL.md corretto per usare l'API Calendly via Zapier (list_events_with_invitees) da qui in poi"
         },
         {
           "ok": true,
-          "testo": "CMO: nessuna modifica CTA brochure; priorità nurturing 7 email, poi redirect post-optin ovunque, hook #005 in chiave risultato economico"
+          "testo": "Prenotazioni con utm_medium=cta_finale/cta_intermedia (bottone dentro il PDF): 0 su tutte le 4 guide recenti (#002-#005), verificato via API Calendly settimana per settimana dal 07/07 al 04/08 — 4ª conferma di fila dello stesso zero (14/07, 17/07, 31/07, oggi)"
         },
         {
           "ok": true,
-          "testo": "Sintesi inviata a Davide via email (id 19fb80383c5aaaa8, oggetto Newsletter CTA review — 31/07/2026)"
+          "testo": "Guida #005 (04/08, guida-qualificare-contatti-ia-linkedin, questa settimana): 0 prenotazioni di qualsiasi tipo nella finestra 04-11/08"
+        },
+        {
+          "ok": true,
+          "testo": "CMO: causa nota dal 14/07 (manca nurturing dopo l'optin, non è un problema di copy) — non ripropone restyling CTA, chiede a Davide di sbloccare le 3 decisioni pendenti"
+        },
+        {
+          "ok": true,
+          "testo": "Email di follow-up ⚠️ inviata a Davide (via SMTP, oggetto \"Newsletter CTA review — 07/08/2026 (4° giro...)\"): 3 decisioni A/B/C ancora senza risposta da 31/07 (7+ giorni)"
+        },
+        {
+          "ok": true,
+          "testo": "SKILL.md della routine corretto: URL Calendly reale (dc-academy-team/consulenza-strategica-gratuita-linkedin-dc-academy, non più consulenza-automazioni), metodo di conteggio spostato da Sheet a API Calendly"
         }
       ],
       "azioni": [],
-      "nota": "3 sì/no attesi da Davide: A) nurturing 7 email B) redirect post-optin su tutte le guide C) hook #005 riformulato."
+      "nota": "Stesse 3 decisioni A/B/C attese da Davide da 3 settimane (nurturing 7 email, redirect post-optin ovunque, hook economico) — la CTA nel PDF è diagnosticata, non serve rimisurarla ogni venerdì finché non arriva una risposta."
     },
     {
       "id": "taplio-post-virali",
@@ -103,44 +107,16 @@
       "sottotitolo": "Traduzione e schedulazione giornaliera",
       "colore": "pink",
       "stato": "ok",
-      "ultima_run": "5 agosto, ore 05:22",
-      "prossima_run": "6 agosto, ore 05:01",
+      "ultima_run": "7 agosto, ore 06:52",
+      "prossima_run": "8 agosto, ore 05:01",
       "verifiche": [
         {
           "ok": true,
-          "testo": "05/08 — post trovato (Victoria Repa, \"One of the fastest ways to destroy a strong team\" / cartellone su facciata edificio parigino \"Nothing will kill a great employee faster than watching you tolerate a bad one\", 2.295 reazioni reali verificate su LinkedIn, non celebrità), trovato con Explore more dopo un primo tentativo su \"high ticket clients senza cold outreach\" senza candidati sopra soglia (bug sort Likes confermato ancora: pool fisso di celebrità — Brené Brown, Lewis Hamilton, Barack Obama). Tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, cartellone/font/texture pietra/firma tutti intatti) e schedulato ULTIMO in coda (28 post, banner passato da \"27, last one Monday February 8th 2027\" a \"28, last one Monday February 15th 2027\") — verificato in Edit: testo 2561/3000 completo, 1 sola immagine ed è quella di oggi. Incidente minore risolto: 3 tentativi upload FilePond con serverId undefined (riusciti comunque lato server) hanno lasciato 2 placeholder vuoti nel composer, rimossi col cestino, immagine corretta allegata da My assets con verifica identità. Bug noto rincontrato: l'icona Preview in coda ha aperto il composer placeholder vuoto \"No post available yet\" — chiuso subito con Cancel senza toccare il pulsante blu, verificato invece con Edit. Nessun problema da segnalare, email recap saltata come da regola 25/07"
-        },
-        {
-          "ok": true,
-          "testo": "04/08 — run delle 05:01 partita in ritardo alle 08:40 e morta a metà DOPO aver schedulato il post, PRIMA di log e verifiche finali. Recupero del risolutore (ore 14:30): con la procedura \"Sessione morta a metà\" trovato il post già in coda (Melissa Grabiner, \"I've hired thousands of people throughout my career\", 11.490 reazioni verificate, immagine cartellone \"BE HUMBLE\" tradotta \"SII UMILE\" identica all'originale) — verificato in Preview: testo completo 1283/3000 senza errori, 1 sola immagine ed è quella di oggi, ULTIMO in coda (banner \"27 posts scheduled, last one Monday February 8th 2027\"). Log completato, nessun duplicato, nessun server fantasma. Nessuna email: nessuna azione richiesta"
-        },
-        {
-          "ok": true,
-          "testo": "03/08 — nessun post schedulato oggi: incidente trovato e risolto in sessione (primo candidato, Mike Leber \"kindness isn't a strategy, but a way of life\", era un duplicato per contenuto del post gia' usato il 28/07 con activity ID diverso — scoperto DOPO averlo gia' tradotto/caricato/schedulato in fondo alla coda, rimosso subito: de-schedulato, bozza eliminata, coda verificata tornata a 27 post identica al log del 01/08). Cercati poi altri candidati con 4 query diverse su Explore e For You, sort Most Relevant e Likes: nessun autore non famoso sopra 1500 like reali (max 823). Confermato che il sort \"Likes\" di Taplio oggi mostra sempre lo stesso pool fisso di celebrita' indipendentemente da query/topic — bug gia' noto, oggi 0 variazione su 3 ricerche diverse. Email di avviso inviata e verificata in Inviate. Estensione Claude in Chrome tornata regolarmente connessa oggi (il problema del 02/08 non si e' ripresentato)"
-        },
-        {
-          "ok": true,
-          "testo": "01/08 — post trovato (Mike Leber, \"Success is a poor teacher. It rewards what worked once and hides what stopped working\" / lettere 3D su parete bianca \"Stay coachable through all phases of life. Never stop learning and listening\", 13.429 reazioni reali verificate sul post originale su LinkedIn, non un repost, non celebrita), tradotto fedele in italiano, immagine tradotta (nano-banana, 2 tentativi: il primo ha reso testo misto inglese/italiano con refusi \"AE\" e \"ACOLTARE\" mancante una lettera, il secondo perfetto: parete testurizzata, lettere 3D, font, prospettiva e ombre tutti intatti) e schedulato ULTIMO in coda col pulsante blu (27 post, banner passato da \"26, last one Monday January 25th 2027\" a \"27, last one Monday February 1st 2027\") — verificato in Preview prima dello schedule: testo 1935/3000 completo, 1 sola immagine corretta. URL diretto recuperato dal pannello dettaglio di Taplio (icona apri originale) e confermato sul profilo LinkedIn dell'autore. Incidente minore risolto: 3 tentativi upload FilePond con serverId undefined (il 3o e' comunque riuscito lato server), 2 placeholder vuoti residui nel composer rimossi col cestino, poi allegata l'unica immagine corretta da My assets con verifica identita. Nessun problema da segnalare, email recap saltata come da regola 25/07"
-        },
-        {
-          "ok": true,
-          "testo": "31/07 — RECUPERO pomeridiano/serale (agente risolutore): la run 05:01 risultava partita (lastRunAt 13:27) ma senza aver prodotto nulla — zero righe di log, zero file nuovi in taplio-outputs, zero bozze email \"Taplio\", zero processi residui: sessione morta prima di qualunque lavoro utile. Controllo guardia coda vs log ha però rivelato 26 post in coda invece dei 25 attesi: un post EXTRA non tracciato su lunedì 5 ottobre 2026, testo italiano completo (attribuito a Dr. Brigette Hyacinth, \"I veri leader non creano seguaci\") ma con immagine ANCORA in inglese e serverId rotto (\".../userUpload/undefined\", bug upload noto). Verificato che il testo derivava da un post reale di Brigette Hyacinth (9.3k reazioni) ma SENZA immagine propria su LinkedIn: candidato non valido a monte (niente immagine citazione), relitto di una sessione precedente non loggata — eliminato dalla coda, non recuperabile come bozza. Ripartita la ricerca da zero: post trovato (Eric Partaker, \"When you promote toxic people, you lose your best people\" / \"6 Green Flags of a Great Company Culture\", 13.558 reazioni reali verificate sul profilo personale, non celebrità, mai usato con questo contenuto), tradotto fedele in italiano, immagine tradotta (nano-banana, 3 tentativi: le prime due versioni avevano etichette \"TITLE/SUBTITLE\" visibili o un accento mancante e un residuo \"by\" in inglese, terza perfetta) e schedulata ULTIMO in coda col pulsante blu (26 post, banner \"last one Monday January 25th 2027\") — verificato riaprendo l'editor: testo 2483/3000 completo, 1 sola immagine corretta, byte S3 identici al file locale. Incidente minore upload: 3 tentativi FilePond con serverId undefined prima del 4° riuscito, 2 placeholder vuoti rimossi dal composer. Nessuna email: successo, nessun problema aperto (regola 25/07)"
-        },
-        {
-          "ok": true,
-          "testo": "30/07 — RECUPERO riuscito ore 11:00 (agente risolutore): la run 05:01 era saltata perché l'estensione Chrome non era connessa; alle 10:35 la connessione era tornata e il giro è stato rifatto per intero. Post trovato (Sandra Pellumbi, \"Employees don't quit jobs. They quit the way they're treated\" / citazione su carta \"Make it a habit to respect people without knowing their qualifications, title, or position\", 2.053 reazioni reali verificate su LinkedIn, autrice mai usata prima, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, texture carta e corsivi rossi identici, badge autrice intatto) e schedulato ULTIMO in coda col pulsante blu (25 post, banner \"last one Monday January 18th 2027\", uscita 18 gennaio 2027 08:04) — verificato riaprendo l'editor: testo 1806/3000 completo, 1 sola immagine, byte S3 identici al file locale. Candidati scartati per duplicato: Mike Leber 17.4k (stessa immagine del 28/07), Josh Bob 5.8k (stessa immagine neve del 24/07), Jitender Girdhar 2.2k (stesso post del 18/07), Brigette Hyacinth 14.7k (post di ieri). Incidente minore risolto: 2 placeholder vuoti da upload FilePond rimossi, immagine attaccata da My assets dopo verifica byte. La bozza email di segnalazione delle 05:14 in Gmail è superata: nessuna azione necessaria"
-        },
-        {
-          "ok": true,
-          "testo": "29/07 — post trovato (Dr. Brigette Hyacinth, \"People don't quit jobs. They quit toxic cultures\" / citazione lavagna \"Nobody leaves a job where they are respected, well-paid and growing\", 16.994 reazioni reali verificate su LinkedIn, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, lavagna/sala riunioni identica, firma \"- Oliver Ramirez G.\" intatta) e schedulato ULTIMO in coda (24 post, banner \"last one Monday January 11th 2027\", uscita 11 gennaio 2027 08:04) — verificato testo 1461/3000 completo, 1 sola immagine corretta. Primo candidato scartato prima di procedere: Mike Leber \"kindness isn't a strategy\" era duplicato esatto del 28/07 (controllo log preventivo). Nessun incidente: solo un normale retry upload FilePond e rimozione di una thumbnail placeholder vuota residua. Nessun problema da segnalare, email recap saltata come da regola 25/07"
-        },
-        {
-          "ok": true,
-          "testo": "28/07 — post trovato (Mike Leber, \"Shoutout to people whose kindness isn't a strategy, but a way of life\" / testo post su leadership e gentilezza sotto pressione, 18.257 reazioni reali verificate su LinkedIn, non celebrità), tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, insegna al neon su cemento identica) e schedulato ULTIMO in coda (23 post, banner \"last one Monday January 4th 2027\", uscita 4 gennaio 2027 08:04) — verificato con scroll diretto alla data: testo completo 2405/3000, 1 sola immagine corretta, slot successivo (11/01) vuoto. Nessun incidente: solo un normale retry dell'upload FilePond (primo tentativo con serverId ancora in elaborazione dopo 15s, rimosso e ripetuto con successo). Nessun problema da segnalare, email recap saltata come da regola 25/07 (niente email se tutto ok)"
+          "testo": "07/08 — post trovato (Dr. Chris Mullen, \"One of the best employees I ever worked with resigned quietly\" / illustrazione ufficio con titolone e nuvoletta tradotti \"I migliori leader se ne accorgono prima che le persone si spezzino\", 3.405 reazioni reali verificate su LinkedIn, non celebrità), trovato con Explore more dopo 2 tentativi precedenti senza candidati sopra soglia (bug sort Likes confermato ancora: pool fisso di celebrità indipendente dalla query). Scartati 2 duplicati di contenuto prima di procedere (Josh Bob immagine neve già usata il 24/07, Brigette Hyacinth citazione whiteboard già usata il 29/07). Tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, perfetto) e schedulata ULTIMA in coda col pulsante blu (30 post, banner passato da \"29, last one Friday February 19th 2027\" a \"30, last one Friday February 26th 2027\") — verificata in Preview prima dello schedule: testo 2219/3000 completo, 1 sola immagine corretta. Incidente minore risolto: 1 placeholder con serverId undefined rimosso dal composer prima di schedulare. Nessun problema da segnalare, email recap saltata come da regola 25/07"
         }
       ],
       "azioni": [],
-      "nota": "Post del 15 febbraio 2027 schedulato oggi e verificato completo."
+      "nota": "Post del 26 febbraio 2027 schedulato oggi e verificato completo."
     }
   ]
 }

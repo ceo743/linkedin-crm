@@ -1,19 +1,7 @@
 {
-  "aggiornato": "2026-08-07 12:25 (recupero agente risolutore: routine 05:40 uccisa da zombie-cleanup alle 10:17, PID 97218, dopo 109min ferma. Verificato Meta Ads MCP di nuovo funzionante con chiamata di test ads_get_ad_accounts: i null di 'MCP non disponibile' sul record 07/08 erano un falso allarme della sessione morta, non un guasto reale. Ripopolato 07/08 con dati reali parziali (giornata in corso, date_preset=today) e finalizzato 06/08 con dati Meta Ads a giornata intera (time_range), rimosso ads_incompleto. Il record 07/08 resta 'parziale':true perche il giorno non e finito: sara finalizzato dal giro regolare di domani mattina, come da disegno della routine.",
+  "aggiornato": "2026-08-08 00:20 (recupero agente risolutore: routine 5:40 non ancora partita [siamo a inizio giornata], ma un precedente agente di recupero lanciato dal CEO nella serata del 7/8 [PID 65920] e' stato ucciso da zombie-cleanup dopo 248min senza scrivere l'output. Finalizzato il record 07/08 con dati a giornata intera [time_range, entrambi gli account Meta Ads, foglio KPI, Gmail Calendly/Kajabi], rimosso 'parziale'. Aperto il record 08/08 con i dati minimi disponibili a inizio giornata [date_preset=today, nessuna call/lead/guida nelle prime ore], parziale:true come da disegno. Il refresh completo dei pannelli HTML settimanali/GitHub Pages non e' stato rifatto in questo recupero notturno: lo fa il giro regolare delle 5:40 di oggi.",
   "nota": "Un record per giorno. ads = entrambi gli account Meta. call = prenotazioni Calendly ARRIVATE quel giorno (mai retroattivo). call_scartate = SOLO le prenotazioni ricevute quel giorno e poi scartate lo stesso giorno (mai riferito a prenotazioni di giorni precedenti: se una call di un giorno passato viene annullata dopo, il numero del giorno passato non si tocca, si aggiunge solo una nota testuale in call_nomi di quel giorno). lead_funnel = optin dal foglio KPI. guide = form Kajabi. li_impressioni (opzionale) = impressioni LinkedIn del giorno, dal grafico Rendimento contenuti in modalità Giornaliero. Motivazioni di annullamento call: fonte foglio Google 'Report Calendly Giornaliero (Stefania)' (id 1bPJih5riHWqz86hwkfbYybmwhCKkiWVyKxqMD9ppwDU, colonna ESITO), match per giorno di PRENOTAZIONE della call.",
   "giorni": [
-    {
-      "data": "2026-07-09",
-      "ads_spesa": 97.96,
-      "ads_click": 137,
-      "ads_impressioni": 6809,
-      "call": 2,
-      "call_scartate": 0,
-      "call_nomi": [],
-      "lead_funnel": 0,
-      "guide": 2,
-      "li_impressioni": 27280
-    },
     {
       "data": "2026-07-10",
       "ads_spesa": 80.26,
@@ -354,18 +342,30 @@
     },
     {
       "data": "2026-08-07",
-      "ads_spesa": 86.75,
-      "ads_click": 90,
-      "ads_impressioni": 3411,
-      "ads_nota": "Meta Ads MCP verificato FUNZIONANTE il 07/08 h.12: numeri date_preset=today, quindi parziali per costruzione (giornata in corso). Saranno finalizzati con time_range giornata intera dal giro regolare di domani.",
+      "ads_spesa": 238.09,
+      "ads_click": 324,
+      "ads_impressioni": 12881,
+      "call": 2,
+      "call_scartate": 0,
+      "call_nomi": [],
+      "lead_funnel": 3,
+      "guide": 2,
+      "li_impressioni": 8932,
+      "li_impressioni_nota": "Differenza cumulativa dal grafico Impressioni (finestra rolling 1/8-7/8, fuso UTC, toggle Giornaliero non affidabile come nei giri precedenti): 93.147 - 84.215 = 8.932.",
+      "parziale": false
+    },
+    {
+      "data": "2026-08-08",
+      "ads_spesa": 1.4,
+      "ads_click": 1,
+      "ads_impressioni": 20,
       "call": 0,
       "call_scartate": 0,
       "call_nomi": [],
-      "lead_funnel": 1,
-      "guide": 2,
-      "li_impressioni": 3689,
-      "li_impressioni_nota": "Differenza cumulativa dal grafico Impressioni (finestra rolling 1/8-7/8, fuso UTC): 87.904 - 84.215 = 3.689. Stesso metodo verificato corretto sul 6/8 (11.969, invariato). Parziale perche il giorno UTC non e concluso.",
-      "parziale": true
+      "lead_funnel": 0,
+      "guide": 0,
+      "parziale": true,
+      "ads_nota": "Meta Ads date_preset=today letto poco dopo mezzanotte (giornata appena iniziata): numeri minimi per costruzione, saranno finalizzati con time_range giornata intera dal giro regolare di domani mattina."
     }
   ]
 }
