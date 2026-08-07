@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-08-06 11:35 (recupero agente risolutore: run schedulata delle 05:43 mai partita — scheduler saltato a domani senza errore, stesso pattern \"Mac spento/scheduler fermo\" dei casi 24/07 e 31/07 in SKILL.md punto 6, ma stavolta un record vuoto per 06/08 era gia comparso nel file con tutti zero e senza li_impressioni, scritto durante il rilancio della notte per la sessione uccisa PID 52591. Ripopolato con dati REALI parziali 00:00-11:30: Meta Ads somma 2 account date_preset=today, 1 call Calendly (Paola Rovelli, fonte confermata utm_source=meta sulla riga CALENDLY del foglio KPI, NON dal nome evento), 0 lead_funnel/guide verificati da Gmail e foglio KPI. li_impressioni non raggiunto: tab LinkedIn aperta per leggerlo si e chiusa da sola durante il tentativo, niente stima. Pannelli statici settimanali (LinkedIn/Call/Lead/Ads 7gg, SEO) restano al 5/8: refresh completo al prossimo giro regolare.",
+  "aggiornato": "2026-08-07 12:25 (recupero agente risolutore: routine 05:40 uccisa da zombie-cleanup alle 10:17, PID 97218, dopo 109min ferma. Verificato Meta Ads MCP di nuovo funzionante con chiamata di test ads_get_ad_accounts: i null di 'MCP non disponibile' sul record 07/08 erano un falso allarme della sessione morta, non un guasto reale. Ripopolato 07/08 con dati reali parziali (giornata in corso, date_preset=today) e finalizzato 06/08 con dati Meta Ads a giornata intera (time_range), rimosso ads_incompleto. Il record 07/08 resta 'parziale':true perche il giorno non e finito: sara finalizzato dal giro regolare di domani mattina, come da disegno della routine.",
   "nota": "Un record per giorno. ads = entrambi gli account Meta. call = prenotazioni Calendly ARRIVATE quel giorno (mai retroattivo). call_scartate = SOLO le prenotazioni ricevute quel giorno e poi scartate lo stesso giorno (mai riferito a prenotazioni di giorni precedenti: se una call di un giorno passato viene annullata dopo, il numero del giorno passato non si tocca, si aggiunge solo una nota testuale in call_nomi di quel giorno). lead_funnel = optin dal foglio KPI. guide = form Kajabi. li_impressioni (opzionale) = impressioni LinkedIn del giorno, dal grafico Rendimento contenuti in modalità Giornaliero. Motivazioni di annullamento call: fonte foglio Google 'Report Calendly Giornaliero (Stefania)' (id 1bPJih5riHWqz86hwkfbYybmwhCKkiWVyKxqMD9ppwDU, colonna ESITO), match per giorno di PRENOTAZIONE della call.",
   "giorni": [
     {
@@ -340,33 +340,31 @@
     },
     {
       "data": "2026-08-06",
-      "ads_spesa": 70.26,
-      "ads_click": 101,
-      "ads_impressioni": 3560,
+      "ads_spesa": 207.24,
+      "ads_click": 352,
+      "ads_impressioni": 13170,
       "call": 3,
       "call_scartate": 0,
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 2,
       "parziale": false,
-      "ads_incompleto": true,
-      "ads_nota": "Connettore Meta Ads MCP non disponibile in questa sessione (07/08 ore 6): spesa/click/impressioni sono ancora il dato parziale letto durante la giornata del 6/8, NON la giornata intera. Da correggere al prossimo giro con accesso a Meta Ads.",
       "li_impressioni": 11969,
       "li_impressioni_nota": "Stimato per differenza cumulativa dal grafico 'Impressioni' (finestra rolling 1/8-7/8 letta il 7/8 mattina), non dal toggle Giornaliero (non trovato in questo giro): margine di errore per lo sfasamento UTC/ora Italia."
     },
     {
       "data": "2026-08-07",
-      "ads_spesa": null,
-      "ads_click": null,
-      "ads_impressioni": null,
-      "ads_nota": "Meta Ads MCP non disponibile in questa sessione.",
+      "ads_spesa": 86.75,
+      "ads_click": 90,
+      "ads_impressioni": 3411,
+      "ads_nota": "Meta Ads MCP verificato FUNZIONANTE il 07/08 h.12: numeri date_preset=today, quindi parziali per costruzione (giornata in corso). Saranno finalizzati con time_range giornata intera dal giro regolare di domani.",
       "call": 0,
       "call_scartate": 0,
       "call_nomi": [],
-      "lead_funnel": 0,
-      "guide": 0,
-      "li_impressioni": 320,
-      "li_impressioni_nota": "Stima parziale (giorno appena iniziato) per differenza cumulativa dal grafico LinkedIn.",
+      "lead_funnel": 1,
+      "guide": 2,
+      "li_impressioni": 3689,
+      "li_impressioni_nota": "Differenza cumulativa dal grafico Impressioni (finestra rolling 1/8-7/8, fuso UTC): 87.904 - 84.215 = 3.689. Stesso metodo verificato corretto sul 6/8 (11.969, invariato). Parziale perche il giorno UTC non e concluso.",
       "parziale": true
     }
   ]
