@@ -3,18 +3,6 @@
   "nota": "Un record per giorno. ads = entrambi gli account Meta. call = prenotazioni Calendly ARRIVATE quel giorno (mai retroattivo). call_scartate = SOLO le prenotazioni ricevute quel giorno e poi scartate lo stesso giorno (mai riferito a prenotazioni di giorni precedenti: se una call di un giorno passato viene annullata dopo, il numero del giorno passato non si tocca, si aggiunge solo una nota testuale in call_nomi di quel giorno). lead_funnel = optin dal foglio KPI. guide = form Kajabi. li_impressioni (opzionale) = impressioni LinkedIn del giorno, dal grafico Rendimento contenuti in modalità Giornaliero. Motivazioni di annullamento call: fonte foglio Google 'Report Calendly Giornaliero (Stefania)' (id 1bPJih5riHWqz86hwkfbYybmwhCKkiWVyKxqMD9ppwDU, colonna ESITO), match per giorno di PRENOTAZIONE della call.",
   "giorni": [
     {
-      "data": "2026-07-08",
-      "ads_spesa": 106.26,
-      "ads_click": 155,
-      "ads_impressioni": 7006,
-      "call": 2,
-      "call_scartate": 0,
-      "call_nomi": [],
-      "lead_funnel": 1,
-      "guide": 2,
-      "li_impressioni": 15796
-    },
-    {
       "data": "2026-07-09",
       "ads_spesa": 97.96,
       "ads_click": 137,
@@ -355,11 +343,30 @@
       "ads_spesa": 70.26,
       "ads_click": 101,
       "ads_impressioni": 3560,
-      "call": 1,
+      "call": 3,
+      "call_scartate": 0,
+      "call_nomi": [],
+      "lead_funnel": 0,
+      "guide": 2,
+      "parziale": false,
+      "ads_incompleto": true,
+      "ads_nota": "Connettore Meta Ads MCP non disponibile in questa sessione (07/08 ore 6): spesa/click/impressioni sono ancora il dato parziale letto durante la giornata del 6/8, NON la giornata intera. Da correggere al prossimo giro con accesso a Meta Ads.",
+      "li_impressioni": 11969,
+      "li_impressioni_nota": "Stimato per differenza cumulativa dal grafico 'Impressioni' (finestra rolling 1/8-7/8 letta il 7/8 mattina), non dal toggle Giornaliero (non trovato in questo giro): margine di errore per lo sfasamento UTC/ora Italia."
+    },
+    {
+      "data": "2026-08-07",
+      "ads_spesa": null,
+      "ads_click": null,
+      "ads_impressioni": null,
+      "ads_nota": "Meta Ads MCP non disponibile in questa sessione.",
+      "call": 0,
       "call_scartate": 0,
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 0,
+      "li_impressioni": 320,
+      "li_impressioni_nota": "Stima parziale (giorno appena iniziato) per differenza cumulativa dal grafico LinkedIn.",
       "parziale": true
     }
   ]
