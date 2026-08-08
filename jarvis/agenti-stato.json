@@ -1,5 +1,5 @@
 {
-  "aggiornato": "7 agosto, ore 09:50",
+  "aggiornato": "8 agosto, ore 05:07",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
@@ -107,16 +107,16 @@
       "sottotitolo": "Traduzione e schedulazione giornaliera",
       "colore": "pink",
       "stato": "ok",
-      "ultima_run": "7 agosto, ore 06:52",
-      "prossima_run": "8 agosto, ore 05:01",
+      "ultima_run": "8 agosto, ore 05:07",
+      "prossima_run": "9 agosto, ore 05:01",
       "verifiche": [
         {
           "ok": true,
-          "testo": "07/08 — post trovato (Dr. Chris Mullen, \"One of the best employees I ever worked with resigned quietly\" / illustrazione ufficio con titolone e nuvoletta tradotti \"I migliori leader se ne accorgono prima che le persone si spezzino\", 3.405 reazioni reali verificate su LinkedIn, non celebrità), trovato con Explore more dopo 2 tentativi precedenti senza candidati sopra soglia (bug sort Likes confermato ancora: pool fisso di celebrità indipendente dalla query). Scartati 2 duplicati di contenuto prima di procedere (Josh Bob immagine neve già usata il 24/07, Brigette Hyacinth citazione whiteboard già usata il 29/07). Tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, perfetto) e schedulata ULTIMA in coda col pulsante blu (30 post, banner passato da \"29, last one Friday February 19th 2027\" a \"30, last one Friday February 26th 2027\") — verificata in Preview prima dello schedule: testo 2219/3000 completo, 1 sola immagine corretta. Incidente minore risolto: 1 placeholder con serverId undefined rimosso dal composer prima di schedulare. Nessun problema da segnalare, email recap saltata come da regola 25/07"
+          "testo": "08/08 — post trovato (Lisa Miller, \"True leadership is not built on titles, authority, or recognition\" / immagine citazione su sfondo foresta/fiume \"IF SERVING IS BELOW YOU, LEADERSHIP IS BEYOND YOU\", 1.923 reazioni reali verificate su LinkedIn, non celebrità), trovato con Explore more dopo 3 tentativi precedenti senza candidati sopra soglia (bug sort Likes confermato ancora: pool fisso di celebrità indipendente dalla query). Nessun duplicato nel log. Tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, perfetto) e schedulata ULTIMA in coda col pulsante blu (30 post, banner passato da \"29, last one Friday February 26th 2027\" a \"30, last one Friday March 5th 2027\") — verificata riaprendo in Edit dopo lo schedule: testo 1700/3000 completo, 1 sola immagine corretta, unico post nel giorno. Incidente minore risolto: 2 placeholder con serverId undefined (upload FilePond) rimossi dal composer prima di allegare l'immagine corretta da My assets. Nessun problema da segnalare, email recap saltata come da regola 25/07"
         }
       ],
       "azioni": [],
-      "nota": "Post del 26 febbraio 2027 schedulato oggi e verificato completo."
+      "nota": "Post del 5 marzo 2027 schedulato oggi e verificato completo."
     }
   ]
 }

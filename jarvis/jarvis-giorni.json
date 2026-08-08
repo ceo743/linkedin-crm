@@ -356,16 +356,15 @@
     },
     {
       "data": "2026-08-08",
-      "ads_spesa": 1.4,
-      "ads_click": 1,
-      "ads_impressioni": 20,
-      "call": 0,
+      "ads_spesa": 32.75,
+      "ads_impressioni": 1599,
+      "call": 1,
       "call_scartate": 0,
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 0,
       "parziale": true,
-      "ads_nota": "Meta Ads date_preset=today letto poco dopo mezzanotte (giornata appena iniziata): numeri minimi per costruzione, saranno finalizzati con time_range giornata intera dal giro regolare di domani mattina."
+      "ads_nota": "Dati parziali giornata in corso (letti alle 05:50 circa). Meta MCP disconnesso oggi (richiede riautorizzazione OAuth di Davide): spesa/impressioni lette da Ads Manager via Chrome (fallback), click/CTR/CPC non disponibili in questa vista, saranno recuperati quando l'MCP torna attivo."
     }
   ]
 }
