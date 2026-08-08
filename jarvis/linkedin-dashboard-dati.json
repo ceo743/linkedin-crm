@@ -1,39 +1,39 @@
 {
-  "aggiornato": "2026-08-07 06:35 (LinkedIn live: letto per intero in questo giro; Meta Ads non aggiornato, connettore non raggiungibile)",
-  "periodo": "31 luglio – 6 agosto 2026",
+  "aggiornato": "2026-08-08 05:50 (LinkedIn live: letto per intero in questo giro; Meta Ads: MCP disconnesso, dati Ads Manager via fallback Chrome nella dashboard risultati, non in questo file)",
+  "periodo": "1 – 7 agosto 2026",
   "kpi": {
-    "follower": 233131,
-    "follower_delta": "+144",
-    "impressioni": 86879,
-    "impressioni_delta": "-20,5%",
-    "reach": 37614,
-    "interazioni": 369,
-    "engagement": "0,42%",
-    "reazioni": 285,
-    "commenti": 82,
-    "call": 17,
-    "call_target": 17
+    "follower": 233060,
+    "follower_delta": "+141",
+    "impressioni": 84528,
+    "impressioni_delta": "+7%",
+    "reach": 37044,
+    "interazioni": 405,
+    "engagement": "0,48%",
+    "reazioni": 348,
+    "commenti": 51,
+    "call": 16,
+    "call_target": 16
   },
   "interazioni_composizione": [
     {
       "label": "Reazioni",
-      "n": 285
+      "n": 348
     },
     {
       "label": "Commenti",
-      "n": 82
+      "n": 51
     },
     {
       "label": "Click sui link",
-      "n": 1
+      "n": 0
     },
     {
       "label": "Salvataggi",
-      "n": 2
+      "n": 4
     },
     {
       "label": "Invii in privato",
-      "n": 0
+      "n": 2
     },
     {
       "label": "Condivisioni",
@@ -44,23 +44,23 @@
     {
       "titolo": "La parola data oggi non vale più niente: le regole che vengono dalla famiglia",
       "tema": "post · organico",
-      "impressioni": 14069,
-      "interazioni": 153,
-      "url": "https://www.linkedin.com/feed/update/urn:li:share:7489924238678753281/"
+      "impressioni": 14511,
+      "interazioni": 157,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489924239869894656/"
     },
     {
-      "titolo": "LinkedIn ha iniziato a nascondere i commenti scritti con l'IA",
+      "titolo": "Da aprile 2026 LinkedIn mostra chi ha visitato la pagina della tua azienda: come usare l'IA",
       "tema": "articolo · organico",
-      "impressioni": 13699,
-      "interazioni": 14,
-      "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7482771274709024768/"
+      "impressioni": 15089,
+      "interazioni": 37,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7490285441787666433/"
     },
     {
-      "titolo": "LinkedIn ti dice chi ha visitato la pagina della tua azienda: come usare l'IA",
+      "titolo": "LinkedIn ha iniziato a nascondere i commenti scritti con l'IA: come restare visibile",
       "tema": "articolo · organico",
-      "impressioni": 13337,
-      "interazioni": 36,
-      "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7489393954988306432/"
+      "impressioni": 12254,
+      "interazioni": 13,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7487748866155483137/"
     }
   ],
   "agenti": {
@@ -161,40 +161,40 @@
           "l": "a catalogo (audit 3/8)"
         },
         {
-          "v": "27",
-          "l": "pubblicati questa sett. (30/7-5/8)"
+          "v": "10+",
+          "l": "pubblicati questa sett. (1-7/8, pagina blog mostra solo i più recenti)"
         }
       ],
       "articoli": [
         {
-          "data": "6 agosto (mattina)",
+          "data": "7 agosto",
+          "titolo": "LinkedIn per Brand Manager nel 2026: Come Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-brand-manager-nel-2026-come-trovare-clienti"
+        },
+        {
+          "data": "7 agosto",
+          "titolo": "LinkedIn per Area Manager nel 2026: Come Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-area-manager-nel-2026-come-trovare-clienti"
+        },
+        {
+          "data": "7 agosto",
+          "titolo": "Uno studio dentistico con l'intelligenza artificiale",
+          "url": "https://www.davidecaiazzo.it/blog/studio-dentistico-intelligenza-artificiale"
+        },
+        {
+          "data": "7 agosto",
+          "titolo": "Gestire un salone di bellezza con l'intelligenza artificiale",
+          "url": "https://www.davidecaiazzo.it/blog/gestire-salone-bellezza-intelligenza-artificiale"
+        },
+        {
+          "data": "6 agosto",
+          "titolo": "LinkedIn per Sustainability Manager nel 2026: Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-sustainability-manager-nel-2026-trovare-clienti"
+        },
+        {
+          "data": "6 agosto",
           "titolo": "LinkedIn per Mediatori nel 2026: Come Trovare Clienti",
           "url": "https://www.davidecaiazzo.it/blog/linkedin-per-mediatori-nel-2026-come-trovare-clienti"
-        },
-        {
-          "data": "5 agosto (sera)",
-          "titolo": "LinkedIn per Agenti di Viaggio nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-agenti-di-viaggio-nel-2026-trovare-clienti"
-        },
-        {
-          "data": "5 agosto (mattina)",
-          "titolo": "LinkedIn per Category Manager nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-category-manager-nel-2026-trovare-clienti"
-        },
-        {
-          "data": "5 agosto (mattina, recupero)",
-          "titolo": "LinkedIn per Ottici nel 2026: Come Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ottici-nel-2026-come-trovare-clienti"
-        },
-        {
-          "data": "4 agosto (sera)",
-          "titolo": "LinkedIn per Giornalisti nel 2026: Come Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-giornalisti-nel-2026-come-trovare-clienti"
-        },
-        {
-          "data": "4 agosto (mattina)",
-          "titolo": "Chi Visita la Tua Pagina Aziendale LinkedIn nel 2026",
-          "url": "https://www.davidecaiazzo.it/blog/chi-visita-la-tua-pagina-aziendale-linkedin-nel-2026"
         }
       ]
     },
@@ -202,7 +202,7 @@
       "stato": "attiva",
       "pills": [
         {
-          "v": "05:00",
+          "v": "05:43",
           "l": "kpi giorno"
         },
         {
@@ -211,20 +211,23 @@
         }
       ],
       "ieri": {
-        "data": "6 agosto",
-        "call": 3,
-        "spesa": "70,26€ (⚠️ parziale, connettore Meta Ads non raggiungibile in questo giro)",
-        "click": 101,
-        "dettaglio": "3 prenotazioni nuove arrivate quel giorno (2 Meta Ads, 1 SEO), nessuna scartata lo stesso giorno; 2 guide scaricate, 0 lead funnel (verificato riga per riga sul foglio KPI)"
+        "data": "7 agosto",
+        "call": 2,
+        "spesa": "238,09€ (Account 1 + Account 3, giornata intera)",
+        "click": null,
+        "dettaglio": "2 prenotazioni nuove arrivate quel giorno (entrambe Meta Ads), nessuna scartata lo stesso giorno; 2 guide scaricate, 3 lead funnel (verificato riga per riga sul foglio KPI)"
       },
       "agenda": [
         "Lun 10/8 · 09:30 — Meta Ads",
+        "Lun 10/8 · 09:30 — Meta Ads",
         "Lun 10/8 · 11:00 — Meta Ads",
+        "Lun 10/8 · 11:30 — Meta Ads",
         "Lun 10/8 · 12:00 — Meta Ads",
         "Mar 11/8 · 09:30 — Meta Ads",
-        "Mer 12/8 · 09:30 — SEO",
-        "Mer 12/8 · 12:00 — Meta Ads",
-        "Gio 13/8 · 12:00 — Meta Ads (non verificato)"
+        "Mar 11/8 · 11:30 — Meta Ads",
+        "Mar 11/8 · 12:00 — Meta Ads",
+        "Mer 12/8 · 09:30 — Meta Ads",
+        "Gio 13/8 · 12:00 — (non verificato)"
       ]
     }
   }
