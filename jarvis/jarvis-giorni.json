@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-08-09 21:13",
+  "aggiornato": "2026-08-09 21:20 (recupero agente risolutore, fusione con la scrittura delle 21:13 della sessione parallela PID 61763: record 08/08 finalizzato con i numeri ads dell'intera giornata da Rendicontazione inserzioni [Meta MCP ancora invalidato], record 09/08 completato con gli ads reali fin qui e lasciato parziale:true per il giro regolare delle 5:40 di domattina.)",
   "nota": "Un record per giorno. ads = entrambi gli account Meta. call = prenotazioni Calendly ARRIVATE quel giorno (mai retroattivo). call_scartate = SOLO le prenotazioni ricevute quel giorno e poi scartate lo stesso giorno (mai riferito a prenotazioni di giorni precedenti: se una call di un giorno passato viene annullata dopo, il numero del giorno passato non si tocca, si aggiunge solo una nota testuale in call_nomi di quel giorno). lead_funnel = optin dal foglio KPI. guide = form Kajabi. li_impressioni (opzionale) = impressioni LinkedIn del giorno, dal grafico Rendimento contenuti in modalità Giornaliero. Motivazioni di annullamento call: fonte foglio Google 'Report Calendly Giornaliero (Stefania)' (id 1bPJih5riHWqz86hwkfbYybmwhCKkiWVyKxqMD9ppwDU, colonna ESITO), match per giorno di PRENOTAZIONE della call.",
   "giorni": [
     {
@@ -344,15 +344,16 @@
     },
     {
       "data": "2026-08-08",
-      "ads_spesa": 71.86,
-      "ads_impressioni": 2274,
+      "ads_spesa": 276.61,
+      "ads_impressioni": 14600,
       "call": 1,
       "call_scartate": 0,
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 1,
       "parziale": false,
-      "ads_nota": "Verifica completata alle 21:10 del 9/8 (recupero dopo sessione madre bloccata 10h+, PID 61763, mai ripartita dopo la riparazione del ponte chrome delle 20:59). Call/lead/guide riverificati sull'intera giornata (foglio KPI via Zapier + Gmail Calendly/Kajabi fino a fine giornata 8/8): nessuna variazione salvo la guida di Armando Crispino, mancante nel recupero di mezzogiorno. ads_spesa/ads_impressioni restano il dato di mezzogiorno (71,86€/2.274 impr, NON l'intera giornata): Meta MCP ancora disconnesso (invalid_grant, richiede riautorizzazione OAuth di Davide, non risolvibile da qui - 3° giorno consecutivo, vedi anche 6/8 e 8/8 mattina). Fallback Chrome scartato stasera: al momento del recupero il Chrome reale di Davide aveva più schede attive in uso (Ads Manager, Taplio, LinkedIn) segno di sessione live in corso - per la regola anti-interferenza non ho toccato quelle schede né aperto le mie. ads_click assente per lo stesso motivo (attribuzione clic già risultata vuota nel recupero di mezzogiorno)."
+      "ads_nota": "Giornata FINALIZZATA alle 21:20 del 9/8 dall'agente risolutore (fusione di due recuperi paralleli: la sessione delle 21:13 aveva chiuso call/lead/guide sull'intera giornata ma con gli ads fermi al parziale di mezzogiorno 71,86 euro). Meta MCP ancora disconnesso (invalid_grant, serve riautorizzazione OAuth di Davide): numeri ads dell'intera giornata letti da Rendicontazione inserzioni di Ads Manager via Chrome (suddivisione per giorno, somma account 1: 158,89 euro/191 click/5.984 impression + account 3: 117,72 euro/210 click/8.616 impression; metrica clicks, la stessa del connettore - verifica incrociata sul 6/8: 121+231=352 click, identico al record archiviato). li_impressioni assente: scheda LinkedIn occupata da un'altra automazione durante il recupero, nessuna stima.",
+      "ads_click": 401
     },
     {
       "data": "2026-08-09",
@@ -362,7 +363,10 @@
       "lead_funnel": 0,
       "guide": 1,
       "parziale": true,
-      "ads_nota": "Record aperto alle 21:10 del 9/8 nel recupero dopo il giro mancato delle 5:40 (routine mai partita/rimasta bloccata, PID 61763). Call/lead/guide verificati su foglio KPI (Zapier) e Gmail fino a questo momento (21:10). Ads assenti: Meta MCP disconnesso (stesso invalid_grant del giorno precedente, richiede riautorizzazione OAuth di Davide) e fallback Chrome scartato per non interferire con schede attive del Chrome reale di Davide. Si chiuderà regolarmente col giro delle 5:40 di domani (time_range giornata intera)."
+      "ads_nota": "Record del giorno creato in recupero serale (routine delle 5:41 uccisa da zombie-cleanup alle 20:57 senza scrivere nulla). Ads aggiunti alle 21:20 da Rendicontazione inserzioni via Chrome, dato reale dell'intera giornata fin qui (account 1: 155,04 euro/147 click/4.827 impression + account 3: 93,99 euro/176 click/6.707 impression; Meta MCP ancora disconnesso, invalid_grant). Call/lead/guide verificati due volte in modo indipendente (foglio KPI via gviz e via Zapier + Gmail): identici. Parziale: true per costruzione, chiude il giro regolare delle 5:40 di domattina 10/8 con time_range giornata intera.",
+      "ads_spesa": 249.03,
+      "ads_click": 323,
+      "ads_impressioni": 11534
     }
   ]
 }
