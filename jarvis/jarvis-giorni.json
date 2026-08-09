@@ -1,19 +1,7 @@
 {
-  "aggiornato": "2026-08-08 00:20 (recupero agente risolutore: routine 5:40 non ancora partita [siamo a inizio giornata], ma un precedente agente di recupero lanciato dal CEO nella serata del 7/8 [PID 65920] e' stato ucciso da zombie-cleanup dopo 248min senza scrivere l'output. Finalizzato il record 07/08 con dati a giornata intera [time_range, entrambi gli account Meta Ads, foglio KPI, Gmail Calendly/Kajabi], rimosso 'parziale'. Aperto il record 08/08 con i dati minimi disponibili a inizio giornata [date_preset=today, nessuna call/lead/guida nelle prime ore], parziale:true come da disegno. Il refresh completo dei pannelli HTML settimanali/GitHub Pages non e' stato rifatto in questo recupero notturno: lo fa il giro regolare delle 5:40 di oggi.",
+  "aggiornato": "2026-08-09 21:13",
   "nota": "Un record per giorno. ads = entrambi gli account Meta. call = prenotazioni Calendly ARRIVATE quel giorno (mai retroattivo). call_scartate = SOLO le prenotazioni ricevute quel giorno e poi scartate lo stesso giorno (mai riferito a prenotazioni di giorni precedenti: se una call di un giorno passato viene annullata dopo, il numero del giorno passato non si tocca, si aggiunge solo una nota testuale in call_nomi di quel giorno). lead_funnel = optin dal foglio KPI. guide = form Kajabi. li_impressioni (opzionale) = impressioni LinkedIn del giorno, dal grafico Rendimento contenuti in modalità Giornaliero. Motivazioni di annullamento call: fonte foglio Google 'Report Calendly Giornaliero (Stefania)' (id 1bPJih5riHWqz86hwkfbYybmwhCKkiWVyKxqMD9ppwDU, colonna ESITO), match per giorno di PRENOTAZIONE della call.",
   "giorni": [
-    {
-      "data": "2026-07-10",
-      "ads_spesa": 80.26,
-      "ads_click": 42,
-      "ads_impressioni": 2392,
-      "call": 1,
-      "call_scartate": 0,
-      "call_nomi": [],
-      "lead_funnel": 0,
-      "guide": 2,
-      "li_impressioni": 13236
-    },
     {
       "data": "2026-07-11",
       "ads_spesa": 96.9,
@@ -356,15 +344,25 @@
     },
     {
       "data": "2026-08-08",
-      "ads_spesa": 32.75,
-      "ads_impressioni": 1599,
+      "ads_spesa": 71.86,
+      "ads_impressioni": 2274,
       "call": 1,
       "call_scartate": 0,
       "call_nomi": [],
       "lead_funnel": 0,
-      "guide": 0,
+      "guide": 1,
+      "parziale": false,
+      "ads_nota": "Verifica completata alle 21:10 del 9/8 (recupero dopo sessione madre bloccata 10h+, PID 61763, mai ripartita dopo la riparazione del ponte chrome delle 20:59). Call/lead/guide riverificati sull'intera giornata (foglio KPI via Zapier + Gmail Calendly/Kajabi fino a fine giornata 8/8): nessuna variazione salvo la guida di Armando Crispino, mancante nel recupero di mezzogiorno. ads_spesa/ads_impressioni restano il dato di mezzogiorno (71,86€/2.274 impr, NON l'intera giornata): Meta MCP ancora disconnesso (invalid_grant, richiede riautorizzazione OAuth di Davide, non risolvibile da qui - 3° giorno consecutivo, vedi anche 6/8 e 8/8 mattina). Fallback Chrome scartato stasera: al momento del recupero il Chrome reale di Davide aveva più schede attive in uso (Ads Manager, Taplio, LinkedIn) segno di sessione live in corso - per la regola anti-interferenza non ho toccato quelle schede né aperto le mie. ads_click assente per lo stesso motivo (attribuzione clic già risultata vuota nel recupero di mezzogiorno)."
+    },
+    {
+      "data": "2026-08-09",
+      "call": 4,
+      "call_scartate": 0,
+      "call_nomi": [],
+      "lead_funnel": 0,
+      "guide": 1,
       "parziale": true,
-      "ads_nota": "Dati parziali giornata in corso (letti alle 05:50 circa). Meta MCP disconnesso oggi (richiede riautorizzazione OAuth di Davide): spesa/impressioni lette da Ads Manager via Chrome (fallback), click/CTR/CPC non disponibili in questa vista, saranno recuperati quando l'MCP torna attivo."
+      "ads_nota": "Record aperto alle 21:10 del 9/8 nel recupero dopo il giro mancato delle 5:40 (routine mai partita/rimasta bloccata, PID 61763). Call/lead/guide verificati su foglio KPI (Zapier) e Gmail fino a questo momento (21:10). Ads assenti: Meta MCP disconnesso (stesso invalid_grant del giorno precedente, richiede riautorizzazione OAuth di Davide) e fallback Chrome scartato per non interferire con schede attive del Chrome reale di Davide. Si chiuderà regolarmente col giro delle 5:40 di domani (time_range giornata intera)."
     }
   ]
 }
