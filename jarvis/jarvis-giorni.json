@@ -1,19 +1,7 @@
 {
-  "aggiornato": "2026-08-09 21:20 (recupero agente risolutore, fusione con la scrittura delle 21:13 della sessione parallela PID 61763: record 08/08 finalizzato con i numeri ads dell'intera giornata da Rendicontazione inserzioni [Meta MCP ancora invalidato], record 09/08 completato con gli ads reali fin qui e lasciato parziale:true per il giro regolare delle 5:40 di domattina.)",
+  "aggiornato": "2026-08-10 (run 05:44, jarvis-dashboard-daily)",
   "nota": "Un record per giorno. ads = entrambi gli account Meta. call = prenotazioni Calendly ARRIVATE quel giorno (mai retroattivo). call_scartate = SOLO le prenotazioni ricevute quel giorno e poi scartate lo stesso giorno (mai riferito a prenotazioni di giorni precedenti: se una call di un giorno passato viene annullata dopo, il numero del giorno passato non si tocca, si aggiunge solo una nota testuale in call_nomi di quel giorno). lead_funnel = optin dal foglio KPI. guide = form Kajabi. li_impressioni (opzionale) = impressioni LinkedIn del giorno, dal grafico Rendimento contenuti in modalità Giornaliero. Motivazioni di annullamento call: fonte foglio Google 'Report Calendly Giornaliero (Stefania)' (id 1bPJih5riHWqz86hwkfbYybmwhCKkiWVyKxqMD9ppwDU, colonna ESITO), match per giorno di PRENOTAZIONE della call.",
   "giorni": [
-    {
-      "data": "2026-07-11",
-      "ads_spesa": 96.9,
-      "ads_click": 61,
-      "ads_impressioni": 2309,
-      "call": 2,
-      "call_scartate": 0,
-      "call_nomi": [],
-      "lead_funnel": 0,
-      "guide": 1,
-      "li_impressioni": 8655
-    },
     {
       "data": "2026-07-12",
       "ads_spesa": 112.72,
@@ -367,6 +355,16 @@
       "ads_spesa": 249.03,
       "ads_click": 323,
       "ads_impressioni": 11534
+    },
+    {
+      "data": "2026-08-10",
+      "call": 0,
+      "call_scartate": 0,
+      "call_nomi": [],
+      "lead_funnel": 0,
+      "guide": 0,
+      "parziale": true,
+      "ads_nota": "Giorno appena iniziato (run 05:44). Meta Ads non disponibile: MCP disconnesso (invalid_grant, gia segnalato, serve riautorizzazione OAuth di Davide) e Chrome occupato da un'altra routine in corso (Ads Manager, Taplio, LinkedIn gia aperti) - nessun dato ads per oggi, si aggiorna al prossimo giro. Call/lead/guide verificati a zero su foglio KPI e Gmail (nessuna riga/email di oggi)."
     }
   ]
 }

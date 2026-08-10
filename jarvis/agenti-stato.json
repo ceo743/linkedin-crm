@@ -1,5 +1,5 @@
 {
-  "aggiornato": "8 agosto, ore 05:07",
+  "aggiornato": "10 agosto, ore 05:52",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
@@ -70,36 +70,32 @@
       "sottotitolo": "LinkedIn e IA — verifica prenotazioni e CTA",
       "colore": "amber",
       "stato": "attenzione",
-      "ultima_run": "7 agosto, ore 09:50",
-      "prossima_run": "14 agosto, ore 9:14",
+      "ultima_run": "31 luglio, ore 13:55",
+      "prossima_run": "7 agosto, ore 9:14",
       "verifiche": [
         {
+          "ok": true,
+          "testo": "Giro eseguito a mano (scheduler fermo 30/07 21:05 → 31/07 13:26): dati dal grezzo tab Lead foglio KPI via Zapier"
+        },
+        {
+          "ok": true,
+          "testo": "Guida #004 (28/07) guida-commenti-ia-linkedin: 37 optin unici (43 righe, esclusi 2 test); trend optin 50→52→43→37"
+        },
+        {
           "ok": false,
-          "testo": "Foglio KPI confermato INAFFIDABILE per questo conteggio (pivot filtrato fino a maggio 2026, tab Lead troncato dal tool Drive) — abbandonato, SKILL.md corretto per usare l'API Calendly via Zapier (list_events_with_invitees) da qui in poi"
+          "testo": "Prenotazioni: 1 (Gardis, redirect post-optin) ma annullata da noi, report Stefania = NON IN TARGET → 0 in target; bottone PDF sempre 0"
         },
         {
           "ok": true,
-          "testo": "Prenotazioni con utm_medium=cta_finale/cta_intermedia (bottone dentro il PDF): 0 su tutte le 4 guide recenti (#002-#005), verificato via API Calendly settimana per settimana dal 07/07 al 04/08 — 4ª conferma di fila dello stesso zero (14/07, 17/07, 31/07, oggi)"
+          "testo": "CMO: nessuna modifica CTA brochure; priorità nurturing 7 email, poi redirect post-optin ovunque, hook #005 in chiave risultato economico"
         },
         {
           "ok": true,
-          "testo": "Guida #005 (04/08, guida-qualificare-contatti-ia-linkedin, questa settimana): 0 prenotazioni di qualsiasi tipo nella finestra 04-11/08"
-        },
-        {
-          "ok": true,
-          "testo": "CMO: causa nota dal 14/07 (manca nurturing dopo l'optin, non è un problema di copy) — non ripropone restyling CTA, chiede a Davide di sbloccare le 3 decisioni pendenti"
-        },
-        {
-          "ok": true,
-          "testo": "Email di follow-up ⚠️ inviata a Davide (via SMTP, oggetto \"Newsletter CTA review — 07/08/2026 (4° giro...)\"): 3 decisioni A/B/C ancora senza risposta da 31/07 (7+ giorni)"
-        },
-        {
-          "ok": true,
-          "testo": "SKILL.md della routine corretto: URL Calendly reale (dc-academy-team/consulenza-strategica-gratuita-linkedin-dc-academy, non più consulenza-automazioni), metodo di conteggio spostato da Sheet a API Calendly"
+          "testo": "Sintesi inviata a Davide via email (id 19fb80383c5aaaa8, oggetto Newsletter CTA review — 31/07/2026)"
         }
       ],
       "azioni": [],
-      "nota": "Stesse 3 decisioni A/B/C attese da Davide da 3 settimane (nurturing 7 email, redirect post-optin ovunque, hook economico) — la CTA nel PDF è diagnosticata, non serve rimisurarla ogni venerdì finché non arriva una risposta."
+      "nota": "3 sì/no attesi da Davide: A) nurturing 7 email B) redirect post-optin su tutte le guide C) hook #005 riformulato."
     },
     {
       "id": "taplio-post-virali",
@@ -107,16 +103,16 @@
       "sottotitolo": "Traduzione e schedulazione giornaliera",
       "colore": "pink",
       "stato": "ok",
-      "ultima_run": "8 agosto, ore 05:07",
-      "prossima_run": "9 agosto, ore 05:01",
+      "ultima_run": "10 agosto, ore 05:52",
+      "prossima_run": "11 agosto, ore 05:01",
       "verifiche": [
         {
           "ok": true,
-          "testo": "08/08 — post trovato (Lisa Miller, \"True leadership is not built on titles, authority, or recognition\" / immagine citazione su sfondo foresta/fiume \"IF SERVING IS BELOW YOU, LEADERSHIP IS BEYOND YOU\", 1.923 reazioni reali verificate su LinkedIn, non celebrità), trovato con Explore more dopo 3 tentativi precedenti senza candidati sopra soglia (bug sort Likes confermato ancora: pool fisso di celebrità indipendente dalla query). Nessun duplicato nel log. Tradotto fedele in italiano, immagine tradotta (nano-banana, 1 tentativo, perfetto) e schedulata ULTIMA in coda col pulsante blu (30 post, banner passato da \"29, last one Friday February 26th 2027\" a \"30, last one Friday March 5th 2027\") — verificata riaprendo in Edit dopo lo schedule: testo 1700/3000 completo, 1 sola immagine corretta, unico post nel giorno. Incidente minore risolto: 2 placeholder con serverId undefined (upload FilePond) rimossi dal composer prima di allegare l'immagine corretta da My assets. Nessun problema da segnalare, email recap saltata come da regola 25/07"
+          "testo": "10/08 — Post di Gifford Thomas (\"We don't need a title to lead\", 6.867 reazioni reali, non celebrita) tradotto e schedulato per il 12 marzo 2027 — quel giorno era uno slot vuoto liberato la sera prima dal recupero del doppione Elizabeth Lindsey (vedi riga precedente), non un bug: il pulsante blu proponeva correttamente quella data perche riempie i buchi della coda, non solo la aggiunge in fondo. Coda passata da 31 a 32 post con l'ultimo invariato (19 marzo 2027), come atteso riempiendo un buco a meta coda. Testo e immagine (traduzione nano-banana al 1 tentativo) verificati in Preview: 1 sola immagine, quella di oggi. Aggiunta guardia allo SKILL.md: prima di considerare anomala una data del pulsante blu, controllare la cima del log per spiegazioni recenti. Inviata e poi corretta un'email di troppo a Davide (falso allarme iniziale, nessuna azione richiesta dopo la correzione, risolto in 6 minuti)."
         }
       ],
       "azioni": [],
-      "nota": "Post del 5 marzo 2027 schedulato oggi e verificato completo."
+      "nota": "Post schedulato per il 12 marzo 2027 (buco riempito nella coda). Prossimo post gia in coda resta il 19 marzo 2027."
     }
   ]
 }
