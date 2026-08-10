@@ -350,11 +350,10 @@
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 1,
-      "parziale": true,
-      "ads_nota": "Record del giorno creato in recupero serale (routine delle 5:41 uccisa da zombie-cleanup alle 20:57 senza scrivere nulla). Ads aggiunti alle 21:20 da Rendicontazione inserzioni via Chrome, dato reale dell'intera giornata fin qui (account 1: 155,04 euro/147 click/4.827 impression + account 3: 93,99 euro/176 click/6.707 impression; Meta MCP ancora disconnesso, invalid_grant). Call/lead/guide verificati due volte in modo indipendente (foglio KPI via gviz e via Zapier + Gmail): identici. Parziale: true per costruzione, chiude il giro regolare delle 5:40 di domattina 10/8 con time_range giornata intera.",
-      "ads_spesa": 249.03,
-      "ads_click": 323,
-      "ads_impressioni": 11534
+      "ads_nota": "Giornata FINALIZZATA alle 07:55 del 10/8 dall'agente risolutore (routine 5:44 PID 17317 rimasta appesa 2h+ senza finalizzare ieri, solo stub di oggi scritto). Meta MCP ancora disconnesso (invalid_grant, serve riautorizzazione OAuth di Davide): ads dell'INTERA giornata del 9/8 letti da Rendicontazione inserzioni (adsreporting) via Chrome, breakdown per Giorno, metrica Clic (tutti) — account 1: 181,79 euro/164 click/5.727 impression + account 3: 111,71 euro/209 click/7.978 impression = 293,50 euro/373 click/13.705 impression (aggiornato rispetto al parziale delle 21:20 del 9/8, che si fermava a 249,03 euro: spesa proseguita fino a fine giornata). Call/lead/guide riverificati sull'intera giornata: 4 New Event Calendly (Ivan Alfieri 9:05, silvana Larocca 9:48, Lucio Bordogna 14:21, Luciano Pace 16:15) confermati via Gmail, nessuna cancellazione; foglio KPI (Zapier Google Sheets, righe 5300-5443) conferma 0 righe aggiuntive non-CALENDLY con Data=09/08/2026 quindi lead_funnel=0 confermato; guida Kajabi di Paola Freudiger (submission 22:14:53 UTC 8/8 = 00:14:53 Italia 9/8) confermata come unica guida del 9/8, guide=1.",
+      "ads_spesa": 293.5,
+      "ads_click": 373,
+      "ads_impressioni": 13705
     },
     {
       "data": "2026-08-10",
