@@ -1,6 +1,6 @@
 {
-  "aggiornato": "2026-08-08 05:50 (LinkedIn live: letto per intero in questo giro; Meta Ads: MCP disconnesso, dati Ads Manager via fallback Chrome nella dashboard risultati, non in questo file)",
-  "periodo": "1 – 7 agosto 2026",
+  "aggiornato": "2026-08-10 05:44 (LinkedIn NON riletto oggi: Chrome occupato da un'altra routine, valori invariati dall'8/8; call/lead/outreach/blog/newsletter aggiornati da foglio KPI, Gmail e dashboard Outreach-Clienti)",
+  "periodo": "1 – 7 agosto 2026 (LinkedIn, non aggiornato oggi)",
   "kpi": {
     "follower": 233060,
     "follower_delta": "+141",
@@ -11,8 +11,8 @@
     "engagement": "0,48%",
     "reazioni": 348,
     "commenti": 51,
-    "call": 16,
-    "call_target": 16
+    "call": 17,
+    "call_target": 17
   },
   "interazioni_composizione": [
     {
@@ -122,14 +122,14 @@
       ]
     },
     "inbox": {
-      "stato": "attiva",
+      "stato": "in pausa",
       "pills": [
         {
-          "v": "9–17",
-          "l": "fascia oraria"
+          "v": "0/2",
+          "l": "attive"
         }
       ],
-      "note": "Risposte DM attive (9:30/11:30/15:30/17:30), risposte ai commenti attive (9:00–17:00). Entrambe operative."
+      "note": "Risposte DM e risposte ai commenti risultano ora DISATTIVATE su list_scheduled_tasks (cambio rispetto al giro dell'8/8, quando erano entrambe attive). Nessuna causa nota in questo giro: da verificare se voluto dal Signore o da segnalare."
     },
     "newsletter": {
       "stato": "attiva",
@@ -161,11 +161,21 @@
           "l": "a catalogo (audit 3/8)"
         },
         {
-          "v": "10+",
-          "l": "pubblicati questa sett. (1-7/8, pagina blog mostra solo i più recenti)"
+          "v": "⚠️ 0",
+          "l": "pubblicati il 9/8 (4 slot mancanti, sessione Kajabi scaduta/2FA)"
         }
       ],
       "articoli": [
+        {
+          "data": "8 agosto",
+          "titolo": "LinkedIn per Communication Manager nel 2026: Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-communication-manager-nel-2026-trovare-clienti"
+        },
+        {
+          "data": "8 agosto",
+          "titolo": "LinkedIn per E-commerce Manager nel 2026: Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-e-commerce-manager-nel-2026-trovare-clienti"
+        },
         {
           "data": "7 agosto",
           "titolo": "LinkedIn per Brand Manager nel 2026: Come Trovare Clienti",
@@ -175,16 +185,6 @@
           "data": "7 agosto",
           "titolo": "LinkedIn per Area Manager nel 2026: Come Trovare Clienti",
           "url": "https://www.davidecaiazzo.it/blog/linkedin-per-area-manager-nel-2026-come-trovare-clienti"
-        },
-        {
-          "data": "7 agosto",
-          "titolo": "Uno studio dentistico con l'intelligenza artificiale",
-          "url": "https://www.davidecaiazzo.it/blog/studio-dentistico-intelligenza-artificiale"
-        },
-        {
-          "data": "7 agosto",
-          "titolo": "Gestire un salone di bellezza con l'intelligenza artificiale",
-          "url": "https://www.davidecaiazzo.it/blog/gestire-salone-bellezza-intelligenza-artificiale"
         },
         {
           "data": "6 agosto",
@@ -211,15 +211,15 @@
         }
       ],
       "ieri": {
-        "data": "7 agosto",
-        "call": 2,
-        "spesa": "238,09€ (Account 1 + Account 3, giornata intera)",
-        "click": null,
-        "dettaglio": "2 prenotazioni nuove arrivate quel giorno (entrambe Meta Ads), nessuna scartata lo stesso giorno; 2 guide scaricate, 3 lead funnel (verificato riga per riga sul foglio KPI)"
+        "data": "9 agosto",
+        "call": 4,
+        "spesa": "249,03€ (Account 1 + Account 3, dato ancora parziale — non finalizzabile oggi, MCP disconnesso e Chrome occupato)",
+        "click": 323,
+        "dettaglio": "4 prenotazioni nuove arrivate quel giorno (3 Meta Ads, 1 chatbot del sito), nessuna scartata lo stesso giorno; 1 guida scaricata, 0 lead funnel (verificato riga per riga sul foglio KPI)"
       },
       "agenda": [
         "Lun 10/8 · 09:30 — Meta Ads",
-        "Lun 10/8 · 09:30 — Meta Ads",
+        "Lun 10/8 · 10:30 — Meta Ads",
         "Lun 10/8 · 11:00 — Meta Ads",
         "Lun 10/8 · 11:30 — Meta Ads",
         "Lun 10/8 · 12:00 — Meta Ads",
@@ -227,7 +227,9 @@
         "Mar 11/8 · 11:30 — Meta Ads",
         "Mar 11/8 · 12:00 — Meta Ads",
         "Mer 12/8 · 09:30 — Meta Ads",
-        "Gio 13/8 · 12:00 — (non verificato)"
+        "Gio 13/8 · 09:30 — Chatbot del sito",
+        "Gio 13/8 · 11:30 — Meta Ads",
+        "Gio 13/8 · 12:00 — Guida/post-optin"
       ]
     }
   }
