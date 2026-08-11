@@ -1,19 +1,7 @@
 {
-  "aggiornato": "2026-08-10 (run 05:44, jarvis-dashboard-daily)",
+  "aggiornato": "2026-08-11 09:57 (recupero agente risolutore: run 05:54 dell'11/8 bloccata 4h senza scrivere, processo terminato)",
   "nota": "Un record per giorno. ads = entrambi gli account Meta. call = prenotazioni Calendly ARRIVATE quel giorno (mai retroattivo). call_scartate = SOLO le prenotazioni ricevute quel giorno e poi scartate lo stesso giorno (mai riferito a prenotazioni di giorni precedenti: se una call di un giorno passato viene annullata dopo, il numero del giorno passato non si tocca, si aggiunge solo una nota testuale in call_nomi di quel giorno). lead_funnel = optin dal foglio KPI. guide = form Kajabi. li_impressioni (opzionale) = impressioni LinkedIn del giorno, dal grafico Rendimento contenuti in modalità Giornaliero. Motivazioni di annullamento call: fonte foglio Google 'Report Calendly Giornaliero (Stefania)' (id 1bPJih5riHWqz86hwkfbYybmwhCKkiWVyKxqMD9ppwDU, colonna ESITO), match per giorno di PRENOTAZIONE della call.",
   "giorni": [
-    {
-      "data": "2026-07-12",
-      "ads_spesa": 112.72,
-      "ads_click": 60,
-      "ads_impressioni": 2426,
-      "call": 1,
-      "call_scartate": 0,
-      "call_nomi": [],
-      "lead_funnel": 0,
-      "guide": 6,
-      "li_impressioni": 15650
-    },
     {
       "data": "2026-07-13",
       "ads_spesa": 80.17,
@@ -313,8 +301,7 @@
       "lead_funnel": 0,
       "guide": 2,
       "parziale": false,
-      "li_impressioni": 11969,
-      "li_impressioni_nota": "Stimato per differenza cumulativa dal grafico 'Impressioni' (finestra rolling 1/8-7/8 letta il 7/8 mattina), non dal toggle Giornaliero (non trovato in questo giro): margine di errore per lo sfasamento UTC/ora Italia."
+      "li_impressioni": 11969
     },
     {
       "data": "2026-08-07",
@@ -327,7 +314,6 @@
       "lead_funnel": 3,
       "guide": 2,
       "li_impressioni": 8932,
-      "li_impressioni_nota": "Differenza cumulativa dal grafico Impressioni (finestra rolling 1/8-7/8, fuso UTC, toggle Giornaliero non affidabile come nei giri precedenti): 93.147 - 84.215 = 8.932.",
       "parziale": false
     },
     {
@@ -340,7 +326,6 @@
       "lead_funnel": 0,
       "guide": 1,
       "parziale": false,
-      "ads_nota": "Giornata FINALIZZATA alle 21:20 del 9/8 dall'agente risolutore (fusione di due recuperi paralleli: la sessione delle 21:13 aveva chiuso call/lead/guide sull'intera giornata ma con gli ads fermi al parziale di mezzogiorno 71,86 euro). Meta MCP ancora disconnesso (invalid_grant, serve riautorizzazione OAuth di Davide): numeri ads dell'intera giornata letti da Rendicontazione inserzioni di Ads Manager via Chrome (suddivisione per giorno, somma account 1: 158,89 euro/191 click/5.984 impression + account 3: 117,72 euro/210 click/8.616 impression; metrica clicks, la stessa del connettore - verifica incrociata sul 6/8: 121+231=352 click, identico al record archiviato). li_impressioni assente: scheda LinkedIn occupata da un'altra automazione durante il recupero, nessuna stima.",
       "ads_click": 401
     },
     {
@@ -350,20 +335,27 @@
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 1,
-      "ads_nota": "Giornata FINALIZZATA alle 07:55 del 10/8 dall'agente risolutore (routine 5:44 PID 17317 rimasta appesa 2h+ senza finalizzare ieri, solo stub di oggi scritto). Meta MCP ancora disconnesso (invalid_grant, serve riautorizzazione OAuth di Davide): ads dell'INTERA giornata del 9/8 letti da Rendicontazione inserzioni (adsreporting) via Chrome, breakdown per Giorno, metrica Clic (tutti) — account 1: 181,79 euro/164 click/5.727 impression + account 3: 111,71 euro/209 click/7.978 impression = 293,50 euro/373 click/13.705 impression (aggiornato rispetto al parziale delle 21:20 del 9/8, che si fermava a 249,03 euro: spesa proseguita fino a fine giornata). Call/lead/guide riverificati sull'intera giornata: 4 New Event Calendly (Ivan Alfieri 9:05, silvana Larocca 9:48, Lucio Bordogna 14:21, Luciano Pace 16:15) confermati via Gmail, nessuna cancellazione; foglio KPI (Zapier Google Sheets, righe 5300-5443) conferma 0 righe aggiuntive non-CALENDLY con Data=09/08/2026 quindi lead_funnel=0 confermato; guida Kajabi di Paola Freudiger (submission 22:14:53 UTC 8/8 = 00:14:53 Italia 9/8) confermata come unica guida del 9/8, guide=1.",
       "ads_spesa": 293.5,
       "ads_click": 373,
       "ads_impressioni": 13705
     },
     {
       "data": "2026-08-10",
-      "call": 0,
+      "call": 1,
       "call_scartate": 0,
       "call_nomi": [],
       "lead_funnel": 0,
-      "guide": 0,
-      "parziale": true,
-      "ads_nota": "Giorno appena iniziato (run 05:44). Meta Ads non disponibile: MCP disconnesso (invalid_grant, gia segnalato, serve riautorizzazione OAuth di Davide) e Chrome occupato da un'altra routine in corso (Ads Manager, Taplio, LinkedIn gia aperti) - nessun dato ads per oggi, si aggiorna al prossimo giro. Call/lead/guide verificati a zero su foglio KPI e Gmail (nessuna riga/email di oggi)."
+      "guide": 2,
+      "parziale": false
+    },
+    {
+      "data": "2026-08-11",
+      "call": 0,
+      "call_scartate": 0,
+      "call_nomi": [],
+      "lead_funnel": 1,
+      "guide": 1,
+      "parziale": true
     }
   ]
 }
