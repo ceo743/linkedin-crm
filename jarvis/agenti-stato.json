@@ -1,5 +1,5 @@
 {
-  "aggiornato": "10 agosto, ore 05:52",
+  "aggiornato": "11 agosto, ore 13:51",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
@@ -103,16 +103,20 @@
       "sottotitolo": "Traduzione e schedulazione giornaliera",
       "colore": "pink",
       "stato": "ok",
-      "ultima_run": "10 agosto, ore 05:52",
-      "prossima_run": "11 agosto, ore 05:01",
+      "ultima_run": "11 agosto, ore 13:51 (recupero CEO)",
+      "prossima_run": "12 agosto, ore 05:01",
       "verifiche": [
+        {
+          "ok": true,
+          "testo": "11/08 (recupero CEO) — la run schedulata delle 05:03 e' morta in silenzio dopo essere sopravvissuta alla pulizia notturna delle 07:12 (stesso pattern gia' visto il 06/08, 31/07, 04/08), zero lavoro svolto. Rifatta la ricerca da capo: coda Taplio confermata pulita (32 post, nessun orfano). Controllati \"For you\" (6 match del giorno, tutti sotto 300 like) e \"Explore more\" con 7 query testuali diverse. Nessun post idoneo trovato sopra soglia 1500 like: gli unici candidati sopra soglia erano Justin Welsh (vietato), Codie A. Sanchez (personaggio troppo noto, stesso livello di Hormozi/Gary Vee) e un duplicato del post di Gifford Thomas gia' pubblicato ieri. Esito legittimo (non un errore): sessione saltata per soglia non raggiunta, come da regola SOGLIA LIKE. Email inviata a Davide e verificata in Inviate (thread 19ff0bae2db35381), log aggiornato con la riga di oggi in cima."
+        },
         {
           "ok": true,
           "testo": "10/08 — Post di Gifford Thomas (\"We don't need a title to lead\", 6.867 reazioni reali, non celebrita) tradotto e schedulato per il 12 marzo 2027 — quel giorno era uno slot vuoto liberato la sera prima dal recupero del doppione Elizabeth Lindsey (vedi riga precedente), non un bug: il pulsante blu proponeva correttamente quella data perche riempie i buchi della coda, non solo la aggiunge in fondo. Coda passata da 31 a 32 post con l'ultimo invariato (19 marzo 2027), come atteso riempiendo un buco a meta coda. Testo e immagine (traduzione nano-banana al 1 tentativo) verificati in Preview: 1 sola immagine, quella di oggi. Aggiunta guardia allo SKILL.md: prima di considerare anomala una data del pulsante blu, controllare la cima del log per spiegazioni recenti. Inviata e poi corretta un'email di troppo a Davide (falso allarme iniziale, nessuna azione richiesta dopo la correzione, risolto in 6 minuti)."
         }
       ],
       "azioni": [],
-      "nota": "Post schedulato per il 12 marzo 2027 (buco riempito nella coda). Prossimo post gia in coda resta il 19 marzo 2027."
+      "nota": "Nessun post schedulato oggi (nessun candidato idoneo trovato, esito legittimo). Ultimo post in coda resta il 19 marzo 2027."
     }
   ]
 }

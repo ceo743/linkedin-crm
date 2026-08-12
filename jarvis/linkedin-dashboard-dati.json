@@ -1,27 +1,27 @@
 {
-  "aggiornato": "2026-08-10 05:44 (LinkedIn NON riletto oggi: Chrome occupato da un'altra routine, valori invariati dall'8/8; call/lead/outreach/blog/newsletter aggiornati da foglio KPI, Gmail e dashboard Outreach-Clienti)",
-  "periodo": "1 – 7 agosto 2026 (LinkedIn, non aggiornato oggi)",
+  "aggiornato": "2026-08-12 05:44 (LinkedIn letto dal vivo senza problemi di concorrenza; call/lead/outreach/blog/newsletter aggiornati da foglio KPI, Gmail e dashboard Outreach-Clienti)",
+  "periodo": "5 – 11 agosto 2026",
   "kpi": {
-    "follower": 233060,
-    "follower_delta": "+141",
-    "impressioni": 84528,
-    "impressioni_delta": "+7%",
-    "reach": 37044,
-    "interazioni": 405,
-    "engagement": "0,48%",
-    "reazioni": 348,
-    "commenti": 51,
-    "call": 17,
-    "call_target": 17
+    "follower": 233118,
+    "follower_delta": "+163",
+    "impressioni": 43152,
+    "impressioni_delta": "+55%",
+    "reach": 21940,
+    "interazioni": 61,
+    "engagement": "0,14%",
+    "reazioni": 60,
+    "commenti": 0,
+    "call": 12,
+    "call_target": 12
   },
   "interazioni_composizione": [
     {
       "label": "Reazioni",
-      "n": 348
+      "n": 60
     },
     {
       "label": "Commenti",
-      "n": 51
+      "n": 0
     },
     {
       "label": "Click sui link",
@@ -29,11 +29,11 @@
     },
     {
       "label": "Salvataggi",
-      "n": 4
+      "n": 0
     },
     {
       "label": "Invii in privato",
-      "n": 2
+      "n": 1
     },
     {
       "label": "Condivisioni",
@@ -42,25 +42,25 @@
   ],
   "top_post": [
     {
-      "titolo": "La parola data oggi non vale più niente: le regole che vengono dalla famiglia",
-      "tema": "post · organico",
-      "impressioni": 14511,
-      "interazioni": 157,
-      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7489924239869894656/"
+      "titolo": "LinkedIn ha iniziato a nascondere i commenti scritti con l'IA: come restare visibile",
+      "tema": "articolo · organico",
+      "impressioni": 6365,
+      "interazioni": 1,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7487748866155483137/"
     },
     {
       "titolo": "Da aprile 2026 LinkedIn mostra chi ha visitato la pagina della tua azienda: come usare l'IA",
       "tema": "articolo · organico",
-      "impressioni": 15089,
-      "interazioni": 37,
+      "impressioni": 6328,
+      "interazioni": 5,
       "url": "https://www.linkedin.com/feed/update/urn:li:activity:7490285441787666433/"
     },
     {
-      "titolo": "LinkedIn ha iniziato a nascondere i commenti scritti con l'IA: come restare visibile",
+      "titolo": "Hai trovato il contatto giusto su LinkedIn. Il follow-up con l'IA è la parte che (quasi) tutti saltano",
       "tema": "articolo · organico",
-      "impressioni": 12254,
-      "interazioni": 13,
-      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7487748866155483137/"
+      "impressioni": 4549,
+      "interazioni": 28,
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7493001377472757762/"
     }
   ],
   "agenti": {
@@ -129,7 +129,7 @@
           "l": "attive"
         }
       ],
-      "note": "Risposte DM e risposte ai commenti risultano ora DISATTIVATE su list_scheduled_tasks (cambio rispetto al giro dell'8/8, quando erano entrambe attive). Nessuna causa nota in questo giro: da verificare se voluto dal Signore o da segnalare."
+      "note": "Risposte DM e risposte ai commenti restano DISATTIVATE su list_scheduled_tasks (invariato dai giri precedenti)."
     },
     "newsletter": {
       "stato": "attiva",
@@ -143,10 +143,10 @@
           "l": "produzione"
         }
       ],
-      "in_corso": "Guida 009 — «Analisi Competitor IA LinkedIn» — ultima prodotta, nessuna nuova guida prodotta questa settimana",
+      "in_corso": "Guida 010 — «Clone AI Multilingue» — ultima prodotta",
       "ultime": [
-        "#008 — «CRM IA LinkedIn»",
-        "#007 — «Smart Links IA LinkedIn»"
+        "#009 — «Analisi Competitor IA LinkedIn»",
+        "#008 — «CRM IA LinkedIn»"
       ]
     },
     "blog": {
@@ -157,44 +157,44 @@
           "l": "articoli"
         },
         {
-          "v": "352",
-          "l": "a catalogo (audit 3/8)"
+          "v": "384",
+          "l": "a catalogo (audit 10/8)"
         },
         {
-          "v": "⚠️ 0",
-          "l": "pubblicati il 9/8 (4 slot mancanti, sessione Kajabi scaduta/2FA)"
+          "v": "15",
+          "l": "pubblicati 5/8-11/8 (solo tema LinkedIn)"
         }
       ],
       "articoli": [
         {
-          "data": "8 agosto",
-          "titolo": "LinkedIn per Communication Manager nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-communication-manager-nel-2026-trovare-clienti"
+          "data": "11 agosto",
+          "titolo": "LinkedIn per CFO nel 2026: Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-cfo-nel-2026-trovare-clienti"
         },
         {
-          "data": "8 agosto",
-          "titolo": "LinkedIn per E-commerce Manager nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-e-commerce-manager-nel-2026-trovare-clienti"
+          "data": "11 agosto",
+          "titolo": "LinkedIn per Quality Manager nel 2026: Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-quality-manager-nel-2026-trovare-clienti"
         },
         {
-          "data": "7 agosto",
-          "titolo": "LinkedIn per Brand Manager nel 2026: Come Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-brand-manager-nel-2026-come-trovare-clienti"
+          "data": "10 agosto",
+          "titolo": "LinkedIn per Project Manager nel 2026: Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-project-manager-nel-2026-trovare-clienti"
         },
         {
-          "data": "7 agosto",
-          "titolo": "LinkedIn per Area Manager nel 2026: Come Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-area-manager-nel-2026-come-trovare-clienti"
+          "data": "10 agosto",
+          "titolo": "LinkedIn per Procurement Manager nel 2026: Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-procurement-manager-nel-2026-trovare-clienti"
         },
         {
-          "data": "6 agosto",
-          "titolo": "LinkedIn per Sustainability Manager nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-sustainability-manager-nel-2026-trovare-clienti"
+          "data": "9 agosto",
+          "titolo": "LinkedIn per Consulenti Privacy nel 2026: Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-consulenti-privacy-nel-2026-trovare-clienti"
         },
         {
-          "data": "6 agosto",
-          "titolo": "LinkedIn per Mediatori nel 2026: Come Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-mediatori-nel-2026-come-trovare-clienti"
+          "data": "9 agosto",
+          "titolo": "LinkedIn per Energy Manager nel 2026: Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-energy-manager-nel-2026-trovare-clienti"
         }
       ]
     },
@@ -211,22 +211,13 @@
         }
       ],
       "ieri": {
-        "data": "9 agosto",
-        "call": 4,
-        "spesa": "249,03€ (Account 1 + Account 3, dato ancora parziale — non finalizzabile oggi, MCP disconnesso e Chrome occupato)",
-        "click": 323,
-        "dettaglio": "4 prenotazioni nuove arrivate quel giorno (3 Meta Ads, 1 chatbot del sito), nessuna scartata lo stesso giorno; 1 guida scaricata, 0 lead funnel (verificato riga per riga sul foglio KPI)"
+        "data": "11 agosto",
+        "call": 0,
+        "spesa": "200,10€ (Account 1 + Account 3, giornata intera via time_range)",
+        "click": 251,
+        "dettaglio": "0 prenotazioni nuove arrivate quel giorno; 1 lead funnel dal foglio KPI; 6 guide scaricate da Kajabi (5 sul follow-up con l'IA + 1 su fatti trovare dalla ricerca IA); 2 cancellazioni ricevute (call di giorni diversi), entrambe verosimile disdetta prospect"
       },
       "agenda": [
-        "Lun 10/8 · 09:30 — Meta Ads",
-        "Lun 10/8 · 10:30 — Meta Ads",
-        "Lun 10/8 · 11:00 — Meta Ads",
-        "Lun 10/8 · 11:30 — Meta Ads",
-        "Lun 10/8 · 12:00 — Meta Ads",
-        "Mar 11/8 · 09:30 — Meta Ads",
-        "Mar 11/8 · 11:30 — Meta Ads",
-        "Mar 11/8 · 12:00 — Meta Ads",
-        "Mer 12/8 · 09:30 — Meta Ads",
         "Gio 13/8 · 09:30 — Chatbot del sito",
         "Gio 13/8 · 11:30 — Meta Ads",
         "Gio 13/8 · 12:00 — Guida/post-optin"
