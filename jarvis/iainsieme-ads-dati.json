@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-08-16T07:09:26+02:00",
+  "aggiornato": "2026-08-17T08:46:13+02:00",
   "campagna": {
     "nome": "IAinsieme Test 3 fasce",
     "stato": "PAUSED",
@@ -15,33 +15,146 @@
     "link_ads_manager": "https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110&selected_campaign_ids=120254252946660348"
   },
   "trend_giornaliero": [
-    { "data": "2026-07-16", "spesa": 0, "lead": 0 },
-    { "data": "2026-07-17", "spesa": 24.69, "lead": 0 },
-    { "data": "2026-07-18", "spesa": 73.88, "lead": 0 },
-    { "data": "2026-07-19", "spesa": 45.03, "lead": 0 },
-    { "data": "2026-07-20", "spesa": 28.71, "lead": 0 },
-    { "data": "2026-07-21", "spesa": 21.75, "lead": 0 },
-    { "data": "2026-07-22", "spesa": 0, "lead": 0 },
-    { "data": "2026-07-23", "spesa": 0, "lead": 0 },
-    { "data": "2026-07-24", "spesa": 0, "lead": 0 },
-    { "data": "2026-07-26", "spesa": 0, "lead": 0 },
-    { "data": "2026-07-27", "spesa": 0, "lead": 0 },
-    { "data": "2026-07-28", "spesa": 0, "lead": 0 },
-    { "data": "2026-07-29", "spesa": 0, "lead": 0 },
-    { "data": "2026-07-30", "spesa": 0, "lead": 0 },
-    { "data": "2026-07-31", "spesa": 0, "lead": 0 },
-    { "data": "2026-08-01", "spesa": 0, "lead": 0 },
-    { "data": "2026-08-02", "spesa": 0, "lead": 0 },
-    { "data": "2026-08-03", "spesa": 0, "lead": 0 },
-    { "data": "2026-08-04", "spesa": 0, "lead": 0 },
-    { "data": "2026-08-05", "spesa": 0, "lead": 0 },
-    { "data": "2026-08-06", "spesa": 0, "lead": 0 },
-    { "data": "2026-08-07", "spesa": 0, "lead": 0 },
-    { "data": "2026-08-12", "spesa": 0, "lead": 0 },
-    { "data": "2026-08-13", "spesa": 0, "lead": 0 },
-    { "data": "2026-08-14", "spesa": 0, "lead": 0 },
-    { "data": "2026-08-15", "spesa": 0, "lead": 0 },
-    { "data": "2026-08-16", "spesa": 0, "lead": 0 }
+    {
+      "data": "2026-07-16",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-07-17",
+      "spesa": 24.69,
+      "lead": 0
+    },
+    {
+      "data": "2026-07-18",
+      "spesa": 73.88,
+      "lead": 0
+    },
+    {
+      "data": "2026-07-19",
+      "spesa": 45.03,
+      "lead": 0
+    },
+    {
+      "data": "2026-07-20",
+      "spesa": 28.71,
+      "lead": 0
+    },
+    {
+      "data": "2026-07-21",
+      "spesa": 21.75,
+      "lead": 0
+    },
+    {
+      "data": "2026-07-22",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-07-23",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-07-24",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-07-26",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-07-27",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-07-28",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-07-29",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-07-30",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-07-31",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-08-01",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-08-02",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-08-03",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-08-04",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-08-05",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-08-06",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-08-07",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-08-12",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-08-13",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-08-14",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-08-15",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-08-16",
+      "spesa": 0,
+      "lead": 0
+    },
+    {
+      "data": "2026-08-17",
+      "spesa": 0,
+      "lead": 0
+    }
   ],
   "sito": {
     "fix_funnel_applicato": true,
@@ -71,11 +184,96 @@
         "prezzo_corso": 249
       },
       "ads": [
-        { "id": "120254306950110348", "angolo": "Problema", "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni", "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-problema-v13-1080x1080.png", "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=problema", "stato": "CAMPAIGN_PAUSED", "spesa": 0, "impressions": 0, "reach": 0, "frequency": 0, "click": 0, "ctr": 0, "cpc": null, "cpm": null, "lead": 0, "costo_per_lead": null },
-        { "id": "120254306950840348", "angolo": "Sicurezza", "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni", "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-sicurezza-v13-1080x1080.png", "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=sicurezza", "stato": "CAMPAIGN_PAUSED", "spesa": 0, "impressions": 0, "reach": 0, "frequency": 0, "click": 0, "ctr": 0, "cpc": null, "cpm": null, "lead": 0, "costo_per_lead": null },
-        { "id": "120254306951400348", "angolo": "Dal vivo", "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni", "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-unico-v13-1080x1080.png", "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=dalvivo", "stato": "CAMPAIGN_PAUSED", "spesa": 0, "impressions": 0, "reach": 0, "frequency": 0, "click": 0, "ctr": 0, "cpc": null, "cpm": null, "lead": 0, "costo_per_lead": null },
-        { "id": "120254306951970348", "angolo": "Garanzia", "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni", "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-garanzia-v13-1080x1080.png", "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=garanzia", "stato": "CAMPAIGN_PAUSED", "spesa": 0, "impressions": 0, "reach": 0, "frequency": 0, "click": 0, "ctr": 0, "cpc": null, "cpm": null, "lead": 0, "costo_per_lead": null },
-        { "id": "120254306953090348", "angolo": "Beneficio", "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni", "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-beneficio-v13-1080x1080.png", "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=beneficio", "stato": "CAMPAIGN_PAUSED", "spesa": 0, "impressions": 0, "reach": 0, "frequency": 0, "click": 0, "ctr": 0, "cpc": null, "cpm": null, "lead": 0, "costo_per_lead": null }
+        {
+          "id": "120254306950110348",
+          "angolo": "Problema",
+          "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni",
+          "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-problema-v13-1080x1080.png",
+          "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=problema",
+          "stato": "CAMPAIGN_PAUSED",
+          "spesa": 0,
+          "impressions": 0,
+          "reach": 0,
+          "frequency": 0,
+          "click": 0,
+          "ctr": 0,
+          "cpc": null,
+          "cpm": null,
+          "lead": 0,
+          "costo_per_lead": null
+        },
+        {
+          "id": "120254306950840348",
+          "angolo": "Sicurezza",
+          "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni",
+          "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-sicurezza-v13-1080x1080.png",
+          "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=sicurezza",
+          "stato": "CAMPAIGN_PAUSED",
+          "spesa": 0,
+          "impressions": 0,
+          "reach": 0,
+          "frequency": 0,
+          "click": 0,
+          "ctr": 0,
+          "cpc": null,
+          "cpm": null,
+          "lead": 0,
+          "costo_per_lead": null
+        },
+        {
+          "id": "120254306951400348",
+          "angolo": "Dal vivo",
+          "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni",
+          "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-unico-v13-1080x1080.png",
+          "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=dalvivo",
+          "stato": "CAMPAIGN_PAUSED",
+          "spesa": 0,
+          "impressions": 0,
+          "reach": 0,
+          "frequency": 0,
+          "click": 0,
+          "ctr": 0,
+          "cpc": null,
+          "cpm": null,
+          "lead": 0,
+          "costo_per_lead": null
+        },
+        {
+          "id": "120254306951970348",
+          "angolo": "Garanzia",
+          "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni",
+          "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-garanzia-v13-1080x1080.png",
+          "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=garanzia",
+          "stato": "CAMPAIGN_PAUSED",
+          "spesa": 0,
+          "impressions": 0,
+          "reach": 0,
+          "frequency": 0,
+          "click": 0,
+          "ctr": 0,
+          "cpc": null,
+          "cpm": null,
+          "lead": 0,
+          "costo_per_lead": null
+        },
+        {
+          "id": "120254306953090348",
+          "angolo": "Beneficio",
+          "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni",
+          "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-beneficio-v13-1080x1080.png",
+          "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=beneficio",
+          "stato": "CAMPAIGN_PAUSED",
+          "spesa": 0,
+          "impressions": 0,
+          "reach": 0,
+          "frequency": 0,
+          "click": 0,
+          "ctr": 0,
+          "cpc": null,
+          "cpm": null,
+          "lead": 0,
+          "costo_per_lead": null
+        }
       ]
     },
     "ieri": {
@@ -95,11 +293,96 @@
         "prezzo_corso": 249
       },
       "ads": [
-        { "id": "120254306950110348", "angolo": "Problema", "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni", "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-problema-v13-1080x1080.png", "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=problema", "stato": "CAMPAIGN_PAUSED", "spesa": 0, "impressions": 0, "reach": 0, "frequency": 0, "click": 0, "ctr": 0, "cpc": null, "cpm": null, "lead": 0, "costo_per_lead": null },
-        { "id": "120254306950840348", "angolo": "Sicurezza", "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni", "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-sicurezza-v13-1080x1080.png", "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=sicurezza", "stato": "CAMPAIGN_PAUSED", "spesa": 0, "impressions": 0, "reach": 0, "frequency": 0, "click": 0, "ctr": 0, "cpc": null, "cpm": null, "lead": 0, "costo_per_lead": null },
-        { "id": "120254306951400348", "angolo": "Dal vivo", "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni", "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-unico-v13-1080x1080.png", "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=dalvivo", "stato": "CAMPAIGN_PAUSED", "spesa": 0, "impressions": 0, "reach": 0, "frequency": 0, "click": 0, "ctr": 0, "cpc": null, "cpm": null, "lead": 0, "costo_per_lead": null },
-        { "id": "120254306951970348", "angolo": "Garanzia", "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni", "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-garanzia-v13-1080x1080.png", "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=garanzia", "stato": "CAMPAIGN_PAUSED", "spesa": 0, "impressions": 0, "reach": 0, "frequency": 0, "click": 0, "ctr": 0, "cpc": null, "cpm": null, "lead": 0, "costo_per_lead": null },
-        { "id": "120254306953090348", "angolo": "Beneficio", "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni", "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-beneficio-v13-1080x1080.png", "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=beneficio", "stato": "CAMPAIGN_PAUSED", "spesa": 0, "impressions": 0, "reach": 0, "frequency": 0, "click": 0, "ctr": 0, "cpc": null, "cpm": null, "lead": 0, "costo_per_lead": null }
+        {
+          "id": "120254306950110348",
+          "angolo": "Problema",
+          "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni",
+          "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-problema-v13-1080x1080.png",
+          "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=problema",
+          "stato": "CAMPAIGN_PAUSED",
+          "spesa": 0,
+          "impressions": 0,
+          "reach": 0,
+          "frequency": 0,
+          "click": 0,
+          "ctr": 0,
+          "cpc": null,
+          "cpm": null,
+          "lead": 0,
+          "costo_per_lead": null
+        },
+        {
+          "id": "120254306950840348",
+          "angolo": "Sicurezza",
+          "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni",
+          "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-sicurezza-v13-1080x1080.png",
+          "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=sicurezza",
+          "stato": "CAMPAIGN_PAUSED",
+          "spesa": 0,
+          "impressions": 0,
+          "reach": 0,
+          "frequency": 0,
+          "click": 0,
+          "ctr": 0,
+          "cpc": null,
+          "cpm": null,
+          "lead": 0,
+          "costo_per_lead": null
+        },
+        {
+          "id": "120254306951400348",
+          "angolo": "Dal vivo",
+          "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni",
+          "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-unico-v13-1080x1080.png",
+          "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=dalvivo",
+          "stato": "CAMPAIGN_PAUSED",
+          "spesa": 0,
+          "impressions": 0,
+          "reach": 0,
+          "frequency": 0,
+          "click": 0,
+          "ctr": 0,
+          "cpc": null,
+          "cpm": null,
+          "lead": 0,
+          "costo_per_lead": null
+        },
+        {
+          "id": "120254306951970348",
+          "angolo": "Garanzia",
+          "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni",
+          "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-garanzia-v13-1080x1080.png",
+          "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=garanzia",
+          "stato": "CAMPAIGN_PAUSED",
+          "spesa": 0,
+          "impressions": 0,
+          "reach": 0,
+          "frequency": 0,
+          "click": 0,
+          "ctr": 0,
+          "cpc": null,
+          "cpm": null,
+          "lead": 0,
+          "costo_per_lead": null
+        },
+        {
+          "id": "120254306953090348",
+          "angolo": "Beneficio",
+          "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni",
+          "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-beneficio-v13-1080x1080.png",
+          "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=beneficio",
+          "stato": "CAMPAIGN_PAUSED",
+          "spesa": 0,
+          "impressions": 0,
+          "reach": 0,
+          "frequency": 0,
+          "click": 0,
+          "ctr": 0,
+          "cpc": null,
+          "cpm": null,
+          "lead": 0,
+          "costo_per_lead": null
+        }
       ]
     },
     "max": {
@@ -119,11 +402,96 @@
         "prezzo_corso": 249
       },
       "ads": [
-        { "id": "120254306953090348", "angolo": "Beneficio", "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni", "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-beneficio-v13-1080x1080.png", "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=beneficio", "stato": "CAMPAIGN_PAUSED", "spesa": 103.85, "impressions": 10335, "reach": 7264, "frequency": 1.42, "click": 179, "ctr": 1.73, "cpc": 0.58, "cpm": 10.05, "lead": 0, "costo_per_lead": null },
-        { "id": "120254306951970348", "angolo": "Garanzia", "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni", "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-garanzia-v13-1080x1080.png", "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=garanzia", "stato": "CAMPAIGN_PAUSED", "spesa": 23.91, "impressions": 3395, "reach": 2573, "frequency": 1.32, "click": 64, "ctr": 1.89, "cpc": 0.37, "cpm": 7.04, "lead": 0, "costo_per_lead": null },
-        { "id": "120254306951400348", "angolo": "Dal vivo", "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni", "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-unico-v13-1080x1080.png", "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=dalvivo", "stato": "CAMPAIGN_PAUSED", "spesa": 42.5, "impressions": 6020, "reach": 4611, "frequency": 1.31, "click": 93, "ctr": 1.54, "cpc": 0.46, "cpm": 7.06, "lead": 0, "costo_per_lead": null },
-        { "id": "120254306950840348", "angolo": "Sicurezza", "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni", "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-sicurezza-v13-1080x1080.png", "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=sicurezza", "stato": "CAMPAIGN_PAUSED", "spesa": 54.59, "impressions": 6037, "reach": 4433, "frequency": 1.36, "click": 120, "ctr": 1.99, "cpc": 0.45, "cpm": 9.04, "lead": 0, "costo_per_lead": null },
-        { "id": "120254306950110348", "angolo": "Problema", "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni", "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-problema-v13-1080x1080.png", "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=problema", "stato": "CAMPAIGN_PAUSED", "spesa": 49.42, "impressions": 10999, "reach": 7878, "frequency": 1.4, "click": 331, "ctr": 3.01, "cpc": 0.15, "cpm": 4.49, "lead": 0, "costo_per_lead": null }
+        {
+          "id": "120254306953090348",
+          "angolo": "Beneficio",
+          "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni",
+          "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-beneficio-v13-1080x1080.png",
+          "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=beneficio",
+          "stato": "CAMPAIGN_PAUSED",
+          "spesa": 103.85,
+          "impressions": 10335,
+          "reach": 7264,
+          "frequency": 1.42,
+          "click": 179,
+          "ctr": 1.73,
+          "cpc": 0.58,
+          "cpm": 10.05,
+          "lead": 0,
+          "costo_per_lead": null
+        },
+        {
+          "id": "120254306951970348",
+          "angolo": "Garanzia",
+          "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni",
+          "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-garanzia-v13-1080x1080.png",
+          "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=garanzia",
+          "stato": "CAMPAIGN_PAUSED",
+          "spesa": 23.91,
+          "impressions": 3395,
+          "reach": 2573,
+          "frequency": 1.32,
+          "click": 64,
+          "ctr": 1.89,
+          "cpc": 0.37,
+          "cpm": 7.04,
+          "lead": 0,
+          "costo_per_lead": null
+        },
+        {
+          "id": "120254306951400348",
+          "angolo": "Dal vivo",
+          "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni",
+          "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-unico-v13-1080x1080.png",
+          "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=dalvivo",
+          "stato": "CAMPAIGN_PAUSED",
+          "spesa": 42.5,
+          "impressions": 6020,
+          "reach": 4611,
+          "frequency": 1.31,
+          "click": 93,
+          "ctr": 1.54,
+          "cpc": 0.46,
+          "cpm": 7.06,
+          "lead": 0,
+          "costo_per_lead": null
+        },
+        {
+          "id": "120254306950840348",
+          "angolo": "Sicurezza",
+          "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni",
+          "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-sicurezza-v13-1080x1080.png",
+          "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=sicurezza",
+          "stato": "CAMPAIGN_PAUSED",
+          "spesa": 54.59,
+          "impressions": 6037,
+          "reach": 4433,
+          "frequency": 1.36,
+          "click": 120,
+          "ctr": 1.99,
+          "cpc": 0.45,
+          "cpm": 9.04,
+          "lead": 0,
+          "costo_per_lead": null
+        },
+        {
+          "id": "120254306950110348",
+          "angolo": "Problema",
+          "headline": "Corso di intelligenza artificiale per bambini dagli 8 ai 16 anni",
+          "immagine": "https://raw.githubusercontent.com/ceo743/iainsieme-placeholder/main/ads/ads-problema-v13-1080x1080.png",
+          "link": "https://iainsieme.davidecaiazzo.it/?utm_source=meta&utm_medium=paidsocial&utm_campaign=iainsieme_test3fasce&utm_content=problema",
+          "stato": "CAMPAIGN_PAUSED",
+          "spesa": 49.42,
+          "impressions": 10999,
+          "reach": 7878,
+          "frequency": 1.4,
+          "click": 331,
+          "ctr": 3.01,
+          "cpc": 0.15,
+          "cpm": 4.49,
+          "lead": 0,
+          "costo_per_lead": null
+        }
       ]
     }
   }
