@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-08-24T08:55:27+02:00",
+  "aggiornato": "2026-08-24T09:00:53+02:00",
   "account": {
     "nome": "Consulenza 1:1",
     "obiettivo": "Analisi gratuita + call su Calendly",
@@ -18,27 +18,13 @@
       "titolo": "Il Cliente Che Non Saprai Mai Di Aver Perso, 30 Minuti Gratis",
       "immagine": "creativi/video20-cliente-perso.jpg",
       "stato": "ACTIVE",
-      "spesa": 337.72,
-      "impressions": 26743,
+      "spesa": 337.73,
+      "impressions": 26744,
       "click": 663,
       "ctr": 2.48,
       "cpc": 0.51,
       "call": 4,
       "costo_call": 84.43
-    },
-    {
-      "id": "120255177645420348",
-      "nome": "Video 16 · 4.000€ al mese",
-      "titolo": "4.000€ al Mese Per Scrivere Post? 30 Minuti Gratis",
-      "immagine": "creativi/video16-4000euro.jpg",
-      "stato": "ACTIVE",
-      "spesa": 156.5,
-      "impressions": 5891,
-      "click": 148,
-      "ctr": 2.51,
-      "cpc": 1.06,
-      "call": 1,
-      "costo_call": 156.5
     },
     {
       "id": "120255148066670348",
@@ -53,6 +39,20 @@
       "cpc": 0.23,
       "call": 2,
       "costo_call": 84.57
+    },
+    {
+      "id": "120255177645420348",
+      "nome": "Video 16 · 4.000€ al mese",
+      "titolo": "4.000€ al Mese Per Scrivere Post? 30 Minuti Gratis",
+      "immagine": "creativi/video16-4000euro.jpg",
+      "stato": "ACTIVE",
+      "spesa": 156.5,
+      "impressions": 5891,
+      "click": 148,
+      "ctr": 2.51,
+      "cpc": 1.06,
+      "call": 1,
+      "costo_call": 156.5
     },
     {
       "id": "120255148063010348",
@@ -75,46 +75,46 @@
       "label": "Oggi",
       "descrizione": "Oggi",
       "giorni": 1,
-      "totali": { "spesa": 29.21, "impressions": 1347, "reach": 1209, "frequency": 1.11, "click": 45, "ctr": 3.34, "cpc": 0.65, "cpm": 21.69, "call": 0, "costo_call_migliore": null },
+      "totali": { "spesa": 29.24, "impressions": 1359, "reach": 1209, "frequency": 1.12, "click": 45, "ctr": 3.31, "cpc": 0.65, "cpm": 21.52, "call": 0, "costo_call_migliore": null },
       "campagne": [
-        { "id": "120248200215460348", "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1", "stato": "ACTIVE", "obiettivo": "Contatti", "spesa": 29.21, "impressions": 1347, "reach": 1209, "frequency": 1.11, "click": 45, "ctr": 3.34, "cpc": 0.65, "cpm": 21.69, "risultati": 0, "tipo_risultato": "call prenotate", "costo_risultato": null }
+        { "id": "120248200215460348", "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1", "stato": "ACTIVE", "obiettivo": "Contatti", "spesa": 29.24, "impressions": 1359, "reach": 1209, "frequency": 1.12, "click": 45, "ctr": 3.31, "cpc": 0.65, "cpm": 21.52, "risultati": 0, "tipo_risultato": "call prenotate", "costo_risultato": null }
       ]
     },
     "ieri": {
       "label": "Ieri",
       "descrizione": "Ieri",
       "giorni": 1,
-      "totali": { "spesa": 168.85, "impressions": 12860, "reach": 9957, "frequency": 1.29, "click": 390, "ctr": 3.03, "cpc": 0.43, "cpm": 13.13, "call": 2, "costo_call_migliore": 84.43 },
+      "totali": { "spesa": 168.86, "impressions": 12861, "reach": 9957, "frequency": 1.29, "click": 390, "ctr": 3.03, "cpc": 0.43, "cpm": 13.13, "call": 2, "costo_call_migliore": 84.43 },
       "campagne": [
-        { "id": "120248200215460348", "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1", "stato": "ACTIVE", "obiettivo": "Contatti", "spesa": 168.85, "impressions": 12860, "reach": 9957, "frequency": 1.29, "click": 390, "ctr": 3.03, "cpc": 0.43, "cpm": 13.13, "risultati": 2, "tipo_risultato": "call prenotate", "costo_risultato": 84.43 }
+        { "id": "120248200215460348", "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1", "stato": "ACTIVE", "obiettivo": "Contatti", "spesa": 168.86, "impressions": 12861, "reach": 9957, "frequency": 1.29, "click": 390, "ctr": 3.03, "cpc": 0.43, "cpm": 13.13, "risultati": 2, "tipo_risultato": "call prenotate", "costo_risultato": 84.43 }
       ]
     },
     "7g": {
       "label": "Ultimi 7 giorni",
       "descrizione": "Ultimi 7 giorni",
       "giorni": 7,
-      "totali": { "spesa": 1100.29, "impressions": 77258, "reach": 43346, "frequency": 1.78, "click": 1942, "ctr": 2.51, "cpc": 0.57, "cpm": 14.24, "call": 10, "costo_call_migliore": 110.03 },
+      "totali": { "spesa": 1100.3, "impressions": 77259, "reach": 43346, "frequency": 1.78, "click": 1942, "ctr": 2.51, "cpc": 0.57, "cpm": 14.24, "call": 10, "costo_call_migliore": 110.03 },
       "campagne": [
-        { "id": "120248200215460348", "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1", "stato": "ACTIVE", "obiettivo": "Contatti", "spesa": 1100.29, "impressions": 77258, "reach": 43346, "frequency": 1.78, "click": 1942, "ctr": 2.51, "cpc": 0.57, "cpm": 14.24, "risultati": 10, "tipo_risultato": "call prenotate", "costo_risultato": 110.03 }
+        { "id": "120248200215460348", "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1", "stato": "ACTIVE", "obiettivo": "Contatti", "spesa": 1100.3, "impressions": 77259, "reach": 43346, "frequency": 1.78, "click": 1942, "ctr": 2.51, "cpc": 0.57, "cpm": 14.24, "risultati": 10, "tipo_risultato": "call prenotate", "costo_risultato": 110.03 }
       ]
     },
     "30g": {
       "label": "Ultimi 30 giorni",
       "descrizione": "Ultimi 30 giorni",
       "giorni": 30,
-      "totali": { "spesa": 4486.65, "impressions": 207190, "reach": 83997, "frequency": 2.47, "click": 5445, "ctr": 2.63, "cpc": 0.82, "cpm": 21.65, "call": 49, "costo_call_migliore": 91.56 },
+      "totali": { "spesa": 4486.66, "impressions": 207191, "reach": 83997, "frequency": 2.47, "click": 5445, "ctr": 2.63, "cpc": 0.82, "cpm": 21.65, "call": 49, "costo_call_migliore": 91.56 },
       "campagne": [
-        { "id": "120248200215460348", "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1", "stato": "ACTIVE", "obiettivo": "Contatti", "spesa": 4486.65, "impressions": 207190, "reach": 83997, "frequency": 2.47, "click": 5445, "ctr": 2.63, "cpc": 0.82, "cpm": 21.65, "risultati": 49, "tipo_risultato": "call prenotate", "costo_risultato": 91.56 }
+        { "id": "120248200215460348", "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1", "stato": "ACTIVE", "obiettivo": "Contatti", "spesa": 4486.66, "impressions": 207191, "reach": 83997, "frequency": 2.47, "click": 5445, "ctr": 2.63, "cpc": 0.82, "cpm": 21.65, "risultati": 49, "tipo_risultato": "call prenotate", "costo_risultato": 91.56 }
       ]
     },
     "max": {
       "label": "Dall'inizio",
-      "descrizione": "Dall'inizio campagna (25/03/2026 - 24/08/2026)",
+      "descrizione": "Dall'inizio campagna (25/03/2026 - oggi)",
       "giorni": 153,
-      "totali": { "spesa": 13402.42, "impressions": 628465, "reach": 187896, "frequency": 3.34, "click": 16112, "ctr": 2.56, "cpc": 0.83, "cpm": 21.33, "call": 184, "costo_call_migliore": 70.57 },
+      "totali": { "spesa": 13402.43, "impressions": 628466, "reach": 187688, "frequency": 3.35, "click": 16112, "ctr": 2.56, "cpc": 0.83, "cpm": 21.33, "call": 184, "costo_call_migliore": 70.57 },
       "campagne": [
-        { "id": "120248200215460348", "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1", "stato": "ACTIVE", "obiettivo": "Contatti", "spesa": 12843.45, "impressions": 614419, "reach": 178719, "frequency": 3.44, "click": 15792, "ctr": 2.57, "cpc": 0.81, "cpm": 20.9, "risultati": 182, "tipo_risultato": "call prenotate", "costo_risultato": 70.57 },
-        { "id": "120252595942170348", "nome": "Lead Gen Lookalike Buyers + Broad (giu 2026)", "stato": "PAUSED", "obiettivo": "Contatti", "spesa": 558.97, "impressions": 14046, "reach": 9177, "frequency": 1.53, "click": 320, "ctr": 2.28, "cpc": 1.75, "cpm": 39.8, "risultati": 2, "tipo_risultato": "call prenotate", "costo_risultato": 279.49 }
+        { "id": "120248200215460348", "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1", "stato": "ACTIVE", "obiettivo": "Contatti", "spesa": 12843.46, "impressions": 614420, "reach": 178818, "frequency": 3.44, "click": 15792, "ctr": 2.57, "cpc": 0.81, "cpm": 20.9, "risultati": 182, "tipo_risultato": "call prenotate", "costo_risultato": 70.57 },
+        { "id": "120252595942170348", "nome": "Lead Gen Lookalike Buyers + Broad (giu 2026)", "stato": "PAUSED", "obiettivo": "Contatti", "spesa": 558.97, "impressions": 14046, "reach": 8870, "frequency": 1.58, "click": 320, "ctr": 2.28, "cpc": 1.75, "cpm": 39.8, "risultati": 2, "tipo_risultato": "call prenotate", "costo_risultato": 279.49 }
       ]
     }
   }
