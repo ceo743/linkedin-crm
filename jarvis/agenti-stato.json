@@ -1,55 +1,51 @@
 {
-  "aggiornato": "12 agosto, ore 08:51",
+  "aggiornato": "28 agosto, ore 09:15",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
       "id": "newsletter-martedi",
       "nome": "Newsletter Martedì",
-      "sottotitolo": "LinkedIn e IA — Guida 010 \"Il Clone AI che parla tutte le lingue\"",
+      "sottotitolo": "LinkedIn e IA — Guida 011 Profilo IA completata",
       "colore": "cyan",
       "stato": "attenzione",
-      "ultima_run": "12 agosto, ore 08:51",
+      "ultima_run": "26 agosto, ore 06:05",
       "prossima_run": "prossimo mercoledì",
       "verifiche": [
         {
           "ok": true,
-          "testo": "Articolo Doc nativo #010 creato (Google Doc nativo via conversione HTML), pubblicazione prevista mar 25 ago"
+          "testo": "Nessun backlog trovato: #007-#010 già tutti completi (Doc+PDF+landing+funnel+hub) da giri precedenti"
         },
         {
           "ok": true,
-          "testo": "Guida PDF (12 pagine, CTA doppia) già pronta da un giro precedente, verificata"
+          "testo": "Tema nuovo scelto: \"Il profilo LinkedIn che l'IA capisce\" — fatti verificati con WebSearch/WebFetch (builtin.com, business.linkedin.com/sell/sales-navigator), nessun titolo duplicato nei 124+11 già pubblicati"
         },
         {
           "ok": true,
-          "testo": "Repo dedicato ceo743/guida-clone-ai-multilingue creato, push landing+PDF+asset, GitHub Pages attivo (main/root)"
+          "testo": "Articolo Doc #011 creato in Newsletter-Claude-Martedì/, formattazione e link verificati con read_file_content"
         },
         {
           "ok": true,
-          "testo": "DNS CNAME guida-clone-ai-multilingue -> ceo743.github.io aggiunto su Kajabi, propagazione confermata (dig)"
+          "testo": "Guida PDF generata da codice (genera_brochure_profiloia.py), 12 pagine, CTA doppia verificata visivamente + link Calendly 200"
+        },
+        {
+          "ok": true,
+          "testo": "Repo dedicato ceo743/guida-profilo-ia-linkedin creato, GitHub Pages attivo, DNS CNAME su Kajabi aggiunto"
+        },
+        {
+          "ok": true,
+          "testo": "Form Kajabi 2149703633 creato con automazione email, verificato end-to-end: submission 302 → email arrivata → link risolto 302 al PDF Pages corretto"
+        },
+        {
+          "ok": true,
+          "testo": "Card 11 aggiunta in cima alla hub newsletterguide.davidecaiazzo.it, verificata live"
         },
         {
           "ok": null,
-          "testo": "Certificato TLS del sottodominio in emissione da GitHub: contenuto già live e verificato (200 via IP diretto e raw.githubusercontent), ma https://guida-clone-ai-multilingue.davidecaiazzo.it/ dava ancora errore SSL a fine sessione — normale, richiede qualche minuto in più, va solo riverificato"
-        },
-        {
-          "ok": true,
-          "testo": "Form Kajabi 2149691273 duplicato e completato con automazione email — testato: submission 302, email arrivata, link risolto correttamente al PDF"
-        },
-        {
-          "ok": true,
-          "testo": "Card #010 aggiunta in cima alla hub newsletterguide.davidecaiazzo.it, verificata nel repo (cache CDN in aggiornamento)"
+          "testo": "Certificato TLS del sottodominio guida-profilo-ia-linkedin.davidecaiazzo.it ancora in emissione a fine sessione (~20 min) — contenuto già verificato 200 lato GitHub (raw + --resolve IP), HTTPS strict da riverificare tra qualche minuto, pattern normale già visto su #007/#008/#009/#010"
         },
         {
           "ok": false,
-          "testo": "WhatsApp a Davide NON inviato: routine non presidiata, limite strutturale già noto — messaggio con link Doc/cartella video da inviare a mano o alla prossima sessione interattiva"
-        },
-        {
-          "ok": null,
-          "testo": "Video, sottotitoli e pubblicazione LinkedIn della guida #010 — non ancora, manca il video di Davide"
-        },
-        {
-          "ok": false,
-          "testo": "⚠️ Backlog NON risolto: le guide #008 (CRM minimo) e #009 (Competitor IA), ferme al solo Doc dal 26/07, sono state scavalcate da questo giro che ha creato #010 (Clone AI multilingue) invece di completarle prima, come previsto dalla regola della routine. Da recuperare nei prossimi giri."
+          "testo": "WhatsApp a Davide NON inviato: routine non presidiata, limite strutturale noto (computer-use nega request_access senza utente al computer) — non ritentato per non sprecare tempo su un fallimento noto"
         }
       ],
       "azioni": [
@@ -58,15 +54,15 @@
           "url": "https://drive.google.com/drive/folders/1a8XCuzdUWR7Z_hOsq7Yl8zX61-2TAs_T"
         },
         {
-          "testo": "Apri articolo Doc #010",
-          "url": "https://docs.google.com/document/d/1xaf5tlc4ixZvjISDbA0hS-6Q4_unuovHHBStPAdtHnk/edit"
+          "testo": "Apri articolo Doc #011",
+          "url": "https://docs.google.com/document/d/1IT1S7fhn5XJJeMzk1OIWxnWJbp6zOb1vN_YvQMHaDa0/edit"
         },
         {
-          "testo": "Apri landing guida #010",
-          "url": "https://guida-clone-ai-multilingue.davidecaiazzo.it/"
+          "testo": "Apri landing guida #011",
+          "url": "https://guida-profilo-ia-linkedin.davidecaiazzo.it/"
         }
       ],
-      "nota": "Guida di questa settimana: Il Clone AI che parla tutte le lingue (#010, tema IA+contenuti multilingua, angolo raggiungere clienti esteri). Funnel completo e verificato salvo certificato TLS in emissione. ⚠️ Backlog #008/#009 ancora non completato, scavalcato di nuovo. WhatsApp non inviato: limite strutturale delle routine non presidiate."
+      "nota": "Guida 011 \"Il profilo LinkedIn che l'IA capisce\" prodotta end-to-end in questo giro (pubblicazione mar 15/09). Manca solo il video di Davide e l'invio WhatsApp (fallo tu o attendi sessione interattiva)."
     },
     {
       "id": "newsletter-venerdi",
@@ -74,32 +70,32 @@
       "sottotitolo": "LinkedIn e IA — verifica prenotazioni e CTA",
       "colore": "amber",
       "stato": "attenzione",
-      "ultima_run": "31 luglio, ore 13:55",
-      "prossima_run": "7 agosto, ore 9:14",
+      "ultima_run": "28 agosto, ore 09:15",
+      "prossima_run": "4 settembre",
       "verifiche": [
         {
           "ok": true,
-          "testo": "Giro eseguito a mano (scheduler fermo 30/07 21:05 → 31/07 13:26): dati dal grezzo tab Lead foglio KPI via Zapier"
-        },
-        {
-          "ok": true,
-          "testo": "Guida #004 (28/07) guida-commenti-ia-linkedin: 37 optin unici (43 righe, esclusi 2 test); trend optin 50→52→43→37"
+          "testo": "Dati Calendly reali via API Zapier, 6 finestre settimanali (21/07-28/08) — guida della settimana: guida-profilo-ia-linkedin, confrontata con le 4 guide precedenti"
         },
         {
           "ok": false,
-          "testo": "Prenotazioni: 1 (Gardis, redirect post-optin) ma annullata da noi, report Stefania = NON IN TARGET → 0 in target; bottone PDF sempre 0"
+          "testo": "Su 10 guide, 6 settimane: 1 sola prenotazione valida totale (13/08, guida-qualificare, post_optin). Tutto il resto zero: cta_finale 0, cta_intermedia 0, nurturing 0, post_optin quasi zero (altre 2 annullate da noi)"
+        },
+        {
+          "ok": false,
+          "testo": "guida-profilo-ia-linkedin (questa settimana): zero prenotazioni su tutti i medium"
         },
         {
           "ok": true,
-          "testo": "CMO: nessuna modifica CTA brochure; priorità nurturing 7 email, poi redirect post-optin ovunque, hook #005 in chiave risultato economico"
+          "testo": "CMO: test copy CTA-nel-PDF confermato morto (7 settimane), da fare SUBITO volume optin/PDF per guida (traffico vs funnel) + attivare test mai partito 'CTA Calendly diretta nel post/commento LinkedIn' (proposto 21/08). Nurturing: nessun giudizio prima di metà settembre (coorte ancora in corso)"
         },
         {
           "ok": true,
-          "testo": "Sintesi inviata a Davide via email (id 19fb80383c5aaaa8, oggetto Newsletter CTA review — 31/07/2026)"
+          "testo": "Sintesi inviata a Davide in chat; nessuna email di sollecito (nessuna decisione riservata a Davide in questo giro)"
         }
       ],
       "azioni": [],
-      "nota": "3 sì/no attesi da Davide: A) nurturing 7 email B) redirect post-optin su tutte le guide C) hook #005 riformulato."
+      "nota": "28/08: funnel guide→prenotazione sostanzialmente a zero da 6 settimane nonostante A+B+C tutte attive. Prossimo giro prioritario: misurare volume optin/PDF su Kajabi per capire se il problema è a monte (traffico) o nel funnel."
     },
     {
       "id": "taplio-post-virali",
