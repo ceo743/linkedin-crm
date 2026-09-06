@@ -8,14 +8,19 @@ Restano da fare i passaggi sulle piattaforme e da compilare tre ID.
 
 ## 1. Account Iubenda
 
-Piano scelto: **19,99 €/mese** (raccomandato da DOC Marketing — limiti più alti,
-banner personalizzabile con colori e logo del brand).
+Piano scelto: **Advanced**. La scelta è di DOC Marketing: oltre al workshop
+concorreranno alla soglia altri siti, quindi meglio partire con limiti alti che
+fare l'upgrade a banner già in produzione.
 Listino: https://www.iubenda.com/it/prezzi/
+
+Dominio prioritario: **workshop.dcacademy.it**.
 
 1. Crea l'account su https://www.iubenda.com con l'indirizzo aziendale
    (non un indirizzo personale: l'account resta di proprietà DC Academy).
-2. Attiva il piano da 19,99 €/mese e inserisci i dati di fatturazione.
-3. Crea il sito → dominio da proteggere.
+2. Attiva il piano Advanced e inserisci i dati di fatturazione.
+3. Crea il sito. Registralo sul dominio principale **dcacademy.it**, non sul
+   singolo sottodominio: la licenza copre così `workshop.dcacademy.it` e ogni
+   altro sottodominio senza doverne attivare altre (vedi §2).
 4. Attiva i tre prodotti:
    - **Privacy Policy** (con sezione cookie)
    - **Cookie Solution** (il banner)
@@ -32,9 +37,34 @@ l'accesso è revocabile in qualsiasi momento senza toccare l'account principale.
 
 ---
 
-## 2. Google Tag Manager
+## 2. Copertura dei sottodomini
 
-1. https://tagmanager.google.com → crea contenitore di tipo **Web** per il dominio.
+Policy ufficiale Iubenda: https://www.iubenda.com/it/help/2162-subdomains-2/
+
+- Quasi tutti i piani **coprono i sottodomini** con una sola licenza: registrato
+  `dcacademy.it`, sono coperti `workshop.dcacademy.it` e le landing delle guide
+  su altri sottodomini dello stesso dominio.
+- Vale per lo stesso dominio principale. **`davidecaiazzo.it` è un dominio
+  diverso da `dcacademy.it`**: se serve il banner anche lì, richiede una licenza
+  a parte — non è coperto da questa.
+- Sui **documenti legali** la copertura automatica ha un limite: se un
+  sottodominio raccoglie dati per finalità sensibilmente diverse dagli altri,
+  Iubenda raccomanda una privacy policy dedicata. Il banner resta uno, i
+  documenti no.
+- Eccezione a parte: i piani **Accessibility Widget** Standard e Lite sono legati
+  a un singolo dominio o sottodominio, quindi lì i sottodomini contano come
+  domini separati. Non riguarda Cookie/Consent Solution.
+
+Prima di appoggiare tutti i siti alla stessa licenza serve l'audit che ha
+proposto Nicolò: mappare i sottodomini attivi e verificare che finalità, servizi
+di terze parti e struttura tecnica coincidano davvero.
+
+---
+
+## 3. Google Tag Manager
+
+1. https://tagmanager.google.com → crea contenitore di tipo **Web** per
+   `workshop.dcacademy.it` (un contenitore per proprietà web, non uno per pagina).
 2. Annota il **container ID** (`GTM-XXXXXXX`).
 3. In *Amministrazione → Gestione utenti* concedi accesso a:
    - `nicolo.dalzotto@docmarketing.it`
@@ -48,7 +78,7 @@ l'accesso è revocabile in qualsiasi momento senza toccare l'account principale.
 
 ---
 
-## 3. Compilare gli ID nel codice
+## 4. Compilare gli ID nel codice
 
 Apri `assets/consent.js` e riempi il blocco `CONFIG` in cima:
 
@@ -66,7 +96,7 @@ sicurezza anche prima che l'account sia pronto.
 
 ---
 
-## 4. Cosa fa già il codice
+## 5. Cosa fa già il codice
 
 `assets/consent.js` viene caricato in cima a `<head>` di ogni pagina ed esegue,
 in quest'ordine:
@@ -91,7 +121,7 @@ nel blocco `banner` e inserire l'URL del logo.
 
 ---
 
-## 5. Verifica dopo l'attivazione
+## 6. Verifica dopo l'attivazione
 
 - [ ] In navigazione anonima il banner compare al primo accesso.
 - [ ] Prima della scelta, in DevTools → Application → Cookies non ci sono cookie
@@ -105,10 +135,13 @@ nel blocco `banner` e inserire l'URL del logo.
 
 ---
 
-## 6. Nota sul dominio di questo repo
+## 7. Nota sul dominio di questo repo
 
 `dashboard-outreach.davidecaiazzo.it` è una dashboard interna (`noindex,nofollow`)
 e oggi non carica servizi di terze parti. L'integrazione è predisposta qui perché
-è lo stesso stack usato sui siti pubblici: se la dashboard resta senza tracciamento,
-basta lasciare `CONFIG` vuoto e non succede nulla. Gli stessi tre ID vanno
-compilati sul sito pubblico dove il banner serve davvero.
+è lo stesso stack che va portato su `workshop.dcacademy.it`: se la dashboard resta
+senza tracciamento, basta lasciare `CONFIG` vuoto e non succede nulla.
+
+Attenzione: questa dashboard sta su `davidecaiazzo.it`, dominio principale diverso
+da `dcacademy.it`. La licenza Iubenda del workshop **non la copre** (vedi §2). Se
+un domani serve il banner anche qui, va attivata una licenza separata.
