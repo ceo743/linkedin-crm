@@ -430,11 +430,11 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
     <div class="bar"><div class="lbl"><span>Fonte non tracciata</span><b>2</b></div><div class="trk"><div class="fill" style="background:var(--green)" data-w="33"></div></div></div>
     <div class="bar"><div class="lbl"><span>SEO</span><b>2</b></div><div class="trk"><div class="fill" style="background:var(--green)" data-w="33"></div></div></div>
     <div class="bar"><div class="lbl"><span>LinkedIn</span><b>1</b></div><div class="trk"><div class="fill" style="background:var(--green)" data-w="17"></div></div></div>
-    <div class="note">11 = conteggio dal foglio KPI, finestra 30/8-5/9 — di cui ZERO nei 3 giorni 4-6/9 (foglio fermo al 3/9, da tenere d'occhio). Distribuzione per fonte (utm_source riletto dalla riga CALENDLY, mai dal nome dell'evento): Meta Ads 6, fonte non tracciata (lead magnet) 2, SEO 2, LinkedIn 1. Nessuna prenotazione scartata lo STESSO giorno in questa finestra. 8 cancellazioni ricevute nella finestra, tutte segnate come annullate da noi/Stefania (dato Calendly) — nessuna disdetta reale dal prospect. Una (Stefano Cacciatore, 2/9) è stata ri-prenotata nello stesso giorno per lo stesso slot: nessuna call realmente persa. 1 prenotazione di questa finestra resta persa (Salvatore Tabuso, annullata da noi il 31/8).</div>
+    <div class="note">11 = conteggio dal foglio KPI, finestra 30/8-5/9 — di cui ZERO nei 3 giorni 4-6/9 (foglio fermo al 3/9, da tenere d'occhio). Distribuzione per fonte (utm_source riletto dalla riga CALENDLY, mai dal nome dell'evento): Meta Ads 6, fonte non tracciata (lead magnet) 2, SEO 2, LinkedIn 1. Nessuna prenotazione scartata lo STESSO giorno in questa finestra. 8 cancellazioni ricevute nella finestra, tutte segnate come annullate da noi/Stefania (dato Calendly) — nessuna disdetta reale dal prospect. Una (fonte Meta Ads, 2/9) è stata ri-prenotata nello stesso giorno per lo stesso slot: nessuna call realmente persa. 1 prenotazione di questa finestra resta persa (fonte Meta Ads, annullata da noi il 31/8).</div>
   </div>
   <div class="panel corner reveal" style="animation-delay:.6s">
     <h3>Agenda call confermate<a class="fonte" href="https://calendar.google.com/calendar/u/0/r" target="_blank" rel="noopener">fonte ↗</a></h3>
-    <div class="note">2 call confermate nei prossimi giorni (non annullate, email Calendly "New Event"): 8/9 una da SEO alle 12:00 · 10/9 una da SEO alle 11:30. Per il quadro completo verificare Google Calendar.</div>
+    <div class="note">7 call confermate nei prossimi giorni (non annullate, email Calendly "New Event", fonte da utm_source riga CALENDLY): 7/9 due — Meta Ads alle 10:30, LinkedIn alle 11:30 · 8/9 due — Meta Ads alle 09:30, SEO alle 12:00 · 10/9 tre — Fonte non tracciata alle 09:30, Meta Ads alle 11:00, Fonte non tracciata alle 11:30. Corretto in questo giro: il giro precedente ne mostrava solo 2, mancavano 5 prenotazioni già arrivate via Calendly. Per il quadro completo verificare Google Calendar.</div>
   </div>
 </div>
 <div class="panelgrid g2" style="margin-top:16px">
@@ -552,7 +552,7 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
 </div>
 
 <footer>
-  <span>Periodo: 30 agosto – 5 settembre 2026 (pannelli LinkedIn fermi al 14/8: accesso a LinkedIn sospeso; il resto aggiornato al 5/9) · Giro del 6/9 (recupero: il giro del 5/9 non è mai partito, chiuso qui coi dati dell'intera giornata). Dati LinkedIn fermi al 14/08: accesso a LinkedIn sospeso. Zero prenotazioni/lead negli ultimi 3 giorni (4-6/9) nonostante spesa ads attiva: da tenere d'occhio. Pubblicazione blog bloccata dal 5/9 sera per sessione Kajabi scaduta (già segnalato, serve un click di Davide). Conteggio routine invariato rispetto al giro precedente. · Musica: "Cut and Run" Kevin MacLeod (incompetech.com), CC BY 4.0</span>
+  <span>Periodo: 30 agosto – 5 settembre 2026 (pannelli LinkedIn fermi al 14/8: accesso a LinkedIn sospeso; il resto aggiornato al 5/9) · Giro regolare del 6/9, 05:44: ads di oggi rilette, agenda call confermate corretta (erano 2, sono 7 — mancavano 5 prenotazioni già arrivate su Calendly), conteggio routine corretto a 34 (refuso "su 32" residuo). Dati LinkedIn fermi al 14/08: accesso a LinkedIn sospeso. Zero prenotazioni/lead negli ultimi 3 giorni (4-6/9) nonostante spesa ads attiva: da tenere d'occhio. Pubblicazione blog segnalata bloccata dal 5/9 sera per sessione Kajabi scaduta da un'altra routine (non riverificato qui). · Musica: "Cut and Run" Kevin MacLeod (incompetech.com), CC BY 4.0</span>
   <span><a href="jarvis-dashboard.html" id="link-dashboard-routine">→ Dashboard routine</a></span>
   <script>
   // jarvis-dashboard.html esiste solo sul server locale: sul sito pubblico il link punterebbe a un
@@ -1490,7 +1490,7 @@ const RISPOSTE=[
   {k:['ultimi 7 giorni','questa settimana','ultima settimana'], who:'cso', act:'periodo', per:'7'},
   {k:['report','riepilogo','risultat','come è andata','come e andata','come stiamo','dammi i numeri','dammi i dati','situazione','sintesi','vedere il report','andamento'], who:'jarvis', act:'periodo', per:null},
   {k:['agenda','domani','stamattina','stasera','questa settimana in agenda','che ho oggi','chi ho oggi','call di oggi','appuntamenti di oggi'], who:'cso', tab:'calendly', t:()=>
-    "Oggi 6 settembre non ha call in agenda, Signore. L'8 settembre gliene arriva una da SEO alle 12. Il 10 settembre una da SEO alle 11:30. Due call confermate in totale nei prossimi giorni. Le eventuali nuove prenotazioni su Calendly: gliel'ho aperto."},
+    "Oggi 6 settembre non ha call in agenda, Signore. Il 7 settembre gliene arrivano due, una da Meta Ads e una da LinkedIn. L'8 settembre altre due, una da Meta Ads e una da SEO. Il 10 settembre tre, di cui una da Meta Ads. Sette call confermate in totale nei prossimi giorni. Le eventuali nuove prenotazioni su Calendly: gliel'ho aperto."},
   {k:['impression','visualizzazion','views'], who:'cmo', tab:'linkedin', t:()=>
     "53 mila 734 impressioni su LinkedIn negli ultimi 7 giorni, Signore, dall'archivio giornaliero. In calo del 36 virgola 3 percento vs i 7 giorni precedenti. Le ho aperto la scheda."},
   {k:['follower','seguaci'], who:'cmo', tab:'linkedin', t:()=>
@@ -1522,7 +1522,7 @@ const RISPOSTE=[
   {k:['geo','ai search','schema'], who:'cto', t:()=>
     "GEO, Signore: dati strutturati Persona e Organizzazione attivi, schema Articolo aggiunto su 15 nuovi post questa settimana, 78 ancora da coprire nei prossimi run. Ultimo audit SEO il 31 agosto, nessuna azione richiesta."},
   {k:['routine','automazioni','sistemi'], who:'cto', tab:'routine', t:()=>
-    "21 routine attive su 32, Signore. Le principali in pausa: gran parte della categoria vendite e outreach, ancora sospesa salvo l'aggiornamento lead workshop commercialisti, e le due routine di interazione LinkedIn, disattivate per lo shadowban. Le ho aperto la dashboard delle routine."},
+    "21 routine attive su 34, Signore. Le principali in pausa: gran parte della categoria vendite e outreach, ancora sospesa salvo l'aggiornamento lead workshop commercialisti, e le due routine di interazione LinkedIn, disattivate per lo shadowban. Le ho aperto la dashboard delle routine."},
   {k:['apri linkedin'], who:'jarvis', tab:'linkedin', t:()=>"Subito, Signore."},
   {k:['apri ads','apri le ads','apri meta'], who:'jarvis', tab:'ads', t:()=>"Subito, Signore."},
   {k:['apri il foglio','apri foglio'], who:'jarvis', tab:'foglio', t:()=>"Subito, Signore."},
@@ -1550,7 +1550,7 @@ function presentaSquadra(){
     {who:'jarvis', testo:"Con piacere, Signore. Le presento la sua squadra."},
     {who:'cmo', testo:"Direttore marketing. Mi occupo del marketing: LinkedIn, contenuti e inserzioni Meta. Ogni impressione passa da me."},
     {who:'cso', testo:"Direttore vendite. Vendite: lead, guide, call e pre qualifica. Se non è in target, non le arriva in agenda."},
-    {who:'cto', testo:"Direttore tecnico. Sistemi: SEO, blog e le 21 routine attive su 32 che lavorano mentre lei dorme."},
+    {who:'cto', testo:"Direttore tecnico. Sistemi: SEO, blog e le 21 routine attive su 34 che lavorano mentre lei dorme."},
     {who:'jarvis', testo:"E io coordino, Signore. Siamo operativi 24 ore su 24. Mi dica pure cosa le serve."},
   ];
   battute.forEach(L=>addMsg(L.testo,'a',AGENTI[L.who].label));
