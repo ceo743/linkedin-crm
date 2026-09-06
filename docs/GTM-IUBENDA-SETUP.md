@@ -44,9 +44,8 @@ Policy ufficiale Iubenda: https://www.iubenda.com/it/help/2162-subdomains-2/
 - Quasi tutti i piani **coprono i sottodomini** con una sola licenza: registrato
   `dcacademy.it`, sono coperti `workshop.dcacademy.it` e le landing delle guide
   su altri sottodomini dello stesso dominio.
-- Vale per lo stesso dominio principale. **`davidecaiazzo.it` è un dominio
-  diverso da `dcacademy.it`**: se serve il banner anche lì, richiede una licenza
-  a parte — non è coperto da questa.
+- Vale all'interno dello stesso dominio principale: un dominio principale
+  diverso richiede una licenza a parte.
 - Sui **documenti legali** la copertura automatica ha un limite: se un
   sottodominio raccoglie dati per finalità sensibilmente diverse dagli altri,
   Iubenda raccomanda una privacy policy dedicata. Il banner resta uno, i
@@ -141,7 +140,3 @@ nel blocco `banner` e inserire l'URL del logo.
 e oggi non carica servizi di terze parti. L'integrazione è predisposta qui perché
 è lo stesso stack che va portato su `workshop.dcacademy.it`: se la dashboard resta
 senza tracciamento, basta lasciare `CONFIG` vuoto e non succede nulla.
-
-Attenzione: questa dashboard sta su `davidecaiazzo.it`, dominio principale diverso
-da `dcacademy.it`. La licenza Iubenda del workshop **non la copre** (vedi §2). Se
-un domani serve il banner anche qui, va attivata una licenza separata.
