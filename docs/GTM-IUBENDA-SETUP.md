@@ -62,18 +62,25 @@ di terze parti e struttura tecnica coincidano davvero.
 
 ## 3. Google Tag Manager
 
-1. https://tagmanager.google.com → crea contenitore di tipo **Web** per
-   `workshop.dcacademy.it` (un contenitore per proprietà web, non uno per pagina).
-2. Annota il **container ID** (`GTM-XXXXXXX`).
-3. In *Amministrazione → Gestione utenti* concedi accesso a:
-   - `nicolo.dalzotto@docmarketing.it`
-   - `nicolo.conti@docmarketing.it`
-   - `marketing@docmarketing.it`
+Stato al 7/9/2026 — già fatto, account **DavideCaiazzo.it**:
 
-   Livello consigliato: **Publish** sul contenitore, **non** amministratore
-   dell'account (l'admin resta interno).
-4. Nella galleria template di GTM installa **Iubenda CMP** (template ufficiale)
-   e configuralo come tag di tipo *Consent Initialization – All Pages*.
+| Contenitore | ID | Uso |
+|---|---|---|
+| `dcacademy.it` | `GTM-5ML5K7KM` | workshop e sottodomini dcacademy.it — vuoto, per l'installazione pulita di DOC Marketing |
+| `davidecaiazzo.it` | `GTM-MCS2V2T` | sito principale, configurazione esistente, non toccare |
+
+Accessi con permesso di **Publish** su entrambi i contenitori (non admin dell'account):
+`nicolo.dalzotto@`, `nicolo.conti@`, `marketing@docmarketing.it`.
+
+Da fare da parte di DOC Marketing:
+
+1. Nella galleria template di GTM installare **Iubenda CMP** (template ufficiale)
+   e configurarlo come tag di tipo *Consent Initialization – All Pages*.
+2. `workshop.dcacademy.it` gira su **GoHighLevel (LeadConnector)**, non su Kajabi:
+   lo snippet GTM va nel *Tracking Code* delle impostazioni del funnel.
+3. Su quella pagina il pixel Meta parte al caricamento senza consenso: va
+   messo sotto consenso con il resto. C'è anche il vecchio banner CookieScript
+   (abbonamento scaduto dall'1/7): da rimuovere quando Iubenda è online.
 
 ---
 
