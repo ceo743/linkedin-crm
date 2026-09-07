@@ -1,6 +1,6 @@
 {
-  "aggiornato": "2026-08-12 05:44 (LinkedIn letto dal vivo senza problemi di concorrenza; call/lead/outreach/blog/newsletter aggiornati da foglio KPI, Gmail e dashboard Outreach-Clienti)",
-  "periodo": "5 – 11 agosto 2026",
+  "aggiornato": "2026-09-07 05:43 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; agenti outreach/blog/newsletter/writer/inbox/analyst aggiornati da foglio KPI, Gmail, scheduled-tasks e dashboard Outreach-Clienti)",
+  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi)",
   "kpi": {
     "follower": 233118,
     "follower_delta": "+163",
@@ -65,17 +65,14 @@
   ],
   "agenti": {
     "writer": {
-      "stato": "attiva",
+      "stato": "in pausa",
       "pills": [
         {
-          "v": "1/giorno",
-          "l": "cadenza"
-        },
-        {
-          "v": "05:01",
-          "l": "orario"
+          "v": "0/1",
+          "l": "attive"
         }
-      ]
+      ],
+      "note": "Post virali Taplio tradotti resta DISATTIVATO su list_scheduled_tasks (routine LinkedIn sospese dal 14/8, invariato dai giri precedenti)."
     },
     "outreach": {
       "stato": "attiva",
@@ -143,58 +140,58 @@
           "l": "produzione"
         }
       ],
-      "in_corso": "Guida 010 — «Clone AI Multilingue» — ultima prodotta",
+      "in_corso": "Guida 014 — «Post Collaborativi su LinkedIn» — ultima prodotta",
       "ultime": [
-        "#009 — «Analisi Competitor IA LinkedIn»",
-        "#008 — «CRM IA LinkedIn»"
+        "#013 — «Video LinkedIn con l'IA»",
+        "#012 — «Shadowban su LinkedIn»"
       ]
     },
     "blog": {
       "stato": "attiva",
       "pills": [
         {
-          "v": "2/giorno",
-          "l": "articoli"
+          "v": "4/giorno",
+          "l": "articoli (2 LinkedIn + 2 AI)"
         },
         {
-          "v": "384",
-          "l": "a catalogo (audit 10/8)"
+          "v": "466",
+          "l": "a catalogo (audit 31/8)"
         },
         {
-          "v": "15",
-          "l": "pubblicati 5/8-11/8 (solo tema LinkedIn)"
+          "v": "27",
+          "l": "pubblicati 31/8-6/9 (LinkedIn + AI)"
         }
       ],
       "articoli": [
         {
-          "data": "11 agosto",
-          "titolo": "LinkedIn per CFO nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-cfo-nel-2026-trovare-clienti"
+          "data": "6 settembre",
+          "titolo": "Una pizzeria con l'intelligenza artificiale",
+          "url": "https://www.davidecaiazzo.it/blog/pizzeria-intelligenza-artificiale"
         },
         {
-          "data": "11 agosto",
-          "titolo": "LinkedIn per Quality Manager nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-quality-manager-nel-2026-trovare-clienti"
+          "data": "6 settembre",
+          "titolo": "LinkedIn per Ingegnere Chimico nel 2026: Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-chimico-nel-2026-trovare-clienti"
         },
         {
-          "data": "10 agosto",
-          "titolo": "LinkedIn per Project Manager nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-project-manager-nel-2026-trovare-clienti"
+          "data": "6 settembre",
+          "titolo": "Un bar con l'intelligenza artificiale",
+          "url": "https://www.davidecaiazzo.it/blog/bar-caffetteria-intelligenza-artificiale"
         },
         {
-          "data": "10 agosto",
-          "titolo": "LinkedIn per Procurement Manager nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-procurement-manager-nel-2026-trovare-clienti"
+          "data": "6 settembre",
+          "titolo": "LinkedIn per Wealth Manager nel 2026: Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-wealth-manager-nel-2026-trovare-clienti"
         },
         {
-          "data": "9 agosto",
-          "titolo": "LinkedIn per Consulenti Privacy nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-consulenti-privacy-nel-2026-trovare-clienti"
+          "data": "5 settembre",
+          "titolo": "LinkedIn per Ingegnere Gestionale nel 2026: Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-gestionale-nel-2026-trovare-clienti"
         },
         {
-          "data": "9 agosto",
-          "titolo": "LinkedIn per Energy Manager nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-energy-manager-nel-2026-trovare-clienti"
+          "data": "5 settembre",
+          "titolo": "Come gestire un autonoleggio con l'intelligenza artificiale",
+          "url": "https://www.davidecaiazzo.it/blog/autonoleggio-intelligenza-artificiale"
         }
       ]
     },
@@ -211,16 +208,16 @@
         }
       ],
       "ieri": {
-        "data": "11 agosto",
+        "data": "6 settembre",
         "call": 0,
-        "spesa": "200,10€ (Account 1 + Account 3, giornata intera via time_range)",
-        "click": 251,
-        "dettaglio": "0 prenotazioni nuove arrivate quel giorno; 1 lead funnel dal foglio KPI; 6 guide scaricate da Kajabi (5 sul follow-up con l'IA + 1 su fatti trovare dalla ricerca IA); 2 cancellazioni ricevute (call di giorni diversi), entrambe verosimile disdetta prospect"
+        "spesa": "66,33€ (Account 1 + Account 3, giornata intera via time_range)",
+        "click": 48,
+        "dettaglio": "0 prenotazioni nuove arrivate quel giorno; 0 lead funnel dal foglio KPI; 1 guida scaricata da Kajabi (7 Prompt Claude per l'Acquisizione Clienti LinkedIn); nessuna cancellazione ricevuta"
       },
       "agenda": [
-        "Gio 13/8 · 09:30 — Chatbot del sito",
-        "Gio 13/8 · 11:30 — Meta Ads",
-        "Gio 13/8 · 12:00 — Guida/post-optin"
+        "Lun 7/9 · 11:30 — LinkedIn",
+        "Mar 8/9 · 09:30 — Meta Ads",
+        "Mar 8/9 · 12:00 — SEO"
       ]
     }
   }
