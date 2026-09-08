@@ -368,8 +368,8 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
   </div>
   <div class="kpi corner reveal" style="animation-delay:.2s">
     <label>Lead totali · 7g</label>
-    <b class="mono" style="color:var(--pink)" data-count="1">0</b>
-    <span class="delta flat">1 dal foglio KPI · 9 guide Kajabi (in parte stessi contatti)</span>
+    <b class="mono" style="color:var(--pink)" data-count="10">0</b>
+    <span class="delta flat">1 optin dal foglio KPI + 9 guide Kajabi (in parte gli stessi contatti)</span>
     <div class="sub">Foglio KPI ripartito il 7/9 dopo 3 giorni fermo (4-6/9): 1 optin (libro) e 1 call · 5 iscrizioni al workshop commercialisti il 7/9 (funnel separato, non contate qui)</div>
   </div>
   <div class="kpi corner reveal" style="animation-delay:.25s">
@@ -613,15 +613,39 @@ function clock(){
 clock(); setInterval(clock,1000);
 
 // contatori animati
-document.querySelectorAll('[data-count]').forEach(el=>{
-  const target=+el.dataset.count, t0=performance.now(), dur=1600;
-  function step(t){
-    const p=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-p,3);
-    el.textContent=Math.round(target*e).toLocaleString('it-IT');
-    if(p<1) requestAnimationFrame(step);
+// 08/09: i contatori restavano a ZERO se la pagina si apriva in una scheda di sfondo.
+// requestAnimationFrame viene congelato dal browser quando la scheda non e' visibile: l'animazione
+// non partiva mai e il numero restava il "0" scritto nell'HTML, per sempre, senza alcun errore.
+// Il Signore avrebbe letto "0 call prenotate" con 10 call vere nell'archivio: un numero FALSO,
+// il difetto peggiore possibile su un cruscotto. Ora il valore finale e' garantito in tre modi.
+(function contatoriAnimati(){
+  const elementi=[...document.querySelectorAll('[data-count]')];
+  function valoreFinale(el){ el.textContent=(+el.dataset.count).toLocaleString('it-IT'); }
+  function anima(el){
+    const target=+el.dataset.count, t0=performance.now(), dur=1600;
+    function step(t){
+      const p=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-p,3);
+      el.textContent=Math.round(target*e).toLocaleString('it-IT');
+      if(p<1) requestAnimationFrame(step); else valoreFinale(el);
+    }
+    requestAnimationFrame(step);
   }
-  requestAnimationFrame(step);
-});
+  // 1) scheda gia' nascosta al carico: niente animazione, si scrive subito il numero vero
+  if(document.hidden){ elementi.forEach(valoreFinale); }
+  else { elementi.forEach(anima); }
+  // 2) rete di sicurezza: se dopo 2,5s un contatore e' ancora fermo sul valore iniziale
+  //    mentre il suo target e' diverso, l'animazione non e' partita: scrivi il numero vero
+  setTimeout(function(){
+    elementi.forEach(function(el){
+      const atteso=(+el.dataset.count).toLocaleString('it-IT');
+      if(el.textContent.trim()!==atteso) valoreFinale(el);
+    });
+  }, 2500);
+  // 3) se la scheda torna in primo piano dopo essere stata di sfondo, i numeri sono gia' giusti
+  document.addEventListener('visibilitychange', function(){
+    if(!document.hidden) elementi.forEach(valoreFinale);
+  });
+})();
 // barre
 setTimeout(()=>{document.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%')},400);
 
@@ -1612,6 +1636,55 @@ function consegna(r, doneCb){
 // come risposta sì/no a quella domanda, invece di finire nel normale motore di risposte.
 let attesaConfermaBriefing=false;
 let avvisoLoginDato=false;
+// 08/09, guasto trovato in revisione: sul sito pubblico la chat era MORTA. Ogni domanda finiva su
+// `/chiedi`, che esiste solo sul server locale: da GitHub Pages tornava 405 e la risposta non
+// arrivava mai. Il Signore vedeva "Un istante, Signore..." e poi il nulla — nemmeno un errore.
+// Era anche la seconda meta' del "non riesco a parlare": col microfono sistemato, la voce veniva
+// trascritta correttamente ma la risposta non poteva comunque arrivare.
+// Ora: in locale resta /chiedi (ha i dati sul Mac e sa anche AGIRE); fuori si passa dal servizio
+// pubblico, costruendo il contesto dai dati gia' pubblicati (archivio giorni + report del mattino).
+const CHIEDI_VELOCE_URL='https://dc-chatbot-vswb.onrender.com/chiedi-veloce';
+const PERSONA_PUBBLICA=`Sei JARVIS, il maggiordomo digitale di Davide Caiazzo (DC Academy): impeccabile, asciutto, dai SEMPRE del lei e lo chiami "Signore". Rispondi in ITALIANO, massimo 3 frasi brevi.
+Usa SOLO i dati nel contesto qui sotto. Se il dato non c'e', dillo con eleganza e ricorda che i dati si aggiornano ogni mattina. Mai inventare numeri.
+REGOLA FERREA: MAI nome e cognome di un cliente o lead, nemmeno se comparisse nei dati: riferisciti per fonte ("la call da Meta Ads"), mai per nome.
+Rispondi SOLO con un oggetto JSON su una riga: {"who":"jarvis","testo":"..."}`;
+async function contestoPubblico(){
+  const pezzi=[];
+  try{
+    const r=await (await fetch('jarvis-report.json?t='+Date.now())).json();
+    if(r.dati) pezzi.push('=== NUMERI DELLA SETTIMANA ===\n'+r.dati);
+    if(r.testo) pezzi.push('=== REPORT DI OGGI ===\n'+r.testo);
+  }catch(e){}
+  try{
+    const g=await (await fetch('jarvis-giorni.json?t='+Date.now())).json();
+    const recs=(g.giorni||g).slice(-14).map(function(x){
+      return x.data+': call '+(x.call||0)+', lead '+((x.lead_funnel||0)+(x.guide||0))+', spesa ads '+(x.ads_spesa||0)+' euro';
+    });
+    pezzi.push('=== ULTIMI 14 GIORNI ===\n'+recs.join('\n'));
+  }catch(e){}
+  return pezzi.join('\n\n');
+}
+async function chiediAlCervello(t){
+  if(/^(localhost|127\.0\.0\.1)$/.test(location.hostname)){
+    const resp=await fetch('/chiedi',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({domanda:t, storia:storiaChat.slice(-8)})});
+    return await resp.json();
+  }
+  const dialogo=storiaChat.slice(-6).map(function(m){ return (m.ruolo||'lui')+': '+m.testo; }).join('\n');
+  const resp=await fetch(CHIEDI_VELOCE_URL,{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({persona:PERSONA_PUBBLICA, contesto:await contestoPubblico(), dialogo:dialogo, domanda:t})});
+  const j=await resp.json();
+  if(!j.ok || !j.risposta) return {ok:false, errore:'risposta vuota'};
+  const grezzo=j.risposta;
+  const a=grezzo.indexOf('{'), b=grezzo.lastIndexOf('}');
+  if(a>=0 && b>a){
+    try{
+      const o=JSON.parse(grezzo.slice(a,b+1));
+      if(o.testo) return {ok:true, who:(o.who||'jarvis'), testo:String(o.testo).trim(), tab:null};
+    }catch(e){}
+  }
+  return {ok:true, who:'jarvis', testo:grezzo.replace(/```json|```/g,'').trim().slice(0,600), tab:null};
+}
 async function domanda(testo){
   const t=(testo||ask.value).trim(); if(!t) return;
   ask.value='';
@@ -1653,9 +1726,7 @@ async function domanda(testo){
   attesa.className='msg a'; attesa.innerHTML='<span class="who">Jarvis</span><i>Un istante, Signore…</i>';
   log.appendChild(attesa); log.scrollTop=log.scrollHeight;
   try{
-    const resp=await fetch('/chiedi',{method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({domanda:t, storia:storiaChat.slice(-8)})});
-    const j=await resp.json();
+    const j=await chiediAlCervello(t);
     attesa.remove();
     if(j.ok){ consegna(j); return; }
     if(j.errore==='login'){
@@ -1716,7 +1787,20 @@ async function aggiornaOraLive(testo){
 }
 const btnAggiornaOra=$('#btn-aggiorna-ora');
 if(btnAggiornaOra){
+  // 08/09: fuori da localhost questo bottone non puo' funzionare — legge Meta Ads e il foglio KPI
+  // usando il Chrome del Signore e riscrive un file sul suo Mac, cose che dal sito pubblico non
+  // esistono. Prima falliva in silenzio (405 su /chiedi): il bottone girava e non succedeva nulla.
+  // Ora lo dice, invece di fingere.
+  const soloInLocale=!/^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+  if(soloInLocale){
+    btnAggiornaOra.title='Disponibile solo dal Mac (localhost): legge le fonti live e riscrive l\'archivio';
+    btnAggiornaOra.style.opacity='.5';
+  }
   btnAggiornaOra.addEventListener('click', async ()=>{
+    if(soloInLocale){
+      addMsg('L\'aggiornamento live si puo' + String.fromCharCode(39) + ' lanciare solo dal Mac, Signore: da qui non posso aprire le pagine né riscrivere l\'archivio. I dati che vede sono quelli dell\'ultimo giro automatico.','a','Jarvis');
+      return;
+    }
     if(btnAggiornaOra.disabled) return;
     btnAggiornaOra.disabled=true;
     const testoOrig=btnAggiornaOra.textContent;
