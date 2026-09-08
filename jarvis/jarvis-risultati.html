@@ -87,6 +87,25 @@ h2.sec::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(
 .g2{grid-template-columns:1fr 1fr}
 .g3{grid-template-columns:1fr 1fr 1fr}
 @media(max-width:960px){.g2,.g3{grid-template-columns:1fr}}
+/* ════ TELEFONO (08/09/2026) ════
+   Misurato col righello a 375px: 45 elementi sbordavano e l'orologio finiva a 517px, fuori
+   schermo, con scorrimento orizzontale su tutta la pagina. Causa: la testata era flex-wrap:nowrap
+   con tre blocchi a larghezza fissa (anello 150px + colonna destra), quindi non poteva far altro
+   che uscire. Non esisteva NESSUNA regola sotto i 960px. Qui si lascia andare a capo tutto e si
+   portano i comandi all'area di tocco da 44px richiesta su schermo tattile. */
+@media(max-width:640px){
+  body{overflow-x:hidden}
+  header{flex-wrap:wrap;justify-content:center;text-align:center;gap:12px}
+  .hleft,.hright{flex:1 1 100%;align-items:center}
+  .hright{flex-direction:row;flex-wrap:wrap;justify-content:center;text-align:center}
+  .hright > div{justify-content:center;flex-wrap:wrap}
+  .ring-hud{width:104px;height:104px}
+  .hero{grid-template-columns:1fr}
+  header button,.chips button,#btn-aggiorna-ora{min-height:44px;padding-top:10px;padding-bottom:10px}
+  .periodbar{flex-wrap:wrap;gap:10px}
+  #btn-aggiorna-ora{margin-left:0;width:100%}
+  table{display:block;overflow-x:auto} /* le tabelle scorrono da sole invece di allargare la pagina */
+}
 .panel{background:var(--panel);border:1px solid var(--line);padding:20px 22px;backdrop-filter:blur(6px)}
 .panel h3{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
 .bignum{font-family:'JetBrains Mono',monospace;font-size:30px;font-weight:500}
