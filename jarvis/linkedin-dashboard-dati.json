@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-09-07 05:43 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; agenti outreach/blog/newsletter/writer/inbox/analyst aggiornati da foglio KPI, Gmail, scheduled-tasks e dashboard Outreach-Clienti)",
+  "aggiornato": "2026-09-08 08:05 (recupero del giro saltato delle 5:40; blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; agenti outreach/blog/newsletter/writer/inbox/analyst aggiornati da foglio KPI, Gmail, scheduled-tasks e dashboard Outreach-Clienti)",
   "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi)",
   "kpi": {
     "follower": 233118,
@@ -11,8 +11,8 @@
     "engagement": "0,14%",
     "reazioni": 60,
     "commenti": 0,
-    "call": 12,
-    "call_target": 12
+    "call": 10,
+    "call_target": 10
   },
   "interazioni_composizione": [
     {
@@ -158,11 +158,31 @@
           "l": "a catalogo (audit 31/8)"
         },
         {
-          "v": "27",
-          "l": "pubblicati 31/8-6/9 (LinkedIn + AI)"
+          "v": "28",
+          "l": "pubblicati 1-7/9 (LinkedIn + AI)"
         }
       ],
       "articoli": [
+        {
+          "data": "7 settembre",
+          "titolo": "LinkedIn per Ingegnere Biomedico nel 2026: Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-biomedico-nel-2026-trovare-clienti"
+        },
+        {
+          "data": "7 settembre",
+          "titolo": "Un'edicola con l'intelligenza artificiale",
+          "url": "https://www.davidecaiazzo.it/blog/edicola-intelligenza-artificiale"
+        },
+        {
+          "data": "7 settembre",
+          "titolo": "Un agriturismo con l'intelligenza artificiale",
+          "url": "https://www.davidecaiazzo.it/blog/agriturismo-intelligenza-artificiale"
+        },
+        {
+          "data": "7 settembre",
+          "titolo": "LinkedIn per Ingegnere Ambientale nel 2026: Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-ambientale-nel-2026-trovare-clienti"
+        },
         {
           "data": "6 settembre",
           "titolo": "Una pizzeria con l'intelligenza artificiale",
@@ -172,26 +192,6 @@
           "data": "6 settembre",
           "titolo": "LinkedIn per Ingegnere Chimico nel 2026: Trovare Clienti",
           "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-chimico-nel-2026-trovare-clienti"
-        },
-        {
-          "data": "6 settembre",
-          "titolo": "Un bar con l'intelligenza artificiale",
-          "url": "https://www.davidecaiazzo.it/blog/bar-caffetteria-intelligenza-artificiale"
-        },
-        {
-          "data": "6 settembre",
-          "titolo": "LinkedIn per Wealth Manager nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-wealth-manager-nel-2026-trovare-clienti"
-        },
-        {
-          "data": "5 settembre",
-          "titolo": "LinkedIn per Ingegnere Gestionale nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-gestionale-nel-2026-trovare-clienti"
-        },
-        {
-          "data": "5 settembre",
-          "titolo": "Come gestire un autonoleggio con l'intelligenza artificiale",
-          "url": "https://www.davidecaiazzo.it/blog/autonoleggio-intelligenza-artificiale"
         }
       ]
     },
@@ -199,7 +199,7 @@
       "stato": "attiva",
       "pills": [
         {
-          "v": "05:43",
+          "v": "08:05",
           "l": "kpi giorno"
         },
         {
@@ -208,16 +208,20 @@
         }
       ],
       "ieri": {
-        "data": "6 settembre",
-        "call": 0,
-        "spesa": "66,33€ (Account 1 + Account 3, giornata intera via time_range)",
-        "click": 48,
-        "dettaglio": "0 prenotazioni nuove arrivate quel giorno; 0 lead funnel dal foglio KPI; 1 guida scaricata da Kajabi (7 Prompt Claude per l'Acquisizione Clienti LinkedIn); nessuna cancellazione ricevuta"
+        "data": "7 settembre",
+        "call": 1,
+        "spesa": "90,83€ (Account 1 + Account 3, giornata intera via time_range; account 3 a zero)",
+        "click": 146,
+        "dettaglio": "1 prenotazione nuova arrivata quel giorno (Meta Ads, per il 14/9); 1 lead funnel dal foglio KPI (libro); 1 guida scaricata da Kajabi (Shadowban su LinkedIn); 5 iscrizioni al workshop commercialisti (funnel separato); nessuna cancellazione ricevuta, una call SEO spostata dal team dall'8/9 al 15/9"
       },
       "agenda": [
-        "Lun 7/9 · 11:30 — LinkedIn",
         "Mar 8/9 · 09:30 — Meta Ads",
-        "Mar 8/9 · 12:00 — SEO"
+        "Gio 10/9 · 09:30 — Fonte non tracciata",
+        "Gio 10/9 · 11:00 — Meta Ads",
+        "Gio 10/9 · 11:30 — SEO",
+        "Lun 14/9 · 09:30 — Meta Ads",
+        "Lun 14/9 · 11:00 — Meta Ads",
+        "Mar 15/9 · 10:00 — SEO"
       ]
     }
   }
