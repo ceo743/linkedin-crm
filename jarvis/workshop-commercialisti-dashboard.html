@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workshop Commercialisti 30/09 · DC Academy</title>
+<style>
+  :root{
+    --bg:#0e1420; --card:#161f30; --card-2:#1c2740; --ink:#f4f6fb; --muted:#8b96ad;
+    --teal:#2ea8a8; --teal-soft:#12313380; --orange:#ff6b35; --green:#3ddc84; --red:#ff5c5c; --amber:#f5b942;
+    --radius:18px; --shadow:0 1px 3px rgba(0,0,0,.3),0 12px 30px rgba(0,0,0,.35); --border:#26314a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;background:
+    radial-gradient(ellipse at 20% -10%, #16324a55, transparent 60%),
+    radial-gradient(ellipse at 90% 0%, #6b2f1f44, transparent 55%), var(--bg);
+    color:var(--ink);padding:36px 4vw 70px;min-height:100vh}
+  a.back{display:inline-block;color:var(--muted);font-size:12px;text-decoration:none;margin-bottom:14px}
+  a.back:hover{color:var(--teal)}
+  .kicker{font-size:11px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;font-weight:700}
+  h1{font-size:clamp(26px,3.2vw,38px);font-weight:800;margin:6px 0 4px;letter-spacing:-.01em}
+  h1 .ia{color:var(--orange)} h1 .rest{color:var(--teal)}
+  .sub{color:var(--muted);font-size:13.5px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:6px}
+  .live{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--green)}
+  .live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+  .live.off{color:var(--amber)} .live.off::before{background:var(--amber);animation:none}
+  @keyframes pulse{50%{opacity:.3}}
+  .fade{opacity:0;transform:translateY(14px);animation:rise .55s cubic-bezier(.2,.7,.3,1) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .section-title{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:34px 0 14px;display:flex;align-items:center;gap:10px}
+  .section-title .line{flex:1;height:1px;background:var(--border)}
+  .card{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px}
+
+  /* riga grande in cima */
+  .hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
+  .big{padding:20px 22px}
+  .big .label{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .big .value{font-size:40px;font-weight:800;margin-top:6px;font-variant-numeric:tabular-nums;line-height:1.05}
+  .big .value.accent{color:var(--orange)} .big .value.teal{color:var(--teal)}
+  .big .value.good{color:var(--green)} .big .value.warn{color:var(--amber)}
+  .big .hint{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.45}
+  .big .hint b{color:var(--ink)}
+
+  /* KPI piccoli */
+  .grid-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px}
+  .kpi .label{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .kpi .value{font-size:24px;font-weight:800;margin-top:8px;font-variant-numeric:tabular-nums;color:var(--ink)}
+  .kpi .value.accent{color:var(--orange)} .kpi .value.teal{color:var(--teal)}
+  .kpi .note{font-size:11px;color:var(--muted);margin-top:6px}
+
+  /* barra budget */
+  .bar{height:10px;border-radius:20px;background:#0f1729;border:1px solid var(--border);overflow:hidden;margin-top:12px}
+  .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--orange))}
+  .barlab{display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);margin-top:8px}
+  .barlab b{color:var(--ink)}
+
+  /* grafico */
+  .chart-wrap{overflow-x:auto}
+  svg.chart{display:block;min-width:520px;width:100%;height:auto}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);margin-top:14px}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+
+  /* fonti */
+  .fonti{display:flex;flex-direction:column;gap:14px}
+  .f{display:grid;grid-template-columns:150px 1fr auto;gap:14px;align-items:center}
+  @media(max-width:620px){.f{grid-template-columns:110px 1fr auto;gap:10px}}
+  .f .n{font-size:13px;font-weight:700}
+  .f .track{height:14px;border-radius:20px;background:#0f1729;border:1px solid var(--border);overflow:hidden}
+  .f .track > i{display:block;height:100%}
+  .f .v{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .f .v small{color:var(--muted);font-weight:600;font-size:11.5px}
+
+  /* tabella */
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{text-align:left;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;padding:0 10px 10px 0;border-bottom:1px solid var(--border)}
+  td{padding:11px 10px 11px 0;border-bottom:1px solid #26314a66;font-variant-numeric:tabular-nums}
+  td.n{font-weight:800}
+  .pill{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px}
+  .pill.ads{color:var(--orange);background:#ff6b3515;border:1px solid #ff6b3540}
+  .pill.email{color:var(--teal);background:#2ea8a815;border:1px solid #2ea8a840}
+  .pill.diretti{color:var(--muted);background:#8b96ad15;border:1px solid #8b96ad40}
+
+  .nota{font-size:12px;color:var(--muted);line-height:1.55;margin-top:14px}
+  .nota b{color:var(--ink)}
+  a.openlink{display:inline-block;margin-top:14px;margin-right:10px;font-size:11.5px;font-weight:700;color:var(--teal);text-decoration:none;border:1px solid var(--border);border-radius:10px;padding:7px 14px}
+  a.openlink:hover{background:var(--teal-soft);border-color:var(--teal)}
+  footer{margin-top:44px;font-size:11px;color:var(--muted);line-height:1.7;border-top:1px solid var(--border);padding-top:16px}
+  footer a{color:var(--teal);text-decoration:none}
+</style>
+</head>
+<body>
+
+<div class="fade">
+  <a class="back" href="index.html">← Tutte le dashboard</a>
+  <div class="kicker">DC ACADEMY · ISCRIZIONI WORKSHOP</div>
+  <h1><span class="ia">Workshop Commercialisti</span> <span class="rest">30/09</span></h1>
+  <div class="sub">
+    <span id="h-obiettivo" style="color:var(--amber);font-weight:700">Obiettivo: iscrizioni al workshop del 30 settembre</span>
+    <span class="live" id="h-live">caricamento…</span>
+    <span id="h-aggiornato"></span>
+  </div>
+</div>
+
+<div class="section-title fade" style="animation-delay:.08s">A colpo d'occhio <div class="line"></div></div>
+<div class="hero fade" id="hero" style="animation-delay:.12s"></div>
+
+<div class="section-title fade" style="animation-delay:.2s">Soldi · spesa e costo per iscritto <div class="line"></div></div>
+<div class="grid-kpi fade" id="soldi" style="animation-delay:.24s"></div>
+<div class="card fade" style="animation-delay:.28s;margin-top:14px">
+  <div style="font-size:12.5px;font-weight:700">Budget bruciato sul tetto della campagna</div>
+  <div class="bar"><i id="bar-budget" style="width:0%"></i></div>
+  <div class="barlab"><span id="bar-sx"></span><span id="bar-dx"></span></div>
+</div>
+
+<div class="section-title fade" style="animation-delay:.34s">Andamento giorno per giorno <div class="line"></div></div>
+<div class="card fade" style="animation-delay:.38s">
+  <div class="chart-wrap"><svg class="chart" id="chart" viewBox="0 0 900 320" preserveAspectRatio="xMidYMid meet"></svg></div>
+  <div class="legend">
+    <span><i style="background:#ff6b35"></i>Da Meta Ads</span>
+    <span><i style="background:#2ea8a8"></i>Da email fredde</span>
+    <span><i style="background:#8b96ad"></i>Diretti / non tracciati</span>
+    <span><i style="background:#f5b942;border-radius:50%"></i>Totale iscritti (cumulato)</span>
+  </div>
+</div>
+
+<div class="section-title fade" style="animation-delay:.44s">Da dove arrivano gli iscritti <div class="line"></div></div>
+<div class="card fade" style="animation-delay:.48s">
+  <div class="fonti" id="fonti"></div>
+  <div class="nota" id="nota-fonti"></div>
+</div>
+
+<div class="section-title fade" style="animation-delay:.54s">Quale annuncio / quale email porta iscritti <div class="line"></div></div>
+<div class="card fade" style="animation-delay:.58s">
+  <table><thead><tr><th>Fonte</th><th>Contenuto (utm_content)</th><th style="text-align:right">Iscritti</th></tr></thead>
+  <tbody id="tab-contenuti"></tbody></table>
+</div>
+
+<div class="section-title fade" style="animation-delay:.64s">Numeri della campagna Meta · dall'inizio <div class="line"></div></div>
+<div class="grid-kpi fade" id="meta-kpi" style="animation-delay:.68s"></div>
+<div class="card fade" style="animation-delay:.72s;margin-top:14px">
+  <div id="camp-info" style="font-size:13px;line-height:1.7"></div>
+  <a class="openlink" id="lnk-ads" href="#" target="_blank" rel="noopener">Apri in Gestione inserzioni →</a>
+  <a class="openlink" id="lnk-foglio" href="#" target="_blank" rel="noopener">Apri il foglio degli iscritti →</a>
+  <a class="openlink" id="lnk-landing" href="#" target="_blank" rel="noopener">Apri la pagina di iscrizione →</a>
+</div>
+
+<footer class="fade" style="animation-delay:.8s">
+  JARVIS · DC Academy · iscritti letti dal foglio “Lead Workshop Commercialisti 30-09”, spesa letta da Meta Ads.
+  Le righe di prova non sono contate. Cruscotto interno: chiunque abbia il link può vederlo.
+</footer>
+
+<script>
+const EUR = n => (n===null||n===undefined) ? "—" : "€" + Number(n).toLocaleString("it-IT",{minimumFractionDigits:2,maximumFractionDigits:2});
+const NUM = n => (n===null||n===undefined) ? "—" : Number(n).toLocaleString("it-IT");
+const PCT = n => (n===null||n===undefined) ? "—" : Number(n).toLocaleString("it-IT",{minimumFractionDigits:1,maximumFractionDigits:1})+"%";
+const COL = {ads:"#ff6b35", email:"#2ea8a8", diretti:"#8b96ad"};
+
+fetch("workshop-commercialisti-dati.json?v=" + Date.now())
+  .then(r => r.json())
+  .then(render)
+  .catch(e => { document.getElementById("h-live").textContent = "dati non disponibili"; console.error(e); });
+
+function render(d){
+  /* ---- intestazione ---- */
+  const live = document.getElementById("h-live");
+  const attiva = d.campagna.stato === "ACTIVE";
+  live.className = "live" + (attiva ? "" : " off");
+  live.textContent = attiva ? "campagna attiva" : "campagna " + (d.campagna.stato||"").toLowerCase();
+  const agg = new Date(d.aggiornato);
+  document.getElementById("h-aggiornato").textContent =
+    "aggiornato " + agg.toLocaleString("it-IT",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
+
+  /* ---- hero ---- */
+  const i = d.iscritti, s = d.spesa, c = d.costo_per_iscritto;
+  const gg = d.workshop.giorni_mancanti;
+  document.getElementById("hero").innerHTML = `
+    <div class="card big"><div class="label">Iscritti totali</div>
+      <div class="value accent">${NUM(i.totali)}</div>
+      <div class="hint">Righe vere sul foglio, senza le prove.<br>Prima iscrizione: <b>${itdata(i.primo_iscritto)}</b></div></div>
+    <div class="card big"><div class="label">Iscritti oggi</div>
+      <div class="value ${i.oggi>0?"good":""}">${NUM(i.oggi)}</div>
+      <div class="hint">Ieri ne erano arrivati <b>${NUM(i.ieri)}</b></div></div>
+    <div class="card big"><div class="label">Costo per iscritto</div>
+      <div class="value teal">${EUR(c.totale)}</div>
+      <div class="hint">Spesa Meta divisa per i <b>${NUM(i.da_ads)}</b> iscritti arrivati dalle inserzioni</div></div>
+    <div class="card big"><div class="label">Mancano</div>
+      <div class="value ${gg<=7?"warn":""}">${NUM(gg)}<span style="font-size:18px;color:var(--muted);font-weight:700"> giorni</span></div>
+      <div class="hint">Al workshop del <b>${d.workshop.data_evento_it}</b></div></div>`;
+
+  /* ---- soldi ---- */
+  document.getElementById("soldi").innerHTML = [
+    ["Spesa oggi", EUR(s.oggi), "accent", "budget " + EUR(s.budget_giornaliero) + "/giorno"],
+    ["Spesa ieri", EUR(s.ieri), "", i.ieri ? NUM(d.trend_giornaliero.find(t=>t.data===ieriISO(d))?.ads ?? 0) + " iscritti dalle ads" : ""],
+    ["Spesa totale", EUR(s.totale), "accent", "dal " + itdata(d.campagna.inizio)],
+    ["Costo iscritto oggi", EUR(c.oggi), "teal", c.oggi===null ? "nessun iscritto dalle ads oggi" : ""],
+    ["Costo iscritto ieri", EUR(c.ieri), "teal", ""],
+    ["Budget ancora disponibile", EUR(s.residuo), "", "tetto " + EUR(s.tetto)]
+  ].map(([l,v,cl,n]) => `<div class="card kpi"><div class="label">${l}</div><div class="value ${cl}">${v}</div>${n?`<div class="note">${n}</div>`:""}</div>`).join("");
+
+  const quota = s.tetto ? Math.min(100, s.totale / s.tetto * 100) : 0;
+  document.getElementById("bar-budget").style.width = quota.toFixed(1) + "%";
+  document.getElementById("bar-sx").innerHTML = "speso <b>" + EUR(s.totale) + "</b> (" + quota.toFixed(1).replace(".",",") + "%)";
+  document.getElementById("bar-dx").innerHTML = "tetto <b>" + EUR(s.tetto) + "</b>";
+
+  /* ---- grafico ---- */
+  disegna(d.trend_giornaliero);
+
+  /* ---- fonti ---- */
+  const maxF = Math.max(1, ...d.fonti.map(f => f.iscritti));
+  document.getElementById("fonti").innerHTML = d.fonti.map(f => `
+    <div class="f">
+      <div class="n">${f.label}</div>
+      <div class="track"><i style="width:${(f.iscritti/maxF*100).toFixed(1)}%;background:${COL[f.chiave]}"></i></div>
+      <div class="v">${NUM(f.iscritti)} <small>${PCT(f.quota)}</small></div>
+    </div>`).join("");
+  document.getElementById("nota-fonti").innerHTML =
+    `“Diretti / non tracciati” sono le iscrizioni arrivate senza parametri di tracciamento sul link: chi ha scritto l'indirizzo a mano, chi è passato dai post o dalle prime email spedite prima del tracciamento. Meta, dal canto suo, conta <b>${NUM(d.meta.totale.lead_meta)}</b> iscrizioni a <b>${EUR(d.meta.totale.costo_lead_meta)}</b> l'una: se il numero non coincide con quello del foglio è normale, Meta attribuisce anche chi ha visto l'annuncio e si è iscritto più tardi.`;
+
+  /* ---- tabella contenuti ---- */
+  const et = {ads:"Meta Ads", email:"Email fredde", diretti:"Diretti"};
+  document.getElementById("tab-contenuti").innerHTML = d.dettaglio_contenuti.map(r => `
+    <tr><td><span class="pill ${r.fonte}">${et[r.fonte]}</span></td>
+    <td style="color:var(--muted)">${r.utm_content}</td>
+    <td class="n" style="text-align:right">${NUM(r.iscritti)}</td></tr>`).join("");
+
+  /* ---- meta kpi ---- */
+  const m = d.meta.totale;
+  document.getElementById("meta-kpi").innerHTML = [
+    ["Visualizzazioni", NUM(m.impressions)], ["Persone raggiunte", NUM(m.reach)],
+    ["Click", NUM(m.click)], ["Click su 100 (CTR)", PCT(m.ctr)],
+    ["Costo per click", EUR(m.cpc)], ["Iscrizioni contate da Meta", NUM(m.lead_meta)]
+  ].map(([l,v]) => `<div class="card kpi"><div class="label">${l}</div><div class="value">${v}</div></div>`).join("");
+
+  document.getElementById("camp-info").innerHTML =
+    `<b>${d.campagna.nome}</b><br>
+     Stato: ${d.campagna.stato==="ACTIVE"?"attiva":d.campagna.stato} · budget ${EUR(d.campagna.budget_giornaliero)} al giorno · tetto di spesa ${EUR(d.campagna.tetto_spesa)}<br>
+     In corsa dal ${itdata(d.campagna.inizio)} al ${itdata(d.campagna.fine)}`;
+  document.getElementById("lnk-ads").href = d.campagna.link_ads_manager;
+  document.getElementById("lnk-foglio").href = d.workshop.foglio;
+  document.getElementById("lnk-landing").href = d.workshop.landing;
+}
+
+function itdata(iso){
+  if(!iso) return "—";
+  const [a,m,g] = iso.split("-");
+  return `${g}/${m}/${a}`;
+}
+function ieriISO(d){
+  const t = new Date(d.aggiornato); t.setDate(t.getDate()-1);
+  const p = x => String(x).padStart(2,"0");
+  return `${t.getFullYear()}-${p(t.getMonth()+1)}-${p(t.getDate())}`;
+}
+
+/* ------- grafico a barre impilate + linea del cumulato, in SVG puro ------- */
+function disegna(trend){
+  const svg = document.getElementById("chart");
+  const W = 900, H = 320, ml = 42, mr = 46, mt = 18, mb = 42;
+  const iw = W - ml - mr, ih = H - mt - mb;
+  const maxG = Math.max(1, ...trend.map(t => t.iscritti));
+  const maxC = Math.max(1, ...trend.map(t => t.cumulato));
+  const n = trend.length;
+  const passo = iw / n;
+  const bw = Math.max(6, Math.min(38, passo * 0.6));
+  const y = v => mt + ih - (v / maxG) * ih;
+  const yc = v => mt + ih - (v / maxC) * ih;
+  const x = k => ml + passo * k + passo / 2;
+  let s = "";
+
+  // griglia orizzontale + scala sinistra (iscritti al giorno)
+  const passiG = Math.min(maxG, 4);
+  for (let k = 0; k <= passiG; k++){
+    const v = Math.round(maxG / passiG * k), yy = y(v);
+    s += `<line x1="${ml}" y1="${yy}" x2="${W-mr}" y2="${yy}" stroke="#26314a" stroke-width="1"/>`;
+    s += `<text x="${ml-8}" y="${yy+4}" text-anchor="end" font-size="10" fill="#8b96ad">${v}</text>`;
+  }
+
+  // barre impilate
+  trend.forEach((t, k) => {
+    let base = mt + ih;
+    [["ads",t.ads],["email",t.email],["diretti",t.diretti]].forEach(([chiave, v]) => {
+      if (!v) return;
+      const h = (v / maxG) * ih;
+      base -= h;
+      s += `<rect x="${(x(k)-bw/2).toFixed(1)}" y="${base.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="3" fill="${COL[chiave]}"><title>${t.etichetta} · ${v} da ${chiave}</title></rect>`;
+    });
+    if (t.iscritti) s += `<text x="${x(k).toFixed(1)}" y="${(y(t.iscritti)-7).toFixed(1)}" text-anchor="middle" font-size="10.5" font-weight="700" fill="#f4f6fb">${t.iscritti}</text>`;
+  });
+
+  // linea cumulato
+  const pts = trend.map((t,k) => `${x(k).toFixed(1)},${yc(t.cumulato).toFixed(1)}`).join(" ");
+  s += `<polyline points="${pts}" fill="none" stroke="#f5b942" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>`;
+  trend.forEach((t,k) => {
+    s += `<circle cx="${x(k).toFixed(1)}" cy="${yc(t.cumulato).toFixed(1)}" r="3.2" fill="#f5b942"><title>${t.etichetta} · ${t.cumulato} iscritti in tutto</title></circle>`;
+  });
+  // scala destra (cumulato)
+  for (let k = 0; k <= 4; k++){
+    const v = Math.round(maxC / 4 * k);
+    s += `<text x="${W-mr+8}" y="${yc(v)+4}" font-size="10" fill="#f5b942">${v}</text>`;
+  }
+
+  // etichette dei giorni (diradate se sono tanti)
+  const salto = Math.ceil(n / 14);
+  trend.forEach((t,k) => {
+    if (k % salto === 0 || k === n-1)
+      s += `<text x="${x(k).toFixed(1)}" y="${H-mb+18}" text-anchor="middle" font-size="10" fill="#8b96ad">${t.etichetta}</text>`;
+  });
+  s += `<text x="${ml}" y="${H-6}" font-size="10" fill="#8b96ad">barre = iscritti del giorno</text>`;
+  s += `<text x="${W-mr}" y="${H-6}" text-anchor="end" font-size="10" fill="#f5b942">linea = totale cumulato</text>`;
+
+  svg.innerHTML = s;
+}
+</script>
+</body>
+</html>
