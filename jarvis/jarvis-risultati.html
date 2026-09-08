@@ -273,6 +273,9 @@ body.dimmed .spotlight .panel,body.dimmed .spotlight .kpi,body.dimmed .spotlight
 .routine-bar .chips button.dot-ok::before{background:var(--green)}
 .routine-bar .chips button.dot-attenzione::before{background:var(--amber)}
 .routine-bar .chips button.dot-errore::before{background:#f87171}
+.arg-bar{margin-top:-1px;border-top:none;position:static}
+.arg-bar .chips button{border-color:rgba(56,224,248,.35)}
+.arg-bar .chips button:hover{color:var(--cyan);border-color:var(--cyan)}
 .periodbar .chips button{padding:7px 14px;font-size:12px}
 
 .fonte{float:right;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);opacity:.65;text-decoration:none;border:1px dashed var(--line-strong);padding:1px 8px;margin-left:10px}
@@ -331,6 +334,18 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
   <span class="periodbar-label" style="color:var(--pink)">Routine</span>
   <div class="chips" style="margin-top:0" id="routine-chips"><span class="note">carico…</span></div>
 </div>
+<div class="periodbar arg-bar reveal" style="animation-delay:.07s" id="arg-bar">
+  <span class="periodbar-label" style="color:var(--cyan)">Argomento</span>
+  <div class="chips" style="margin-top:0" id="arg-chips">
+    <button data-arg="tutto">tutto</button>
+    <button data-arg="workshop">workshop 30/09</button>
+    <button data-arg="vendite">vendite e call</button>
+    <button data-arg="ads">ads</button>
+    <button data-arg="contenuti">contenuti</button>
+    <button data-arg="seo">seo</button>
+    <button data-arg="sistemi">sistemi</button>
+  </div>
+</div>
 
 
 <!-- 18/07: il pannello incarichi in dashboard è stato tolto (Davide: "questi non devono stare lì...
@@ -385,6 +400,28 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
     </div>
   </div>
   <div class="note" id="p-nota"></div>
+</div>
+
+<!-- WORKSHOP COMMERCIALISTI 30/09 (08/09/2026) -->
+<h2 class="sec reveal" style="color:var(--green);animation-delay:.29s">Workshop commercialisti · 30 settembre</h2>
+<div class="panelgrid g2">
+  <div class="panel corner reveal" style="animation-delay:.3s">
+    <h3>Iscritti<a class="fonte" href="workshop-commercialisti-dashboard.html">dashboard ↗</a></h3>
+    <div class="bignum mono" style="color:var(--green)" id="wk-iscritti">—</div>
+    <div class="row"><span>Iscritti oggi</span><b id="wk-oggi">—</b></div>
+    <div class="row"><span>Arrivati dalle inserzioni</span><b id="wk-ads">—</b></div>
+    <div class="row"><span>Giorni al workshop</span><b id="wk-giorni">—</b></div>
+    <div class="note" id="wk-nota" style="margin-top:10px">carico…</div>
+  </div>
+  <div class="panel corner reveal" style="animation-delay:.32s">
+    <h3>Costo per iscritto dalle inserzioni<a class="fonte" href="https://adsmanager.facebook.com/adsmanager/manage/campaigns?act=465327538443110" target="_blank" rel="noopener">fonte ↗</a></h3>
+    <div class="bignum mono" style="color:var(--amber)" id="wk-costo">—</div>
+    <div class="row"><span>Speso finora</span><b id="wk-spesa">—</b></div>
+    <div class="row"><span>Budget al giorno</span><b id="wk-budget">—</b></div>
+    <div class="row"><span>Tetto di spesa</span><b id="wk-tetto">—</b></div>
+    <div class="row"><span>Stato campagna</span><b id="wk-stato">—</b></div>
+    <div class="note" style="margin-top:10px">Landing <a class="fonte" style="float:none" href="https://commercialisti.davidecaiazzo.it/" target="_blank" rel="noopener">apri ↗</a></div>
+  </div>
 </div>
 
 <!-- LINKEDIN -->
@@ -2202,6 +2239,81 @@ if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
       .catch(() => window.open(a.href, '_blank'));
   });
 }
+</script>
+
+<script>
+/* ===== Argomenti (08/09/2026, Davide: "jarvis va sistemato per argomento") =====
+   Non tocca il contenuto delle sezioni: le raggruppa a runtime leggendo i titoli h2.sec,
+   cosi' le routine che scrivono dentro i pannelli continuano a funzionare identiche. */
+(function(){
+  const MAPPA = [
+    [/^Workshop commercialisti/i, 'workshop'],
+    [/^LinkedIn/i,                'contenuti'],
+    [/^Lead e call/i,             'vendite'],
+    [/^Meta Ads/i,                'ads'],
+    [/^SEO e GEO/i,               'seo'],
+    [/^Agenti/i,                  'sistemi'],
+    [/^Sistemi e Automazioni/i,   'sistemi']
+  ];
+  const argDi = t => { for(const [re,a] of MAPPA) if(re.test(t.trim())) return a; return 'sempre'; };
+
+  const wrap = document.querySelector('.wrap');
+  if(!wrap) return;
+  const nodi = Array.from(wrap.children);
+  let corrente = 'sempre';
+  nodi.forEach(n => {
+    const fisso = n.tagName === 'HEADER' || n.tagName === 'FOOTER' ||
+                  n.classList.contains('periodbar') || n.classList.contains('hero');
+    if(n.tagName === 'H2' && n.classList.contains('sec')) corrente = argDi(n.textContent);
+    n.dataset.arg = fisso ? 'sempre' : corrente;
+  });
+
+  function mostra(arg){
+    nodi.forEach(n => {
+      const a = n.dataset.arg;
+      n.style.display = (arg === 'tutto' || a === 'sempre' || a === arg) ? '' : 'none';
+    });
+    document.querySelectorAll('#arg-chips button').forEach(b => {
+      b.style.color = (b.dataset.arg === arg) ? 'var(--cyan)' : '';
+      b.style.borderStyle = (b.dataset.arg === arg) ? 'solid' : 'dashed';
+    });
+    try{ localStorage.setItem('jarvis-argomento', arg); }catch(e){}
+  }
+
+  document.querySelectorAll('#arg-chips button').forEach(b =>
+    b.addEventListener('click', () => { mostra(b.dataset.arg); window.scrollTo({top:0,behavior:'smooth'}); }));
+
+  let salvato = 'tutto';
+  try{ salvato = localStorage.getItem('jarvis-argomento') || 'tutto'; }catch(e){}
+  if(!document.querySelector('#arg-chips button[data-arg="' + salvato + '"]')) salvato = 'tutto';
+  mostra(salvato);
+})();
+
+/* ===== Numeri del workshop 30/09: stessa fonte della dashboard dedicata ===== */
+(function(){
+  const eur = n => (n === null || n === undefined) ? '—'
+      : Number(n).toLocaleString('it-IT',{style:'currency',currency:'EUR',maximumFractionDigits:2});
+  const num = n => (n === null || n === undefined) ? '—' : Number(n).toLocaleString('it-IT');
+  const set = (id,v) => { const e = document.getElementById(id); if(e) e.textContent = v; };
+
+  fetch('workshop-commercialisti-dati.json?v=' + Date.now())
+    .then(r => r.json())
+    .then(d => {
+      set('wk-iscritti', num(d.iscritti.totali));
+      set('wk-oggi',     num(d.iscritti.oggi));
+      set('wk-ads',      num(d.iscritti.da_ads));
+      set('wk-giorni',   d.workshop.giorni_mancanti + ' giorni');
+      set('wk-costo',    eur(d.costo_per_iscritto.totale));
+      set('wk-spesa',    eur(d.spesa.totale));
+      set('wk-budget',   eur(d.campagna.budget_giornaliero) + ' al giorno');
+      set('wk-tetto',    eur(d.campagna.tetto_spesa));
+      set('wk-stato',    d.campagna.stato === 'ACTIVE' ? 'attiva' : String(d.campagna.stato || '').toLowerCase());
+      const agg = new Date(d.aggiornato);
+      set('wk-nota', 'Aggiornato ' + agg.toLocaleString('it-IT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}) +
+          ' · iscritti letti dal foglio "Lead Workshop Commercialisti 30-09", spesa letta da Meta Ads.');
+    })
+    .catch(() => set('wk-nota', 'dati del workshop non disponibili (workshop-commercialisti-dati.json non raggiungibile)'));
+})();
 </script>
 </body>
 </html>
