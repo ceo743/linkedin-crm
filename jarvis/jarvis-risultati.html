@@ -310,6 +310,11 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
   #p-grafico,#p-tabella{overflow-x:auto}
   #p-grafico svg{max-width:none}
   table{display:block;overflow-x:auto}
+  /* la riga della domanda: il campo di testo non scendeva sotto la sua larghezza minima e
+     spingeva fuori il bottone Invia di 3px — min-width:0 e' l'unico modo di farlo cedere in flex */
+  .askrow{flex-wrap:nowrap}
+  #ask{flex:1 1 0;min-width:0}
+  #mic,#send{flex:0 0 auto}
 }
 </style>
 </head>
