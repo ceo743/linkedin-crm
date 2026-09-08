@@ -1577,12 +1577,19 @@ function rispostaPeriodo(periodo){
   return f;
 }
 // ------- RISPOSTE (ogni dominio ha il suo agente, la sua voce, la sua scheda) -------
+// 08/09, difetto trovato in revisione: le regole sul PERIODO stavano in cima e catturavano
+// qualunque domanda contenesse "questa settimana"/"ieri"/"oggi", anche quando l'argomento era un
+// altro. Chiedendo "da dove arrivano le call questa settimana?" — la domanda piu' importante per il
+// Signore — rispondeva col riepilogo del periodo, che le fonti non le dice proprio. Ora il periodo
+// cede il passo quando la domanda chiede qualcosa che il riepilogo NON sa rispondere.
+const DOMANDE_CHE_IL_PERIODO_NON_SA = /da dove|fonte|font i|provenien|chi ha annullat|annullat|cancellat|disdett|quale|quali|perch|come mai|migliore|peggiore|top|creativ/;
+const soloPeriodo = q => !DOMANDE_CHE_IL_PERIODO_NON_SA.test(q);
 const RISPOSTE=[
   {k:['presenta','squadra','team','agenti','chi siete','chi sei'], who:'jarvis', act:'squadra'},
-  {k:['ieri'], who:'cso', act:'periodo', per:'1'},
-  {test:q=>/\boggi\b/.test(q) && !/agenda|impegn|appuntament|prenotazion|chi ho|che ho|call di oggi/.test(q), who:'cso', act:'periodo', per:'oggi'},
-  {k:['ultimi 3 giorni','ultimi tre giorni'], who:'cso', act:'periodo', per:'3'},
-  {k:['ultimi 7 giorni','questa settimana','ultima settimana'], who:'cso', act:'periodo', per:'7'},
+  {test:q=>/\bieri\b/.test(q) && soloPeriodo(q), who:'cso', act:'periodo', per:'1'},
+  {test:q=>/\boggi\b/.test(q) && soloPeriodo(q) && !/agenda|impegn|appuntament|prenotazion|chi ho|che ho|call di oggi/.test(q), who:'cso', act:'periodo', per:'oggi'},
+  {test:q=>/ultimi (3|tre) giorni/.test(q) && soloPeriodo(q), who:'cso', act:'periodo', per:'3'},
+  {test:q=>/(ultimi 7 giorni|questa settimana|ultima settimana)/.test(q) && soloPeriodo(q), who:'cso', act:'periodo', per:'7'},
   {k:['report','riepilogo','risultat','come è andata','come e andata','come stiamo','dammi i numeri','dammi i dati','situazione','sintesi','vedere il report','andamento'], who:'jarvis', act:'periodo', per:null},
   {k:['agenda','domani','stamattina','stasera','questa settimana in agenda','che ho oggi','chi ho oggi','call di oggi','appuntamenti di oggi'], who:'cso', tab:'calendly', t:()=>
     "Oggi 8 settembre ha una call in agenda, alle 9 e 30, da Meta Ads, Signore. Quella da SEO delle 12 è stata spostata dal team al 15 settembre alle 10. Il 10 settembre tre call, di cui una da Meta Ads e una da SEO. Il 14 settembre due, entrambe da Meta Ads, prenotate ieri e stamattina. Sette call confermate in totale nei prossimi giorni. Le eventuali nuove prenotazioni su Calendly: gliel'ho aperto."},
