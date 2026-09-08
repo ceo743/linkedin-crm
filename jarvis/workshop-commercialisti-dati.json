@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-09-08T10:22:30+02:00",
+  "aggiornato": "2026-09-08T13:23:04+02:00",
   "workshop": {
     "nome": "Workshop Commercialisti",
     "sottotitolo": "Iscrizioni al workshop dal vivo del 30 settembre",
@@ -33,55 +33,55 @@
     "primo_iscritto": "2026-08-19"
   },
   "spesa": {
-    "oggi": 9.4,
-    "ieri": 18.08,
-    "totale": 27.48,
+    "oggi": 13.93,
+    "ieri": 18.09,
+    "totale": 32.02,
     "tetto": 922337203685.47,
-    "residuo": 922337203657.99,
+    "residuo": 922337203653.45,
     "budget_giornaliero": 40.0
   },
   "costo_per_iscritto": {
-    "oggi": 2.35,
+    "oggi": 3.48,
     "ieri": 1.64,
-    "totale": 1.83,
+    "totale": 2.13,
     "nota": "spesa Meta divisa per gli iscritti col tracciamento ads (utm_source=meta / utm_medium=paid) presenti sul foglio"
   },
   "meta": {
     "oggi": {
-      "spesa": 9.4,
-      "impressions": 762,
-      "reach": 672,
-      "frequency": 1.13,
-      "click": 55,
-      "ctr": 7.22,
+      "spesa": 13.93,
+      "impressions": 1172,
+      "reach": 961,
+      "frequency": 1.22,
+      "click": 82,
+      "ctr": 7.0,
       "cpc": 0.17,
-      "cpm": 12.34,
-      "lead_meta": 8,
-      "costo_lead_meta": 1.18
+      "cpm": 11.89,
+      "lead_meta": 9,
+      "costo_lead_meta": 1.55
     },
     "ieri": {
-      "spesa": 18.08,
-      "impressions": 1476,
-      "reach": 1107,
+      "spesa": 18.09,
+      "impressions": 1478,
+      "reach": 1110,
       "frequency": 1.33,
       "click": 90,
-      "ctr": 6.1,
+      "ctr": 6.09,
       "cpc": 0.2,
-      "cpm": 12.25,
+      "cpm": 12.24,
       "lead_meta": 8,
       "costo_lead_meta": 2.26
     },
     "totale": {
-      "spesa": 27.48,
-      "impressions": 2238,
-      "reach": 1615,
-      "frequency": 1.39,
-      "click": 145,
-      "ctr": 6.48,
+      "spesa": 32.02,
+      "impressions": 2650,
+      "reach": 1850,
+      "frequency": 1.43,
+      "click": 172,
+      "ctr": 6.49,
       "cpc": 0.19,
-      "cpm": 12.28,
-      "lead_meta": 16,
-      "costo_lead_meta": 1.72
+      "cpm": 12.08,
+      "lead_meta": 17,
+      "costo_lead_meta": 1.88
     }
   },
   "fonti": [
@@ -350,7 +350,7 @@
       "email": 0,
       "diretti": 1,
       "cumulato": 21,
-      "spesa": 18.08
+      "spesa": 18.09
     },
     {
       "data": "2026-09-08",
@@ -360,7 +360,7 @@
       "email": 0,
       "diretti": 0,
       "cumulato": 25,
-      "spesa": 9.4
+      "spesa": 13.93
     }
   ]
 }
