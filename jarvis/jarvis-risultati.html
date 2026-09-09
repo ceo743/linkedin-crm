@@ -20,7 +20,10 @@
   --amber:#fbbf24;
   --steel:#8aa3bd;
   --text:#d7e7f5;
-  --muted:#5c7690;
+  /* 09/09, revisione (Lighthouse accessibilita' 0/100 sul contrasto): #5c7690 su sfondo #04070d dava
+     4.27:1, sotto la soglia WCAG di 4.5:1 per testo normale — colpiva label KPI, orologio, bottoni.
+     #8fa4ba mantiene la stessa tinta blu-grigia ma sale a 7.86:1. */
+  --muted:#8fa4ba;
   --danger:#f87171;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -319,7 +322,7 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="wrap" role="main">
 
 <header class="reveal">
   <div class="brand" style="display:flex;align-items:center;gap:16px">
@@ -360,7 +363,7 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
   </div>
   <div style="display:flex;gap:8px;align-items:center;font-size:12px;color:var(--muted)">
     <span>oppure</span>
-    <input type="date" id="p-da" class="pdate"> <span>→</span> <input type="date" id="p-a" class="pdate">
+    <input type="date" id="p-da" class="pdate" aria-label="Data di inizio del periodo personalizzato"> <span>→</span> <input type="date" id="p-a" class="pdate" aria-label="Data di fine del periodo personalizzato">
   </div>
   <button id="btn-aggiorna-ora" title="Va a leggere ads e LinkedIn live e aggiorna i dati di oggi" style="margin-left:auto;font-family:'Chakra Petch',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:rgba(56,224,248,.08);color:var(--cyan);border:1px solid var(--line-strong);padding:8px 16px;cursor:pointer;white-space:nowrap">↻ Aggiorna adesso</button>
 </div>
