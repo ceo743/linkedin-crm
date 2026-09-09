@@ -97,11 +97,14 @@
   #jarvis-voce-btn:hover{background:#dde7fe}
   @keyframes jvpulse{0%,100%{box-shadow:inset 3px 0 0 0 var(--blue),0 0 0 1px var(--blue)}50%{box-shadow:inset 3px 0 0 0 var(--blue),0 0 22px rgba(37,99,235,.25)}}
   .jv-acceso{animation:jvpulse 1.3s ease-in-out infinite}
+
+a.back{display:inline-block;color:var(--muted);font-size:12px;text-decoration:none;margin-bottom:14px}
 </style>
 </head>
 <body>
 
 <div class="fade">
+  <a class="back" href="index.html">← Tutte le dashboard</a>
   <div class="kicker">DC ACADEMY · CONTENT COMMAND</div>
   <h1>LinkedIn <span class="accent">Content</span> Dashboard</h1>
   <div class="sub">
@@ -449,6 +452,18 @@ function countUp(){
     };
     requestAnimationFrame(step);
   });
+
+  // 08/09: stessa correzione di jarvis-risultati.html — requestAnimationFrame e' congelato quando la
+  // scheda e' in secondo piano, quindi i contatori restavano sul valore iniziale (spesso "0") per
+  // sempre, mostrando un numero FALSO. Rete di sicurezza: se dopo 2,5s non e' arrivato al valore
+  // vero, lo si scrive comunque; e lo si riscrive quando la scheda torna visibile.
+  const finali=[...document.querySelectorAll("[data-count]")];
+  const scriviFinale=el=>{ el.textContent=(+el.dataset.count).toLocaleString("it-IT"); };
+  if(document.hidden) finali.forEach(scriviFinale);
+  setTimeout(()=>finali.forEach(el=>{
+    if(el.textContent.trim()!==(+el.dataset.count).toLocaleString("it-IT")) scriviFinale(el);
+  }),2500);
+  document.addEventListener("visibilitychange",()=>{ if(!document.hidden) finali.forEach(scriviFinale); });
 }
 
 loadData();
