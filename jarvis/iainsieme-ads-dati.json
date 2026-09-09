@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-09-08T07:56:58+02:00",
+  "aggiornato": "2026-09-09T07:54:34+02:00",
   "campagna": {
     "nome": "IAinsieme Test 3 fasce",
     "stato": "PAUSED",
@@ -264,6 +264,11 @@
       "data": "2026-09-08",
       "spesa": 0,
       "lead": 0
+    },
+    {
+      "data": "2026-09-09",
+      "spesa": 0,
+      "lead": 0
     }
   ],
   "sito": {
@@ -501,8 +506,8 @@
         "spesa": 274.27,
         "budget_totale_previsto": 300,
         "impressions": 36787,
-        "reach": 22291,
-        "frequency": 1.65,
+        "reach": 23211,
+        "frequency": 1.58,
         "click": 787,
         "ctr": 2.14,
         "cpc": 0.35,
