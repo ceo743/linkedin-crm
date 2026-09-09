@@ -14,7 +14,9 @@
   --line:rgba(56,189,248,.16);
   --line-strong:rgba(56,189,248,.38);
   --cyan:#38e0f8;
-  --cyan-dim:#1a7f96;
+  /* 09/09, Lighthouse: #1a7f96 su sfondo scuro dava 4.34:1, sotto la soglia 4.5:1 — usato dai link
+     del footer. #2a9ab5 stessa tinta, 6.13:1. */
+  --cyan-dim:#2a9ab5;
   --green:#4ade80;
   --pink:#f472b6;
   --amber:#fbbf24;
@@ -365,7 +367,7 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
     <span>oppure</span>
     <input type="date" id="p-da" class="pdate" aria-label="Data di inizio del periodo personalizzato"> <span>→</span> <input type="date" id="p-a" class="pdate" aria-label="Data di fine del periodo personalizzato">
   </div>
-  <button id="btn-aggiorna-ora" title="Va a leggere ads e LinkedIn live e aggiorna i dati di oggi" style="margin-left:auto;font-family:'Chakra Petch',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:rgba(56,224,248,.08);color:var(--cyan);border:1px solid var(--line-strong);padding:8px 16px;cursor:pointer;white-space:nowrap">↻ Aggiorna adesso</button>
+  <button id="btn-aggiorna-ora" title="Va a leggere ads e LinkedIn live e aggiorna i dati di oggi" style="margin-left:auto;font-family:'Chakra Petch',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:#04141a;color:var(--cyan);border:1px solid var(--line-strong);padding:8px 16px;cursor:pointer;white-space:nowrap">↻ Aggiorna adesso</button>
 </div>
 <div class="periodbar routine-bar reveal" style="animation-delay:.06s" id="routine-bar">
   <span class="periodbar-label" style="color:var(--pink)">Routine</span>
