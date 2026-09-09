@@ -513,7 +513,7 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
     <div class="note">5 righe optin nella finestra 2-8/9 (1 il 7/9 utm libro-davide, 4 l'8/9: magnete newsletter, libro), contate per esclusione (tutte le righe con data che non sono CALENDLY), mai dal solo valore Tipologia. Il foglio KPI (tab Lead) è ripartito il 7/9 dopo 3 giorni senza righe (4-6/9). Le 5 iscrizioni al workshop commercialisti del 7/9 non passano da questo foglio.</div>
   </div>
   <div class="panel corner reveal" style="animation-delay:.64s">
-    <h3>Guide scaricate (form Kajabi) · 6<a class="fonte" href="https://app.kajabi.com/admin/forms" target="_blank" rel="noopener">fonte ↗</a></h3>
+    <h3>Guide scaricate (form Kajabi) · 6<a class="fonte" href="https://app.kajabi.com/admin/sites/155167/forms" target="_blank" rel="noopener">fonte ↗</a></h3>
     <div class="bar"><div class="lbl"><span>3/9</span><b>2</b></div><div class="trk"><div class="fill" style="background:var(--pink)" data-w="100"></div></div></div>
     <div class="bar"><div class="lbl"><span>2/9, 6/9, 7/9, 8/9 (1 ciascuno)</span><b>4</b></div><div class="trk"><div class="fill" style="background:var(--pink)" data-w="50"></div></div></div>
     <div class="note">Totale (6) = notifiche Kajabi via Gmail, finestra 2-8/9, escluse submission di test (ceo@/Davide), le Zap Unsubscribe e le iscrizioni al workshop. Zero guide il 4 e il 5/9. In parte gli stessi contatti possono comparire anche nel lead funnel: verificato per email l'8/9, nessuna sovrapposizione trovata — la card "Lead totali" in cima somma i due valori (5+6=11).</div>
@@ -624,11 +624,14 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
 
 <footer>
   <span>Periodo: 2 – 8 settembre 2026 (pannelli LinkedIn fermi al 14/8: accesso a LinkedIn sospeso; il resto aggiornato all'8/9) · Giro del 9/9 ore 07:41: chiuso il record dell'8/9 con Meta Ads a giornata intera (93,72 € Account 1 + 465,57 € Account 3 = 559,29 € sommati nell'archivio), 1 call da Meta Ads, 4 lead funnel dal foglio KPI e 1 guida Kajabi ricontrollati sull'intera giornata (in mattinata risultavano ancora a zero); aperto il record di oggi 9/9 (parziale, nessuna prenotazione né submission finora). Dati LinkedIn fermi al 14/08: accesso a LinkedIn sospeso. Audit SEO settimanale non arrivato via email nemmeno questa settimana: pannello SEO fermo al 31/8. · Musica: "Cut and Run" Kevin MacLeod (incompetech.com), CC BY 4.0</span>
-  <span><a href="jarvis-dashboard.html" id="link-dashboard-routine">→ Dashboard routine</a></span>
+  <span><a href="claude-command-dashboard.html" id="link-dashboard-routine">→ Dashboard routine</a></span>
   <script>
-  // jarvis-dashboard.html esiste solo sul server locale: sul sito pubblico il link punterebbe a un
-  // 404 (22/07, "non funzionano i link che rimandano") — lì si va sulla dashboard routine pubblica
-  if(!/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) document.getElementById('link-dashboard-routine').href='claude-command-dashboard.html';
+  // 09/09, revisione: la versione precedente scriveva un href SBAGLIATO di default (jarvis-dashboard.html,
+  // che esiste solo in locale) e lo correggeva via JS dopo il caricamento — un crawler, un click
+  // rapidissimo o JS bloccato vedevano comunque il 404 (linkinator l'ha trovato: non esegue JS).
+  // Ora il link di partenza e' quello che funziona OVUNQUE (claude-command-dashboard.html, presente
+  // sia in locale che pubblico); solo su localhost lo si arricchisce con la versione nativa.
+  if(/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) document.getElementById('link-dashboard-routine').href='jarvis-dashboard.html';
   </script>
 </footer>
 
