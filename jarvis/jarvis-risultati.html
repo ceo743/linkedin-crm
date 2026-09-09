@@ -1843,7 +1843,10 @@ if(btnAggiornaOra){
   const soloInLocale=!/^(localhost|127\.0\.0\.1)$/.test(location.hostname);
   if(soloInLocale){
     btnAggiornaOra.title='Disponibile solo dal Mac (localhost): legge le fonti live e riscrive l\'archivio';
-    btnAggiornaOra.style.opacity='.5';
+    // 09/09, Lighthouse: opacity:.5 sul testo ciano lo faceva scendere a 3.75:1, sotto la soglia
+    // WCAG 4.5:1 — un colore attenuato dedicato comunica lo stesso "disattivato" restando leggibile
+    btnAggiornaOra.style.color='#6a9ba3';
+    btnAggiornaOra.setAttribute('aria-disabled','true');
   }
   btnAggiornaOra.addEventListener('click', async ()=>{
     if(soloInLocale){
