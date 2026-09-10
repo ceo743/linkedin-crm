@@ -1,11 +1,11 @@
 {
-  "aggiornato": "2026-09-09T22:22:39+02:00",
+  "aggiornato": "2026-09-10T07:22:35+02:00",
   "workshop": {
     "nome": "Workshop Commercialisti",
     "sottotitolo": "Iscrizioni al workshop dal vivo del 30 settembre",
     "data_evento": "2026-09-30",
     "data_evento_it": "30 settembre 2026",
-    "giorni_mancanti": 21,
+    "giorni_mancanti": 20,
     "landing": "https://commercialisti.davidecaiazzo.it/",
     "foglio": "https://docs.google.com/spreadsheets/d/1vPM-gHNN3CuocFF3nEwpcwrKv4ND8nZHtrDdWBD17fs/edit"
   },
@@ -16,99 +16,99 @@
     "nome": "2026-09-07 Workshop Commercialisti 30/09 - Iscrizioni",
     "stato": "ACTIVE",
     "obiettivo": "Contatti (iscrizione al workshop)",
-    "budget_giornaliero": 40.0,
+    "budget_giornaliero": 25.0,
     "tetto_spesa": 922337203685.47,
     "inizio": "2026-09-07",
     "fine": "2026-09-30",
     "link_ads_manager": "https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110&selected_campaign_ids=120255475473930348"
   },
   "iscritti": {
-    "totali": 44,
-    "oggi": 8,
-    "ieri": 15,
-    "da_ads": 33,
+    "totali": 48,
+    "oggi": 1,
+    "ieri": 11,
+    "da_ads": 37,
     "da_email": 8,
     "diretti": 3,
     "righe_di_prova_escluse": 1,
     "primo_iscritto": "2026-08-19"
   },
   "spesa": {
-    "oggi": 35.8,
-    "ieri": 43.1,
-    "totale": 97.07,
+    "oggi": 5.07,
+    "ieri": 40.55,
+    "totale": 106.95,
     "tetto": 922337203685.47,
-    "residuo": 922337203588.4,
-    "budget_giornaliero": 40.0
+    "residuo": 922337203578.52,
+    "budget_giornaliero": 25.0
   },
   "costo_per_iscritto": {
-    "oggi": 4.47,
-    "ieri": 3.08,
-    "totale": 2.94,
+    "oggi": 5.07,
+    "ieri": 3.69,
+    "totale": 2.89,
     "nota": "spesa Meta divisa per gli iscritti col tracciamento ads (utm_source=meta / utm_medium=paid) presenti sul foglio"
   },
   "meta": {
     "oggi": {
-      "spesa": 35.8,
-      "impressions": 4320,
-      "reach": 3371,
-      "frequency": 1.28,
-      "click": 394,
-      "ctr": 9.12,
+      "spesa": 5.07,
+      "impressions": 741,
+      "reach": 649,
+      "frequency": 1.14,
+      "click": 57,
+      "ctr": 7.69,
       "cpc": 0.09,
-      "cpm": 8.29,
-      "lead_meta": 8,
-      "costo_lead_meta": 4.48
+      "cpm": 6.84,
+      "lead_meta": 1,
+      "costo_lead_meta": 5.07
     },
     "ieri": {
-      "spesa": 43.1,
-      "impressions": 4338,
-      "reach": 3027,
-      "frequency": 1.43,
-      "click": 357,
-      "ctr": 8.23,
-      "cpc": 0.12,
-      "cpm": 9.94,
-      "lead_meta": 16,
-      "costo_lead_meta": 2.69
+      "spesa": 40.55,
+      "impressions": 4986,
+      "reach": 3862,
+      "frequency": 1.29,
+      "click": 461,
+      "ctr": 9.25,
+      "cpc": 0.09,
+      "cpm": 8.13,
+      "lead_meta": 9,
+      "costo_lead_meta": 4.51
     },
     "totale": {
-      "spesa": 97.07,
-      "impressions": 10157,
-      "reach": 5852,
-      "frequency": 1.74,
-      "click": 842,
-      "ctr": 8.29,
-      "cpc": 0.12,
-      "cpm": 9.56,
-      "lead_meta": 32,
-      "costo_lead_meta": 3.03
+      "spesa": 106.95,
+      "impressions": 11562,
+      "reach": 6561,
+      "frequency": 1.76,
+      "click": 967,
+      "ctr": 8.36,
+      "cpc": 0.11,
+      "cpm": 9.25,
+      "lead_meta": 34,
+      "costo_lead_meta": 3.15
     }
   },
   "fonti": [
     {
       "chiave": "ads",
       "label": "Meta Ads",
-      "iscritti": 33,
-      "quota": 75.0
+      "iscritti": 37,
+      "quota": 77.08
     },
     {
       "chiave": "email",
       "label": "Email fredde",
       "iscritti": 8,
-      "quota": 18.18
+      "quota": 16.67
     },
     {
       "chiave": "diretti",
       "label": "Diretti / non tracciati",
       "iscritti": 3,
-      "quota": 6.82
+      "quota": 6.25
     }
   ],
   "dettaglio_contenuti": [
     {
       "fonte": "ads",
       "utm_content": "ai-video-f24-eleven-916",
-      "iscritti": 20
+      "iscritti": 23
     },
     {
       "fonte": "ads",
@@ -158,6 +158,11 @@
     {
       "fonte": "email",
       "utm_content": "cluster-d-t2",
+      "iscritti": 1
+    },
+    {
+      "fonte": "ads",
+      "utm_content": "ai-video-fatture-estere-916",
       "iscritti": 1
     }
   ],
@@ -375,12 +380,22 @@
     {
       "data": "2026-09-09",
       "etichetta": "09/09",
-      "iscritti": 8,
-      "ads": 8,
+      "iscritti": 11,
+      "ads": 11,
       "email": 0,
       "diretti": 0,
-      "cumulato": 44,
-      "spesa": 35.8
+      "cumulato": 47,
+      "spesa": 40.55
+    },
+    {
+      "data": "2026-09-10",
+      "etichetta": "10/09",
+      "iscritti": 1,
+      "ads": 1,
+      "email": 0,
+      "diretti": 0,
+      "cumulato": 48,
+      "spesa": 5.07
     }
   ]
 }
