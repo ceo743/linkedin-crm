@@ -1,51 +1,51 @@
 {
-  "aggiornato": "4 settembre 2026, ore 10:40",
+  "aggiornato": "9 settembre 2026, ore 08:21",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
       "id": "newsletter-martedi",
       "nome": "Newsletter Martedì",
-      "sottotitolo": "LinkedIn e IA — Guida 013 Video LinkedIn completata",
+      "sottotitolo": "LinkedIn e IA — Guida 015 Commenti Umani IA completata",
       "colore": "cyan",
       "stato": "attenzione",
-      "ultima_run": "2 settembre, ore 07:50",
+      "ultima_run": "9 settembre, ore 08:20",
       "prossima_run": "prossimo mercoledì",
       "verifiche": [
         {
           "ok": true,
-          "testo": "Pulizia preliminare: cartella anomala \"012 Newsletter Claude (interno)\" trovata e consolidata (Doc+video spostati in root, wrapper cestinato)"
+          "testo": "Pulizia preliminare: 2 cartelle anomale \"010\" e \"014 Newsletter Claude (interno)\" trovate e risolte — video/audio spostati in root, articolo #014 (rimasto solo come .docx grezzo) convertito nel Doc nativo mancante"
         },
         {
           "ok": true,
-          "testo": "Tema nuovo scelto: \"Video LinkedIn con l'IA\" — fatti verificati con WebSearch/WebFetch (LinkedIn/Microsoft via Hootsuite e MediaPost, analisi Social Insider), nessun titolo duplicato"
+          "testo": "Tema nuovo scelto: \"LinkedIn blocca i commenti scritti dall'IA\" — fatti verificati con WebSearch/WebFetch (TechCrunch, Fortune, Engadget lug-ago 2026), nessun titolo duplicato"
         },
         {
           "ok": true,
-          "testo": "Articolo Doc #013 creato in Newsletter-Claude-Martedì/, contenuto verificato con read_file_content"
+          "testo": "Articolo Doc #015 creato in Newsletter-Claude-Martedì/, contenuto verificato con read_file_content (emoji corrotta 👉/👇 sostituita con ⬇, bug ricorrente ora sempre evitato)"
         },
         {
           "ok": true,
-          "testo": "Guida PDF generata da codice (genera_brochure_video.py), 12 pagine, CTA doppia verificata visivamente + link Calendly 200"
+          "testo": "Guida PDF generata da codice (genera_brochure_commenti_umani.py), 12 pagine, CTA doppia verificata visivamente + link Calendly 200"
         },
         {
           "ok": true,
-          "testo": "Repo dedicato ceo743/guida-video-ia-linkedin creato, GitHub Pages attivo, DNS CNAME su Kajabi aggiunto (DNS check successful confermato su GitHub)"
+          "testo": "Repo dedicato ceo743/guida-commenti-umani-ia-linkedin creato, GitHub Pages attivo, DNS CNAME su Kajabi aggiunto (confermato via dig)"
         },
         {
           "ok": true,
-          "testo": "Form Kajabi 2149709978 creato (duplicato con automazioni incluse), verificato end-to-end: submission 302 → email arrivata → link risolto 302 al PDF Pages corretto"
+          "testo": "Form Kajabi 2149716461 creato (duplicato da #014 con automazioni incluse), verificato end-to-end: submission 302 → email di consegna arrivata su ceo@davidecaiazzo.it → link risolto 302 al PDF Pages corretto"
         },
         {
           "ok": true,
-          "testo": "Card 13 aggiunta in cima alla hub newsletterguide.davidecaiazzo.it, verificata live (200 + contenuto presente)"
+          "testo": "Card 15 aggiunta in cima alla hub newsletterguide.davidecaiazzo.it, verificata nel sorgente raw (200)"
         },
         {
-          "ok": null,
-          "testo": "Certificato TLS del sottodominio guida-video-ia-linkedin.davidecaiazzo.it ancora in emissione a fine sessione — DNS check lato GitHub già superato, contenuto verificato 200 lato GitHub Pages diretto, HTTPS strict sul dominio custom da riverificare tra qualche minuto (pattern normale, già visto su #007-#012)"
+          "ok": true,
+          "testo": "Certificato TLS del sottodominio guida-commenti-umani-ia-linkedin.davidecaiazzo.it confermato: HTTPS strict 200 su landing e PDF, verificato senza -k"
         },
         {
           "ok": false,
-          "testo": "WhatsApp a Davide NON inviato: WhatsApp Web non risultava collegato in questa sessione (serve scansione QR con Davide presente) — inviata email equivalente a ceo@davidecaiazzo.it con gli stessi link, come sostituto"
+          "testo": "WhatsApp a Davide NON tentato: limite strutturale noto (routine schedulata non presidiata, richiede QR/conferma umana) — nessuna email sostitutiva inviata perché non è una decisione da prendere, solo il promemoria di sempre per registrare il video"
         }
       ],
       "azioni": [
@@ -54,15 +54,15 @@
           "url": "https://drive.google.com/drive/folders/1a8XCuzdUWR7Z_hOsq7Yl8zX61-2TAs_T"
         },
         {
-          "testo": "Apri articolo Doc #013",
-          "url": "https://docs.google.com/document/d/1KGd1Ovj0TSOHhdZssntXzcxYhRtkXNvS-sFFVeAWRHw/edit"
+          "testo": "Apri articolo Doc #015",
+          "url": "https://docs.google.com/document/d/1_hSoH6HnnATx_zHy2pHHDVw1yiyHGa6fZKtteuUbWGM/edit"
         },
         {
-          "testo": "Apri landing guida #013",
-          "url": "https://guida-video-ia-linkedin.davidecaiazzo.it/"
+          "testo": "Apri landing guida #015",
+          "url": "https://guida-commenti-umani-ia-linkedin.davidecaiazzo.it/"
         }
       ],
-      "nota": "Guida 013 \"Il video che LinkedIn premia\" prodotta end-to-end in questo giro (pubblicazione mar 29/09). Manca solo il video di Davide; WhatsApp non collegato, notificato via email."
+      "nota": "Guida 015 \"Commenti che sembrano tuoi (e lo sono)\" prodotta end-to-end in questo giro (pubblicazione mar 13/10). Risolte anche 2 anomalie residue di #010/#014. Manca solo il video di Davide."
     },
     {
       "id": "newsletter-venerdi",
