@@ -3,19 +3,6 @@
   "nota": "Un record per giorno. ads = entrambi gli account Meta. call = prenotazioni Calendly ARRIVATE quel giorno (mai retroattivo). call_scartate = SOLO le prenotazioni ricevute quel giorno e poi scartate lo stesso giorno (mai riferito a prenotazioni di giorni precedenti: se una call di un giorno passato viene annullata dopo, il numero del giorno passato non si tocca, si aggiunge solo una nota testuale in call_nomi di quel giorno). lead_funnel = optin dal foglio KPI. guide = form Kajabi. li_impressioni (opzionale) = impressioni LinkedIn del giorno, dal grafico Rendimento contenuti in modalità Giornaliero. Motivazioni di annullamento call: fonte foglio Google 'Report Calendly Giornaliero (Stefania)' (id 1bPJih5riHWqz86hwkfbYybmwhCKkiWVyKxqMD9ppwDU, colonna ESITO), match per giorno di PRENOTAZIONE della call. | BACKFILL 1/9/2026: record 15/8-31/8 ricostruiti in blocco dopo un buco di 17 giorni nella scrittura dell'archivio (vedi ads_nota di ciascun record).",
   "giorni": [
     {
-      "data": "2026-08-12",
-      "call": 0,
-      "call_scartate": 0,
-      "call_nomi": [],
-      "lead_funnel": 1,
-      "guide": 3,
-      "ads_spesa": 253.53,
-      "ads_click": 303,
-      "ads_impressioni": 14030,
-      "li_impressioni": 348,
-      "parziale": false
-    },
-    {
       "data": "2026-08-13",
       "call": 0,
       "call_scartate": 0,
@@ -350,14 +337,26 @@
     },
     {
       "data": "2026-09-10",
+      "call": 1,
+      "call_scartate": 0,
+      "call_nomi": [],
+      "lead_funnel": 0,
+      "guide": 0,
+      "ads_spesa": 536.93,
+      "ads_click": 955,
+      "ads_impressioni": 25318,
+      "parziale": false
+    },
+    {
+      "data": "2026-09-11",
       "call": 0,
       "call_scartate": 0,
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 0,
-      "ads_spesa": 43.99,
-      "ads_click": 69,
-      "ads_impressioni": 1934,
+      "ads_spesa": 63.28,
+      "ads_click": 94,
+      "ads_impressioni": 2690,
       "parziale": true
     }
   ]
