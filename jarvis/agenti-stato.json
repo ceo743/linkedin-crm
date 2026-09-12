@@ -1,5 +1,5 @@
 {
-  "aggiornato": "9 settembre 2026, ore 08:21",
+  "aggiornato": "11 settembre 2026, ore 09:51",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
@@ -67,35 +67,35 @@
     {
       "id": "newsletter-venerdi",
       "nome": "Newsletter Venerdì",
-      "sottotitolo": "LinkedIn e IA — verifica prenotazioni e CTA",
+      "sottotitolo": "LinkedIn e IA — guida-clone-ai-multilingue, trovato e risolto il blocco dietro lo zero prenotazioni",
       "colore": "amber",
       "stato": "attenzione",
-      "ultima_run": "4 settembre, ore 10:40",
-      "prossima_run": "11 settembre",
+      "ultima_run": "11 settembre, ore 09:51",
+      "prossima_run": "18 settembre",
       "verifiche": [
         {
           "ok": true,
-          "testo": "Dati Calendly reali via API Zapier, 6 finestre settimanali (11/08-22/09) — guida della settimana: guida-analisi-competitor-linkedin, confrontata con le 2 guide precedenti (crm, smart-links)"
+          "testo": "Dati Calendly reali via API Zapier, 4 finestre settimanali (18/08-11/09) sulle guide #007 smart-links, #008 crm, #009 analisi-competitor, #010 guida-clone-ai-multilingue (questa settimana, uscita l'8/09)"
         },
         {
           "ok": false,
-          "testo": "Zero prenotazioni per tutte e 3 le guide su tutti i medium misurati (cta_finale, cta_intermedia, post_optin). Solo 2 prenotazioni trovate nel periodo, entrambe su una guida non ancora pubblicata (shadowban) via post_optin"
+          "testo": "Zero prenotazioni su tutte e 4 le guide, su tutti i medium misurati (cta_finale, cta_intermedia, post_optin, nurturing). guida-clone-ai-multilingue è uscita solo 3 giorni fa: dato suo ancora troppo presto da solo"
         },
         {
           "ok": true,
-          "testo": "Errore trovato e RISOLTO: 7 guide (incluse quella di questa settimana e quella della settimana scorsa) avevano i bottoni CTA nel PDF ripristinati per errore al link Calendly nudo invece della landing premium del 07/08. Script corretti, PDF rigenerati, ripubblicati sui 7 repo GitHub Pages, verificato dal vivo via curl che il link giusto è online"
+          "testo": "Errore trovato e RISOLTO: le landing di #007/#008/#009 confermavano sempre l'iscrizione al visitatore anche quando Kajabi scartava il lead in silenzio (nomi di campo sbagliati) — da settimane arrivavano zero lead veri su quelle 3 guide, non zero conversioni. Corrette le 3 landing e il ponte di consegna, verificato con una submission reale: dati completi su Kajabi ed email di consegna arrivata"
         },
         {
           "ok": true,
-          "testo": "Verificato che il redirect post_optin (dopo il download) è tecnicamente identico tra questa guida e una guida con conversioni passate: non sembra un guasto tecnico, il problema è a monte (volume/pubblico), non nel funnel"
+          "testo": "Sequenza nurturing Kajabi (7 email) e le sue automazioni sui 3 form: verificate sane, nessun collegamento rotto — il blocco era solo nelle landing, non nella sequenza"
         },
         {
           "ok": null,
-          "testo": "Ancora da fare (segnalato anche il 28/08, non ancora eseguito): misurare il volume di download/optin per guida su Kajabi, per capire se lo zero è rumore statistico (poche decine di download) o un problema reale di pubblico"
+          "testo": "Punto aperto NON deciso qui: una nota di fine agosto segnalava la pagina Edizioni LinkedIn ferma a #006 anche dopo le date previste di #007/#008 — se quegli articoli non sono mai usciti su LinkedIn, il traffico verso le landing non c'era a monte, indipendentemente dal bug appena risolto. Verifica passata come task separato, tocca eventualmente una scelta di recupero contenuto di Davide"
         }
       ],
       "azioni": [],
-      "nota": "4/09: trovato e risolto un bug reale (7 guide con CTA regredita a Calendly nudo) — buona notizia operativa, ma non spiega lo zero su post_optin che uno dei redirect corretti da settimane. CMO: prossimo giro prioritario resta il volume download/guida su Kajabi, non altri restyling di copy o landing."
+      "nota": "11/09: la conclusione \"test CTA esaurito\" delle settimane scorse era prematura — lo zero su #007/#008/#009 era in buona parte un bug di raccolta lead (landing rotte), ora risolto. Prossimo giro: vedere se arrivano lead/prenotazioni vere su queste 3 guide, e chiarire se gli articoli #007/#008 sono stati davvero pubblicati su LinkedIn."
     },
     {
       "id": "taplio-post-virali",
