@@ -1,11 +1,11 @@
 {
-  "aggiornato": "2026-09-12T14:51:52+02:00",
+  "aggiornato": "2026-09-13T08:00:31+02:00",
   "workshop": {
     "nome": "Workshop Commercialisti",
     "sottotitolo": "Iscrizioni al workshop dal vivo del 30 settembre",
     "data_evento": "2026-09-30",
     "data_evento_it": "30 settembre 2026",
-    "giorni_mancanti": 18,
+    "giorni_mancanti": 17,
     "landing": "https://commercialisti.davidecaiazzo.it/",
     "foglio": "https://docs.google.com/spreadsheets/d/1vPM-gHNN3CuocFF3nEwpcwrKv4ND8nZHtrDdWBD17fs/edit"
   },
@@ -23,97 +23,97 @@
     "link_ads_manager": "https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110&selected_campaign_ids=120255475473930348"
   },
   "iscritti": {
-    "totali": 85,
-    "oggi": 10,
-    "ieri": 13,
-    "da_ads": 70,
+    "totali": 96,
+    "oggi": 4,
+    "ieri": 17,
+    "da_ads": 81,
     "da_email": 9,
     "diretti": 6,
     "righe_di_prova_escluse": 1,
     "primo_iscritto": "2026-08-19"
   },
   "spesa": {
-    "oggi": 16.23,
-    "ieri": 23.44,
-    "totale": 163.39,
+    "oggi": 6.71,
+    "ieri": 27.44,
+    "totale": 181.34,
     "tetto": 922337203685.47,
-    "residuo": 922337203522.08,
+    "residuo": 922337203504.13,
     "budget_giornaliero": 25.0
   },
   "costo_per_iscritto": {
-    "oggi": 1.8,
-    "ieri": 2.13,
-    "totale": 2.33,
+    "oggi": 1.68,
+    "ieri": 1.72,
+    "totale": 2.24,
     "nota": "spesa Meta divisa per gli iscritti col tracciamento ads (utm_source=meta / utm_medium=paid) presenti sul foglio"
   },
   "meta": {
     "oggi": {
-      "spesa": 16.23,
-      "impressions": 1660,
-      "reach": 1442,
-      "frequency": 1.15,
-      "click": 134,
-      "ctr": 8.07,
-      "cpc": 0.12,
-      "cpm": 9.78,
-      "lead_meta": 9,
-      "costo_lead_meta": 1.8
+      "spesa": 6.71,
+      "impressions": 858,
+      "reach": 766,
+      "frequency": 1.12,
+      "click": 83,
+      "ctr": 9.67,
+      "cpc": 0.08,
+      "cpm": 7.82,
+      "lead_meta": 2,
+      "costo_lead_meta": 3.36
     },
     "ieri": {
-      "spesa": 23.44,
-      "impressions": 3013,
-      "reach": 2526,
-      "frequency": 1.19,
-      "click": 240,
-      "ctr": 7.97,
-      "cpc": 0.1,
-      "cpm": 7.78,
-      "lead_meta": 4,
-      "costo_lead_meta": 5.86
+      "spesa": 27.44,
+      "impressions": 3210,
+      "reach": 2613,
+      "frequency": 1.23,
+      "click": 236,
+      "ctr": 7.35,
+      "cpc": 0.12,
+      "cpm": 8.55,
+      "lead_meta": 16,
+      "costo_lead_meta": 1.72
     },
     "totale": {
-      "spesa": 163.39,
-      "impressions": 18695,
-      "reach": 9678,
-      "frequency": 1.93,
-      "click": 1546,
-      "ctr": 8.27,
-      "cpc": 0.11,
-      "cpm": 8.74,
-      "lead_meta": 50,
-      "costo_lead_meta": 3.27
+      "spesa": 181.34,
+      "impressions": 21105,
+      "reach": 10773,
+      "frequency": 1.96,
+      "click": 1731,
+      "ctr": 8.2,
+      "cpc": 0.1,
+      "cpm": 8.59,
+      "lead_meta": 59,
+      "costo_lead_meta": 3.07
     }
   },
   "fonti": [
     {
       "chiave": "ads",
       "label": "Meta Ads",
-      "iscritti": 70,
-      "quota": 82.35
+      "iscritti": 81,
+      "quota": 84.38
     },
     {
       "chiave": "email",
       "label": "Email fredde",
       "iscritti": 9,
-      "quota": 10.59
+      "quota": 9.38
     },
     {
       "chiave": "diretti",
       "label": "Diretti / non tracciati",
       "iscritti": 6,
-      "quota": 7.06
+      "quota": 6.25
     }
   ],
   "dettaglio_contenuti": [
     {
       "fonte": "ads",
       "utm_content": "ai-video-f24-eleven-916",
-      "iscritti": 37
+      "iscritti": 44
     },
     {
       "fonte": "ads",
       "utm_content": "ai-video-fatture-estere-916",
-      "iscritti": 13
+      "iscritti": 15
     },
     {
       "fonte": "ads",
@@ -121,14 +121,14 @@
       "iscritti": 10
     },
     {
+      "fonte": "ads",
+      "utm_content": "ai-video-scadenze-3009",
+      "iscritti": 7
+    },
+    {
       "fonte": "diretti",
       "utm_content": "—",
       "iscritti": 6
-    },
-    {
-      "fonte": "ads",
-      "utm_content": "ai-video-scadenze-3009",
-      "iscritti": 5
     },
     {
       "fonte": "ads",
@@ -420,17 +420,27 @@
       "email": 0,
       "diretti": 2,
       "cumulato": 75,
-      "spesa": 23.44
+      "spesa": 23.47
     },
     {
       "data": "2026-09-12",
       "etichetta": "12/09",
-      "iscritti": 10,
-      "ads": 9,
+      "iscritti": 17,
+      "ads": 16,
       "email": 0,
       "diretti": 1,
-      "cumulato": 85,
-      "spesa": 16.23
+      "cumulato": 92,
+      "spesa": 27.44
+    },
+    {
+      "data": "2026-09-13",
+      "etichetta": "13/09",
+      "iscritti": 4,
+      "ads": 4,
+      "email": 0,
+      "diretti": 0,
+      "cumulato": 96,
+      "spesa": 6.71
     }
   ]
 }
