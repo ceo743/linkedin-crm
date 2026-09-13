@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-09-10 05:44 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; agenti outreach/blog/newsletter/writer/inbox/analyst aggiornati da foglio KPI, Gmail, scheduled-tasks e dashboard Outreach-Clienti)",
+  "aggiornato": "2026-09-13 05:43 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; agenti outreach/blog/newsletter/writer/inbox/analyst aggiornati da foglio KPI, Gmail, scheduled-tasks e dashboard Outreach-Clienti)",
   "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi)",
   "kpi": {
     "follower": 233118,
@@ -92,27 +92,27 @@
       ],
       "ultime_risposte": [
         {
-          "nome": "Francesco Cerchiara",
+          "nome": "",
           "ruolo": "Commercialista (Cosenza)",
           "data": "recente"
         },
         {
-          "nome": "Elena Maria Foglia",
+          "nome": "",
           "ruolo": "attività immobiliare propria",
           "data": "recente"
         },
         {
-          "nome": "Giuseppe D'Imperio",
+          "nome": "",
           "ruolo": "Applied Management",
           "data": "recente"
         },
         {
-          "nome": "Gianluca Falduto",
+          "nome": "",
           "ruolo": "",
           "data": "recente"
         },
         {
-          "nome": "Paolo Marciante",
+          "nome": "",
           "ruolo": "",
           "data": "recente"
         }
@@ -140,10 +140,10 @@
           "l": "produzione"
         }
       ],
-      "in_corso": "Guida 014 — «Post Collaborativi su LinkedIn» — ultima prodotta",
+      "in_corso": "Guida 015 — «Commenti Umani IA LinkedIn» — ultima prodotta",
       "ultime": [
-        "#013 — «Video LinkedIn con l'IA»",
-        "#012 — «Shadowban su LinkedIn»"
+        "#014 — «Post Collaborativi su LinkedIn»",
+        "#013 — «Video LinkedIn con l'IA»"
       ]
     },
     "blog": {
@@ -158,40 +158,40 @@
           "l": "a catalogo (audit 31/8)"
         },
         {
-          "v": "28",
-          "l": "pubblicati 2-8/9 (15 LinkedIn + 13 AI)"
+          "v": "27",
+          "l": "pubblicati 6-12/9 (14 LinkedIn + 13 AI)"
         }
       ],
       "articoli": [
         {
-          "data": "8 settembre",
-          "titolo": "LinkedIn per Ingegnere Materiali nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-materiali-nel-2026-trovare-clienti"
+          "data": "12 settembre",
+          "titolo": "Un'azienda di fotovoltaico con l'intelligenza artificiale",
+          "url": "https://www.davidecaiazzo.it/blog/fotovoltaico-intelligenza-artificiale"
         },
         {
-          "data": "8 settembre",
-          "titolo": "LinkedIn per Consulente ERP nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-consulente-erp-nel-2026-trovare-clienti"
+          "data": "12 settembre",
+          "titolo": "LinkedIn per Ingegnere Nucleare nel 2026: Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-nucleare-nel-2026-trovare-clienti"
         },
         {
-          "data": "8 settembre",
-          "titolo": "Come Creare un Clone AI per LinkedIn nel 2026 con HeyGen (Newsletter #010)",
-          "url": "https://www.davidecaiazzo.it/blog/clone-ai-per-linkedin-nel-2026-come-crearlo"
+          "data": "11 settembre",
+          "titolo": "Una tipografia con l'intelligenza artificiale",
+          "url": "https://www.davidecaiazzo.it/blog/tipografia-intelligenza-artificiale"
         },
         {
-          "data": "7 settembre",
-          "titolo": "LinkedIn per Ingegnere Biomedico nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-biomedico-nel-2026-trovare-clienti"
+          "data": "11 settembre",
+          "titolo": "LinkedIn per Ingegnere Agrario nel 2026: Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-agrario-nel-2026-trovare-clienti"
         },
         {
-          "data": "7 settembre",
-          "titolo": "LinkedIn per Ingegnere Ambientale nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-ambientale-nel-2026-trovare-clienti"
+          "data": "11 settembre",
+          "titolo": "Un distributore di carburanti con l'intelligenza artificiale",
+          "url": "https://www.davidecaiazzo.it/blog/distributore-carburanti-intelligenza-artificiale"
         },
         {
-          "data": "6 settembre",
-          "titolo": "Una pizzeria con l'intelligenza artificiale",
-          "url": "https://www.davidecaiazzo.it/blog/pizzeria-intelligenza-artificiale"
+          "data": "11 settembre",
+          "titolo": "LinkedIn per Ingegnere Navale nel 2026: Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-navale-nel-2026-trovare-clienti"
         }
       ]
     },
@@ -208,20 +208,19 @@
         }
       ],
       "ieri": {
-        "data": "9 settembre",
+        "data": "12 settembre",
         "call": 1,
-        "spesa": "435,50€ (Account 1 + Account 3, giornata intera via time_range)",
-        "click": 848,
-        "dettaglio": "1 prenotazione nuova arrivata quel giorno (Meta Ads, per il 15/9); 0 lead funnel dal foglio KPI; 1 guida scaricata da Kajabi (Shadowban su LinkedIn); nessuna cancellazione ricevuta"
+        "spesa": "437,24€ (Account 1 + Account 3, giornata intera via time_range)",
+        "click": 790,
+        "dettaglio": "1 prenotazione nuova arrivata quel giorno (Chatbot del sito, per il 14/9); 0 lead funnel dal foglio KPI; 3 guide scaricate da Kajabi (Post collaborativi su LinkedIn); nessuna cancellazione ricevuta"
       },
       "agenda": [
-        "Gio 10/9 · 09:30 — Fonte non tracciata",
-        "Gio 10/9 · 11:00 — Meta Ads",
-        "Gio 10/9 · 11:30 — SEO",
-        "Lun 14/9 · 09:30 — Meta Ads",
+        "Lun 14/9 · 09:30 — Chatbot del sito",
         "Lun 14/9 · 11:00 — Meta Ads",
         "Mar 15/9 · 09:00 — Meta Ads",
-        "Mar 15/9 · 10:00 — SEO"
+        "Mar 15/9 · 09:30 — Meta Ads",
+        "Mar 15/9 · 10:00 — Meta Ads (riprogrammata dall'8/9)",
+        "Mer 16/9 · 10:30 — Meta Ads"
       ]
     }
   }
