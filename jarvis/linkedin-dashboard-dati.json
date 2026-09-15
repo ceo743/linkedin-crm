@@ -1,6 +1,6 @@
 {
- "aggiornato": "2026-09-13 05:43 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; agenti outreach/blog/newsletter/writer/inbox/analyst aggiornati da foglio KPI, Gmail, scheduled-tasks e dashboard Outreach-Clienti)",
- "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi)",
+ "aggiornato": "2026-09-15 05:43 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; resto non riverificato in questo giro)",
+ "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 8-14 settembre 2026",
  "kpi": {
   "follower": 233118,
   "follower_delta": "+163",
@@ -11,8 +11,8 @@
   "engagement": "0,14%",
   "reazioni": 60,
   "commenti": 0,
-  "call": 6,
-  "call_target": 6
+  "call": 8,
+  "call_target": 7
  },
  "interazioni_composizione": [
   {
