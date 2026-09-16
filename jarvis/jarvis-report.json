@@ -1,19 +1,19 @@
 {
-  "generato": "2026-09-15 05:55",
-  "testo": "Otto call questa settimana contro dieci precedente. Calo. Meta Ads: 5 call come prima. Spesa però esplode—3.561€ contro 787€ settimana prima. Costo per call: 712€ oggi, 157€ prima. Stesso numero di call, budget quadruplicato. Non funziona. LinkedIn: da tre a una call. Meno 67%. SEO: sparisce. Due call perse. Chatbot sito: unica crescita. Zero la settimana prima, due questa. Tre call su otto senza spesa. Lead totali raddoppiano a 22, guide a 17—ma call calano. Qualità scesa. Situazione critica. Ads brucia budget senza ritorni. Canali storici collassati. Solo chatbot cresce.",
+  "generato": "2026-09-16 06:04",
+  "testo": "Le call questa settimana sono 7, una in meno della scorsa (erano 8). Meta Ads ne porta 4 ma erano 5 la settimana prima—calo. Il chatbot del sito ha iniziato con 2 call (0 settimana scorsa), LinkedIn stabile a 1, SEO sparito da 2 a 0. Ha speso 3.544 euro su Meta invece di 1.194: quasi il triplo. Ma le call da Meta sono calate, quindi ogni call costa ora 886 euro contro 239 di prima. Un terzo delle call (3 su 7) non viene da spesa pubblicitaria—chatbot e LinkedIn portano risultato gratis mentre Meta è diventata inefficiente. Le 13 guide scaricate calano dalle 16 della settimana precedente, ma le 7 call in target rimangono buone: la qualifica sta funzionando.",
   "incarichi": [
     {
       "reparto": "cmo",
-      "compito": "Verificare perché Meta Ads costa 4,5 volte di più per call identica (712€ oggi vs 157€ settimana prima). Targeting corretto? Cambio strategia non pianificato?"
+      "compito": "Verificare perché la spesa Meta è triplicata (1.194 → 3.544 euro) ma le call da Meta sono calate da 5 a 4. Analizzare creative, targeting e funnel per recuperare efficienza."
     },
     {
       "reparto": "cso",
-      "compito": "Analizzare calo LinkedIn (3→1 call) e sparizione SEO (2→0). Cause e azioni."
+      "compito": "Il chatbot ha portato 2 call questa settimana (0 la scorsa). Verificare quale elemento lo rende efficace e se possiamo scalarla."
     },
     {
-      "reparto": "cto",
-      "compito": "Verificare quale modifica del chatbot sito ha portato 2 call nuove (zero la settimana prima). Replicare altrove."
+      "reparto": "cso",
+      "compito": "SEO portava 2 call la settimana scorsa, questa settimana zero. Controllare se c'è un problema tecnico o una calo organico."
     }
   ],
-  "dati": "CALL PRENOTATE: 8 negli ultimi 7 giorni, contro 10 nei 7 precedenti.\nDa dove arrivano le call (settimana corrente vs precedente):\n  - Meta Ads: 5 (62% del totale), la settimana prima 5\n  - Chatbot del sito: 2 (25% del totale), la settimana prima 0\n  - LinkedIn: 1 (12% del totale), la settimana prima 3\n  - SEO: 0 (0% del totale), la settimana prima 2\nCosto per call da Meta Ads: 712,25 € (settimana prima 157,38 €).\nCall arrivate SENZA spesa pubblicitaria: 3 su 8.\n\n--- contorno ---\nSpesa Meta Ads: 3.561,24 € negli ultimi 7 giorni, contro 786,92 € nei 7 giorni precedenti.\nClick Ads: 6 mila 659 negli ultimi 7 giorni, contro 929 nei 7 giorni precedenti.\nLead (funnel + guide): 22 negli ultimi 7 giorni, contro 10 nei 7 giorni precedenti.\nCall prenotate: 8 negli ultimi 7 giorni, contro 10 nei 7 giorni precedenti.\nCall in target dopo pre qualifica: 8 negli ultimi 7 giorni, contro 10 nei 7 giorni precedenti.\n\n=== RIPARTIZIONE PER FONTE (settimana corrente, dai pannelli della dashboard: questa è l'attribuzione VERA, usala — mai attribuire lead o call a una fonte diversa da queste) ===\nCall Calendly · da dove arrivano · 8 prenotate — Meta Ads: 5; Chatbot del sito: 2; LinkedIn: 1\nGuide scaricate (form Kajabi) · 17 — 8/9: 6; 11/9, 12/9 (3 ciascuno): 6; 13/9, 14/9 (2 ciascuno): 4; 9/9: 1"
+  "dati": "CALL PRENOTATE: 7 negli ultimi 7 giorni, contro 8 nei 7 precedenti.\nDa dove arrivano le call (settimana corrente vs precedente):\n  - Meta Ads: 4 (57% del totale), la settimana prima 5\n  - Chatbot del sito: 2 (28% del totale), la settimana prima 0\n  - LinkedIn: 1 (14% del totale), la settimana prima 1\n  - SEO: 0 (0% del totale), la settimana prima 2\nCosto per call da Meta Ads: 886,16 € (settimana prima 238,89 €).\nCall arrivate SENZA spesa pubblicitaria: 3 su 7.\n\n--- contorno ---\nSpesa Meta Ads: 3.544,66 € negli ultimi 7 giorni, contro 1.194,44 € nei 7 giorni precedenti.\nClick Ads: 6 mila 377 negli ultimi 7 giorni, contro 1 mila 846 nei 7 giorni precedenti.\nLead (funnel + guide): 13 negli ultimi 7 giorni, contro 16 nei 7 giorni precedenti.\nCall prenotate: 7 negli ultimi 7 giorni, contro 8 nei 7 giorni precedenti.\nCall in target dopo pre qualifica: 7 negli ultimi 7 giorni, contro 8 nei 7 giorni precedenti.\n\n=== RIPARTIZIONE PER FONTE (settimana corrente, dai pannelli della dashboard: questa è l'attribuzione VERA, usala — mai attribuire lead o call a una fonte diversa da queste) ===\nCall Calendly · da dove arrivano · 7 prenotate — Meta Ads: 4; Chatbot del sito: 2; LinkedIn: 1\nGuide scaricate (form Kajabi) · 11 — 11/9, 12/9 (3 ciascuno): 6; 13/9, 14/9 (2 ciascuno): 4; 9/9: 1; 10/9, 15/9: 0"
 }
