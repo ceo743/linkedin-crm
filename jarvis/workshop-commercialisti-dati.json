@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-09-16T16:23:04+02:00",
+  "aggiornato": "2026-09-16T19:24:27+02:00",
   "workshop": {
     "nome": "Workshop Commercialisti",
     "sottotitolo": "Iscrizioni al workshop dal vivo del 30 settembre",
@@ -33,31 +33,31 @@
     "primo_iscritto": "2026-08-19"
   },
   "spesa": {
-    "oggi": 11.33,
+    "oggi": 13.95,
     "ieri": 24.84,
-    "totale": 270.48,
+    "totale": 273.1,
     "tetto": 922337203685.47,
-    "residuo": 922337203414.99,
+    "residuo": 922337203412.37,
     "budget_giornaliero": 25.0
   },
   "costo_per_iscritto": {
-    "oggi": 2.27,
+    "oggi": 2.79,
     "ieri": 2.26,
-    "totale": 2.1,
+    "totale": 2.12,
     "nota": "spesa Meta divisa per gli iscritti col tracciamento ads (utm_source=meta / utm_medium=paid) presenti sul foglio"
   },
   "meta": {
     "oggi": {
-      "spesa": 11.33,
-      "impressions": 1196,
-      "reach": 1105,
-      "frequency": 1.08,
-      "click": 79,
-      "ctr": 6.61,
-      "cpc": 0.14,
-      "cpm": 9.47,
+      "spesa": 13.95,
+      "impressions": 1514,
+      "reach": 1368,
+      "frequency": 1.11,
+      "click": 94,
+      "ctr": 6.21,
+      "cpc": 0.15,
+      "cpm": 9.21,
       "lead_meta": 2,
-      "costo_lead_meta": 5.67
+      "costo_lead_meta": 6.98
     },
     "ieri": {
       "spesa": 24.84,
@@ -72,16 +72,16 @@
       "costo_lead_meta": 3.11
     },
     "totale": {
-      "spesa": 270.48,
-      "impressions": 31769,
-      "reach": 14857,
-      "frequency": 2.14,
-      "click": 2489,
-      "ctr": 7.83,
+      "spesa": 273.1,
+      "impressions": 32087,
+      "reach": 14913,
+      "frequency": 2.15,
+      "click": 2504,
+      "ctr": 7.8,
       "cpc": 0.11,
       "cpm": 8.51,
       "lead_meta": 88,
-      "costo_lead_meta": 3.07
+      "costo_lead_meta": 3.1
     }
   },
   "fonti": [
@@ -470,7 +470,7 @@
       "email": 0,
       "diretti": 0,
       "cumulato": 146,
-      "spesa": 11.33
+      "spesa": 13.95
     }
   ]
 }
