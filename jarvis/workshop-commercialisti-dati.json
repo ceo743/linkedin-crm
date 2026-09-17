@@ -1,11 +1,11 @@
 {
-  "aggiornato": "2026-09-16T22:24:55+02:00",
+  "aggiornato": "2026-09-17T07:47:06+02:00",
   "workshop": {
     "nome": "Workshop Commercialisti",
     "sottotitolo": "Iscrizioni al workshop dal vivo del 30 settembre",
     "data_evento": "2026-09-30",
     "data_evento_it": "30 settembre 2026",
-    "giorni_mancanti": 14,
+    "giorni_mancanti": 13,
     "landing": "https://commercialisti.davidecaiazzo.it/",
     "foglio": "https://docs.google.com/spreadsheets/d/1vPM-gHNN3CuocFF3nEwpcwrKv4ND8nZHtrDdWBD17fs/edit"
   },
@@ -23,85 +23,85 @@
     "link_ads_manager": "https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110&selected_campaign_ids=120255475473930348"
   },
   "iscritti": {
-    "totali": 147,
-    "oggi": 6,
-    "ieri": 12,
-    "da_ads": 130,
+    "totali": 150,
+    "oggi": 2,
+    "ieri": 7,
+    "da_ads": 133,
     "da_email": 9,
     "diretti": 8,
     "righe_di_prova_escluse": 1,
     "primo_iscritto": "2026-08-19"
   },
   "spesa": {
-    "oggi": 18.43,
-    "ieri": 24.84,
-    "totale": 277.58,
+    "oggi": 4.94,
+    "ieri": 21.69,
+    "totale": 285.78,
     "tetto": 922337203685.47,
-    "residuo": 922337203407.89,
+    "residuo": 922337203399.69,
     "budget_giornaliero": 25.0
   },
   "costo_per_iscritto": {
-    "oggi": 3.07,
-    "ieri": 2.26,
-    "totale": 2.14,
+    "oggi": 2.47,
+    "ieri": 3.1,
+    "totale": 2.15,
     "nota": "spesa Meta divisa per gli iscritti col tracciamento ads (utm_source=meta / utm_medium=paid) presenti sul foglio"
   },
   "meta": {
     "oggi": {
-      "spesa": 18.43,
-      "impressions": 2072,
-      "reach": 1828,
-      "frequency": 1.13,
-      "click": 124,
-      "ctr": 5.98,
-      "cpc": 0.15,
-      "cpm": 8.89,
-      "lead_meta": 3,
-      "costo_lead_meta": 6.14
+      "spesa": 4.94,
+      "impressions": 430,
+      "reach": 391,
+      "frequency": 1.1,
+      "click": 30,
+      "ctr": 6.98,
+      "cpc": 0.16,
+      "cpm": 11.49,
+      "lead_meta": null,
+      "costo_lead_meta": null
     },
     "ieri": {
-      "spesa": 24.84,
-      "impressions": 2895,
-      "reach": 2552,
-      "frequency": 1.13,
-      "click": 174,
-      "ctr": 6.01,
-      "cpc": 0.14,
-      "cpm": 8.58,
-      "lead_meta": 8,
-      "costo_lead_meta": 3.11
+      "spesa": 21.69,
+      "impressions": 2471,
+      "reach": 2198,
+      "frequency": 1.12,
+      "click": 142,
+      "ctr": 5.75,
+      "cpc": 0.15,
+      "cpm": 8.78,
+      "lead_meta": 3,
+      "costo_lead_meta": 7.23
     },
     "totale": {
-      "spesa": 277.58,
-      "impressions": 32646,
-      "reach": 15219,
+      "spesa": 285.78,
+      "impressions": 33475,
+      "reach": 15593,
       "frequency": 2.15,
-      "click": 2534,
-      "ctr": 7.76,
+      "click": 2582,
+      "ctr": 7.71,
       "cpc": 0.11,
-      "cpm": 8.5,
+      "cpm": 8.54,
       "lead_meta": 89,
-      "costo_lead_meta": 3.12
+      "costo_lead_meta": 3.21
     }
   },
   "fonti": [
     {
       "chiave": "ads",
       "label": "Meta Ads",
-      "iscritti": 130,
-      "quota": 88.44
+      "iscritti": 133,
+      "quota": 88.67
     },
     {
       "chiave": "email",
       "label": "Email fredde",
       "iscritti": 9,
-      "quota": 6.12
+      "quota": 6.0
     },
     {
       "chiave": "diretti",
       "label": "Diretti / non tracciati",
       "iscritti": 8,
-      "quota": 5.44
+      "quota": 5.33
     }
   ],
   "dettaglio_contenuti": [
@@ -113,7 +113,7 @@
     {
       "fonte": "ads",
       "utm_content": "ai-video-fatture-estere-916",
-      "iscritti": 33
+      "iscritti": 36
     },
     {
       "fonte": "ads",
@@ -465,12 +465,22 @@
     {
       "data": "2026-09-16",
       "etichetta": "16/09",
-      "iscritti": 6,
-      "ads": 6,
+      "iscritti": 7,
+      "ads": 7,
       "email": 0,
       "diretti": 0,
-      "cumulato": 147,
-      "spesa": 18.43
+      "cumulato": 148,
+      "spesa": 21.69
+    },
+    {
+      "data": "2026-09-17",
+      "etichetta": "17/09",
+      "iscritti": 2,
+      "ads": 2,
+      "email": 0,
+      "diretti": 0,
+      "cumulato": 150,
+      "spesa": 4.94
     }
   ]
 }
