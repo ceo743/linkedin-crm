@@ -1,6 +1,6 @@
 {
- "aggiornato": "2026-09-17 05:43 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; resto non riverificato in questo giro)",
- "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 10-16 settembre 2026",
+ "aggiornato": "2026-09-19 05:43 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; resto non riverificato in questo giro)",
+ "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 12-18 settembre 2026",
  "kpi": {
   "follower": 233118,
   "follower_delta": "+163",
@@ -11,8 +11,8 @@
   "engagement": "0,14%",
   "reazioni": 60,
   "commenti": 0,
-  "call": 6,
-  "call_target": 6
+  "call": 5,
+  "call_target": 5
  },
  "interazioni_composizione": [
   {
@@ -208,15 +208,15 @@
     }
    ],
    "ieri": {
-    "data": "16 settembre",
-    "call": 0,
-    "spesa": "525,92€ (Account 1 + Account 3, giornata intera via time_range)",
-    "click": 744,
-    "dettaglio": "0 prenotazioni nuove arrivate quel giorno; 1 lead funnel dal foglio KPI (riga OPTIN, guida libro-davide); 0 guide scaricate da Kajabi (solo submission Workshop Commercialisti, funnel separato); nessuna cancellazione ricevuta"
+    "data": "18 settembre",
+    "call": 1,
+    "spesa": "722,70€ (Account 1 + Account 3, giornata intera via time_range)",
+    "click": 994,
+    "dettaglio": "1 prenotazione nuova arrivata quel giorno (fonte LinkedIn, call confermata per il 23/9); 0 lead funnel dal foglio KPI; 1 guida scaricata da Kajabi; nessuna cancellazione ricevuta"
    },
    "agenda": [
-    "Gio 17/9 · 10:30 — Meta Ads",
     "Lun 21/9 · 11:00 — Chatbot del sito",
+    "Mer 23/9 · 12:00 — LinkedIn",
     "Gio 24/9 · 14:00 — LinkedIn (riprogrammata dal team)"
    ]
   }
