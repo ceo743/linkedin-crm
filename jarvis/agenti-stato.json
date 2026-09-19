@@ -1,5 +1,5 @@
 {
-  "aggiornato": "16 settembre 2026, ore 08:10",
+  "aggiornato": "18 settembre 2026, ore 09:10",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
@@ -67,35 +67,31 @@
     {
       "id": "newsletter-venerdi",
       "nome": "Newsletter Venerdì",
-      "sottotitolo": "LinkedIn e IA — guida-clone-ai-multilingue, trovato e risolto il blocco dietro lo zero prenotazioni",
+      "sottotitolo": "LinkedIn e IA — guida #015 Commenti Umani e #016 Iscritti Newsletter, CMO chiude la caccia al bottone nel PDF",
       "colore": "amber",
       "stato": "attenzione",
-      "ultima_run": "11 settembre, ore 09:51",
-      "prossima_run": "18 settembre",
+      "ultima_run": "18 settembre, ore 09:10",
+      "prossima_run": "25 settembre",
       "verifiche": [
         {
           "ok": true,
-          "testo": "Dati Calendly reali via API Zapier, 4 finestre settimanali (18/08-11/09) sulle guide #007 smart-links, #008 crm, #009 analisi-competitor, #010 guida-clone-ai-multilingue (questa settimana, uscita l'8/09)"
+          "testo": "Dati Calendly reali via API Zapier, 4 finestre settimanali (26/08-18/09) sulle guide #013 video, #014 post-collaborativi, #015 commenti-umani (uscita 9/09), #016 iscritti-newsletter (uscita 16/09, questa settimana)"
         },
         {
           "ok": false,
-          "testo": "Zero prenotazioni su tutte e 4 le guide, su tutti i medium misurati (cta_finale, cta_intermedia, post_optin, nurturing). guida-clone-ai-multilingue è uscita solo 3 giorni fa: dato suo ancora troppo presto da solo"
+          "testo": "2 prenotazioni in 4 settimane, entrambe da post_optin su una guida precedente (shadowban). Zero da cta_finale/cta_intermedia (bottone PDF) su ogni guida, zero da nurturing, zero dirette da #015 e #016"
         },
         {
           "ok": true,
-          "testo": "Errore trovato e RISOLTO: le landing di #007/#008/#009 confermavano sempre l'iscrizione al visitatore anche quando Kajabi scartava il lead in silenzio (nomi di campo sbagliati) — da settimane arrivavano zero lead veri su quelle 3 guide, non zero conversioni. Corrette le 3 landing e il ponte di consegna, verificato con una submission reale: dati completi su Kajabi ed email di consegna arrivata"
+          "testo": "Ricontrollato il bug delle landing trovato la settimana scorsa (campi form sbagliati verso Kajabi): sulle landing di #015 e #016 i nomi campo sono corretti (form_submission[name/email/phone_number], custom_70/71/74/75), stesso schema già riparato — le due guide nuove non hanno quel bug"
         },
         {
           "ok": true,
-          "testo": "Sequenza nurturing Kajabi (7 email) e le sue automazioni sui 3 form: verificate sane, nessun collegamento rotto — il blocco era solo nelle landing, non nella sequenza"
-        },
-        {
-          "ok": null,
-          "testo": "Punto aperto NON deciso qui: una nota di fine agosto segnalava la pagina Edizioni LinkedIn ferma a #006 anche dopo le date previste di #007/#008 — se quegli articoli non sono mai usciti su LinkedIn, il traffico verso le landing non c'era a monte, indipendentemente dal bug appena risolto. Verifica passata come task separato, tocca eventualmente una scelta di recupero contenuto di Davide"
+          "testo": "Valutazione CMO: bottone CTA nel PDF dichiarato morto, si spegne dalla revisione. Sequenza nurturing da controllare sui tassi di apertura (non più sulle prenotazioni). Proposta nuova: usare gli iscritti alle guide come pubblico caldo per le ads della consulenza LinkedIn — non ancora implementata, è una proposta per il prossimo comitato"
         }
       ],
       "azioni": [],
-      "nota": "11/09: la conclusione \"test CTA esaurito\" delle settimane scorse era prematura — lo zero su #007/#008/#009 era in buona parte un bug di raccolta lead (landing rotte), ora risolto. Prossimo giro: vedere se arrivano lead/prenotazioni vere su queste 3 guide, e chiarire se gli articoli #007/#008 sono stati davvero pubblicati su LinkedIn."
+      "nota": "18/09: dato confermato, non un bug. Dalla prossima settimana la revisione non segue più cta_finale/cta_intermedia (chiuso). Da valutare in comitato la proposta del CMO di usare gli iscritti guide come pubblico ads."
     },
     {
       "id": "taplio-post-virali",
