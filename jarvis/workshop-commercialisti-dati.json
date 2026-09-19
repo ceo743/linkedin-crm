@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-09-19T13:47:55+02:00",
+  "aggiornato": "2026-09-19T19:47:04+02:00",
   "workshop": {
     "nome": "Workshop Commercialisti",
     "sottotitolo": "Iscrizioni al workshop dal vivo del 30 settembre",
@@ -33,35 +33,35 @@
     "primo_iscritto": "2026-08-19"
   },
   "spesa": {
-    "oggi": 10.34,
+    "oggi": 16.98,
     "ieri": 22.86,
-    "totale": 338.4,
+    "totale": 345.04,
     "tetto": 922337203685.47,
-    "residuo": 922337203347.07,
+    "residuo": 922337203340.43,
     "budget_giornaliero": 25.0
   },
   "costo_per_iscritto": {
     "oggi": null,
     "ieri": 3.81,
-    "totale": 2.32,
+    "totale": 2.36,
     "nota": "spesa Meta divisa per gli iscritti col tracciamento ads (utm_source=meta / utm_medium=paid) presenti sul foglio"
   },
   "meta": {
     "oggi": {
-      "spesa": 10.34,
-      "impressions": 1005,
-      "reach": 974,
-      "frequency": 1.03,
-      "click": 44,
-      "ctr": 4.38,
-      "cpc": 0.24,
-      "cpm": 10.29,
-      "lead_meta": 4,
-      "costo_lead_meta": 2.59
+      "spesa": 16.98,
+      "impressions": 1635,
+      "reach": 1456,
+      "frequency": 1.12,
+      "click": 87,
+      "ctr": 5.32,
+      "cpc": 0.2,
+      "cpm": 10.39,
+      "lead_meta": 10,
+      "costo_lead_meta": 1.7
     },
     "ieri": {
       "spesa": 22.86,
-      "impressions": 2624,
+      "impressions": 2626,
       "reach": 2421,
       "frequency": 1.08,
       "click": 151,
@@ -72,16 +72,16 @@
       "costo_lead_meta": 2.54
     },
     "totale": {
-      "spesa": 338.4,
-      "impressions": 39476,
-      "reach": 17635,
+      "spesa": 345.04,
+      "impressions": 40108,
+      "reach": 17881,
       "frequency": 2.24,
-      "click": 2909,
-      "ctr": 7.37,
+      "click": 2952,
+      "ctr": 7.36,
       "cpc": 0.12,
-      "cpm": 8.57,
-      "lead_meta": 106,
-      "costo_lead_meta": 3.19
+      "cpm": 8.6,
+      "lead_meta": 112,
+      "costo_lead_meta": 3.08
     }
   },
   "fonti": [
@@ -500,7 +500,7 @@
       "email": 0,
       "diretti": 0,
       "cumulato": 163,
-      "spesa": 10.34
+      "spesa": 16.98
     }
   ]
 }
