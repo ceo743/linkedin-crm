@@ -1,19 +1,19 @@
 {
-  "generato": "2026-09-19 05:57",
-  "testo": "Le call sono rimaste 5 anche questa settimana, ma la composizione è capovolta. LinkedIn e il chatbot del sito ne portano 4 su 5 (80%), mentre Meta Ads è crollata da 5 a 1 sola. Il problema è il costo: prima pagavamo 479 euro per call dalle ads, ora 4.114. La spesa pubblicitaria è salita del 72% a 4.114 euro, i clic sono aumentati del 47%, ma le call dalle ads sono scese dell'80%. Significa che sta entrando traffico (click +47%), ma niente si trasforma in prenotazione. Il 80% delle call arriva invece senza spesa pubblicitaria, da LinkedIn e dal chatbot. La situazione è di inefficienza totale sulle ads: più soldi buttati per meno risultati. Serve capire dove stanno andando i clic e se il problema è nella qualità del traffico o nella campagna stessa.",
+  "generato": "2026-09-20 05:55",
+  "testo": "Call scese 6→5. Movimento reale è nella ripartizione.\n\nMeta Ads crollata: 5→2 conversioni (-60%), spesa quasi raddoppiata (2.633→4.418 euro). Costo per call volato 527→2.209 euro. Click +32%, conversioni capovolte: traffico sì, prenotazioni no.\n\nLinkedIn nuovo: 2 call questa settimana, secondo canale. Chatbot 1, stabile.\n\nTre call su cinque organiche. Sostengono mentre Meta si degrada.\n\nHo incaricato il CMO su creativi/targeting Meta, il CSO su qualifica lead, il CTO su landing/pixel.\n\nMomento di transizione: Meta perde forza quando spendete di più, LinkedIn accende. Se temporaneo o trend, da chiarire.",
   "incarichi": [
     {
       "reparto": "cmo",
-      "compito": "Verificare perché LinkedIn e il chatbot del sito hanno iniziato a portare call questa settimana (erano fermi prima). Controllare cosa è cambiato e se è replicabile"
-    },
-    {
-      "reparto": "cto",
-      "compito": "Controllare le campagne Meta Ads: spesa +72%, clic +47%, ma call -80%. Verificare se c'è un problema nel pixel, nel targeting o nel funnel interno di Kajabi"
+      "compito": "Verificare creativi e targeting campagne Meta Ads di questa settimana: conversioni crollate nonostante aumento traffico."
     },
     {
       "reparto": "cso",
-      "compito": "Valutare la qualità delle call dalle ads: il costo per call è 8,6 volte più alto rispetto a una settimana fa. Capire se gli utenti che arrivano dalle ads hanno cambiato profilo"
+      "compito": "Controllare qualità qualifica lead Meta: numero prenotazioni sceso mentre lead e click saliti."
+    },
+    {
+      "reparto": "cto",
+      "compito": "Valutare landing page e pixel tracciamento per escludere problemi tecnici sulla conversione."
     }
   ],
-  "dati": "CALL PRENOTATE: 5 negli ultimi 7 giorni, contro 5 nei 7 precedenti.\nDa dove arrivano le call (settimana corrente vs precedente):\n  - LinkedIn: 2 (40% del totale), la settimana prima 0\n  - Chatbot del sito: 2 (40% del totale), la settimana prima 0\n  - Meta Ads: 1 (20% del totale), la settimana prima 5\nCosto per call da Meta Ads: 4.114,24 € (settimana prima 478,82 €).\nCall arrivate SENZA spesa pubblicitaria: 4 su 5.\n\n--- contorno ---\nSpesa Meta Ads: 4.114,24 € negli ultimi 7 giorni, contro 2.394,11 € nei 7 giorni precedenti.\nClick Ads: 6 mila 408 negli ultimi 7 giorni, contro 4 mila 360 nei 7 giorni precedenti.\nLead (funnel + guide): 15 negli ultimi 7 giorni, contro 17 nei 7 giorni precedenti.\nCall prenotate: 5 negli ultimi 7 giorni, contro 5 nei 7 giorni precedenti.\nCall in target dopo pre qualifica: 5 negli ultimi 7 giorni, contro 5 nei 7 giorni precedenti.\n\n=== RIPARTIZIONE PER FONTE (settimana corrente, dai pannelli della dashboard: questa è l'attribuzione VERA, usala — mai attribuire lead o call a una fonte diversa da queste) ===\nCall Calendly · da dove arrivano · 5 prenotate — Chatbot del sito: 2; LinkedIn: 2; Meta Ads: 1\nGuide scaricate (form Kajabi) · 12 — 17/9: 4; 12/9: 3; 13/9, 14/9 (2 ciascuno): 4; 18/9: 1; 15/9, 16/9: 0"
+  "dati": "CALL PRENOTATE: 5 negli ultimi 7 giorni, contro 6 nei 7 precedenti.\nDa dove arrivano le call (settimana corrente vs precedente):\n  - Meta Ads: 2 (40% del totale), la settimana prima 5\n  - LinkedIn: 2 (40% del totale), la settimana prima 0\n  - Chatbot del sito: 1 (20% del totale), la settimana prima 1\nCosto per call da Meta Ads: 2.209,20 € (settimana prima 526,73 €).\nCall arrivate SENZA spesa pubblicitaria: 3 su 5.\n\n--- contorno ---\nSpesa Meta Ads: 4.418,40 € negli ultimi 7 giorni, contro 2.633,66 € nei 7 giorni precedenti.\nClick Ads: 6 mila 481 negli ultimi 7 giorni, contro 4 mila 890 nei 7 giorni precedenti.\nLead (funnel + guide): 13 negli ultimi 7 giorni, contro 20 nei 7 giorni precedenti.\nCall prenotate: 5 negli ultimi 7 giorni, contro 6 nei 7 giorni precedenti.\nCall in target dopo pre qualifica: 5 negli ultimi 7 giorni, contro 6 nei 7 giorni precedenti.\n\n=== RIPARTIZIONE PER FONTE (settimana corrente, dai pannelli della dashboard: questa è l'attribuzione VERA, usala — mai attribuire lead o call a una fonte diversa da queste) ===\nCall Calendly · da dove arrivano · 5 prenotate — Meta Ads: 2; LinkedIn: 2; Chatbot del sito: 1\nGuide scaricate (form Kajabi) · 10 — 17/9: 4; 13/9, 14/9 (2 ciascuno): 4; 18/9, 19/9 (1 ciascuno): 2; 15/9, 16/9: 0"
 }
