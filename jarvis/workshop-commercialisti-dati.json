@@ -1,11 +1,11 @@
 {
-  "aggiornato": "2026-09-19T19:47:04+02:00",
+  "aggiornato": "2026-09-20T13:46:47+02:00",
   "workshop": {
     "nome": "Workshop Commercialisti",
     "sottotitolo": "Iscrizioni al workshop dal vivo del 30 settembre",
     "data_evento": "2026-09-30",
     "data_evento_it": "30 settembre 2026",
-    "giorni_mancanti": 11,
+    "giorni_mancanti": 10,
     "landing": "https://commercialisti.davidecaiazzo.it/",
     "foglio": "https://docs.google.com/spreadsheets/d/1vPM-gHNN3CuocFF3nEwpcwrKv4ND8nZHtrDdWBD17fs/edit"
   },
@@ -25,7 +25,7 @@
   "iscritti": {
     "totali": 163,
     "oggi": 0,
-    "ieri": 6,
+    "ieri": 0,
     "da_ads": 146,
     "da_email": 9,
     "diretti": 8,
@@ -33,55 +33,55 @@
     "primo_iscritto": "2026-08-19"
   },
   "spesa": {
-    "oggi": 16.98,
-    "ieri": 22.86,
-    "totale": 345.04,
+    "oggi": 15.56,
+    "ieri": 21.14,
+    "totale": 364.76,
     "tetto": 922337203685.47,
-    "residuo": 922337203340.43,
+    "residuo": 922337203320.71,
     "budget_giornaliero": 25.0
   },
   "costo_per_iscritto": {
     "oggi": null,
-    "ieri": 3.81,
-    "totale": 2.36,
+    "ieri": null,
+    "totale": 2.5,
     "nota": "spesa Meta divisa per gli iscritti col tracciamento ads (utm_source=meta / utm_medium=paid) presenti sul foglio"
   },
   "meta": {
     "oggi": {
-      "spesa": 16.98,
-      "impressions": 1635,
-      "reach": 1456,
-      "frequency": 1.12,
-      "click": 87,
-      "ctr": 5.32,
-      "cpc": 0.2,
-      "cpm": 10.39,
-      "lead_meta": 10,
-      "costo_lead_meta": 1.7
+      "spesa": 15.56,
+      "impressions": 1599,
+      "reach": 1499,
+      "frequency": 1.07,
+      "click": 82,
+      "ctr": 5.13,
+      "cpc": 0.19,
+      "cpm": 9.73,
+      "lead_meta": 4,
+      "costo_lead_meta": 3.89
     },
     "ieri": {
-      "spesa": 22.86,
-      "impressions": 2626,
-      "reach": 2421,
-      "frequency": 1.08,
-      "click": 151,
-      "ctr": 5.75,
-      "cpc": 0.15,
-      "cpm": 8.71,
-      "lead_meta": 9,
-      "costo_lead_meta": 2.54
+      "spesa": 21.14,
+      "impressions": 2171,
+      "reach": 1948,
+      "frequency": 1.11,
+      "click": 109,
+      "ctr": 5.02,
+      "cpc": 0.19,
+      "cpm": 9.74,
+      "lead_meta": 10,
+      "costo_lead_meta": 2.11
     },
     "totale": {
-      "spesa": 345.04,
-      "impressions": 40108,
-      "reach": 17881,
-      "frequency": 2.24,
-      "click": 2952,
-      "ctr": 7.36,
+      "spesa": 364.76,
+      "impressions": 42244,
+      "reach": 18730,
+      "frequency": 2.26,
+      "click": 3056,
+      "ctr": 7.23,
       "cpc": 0.12,
-      "cpm": 8.6,
-      "lead_meta": 112,
-      "costo_lead_meta": 3.08
+      "cpm": 8.63,
+      "lead_meta": 116,
+      "costo_lead_meta": 3.14
     }
   },
   "fonti": [
@@ -500,7 +500,17 @@
       "email": 0,
       "diretti": 0,
       "cumulato": 163,
-      "spesa": 16.98
+      "spesa": 21.14
+    },
+    {
+      "data": "2026-09-20",
+      "etichetta": "20/09",
+      "iscritti": 0,
+      "ads": 0,
+      "email": 0,
+      "diretti": 0,
+      "cumulato": 163,
+      "spesa": 15.56
     }
   ]
 }
