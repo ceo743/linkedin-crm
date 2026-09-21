@@ -1,6 +1,6 @@
 {
-  "aggiornato": "2026-09-20 05:44 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; resto non riverificato in questo giro)",
-  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 13-19 settembre 2026",
+  "aggiornato": "2026-09-21 05:44 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; resto non riverificato in questo giro)",
+  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 14-20 settembre 2026",
   "kpi": {
     "follower": 233118,
     "follower_delta": "+163",
@@ -11,8 +11,8 @@
     "engagement": "0,14%",
     "reazioni": 60,
     "commenti": 0,
-    "call": 5,
-    "call_target": 5
+    "call": 3,
+    "call_target": 3
   },
   "interazioni_composizione": [
     {
@@ -159,10 +159,30 @@
         },
         {
           "v": "28",
-          "l": "pubblicati 13-19/9 (14 LinkedIn + 14 AI)"
+          "l": "pubblicati 14-20/9 (14 LinkedIn + 14 AI)"
         }
       ],
       "articoli": [
+        {
+          "data": "20 settembre",
+          "titolo": "LinkedIn per Ingegnere di Processo nel 2026: Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-di-processo-nel-2026-trovare-clienti"
+        },
+        {
+          "data": "20 settembre",
+          "titolo": "Come il commercialista risponde ai clienti con l'intelligenza artificiale",
+          "url": "https://www.davidecaiazzo.it/blog/risposte-clienti-commercialista-intelligenza-artificiale"
+        },
+        {
+          "data": "20 settembre",
+          "titolo": "LinkedIn per Ingegnere Tessile nel 2026: Trovare Clienti",
+          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-tessile-nel-2026-trovare-clienti"
+        },
+        {
+          "data": "20 settembre",
+          "titolo": "Un'agenzia NCC con l'intelligenza artificiale",
+          "url": "https://www.davidecaiazzo.it/blog/ncc-noleggio-conducente-intelligenza-artificiale"
+        },
         {
           "data": "19 settembre",
           "titolo": "LinkedIn per Ingegnere Acustico nel 2026: Trovare Clienti",
@@ -170,28 +190,8 @@
         },
         {
           "data": "19 settembre",
-          "titolo": "Non tutti i clienti sono uguali: la lista documenti su misura in studio",
-          "url": "https://www.davidecaiazzo.it/blog/richieste-documenti-commercialista-intelligenza-artificiale"
-        },
-        {
-          "data": "19 settembre",
           "titolo": "LinkedIn per Ingegnere Ferroviario nel 2026: Trovare Clienti",
           "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-ferroviario-nel-2026-trovare-clienti"
-        },
-        {
-          "data": "19 settembre",
-          "titolo": "Un negozio di elettrodomestici con l'intelligenza artificiale",
-          "url": "https://www.davidecaiazzo.it/blog/negozio-elettrodomestici-intelligenza-artificiale"
-        },
-        {
-          "data": "18 settembre",
-          "titolo": "LinkedIn per Ingegnere Antincendio nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-antincendio-nel-2026-trovare-clienti"
-        },
-        {
-          "data": "18 settembre",
-          "titolo": "Il cliente senza documenti: solleciti automatici in studio",
-          "url": "https://www.davidecaiazzo.it/blog/documenti-clienti-commercialista-intelligenza-artificiale"
         }
       ]
     },
@@ -208,14 +208,14 @@
         }
       ],
       "ieri": {
-        "data": "19 settembre",
-        "call": 1,
-        "spesa": "741,40€ (Account 1 + Account 3, giornata intera via time_range)",
-        "click": 863,
-        "dettaglio": "1 prenotazione nuova arrivata quel giorno (fonte Meta Ads, call confermata per il 23/9); 0 lead funnel dal foglio KPI; 1 guida scaricata da Kajabi; nessuna cancellazione ricevuta"
+        "data": "20 settembre",
+        "call": 0,
+        "spesa": "950,33€ (Account 1 + Account 3, giornata intera via time_range)",
+        "click": 1045,
+        "dettaglio": "0 prenotazioni nuove arrivate quel giorno; 0 lead funnel dal foglio KPI; 0 guide reali (1 submission 'Clienti Su Richiesta' e 5 iscrizioni Workshop Commercialisti escluse); nessuna cancellazione ricevuta"
       },
       "agenda": [
-        "Lun 21/9 · 11:00 — Chatbot del sito",
+        "Oggi 21/9 · 11:00 — Chatbot del sito",
         "Mer 23/9 · 09:00 — Meta Ads",
         "Mer 23/9 · 12:00 — LinkedIn",
         "Gio 24/9 · 14:00 — LinkedIn (riprogrammata dal team)"
