@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-09-21T07:27:35+02:00",
+  "aggiornato": "2026-09-21T13:47:55+02:00",
   "workshop": {
     "nome": "Workshop Commercialisti",
     "sottotitolo": "Iscrizioni al workshop dal vivo del 30 settembre",
@@ -23,64 +23,64 @@
     "link_ads_manager": "https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110&selected_campaign_ids=120255475473930348"
   },
   "iscritti": {
-    "totali": 195,
-    "oggi": 2,
+    "totali": 198,
+    "oggi": 5,
     "ieri": 14,
-    "da_ads": 178,
+    "da_ads": 181,
     "da_email": 9,
     "diretti": 8,
     "righe_di_prova_escluse": 2,
     "primo_iscritto": "2026-08-19"
   },
   "spesa": {
-    "oggi": 2.52,
-    "ieri": 30.41,
-    "totale": 382.13,
+    "oggi": 8.21,
+    "ieri": 30.43,
+    "totale": 387.84,
     "tetto": 922337203685.47,
-    "residuo": 922337203303.34,
+    "residuo": 922337203297.63,
     "budget_giornaliero": 25.0
   },
   "costo_per_iscritto": {
-    "oggi": 1.26,
+    "oggi": 1.64,
     "ieri": 2.17,
-    "totale": 2.15,
+    "totale": 2.14,
     "nota": "spesa Meta divisa per gli iscritti col tracciamento ads (utm_source=meta / utm_medium=paid) presenti sul foglio"
   },
   "meta": {
     "oggi": {
-      "spesa": 2.52,
-      "impressions": 335,
-      "reach": 288,
-      "frequency": 1.16,
-      "click": 19,
-      "ctr": 5.67,
-      "cpc": 0.13,
-      "cpm": 7.52,
-      "lead_meta": 1,
-      "costo_lead_meta": 2.52
+      "spesa": 8.21,
+      "impressions": 1045,
+      "reach": 971,
+      "frequency": 1.08,
+      "click": 44,
+      "ctr": 4.21,
+      "cpc": 0.19,
+      "cpm": 7.86,
+      "lead_meta": 3,
+      "costo_lead_meta": 2.74
     },
     "ieri": {
-      "spesa": 30.41,
-      "impressions": 3537,
-      "reach": 3196,
+      "spesa": 30.43,
+      "impressions": 3544,
+      "reach": 3197,
       "frequency": 1.11,
       "click": 171,
       "ctr": 4.83,
       "cpc": 0.18,
-      "cpm": 8.6,
+      "cpm": 8.59,
       "lead_meta": 9,
       "costo_lead_meta": 3.38
     },
     "totale": {
-      "spesa": 382.13,
-      "impressions": 44518,
-      "reach": 19550,
+      "spesa": 387.84,
+      "impressions": 45235,
+      "reach": 19841,
       "frequency": 2.28,
-      "click": 3164,
-      "ctr": 7.11,
+      "click": 3189,
+      "ctr": 7.05,
       "cpc": 0.12,
-      "cpm": 8.58,
-      "lead_meta": 122,
+      "cpm": 8.57,
+      "lead_meta": 124,
       "costo_lead_meta": 3.13
     }
   },
@@ -88,32 +88,32 @@
     {
       "chiave": "ads",
       "label": "Meta Ads",
-      "iscritti": 178,
-      "quota": 91.28
+      "iscritti": 181,
+      "quota": 91.41
     },
     {
       "chiave": "email",
       "label": "Email fredde",
       "iscritti": 9,
-      "quota": 4.62
+      "quota": 4.55
     },
     {
       "chiave": "diretti",
       "label": "Diretti / non tracciati",
       "iscritti": 8,
-      "quota": 4.1
+      "quota": 4.04
     }
   ],
   "dettaglio_contenuti": [
     {
       "fonte": "ads",
       "utm_content": "ai-video-f24-eleven-916",
-      "iscritti": 103
+      "iscritti": 105
     },
     {
       "fonte": "ads",
       "utm_content": "ai-video-fatture-estere-916",
-      "iscritti": 49
+      "iscritti": 50
     },
     {
       "fonte": "ads",
@@ -510,17 +510,17 @@
       "email": 0,
       "diretti": 0,
       "cumulato": 193,
-      "spesa": 30.41
+      "spesa": 30.43
     },
     {
       "data": "2026-09-21",
       "etichetta": "21/09",
-      "iscritti": 2,
-      "ads": 2,
+      "iscritti": 5,
+      "ads": 5,
       "email": 0,
       "diretti": 0,
-      "cumulato": 195,
-      "spesa": 2.52
+      "cumulato": 198,
+      "spesa": 8.21
     }
   ]
 }
