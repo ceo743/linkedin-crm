@@ -1,225 +1,226 @@
 {
-  "aggiornato": "2026-09-21 05:44 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; resto non riverificato in questo giro)",
-  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 14-20 settembre 2026",
-  "kpi": {
-    "follower": 233118,
-    "follower_delta": "+163",
-    "impressioni": 43152,
-    "impressioni_delta": "+55%",
-    "reach": 21940,
-    "interazioni": 61,
-    "engagement": "0,14%",
-    "reazioni": 60,
-    "commenti": 0,
-    "call": 3,
-    "call_target": 3
-  },
-  "interazioni_composizione": [
-    {
-      "label": "Reazioni",
-      "n": 60
+    "aggiornato": "2026-09-22 05:53 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; resto non riverificato in questo giro)",
+    "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 15-21 settembre 2026",
+    "kpi": {
+        "follower": 233118,
+        "follower_delta": "+163",
+        "impressioni": 43152,
+        "impressioni_delta": "+55%",
+        "reach": 21940,
+        "interazioni": 61,
+        "engagement": "0,14%",
+        "reazioni": 60,
+        "commenti": 0,
+        "call": 5,
+        "call_target": 5
     },
-    {
-      "label": "Commenti",
-      "n": 0
-    },
-    {
-      "label": "Click sui link",
-      "n": 0
-    },
-    {
-      "label": "Salvataggi",
-      "n": 0
-    },
-    {
-      "label": "Invii in privato",
-      "n": 1
-    },
-    {
-      "label": "Condivisioni",
-      "n": 0
+    "interazioni_composizione": [
+        {
+            "label": "Reazioni",
+            "n": 60
+        },
+        {
+            "label": "Commenti",
+            "n": 0
+        },
+        {
+            "label": "Click sui link",
+            "n": 0
+        },
+        {
+            "label": "Salvataggi",
+            "n": 0
+        },
+        {
+            "label": "Invii in privato",
+            "n": 1
+        },
+        {
+            "label": "Condivisioni",
+            "n": 0
+        }
+    ],
+    "top_post": [
+        {
+            "titolo": "LinkedIn ha iniziato a nascondere i commenti scritti con l'IA: come restare visibile",
+            "tema": "articolo · organico",
+            "impressioni": 6365,
+            "interazioni": 1,
+            "url": "https://www.linkedin.com/feed/update/urn:li:activity:7487748866155483137/"
+        },
+        {
+            "titolo": "Da aprile 2026 LinkedIn mostra chi ha visitato la pagina della tua azienda: come usare l'IA",
+            "tema": "articolo · organico",
+            "impressioni": 6328,
+            "interazioni": 5,
+            "url": "https://www.linkedin.com/feed/update/urn:li:activity:7490285441787666433/"
+        },
+        {
+            "titolo": "Hai trovato il contatto giusto su LinkedIn. Il follow-up con l'IA è la parte che (quasi) tutti saltano",
+            "tema": "articolo · organico",
+            "impressioni": 4549,
+            "interazioni": 28,
+            "url": "https://www.linkedin.com/feed/update/urn:li:activity:7493001377472757762/"
+        }
+    ],
+    "agenti": {
+        "writer": {
+            "stato": "in pausa",
+            "pills": [
+                {
+                    "v": "0/1",
+                    "l": "attive"
+                }
+            ],
+            "note": "Post virali Taplio tradotti resta DISATTIVATO su list_scheduled_tasks (routine LinkedIn sospese dal 14/8, invariato dai giri precedenti)."
+        },
+        "outreach": {
+            "stato": "attiva",
+            "pills": [
+                {
+                    "v": "59",
+                    "l": "contatti"
+                },
+                {
+                    "v": "59",
+                    "l": "inviati"
+                },
+                {
+                    "v": "15",
+                    "l": "risposte"
+                }
+            ],
+            "ultime_risposte": [
+                {
+                    "nome": "",
+                    "ruolo": "Commercialista (Cosenza)",
+                    "data": "recente"
+                },
+                {
+                    "nome": "",
+                    "ruolo": "attività immobiliare propria",
+                    "data": "recente"
+                },
+                {
+                    "nome": "",
+                    "ruolo": "Applied Management",
+                    "data": "recente"
+                },
+                {
+                    "nome": "",
+                    "ruolo": "",
+                    "data": "recente"
+                },
+                {
+                    "nome": "",
+                    "ruolo": "",
+                    "data": "recente"
+                }
+            ]
+        },
+        "inbox": {
+            "stato": "in pausa",
+            "pills": [
+                {
+                    "v": "0/2",
+                    "l": "attive"
+                }
+            ],
+            "note": "Risposte DM e risposte ai commenti restano DISATTIVATE su list_scheduled_tasks (invariato dai giri precedenti)."
+        },
+        "newsletter": {
+            "stato": "attiva",
+            "pills": [
+                {
+                    "v": "1/sett",
+                    "l": "cadenza"
+                },
+                {
+                    "v": "mer 07:30",
+                    "l": "produzione"
+                }
+            ],
+            "in_corso": "Guida 016 — «Iscritti Newsletter IA LinkedIn» — ultima prodotta",
+            "ultime": [
+                "#015 — «Commenti Umani IA LinkedIn»",
+                "#014 — «Post Collaborativi su LinkedIn»"
+            ]
+        },
+        "blog": {
+            "stato": "attiva",
+            "pills": [
+                {
+                    "v": "4/giorno",
+                    "l": "articoli (2 LinkedIn + 2 AI)"
+                },
+                {
+                    "v": "550",
+                    "l": "a catalogo (audit 21/9)"
+                },
+                {
+                    "v": "27",
+                    "l": "pubblicati 15-21/9 (13 LinkedIn + 14 AI)"
+                }
+            ],
+            "articoli": [
+                {
+                    "data": "21 settembre",
+                    "titolo": "LinkedIn per Ingegnere Metallurgico nel 2026: Trovare Clienti",
+                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-metallurgico-nel-2026-trovare-clienti"
+                },
+                {
+                    "data": "21 settembre",
+                    "titolo": "Fatture dall'estero: come lo studio commercialista le recupera con l'intelligenza artificiale",
+                    "url": "https://www.davidecaiazzo.it/blog/fatture-estero-commercialista-intelligenza-artificiale"
+                },
+                {
+                    "data": "21 settembre",
+                    "titolo": "Un negozio di arredamento con l'intelligenza artificiale",
+                    "url": "https://www.davidecaiazzo.it/blog/negozio-arredamento-intelligenza-artificiale"
+                },
+                {
+                    "data": "21 settembre",
+                    "titolo": "LinkedIn per Ingegnere Robotico nel 2026: Trovare Clienti",
+                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-robotico-nel-2026-trovare-clienti"
+                },
+                {
+                    "data": "20 settembre",
+                    "titolo": "LinkedIn per Ingegnere di Processo nel 2026: Trovare Clienti",
+                    "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-di-processo-nel-2026-trovare-clienti"
+                },
+                {
+                    "data": "20 settembre",
+                    "titolo": "Come il commercialista risponde ai clienti con l'intelligenza artificiale",
+                    "url": "https://www.davidecaiazzo.it/blog/risposte-clienti-commercialista-intelligenza-artificiale"
+                }
+            ]
+        },
+        "analyst": {
+            "stato": "attiva",
+            "pills": [
+                {
+                    "v": "08:05",
+                    "l": "kpi giorno"
+                },
+                {
+                    "v": "3x/g",
+                    "l": "audit ceo"
+                }
+            ],
+            "ieri": {
+                "data": "21 settembre",
+                "call": 3,
+                "spesa": "1.360,53€ (Account 1 + Account 3, giornata intera via time_range)",
+                "click": 1164,
+                "dettaglio": "3 prenotazioni nuove arrivate quel giorno (Meta Ads, LinkedIn, Chatbot del sito); 1 lead funnel dal foglio KPI; 1 guida reale (1 submission 'Clienti Su Richiesta' e 5 iscrizioni Workshop Commercialisti escluse); nessuna cancellazione ricevuta"
+            },
+            "agenda": [
+                "Oggi 22/9 · 11:30 — Meta Ads",
+                "Mer 23/9 · 09:00 — Meta Ads",
+                "Mer 23/9 · 11:00 — Chatbot del sito",
+                "Mer 23/9 · 12:00 — LinkedIn",
+                "Mer 30/9 · 11:30 — LinkedIn"
+            ]
+        }
     }
-  ],
-  "top_post": [
-    {
-      "titolo": "LinkedIn ha iniziato a nascondere i commenti scritti con l'IA: come restare visibile",
-      "tema": "articolo · organico",
-      "impressioni": 6365,
-      "interazioni": 1,
-      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7487748866155483137/"
-    },
-    {
-      "titolo": "Da aprile 2026 LinkedIn mostra chi ha visitato la pagina della tua azienda: come usare l'IA",
-      "tema": "articolo · organico",
-      "impressioni": 6328,
-      "interazioni": 5,
-      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7490285441787666433/"
-    },
-    {
-      "titolo": "Hai trovato il contatto giusto su LinkedIn. Il follow-up con l'IA è la parte che (quasi) tutti saltano",
-      "tema": "articolo · organico",
-      "impressioni": 4549,
-      "interazioni": 28,
-      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7493001377472757762/"
-    }
-  ],
-  "agenti": {
-    "writer": {
-      "stato": "in pausa",
-      "pills": [
-        {
-          "v": "0/1",
-          "l": "attive"
-        }
-      ],
-      "note": "Post virali Taplio tradotti resta DISATTIVATO su list_scheduled_tasks (routine LinkedIn sospese dal 14/8, invariato dai giri precedenti)."
-    },
-    "outreach": {
-      "stato": "attiva",
-      "pills": [
-        {
-          "v": "59",
-          "l": "contatti"
-        },
-        {
-          "v": "59",
-          "l": "inviati"
-        },
-        {
-          "v": "15",
-          "l": "risposte"
-        }
-      ],
-      "ultime_risposte": [
-        {
-          "nome": "",
-          "ruolo": "Commercialista (Cosenza)",
-          "data": "recente"
-        },
-        {
-          "nome": "",
-          "ruolo": "attività immobiliare propria",
-          "data": "recente"
-        },
-        {
-          "nome": "",
-          "ruolo": "Applied Management",
-          "data": "recente"
-        },
-        {
-          "nome": "",
-          "ruolo": "",
-          "data": "recente"
-        },
-        {
-          "nome": "",
-          "ruolo": "",
-          "data": "recente"
-        }
-      ]
-    },
-    "inbox": {
-      "stato": "in pausa",
-      "pills": [
-        {
-          "v": "0/2",
-          "l": "attive"
-        }
-      ],
-      "note": "Risposte DM e risposte ai commenti restano DISATTIVATE su list_scheduled_tasks (invariato dai giri precedenti)."
-    },
-    "newsletter": {
-      "stato": "attiva",
-      "pills": [
-        {
-          "v": "1/sett",
-          "l": "cadenza"
-        },
-        {
-          "v": "mer 07:30",
-          "l": "produzione"
-        }
-      ],
-      "in_corso": "Guida 016 — «Iscritti Newsletter IA LinkedIn» — ultima prodotta",
-      "ultime": [
-        "#015 — «Commenti Umani IA LinkedIn»",
-        "#014 — «Post Collaborativi su LinkedIn»"
-      ]
-    },
-    "blog": {
-      "stato": "attiva",
-      "pills": [
-        {
-          "v": "4/giorno",
-          "l": "articoli (2 LinkedIn + 2 AI)"
-        },
-        {
-          "v": "522",
-          "l": "a catalogo (audit 14/9)"
-        },
-        {
-          "v": "28",
-          "l": "pubblicati 14-20/9 (14 LinkedIn + 14 AI)"
-        }
-      ],
-      "articoli": [
-        {
-          "data": "20 settembre",
-          "titolo": "LinkedIn per Ingegnere di Processo nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-di-processo-nel-2026-trovare-clienti"
-        },
-        {
-          "data": "20 settembre",
-          "titolo": "Come il commercialista risponde ai clienti con l'intelligenza artificiale",
-          "url": "https://www.davidecaiazzo.it/blog/risposte-clienti-commercialista-intelligenza-artificiale"
-        },
-        {
-          "data": "20 settembre",
-          "titolo": "LinkedIn per Ingegnere Tessile nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-tessile-nel-2026-trovare-clienti"
-        },
-        {
-          "data": "20 settembre",
-          "titolo": "Un'agenzia NCC con l'intelligenza artificiale",
-          "url": "https://www.davidecaiazzo.it/blog/ncc-noleggio-conducente-intelligenza-artificiale"
-        },
-        {
-          "data": "19 settembre",
-          "titolo": "LinkedIn per Ingegnere Acustico nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-acustico-nel-2026-trovare-clienti"
-        },
-        {
-          "data": "19 settembre",
-          "titolo": "LinkedIn per Ingegnere Ferroviario nel 2026: Trovare Clienti",
-          "url": "https://www.davidecaiazzo.it/blog/linkedin-per-ingegnere-ferroviario-nel-2026-trovare-clienti"
-        }
-      ]
-    },
-    "analyst": {
-      "stato": "attiva",
-      "pills": [
-        {
-          "v": "08:05",
-          "l": "kpi giorno"
-        },
-        {
-          "v": "3x/g",
-          "l": "audit ceo"
-        }
-      ],
-      "ieri": {
-        "data": "20 settembre",
-        "call": 0,
-        "spesa": "950,33€ (Account 1 + Account 3, giornata intera via time_range)",
-        "click": 1045,
-        "dettaglio": "0 prenotazioni nuove arrivate quel giorno; 0 lead funnel dal foglio KPI; 0 guide reali (1 submission 'Clienti Su Richiesta' e 5 iscrizioni Workshop Commercialisti escluse); nessuna cancellazione ricevuta"
-      },
-      "agenda": [
-        "Oggi 21/9 · 11:00 — Chatbot del sito",
-        "Mer 23/9 · 09:00 — Meta Ads",
-        "Mer 23/9 · 12:00 — LinkedIn",
-        "Gio 24/9 · 14:00 — LinkedIn (riprogrammata dal team)"
-      ]
-    }
-  }
 }
