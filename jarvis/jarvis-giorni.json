@@ -1,19 +1,7 @@
 {
-  "aggiornato": "2026-09-14 05:50",
+  "aggiornato": "2026-09-23 05:57",
   "nota": "Un record per giorno. ads = entrambi gli account Meta. call = prenotazioni Calendly ARRIVATE quel giorno (mai retroattivo). call_scartate = SOLO le prenotazioni ricevute quel giorno e poi scartate lo stesso giorno (mai riferito a prenotazioni di giorni precedenti: se una call di un giorno passato viene annullata dopo, il numero del giorno passato non si tocca, si aggiunge solo una nota testuale in call_nomi di quel giorno). lead_funnel = optin dal foglio KPI. guide = form Kajabi. li_impressioni (opzionale) = impressioni LinkedIn del giorno, dal grafico Rendimento contenuti in modalità Giornaliero. Motivazioni di annullamento call: fonte foglio Google 'Report Calendly Giornaliero (Stefania)' (id 1bPJih5riHWqz86hwkfbYybmwhCKkiWVyKxqMD9ppwDU, colonna ESITO), match per giorno di PRENOTAZIONE della call. | BACKFILL 1/9/2026: record 15/8-31/8 ricostruiti in blocco dopo un buco di 17 giorni nella scrittura dell'archivio (vedi ads_nota di ciascun record).",
   "giorni": [
-    {
-      "data": "2026-08-24",
-      "call": 3,
-      "call_scartate": 0,
-      "call_nomi": [],
-      "lead_funnel": 0,
-      "guide": 4,
-      "ads_spesa": 248.51,
-      "ads_click": 352,
-      "ads_impressioni": 14696,
-      "parziale": false
-    },
     {
       "data": "2026-08-25",
       "call": 3,
@@ -352,14 +340,26 @@
     },
     {
       "data": "2026-09-22",
+      "call": 2,
+      "call_scartate": 0,
+      "call_nomi": [],
+      "lead_funnel": 1,
+      "guide": 2,
+      "ads_spesa": 1702.94,
+      "ads_click": 1384,
+      "ads_impressioni": 56124,
+      "parziale": false
+    },
+    {
+      "data": "2026-09-23",
       "call": 0,
       "call_scartate": 0,
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 0,
-      "ads_spesa": 125.79,
-      "ads_click": 98,
-      "ads_impressioni": 4046,
+      "ads_spesa": 181.02,
+      "ads_click": 144,
+      "ads_impressioni": 5742,
       "parziale": true
     }
   ]
