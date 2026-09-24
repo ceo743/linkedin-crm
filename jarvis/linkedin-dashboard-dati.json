@@ -1,6 +1,6 @@
 {
-  "aggiornato": "2026-09-23 05:57 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; agenti.outreach non aggiornabile in questo giro, cartella Outreach-Clienti non trovata; resto non riverificato)",
-  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 15-21 settembre 2026",
+  "aggiornato": "2026-09-24 05:53 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; agenti.outreach confermato su Outreach-Clienti/dashboard/dati/davide-caiazzo.json, numeri invariati; resto non riverificato)",
+  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 17-23 settembre 2026",
   "kpi": {
     "follower": 233118,
     "follower_delta": "+163",
@@ -11,8 +11,8 @@
     "engagement": "0,14%",
     "reazioni": 60,
     "commenti": 0,
-    "call": 7,
-    "call_target": 6
+    "call": 9,
+    "call_target": 7
   },
   "interazioni_composizione": [
     {
@@ -116,7 +116,8 @@
           "ruolo": "",
           "data": "recente"
         }
-      ]
+      ],
+      "note": ""
     },
     "inbox": {
       "stato": "in pausa",
