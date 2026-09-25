@@ -1,7 +1,28 @@
 {
-  "aggiornato": "2026-09-25T19:45:00+02:00",
+  "aggiornato": "2026-09-25T22:35:00+02:00",
   "regola": "Solo ruolo e zona, MAI nome, cognome o email: la pagina e' pubblica (regola JARVIS del 14/07/2026). I nomi veri stanno solo in Gmail (campo gmail_thread).",
   "feedback": [
+    {
+      "data": "2026-09-22",
+      "chi": "Commercialista · iscritto al webinar",
+      "chiede": [
+        "Invio automatico dei rendiconti IVA periodici ai clienti, con traccia della consegna",
+        "Richiesta e raccolta delle autorizzazioni agli F24, con stato autorizzati/sospesi/in attesa",
+        "Visione completa dello stato di tutte le pratiche dei clienti (la richiesta più importante)",
+        "Spazio per cliente con richiesta automatica dei documenti mancanti e promemoria",
+        "Prima nota: acquisizione e classificazione dei movimenti banca con i giustificativi"
+      ],
+      "temi": [
+        "Scadenze",
+        "F24",
+        "Gestione pratiche",
+        "Raccolta documenti",
+        "Riconciliazione banca",
+        "Email e WhatsApp"
+      ],
+      "risposto": false,
+      "gmail_thread": "1a0c838060715d96"
+    },
     {
       "data": "2026-09-23",
       "chi": "Commercialista e revisore legale · provincia di Lecce",
