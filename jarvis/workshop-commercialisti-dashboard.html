@@ -84,6 +84,15 @@
   .nota b{color:var(--ink)}
   a.openlink{display:inline-block;margin-top:14px;margin-right:10px;font-size:11.5px;font-weight:700;color:var(--teal);text-decoration:none;border:1px solid var(--border);border-radius:10px;padding:7px 14px}
   a.openlink:hover{background:var(--teal-soft);border-color:var(--teal)}
+  .fb-temi{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+  .fb-temi span{font-size:12px;font-weight:700;padding:5px 11px;border-radius:20px;background:#2ea8a815;border:1px solid #2ea8a840;color:var(--teal)}
+  .fb-temi span b{color:var(--ink);margin-left:4px}
+  .fb{border-top:1px solid var(--border);padding:14px 0}
+  .fb:first-of-type{border-top:none}
+  .fb .testa{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+  .fb .testa b{color:var(--ink)}
+  .fb ul{margin:8px 0 0 18px;font-size:13px;line-height:1.55}
+  .fb .stato{font-weight:700} .fb .stato.no{color:var(--amber)} .fb .stato.si{color:var(--green)}
   footer{margin-top:44px;font-size:11px;color:var(--muted);line-height:1.7;border-top:1px solid var(--border);padding-top:16px}
   footer a{color:var(--teal);text-decoration:none}
 </style>
@@ -135,6 +144,13 @@
   <tbody id="tab-contenuti"></tbody></table>
 </div>
 
+<div class="section-title fade" style="animation-delay:.6s">Cosa ci chiedono gli iscritti · risposte via email <div class="line"></div></div>
+<div class="card fade" style="animation-delay:.62s">
+  <div class="fb-temi" id="fb-temi"></div>
+  <div id="fb-lista"></div>
+  <div class="nota" id="fb-nota"></div>
+</div>
+
 <div class="section-title fade" style="animation-delay:.64s">Numeri della campagna Meta · dall'inizio <div class="line"></div></div>
 <div class="grid-kpi fade" id="meta-kpi" style="animation-delay:.68s"></div>
 <div class="card fade" style="animation-delay:.72s;margin-top:14px">
@@ -159,6 +175,27 @@ fetch("workshop-commercialisti-dati.json?v=" + Date.now())
   .then(r => r.json())
   .then(render)
   .catch(e => { document.getElementById("h-live").textContent = "dati non disponibili"; console.error(e); });
+
+fetch("workshop-commercialisti-feedback.json?v=" + Date.now())
+  .then(r => r.json())
+  .then(renderFeedback)
+  .catch(e => { document.getElementById("fb-nota").textContent = "riscontri non disponibili"; console.error(e); });
+
+function renderFeedback(f){
+  const L = (f.feedback||[]).slice().sort((a,b) => b.data.localeCompare(a.data));
+  const conta = {};
+  L.forEach(x => (x.temi||[]).forEach(t => conta[t] = (conta[t]||0) + 1));
+  document.getElementById("fb-temi").innerHTML = Object.entries(conta).sort((a,b) => b[1]-a[1])
+    .map(([t,n]) => `<span>${t}<b>${n}</b></span>`).join("");
+  document.getElementById("fb-lista").innerHTML = L.map(x => `<div class="fb">
+    <div class="testa"><span><b>${itdata(x.data)}</b> · ${x.chi}</span>
+    <span class="stato ${x.risposto?"si":"no"}">${x.risposto?"risposto":"da rispondere"}</span></div>
+    <ul>${x.chiede.map(c => `<li>${c}</li>`).join("")}</ul>
+    ${x.nota_risposta?`<div class="nota" style="margin-top:6px">${x.nota_risposta}</div>`:""}</div>`).join("");
+  const da = L.filter(x => !x.risposto).length;
+  document.getElementById("fb-nota").innerHTML = `<b>${L.length}</b> riscontri ricevuti via email` +
+    (da ? ` · <b>${da}</b> ancora senza risposta` : "") + ". Nomi omessi: sono in Gmail.";
+}
 
 function render(d){
   /* ---- intestazione ---- */
