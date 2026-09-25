@@ -1,0 +1,30 @@
+{
+  "aggiornato": "2026-09-25T21:40:00+02:00",
+  "regola": "Solo ruolo e zona, MAI nome, cognome o email: la pagina e' pubblica (regola JARVIS del 14/07/2026). I nomi veri stanno solo in Gmail (campo gmail_thread).",
+  "feedback": [
+    {"data": "2026-09-23", "chi": "Commercialista e revisore legale · provincia di Lecce",
+     "chiede": ["Avviso ai clienti delle scadenze F24", "Controllo e risposta a email e messaggi WhatsApp", "Riconciliazione degli estratti conto banca in contabilità"],
+     "temi": ["F24", "Scadenze", "Email e WhatsApp", "Riconciliazione banca"],
+     "risposto": false, "gmail_thread": "1a0cfe2088bbcd2a"},
+    {"data": "2026-09-21", "chi": "Iscritta al webinar",
+     "chiede": ["Gestione degli F24 legati a scadenze ordinarie, avvisi bonari e rateazioni"],
+     "temi": ["F24", "Avvisi bonari e rateazioni"],
+     "risposto": true, "nota_risposta": "Chiesto di precisare avvisi bonari e rateazioni: in attesa di risposta.", "gmail_thread": "1a0c2b7a03842adb"},
+    {"data": "2026-09-11", "chi": "Consulente del lavoro · Napoli",
+     "chiede": ["Raccolta documenti e relativo salvataggio", "Invio solleciti di pagamento", "Promemoria delle scadenze"],
+     "temi": ["Raccolta documenti", "Solleciti di pagamento", "Scadenze"],
+     "risposto": true, "gmail_thread": "1a090c503b4667e3"},
+    {"data": "2026-09-10", "chi": "Studio contabile · usa Profis",
+     "chiede": ["Controllo fatture e registrazione contabile/IVA: dall'XML a una proposta di registrazione in Profis, con segnalazione dei casi dubbi"],
+     "temi": ["Registrazione fatture", "Gestionale"],
+     "risposto": true, "nota_risposta": "Preso come esempio guida della serata.", "gmail_thread": "1a08ca20278b0c90"},
+    {"data": "2026-09-10", "chi": "Studio contabile · usa Profis",
+     "chiede": ["Scaricare, ordinare e classificare documenti e fatture estraendo i dati utili", "Abbinare i movimenti banca a fatture, incassi e pagamenti", "Richieste documenti, promemoria F24 e scadenze, documenti da firmare"],
+     "temi": ["Raccolta documenti", "Riconciliazione banca", "F24", "Scadenze"],
+     "risposto": true, "gmail_thread": "1a08c9c202cd62c9"},
+    {"data": "2026-09-07", "chi": "Studio commerciale · usa GB Software",
+     "chiede": ["Un agente AI che lavori dentro GB Software: estratti conto, riconciliazione, registrazione fatture, F24, bilanci infrannuali"],
+     "temi": ["Gestionale", "Riconciliazione banca", "Registrazione fatture", "F24"],
+     "risposto": true, "gmail_thread": "1a07c7867b1ac0d0"}
+  ]
+}
