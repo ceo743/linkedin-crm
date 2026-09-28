@@ -1,5 +1,5 @@
 {
-  "aggiornato": "23 settembre, ore 16:30",
+  "aggiornato": "25 settembre, ore 12:10",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
@@ -67,31 +67,27 @@
     {
       "id": "newsletter-venerdi",
       "nome": "Newsletter Venerdì",
-      "sottotitolo": "LinkedIn e IA — guida #015 Commenti Umani e #016 Iscritti Newsletter, CMO chiude la caccia al bottone nel PDF",
+      "sottotitolo": "LinkedIn e IA — guida #017 Assistente Clienti (uscita 23/09), CMO chiude il canale prenotazioni",
       "colore": "amber",
       "stato": "attenzione",
-      "ultima_run": "18 settembre, ore 09:10",
-      "prossima_run": "25 settembre",
+      "ultima_run": "25 settembre, ore 12:10",
+      "prossima_run": "2 ottobre",
       "verifiche": [
         {
           "ok": true,
-          "testo": "Dati Calendly reali via API Zapier, 4 finestre settimanali (26/08-18/09) sulle guide #013 video, #014 post-collaborativi, #015 commenti-umani (uscita 9/09), #016 iscritti-newsletter (uscita 16/09, questa settimana)"
+          "testo": "Dati Calendly reali via API Zapier, 3 finestre settimanali (9-25 settembre) sulle guide #015 commenti-umani, #016 iscritti-newsletter, #017 assistente-clienti (uscita 23/09, questa settimana)"
         },
         {
           "ok": false,
-          "testo": "2 prenotazioni in 4 settimane, entrambe da post_optin su una guida precedente (shadowban). Zero da cta_finale/cta_intermedia (bottone PDF) su ogni guida, zero da nurturing, zero dirette da #015 e #016"
+          "testo": "Zero prenotazioni su tutti i medium collegati alla newsletter (bottone PDF cta_finale/cta_intermedia, redirect post_optin, sequenza nurturing) per le 3 guide del periodo — quinta settimana consecutiva a zero"
         },
         {
           "ok": true,
-          "testo": "Ricontrollato il bug delle landing trovato la settimana scorsa (campi form sbagliati verso Kajabi): sulle landing di #015 e #016 i nomi campo sono corretti (form_submission[name/email/phone_number], custom_70/71/74/75), stesso schema già riparato — le due guide nuove non hanno quel bug"
-        },
-        {
-          "ok": true,
-          "testo": "Valutazione CMO: bottone CTA nel PDF dichiarato morto, si spegne dalla revisione. Sequenza nurturing da controllare sui tassi di apertura (non più sulle prenotazioni). Proposta nuova: usare gli iscritti alle guide come pubblico caldo per le ads della consulenza LinkedIn — non ancora implementata, è una proposta per il prossimo comitato"
+          "testo": "Verdetto CMO: canale prenotazioni newsletter chiuso, si smette di misurarlo così. La newsletter resta viva come costruzione lista. Azione proposta: incrocio email iscritti/prenotazioni Calendly ultimi 90 giorni per capire se la lista prenota da altre porte (ads, bio, chatbot) — segnalata come attività separata dal CSO, non eseguita in questo giro"
         }
       ],
       "azioni": [],
-      "nota": "18/09: dato confermato, non un bug. Dalla prossima settimana la revisione non segue più cta_finale/cta_intermedia (chiuso). Da valutare in comitato la proposta del CMO di usare gli iscritti guide come pubblico ads."
+      "nota": "25/09: nessuna email a Davide, nessuna decisione pendente da lui. Prossimo passo è l'incrocio lista/Calendly (CSO), esito atteso entro il comitato di lunedì."
     },
     {
       "id": "taplio-post-virali",
