@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-09-29T13:27:52+02:00",
+  "aggiornato": "2026-09-29T19:28:49+02:00",
   "workshop": {
     "nome": "Workshop Commercialisti",
     "sottotitolo": "Webinar gratuito su Zoom, un'edizione ogni 15 giorni",
@@ -19,12 +19,12 @@
     "ora": "18:30",
     "stato": "corrente",
     "raccolta_dal": "2026-08-19",
-    "iscritti": 283,
+    "iscritti": 285,
     "da_ads": 260,
     "da_email": 10,
-    "diretti": 13,
-    "spesa": 585.41,
-    "costo_per_iscritto": 2.25,
+    "diretti": 15,
+    "spesa": 593.08,
+    "costo_per_iscritto": 2.28,
     "lead_meta": 174,
     "utm_conferma": 237,
     "utm_altra_edizione": 0
@@ -38,12 +38,12 @@
       "ora": "18:30",
       "stato": "corrente",
       "raccolta_dal": "2026-08-19",
-      "iscritti": 283,
+      "iscritti": 285,
       "da_ads": 260,
       "da_email": 10,
-      "diretti": 13,
-      "spesa": 585.41,
-      "costo_per_iscritto": 2.25,
+      "diretti": 15,
+      "spesa": 593.08,
+      "costo_per_iscritto": 2.28,
       "lead_meta": 174,
       "utm_conferma": 237,
       "utm_altra_edizione": 0
@@ -63,42 +63,42 @@
     "link_ads_manager": "https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110&selected_campaign_ids=120255475473930348"
   },
   "iscritti": {
-    "totali": 283,
-    "oggi": 5,
+    "totali": 285,
+    "oggi": 7,
     "ieri": 10,
     "da_ads": 260,
     "da_email": 10,
-    "diretti": 13,
+    "diretti": 15,
     "righe_di_prova_escluse": 2,
     "primo_iscritto": "2026-08-19"
   },
   "spesa": {
-    "oggi": 12.78,
+    "oggi": 20.45,
     "ieri": 24.25,
-    "totale": 585.41,
+    "totale": 593.08,
     "tetto": null,
     "residuo": null,
     "budget_giornaliero": 25.0
   },
   "costo_per_iscritto": {
-    "oggi": 3.19,
+    "oggi": 5.11,
     "ieri": 2.69,
-    "totale": 2.25,
-    "edizione_corrente": 2.25,
+    "totale": 2.28,
+    "edizione_corrente": 2.28,
     "nota": "spesa Meta divisa per gli iscritti col tracciamento ads (utm_source=meta / utm_medium=paid) presenti sul foglio"
   },
   "meta": {
     "oggi": {
-      "spesa": 12.78,
-      "impressions": 1259,
-      "reach": 1193,
-      "frequency": 1.06,
-      "click": 47,
-      "ctr": 3.73,
-      "cpc": 0.27,
-      "cpm": 10.15,
+      "spesa": 20.45,
+      "impressions": 2326,
+      "reach": 2045,
+      "frequency": 1.14,
+      "click": 64,
+      "ctr": 2.75,
+      "cpc": 0.32,
+      "cpm": 8.79,
       "lead_meta": 2,
-      "costo_lead_meta": 6.39
+      "costo_lead_meta": 10.23
     },
     "ieri": {
       "spesa": 24.25,
@@ -113,16 +113,16 @@
       "costo_lead_meta": 6.06
     },
     "totale": {
-      "spesa": 585.41,
-      "impressions": 66796,
-      "reach": 25401,
-      "frequency": 2.63,
-      "click": 4039,
-      "ctr": 6.05,
-      "cpc": 0.14,
-      "cpm": 8.76,
+      "spesa": 593.08,
+      "impressions": 67863,
+      "reach": 25496,
+      "frequency": 2.66,
+      "click": 4056,
+      "ctr": 5.98,
+      "cpc": 0.15,
+      "cpm": 8.74,
       "lead_meta": 174,
-      "costo_lead_meta": 3.36
+      "costo_lead_meta": 3.41
     }
   },
   "fonti": [
@@ -130,19 +130,19 @@
       "chiave": "ads",
       "label": "Meta Ads",
       "iscritti": 260,
-      "quota": 91.87
+      "quota": 91.23
     },
     {
       "chiave": "email",
       "label": "Email fredde",
       "iscritti": 10,
-      "quota": 3.53
+      "quota": 3.51
     },
     {
       "chiave": "diretti",
       "label": "Diretti / non tracciati",
-      "iscritti": 13,
-      "quota": 4.59
+      "iscritti": 15,
+      "quota": 5.26
     }
   ],
   "dettaglio_contenuti": [
@@ -167,8 +167,8 @@
     {
       "fonte": "diretti",
       "utm_content": "—",
-      "iscritti": 13,
-      "iscritti_edizione_corrente": 13
+      "iscritti": 15,
+      "iscritti_edizione_corrente": 15
     },
     {
       "fonte": "ads",
@@ -751,14 +751,14 @@
     {
       "data": "2026-09-29",
       "etichetta": "29/09",
-      "iscritti": 5,
+      "iscritti": 7,
       "ads": 4,
       "email": 0,
-      "diretti": 1,
-      "cumulato": 283,
+      "diretti": 3,
+      "cumulato": 285,
       "edizione": "2026-09-30",
-      "cumulato_edizione": 283,
-      "spesa": 12.78
+      "cumulato_edizione": 285,
+      "spesa": 20.45
     }
   ],
   "avvisi": []
