@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-09-29T04:50:52+02:00",
+  "aggiornato": "2026-09-29T07:28:52+02:00",
   "workshop": {
     "nome": "Workshop Commercialisti",
     "sottotitolo": "Webinar gratuito su Zoom, un'edizione ogni 15 giorni",
@@ -19,14 +19,14 @@
     "ora": "18:30",
     "stato": "corrente",
     "raccolta_dal": "2026-08-19",
-    "iscritti": 278,
-    "da_ads": 256,
+    "iscritti": 281,
+    "da_ads": 259,
     "da_email": 10,
     "diretti": 12,
-    "spesa": 574.17,
-    "costo_per_iscritto": 2.24,
+    "spesa": 578.1,
+    "costo_per_iscritto": 2.23,
     "lead_meta": 172,
-    "utm_conferma": 233,
+    "utm_conferma": 236,
     "utm_altra_edizione": 0
   },
   "edizioni": [
@@ -38,14 +38,14 @@
       "ora": "18:30",
       "stato": "corrente",
       "raccolta_dal": "2026-08-19",
-      "iscritti": 278,
-      "da_ads": 256,
+      "iscritti": 281,
+      "da_ads": 259,
       "da_email": 10,
       "diretti": 12,
-      "spesa": 574.17,
-      "costo_per_iscritto": 2.24,
+      "spesa": 578.1,
+      "costo_per_iscritto": 2.23,
       "lead_meta": 172,
-      "utm_conferma": 233,
+      "utm_conferma": 236,
       "utm_altra_edizione": 0
     }
   ],
@@ -63,94 +63,94 @@
     "link_ads_manager": "https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110&selected_campaign_ids=120255475473930348"
   },
   "iscritti": {
-    "totali": 278,
-    "oggi": 0,
+    "totali": 281,
+    "oggi": 3,
     "ieri": 10,
-    "da_ads": 256,
+    "da_ads": 259,
     "da_email": 10,
     "diretti": 12,
     "righe_di_prova_escluse": 2,
     "primo_iscritto": "2026-08-19"
   },
   "spesa": {
-    "oggi": 1.69,
-    "ieri": 24.1,
-    "totale": 574.17,
+    "oggi": 5.55,
+    "ieri": 24.17,
+    "totale": 578.1,
     "tetto": null,
     "residuo": null,
     "budget_giornaliero": 25.0
   },
   "costo_per_iscritto": {
-    "oggi": null,
-    "ieri": 2.68,
-    "totale": 2.24,
-    "edizione_corrente": 2.24,
+    "oggi": 1.85,
+    "ieri": 2.69,
+    "totale": 2.23,
+    "edizione_corrente": 2.23,
     "nota": "spesa Meta divisa per gli iscritti col tracciamento ads (utm_source=meta / utm_medium=paid) presenti sul foglio"
   },
   "meta": {
     "oggi": {
-      "spesa": 1.69,
-      "impressions": 135,
-      "reach": 126,
-      "frequency": 1.07,
-      "click": 3,
-      "ctr": 2.22,
-      "cpc": 0.56,
-      "cpm": 12.52,
+      "spesa": 5.55,
+      "impressions": 447,
+      "reach": 406,
+      "frequency": 1.1,
+      "click": 23,
+      "ctr": 5.15,
+      "cpc": 0.24,
+      "cpm": 12.42,
       "lead_meta": null,
       "costo_lead_meta": null
     },
     "ieri": {
-      "spesa": 24.1,
-      "impressions": 2964,
-      "reach": 2607,
-      "frequency": 1.14,
+      "spesa": 24.17,
+      "impressions": 2969,
+      "reach": 2620,
+      "frequency": 1.13,
       "click": 79,
-      "ctr": 2.67,
+      "ctr": 2.66,
       "cpc": 0.31,
-      "cpm": 8.13,
+      "cpm": 8.14,
       "lead_meta": 4,
-      "costo_lead_meta": 6.03
+      "costo_lead_meta": 6.04
     },
     "totale": {
-      "spesa": 574.17,
-      "impressions": 65657,
-      "reach": 25115,
-      "frequency": 2.61,
-      "click": 3995,
-      "ctr": 6.08,
+      "spesa": 578.1,
+      "impressions": 65974,
+      "reach": 25213,
+      "frequency": 2.62,
+      "click": 4015,
+      "ctr": 6.09,
       "cpc": 0.14,
-      "cpm": 8.74,
+      "cpm": 8.76,
       "lead_meta": 172,
-      "costo_lead_meta": 3.34
+      "costo_lead_meta": 3.36
     }
   },
   "fonti": [
     {
       "chiave": "ads",
       "label": "Meta Ads",
-      "iscritti": 256,
-      "quota": 92.09
+      "iscritti": 259,
+      "quota": 92.17
     },
     {
       "chiave": "email",
       "label": "Email fredde",
       "iscritti": 10,
-      "quota": 3.6
+      "quota": 3.56
     },
     {
       "chiave": "diretti",
       "label": "Diretti / non tracciati",
       "iscritti": 12,
-      "quota": 4.32
+      "quota": 4.27
     }
   ],
   "dettaglio_contenuti": [
     {
       "fonte": "ads",
       "utm_content": "ai-video-f24-eleven-916",
-      "iscritti": 138,
-      "iscritti_edizione_corrente": 138
+      "iscritti": 140,
+      "iscritti_edizione_corrente": 140
     },
     {
       "fonte": "ads",
@@ -161,8 +161,8 @@
     {
       "fonte": "ads",
       "utm_content": "ai-video-unaperuna-a5-3009",
-      "iscritti": 16,
-      "iscritti_edizione_corrente": 16
+      "iscritti": 17,
+      "iscritti_edizione_corrente": 17
     },
     {
       "fonte": "diretti",
@@ -746,19 +746,19 @@
       "cumulato": 278,
       "edizione": "2026-09-30",
       "cumulato_edizione": 278,
-      "spesa": 24.1
+      "spesa": 24.17
     },
     {
       "data": "2026-09-29",
       "etichetta": "29/09",
-      "iscritti": 0,
-      "ads": 0,
+      "iscritti": 3,
+      "ads": 3,
       "email": 0,
       "diretti": 0,
-      "cumulato": 278,
+      "cumulato": 281,
       "edizione": "2026-09-30",
-      "cumulato_edizione": 278,
-      "spesa": 1.69
+      "cumulato_edizione": 281,
+      "spesa": 5.55
     }
   ],
   "avvisi": []
