@@ -1,6 +1,6 @@
 {
-  "aggiornato": "2026-09-28 06:10 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; agenti.outreach e agenti.blog non riletti in questo giro (numeri invariati); agenti.analyst aggiornato; resto non riverificato)",
-  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 21-27 settembre 2026",
+  "aggiornato": "2026-09-29 05:54 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; agenti.outreach e agenti.blog non riletti in questo giro (numeri invariati); agenti.analyst aggiornato; resto non riverificato)",
+  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 22-28 settembre 2026",
   "kpi": {
     "follower": 233118,
     "follower_delta": "+163",
@@ -11,8 +11,8 @@
     "engagement": "0,14%",
     "reazioni": 60,
     "commenti": 0,
-    "call": 9,
-    "call_target": 7
+    "call": 6,
+    "call_target": 5
   },
   "interazioni_composizione": [
     {
@@ -209,20 +209,17 @@
         }
       ],
       "ieri": {
-        "data": "27 settembre",
+        "data": "28 settembre",
         "call": 0,
-        "spesa": "1.798,40€ (Account 1 + Account 3, giornata intera via time_range)",
-        "click": 1562,
-        "dettaglio": "0 prenotazioni nuove quel giorno; 0 lead funnel dal foglio KPI; 11 guide Kajabi, tutte della stessa persona in un'unica sessione pomeridiana (non 11 prospect distinti)"
+        "spesa": "2.107,77€ (Account 1 + Account 3, giornata intera via time_range)",
+        "click": 1567,
+        "dettaglio": "0 prenotazioni nuove quel giorno (solo 2 riprogrammazioni e 1 cancellazione su call prenotate nei giorni precedenti); 0 lead funnel dal foglio KPI; 1 guida Kajabi reale"
       },
       "agenda": [
-        "Lun 28/9 · 12:00 — LinkedIn (riprogrammata)",
-        "Mar 29/9 · 09:00 — Meta Ads",
-        "Mar 29/9 · 09:30 — Meta Ads",
-        "Mar 29/9 · 10:30 — Meta Ads",
         "Mer 30/9 · 09:00 — Meta Ads",
-        "Mer 30/9 · 09:30 — Meta Ads",
-        "Mer 30/9 · 11:30 — LinkedIn"
+        "Mer 30/9 · 11:00 — Meta Ads",
+        "Mer 30/9 · 11:30 — LinkedIn",
+        "Mar 6/10 · 12:00 — Meta Ads (riprogrammata dal 23/9)"
       ]
     }
   }
