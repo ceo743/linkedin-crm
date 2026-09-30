@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-09-30T20:14:05+02:00",
+  "aggiornato": "2026-09-30T22:28:12+02:00",
   "workshop": {
     "nome": "Workshop Commercialisti",
     "sottotitolo": "Webinar gratuito su Zoom, un'edizione ogni 15 giorni",
@@ -56,15 +56,15 @@
       "ora": null,
       "stato": "prossima",
       "raccolta_dal": "2026-10-01",
-      "iscritti": 1,
-      "da_ads": 0,
+      "iscritti": 2,
+      "da_ads": 1,
       "da_email": 0,
       "diretti": 1,
       "spesa": 0.0,
-      "costo_per_iscritto": null,
+      "costo_per_iscritto": 0.0,
       "lead_meta": 0,
       "utm_conferma": 0,
-      "utm_altra_edizione": 0
+      "utm_altra_edizione": 1
     }
   ],
   "campagna": {
@@ -81,10 +81,10 @@
     "link_ads_manager": "https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110&selected_campaign_ids=120255475473930348"
   },
   "iscritti": {
-    "totali": 294,
-    "oggi": 8,
+    "totali": 295,
+    "oggi": 9,
     "ieri": 8,
-    "da_ads": 265,
+    "da_ads": 266,
     "da_email": 10,
     "diretti": 19,
     "righe_di_prova_escluse": 4,
@@ -99,9 +99,9 @@
     "budget_giornaliero": 25.0
   },
   "costo_per_iscritto": {
-    "oggi": 1.85,
+    "oggi": 1.48,
     "ieri": 6.58,
-    "totale": 2.31,
+    "totale": 2.3,
     "edizione_corrente": 2.31,
     "nota": "spesa Meta divisa per gli iscritti col tracciamento ads (utm_source=meta / utm_medium=paid) presenti sul foglio"
   },
@@ -147,27 +147,27 @@
     {
       "chiave": "ads",
       "label": "Meta Ads",
-      "iscritti": 265,
-      "quota": 90.14
+      "iscritti": 266,
+      "quota": 90.17
     },
     {
       "chiave": "email",
       "label": "Email fredde",
       "iscritti": 10,
-      "quota": 3.4
+      "quota": 3.39
     },
     {
       "chiave": "diretti",
       "label": "Diretti / non tracciati",
       "iscritti": 19,
-      "quota": 6.46
+      "quota": 6.44
     }
   ],
   "dettaglio_contenuti": [
     {
       "fonte": "ads",
       "utm_content": "ai-video-f24-eleven-916",
-      "iscritti": 141,
+      "iscritti": 142,
       "iscritti_edizione_corrente": 141
     },
     {
@@ -787,13 +787,13 @@
     {
       "data": "2026-09-30",
       "etichetta": "30/09",
-      "iscritti": 8,
-      "ads": 4,
+      "iscritti": 9,
+      "ads": 5,
       "email": 0,
       "diretti": 4,
-      "cumulato": 294,
+      "cumulato": 295,
       "edizione": "2026-09-30",
-      "cumulato_edizione": 294,
+      "cumulato_edizione": 295,
       "spesa": 7.41
     }
   ],
