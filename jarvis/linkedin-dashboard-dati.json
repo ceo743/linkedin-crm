@@ -1,6 +1,6 @@
 {
-  "aggiornato": "2026-09-29 05:54 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; agenti.outreach e agenti.blog non riletti in questo giro (numeri invariati); agenti.analyst aggiornato; resto non riverificato)",
-  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 22-28 settembre 2026",
+  "aggiornato": "2026-09-30 05:54 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; agenti.outreach non riletto in questo giro (numeri invariati); agenti.blog aggiornato col catalogo dell'audit SEO del 28/9; agenti.analyst aggiornato; resto non riverificato)",
+  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 23-29 settembre 2026",
   "kpi": {
     "follower": 233118,
     "follower_delta": "+163",
@@ -11,8 +11,8 @@
     "engagement": "0,14%",
     "reazioni": 60,
     "commenti": 0,
-    "call": 6,
-    "call_target": 5
+    "call": 3,
+    "call_target": 2
   },
   "interazioni_composizione": [
     {
@@ -155,8 +155,8 @@
           "l": "articoli (2 LinkedIn + 2 AI)"
         },
         {
-          "v": "550",
-          "l": "a catalogo (audit 21/9)"
+          "v": "578",
+          "l": "a catalogo (audit 28/9)"
         },
         {
           "v": "27",
@@ -209,16 +209,16 @@
         }
       ],
       "ieri": {
-        "data": "28 settembre",
+        "data": "29 settembre",
         "call": 0,
-        "spesa": "2.107,77€ (Account 1 + Account 3, giornata intera via time_range)",
-        "click": 1567,
-        "dettaglio": "0 prenotazioni nuove quel giorno (solo 2 riprogrammazioni e 1 cancellazione su call prenotate nei giorni precedenti); 0 lead funnel dal foglio KPI; 1 guida Kajabi reale"
+        "spesa": "1.711,91€ (Account 1 + Account 3, giornata intera via time_range)",
+        "click": 1549,
+        "dettaglio": "0 prenotazioni nuove quel giorno; 0 lead funnel dal foglio KPI; 0 guide Kajabi"
       },
       "agenda": [
-        "Mer 30/9 · 09:00 — Meta Ads",
-        "Mer 30/9 · 11:00 — Meta Ads",
-        "Mer 30/9 · 11:30 — LinkedIn",
+        "Oggi 30/9 · 09:00 — Meta Ads",
+        "Oggi 30/9 · 11:00 — Meta Ads",
+        "Oggi 30/9 · 11:30 — LinkedIn",
         "Mar 6/10 · 12:00 — Meta Ads (riprogrammata dal 23/9)"
       ]
     }
