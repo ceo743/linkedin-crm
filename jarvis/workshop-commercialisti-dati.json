@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-01T10:28:25+02:00",
+  "aggiornato": "2026-10-01T13:28:17+02:00",
   "workshop": {
     "nome": "Workshop Commercialisti",
     "sottotitolo": "Webinar gratuito su Zoom, un'edizione ogni 15 giorni",
@@ -23,8 +23,8 @@
     "da_ads": 4,
     "da_email": 0,
     "diretti": 1,
-    "spesa": 42.78,
-    "costo_per_iscritto": 10.7,
+    "spesa": 49.52,
+    "costo_per_iscritto": 12.38,
     "lead_meta": 2,
     "utm_conferma": 3,
     "utm_altra_edizione": 1
@@ -66,8 +66,8 @@
       "da_ads": 4,
       "da_email": 0,
       "diretti": 1,
-      "spesa": 42.78,
-      "costo_per_iscritto": 10.7,
+      "spesa": 49.52,
+      "costo_per_iscritto": 12.38,
       "lead_meta": 2,
       "utm_conferma": 3,
       "utm_altra_edizione": 1
@@ -97,32 +97,32 @@
     "primo_iscritto": "2026-08-19"
   },
   "spesa": {
-    "oggi": 42.78,
+    "oggi": 49.52,
     "ieri": 7.41,
-    "totale": 655.75,
+    "totale": 662.44,
     "tetto": null,
     "residuo": null,
     "budget_giornaliero": 100.0
   },
   "costo_per_iscritto": {
-    "oggi": 14.26,
+    "oggi": 16.51,
     "ieri": 1.48,
-    "totale": 2.44,
-    "edizione_corrente": 10.7,
+    "totale": 2.46,
+    "edizione_corrente": 12.38,
     "nota": "spesa Meta divisa per gli iscritti col tracciamento ads (utm_source=meta / utm_medium=paid) presenti sul foglio"
   },
   "meta": {
     "oggi": {
-      "spesa": 42.78,
-      "impressions": 3330,
-      "reach": 2679,
-      "frequency": 1.24,
-      "click": 115,
-      "ctr": 3.45,
-      "cpc": 0.37,
-      "cpm": 12.85,
+      "spesa": 49.52,
+      "impressions": 4128,
+      "reach": 3091,
+      "frequency": 1.34,
+      "click": 143,
+      "ctr": 3.46,
+      "cpc": 0.35,
+      "cpm": 12.0,
       "lead_meta": 2,
-      "costo_lead_meta": 21.39
+      "costo_lead_meta": 24.76
     },
     "ieri": {
       "spesa": 7.41,
@@ -137,16 +137,16 @@
       "costo_lead_meta": 2.47
     },
     "totale": {
-      "spesa": 655.75,
-      "impressions": 73814,
-      "reach": 26324,
-      "frequency": 2.8,
-      "click": 4275,
-      "ctr": 5.79,
+      "spesa": 662.44,
+      "impressions": 74603,
+      "reach": 26374,
+      "frequency": 2.83,
+      "click": 4302,
+      "ctr": 5.77,
       "cpc": 0.15,
       "cpm": 8.88,
       "lead_meta": 180,
-      "costo_lead_meta": 3.64
+      "costo_lead_meta": 3.68
     }
   },
   "fonti": [
@@ -824,7 +824,7 @@
       "cumulato": 298,
       "edizione": "2026-10-15",
       "cumulato_edizione": 3,
-      "spesa": 42.78
+      "spesa": 49.52
     }
   ],
   "avvisi": []
