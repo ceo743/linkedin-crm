@@ -1,47 +1,47 @@
 {
-  "aggiornato": "25 settembre, ore 12:10",
+  "aggiornato": "30 settembre, ore 08:15",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
       "id": "newsletter-martedi",
       "nome": "Newsletter Martedì",
-      "sottotitolo": "LinkedIn e IA — Guida 017 Assistente Clienti IA completata",
+      "sottotitolo": "LinkedIn e IA — Guida 018 Ricerca Account IA completata",
       "colore": "cyan",
       "stato": "attenzione",
-      "ultima_run": "23 settembre, ore 16:26",
+      "ultima_run": "30 settembre, ore 08:14",
       "prossima_run": "prossimo martedì",
       "verifiche": [
         {
           "ok": true,
-          "testo": "Pulizia preliminare: nessuna cartella \"017\" anomala trovata; cartella \"011 (interno)\" ancora presente, fuori scope, appartiene alla routine di pubblicazione"
+          "testo": "Pulizia preliminare: nessuna cartella/Doc \"018\" anomala trovata, partenza pulita"
         },
         {
           "ok": true,
-          "testo": "Tema nuovo scelto: LinkedIn Premium All in One (piano USA-only lanciato 2/03/2026, 15 contatti suggeriti al giorno) — lista gap storica esaurita, fatti verificati con WebSearch/WebFetch su fonti indipendenti, nessun titolo duplicato"
+          "testo": "Tema nuovo scelto: Account IQ e Lead IQ di Sales Navigator (riassunto IA di un'azienda in meno di 2 minuti, riservato ai piani Advanced/Advanced Plus) — fatti verificati con WebSearch su fonti indipendenti, nessun titolo duplicato"
         },
         {
           "ok": true,
-          "testo": "Articolo Doc #017 creato in Newsletter-Claude-Martedì/, contenuto verificato con read_file_content (accenti ed emoji integri)"
+          "testo": "Articolo Doc #018 creato in Newsletter-Claude-Martedì/, contenuto verificato con read_file_content (accenti ed emoji integri, chiusura in stile \"Impara da me\")"
         },
         {
           "ok": true,
-          "testo": "Guida PDF generata da codice (genera_brochure_assistente.py), 12 pagine, CTA doppia verificata visivamente + link Calendly 200"
+          "testo": "Guida PDF generata da codice (genera_brochure_ricerca_account.py), 12 pagine, CTA doppia verificata visivamente + link Calendly 200"
         },
         {
           "ok": true,
-          "testo": "Repo dedicato ceo743/guida-assistente-clienti-ia-linkedin creato, GitHub Pages attivo, DNS CNAME su Kajabi aggiunto (confermato via DNS-over-HTTPS)"
+          "testo": "Repo dedicato ceo743/guida-ricerca-account-ia-linkedin creato, GitHub Pages attivo, DNS CNAME su Kajabi aggiunto (confermato via DNS-over-HTTPS)"
         },
         {
           "ok": true,
-          "testo": "Form Kajabi 2149731400 creato (duplicato da #016 con automazioni incluse), verificato end-to-end: submission 302 → email di consegna arrivata su ceo@davidecaiazzo.it → link risolto al PDF Pages corretto"
+          "testo": "Form Kajabi 2149738018 creato (duplicato da #017 con automazioni incluse), verificato end-to-end: submission 302 → email di consegna arrivata su ceo@davidecaiazzo.it → link risolto al PDF Pages corretto"
         },
         {
           "ok": true,
-          "testo": "Card 17 aggiunta in cima alla hub newsletterguide.davidecaiazzo.it, confermata live via GitHub API"
+          "testo": "Card 18 aggiunta in cima alla hub newsletterguide.davidecaiazzo.it, confermata live (200)"
         },
         {
-          "ok": false,
-          "testo": "Certificato TLS del sottodominio guida-assistente-clienti-ia-linkedin.davidecaiazzo.it ANCORA IN EMISSIONE a fine sessione: il PDF risponde 200 solo con -k, non ancora in HTTPS strict. Pattern normale (15-25 min), da riverificare al prossimo giro"
+          "ok": true,
+          "testo": "Certificato TLS del sottodominio guida-ricerca-account-ia-linkedin.davidecaiazzo.it emesso e confermato: landing e PDF rispondono 200 in HTTPS strict, anche seguendo il link vero dell'email di consegna"
         },
         {
           "ok": false,
@@ -54,15 +54,15 @@
           "url": "https://drive.google.com/drive/folders/1a8XCuzdUWR7Z_hOsq7Yl8zX61-2TAs_T"
         },
         {
-          "testo": "Apri articolo Doc #017",
-          "url": "https://docs.google.com/document/d/13q2hpVRX1VkZZOSp9fbdL3OzHaP3mnPauuaZlCf8WfY/edit"
+          "testo": "Apri articolo Doc #018",
+          "url": "https://docs.google.com/document/d/1QHhs5aUywmFgM7badCyL2RA7ISuIBHZpDWoMOiX_9Cs/edit"
         },
         {
-          "testo": "Apri landing guida #017",
-          "url": "https://guida-assistente-clienti-ia-linkedin.davidecaiazzo.it/"
+          "testo": "Apri landing guida #018",
+          "url": "https://guida-ricerca-account-ia-linkedin.davidecaiazzo.it/"
         }
       ],
-      "nota": "Guida 017 \"L'assistente che ti trova i clienti\" prodotta e verificata end-to-end in questo giro (pubblicazione mar 27/10). Manca solo il video di Davide e la conferma finale HTTPS strict."
+      "nota": "Guida 018 \"La scheda azienda pronta in 2 minuti\" prodotta e verificata end-to-end, incluso HTTPS strict (pubblicazione mar 3/11). Manca solo il video di Davide."
     },
     {
       "id": "newsletter-venerdi",
