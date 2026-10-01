@@ -1,6 +1,6 @@
 {
-  "aggiornato": "2026-09-30 05:54 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; agenti.outreach non riletto in questo giro (numeri invariati); agenti.blog aggiornato col catalogo dell'audit SEO del 28/9; agenti.analyst aggiornato; resto non riverificato)",
-  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 23-29 settembre 2026",
+  "aggiornato": "2026-10-01 05:56 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; agenti.outreach riverificato, numeri invariati dal giro precedente; agenti.newsletter e agenti.analyst aggiornati; agenti.blog non riletto in questo giro, numeri invariati)",
+  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 24-30 settembre 2026",
   "kpi": {
     "follower": 233118,
     "follower_delta": "+163",
@@ -11,8 +11,8 @@
     "engagement": "0,14%",
     "reazioni": 60,
     "commenti": 0,
-    "call": 3,
-    "call_target": 2
+    "call": 2,
+    "call_target": 1
   },
   "interazioni_composizione": [
     {
@@ -141,10 +141,10 @@
           "l": "produzione"
         }
       ],
-      "in_corso": "Guida 017 — «Assistente Clienti IA» — ultima prodotta",
+      "in_corso": "Guida 018 — «Ricerca Account IA LinkedIn» — ultima prodotta",
       "ultime": [
-        "#016 — «Iscritti Newsletter IA LinkedIn»",
-        "#015 — «Commenti Umani IA LinkedIn»"
+        "#017 — «Assistente Clienti IA»",
+        "#016 — «Iscritti Newsletter IA LinkedIn»"
       ]
     },
     "blog": {
@@ -209,16 +209,13 @@
         }
       ],
       "ieri": {
-        "data": "29 settembre",
+        "data": "30 settembre",
         "call": 0,
-        "spesa": "1.711,91€ (Account 1 + Account 3, giornata intera via time_range)",
-        "click": 1549,
-        "dettaglio": "0 prenotazioni nuove quel giorno; 0 lead funnel dal foglio KPI; 0 guide Kajabi"
+        "spesa": "1.981,73€ (Account 1 + Account 3, giornata intera via time_range)",
+        "click": 1683,
+        "dettaglio": "0 prenotazioni nuove quel giorno; 1 lead funnel dal foglio KPI (fonte non tracciata); 0 guide Kajabi; 1 vendita chiusa (Meta Ads)"
       },
       "agenda": [
-        "Oggi 30/9 · 09:00 — Meta Ads",
-        "Oggi 30/9 · 11:00 — Meta Ads",
-        "Oggi 30/9 · 11:30 — LinkedIn",
         "Mar 6/10 · 12:00 — Meta Ads (riprogrammata dal 23/9)"
       ]
     }
