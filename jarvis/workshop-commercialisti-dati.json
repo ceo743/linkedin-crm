@@ -1,11 +1,11 @@
 {
-  "aggiornato": "2026-10-01T07:28:52+02:00",
+  "aggiornato": "2026-10-01T10:28:25+02:00",
   "workshop": {
     "nome": "Workshop Commercialisti",
     "sottotitolo": "Webinar gratuito su Zoom, un'edizione ogni 15 giorni",
     "data_evento": "2026-10-15",
     "data_evento_it": "15 ottobre 2026",
-    "ora_evento": "18:30",
+    "ora_evento": "21:00",
     "giorni_mancanti": 14,
     "iniziato": false,
     "landing": "https://commercialisti.davidecaiazzo.it/",
@@ -16,15 +16,15 @@
     "chiave": "2026-10-15",
     "etichetta": "15/10",
     "data_it": "giovedì 15 ottobre 2026",
-    "ora": "18:30",
+    "ora": "21:00",
     "stato": "corrente",
     "raccolta_dal": "2026-10-01",
     "iscritti": 5,
     "da_ads": 4,
     "da_email": 0,
     "diretti": 1,
-    "spesa": 29.73,
-    "costo_per_iscritto": 7.43,
+    "spesa": 42.78,
+    "costo_per_iscritto": 10.7,
     "lead_meta": 2,
     "utm_conferma": 3,
     "utm_altra_edizione": 1
@@ -59,15 +59,15 @@
       "chiave": "2026-10-15",
       "etichetta": "15/10",
       "data_it": "giovedì 15 ottobre 2026",
-      "ora": "18:30",
+      "ora": "21:00",
       "stato": "corrente",
       "raccolta_dal": "2026-10-01",
       "iscritti": 5,
       "da_ads": 4,
       "da_email": 0,
       "diretti": 1,
-      "spesa": 29.73,
-      "costo_per_iscritto": 7.43,
+      "spesa": 42.78,
+      "costo_per_iscritto": 10.7,
       "lead_meta": 2,
       "utm_conferma": 3,
       "utm_altra_edizione": 1
@@ -97,32 +97,32 @@
     "primo_iscritto": "2026-08-19"
   },
   "spesa": {
-    "oggi": 29.73,
+    "oggi": 42.78,
     "ieri": 7.41,
-    "totale": 642.65,
+    "totale": 655.75,
     "tetto": null,
     "residuo": null,
     "budget_giornaliero": 100.0
   },
   "costo_per_iscritto": {
-    "oggi": 9.91,
+    "oggi": 14.26,
     "ieri": 1.48,
-    "totale": 2.39,
-    "edizione_corrente": 7.43,
+    "totale": 2.44,
+    "edizione_corrente": 10.7,
     "nota": "spesa Meta divisa per gli iscritti col tracciamento ads (utm_source=meta / utm_medium=paid) presenti sul foglio"
   },
   "meta": {
     "oggi": {
-      "spesa": 29.73,
-      "impressions": 2191,
-      "reach": 1670,
-      "frequency": 1.31,
-      "click": 76,
-      "ctr": 3.47,
-      "cpc": 0.39,
-      "cpm": 13.57,
+      "spesa": 42.78,
+      "impressions": 3330,
+      "reach": 2679,
+      "frequency": 1.24,
+      "click": 115,
+      "ctr": 3.45,
+      "cpc": 0.37,
+      "cpm": 12.85,
       "lead_meta": 2,
-      "costo_lead_meta": 14.87
+      "costo_lead_meta": 21.39
     },
     "ieri": {
       "spesa": 7.41,
@@ -137,16 +137,16 @@
       "costo_lead_meta": 2.47
     },
     "totale": {
-      "spesa": 642.65,
-      "impressions": 72666,
-      "reach": 26227,
-      "frequency": 2.77,
-      "click": 4235,
-      "ctr": 5.83,
+      "spesa": 655.75,
+      "impressions": 73814,
+      "reach": 26324,
+      "frequency": 2.8,
+      "click": 4275,
+      "ctr": 5.79,
       "cpc": 0.15,
-      "cpm": 8.84,
+      "cpm": 8.88,
       "lead_meta": 180,
-      "costo_lead_meta": 3.57
+      "costo_lead_meta": 3.64
     }
   },
   "fonti": [
@@ -824,7 +824,7 @@
       "cumulato": 298,
       "edizione": "2026-10-15",
       "cumulato_edizione": 3,
-      "spesa": 29.73
+      "spesa": 42.78
     }
   ],
   "avvisi": []
