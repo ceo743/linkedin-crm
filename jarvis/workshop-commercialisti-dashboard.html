@@ -101,6 +101,53 @@
   .fb .testa b{color:var(--ink)}
   .fb ul{margin:8px 0 0 18px;font-size:13px;line-height:1.55}
   .fb .stato{font-weight:700} .fb .stato.no{color:var(--amber)} .fb .stato.si{color:var(--green)}
+  /* selettore di edizione (02/10/2026) */
+  .sel-wrap{position:sticky;top:0;z-index:20;margin:18px -4vw 0;padding:10px 4vw;background:linear-gradient(180deg,var(--bg) 70%,#0e142000)}
+  .sel{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;align-items:center}
+  .sel::-webkit-scrollbar{display:none}
+  .sel .sel-lab{flex:0 0 auto;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-right:4px}
+  .sel button{flex:0 0 auto;font:inherit;font-size:13px;font-weight:700;color:var(--muted);background:var(--card);border:1px solid var(--border);border-radius:999px;padding:9px 16px;min-height:40px;cursor:pointer;white-space:nowrap}
+  .sel button:hover{color:var(--ink);border-color:#3a4766}
+  .sel button[aria-pressed="true"]{color:var(--ink);background:#ff6b3522;border-color:var(--orange)}
+  .sel button small{font-weight:600;color:var(--muted);margin-left:6px;font-size:11px}
+  .sel button[aria-pressed="true"] small{color:#ffb99c}
+  tr.sel-row td{background:#2ea8a814}
+  tr.cor.sel-row td{background:#ff6b3518}
+  tr[data-ed]{cursor:pointer}
+  tr[data-ed]:hover td{background:#ffffff08}
+  /* tabella pubblicita' per edizione */
+  tr.gruppo td{padding:18px 10px 8px 0;border-bottom:1px solid var(--border);font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+  tr.gruppo td span{color:var(--muted);font-weight:600;text-transform:none;letter-spacing:0;margin-left:8px}
+  tr.tot td{font-weight:800;border-bottom:2px solid var(--border);background:#ffffff06}
+  td .sotto{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.45;font-weight:500}
+  td .avv{font-size:11px;color:var(--amber);margin-top:3px}
+  .tag{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;margin-left:6px;vertical-align:1px}
+  .tag.on{color:var(--green);background:#3ddc8415;border:1px solid #3ddc8440}
+  .tag.camp{color:var(--amber);background:#f5b94215;border:1px solid #f5b94240}
+  td.rosso{color:var(--red);font-weight:800} td.giallo{color:var(--amber);font-weight:800}
+  .letture{margin-top:16px;border:1px solid var(--border);border-radius:14px;padding:14px 16px;background:#0f1729}
+  .letture .lt{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:8px}
+  .letture ol{margin-left:18px;font-size:13px;line-height:1.6}
+  .letture li+li{margin-top:4px}
+  @media(max-width:620px){
+    /* tabella delle pubblicita' a schede sul telefono: niente scorrimento laterale */
+    .tab-wrap #tab-pubblicita{min-width:0}
+    #tab-pubblicita thead{display:none}
+    #tab-pubblicita tr{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px 10px;padding:12px 0;border-bottom:1px solid #26314a66}
+    #tab-pubblicita td{border:none;padding:0;text-align:left!important;white-space:normal!important}
+    #tab-pubblicita td:first-child{grid-column:1/-1}
+    #tab-pubblicita td.vuoto{display:none}
+    #tab-pubblicita td[data-l]::before{content:attr(data-l);display:block;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:2px}
+    #tab-pubblicita tr.gruppo{display:block;padding:18px 0 8px;border-bottom:1px solid var(--border)}
+    #tab-pubblicita tr.gruppo td span{display:block;margin:4px 0 0}
+    #tab-pubblicita tr.tot{background:#ffffff06;padding:12px 8px}
+    body{padding:24px 16px 60px}
+    .sel-wrap{margin:14px -16px 0;padding:10px 16px}
+    .big .value{font-size:34px}
+    .hero{grid-template-columns:1fr 1fr;gap:10px}
+    .big{padding:16px}
+    .big .hint{font-size:11.5px}
+  }
   footer{margin-top:44px;font-size:11px;color:var(--muted);line-height:1.7;border-top:1px solid var(--border);padding-top:16px}
   footer a{color:var(--teal);text-decoration:none}
 </style>
@@ -118,7 +165,9 @@
   </div>
 </div>
 
-<div class="section-title fade" style="animation-delay:.08s">A colpo d'occhio · edizione in corso <div class="line"></div></div>
+<div class="sel-wrap"><div class="sel" id="sel" role="group" aria-label="Scegli l'edizione"></div></div>
+
+<div class="section-title fade" style="animation-delay:.08s"><span id="t-hero">A colpo d'occhio · edizione in corso</span> <div class="line"></div></div>
 <div class="hero fade" id="hero" style="animation-delay:.12s"></div>
 <div class="avvisi" id="avvisi"></div>
 
@@ -133,36 +182,39 @@
   <div class="nota" id="nota-edizioni"></div>
 </div>
 
-<div class="section-title fade" style="animation-delay:.2s">Soldi · spesa e costo per iscritto <div class="line"></div></div>
+<div class="section-title fade" style="animation-delay:.2s"><span id="t-soldi">Soldi · spesa e costo per iscritto</span> <div class="line"></div></div>
 <div class="grid-kpi fade" id="soldi" style="animation-delay:.24s"></div>
+<div class="nota" id="nota-soldi"></div>
 <div class="card fade" id="card-tetto" style="animation-delay:.28s;margin-top:14px">
   <div style="font-size:12.5px;font-weight:700">Budget bruciato sul tetto della campagna</div>
   <div class="bar"><i id="bar-budget" style="width:0%"></i></div>
   <div class="barlab"><span id="bar-sx"></span><span id="bar-dx"></span></div>
 </div>
 
-<div class="section-title fade" style="animation-delay:.34s">Andamento giorno per giorno <div class="line"></div></div>
+<div class="section-title fade" style="animation-delay:.34s"><span id="t-trend">Andamento giorno per giorno</span> <div class="line"></div></div>
 <div class="card fade" style="animation-delay:.38s">
   <div class="chart-wrap"><svg class="chart" id="chart" viewBox="0 0 900 320" preserveAspectRatio="xMidYMid meet"></svg></div>
   <div class="legend">
     <span><i style="background:#ff6b35"></i>Da Meta Ads</span>
     <span><i style="background:#2ea8a8"></i>Da email fredde</span>
     <span><i style="background:#8b96ad"></i>Diretti / non tracciati</span>
-    <span><i style="background:#f5b942;border-radius:50%"></i>Totale iscritti dell'edizione (riparte da zero a ogni edizione)</span>
+    <span><i style="background:#f5b942;border-radius:50%"></i><span id="leg-linea">Totale iscritti dell'edizione</span></span>
     <span><i style="background:transparent;border:1px dashed #f4f6fb99;border-radius:0"></i>Giorno del webinar</span>
   </div>
 </div>
 
-<div class="section-title fade" style="animation-delay:.44s">Da dove arrivano gli iscritti <div class="line"></div></div>
+<div class="section-title fade" style="animation-delay:.44s"><span id="t-fonti">Da dove arrivano gli iscritti</span> <div class="line"></div></div>
 <div class="card fade" style="animation-delay:.48s">
   <div class="fonti" id="fonti"></div>
   <div class="nota" id="nota-fonti"></div>
 </div>
 
-<div class="section-title fade" style="animation-delay:.54s">Quale annuncio / quale email porta iscritti <div class="line"></div></div>
+<div class="section-title fade" style="animation-delay:.54s"><span id="t-contenuti">Quale annuncio / quale email porta iscritti</span> <div class="line"></div></div>
 <div class="card fade" style="animation-delay:.58s">
-  <table><thead><tr><th>Fonte</th><th>Contenuto (utm_content)</th><th style="text-align:right">Edizione in corso</th><th style="text-align:right">Tutte le edizioni</th></tr></thead>
-  <tbody id="tab-contenuti"></tbody></table>
+  <div class="tab-wrap"><table id="tab-pubblicita"><thead id="head-contenuti"></thead>
+  <tbody id="tab-contenuti"></tbody></table></div>
+  <div class="letture" id="letture" style="display:none"><div class="lt" id="letture-tit">Lettura automatica</div><ol id="letture-lista"></ol></div>
+  <div class="nota" id="nota-contenuti"></div>
 </div>
 
 <div class="section-title fade" style="animation-delay:.6s">Cosa ci chiedono gli iscritti · risposte via email <div class="line"></div></div>
@@ -172,7 +224,7 @@
   <div class="nota" id="fb-nota"></div>
 </div>
 
-<div class="section-title fade" style="animation-delay:.64s">Numeri della campagna Meta · dall'inizio <div class="line"></div></div>
+<div class="section-title fade" style="animation-delay:.64s"><span id="t-meta">Numeri Meta · tutte le edizioni</span> <div class="line"></div></div>
 <div class="grid-kpi fade" id="meta-kpi" style="animation-delay:.68s"></div>
 <div class="card fade" style="animation-delay:.72s;margin-top:14px">
   <div id="camp-info" style="font-size:13px;line-height:1.7"></div>
@@ -182,7 +234,8 @@
 </div>
 
 <footer class="fade" style="animation-delay:.8s">
-  JARVIS · DC Academy · iscritti letti dal foglio degli iscritti al workshop, spesa letta da Meta Ads.
+  JARVIS · DC Academy · iscritti letti dal foglio degli iscritti al workshop, spesa letta da Meta Ads (somma di tutte le campagne del webinar).
+  In alto si sceglie l'edizione: la scelta resta nell'indirizzo della pagina, quindi il link si può condividere così com'è.
   Ogni iscritto conta per la prima edizione in programma dopo la sua iscrizione; la spesa di ogni giorno va all'edizione di quei giorni.
   Le righe di prova non sono contate. Cruscotto interno: chiunque abbia il link può vederlo.
 </footer>
@@ -192,90 +245,168 @@ const EUR = n => (n===null||n===undefined) ? "—" : "€" + Number(n).toLocaleS
 const NUM = n => (n===null||n===undefined) ? "—" : Number(n).toLocaleString("it-IT");
 const PCT = n => (n===null||n===undefined) ? "—" : Number(n).toLocaleString("it-IT",{minimumFractionDigits:1,maximumFractionDigits:1})+"%";
 const COL = {ads:"#ff6b35", email:"#2ea8a8", diretti:"#8b96ad"};
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const gm = iso => iso ? iso.slice(8,10) + "/" + iso.slice(5,7) : "—";
+
+let D = null;        // dati
+let SEL = null;      // "tutte" oppure la chiave di un'edizione
 
 fetch("workshop-commercialisti-dati.json?v=" + Date.now())
   .then(r => r.json())
-  .then(render)
-  .catch(e => { document.getElementById("h-live").textContent = "dati non disponibili"; console.error(e); });
+  .then(d => { D = d; intestazione(d); SEL = sceltaDaIndirizzo(d); selettore(); vista(); })
+  .catch(e => { $("h-live").textContent = "dati non disponibili"; console.error(e); });
 
 fetch("workshop-commercialisti-feedback.json?v=" + Date.now())
   .then(r => r.json())
   .then(renderFeedback)
-  .catch(e => { document.getElementById("fb-nota").textContent = "riscontri non disponibili"; console.error(e); });
+  .catch(e => { $("fb-nota").textContent = "riscontri non disponibili"; console.error(e); });
+
+/* ---------- scelta dell'edizione: ?edizione=2026-09-30 | tutte | (niente = in corso) ---------- */
+function sceltaDaIndirizzo(d){
+  const v = (new URLSearchParams(location.search).get("edizione") || "").toLowerCase();
+  if (v === "tutte") return "tutte";
+  if (v && d.edizioni.some(e => e.chiave === v)) return v;
+  return d.edizione_corrente.chiave;
+}
+function scegli(k){
+  SEL = k;
+  const u = new URL(location.href);
+  if (k === D.edizione_corrente.chiave) u.searchParams.delete("edizione");
+  else u.searchParams.set("edizione", k);
+  history.replaceState(null, "", u.pathname + u.search + u.hash);
+  selettore(); vista();
+}
+function selettore(){
+  const cor = D.edizione_corrente;
+  const altre = D.edizioni.filter(e => e.chiave !== cor.chiave).slice().reverse();
+  const voci = [[cor.chiave, "In corso", cor.etichetta]]
+    .concat(altre.map(e => [e.chiave, e.stato === "prossima" ? "Dopo l'ultimo webinar" : e.etichetta,
+                             e.stato === "passata" ? "conclusa" : (e.stato === "prossima" ? "data da fissare" : "")]))
+    .concat([["tutte", "Tutte le edizioni", ""]]);
+  $("sel").innerHTML = `<span class="sel-lab">Edizione</span>` + voci.map(([k, l, s]) =>
+    `<button type="button" data-k="${esc(k)}" aria-pressed="${k===SEL}">${esc(l)}${s?`<small>${esc(s)}</small>`:""}</button>`).join("");
+  $("sel").querySelectorAll("button").forEach(b => b.onclick = () => scegli(b.dataset.k));
+}
 
 function renderFeedback(f){
   const L = (f.feedback||[]).slice().sort((a,b) => b.data.localeCompare(a.data));
   const conta = {};
   L.forEach(x => (x.temi||[]).forEach(t => conta[t] = (conta[t]||0) + 1));
-  document.getElementById("fb-temi").innerHTML = Object.entries(conta).sort((a,b) => b[1]-a[1])
+  $("fb-temi").innerHTML = Object.entries(conta).sort((a,b) => b[1]-a[1])
     .map(([t,n]) => `<span>${t}<b>${n}</b></span>`).join("");
-  document.getElementById("fb-lista").innerHTML = L.map(x => `<div class="fb">
+  $("fb-lista").innerHTML = L.map(x => `<div class="fb">
     <div class="testa"><span><b>${itdata(x.data)}</b> · ${x.chi}</span>
     <span class="stato ${x.risposto?"si":"no"}">${x.risposto?"risposto":"da rispondere"}</span></div>
     <ul>${x.chiede.map(c => `<li>${c}</li>`).join("")}</ul>
     ${x.nota_risposta?`<div class="nota" style="margin-top:6px">${x.nota_risposta}</div>`:""}</div>`).join("");
   const da = L.filter(x => !x.risposto).length;
-  document.getElementById("fb-nota").innerHTML = `<b>${L.length}</b> riscontri ricevuti via email` +
+  $("fb-nota").innerHTML = `<b>${L.length}</b> riscontri ricevuti via email` +
     (da ? ` · <b>${da}</b> ancora senza risposta` : "") + ". Nomi omessi: sono in Gmail.";
 }
 
-function render(d){
-  /* ---- intestazione ---- */
-  const live = document.getElementById("h-live");
+function intestazione(d){
+  const live = $("h-live");
   const attiva = d.campagna.stato === "ACTIVE";
   live.className = "live" + (attiva ? "" : " off");
   live.textContent = attiva ? "campagna attiva" : "campagna " + (d.campagna.stato||"").toLowerCase();
   const agg = new Date(d.aggiornato);
-  document.getElementById("h-aggiornato").textContent =
+  $("h-aggiornato").textContent =
     "aggiornato " + agg.toLocaleString("it-IT",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
+  $("avvisi").innerHTML = (d.avvisi||[]).map(a => "⚠️ " + esc(a)).join("<br>");
+}
 
-  const w = d.workshop, ec = d.edizione_corrente;
-  document.getElementById("h-edizione").textContent = "· edizione del " + ec.etichetta;
-  document.getElementById("h-obiettivo").textContent = "Obiettivo: iscrizioni al workshop del " + w.data_evento_it;
-  document.title = "Workshop Commercialisti " + ec.etichetta + " · DC Academy";
+/* ---------- tutto quello che cambia con la scelta ---------- */
+function vista(){
+  const d = D, w = d.workshop, cor = d.edizione_corrente;
+  const tutte = SEL === "tutte";
+  const e = tutte ? null : d.edizioni.find(x => x.chiave === SEL);
+  const inCorso = !tutte && e.chiave === cor.chiave;
+  const nomeSel = tutte ? "tutte le edizioni" : (e.stato === "prossima" ? "iscritti dopo l'ultimo webinar" : "edizione del " + e.etichetta);
 
-  /* ---- hero: edizione in corso ---- */
-  const i = d.iscritti, s = d.spesa, c = d.costo_per_iscritto;
-  const gg = w.giorni_mancanti;
-  const passate = d.edizioni.filter(e => e.stato === "passata");
-  const prec = passate[passate.length - 1];
-  const confronto = prec && prec.a_parita
-    ? `<br>L'edizione del ${prec.etichetta} allo stesso punto ne aveva <b>${NUM(prec.a_parita.iscritti)}</b>`
-    : (prec ? `<br>L'edizione del ${prec.etichetta} ne ha avuti <b>${NUM(prec.iscritti)}</b>` : "");
-  const mancaTxt = w.iniziato || gg < 0
-    ? `<div class="value warn" style="font-size:28px">concluso</div><div class="hint">Il ${w.data_evento_it} è passato: la data nuova arriva dalla routine del giorno dopo</div>`
-    : gg === 0
-      ? `<div class="value warn">oggi</div><div class="hint">Alle <b>${w.ora_evento}</b>, su Zoom</div>`
-      : `<div class="value ${gg<=7?"warn":""}">${NUM(gg)}<span style="font-size:18px;color:var(--muted);font-weight:700"> giorn${gg===1?"o":"i"}</span></div>
-         <div class="hint">Al workshop del <b>${w.data_evento_it}</b> alle ${w.ora_evento}</div>`;
-  document.getElementById("hero").innerHTML = `
-    <div class="card big"><div class="label">Iscritti a questa edizione</div>
-      <div class="value accent">${NUM(ec.iscritti)}</div>
-      <div class="hint">Raccolti dal <b>${itdata(ec.raccolta_dal)}</b>, senza le prove.${confronto}</div></div>
-    <div class="card big"><div class="label">Iscritti oggi</div>
-      <div class="value ${i.oggi>0?"good":""}">${NUM(i.oggi)}</div>
-      <div class="hint">Ieri ne erano arrivati <b>${NUM(i.ieri)}</b></div></div>
-    <div class="card big"><div class="label">Costo per iscritto</div>
-      <div class="value teal">${EUR(ec.costo_per_iscritto)}</div>
-      <div class="hint">Spesa Meta di questa edizione (<b>${EUR(ec.spesa)}</b>) divisa per i <b>${NUM(ec.da_ads)}</b> iscritti arrivati dalle inserzioni</div></div>
-    <div class="card big"><div class="label">Mancano</div>${mancaTxt}</div>`;
-  document.getElementById("avvisi").innerHTML = (d.avvisi||[]).map(a => "⚠️ " + a).join("<br>");
+  $("h-edizione").textContent = tutte ? "· tutte le edizioni" : (e.stato === "prossima" ? "· dopo l'ultimo webinar" : "· edizione del " + e.etichetta);
+  $("h-obiettivo").textContent = tutte ? `Tutte le edizioni, dal primo iscritto del ${itdata(d.iscritti.primo_iscritto)}`
+    : inCorso ? "Obiettivo: iscrizioni al workshop del " + w.data_evento_it
+    : e.stato === "prossima" ? "Iscritti arrivati dopo l'inizio dell'ultimo webinar: la data nuova non è ancora fissata"
+    : `Edizione conclusa: ${e.data_it} alle ${e.ora}`;
+  document.title = "Workshop Commercialisti " + (tutte ? "· tutte le edizioni" : e.etichetta) + " · DC Academy";
+  $("t-hero").textContent = "A colpo d'occhio · " + (inCorso ? "edizione in corso" : nomeSel);
+  $("t-soldi").textContent = "Soldi · " + nomeSel;
+  $("t-trend").textContent = "Andamento giorno per giorno · " + nomeSel;
+  $("t-fonti").textContent = "Da dove arrivano gli iscritti · " + nomeSel;
+  $("t-contenuti").textContent = "Quale annuncio / quale email porta iscritti · " + nomeSel;
+  $("t-meta").textContent = "Numeri Meta · " + nomeSel;
 
-  /* ---- edizioni a confronto ---- */
+  hero(d, e, tutte, inCorso);
+  confronto(d);
+  soldi(d, e, tutte, inCorso);
+  disegna(d, e, tutte);
+  fonti(d, e, tutte);
+  contenuti(d, e, tutte);
+  meta(d, e, tutte);
+}
+
+function hero(d, e, tutte, inCorso){
+  const w = d.workshop, i = d.iscritti, gg = w.giorni_mancanti;
+  const box = (label, value, cls, hint, style) =>
+    `<div class="card big"><div class="label">${label}</div><div class="value ${cls||""}"${style?` style="${style}"`:""}>${value}</div>${hint?`<div class="hint">${hint}</div>`:""}</div>`;
+  let h;
+  if (inCorso){
+    const ec = e;
+    const passate = d.edizioni.filter(x => x.stato === "passata");
+    const prec = passate[passate.length - 1];
+    const confr = prec && prec.a_parita
+      ? `<br>L'edizione del ${prec.etichetta} allo stesso punto ne aveva <b>${NUM(prec.a_parita.iscritti)}</b>`
+      : (prec ? `<br>L'edizione del ${prec.etichetta} ne ha avuti <b>${NUM(prec.iscritti)}</b>` : "");
+    const manca = w.iniziato || gg < 0
+      ? `<div class="value warn" style="font-size:28px">concluso</div><div class="hint">Il ${w.data_evento_it} è passato: la data nuova arriva dalla routine del giorno dopo</div>`
+      : gg === 0
+        ? `<div class="value warn">oggi</div><div class="hint">Alle <b>${w.ora_evento}</b>, su Zoom</div>`
+        : `<div class="value ${gg<=7?"warn":""}">${NUM(gg)}<span style="font-size:18px;color:var(--muted);font-weight:700"> giorn${gg===1?"o":"i"}</span></div>
+           <div class="hint">Al workshop del <b>${w.data_evento_it}</b> alle ${w.ora_evento}</div>`;
+    h = box("Iscritti a questa edizione", NUM(ec.iscritti), "accent", `Raccolti dal <b>${itdata(ec.raccolta_dal)}</b>, senza le prove.${confr}`)
+      + box("Iscritti oggi", NUM(i.oggi), i.oggi>0?"good":"", `Ieri ne erano arrivati <b>${NUM(i.ieri)}</b>`)
+      + box("Costo per iscritto", EUR(ec.costo_per_iscritto), "teal", `Spesa Meta di questa edizione (<b>${EUR(ec.spesa)}</b>) divisa per i <b>${NUM(ec.da_ads)}</b> iscritti arrivati dalle inserzioni`)
+      + `<div class="card big"><div class="label">Mancano</div>${manca}</div>`;
+  } else if (tutte){
+    const eds = d.edizioni.filter(x => x.data);
+    const concluse = eds.filter(x => x.stato === "passata").length;
+    const cor = d.edizione_corrente;
+    h = box("Iscritti totali", NUM(i.totali), "accent", `Tutte le edizioni, dal <b>${itdata(i.primo_iscritto)}</b>, senza le prove`)
+      + box("Dalle inserzioni", NUM(i.da_ads), "", `Email fredde <b>${NUM(i.da_email)}</b> · diretti <b>${NUM(i.diretti)}</b>`)
+      + box("Costo per iscritto", EUR(d.costo_per_iscritto.totale), "teal", `Spesa Meta di tutte le edizioni (<b>${EUR(d.spesa.totale)}</b>) divisa per i <b>${NUM(i.da_ads)}</b> iscritti arrivati dalle inserzioni`)
+      + box("Edizioni", NUM(eds.length), "", `<b>${NUM(concluse)}</b> conclus${concluse===1?"a":"e"} · in corso quella del <b>${cor.etichetta}</b>` + (gg>=0 && !w.iniziato ? ` (mancano ${NUM(gg)} giorn${gg===1?"o":"i"})` : ""));
+  } else {
+    const ix = d.edizioni.indexOf(e);
+    const prima = ix > 0 ? d.edizioni[ix-1] : null;
+    const confr = prima && prima.data ? `<br>L'edizione del ${prima.etichetta} ne ha avuti <b>${NUM(prima.iscritti)}</b>` : "";
+    const quando = e.data
+      ? box("Data del webinar", e.etichetta, "warn", `${e.data_it} alle <b>${e.ora}</b> · ${e.stato === "passata" ? "concluso" : "in programma"}`)
+      : box("Data del webinar", "da fissare", "warn", "La fissa la routine della sera del webinar", "font-size:28px");
+    h = box("Iscritti a questa edizione", NUM(e.iscritti), "accent", `Raccolti dal <b>${itdata(e.raccolta_dal)}</b> al <b>${itdata(e.raccolta_al)}</b>, senza le prove.${confr}`)
+      + box("Dalle inserzioni", NUM(e.da_ads), "", `Email fredde <b>${NUM(e.da_email)}</b> · diretti <b>${NUM(e.diretti)}</b>`)
+      + box("Costo per iscritto", EUR(e.costo_per_iscritto), "teal", `Spesa Meta di questa edizione (<b>${EUR(e.spesa)}</b>) divisa per i <b>${NUM(e.da_ads)}</b> iscritti arrivati dalle inserzioni`)
+      + quando;
+  }
+  $("hero").innerHTML = h;
+}
+
+function confronto(d){
+  const w = d.workshop, gg = w.giorni_mancanti;
   const eds = d.edizioni.slice().reverse();
   const maxE = Math.max(1, ...eds.map(e => e.iscritti));
   const nomeEd = e => e.stato === "prossima" ? "Prossima (data da fissare)" : e.etichetta;
   const statoEd = {corrente:"in corso", passata:"passata", prossima:"dopo l'ultima", futura:"futura"};
-  document.getElementById("ed-barre").innerHTML = eds.map(e => `
+  $("ed-barre").innerHTML = eds.map(e => `
     <div class="f">
       <div class="n">${nomeEd(e)}${e.stato==="corrente"?' <span style="color:var(--orange)">●</span>':""}</div>
       <div class="track"><i style="width:${(e.iscritti/maxE*100).toFixed(1)}%;background:${e.stato==="corrente"?"#ff6b35":"#2ea8a8"}"></i></div>
       <div class="v">${NUM(e.iscritti)} <small>iscritti</small></div>
     </div>`).join("");
   const conParita = eds.some(e => e.a_parita);
-  document.getElementById("th-parita").textContent = conParita ? (gg === 0 ? "Al giorno del webinar" : `A ${gg} giorn${gg===1?"o":"i"} dal webinar`) : "";
-  document.getElementById("tab-edizioni").innerHTML = eds.map(e => `
-    <tr class="${e.stato==="corrente"?"cor":""}">
+  $("th-parita").textContent = conParita ? (gg === 0 ? "Al giorno del webinar" : `A ${gg} giorn${gg===1?"o":"i"} dal webinar`) : "";
+  $("tab-edizioni").innerHTML = eds.map(e => `
+    <tr class="${e.stato==="corrente"?"cor":""} ${e.chiave===SEL?"sel-row":""}" data-ed="${esc(e.chiave)}" title="Mostra questa edizione">
       <td><b>${nomeEd(e)}</b><div style="font-size:11px;color:var(--muted)">${e.data ? e.data_it : "iscritti dopo l'ultimo webinar"}</div></td>
       <td><span class="stato-ed ${e.stato}">${statoEd[e.stato]||e.stato}</span></td>
       <td class="n" style="text-align:right">${NUM(e.iscritti)}</td>
@@ -284,68 +415,163 @@ function render(d){
       <td style="text-align:right">${EUR(e.costo_per_iscritto)}</td>
       <td style="text-align:right;color:var(--muted)">${e.a_parita ? `<b style="color:var(--ink)">${NUM(e.a_parita.iscritti)}</b> iscritti · ${EUR(e.a_parita.spesa)}`
         : (conParita && e.stato==="corrente" ? `<b style="color:var(--ink)">${NUM(e.iscritti)}</b> iscritti · ${EUR(e.spesa)}` : "")}</td>
-    </tr>`).join("");
+    </tr>`).join("") + `
+    <tr class="tot ${SEL==="tutte"?"sel-row":""}" data-ed="tutte" title="Mostra tutte le edizioni">
+      <td><b>Tutte</b></td><td></td>
+      <td class="n" style="text-align:right">${NUM(d.iscritti.totali)}</td>
+      <td style="text-align:right">${NUM(d.iscritti.da_ads)}</td>
+      <td style="text-align:right">${EUR(d.spesa.totale)}</td>
+      <td style="text-align:right">${EUR(d.costo_per_iscritto.totale)}</td><td></td></tr>`;
+  $("tab-edizioni").querySelectorAll("tr[data-ed]").forEach(r => r.onclick = () => { scegli(r.dataset.ed); window.scrollTo({top:0,behavior:"smooth"}); });
   const utmAltra = d.edizioni.reduce((t,e) => t + (e.utm_altra_edizione||0), 0);
-  document.getElementById("nota-edizioni").innerHTML =
+  $("nota-edizioni").innerHTML =
+    `Tocca una riga per vedere quell'edizione in tutta la pagina. ` +
     `Un iscritto conta per la prima edizione in programma dopo la sua iscrizione (il webinar inizia alle ${w.ora_evento}): chi si iscrive dopo l'inizio passa all'edizione successiva. ` +
     `La spesa di ogni giorno va all'edizione di quei giorni.` +
     (conParita ? ` “Allo stesso punto” conta le edizioni passate fino allo stesso numero di giorni prima del webinar, per confrontarle alla pari con quella in corso.` : "") +
     (utmAltra ? ` <b>${NUM(utmAltra)}</b> iscritti hanno nel link l'etichetta di un'altra edizione: di solito chi clicca l'annuncio vecchio e si iscrive dopo il webinar.` : "");
+}
 
-  /* ---- soldi ---- */
-  document.getElementById("soldi").innerHTML = [
-    ["Spesa oggi", EUR(s.oggi), "accent", "budget " + EUR(s.budget_giornaliero) + "/giorno"],
-    ["Spesa ieri", EUR(s.ieri), "", i.ieri ? NUM(d.trend_giornaliero.find(t=>t.data===ieriISO(d))?.ads ?? 0) + " iscritti dalle ads" : ""],
-    ["Spesa di questa edizione", EUR(ec.spesa), "accent", "dal " + itdata(ec.raccolta_dal)],
-    ["Spesa di tutte le edizioni", EUR(s.totale), "", "dal " + itdata(d.campagna.inizio)],
-    ["Costo iscritto oggi", EUR(c.oggi), "teal", c.oggi===null ? "nessun iscritto dalle ads oggi" : ""],
-    ["Costo iscritto ieri", EUR(c.ieri), "teal", ""]
-  ].concat(s.tetto ? [["Budget ancora disponibile", EUR(s.residuo), "", "tetto " + EUR(s.tetto)]] : [])
-  .map(([l,v,cl,n]) => `<div class="card kpi"><div class="label">${l}</div><div class="value ${cl}">${v}</div>${n?`<div class="note">${n}</div>`:""}</div>`).join("");
+function giorniDi(d, e){
+  return d.trend_giornaliero.filter(t => t.edizione === e.chiave || (t.per_edizione && t.per_edizione[e.chiave]));
+}
 
-  document.getElementById("card-tetto").style.display = s.tetto ? "" : "none";
+function soldi(d, e, tutte, inCorso){
+  const s = d.spesa, c = d.costo_per_iscritto, i = d.iscritti;
+  const k = (l, v, cl, n) => `<div class="card kpi"><div class="label">${l}</div><div class="value ${cl||""}">${v}</div>${n?`<div class="note">${n}</div>`:""}</div>`;
+  const giorniSpesa = arr => arr.filter(t => (t.spesa||0) > 0).length;
+  let h;
+  if (inCorso){
+    h = k("Spesa oggi", EUR(s.oggi), "accent", "budget " + EUR(s.budget_giornaliero) + "/giorno")
+      + k("Spesa ieri", EUR(s.ieri), "", i.ieri ? NUM(d.trend_giornaliero.find(t=>t.data===ieriISO(d))?.ads ?? 0) + " iscritti dalle ads" : "")
+      + k("Spesa di questa edizione", EUR(e.spesa), "accent", "dal " + itdata(e.raccolta_dal))
+      + k("Spesa di tutte le edizioni", EUR(s.totale), "", "dal " + itdata(d.campagna.inizio))
+      + k("Costo iscritto oggi", EUR(c.oggi), "teal", c.oggi===null ? "nessun iscritto dalle ads oggi" : "")
+      + k("Costo iscritto ieri", EUR(c.ieri), "teal", "");
+  } else if (tutte){
+    const gs = giorniSpesa(d.trend_giornaliero);
+    h = k("Spesa di tutte le edizioni", EUR(s.totale), "accent", "dal " + itdata(d.campagna.inizio))
+      + k("Spesa media al giorno", EUR(gs ? s.totale / gs : null), "", `su ${NUM(gs)} giorni con inserzioni accese`)
+      + k("Costo per iscritto", EUR(c.totale), "teal", `${NUM(i.da_ads)} iscritti dalle inserzioni`)
+      + k("Iscrizioni contate da Meta", NUM(d.meta.totale.lead_meta), "", `${EUR(d.meta.totale.costo_lead_meta)} l'una secondo Meta`)
+      + k("Spesa oggi", EUR(s.oggi), "", "budget " + EUR(s.budget_giornaliero) + "/giorno")
+      + k("Spesa ieri", EUR(s.ieri), "", "");
+  } else {
+    const gs = e.giorni_pubblicita ?? giorniSpesa(giorniDi(d, e).filter(t => t.edizione === e.chiave));
+    const m = e.meta || {};
+    h = k("Spesa di questa edizione", EUR(e.spesa), "accent", `dal ${itdata(e.raccolta_dal)} al ${itdata(e.raccolta_al)}`)
+      + k("Spesa media al giorno", EUR(gs ? e.spesa / gs : null), "", `su ${NUM(gs)} giorni con inserzioni accese`)
+      + k("Costo per iscritto", EUR(e.costo_per_iscritto), "teal", `${NUM(e.da_ads)} iscritti dalle inserzioni`)
+      + k("Iscrizioni contate da Meta", NUM(e.lead_meta), "", m.costo_lead_meta ? `${EUR(m.costo_lead_meta)} l'una secondo Meta` : "")
+      + k("Spesa di tutte le edizioni", EUR(s.totale), "", "dal " + itdata(d.campagna.inizio));
+  }
+  if (s.tetto && (inCorso || tutte)) h += k("Budget ancora disponibile", EUR(s.residuo), "", "tetto " + EUR(s.tetto));
+  $("soldi").innerHTML = h;
+  const camp = d.campagne || [];
+  $("nota-soldi").innerHTML = camp.length > 1
+    ? `La spesa somma tutte le campagne del webinar: ` + camp.map(x => `${esc(x.breve)} <b>${EUR(x.spesa)}</b>${x.in_corsa?" (in corso)":" (finita)"}`).join(" · ") + ` (dall'inizio).`
+    : "";
+  $("card-tetto").style.display = s.tetto && (inCorso || tutte) ? "" : "none";
   const quota = s.tetto ? Math.min(100, s.totale / s.tetto * 100) : 0;
-  document.getElementById("bar-budget").style.width = quota.toFixed(1) + "%";
-  document.getElementById("bar-sx").innerHTML = "speso <b>" + EUR(s.totale) + "</b> (" + quota.toFixed(1).replace(".",",") + "%)";
-  document.getElementById("bar-dx").innerHTML = "tetto <b>" + EUR(s.tetto) + "</b>";
+  $("bar-budget").style.width = quota.toFixed(1) + "%";
+  $("bar-sx").innerHTML = "speso <b>" + EUR(s.totale) + "</b> (" + quota.toFixed(1).replace(".",",") + "%)";
+  $("bar-dx").innerHTML = "tetto <b>" + EUR(s.tetto) + "</b>";
+}
 
-  /* ---- grafico ---- */
-  disegna(d.trend_giornaliero, d.edizioni);
-
-  /* ---- fonti ---- */
-  const maxF = Math.max(1, ...d.fonti.map(f => f.iscritti));
-  document.getElementById("fonti").innerHTML = d.fonti.map(f => `
+function fonti(d, e, tutte){
+  const L = tutte ? d.fonti.map(f => ({...f}))
+    : [["ads","Meta Ads",e.da_ads],["email","Email fredde",e.da_email],["diretti","Diretti / non tracciati",e.diretti]]
+        .map(([chiave,label,n]) => ({chiave, label, iscritti:n, quota: e.iscritti ? n / e.iscritti * 100 : 0}));
+  const maxF = Math.max(1, ...L.map(f => f.iscritti));
+  $("fonti").innerHTML = L.map(f => `
     <div class="f">
       <div class="n">${f.label}</div>
       <div class="track"><i style="width:${(f.iscritti/maxF*100).toFixed(1)}%;background:${COL[f.chiave]}"></i></div>
       <div class="v">${NUM(f.iscritti)} <small>${PCT(f.quota)}</small></div>
     </div>`).join("");
-  document.getElementById("nota-fonti").innerHTML =
-    `“Diretti / non tracciati” sono le iscrizioni arrivate senza parametri di tracciamento sul link: chi ha scritto l'indirizzo a mano, chi è passato dai post o dalle prime email spedite prima del tracciamento. Meta, dal canto suo, conta <b>${NUM(d.meta.totale.lead_meta)}</b> iscrizioni a <b>${EUR(d.meta.totale.costo_lead_meta)}</b> l'una: se il numero non coincide con quello del foglio è normale, Meta attribuisce anche chi ha visto l'annuncio e si è iscritto più tardi.`;
+  const lm = tutte ? d.meta.totale.lead_meta : e.lead_meta;
+  const cl = tutte ? d.meta.totale.costo_lead_meta : (e.meta && e.meta.costo_lead_meta);
+  $("nota-fonti").innerHTML =
+    `“Diretti / non tracciati” sono le iscrizioni arrivate senza parametri di tracciamento sul link: chi ha scritto l'indirizzo a mano, chi è passato dai post o dalle prime email spedite prima del tracciamento. Meta, dal canto suo, conta <b>${NUM(lm)}</b> iscrizioni a <b>${EUR(cl)}</b> l'una: se il numero non coincide con quello del foglio è normale, Meta attribuisce anche chi ha visto l'annuncio e si è iscritto più tardi.`;
+}
 
-  /* ---- tabella contenuti ---- */
+/* ---------- tabella per pubblicita', divisa per edizione ---------- */
+function contenuti(d, e, tutte){
   const et = {ads:"Meta Ads", email:"Email fredde", diretti:"Diretti"};
-  document.getElementById("tab-contenuti").innerHTML = d.dettaglio_contenuti.map(r => `
-    <tr><td><span class="pill ${r.fonte}">${et[r.fonte]}</span></td>
-    <td style="color:var(--muted)">${r.utm_content}</td>
-    <td class="n" style="text-align:right">${NUM(r.iscritti_edizione_corrente ?? 0)}</td>
-    <td style="text-align:right;color:var(--muted)">${NUM(r.iscritti)}</td></tr>`).join("");
+  const P = d.pubblicita;
+  if (!P){   // file per inserzione non ancora disponibile: tabella semplice di prima
+    const k = tutte ? null : e.chiave;
+    $("head-contenuti").innerHTML = `<tr><th>Fonte</th><th>Contenuto (utm_content)</th>${k?`<th style="text-align:right">${e.chiave===d.edizione_corrente.chiave?"Edizione in corso":"Edizione " + e.etichetta}</th>`:""}<th style="text-align:right">Tutte le edizioni</th></tr>`;
+    const righe = d.dettaglio_contenuti.map(r => ({...r, n: k ? ((r.per_edizione||{})[k] ?? (k===d.edizione_corrente.chiave ? r.iscritti_edizione_corrente : 0)) : r.iscritti}))
+      .sort((a,b) => b.n - a.n || b.iscritti - a.iscritti);
+    $("tab-contenuti").innerHTML = righe.map(r => `
+      <tr><td><span class="pill ${r.fonte}">${et[r.fonte]}</span></td>
+      <td style="color:var(--muted)">${esc(r.utm_content)}</td>
+      ${k?`<td class="n" style="text-align:right">${NUM(r.n)}</td>`:""}
+      <td style="text-align:right;color:var(--muted)">${NUM(r.iscritti)}</td></tr>`).join("");
+    $("letture").style.display = "none";
+    $("nota-contenuti").textContent = "";
+    return;
+  }
+  $("head-contenuti").innerHTML = `<tr><th>Pubblicità</th><th>Attiva</th><th style="text-align:right">Spesa</th><th style="text-align:right">Iscritti veri</th><th style="text-align:right">Costo per iscritto</th></tr>`;
+  const gruppi = tutte ? P.per_edizione : P.per_edizione.filter(g => g.chiave === e.chiave);
+  const statoG = {corrente:"in corso", passata:"conclusa", prossima:"data da fissare", futura:"futura"};
+  const campBreve = id => ((d.campagne||[]).find(c => c.id === id) || {}).breve || id;
+  let h = "";
+  gruppi.forEach(g => {
+    const tot = g.totale, media = tot.costo_per_iscritto;
+    h += `<tr class="gruppo"><td colspan="5">${g.chiave==="prossima" ? "Dopo l'ultimo webinar" : "Webinar del " + esc(g.etichetta)}<span>${esc(g.data_it||"")} · ${statoG[g.stato]||g.stato} · ${NUM(tot.pubblicita)} pubblicità</span></td></tr>`;
+    g.righe.forEach(r => {
+      if (r.tipo === "ads"){
+        const nIns = r.inserzioni.length;
+        const sec = r.campagne.filter(c => c !== d.campagna.id);
+        const sotto = [r.utm_content ? "link: " + esc(r.utm_content) : null,
+                       nIns > 1 ? `${nIns} inserzioni: ` + r.inserzioni.map(x => esc(x.nome)).join(", ") : null].filter(Boolean).join(" · ");
+        const cpiCl = r.costo_per_iscritto && media && r.costo_per_iscritto > 2 * media ? "giallo" : "";
+        h += `<tr>
+          <td><b>${esc(r.nome)}</b>${r.attiva_ora?'<span class="tag on">attiva ora</span>':""}${sec.map(c => `<span class="tag camp">${esc(campBreve(c))}</span>`).join("")}
+            ${sotto?`<div class="sotto">${sotto}</div>`:""}${r.nota?`<div class="avv">${esc(r.nota)}</div>`:""}</td>
+          <td data-l="Attiva" style="white-space:nowrap;color:var(--muted)">${r.dal ? (r.dal===r.al ? gm(r.dal) : gm(r.dal) + " → " + gm(r.al)) : "—"}</td>
+          <td data-l="Spesa" style="text-align:right" class="${r.spesa>0 && r.iscritti===0 ? "rosso" : ""}">${EUR(r.spesa)}</td>
+          <td data-l="Iscritti" class="n" style="text-align:right">${NUM(r.iscritti)}</td>
+          <td data-l="Costo/iscritto" style="text-align:right" class="${cpiCl}">${r.costo_per_iscritto!==null ? EUR(r.costo_per_iscritto) : (r.spesa>0 ? "nessuno" : "—")}</td></tr>`;
+      } else {
+        h += `<tr><td><span class="pill ${r.tipo}">${et[r.tipo]}</span> <span style="color:var(--muted)">${r.tipo==="email" ? esc(r.nome) : "senza tracciamento"}</span></td>
+          <td class="vuoto" style="color:var(--muted)">—</td><td class="vuoto" style="text-align:right;color:var(--muted)">—</td>
+          <td data-l="Iscritti" class="n" style="text-align:right">${NUM(r.iscritti)}</td><td class="vuoto" style="text-align:right;color:var(--muted)">—</td></tr>`;
+      }
+    });
+    h += `<tr class="tot"><td>Totale ${g.chiave==="prossima" ? "dopo l'ultimo webinar" : "edizione " + esc(g.etichetta)}<div class="sotto">costo per iscritto = spesa divisa per i ${NUM(tot.da_ads)} iscritti arrivati dalla pubblicità</div></td><td class="vuoto"></td>
+      <td data-l="Spesa" style="text-align:right">${EUR(tot.spesa)}</td><td data-l="Iscritti" style="text-align:right">${NUM(tot.iscritti)}</td><td data-l="Costo/iscritto" style="text-align:right">${EUR(tot.costo_per_iscritto)}</td></tr>`;
+  });
+  $("tab-contenuti").innerHTML = h;
+  const lett = tutte ? P.tutte.letture : (gruppi[0] ? gruppi[0].letture : []);
+  $("letture").style.display = lett.length ? "" : "none";
+  $("letture-tit").textContent = "Lettura automatica · " + (tutte ? "tutte le edizioni" : (e.stato === "prossima" ? "dopo l'ultimo webinar" : "edizione del " + e.etichetta));
+  $("letture-lista").innerHTML = lett.map(l => `<li>${esc(l)}</li>`).join("");
+  $("nota-contenuti").innerHTML =
+    `Ogni riga è una pubblicità: le inserzioni Meta con lo stesso link sono sommate (per esempio quella rifatta con l'ora nuova). ` +
+    `“Attiva” = primo e ultimo giorno con spesa in quell'edizione. Iscritti veri = righe del foglio con quel link, senza le prove. ` +
+    `<span style="color:var(--red)">Spesa in rosso</span> = soldi andati a una pubblicità senza iscritti; <span style="color:var(--amber)">costo in giallo</span> = oltre il doppio della media dell'edizione.` +
+    (P.senza_link ? ` <b>${NUM(P.senza_link)}</b> inserzioni hanno ancora il link da leggere.` : "");
+}
 
-  /* ---- meta kpi ---- */
-  const m = d.meta.totale;
-  document.getElementById("meta-kpi").innerHTML = [
-    ["Visualizzazioni", NUM(m.impressions)], ["Persone raggiunte", NUM(m.reach)],
-    ["Click", NUM(m.click)], ["Click su 100 (CTR)", PCT(m.ctr)],
-    ["Costo per click", EUR(m.cpc)], ["Iscrizioni contate da Meta", NUM(m.lead_meta)]
-  ].map(([l,v]) => `<div class="card kpi"><div class="label">${l}</div><div class="value">${v}</div></div>`).join("");
-
-  document.getElementById("camp-info").innerHTML =
-    `<b>${d.campagna.nome}</b><br>
-     Stato: ${d.campagna.stato==="ACTIVE"?"attiva":d.campagna.stato} · budget ${EUR(d.campagna.budget_giornaliero)} al giorno · tetto di spesa ${EUR(d.campagna.tetto_spesa)}<br>
-     In corsa dal ${itdata(d.campagna.inizio)} al ${itdata(d.campagna.fine)}`;
-  document.getElementById("lnk-ads").href = d.campagna.link_ads_manager;
-  document.getElementById("lnk-foglio").href = d.workshop.foglio;
-  document.getElementById("lnk-landing").href = d.workshop.landing;
+function meta(d, e, tutte){
+  const m = tutte ? d.meta.totale : (e.meta || {});
+  const voci = tutte
+    ? [["Visualizzazioni", NUM(m.impressions)], ["Persone raggiunte", m.reach===null||m.reach===undefined ? '<span style="font-size:15px;color:var(--muted)">non sommabili</span>' : NUM(m.reach)], ["Click", NUM(m.click)],
+       ["Click su 100 (CTR)", PCT(m.ctr)], ["Costo per click", EUR(m.cpc)], ["Iscrizioni contate da Meta", NUM(m.lead_meta)]]
+    : [["Visualizzazioni", NUM(m.impressions)], ["Click", NUM(m.click)], ["Click su 100 (CTR)", PCT(m.ctr)],
+       ["Costo per click", EUR(m.cpc)], ["Costo per 1.000 visualizzazioni", EUR(m.cpm)], ["Iscrizioni contate da Meta", NUM(m.lead_meta)]];
+  $("meta-kpi").innerHTML = voci.map(([l,v]) => `<div class="card kpi"><div class="label">${l}</div><div class="value">${v}</div></div>`).join("");
+  const camp = d.campagne && d.campagne.length ? d.campagne : [{nome:d.campagna.nome, stato:d.campagna.stato, in_corsa:d.campagna.stato==="ACTIVE", budget_giornaliero:d.campagna.budget_giornaliero, inizio:d.campagna.inizio, fine:d.campagna.fine, spesa:d.spesa.totale}];
+  $("camp-info").innerHTML = camp.map(c =>
+    `<b>${esc(c.nome)}</b><br>${c.in_corsa ? "In corso" : "Finita"} · budget ${EUR(c.budget_giornaliero)} al giorno · spesi ${EUR(c.spesa)} · dal ${itdata(c.inizio)} al ${itdata(c.fine)}`).join("<br><br>") +
+    (tutte ? (m.reach===null||m.reach===undefined ? `<div class="nota">Le persone raggiunte non si sommano fra campagne diverse: chi le ha viste tutte e due conterebbe due volte. Si leggono campagna per campagna in Gestione inserzioni.</div>` : "")
+      : `<div class="nota">I numeri qui sopra sono quelli dei soli giorni di questa edizione. Le persone raggiunte non si possono sommare giorno per giorno, quindi qui non ci sono.</div>`);
+  $("lnk-ads").href = d.campagna.link_ads_manager;
+  $("lnk-foglio").href = d.workshop.foglio;
+  $("lnk-landing").href = d.workshop.landing;
 }
 
 function itdata(iso){
@@ -360,31 +586,41 @@ function ieriISO(d){
 }
 
 /* ------- grafico a barre impilate + linea del cumulato, in SVG puro ------- */
-function disegna(trend, edizioni){
-  const svg = document.getElementById("chart");
+function disegna(d, e, tutte){
+  const svg = $("chart");
+  // giorni e numeri della scelta: per un'edizione solo i suoi giorni e i suoi iscritti
+  let righe;
+  if (tutte){
+    righe = d.trend_giornaliero.map(t => ({data:t.data, etichetta:t.etichetta, ads:t.ads, email:t.email, diretti:t.diretti, iscritti:t.iscritti, cum:t.cumulato}));
+    $("leg-linea").textContent = "Totale iscritti di tutte le edizioni";
+  } else {
+    let cum = 0;
+    righe = giorniDi(d, e).map(t => {
+      const p = (t.per_edizione && t.per_edizione[e.chiave]) || {iscritti:0, ads:0, email:0, diretti:0};
+      cum += p.iscritti;
+      return {data:t.data, etichetta:t.etichetta, ads:p.ads, email:p.email, diretti:p.diretti, iscritti:p.iscritti, cum};
+    });
+    $("leg-linea").textContent = "Totale iscritti dell'edizione";
+  }
   const W = 900, H = 320, ml = 42, mr = 46, mt = 18, mb = 42;
   const iw = W - ml - mr, ih = H - mt - mb;
-  const maxG = Math.max(1, ...trend.map(t => t.iscritti));
-  const cumOf = t => t.cumulato_edizione ?? t.cumulato;
-  const maxC = Math.max(1, ...trend.map(cumOf));
-  const n = trend.length;
+  if (!righe.length){ svg.innerHTML = `<text x="${W/2}" y="${H/2}" text-anchor="middle" font-size="14" fill="#8b96ad">Nessun giorno da mostrare</text>`; return; }
+  const maxG = Math.max(1, ...righe.map(t => t.iscritti));
+  const maxC = Math.max(1, ...righe.map(t => t.cum));
+  const n = righe.length;
   const passo = iw / n;
   const bw = Math.max(6, Math.min(38, passo * 0.6));
   const y = v => mt + ih - (v / maxG) * ih;
   const yc = v => mt + ih - (v / maxC) * ih;
   const x = k => ml + passo * k + passo / 2;
   let s = "";
-
-  // griglia orizzontale + scala sinistra (iscritti al giorno)
   const passiG = Math.min(maxG, 4);
   for (let k = 0; k <= passiG; k++){
     const v = Math.round(maxG / passiG * k), yy = y(v);
     s += `<line x1="${ml}" y1="${yy}" x2="${W-mr}" y2="${yy}" stroke="#26314a" stroke-width="1"/>`;
     s += `<text x="${ml-8}" y="${yy+4}" text-anchor="end" font-size="10" fill="#8b96ad">${v}</text>`;
   }
-
-  // barre impilate
-  trend.forEach((t, k) => {
+  righe.forEach((t, k) => {
     let base = mt + ih;
     [["ads",t.ads],["email",t.email],["diretti",t.diretti]].forEach(([chiave, v]) => {
       if (!v) return;
@@ -394,42 +630,27 @@ function disegna(trend, edizioni){
     });
     if (t.iscritti) s += `<text x="${x(k).toFixed(1)}" y="${(y(t.iscritti)-7).toFixed(1)}" text-anchor="middle" font-size="10.5" font-weight="700" fill="#f4f6fb">${t.iscritti}</text>`;
   });
-
-  // giorno di ogni webinar: linea tratteggiata
-  (edizioni||[]).forEach(e => {
-    const k = trend.findIndex(t => t.data === e.data);
+  (d.edizioni||[]).forEach(ed => {
+    const k = righe.findIndex(t => t.data === ed.data);
     if (k < 0) return;
     s += `<line x1="${x(k).toFixed(1)}" y1="${mt}" x2="${x(k).toFixed(1)}" y2="${mt+ih}" stroke="#f4f6fb99" stroke-width="1" stroke-dasharray="4 4"/>`;
-    s += `<text x="${x(k).toFixed(1)}" y="${mt-6}" text-anchor="middle" font-size="10" font-weight="700" fill="#f4f6fb">webinar ${e.etichetta}</text>`;
+    s += `<text x="${x(k).toFixed(1)}" y="${mt-6}" text-anchor="middle" font-size="10" font-weight="700" fill="#f4f6fb">webinar ${ed.etichetta}</text>`;
   });
-
-  // linea cumulato, spezzata a ogni edizione
-  const tratti = [];
-  trend.forEach((t,k) => {
-    if (!tratti.length || tratti[tratti.length-1].ed !== t.edizione) tratti.push({ed: t.edizione, pts: []});
-    tratti[tratti.length-1].pts.push(`${x(k).toFixed(1)},${yc(cumOf(t)).toFixed(1)}`);
+  s += `<polyline points="${righe.map((t,k) => `${x(k).toFixed(1)},${yc(t.cum).toFixed(1)}`).join(" ")}" fill="none" stroke="#f5b942" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>`;
+  righe.forEach((t,k) => {
+    s += `<circle cx="${x(k).toFixed(1)}" cy="${yc(t.cum).toFixed(1)}" r="3.2" fill="#f5b942"><title>${t.etichetta} · ${t.cum} iscritti in tutto</title></circle>`;
   });
-  tratti.forEach(tr => {
-    s += `<polyline points="${tr.pts.join(" ")}" fill="none" stroke="#f5b942" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>`;
-  });
-  trend.forEach((t,k) => {
-    s += `<circle cx="${x(k).toFixed(1)}" cy="${yc(cumOf(t)).toFixed(1)}" r="3.2" fill="#f5b942"><title>${t.etichetta} · ${cumOf(t)} iscritti a questa edizione</title></circle>`;
-  });
-  // scala destra (cumulato)
   for (let k = 0; k <= 4; k++){
     const v = Math.round(maxC / 4 * k);
     s += `<text x="${W-mr+8}" y="${yc(v)+4}" font-size="10" fill="#f5b942">${v}</text>`;
   }
-
-  // etichette dei giorni (diradate se sono tanti)
   const salto = Math.ceil(n / 14);
-  trend.forEach((t,k) => {
+  righe.forEach((t,k) => {
     if (k % salto === 0 || k === n-1)
       s += `<text x="${x(k).toFixed(1)}" y="${H-mb+18}" text-anchor="middle" font-size="10" fill="#8b96ad">${t.etichetta}</text>`;
   });
   s += `<text x="${ml}" y="${H-6}" font-size="10" fill="#8b96ad">barre = iscritti del giorno</text>`;
-  s += `<text x="${W-mr}" y="${H-6}" text-anchor="end" font-size="10" fill="#f5b942">linea = totale dell'edizione</text>`;
-
+  s += `<text x="${W-mr}" y="${H-6}" text-anchor="end" font-size="10" fill="#f5b942">linea = totale ${tutte ? "di tutte le edizioni" : "dell'edizione"}</text>`;
   svg.innerHTML = s;
 }
 </script>

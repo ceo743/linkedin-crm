@@ -1,12 +1,12 @@
 {
-  "aggiornato": "2026-10-01T22:28:22+02:00",
+  "aggiornato": "2026-10-02T01:39:38+02:00",
   "workshop": {
     "nome": "Workshop Commercialisti",
     "sottotitolo": "Webinar gratuito su Zoom, un'edizione ogni 15 giorni",
     "data_evento": "2026-10-15",
     "data_evento_it": "15 ottobre 2026",
     "ora_evento": "21:00",
-    "giorni_mancanti": 14,
+    "giorni_mancanti": 13,
     "iniziato": false,
     "landing": "https://commercialisti.davidecaiazzo.it/",
     "foglio": "https://docs.google.com/spreadsheets/d/1vPM-gHNN3CuocFF3nEwpcwrKv4ND8nZHtrDdWBD17fs/edit"
@@ -23,11 +23,24 @@
     "da_ads": 10,
     "da_email": 0,
     "diretti": 2,
-    "spesa": 91.98,
-    "costo_per_iscritto": 9.2,
-    "lead_meta": 5,
+    "spesa": 106.17,
+    "costo_per_iscritto": 10.62,
+    "lead_meta": 6,
     "utm_conferma": 9,
-    "utm_altra_edizione": 1
+    "utm_altra_edizione": 1,
+    "raccolta_al": "2026-10-02",
+    "giorni_pubblicita": 2,
+    "meta": {
+      "spesa": 106.17,
+      "impressions": 10265,
+      "campagne_sommate": 2,
+      "click": 320,
+      "ctr": 3.12,
+      "cpc": 0.33,
+      "cpm": 10.34,
+      "lead_meta": 6,
+      "costo_lead_meta": 17.7
+    }
   },
   "edizioni": [
     {
@@ -42,16 +55,29 @@
       "da_ads": 265,
       "da_email": 10,
       "diretti": 18,
-      "spesa": 612.92,
-      "costo_per_iscritto": 2.31,
-      "lead_meta": 178,
+      "spesa": 916.61,
+      "costo_per_iscritto": 3.46,
+      "lead_meta": 257,
       "utm_conferma": 242,
       "utm_altra_edizione": 0,
+      "raccolta_al": "2026-09-30",
+      "giorni_pubblicita": 24,
+      "meta": {
+        "spesa": 916.61,
+        "impressions": 111662,
+        "campagne_sommate": 24,
+        "click": 6854,
+        "ctr": 6.14,
+        "cpc": 0.13,
+        "cpm": 8.21,
+        "lead_meta": 257,
+        "costo_lead_meta": 3.57
+      },
       "a_parita": {
-        "fino_al": "2026-09-16",
-        "iscritti": 147,
-        "da_ads": 131,
-        "spesa": 280.87
+        "fino_al": "2026-09-17",
+        "iscritti": 156,
+        "da_ads": 140,
+        "spesa": 424.66
       }
     },
     {
@@ -66,11 +92,24 @@
       "da_ads": 10,
       "da_email": 0,
       "diretti": 2,
-      "spesa": 91.98,
-      "costo_per_iscritto": 9.2,
-      "lead_meta": 5,
+      "spesa": 106.17,
+      "costo_per_iscritto": 10.62,
+      "lead_meta": 6,
       "utm_conferma": 9,
-      "utm_altra_edizione": 1
+      "utm_altra_edizione": 1,
+      "raccolta_al": "2026-10-02",
+      "giorni_pubblicita": 2,
+      "meta": {
+        "spesa": 106.17,
+        "impressions": 10265,
+        "campagne_sommate": 2,
+        "click": 320,
+        "ctr": 3.12,
+        "cpc": 0.33,
+        "cpm": 10.34,
+        "lead_meta": 6,
+        "costo_lead_meta": 17.7
+      }
     }
   ],
   "campagna": {
@@ -79,17 +118,46 @@
     "account_id": "465327538443110",
     "nome": "Workshop Commercialisti - Iscrizioni (ogni 15 giorni)",
     "stato": "ACTIVE",
+    "nota": "budget, stato e date sono della campagna principale; la spesa e' la somma di tutte le campagne del webinar (vedi campagne)",
     "obiettivo": "Contatti (iscrizione al workshop)",
-    "budget_giornaliero": 100.0,
+    "budget_giornaliero": 40.0,
     "tetto_spesa": null,
     "inizio": "2026-09-07",
     "fine": "2026-10-15",
     "link_ads_manager": "https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110&selected_campaign_ids=120255475473930348"
   },
+  "campagne": [
+    {
+      "id": "120255475473930348",
+      "nome": "Workshop Commercialisti - Iscrizioni (ogni 15 giorni)",
+      "breve": "Iscrizioni (ogni 15 giorni)",
+      "stato": "ACTIVE",
+      "in_corsa": true,
+      "principale": true,
+      "spesa": 719.09,
+      "lead_meta": 184,
+      "budget_giornaliero": 40.0,
+      "inizio": "2026-09-07",
+      "fine": "2026-10-15"
+    },
+    {
+      "id": "120255523723270348",
+      "nome": "2026-09-10 Workshop Commercialisti 30/09 - Angoli nuovi",
+      "breve": "Angoli nuovi (30/09)",
+      "stato": "ACTIVE",
+      "in_corsa": false,
+      "principale": false,
+      "spesa": 303.69,
+      "lead_meta": 79,
+      "budget_giornaliero": 15.0,
+      "inizio": "2026-09-10",
+      "fine": "2026-09-30"
+    }
+  ],
   "iscritti": {
     "totali": 305,
-    "oggi": 10,
-    "ieri": 9,
+    "oggi": 0,
+    "ieri": 10,
     "da_ads": 275,
     "da_email": 10,
     "diretti": 20,
@@ -97,56 +165,60 @@
     "primo_iscritto": "2026-08-19"
   },
   "spesa": {
-    "oggi": 91.98,
-    "ieri": 7.41,
-    "totale": 704.9,
+    "oggi": 3.09,
+    "ieri": 103.08,
+    "totale": 1022.78,
     "tetto": null,
     "residuo": null,
-    "budget_giornaliero": 100.0
+    "budget_giornaliero": 40.0,
+    "campagne": 2
   },
   "costo_per_iscritto": {
-    "oggi": 10.22,
-    "ieri": 1.48,
-    "totale": 2.56,
-    "edizione_corrente": 9.2,
+    "oggi": null,
+    "ieri": 11.45,
+    "totale": 3.72,
+    "edizione_corrente": 10.62,
     "nota": "spesa Meta divisa per gli iscritti col tracciamento ads (utm_source=meta / utm_medium=paid) presenti sul foglio"
   },
   "meta": {
     "oggi": {
-      "spesa": 91.98,
-      "impressions": 8918,
-      "reach": 5592,
-      "frequency": 1.59,
-      "click": 286,
-      "ctr": 3.21,
-      "cpc": 0.32,
-      "cpm": 10.31,
-      "lead_meta": 5,
-      "costo_lead_meta": 18.4
+      "spesa": 3.09,
+      "impressions": 294,
+      "reach": 248,
+      "frequency": 1.19,
+      "campagne_sommate": 1,
+      "click": 6,
+      "ctr": 2.04,
+      "cpc": 0.52,
+      "cpm": 10.51,
+      "lead_meta": 0,
+      "costo_lead_meta": null
     },
     "ieri": {
-      "spesa": 7.41,
-      "impressions": 782,
-      "reach": 723,
-      "frequency": 1.08,
-      "click": 32,
-      "ctr": 4.09,
-      "cpc": 0.23,
-      "cpm": 9.48,
-      "lead_meta": 3,
-      "costo_lead_meta": 2.47
+      "spesa": 103.08,
+      "impressions": 9971,
+      "reach": 6150,
+      "frequency": 1.62,
+      "campagne_sommate": 1,
+      "click": 314,
+      "ctr": 3.15,
+      "cpc": 0.33,
+      "cpm": 10.34,
+      "lead_meta": 6,
+      "costo_lead_meta": 17.18
     },
     "totale": {
-      "spesa": 704.9,
-      "impressions": 79393,
-      "reach": 26813,
-      "frequency": 2.96,
-      "click": 4445,
-      "ctr": 5.6,
-      "cpc": 0.16,
-      "cpm": 8.88,
-      "lead_meta": 183,
-      "costo_lead_meta": 3.85
+      "spesa": 1022.78,
+      "impressions": 121927,
+      "reach": null,
+      "frequency": null,
+      "campagne_sommate": 2,
+      "click": 7174,
+      "ctr": 5.88,
+      "cpc": 0.14,
+      "cpm": 8.39,
+      "lead_meta": 263,
+      "costo_lead_meta": 3.89
     }
   },
   "fonti": [
@@ -174,133 +246,201 @@
       "fonte": "ads",
       "utm_content": "ai-video-sibill-c-1510",
       "iscritti": 4,
-      "iscritti_edizione_corrente": 4
+      "iscritti_edizione_corrente": 4,
+      "per_edizione": {
+        "2026-10-15": 4
+      }
     },
     {
       "fonte": "ads",
       "utm_content": "ai-video-rossi-1510",
       "iscritti": 3,
-      "iscritti_edizione_corrente": 3
+      "iscritti_edizione_corrente": 3,
+      "per_edizione": {
+        "2026-10-15": 3
+      }
     },
     {
       "fonte": "diretti",
       "utm_content": "—",
       "iscritti": 20,
-      "iscritti_edizione_corrente": 2
+      "iscritti_edizione_corrente": 2,
+      "per_edizione": {
+        "2026-09-30": 18,
+        "2026-10-15": 2
+      }
     },
     {
       "fonte": "ads",
       "utm_content": "ai-video-f24-dimostrazione-1510",
       "iscritti": 2,
-      "iscritti_edizione_corrente": 2
+      "iscritti_edizione_corrente": 2,
+      "per_edizione": {
+        "2026-10-15": 2
+      }
     },
     {
       "fonte": "ads",
       "utm_content": "ai-video-f24-eleven-916",
       "iscritti": 142,
-      "iscritti_edizione_corrente": 1
+      "iscritti_edizione_corrente": 1,
+      "per_edizione": {
+        "2026-09-30": 141,
+        "2026-10-15": 1
+      }
     },
     {
       "fonte": "ads",
       "utm_content": "ai-video-fatture-estere-916",
       "iscritti": 76,
-      "iscritti_edizione_corrente": 0
+      "iscritti_edizione_corrente": 0,
+      "per_edizione": {
+        "2026-09-30": 76
+      }
     },
     {
       "fonte": "ads",
       "utm_content": "ai-video-unaperuna-a5-3009",
       "iscritti": 20,
-      "iscritti_edizione_corrente": 0
+      "iscritti_edizione_corrente": 0,
+      "per_edizione": {
+        "2026-09-30": 20
+      }
     },
     {
       "fonte": "ads",
       "utm_content": "ai-video-scadenze-916",
       "iscritti": 10,
-      "iscritti_edizione_corrente": 0
+      "iscritti_edizione_corrente": 0,
+      "per_edizione": {
+        "2026-09-30": 10
+      }
     },
     {
       "fonte": "ads",
       "utm_content": "ai-video-scadenze-3009",
       "iscritti": 10,
-      "iscritti_edizione_corrente": 0
+      "iscritti_edizione_corrente": 0,
+      "per_edizione": {
+        "2026-09-30": 10
+      }
     },
     {
       "fonte": "ads",
       "utm_content": "ai-video-banca-916",
       "iscritti": 3,
-      "iscritti_edizione_corrente": 0
+      "iscritti_edizione_corrente": 0,
+      "per_edizione": {
+        "2026-09-30": 3
+      }
     },
     {
       "fonte": "ads",
       "utm_content": "ai-video-banca-3009",
       "iscritti": 3,
-      "iscritti_edizione_corrente": 0
+      "iscritti_edizione_corrente": 0,
+      "per_edizione": {
+        "2026-09-30": 3
+      }
     },
     {
       "fonte": "email",
       "utm_content": "cluster-e-t2",
       "iscritti": 2,
-      "iscritti_edizione_corrente": 0
+      "iscritti_edizione_corrente": 0,
+      "per_edizione": {
+        "2026-09-30": 2
+      }
     },
     {
       "fonte": "email",
       "utm_content": "cluster-b-t1",
       "iscritti": 1,
-      "iscritti_edizione_corrente": 0
+      "iscritti_edizione_corrente": 0,
+      "per_edizione": {
+        "2026-09-30": 1
+      }
     },
     {
       "fonte": "email",
       "utm_content": "cluster-a-t2",
       "iscritti": 1,
-      "iscritti_edizione_corrente": 0
+      "iscritti_edizione_corrente": 0,
+      "per_edizione": {
+        "2026-09-30": 1
+      }
     },
     {
       "fonte": "email",
       "utm_content": "cluster-b-t2",
       "iscritti": 1,
-      "iscritti_edizione_corrente": 0
+      "iscritti_edizione_corrente": 0,
+      "per_edizione": {
+        "2026-09-30": 1
+      }
     },
     {
       "fonte": "email",
       "utm_content": "cluster-b-t3",
       "iscritti": 1,
-      "iscritti_edizione_corrente": 0
+      "iscritti_edizione_corrente": 0,
+      "per_edizione": {
+        "2026-09-30": 1
+      }
     },
     {
       "fonte": "email",
       "utm_content": "cluster-d-t3",
       "iscritti": 1,
-      "iscritti_edizione_corrente": 0
+      "iscritti_edizione_corrente": 0,
+      "per_edizione": {
+        "2026-09-30": 1
+      }
     },
     {
       "fonte": "email",
       "utm_content": "cluster-d-t2",
       "iscritti": 1,
-      "iscritti_edizione_corrente": 0
+      "iscritti_edizione_corrente": 0,
+      "per_edizione": {
+        "2026-09-30": 1
+      }
     },
     {
       "fonte": "email",
       "utm_content": "rilancio-f24-t1",
       "iscritti": 1,
-      "iscritti_edizione_corrente": 0
+      "iscritti_edizione_corrente": 0,
+      "per_edizione": {
+        "2026-09-30": 1
+      }
     },
     {
       "fonte": "email",
       "utm_content": "cluster-d-t4",
       "iscritti": 1,
-      "iscritti_edizione_corrente": 0
+      "iscritti_edizione_corrente": 0,
+      "per_edizione": {
+        "2026-09-30": 1
+      }
     },
     {
       "fonte": "ads",
       "utm_content": "ai-video-criceto-b-3009",
       "iscritti": 1,
-      "iscritti_edizione_corrente": 0
+      "iscritti_edizione_corrente": 0,
+      "per_edizione": {
+        "2026-09-30": 1
+      }
     },
     {
       "fonte": "ads",
       "utm_content": "ai-video-risposte-b5-3009",
       "iscritti": 1,
-      "iscritti_edizione_corrente": 0
+      "iscritti_edizione_corrente": 0,
+      "per_edizione": {
+        "2026-09-30": 1
+      }
     }
   ],
   "trend_giornaliero": [
@@ -314,7 +454,15 @@
       "cumulato": 1,
       "edizione": "2026-09-30",
       "cumulato_edizione": 1,
-      "spesa": 0.0
+      "spesa": 0.0,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 1,
+          "ads": 0,
+          "email": 0,
+          "diretti": 1
+        }
+      }
     },
     {
       "data": "2026-08-20",
@@ -326,7 +474,8 @@
       "cumulato": 1,
       "edizione": "2026-09-30",
       "cumulato_edizione": 1,
-      "spesa": 0.0
+      "spesa": 0.0,
+      "per_edizione": {}
     },
     {
       "data": "2026-08-21",
@@ -338,7 +487,15 @@
       "cumulato": 2,
       "edizione": "2026-09-30",
       "cumulato_edizione": 2,
-      "spesa": 0.0
+      "spesa": 0.0,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 1,
+          "ads": 0,
+          "email": 1,
+          "diretti": 0
+        }
+      }
     },
     {
       "data": "2026-08-22",
@@ -350,7 +507,8 @@
       "cumulato": 2,
       "edizione": "2026-09-30",
       "cumulato_edizione": 2,
-      "spesa": 0.0
+      "spesa": 0.0,
+      "per_edizione": {}
     },
     {
       "data": "2026-08-23",
@@ -362,7 +520,8 @@
       "cumulato": 2,
       "edizione": "2026-09-30",
       "cumulato_edizione": 2,
-      "spesa": 0.0
+      "spesa": 0.0,
+      "per_edizione": {}
     },
     {
       "data": "2026-08-24",
@@ -374,7 +533,15 @@
       "cumulato": 5,
       "edizione": "2026-09-30",
       "cumulato_edizione": 5,
-      "spesa": 0.0
+      "spesa": 0.0,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 3,
+          "ads": 0,
+          "email": 3,
+          "diretti": 0
+        }
+      }
     },
     {
       "data": "2026-08-25",
@@ -386,7 +553,8 @@
       "cumulato": 5,
       "edizione": "2026-09-30",
       "cumulato_edizione": 5,
-      "spesa": 0.0
+      "spesa": 0.0,
+      "per_edizione": {}
     },
     {
       "data": "2026-08-26",
@@ -398,7 +566,8 @@
       "cumulato": 5,
       "edizione": "2026-09-30",
       "cumulato_edizione": 5,
-      "spesa": 0.0
+      "spesa": 0.0,
+      "per_edizione": {}
     },
     {
       "data": "2026-08-27",
@@ -410,7 +579,8 @@
       "cumulato": 5,
       "edizione": "2026-09-30",
       "cumulato_edizione": 5,
-      "spesa": 0.0
+      "spesa": 0.0,
+      "per_edizione": {}
     },
     {
       "data": "2026-08-28",
@@ -422,7 +592,8 @@
       "cumulato": 5,
       "edizione": "2026-09-30",
       "cumulato_edizione": 5,
-      "spesa": 0.0
+      "spesa": 0.0,
+      "per_edizione": {}
     },
     {
       "data": "2026-08-29",
@@ -434,7 +605,8 @@
       "cumulato": 5,
       "edizione": "2026-09-30",
       "cumulato_edizione": 5,
-      "spesa": 0.0
+      "spesa": 0.0,
+      "per_edizione": {}
     },
     {
       "data": "2026-08-30",
@@ -446,7 +618,8 @@
       "cumulato": 5,
       "edizione": "2026-09-30",
       "cumulato_edizione": 5,
-      "spesa": 0.0
+      "spesa": 0.0,
+      "per_edizione": {}
     },
     {
       "data": "2026-08-31",
@@ -458,7 +631,15 @@
       "cumulato": 6,
       "edizione": "2026-09-30",
       "cumulato_edizione": 6,
-      "spesa": 0.0
+      "spesa": 0.0,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 1,
+          "ads": 0,
+          "email": 1,
+          "diretti": 0
+        }
+      }
     },
     {
       "data": "2026-09-01",
@@ -470,7 +651,15 @@
       "cumulato": 8,
       "edizione": "2026-09-30",
       "cumulato_edizione": 8,
-      "spesa": 0.0
+      "spesa": 0.0,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 2,
+          "ads": 0,
+          "email": 2,
+          "diretti": 0
+        }
+      }
     },
     {
       "data": "2026-09-02",
@@ -482,7 +671,8 @@
       "cumulato": 8,
       "edizione": "2026-09-30",
       "cumulato_edizione": 8,
-      "spesa": 0.0
+      "spesa": 0.0,
+      "per_edizione": {}
     },
     {
       "data": "2026-09-03",
@@ -494,7 +684,15 @@
       "cumulato": 9,
       "edizione": "2026-09-30",
       "cumulato_edizione": 9,
-      "spesa": 0.0
+      "spesa": 0.0,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 1,
+          "ads": 0,
+          "email": 1,
+          "diretti": 0
+        }
+      }
     },
     {
       "data": "2026-09-04",
@@ -506,7 +704,8 @@
       "cumulato": 9,
       "edizione": "2026-09-30",
       "cumulato_edizione": 9,
-      "spesa": 0.0
+      "spesa": 0.0,
+      "per_edizione": {}
     },
     {
       "data": "2026-09-05",
@@ -518,7 +717,8 @@
       "cumulato": 9,
       "edizione": "2026-09-30",
       "cumulato_edizione": 9,
-      "spesa": 0.0
+      "spesa": 0.0,
+      "per_edizione": {}
     },
     {
       "data": "2026-09-06",
@@ -530,7 +730,8 @@
       "cumulato": 9,
       "edizione": "2026-09-30",
       "cumulato_edizione": 9,
-      "spesa": 0.0
+      "spesa": 0.0,
+      "per_edizione": {}
     },
     {
       "data": "2026-09-07",
@@ -542,7 +743,15 @@
       "cumulato": 21,
       "edizione": "2026-09-30",
       "cumulato_edizione": 21,
-      "spesa": 18.09
+      "spesa": 18.09,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 12,
+          "ads": 11,
+          "email": 0,
+          "diretti": 1
+        }
+      }
     },
     {
       "data": "2026-09-08",
@@ -554,7 +763,15 @@
       "cumulato": 36,
       "edizione": "2026-09-30",
       "cumulato_edizione": 36,
-      "spesa": 43.1
+      "spesa": 43.1,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 15,
+          "ads": 14,
+          "email": 0,
+          "diretti": 1
+        }
+      }
     },
     {
       "data": "2026-09-09",
@@ -566,7 +783,15 @@
       "cumulato": 47,
       "edizione": "2026-09-30",
       "cumulato_edizione": 47,
-      "spesa": 40.73
+      "spesa": 40.73,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 11,
+          "ads": 11,
+          "email": 0,
+          "diretti": 0
+        }
+      }
     },
     {
       "data": "2026-09-10",
@@ -578,7 +803,15 @@
       "cumulato": 62,
       "edizione": "2026-09-30",
       "cumulato_edizione": 62,
-      "spesa": 21.8
+      "spesa": 34.53,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 15,
+          "ads": 14,
+          "email": 1,
+          "diretti": 0
+        }
+      }
     },
     {
       "data": "2026-09-11",
@@ -590,7 +823,15 @@
       "cumulato": 75,
       "edizione": "2026-09-30",
       "cumulato_edizione": 75,
-      "spesa": 23.47
+      "spesa": 39.67,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 13,
+          "ads": 11,
+          "email": 0,
+          "diretti": 2
+        }
+      }
     },
     {
       "data": "2026-09-12",
@@ -602,7 +843,15 @@
       "cumulato": 91,
       "edizione": "2026-09-30",
       "cumulato_edizione": 91,
-      "spesa": 27.45
+      "spesa": 39.1,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 16,
+          "ads": 16,
+          "email": 0,
+          "diretti": 0
+        }
+      }
     },
     {
       "data": "2026-09-13",
@@ -614,7 +863,15 @@
       "cumulato": 115,
       "edizione": "2026-09-30",
       "cumulato_edizione": 115,
-      "spesa": 35.8
+      "spesa": 54.23,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 24,
+          "ads": 24,
+          "email": 0,
+          "diretti": 0
+        }
+      }
     },
     {
       "data": "2026-09-14",
@@ -626,7 +883,15 @@
       "cumulato": 128,
       "edizione": "2026-09-30",
       "cumulato_edizione": 128,
-      "spesa": 23.87
+      "spesa": 41.3,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 13,
+          "ads": 12,
+          "email": 0,
+          "diretti": 1
+        }
+      }
     },
     {
       "data": "2026-09-15",
@@ -638,7 +903,15 @@
       "cumulato": 140,
       "edizione": "2026-09-30",
       "cumulato_edizione": 140,
-      "spesa": 24.84
+      "spesa": 40.3,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 12,
+          "ads": 11,
+          "email": 0,
+          "diretti": 1
+        }
+      }
     },
     {
       "data": "2026-09-16",
@@ -650,7 +923,15 @@
       "cumulato": 147,
       "edizione": "2026-09-30",
       "cumulato_edizione": 147,
-      "spesa": 21.72
+      "spesa": 34.55,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 7,
+          "ads": 7,
+          "email": 0,
+          "diretti": 0
+        }
+      }
     },
     {
       "data": "2026-09-17",
@@ -662,7 +943,15 @@
       "cumulato": 156,
       "edizione": "2026-09-30",
       "cumulato_edizione": 156,
-      "spesa": 24.33
+      "spesa": 39.06,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 9,
+          "ads": 9,
+          "email": 0,
+          "diretti": 0
+        }
+      }
     },
     {
       "data": "2026-09-18",
@@ -674,7 +963,15 @@
       "cumulato": 166,
       "edizione": "2026-09-30",
       "cumulato_edizione": 166,
-      "spesa": 22.86
+      "spesa": 36.58,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 10,
+          "ads": 10,
+          "email": 0,
+          "diretti": 0
+        }
+      }
     },
     {
       "data": "2026-09-19",
@@ -686,7 +983,15 @@
       "cumulato": 179,
       "edizione": "2026-09-30",
       "cumulato_edizione": 179,
-      "spesa": 21.14
+      "spesa": 33.33,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 13,
+          "ads": 12,
+          "email": 0,
+          "diretti": 1
+        }
+      }
     },
     {
       "data": "2026-09-20",
@@ -698,7 +1003,15 @@
       "cumulato": 193,
       "edizione": "2026-09-30",
       "cumulato_edizione": 193,
-      "spesa": 30.45
+      "spesa": 48.03,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 14,
+          "ads": 14,
+          "email": 0,
+          "diretti": 0
+        }
+      }
     },
     {
       "data": "2026-09-21",
@@ -710,7 +1023,15 @@
       "cumulato": 202,
       "edizione": "2026-09-30",
       "cumulato_edizione": 202,
-      "spesa": 25.44
+      "spesa": 38.55,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 9,
+          "ads": 9,
+          "email": 0,
+          "diretti": 0
+        }
+      }
     },
     {
       "data": "2026-09-22",
@@ -722,7 +1043,15 @@
       "cumulato": 215,
       "edizione": "2026-09-30",
       "cumulato_edizione": 215,
-      "spesa": 24.39
+      "spesa": 41.68,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 13,
+          "ads": 11,
+          "email": 1,
+          "diretti": 1
+        }
+      }
     },
     {
       "data": "2026-09-23",
@@ -734,7 +1063,15 @@
       "cumulato": 231,
       "edizione": "2026-09-30",
       "cumulato_edizione": 231,
-      "spesa": 25.34
+      "spesa": 39.98,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 16,
+          "ads": 16,
+          "email": 0,
+          "diretti": 0
+        }
+      }
     },
     {
       "data": "2026-09-24",
@@ -746,7 +1083,15 @@
       "cumulato": 237,
       "edizione": "2026-09-30",
       "cumulato_edizione": 237,
-      "spesa": 24.32
+      "spesa": 39.4,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 6,
+          "ads": 6,
+          "email": 0,
+          "diretti": 0
+        }
+      }
     },
     {
       "data": "2026-09-25",
@@ -758,7 +1103,15 @@
       "cumulato": 245,
       "edizione": "2026-09-30",
       "cumulato_edizione": 245,
-      "spesa": 24.74
+      "spesa": 38.68,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 8,
+          "ads": 8,
+          "email": 0,
+          "diretti": 0
+        }
+      }
     },
     {
       "data": "2026-09-26",
@@ -770,7 +1123,15 @@
       "cumulato": 254,
       "edizione": "2026-09-30",
       "cumulato_edizione": 254,
-      "spesa": 20.04
+      "spesa": 33.16,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 9,
+          "ads": 8,
+          "email": 0,
+          "diretti": 1
+        }
+      }
     },
     {
       "data": "2026-09-27",
@@ -782,7 +1143,15 @@
       "cumulato": 268,
       "edizione": "2026-09-30",
       "cumulato_edizione": 268,
-      "spesa": 24.46
+      "spesa": 42.7,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 14,
+          "ads": 13,
+          "email": 0,
+          "diretti": 1
+        }
+      }
     },
     {
       "data": "2026-09-28",
@@ -794,7 +1163,15 @@
       "cumulato": 278,
       "edizione": "2026-09-30",
       "cumulato_edizione": 278,
-      "spesa": 24.25
+      "spesa": 38.02,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 10,
+          "ads": 9,
+          "email": 0,
+          "diretti": 1
+        }
+      }
     },
     {
       "data": "2026-09-29",
@@ -806,7 +1183,15 @@
       "cumulato": 286,
       "edizione": "2026-09-30",
       "cumulato_edizione": 286,
-      "spesa": 32.88
+      "spesa": 50.22,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 8,
+          "ads": 5,
+          "email": 0,
+          "diretti": 3
+        }
+      }
     },
     {
       "data": "2026-09-30",
@@ -818,7 +1203,21 @@
       "cumulato": 295,
       "edizione": "2026-09-30",
       "cumulato_edizione": 295,
-      "spesa": 7.41
+      "spesa": 11.62,
+      "per_edizione": {
+        "2026-09-30": {
+          "iscritti": 7,
+          "ads": 4,
+          "email": 0,
+          "diretti": 3
+        },
+        "2026-10-15": {
+          "iscritti": 2,
+          "ads": 1,
+          "email": 0,
+          "diretti": 1
+        }
+      }
     },
     {
       "data": "2026-10-01",
@@ -830,8 +1229,830 @@
       "cumulato": 305,
       "edizione": "2026-10-15",
       "cumulato_edizione": 10,
-      "spesa": 91.98
+      "spesa": 103.08,
+      "per_edizione": {
+        "2026-10-15": {
+          "iscritti": 10,
+          "ads": 9,
+          "email": 0,
+          "diretti": 1
+        }
+      }
+    },
+    {
+      "data": "2026-10-02",
+      "etichetta": "02/10",
+      "iscritti": 0,
+      "ads": 0,
+      "email": 0,
+      "diretti": 0,
+      "cumulato": 305,
+      "edizione": "2026-10-15",
+      "cumulato_edizione": 10,
+      "spesa": 3.09,
+      "per_edizione": {}
     }
   ],
+  "pubblicita": {
+    "letto": "2026-10-02T01:36:20+02:00",
+    "inserzioni_lette": 40,
+    "senza_link": 0,
+    "per_edizione": [
+      {
+        "chiave": "2026-10-15",
+        "etichetta": "15/10",
+        "data_it": "giovedì 15 ottobre 2026",
+        "stato": "corrente",
+        "righe": [
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-sibill-c-1510",
+            "utm_content": "ai-video-sibill-c-1510",
+            "nome": "stile Sibill C",
+            "inserzioni": [
+              {
+                "id": "120255852766780348",
+                "nome": "stile Sibill C 21-00",
+                "campagna": "120255475473930348",
+                "stato": "ACTIVE",
+                "spesa": 18.88
+              },
+              {
+                "id": "120255851168600348",
+                "nome": "stile Sibill C v2",
+                "campagna": "120255475473930348",
+                "stato": "DELETED",
+                "spesa": 0.09
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-10-01",
+            "al": "2026-10-02",
+            "spesa": 18.97,
+            "iscritti": 4,
+            "costo_per_iscritto": 4.74,
+            "lead_meta": 2,
+            "attiva_ora": true,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-rossi-1510",
+            "utm_content": "ai-video-rossi-1510",
+            "nome": "signor Rossi",
+            "inserzioni": [
+              {
+                "id": "120255846313810348",
+                "nome": "signor Rossi",
+                "campagna": "120255475473930348",
+                "stato": "PAUSED",
+                "spesa": 32.31
+              },
+              {
+                "id": "120255852765800348",
+                "nome": "signor Rossi 21-00",
+                "campagna": "120255475473930348",
+                "stato": "ACTIVE",
+                "spesa": 17.77
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-10-01",
+            "al": "2026-10-02",
+            "spesa": 50.08,
+            "iscritti": 3,
+            "costo_per_iscritto": 16.69,
+            "lead_meta": 2,
+            "attiva_ora": true,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-f24-dimostrazione-1510",
+            "utm_content": "ai-video-f24-dimostrazione-1510",
+            "nome": "F24 dimostrazione",
+            "inserzioni": [
+              {
+                "id": "120255846313080348",
+                "nome": "F24 dimostrazione",
+                "campagna": "120255475473930348",
+                "stato": "PAUSED",
+                "spesa": 12.72
+              },
+              {
+                "id": "120255852765270348",
+                "nome": "F24 dimostrazione 21-00",
+                "campagna": "120255475473930348",
+                "stato": "ACTIVE",
+                "spesa": 12.47
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-10-01",
+            "al": "2026-10-02",
+            "spesa": 25.19,
+            "iscritti": 2,
+            "costo_per_iscritto": 12.59,
+            "lead_meta": 2,
+            "attiva_ora": true,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-f24-eleven-916",
+            "utm_content": "ai-video-f24-eleven-916",
+            "nome": "Video AI F24 voce Eleven",
+            "inserzioni": [],
+            "campagne": [],
+            "dal": null,
+            "al": null,
+            "spesa": 0.0,
+            "iscritti": 1,
+            "costo_per_iscritto": null,
+            "lead_meta": 0,
+            "attiva_ora": false,
+            "nota": "nessuna spesa in questa edizione: iscritti arrivati da un'inserzione già spenta"
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-sibill-b-1510",
+            "utm_content": "ai-video-sibill-b-1510",
+            "nome": "stile Sibill B",
+            "inserzioni": [
+              {
+                "id": "120255852766250348",
+                "nome": "stile Sibill B 21-00",
+                "campagna": "120255475473930348",
+                "stato": "ACTIVE",
+                "spesa": 7.69
+              },
+              {
+                "id": "120255850762880348",
+                "nome": "stile Sibill B",
+                "campagna": "120255475473930348",
+                "stato": "DELETED",
+                "spesa": 0.07
+              },
+              {
+                "id": "120255851168270348",
+                "nome": "stile Sibill B v2",
+                "campagna": "120255475473930348",
+                "stato": "DELETED",
+                "spesa": 0.01
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-10-01",
+            "al": "2026-10-02",
+            "spesa": 7.77,
+            "iscritti": 0,
+            "costo_per_iscritto": null,
+            "lead_meta": 0,
+            "attiva_ora": true,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-sibill-a-1510",
+            "utm_content": "ai-video-sibill-a-1510",
+            "nome": "stile Sibill A",
+            "inserzioni": [
+              {
+                "id": "120255852765940348",
+                "nome": "stile Sibill A 21-00",
+                "campagna": "120255475473930348",
+                "stato": "ACTIVE",
+                "spesa": 3.83
+              },
+              {
+                "id": "120255851167530348",
+                "nome": "stile Sibill A v2",
+                "campagna": "120255475473930348",
+                "stato": "DELETED",
+                "spesa": 0.26
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-10-01",
+            "al": "2026-10-02",
+            "spesa": 4.09,
+            "iscritti": 0,
+            "costo_per_iscritto": null,
+            "lead_meta": 0,
+            "attiva_ora": true,
+            "nota": null
+          },
+          {
+            "tipo": "diretti",
+            "chiave": "diretti",
+            "utm_content": null,
+            "nome": "Diretti / non tracciati",
+            "iscritti": 2
+          }
+        ],
+        "totale": {
+          "iscritti": 12,
+          "da_ads": 10,
+          "spesa": 106.17,
+          "spesa_inserzioni": 106.1,
+          "costo_per_iscritto": 10.62,
+          "spesa_zero_iscritti": 11.86,
+          "pubblicita": 6,
+          "pubblicita_con_spesa": 5
+        },
+        "letture": [
+          "Porta più iscritti: «stile Sibill C», 4 su 10 arrivati dalla pubblicità (40%), 4,74 € l'uno.",
+          "Costa di più per iscritto: «signor Rossi», 16,69 € a iscritto (3 iscritti con 50,08 €).",
+          "Spesa andata a pubblicità con 0 iscritti: 11,86 € su 106,17 € (11%), in 2 pubblicità («stile Sibill B» 7,77 €, «stile Sibill A» 4,09 €)."
+        ]
+      },
+      {
+        "chiave": "2026-09-30",
+        "etichetta": "30/09",
+        "data_it": "mercoledì 30 settembre 2026",
+        "stato": "passata",
+        "righe": [
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-f24-eleven-916",
+            "utm_content": "ai-video-f24-eleven-916",
+            "nome": "Video AI F24 voce Eleven",
+            "inserzioni": [
+              {
+                "id": "120255479006080348",
+                "nome": "Video AI F24 voce Eleven",
+                "campagna": "120255475473930348",
+                "stato": "PAUSED",
+                "spesa": 413.44
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-09-07",
+            "al": "2026-09-30",
+            "spesa": 413.44,
+            "iscritti": 141,
+            "costo_per_iscritto": 2.93,
+            "lead_meta": 137,
+            "attiva_ora": false,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-fatture-estere-916",
+            "utm_content": "ai-video-fatture-estere-916",
+            "nome": "Angolo fatture estere",
+            "inserzioni": [
+              {
+                "id": "120255523734750348",
+                "nome": "Angolo fatture estere",
+                "campagna": "120255523723270348",
+                "stato": "PAUSED",
+                "spesa": 301.88
+              }
+            ],
+            "campagne": [
+              "120255523723270348"
+            ],
+            "dal": "2026-09-10",
+            "al": "2026-09-30",
+            "spesa": 301.88,
+            "iscritti": 76,
+            "costo_per_iscritto": 3.97,
+            "lead_meta": 79,
+            "attiva_ora": false,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-unaperuna-a5-3009",
+            "utm_content": "ai-video-unaperuna-a5-3009",
+            "nome": "A5 - una per una",
+            "inserzioni": [
+              {
+                "id": "120255773554500348",
+                "nome": "A5 - una per una",
+                "campagna": "120255475473930348",
+                "stato": "PAUSED",
+                "spesa": 83.49
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-09-25",
+            "al": "2026-09-30",
+            "spesa": 83.49,
+            "iscritti": 20,
+            "costo_per_iscritto": 4.17,
+            "lead_meta": 18,
+            "attiva_ora": false,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-scadenze-3009",
+            "utm_content": "ai-video-scadenze-3009",
+            "nome": "Angolo scadenze 30/09",
+            "inserzioni": [
+              {
+                "id": "120255519832630348",
+                "nome": "Angolo scadenze 30/09",
+                "campagna": "120255475473930348",
+                "stato": "PAUSED",
+                "spesa": 32.46
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-09-10",
+            "al": "2026-09-25",
+            "spesa": 32.46,
+            "iscritti": 10,
+            "costo_per_iscritto": 3.25,
+            "lead_meta": 7,
+            "attiva_ora": false,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-scadenze-916",
+            "utm_content": "ai-video-scadenze-916",
+            "nome": "Angolo scadenze",
+            "inserzioni": [
+              {
+                "id": "120255495369390348",
+                "nome": "Angolo scadenze",
+                "campagna": "120255475473930348",
+                "stato": "DELETED",
+                "spesa": 44.47
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-09-08",
+            "al": "2026-09-09",
+            "spesa": 44.47,
+            "iscritti": 10,
+            "costo_per_iscritto": 4.45,
+            "lead_meta": 8,
+            "attiva_ora": false,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-banca-916",
+            "utm_content": "ai-video-banca-916",
+            "nome": "Angolo banca",
+            "inserzioni": [
+              {
+                "id": "120255495370630348",
+                "nome": "Angolo banca",
+                "campagna": "120255475473930348",
+                "stato": "DELETED",
+                "spesa": 4.84
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-09-08",
+            "al": "2026-09-09",
+            "spesa": 4.84,
+            "iscritti": 3,
+            "costo_per_iscritto": 1.61,
+            "lead_meta": 4,
+            "attiva_ora": false,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-banca-3009",
+            "utm_content": "ai-video-banca-3009",
+            "nome": "Angolo banca 30/09",
+            "inserzioni": [
+              {
+                "id": "120255519833070348",
+                "nome": "Angolo banca 30/09",
+                "campagna": "120255475473930348",
+                "stato": "PAUSED",
+                "spesa": 16.28
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-09-10",
+            "al": "2026-09-25",
+            "spesa": 16.28,
+            "iscritti": 3,
+            "costo_per_iscritto": 5.43,
+            "lead_meta": 3,
+            "attiva_ora": false,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-criceto-b-3009",
+            "utm_content": "ai-video-criceto-b-3009",
+            "nome": "Criceto B - venti cose da fare",
+            "inserzioni": [
+              {
+                "id": "120255771189640348",
+                "nome": "Criceto B - venti cose da fare",
+                "campagna": "120255475473930348",
+                "stato": "DELETED",
+                "spesa": 4.02
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-09-25",
+            "al": "2026-09-25",
+            "spesa": 4.02,
+            "iscritti": 1,
+            "costo_per_iscritto": 4.02,
+            "lead_meta": 0,
+            "attiva_ora": false,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-risposte-b5-3009",
+            "utm_content": "ai-video-risposte-b5-3009",
+            "nome": "B5 - risposte pronte",
+            "inserzioni": [
+              {
+                "id": "120255773553490348",
+                "nome": "B5 - risposte pronte",
+                "campagna": "120255475473930348",
+                "stato": "PAUSED",
+                "spesa": 5.73
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-09-25",
+            "al": "2026-09-30",
+            "spesa": 5.73,
+            "iscritti": 1,
+            "costo_per_iscritto": 5.73,
+            "lead_meta": 1,
+            "attiva_ora": false,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-chatbot-916",
+            "utm_content": "ai-video-chatbot-916",
+            "nome": "Angolo chatbot",
+            "inserzioni": [
+              {
+                "id": "120255495371180348",
+                "nome": "Angolo chatbot",
+                "campagna": "120255475473930348",
+                "stato": "DELETED",
+                "spesa": 3.09
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-09-08",
+            "al": "2026-09-09",
+            "spesa": 3.09,
+            "iscritti": 0,
+            "costo_per_iscritto": null,
+            "lead_meta": 0,
+            "attiva_ora": false,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-criceto-a-3009",
+            "utm_content": "ai-video-criceto-a-3009",
+            "nome": "Criceto A - lavoro ripetitivo",
+            "inserzioni": [
+              {
+                "id": "120255771188270348",
+                "nome": "Criceto A - lavoro ripetitivo",
+                "campagna": "120255475473930348",
+                "stato": "DELETED",
+                "spesa": 2.49
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-09-25",
+            "al": "2026-09-25",
+            "spesa": 2.49,
+            "iscritti": 0,
+            "costo_per_iscritto": null,
+            "lead_meta": 0,
+            "attiva_ora": false,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-documenti-3009",
+            "utm_content": "ai-video-documenti-3009",
+            "nome": "Angolo documenti",
+            "inserzioni": [
+              {
+                "id": "120255523734860348",
+                "nome": "Angolo documenti",
+                "campagna": "120255523723270348",
+                "stato": "PAUSED",
+                "spesa": 1.81
+              }
+            ],
+            "campagne": [
+              "120255523723270348"
+            ],
+            "dal": "2026-09-10",
+            "al": "2026-09-30",
+            "spesa": 1.81,
+            "iscritti": 0,
+            "costo_per_iscritto": null,
+            "lead_meta": 0,
+            "attiva_ora": false,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-f24-0710-916",
+            "utm_content": "ai-video-f24-0710-916",
+            "nome": "Video AI F24 07/10 voce Eleven",
+            "inserzioni": [
+              {
+                "id": "120255495048950348",
+                "nome": "Video AI F24 07/10 voce Eleven",
+                "campagna": "120255475473930348",
+                "stato": "DELETED",
+                "spesa": 1.68
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-09-08",
+            "al": "2026-09-09",
+            "spesa": 1.68,
+            "iscritti": 0,
+            "costo_per_iscritto": null,
+            "lead_meta": 0,
+            "attiva_ora": false,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-documenti-916",
+            "utm_content": "ai-video-documenti-916",
+            "nome": "Angolo documenti",
+            "inserzioni": [
+              {
+                "id": "120255495369980348",
+                "nome": "Angolo documenti",
+                "campagna": "120255475473930348",
+                "stato": "DELETED",
+                "spesa": 0.4
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-09-08",
+            "al": "2026-09-09",
+            "spesa": 0.4,
+            "iscritti": 0,
+            "costo_per_iscritto": null,
+            "lead_meta": 0,
+            "attiva_ora": false,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-giornata-b4-3009",
+            "utm_content": "ai-video-giornata-b4-3009",
+            "nome": "B4 - giornata in fila",
+            "inserzioni": [
+              {
+                "id": "120255772963450348",
+                "nome": "B4 - giornata in fila",
+                "campagna": "120255475473930348",
+                "stato": "DELETED",
+                "spesa": 0.37
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-09-25",
+            "al": "2026-09-25",
+            "spesa": 0.37,
+            "iscritti": 0,
+            "costo_per_iscritto": null,
+            "lead_meta": 0,
+            "attiva_ora": false,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-unaperuna-a4-3009",
+            "utm_content": "ai-video-unaperuna-a4-3009",
+            "nome": "A4 - una per una",
+            "inserzioni": [
+              {
+                "id": "120255772965770348",
+                "nome": "A4 - una per una",
+                "campagna": "120255475473930348",
+                "stato": "DELETED",
+                "spesa": 0.07
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-09-25",
+            "al": "2026-09-25",
+            "spesa": 0.07,
+            "iscritti": 0,
+            "costo_per_iscritto": null,
+            "lead_meta": 0,
+            "attiva_ora": false,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-venticose-b3-3009",
+            "utm_content": "ai-video-venticose-b3-3009",
+            "nome": "B3 - venti cose da fare",
+            "inserzioni": [
+              {
+                "id": "120255772642340348",
+                "nome": "B3 - venti cose da fare",
+                "campagna": "120255475473930348",
+                "stato": "DELETED",
+                "spesa": 0.06
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-09-25",
+            "al": "2026-09-25",
+            "spesa": 0.06,
+            "iscritti": 0,
+            "costo_per_iscritto": null,
+            "lead_meta": 0,
+            "attiva_ora": false,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
+            "chiave": "ai-video-unaperuna-a2-3009",
+            "utm_content": "ai-video-unaperuna-a2-3009",
+            "nome": "A2 - una per una",
+            "inserzioni": [
+              {
+                "id": "120255772529170348",
+                "nome": "A2 - una per una",
+                "campagna": "120255475473930348",
+                "stato": "DELETED",
+                "spesa": 0.03
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-09-25",
+            "al": "2026-09-25",
+            "spesa": 0.03,
+            "iscritti": 0,
+            "costo_per_iscritto": null,
+            "lead_meta": 0,
+            "attiva_ora": false,
+            "nota": null
+          },
+          {
+            "tipo": "email",
+            "chiave": "cluster-e-t2",
+            "utm_content": "cluster-e-t2",
+            "nome": "cluster-e-t2",
+            "iscritti": 2
+          },
+          {
+            "tipo": "email",
+            "chiave": "cluster-b-t1",
+            "utm_content": "cluster-b-t1",
+            "nome": "cluster-b-t1",
+            "iscritti": 1
+          },
+          {
+            "tipo": "email",
+            "chiave": "cluster-a-t2",
+            "utm_content": "cluster-a-t2",
+            "nome": "cluster-a-t2",
+            "iscritti": 1
+          },
+          {
+            "tipo": "email",
+            "chiave": "cluster-b-t2",
+            "utm_content": "cluster-b-t2",
+            "nome": "cluster-b-t2",
+            "iscritti": 1
+          },
+          {
+            "tipo": "email",
+            "chiave": "cluster-b-t3",
+            "utm_content": "cluster-b-t3",
+            "nome": "cluster-b-t3",
+            "iscritti": 1
+          },
+          {
+            "tipo": "email",
+            "chiave": "cluster-d-t3",
+            "utm_content": "cluster-d-t3",
+            "nome": "cluster-d-t3",
+            "iscritti": 1
+          },
+          {
+            "tipo": "email",
+            "chiave": "cluster-d-t2",
+            "utm_content": "cluster-d-t2",
+            "nome": "cluster-d-t2",
+            "iscritti": 1
+          },
+          {
+            "tipo": "email",
+            "chiave": "rilancio-f24-t1",
+            "utm_content": "rilancio-f24-t1",
+            "nome": "rilancio-f24-t1",
+            "iscritti": 1
+          },
+          {
+            "tipo": "email",
+            "chiave": "cluster-d-t4",
+            "utm_content": "cluster-d-t4",
+            "nome": "cluster-d-t4",
+            "iscritti": 1
+          },
+          {
+            "tipo": "diretti",
+            "chiave": "diretti",
+            "utm_content": null,
+            "nome": "Diretti / non tracciati",
+            "iscritti": 18
+          }
+        ],
+        "totale": {
+          "iscritti": 293,
+          "da_ads": 265,
+          "spesa": 916.61,
+          "spesa_inserzioni": 916.61,
+          "costo_per_iscritto": 3.46,
+          "spesa_zero_iscritti": 10.0,
+          "pubblicita": 18,
+          "pubblicita_con_spesa": 18
+        },
+        "letture": [
+          "Porta più iscritti: «Video AI F24 voce Eleven», 141 su 265 arrivati dalla pubblicità (53%), 2,93 € l'uno.",
+          "Costa di più per iscritto: «B5 - risposte pronte», 5,73 € a iscritto (1 iscritto con 5,73 €).",
+          "Spesa andata a pubblicità con 0 iscritti: 10,00 € su 916,61 € (1%), in 9 pubblicità (le più care: «Angolo chatbot» 3,09 €, «Criceto A - lavoro ripetitivo» 2,49 €, «Angolo documenti» 1,81 €)."
+        ]
+      }
+    ],
+    "tutte": {
+      "totale": {
+        "iscritti": 305,
+        "da_ads": 275,
+        "spesa": 1022.78,
+        "costo_per_iscritto": 3.72,
+        "spesa_zero_iscritti": 21.86,
+        "pubblicita": 23
+      },
+      "letture": [
+        "Porta più iscritti: «Video AI F24 voce Eleven», 142 su 275 arrivati dalla pubblicità (52%), 2,91 € l'uno.",
+        "Costa di più per iscritto: «signor Rossi», 16,69 € a iscritto (3 iscritti con 50,08 €).",
+        "Spesa andata a pubblicità con 0 iscritti: 21,86 € su 1.022,78 € (2%), in 11 pubblicità (le più care: «stile Sibill B» 7,77 €, «stile Sibill A» 4,09 €, «Angolo chatbot» 3,09 €)."
+      ]
+    }
+  },
   "avvisi": []
 }
