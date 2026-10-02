@@ -1,7 +1,19 @@
 {
-  "aggiornato": "2026-09-29T13:35:00+02:00",
+  "aggiornato": "2026-10-02T19:35:00+02:00",
   "regola": "Solo ruolo e zona, MAI nome, cognome o email: la pagina e' pubblica (regola JARVIS del 14/07/2026). I nomi veri stanno solo in Gmail (campo gmail_thread).",
   "feedback": [
+    {
+      "data": "2026-10-02",
+      "chi": "Commercialista e revisore legale · Milano e provincia di Udine",
+      "chiede": [
+        "Capire quanto costa Commercialista AI il primo anno e negli anni successivi, dopo l'email con il codice PIONIERI50"
+      ],
+      "temi": [
+        "Prezzo"
+      ],
+      "risposto": false,
+      "gmail_thread": "1a0fd5c88afd9a7c"
+    },
     {
       "data": "2026-09-29",
       "chi": "Studio professionale · provincia di Pisa · usa AGO di Zucchetti",
