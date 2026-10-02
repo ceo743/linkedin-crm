@@ -1,6 +1,6 @@
 {
-  "aggiornato": "2026-10-01 05:56 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; agenti.outreach riverificato, numeri invariati dal giro precedente; agenti.newsletter e agenti.analyst aggiornati; agenti.blog non riletto in questo giro, numeri invariati)",
-  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 24-30 settembre 2026",
+  "aggiornato": "2026-10-02 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; agenti.outreach non riletto in questo giro, numeri invariati; agenti.newsletter invariato; agenti.analyst aggiornato; agenti.blog non riletto in questo giro, numeri invariati)",
+  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 25 settembre - 1 ottobre 2026",
   "kpi": {
     "follower": 233118,
     "follower_delta": "+163",
@@ -11,7 +11,7 @@
     "engagement": "0,14%",
     "reazioni": 60,
     "commenti": 0,
-    "call": 2,
+    "call": 1,
     "call_target": 1
   },
   "interazioni_composizione": [
@@ -209,11 +209,11 @@
         }
       ],
       "ieri": {
-        "data": "30 settembre",
+        "data": "1 ottobre",
         "call": 0,
-        "spesa": "1.981,73€ (Account 1 + Account 3, giornata intera via time_range)",
-        "click": 1683,
-        "dettaglio": "0 prenotazioni nuove quel giorno; 1 lead funnel dal foglio KPI (fonte non tracciata); 0 guide Kajabi; 1 vendita chiusa (Meta Ads)"
+        "spesa": "1.780,97€ (Account 1 + Account 3, giornata intera via time_range)",
+        "click": 1658,
+        "dettaglio": "0 prenotazioni nuove quel giorno; 1 lead funnel dal foglio KPI (LinkedIn/magnete); 1 guida Kajabi (stessa persona del lead, guida diversa); 0 vendite chiuse"
       },
       "agenda": [
         "Mar 6/10 · 12:00 — Meta Ads (riprogrammata dal 23/9)"
