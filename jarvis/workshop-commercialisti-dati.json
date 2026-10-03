@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-03T10:29:32+02:00",
+  "aggiornato": "2026-10-03T13:28:33+02:00",
   "workshop": {
     "nome": "Workshop Commercialisti",
     "sottotitolo": "Webinar gratuito su Zoom, un'edizione ogni 15 giorni",
@@ -19,12 +19,12 @@
     "ora": "21:00",
     "stato": "corrente",
     "raccolta_dal": "2026-10-01",
-    "iscritti": 20,
-    "da_ads": 18,
+    "iscritti": 22,
+    "da_ads": 20,
     "da_email": 0,
     "diretti": 2,
     "spesa": 194.25,
-    "costo_per_iscritto": 10.79,
+    "costo_per_iscritto": 9.71,
     "lead_meta": 16,
     "utm_conferma": 11,
     "utm_altra_edizione": 1,
@@ -88,12 +88,12 @@
       "ora": "21:00",
       "stato": "corrente",
       "raccolta_dal": "2026-10-01",
-      "iscritti": 20,
-      "da_ads": 18,
+      "iscritti": 22,
+      "da_ads": 20,
       "da_email": 0,
       "diretti": 2,
       "spesa": 194.25,
-      "costo_per_iscritto": 10.79,
+      "costo_per_iscritto": 9.71,
       "lead_meta": 16,
       "utm_conferma": 11,
       "utm_altra_edizione": 1,
@@ -155,10 +155,10 @@
     }
   ],
   "iscritti": {
-    "totali": 313,
-    "oggi": 1,
+    "totali": 315,
+    "oggi": 3,
     "ieri": 7,
-    "da_ads": 283,
+    "da_ads": 285,
     "da_email": 10,
     "diretti": 20,
     "righe_di_prova_escluse": 8,
@@ -174,10 +174,10 @@
     "campagne": 2
   },
   "costo_per_iscritto": {
-    "oggi": 24.6,
+    "oggi": 8.2,
     "ieri": 9.46,
-    "totale": 3.93,
-    "edizione_corrente": 10.79,
+    "totale": 3.9,
+    "edizione_corrente": 9.71,
     "nota": "spesa Meta divisa per gli iscritti col tracciamento ads (utm_source=meta / utm_medium=paid) presenti sul foglio"
   },
   "meta": {
@@ -225,30 +225,30 @@
     {
       "chiave": "ads",
       "label": "Meta Ads",
-      "iscritti": 283,
-      "quota": 90.42
+      "iscritti": 285,
+      "quota": 90.48
     },
     {
       "chiave": "email",
       "label": "Email fredde",
       "iscritti": 10,
-      "quota": 3.19
+      "quota": 3.17
     },
     {
       "chiave": "diretti",
       "label": "Diretti / non tracciati",
       "iscritti": 20,
-      "quota": 6.39
+      "quota": 6.35
     }
   ],
   "dettaglio_contenuti": [
     {
       "fonte": "ads",
       "utm_content": "davide-auto-2",
-      "iscritti": 6,
-      "iscritti_edizione_corrente": 6,
+      "iscritti": 8,
+      "iscritti_edizione_corrente": 8,
       "per_edizione": {
-        "2026-10-15": 6
+        "2026-10-15": 8
       }
     },
     {
@@ -1280,18 +1280,18 @@
     {
       "data": "2026-10-03",
       "etichetta": "03/10",
-      "iscritti": 1,
-      "ads": 1,
+      "iscritti": 3,
+      "ads": 3,
       "email": 0,
       "diretti": 0,
-      "cumulato": 313,
+      "cumulato": 315,
       "edizione": "2026-10-15",
-      "cumulato_edizione": 18,
+      "cumulato_edizione": 20,
       "spesa": 24.6,
       "per_edizione": {
         "2026-10-15": {
-          "iscritti": 1,
-          "ads": 1,
+          "iscritti": 3,
+          "ads": 3,
           "email": 0,
           "diretti": 0
         }
@@ -1337,8 +1337,8 @@
             "dal": "2026-10-02",
             "al": "2026-10-03",
             "spesa": 34.86,
-            "iscritti": 6,
-            "costo_per_iscritto": 5.81,
+            "iscritti": 8,
+            "costo_per_iscritto": 4.36,
             "lead_meta": 7,
             "attiva_ora": true,
             "nota": null
@@ -1748,17 +1748,17 @@
           }
         ],
         "totale": {
-          "iscritti": 20,
-          "da_ads": 18,
+          "iscritti": 22,
+          "da_ads": 20,
           "spesa": 194.25,
           "spesa_inserzioni": 194.13,
-          "costo_per_iscritto": 10.79,
+          "costo_per_iscritto": 9.71,
           "spesa_zero_iscritti": 52.1,
           "pubblicita": 15,
           "pubblicita_con_spesa": 14
         },
         "letture": [
-          "Porta più iscritti: «TEST Davide in auto 2 SENZA DATA», 6 su 18 arrivati dalla pubblicità (33%), 5,81 € l'uno.",
+          "Porta più iscritti: «TEST Davide in auto 2 SENZA DATA», 8 su 20 arrivati dalla pubblicità (40%), 4,36 € l'uno.",
           "Costa di più per iscritto: «signor Rossi», 16,79 € a iscritto (3 iscritti con 50,36 €).",
           "Spesa andata a pubblicità con 0 iscritti: 52,10 € su 194,25 € (27%), in 9 pubblicità (le più care: «SENZA DATA F24 testo di settembre» 33,43 €, «stile Sibill B» 7,77 €, «stile Sibill A» 4,09 €)."
         ]
@@ -2327,15 +2327,15 @@
     ],
     "tutte": {
       "totale": {
-        "iscritti": 313,
-        "da_ads": 283,
+        "iscritti": 315,
+        "da_ads": 285,
         "spesa": 1110.86,
-        "costo_per_iscritto": 3.93,
+        "costo_per_iscritto": 3.9,
         "spesa_zero_iscritti": 62.1,
         "pubblicita": 32
       },
       "letture": [
-        "Porta più iscritti: «Video AI F24 voce Eleven», 142 su 283 arrivati dalla pubblicità (50%), 2,91 € l'uno.",
+        "Porta più iscritti: «Video AI F24 voce Eleven», 142 su 285 arrivati dalla pubblicità (50%), 2,91 € l'uno.",
         "Costa di più per iscritto: «signor Rossi», 16,79 € a iscritto (3 iscritti con 50,36 €).",
         "Spesa andata a pubblicità con 0 iscritti: 62,10 € su 1.110,86 € (6%), in 18 pubblicità (le più care: «SENZA DATA F24 testo di settembre» 33,43 €, «stile Sibill B» 7,77 €, «stile Sibill A» 4,09 €)."
       ]
