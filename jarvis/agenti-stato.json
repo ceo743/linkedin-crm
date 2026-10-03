@@ -1,5 +1,5 @@
 {
-  "aggiornato": "30 settembre, ore 08:15",
+  "aggiornato": "2 ottobre, ore 09:30",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
@@ -67,27 +67,27 @@
     {
       "id": "newsletter-venerdi",
       "nome": "Newsletter Venerdì",
-      "sottotitolo": "LinkedIn e IA — guida #017 Assistente Clienti (uscita 23/09), CMO chiude il canale prenotazioni",
+      "sottotitolo": "LinkedIn e IA — guida #013 Video LinkedIn (uscita 29/09), canale prenotazioni resta chiuso",
       "colore": "amber",
       "stato": "attenzione",
-      "ultima_run": "25 settembre, ore 12:10",
-      "prossima_run": "2 ottobre",
+      "ultima_run": "2 ottobre, ore 09:30",
+      "prossima_run": "9 ottobre",
       "verifiche": [
         {
           "ok": true,
-          "testo": "Dati Calendly reali via API Zapier, 3 finestre settimanali (9-25 settembre) sulle guide #015 commenti-umani, #016 iscritti-newsletter, #017 assistente-clienti (uscita 23/09, questa settimana)"
+          "testo": "Dati Calendly reali via API Zapier, 6 finestre settimanali (25 agosto - 2 ottobre) coprono le guide #012-#013"
         },
         {
           "ok": false,
-          "testo": "Zero prenotazioni su tutti i medium collegati alla newsletter (bottone PDF cta_finale/cta_intermedia, redirect post_optin, sequenza nurturing) per le 3 guide del periodo — quinta settimana consecutiva a zero"
+          "testo": "cta_finale/cta_intermedia (bottone nel PDF): zero prenotazioni in tutte le 6 settimane. post_optin: solo 2 in tutto il periodo (guida vecchia), zero nelle ultime 3 settimane. Nurturing: zero rilevate"
         },
         {
           "ok": true,
-          "testo": "Verdetto CMO: canale prenotazioni newsletter chiuso, si smette di misurarlo così. La newsletter resta viva come costruzione lista. Azione proposta: incrocio email iscritti/prenotazioni Calendly ultimi 90 giorni per capire se la lista prenota da altre porte (ads, bio, chatbot) — segnalata come attività separata dal CSO, non eseguita in questo giro"
+          "testo": "Verdetto CMO del 25/09 confermato, non rivalutato (dato identico): canale prenotazioni newsletter resta chiuso, nessuna nuova proposta di restyling CTA. Follow-up incrocio lista/Calendly resta in carico al CSO"
         }
       ],
       "azioni": [],
-      "nota": "25/09: nessuna email a Davide, nessuna decisione pendente da lui. Prossimo passo è l'incrocio lista/Calendly (CSO), esito atteso entro il comitato di lunedì."
+      "nota": "02/10: nessuna email a Davide, nessuna decisione pendente. Guida #013 uscita 3 giorni fa, troppo presto per avere dati propri."
     },
     {
       "id": "taplio-post-virali",
