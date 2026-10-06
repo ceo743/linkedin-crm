@@ -3,18 +3,6 @@
   "nota": "Un record per giorno. ads = entrambi gli account Meta. call = prenotazioni Calendly ARRIVATE quel giorno (mai retroattivo). call_scartate = SOLO le prenotazioni ricevute quel giorno e poi scartate lo stesso giorno (mai riferito a prenotazioni di giorni precedenti: se una call di un giorno passato viene annullata dopo, il numero del giorno passato non si tocca, si aggiunge solo una nota testuale in call_nomi di quel giorno). lead_funnel = optin dal foglio KPI. guide = form Kajabi. li_impressioni (opzionale) = impressioni LinkedIn del giorno, dal grafico Rendimento contenuti in modalità Giornaliero. Motivazioni di annullamento call: fonte foglio Google 'Report Calendly Giornaliero (Stefania)' (id 1bPJih5riHWqz86hwkfbYybmwhCKkiWVyKxqMD9ppwDU, colonna ESITO), match per giorno di PRENOTAZIONE della call. | BACKFILL 1/9/2026: record 15/8-31/8 ricostruiti in blocco dopo un buco di 17 giorni nella scrittura dell'archivio (vedi ads_nota di ciascun record).",
   "giorni": [
     {
-      "data": "2026-09-06",
-      "call": 0,
-      "call_scartate": 0,
-      "call_nomi": [],
-      "lead_funnel": 0,
-      "guide": 1,
-      "ads_spesa": 66.33,
-      "ads_click": 48,
-      "ads_impressioni": 1665,
-      "parziale": false
-    },
-    {
       "data": "2026-09-07",
       "call": 1,
       "call_scartate": 0,
@@ -300,7 +288,8 @@
       "guide": 0,
       "ads_spesa": 1981.73,
       "ads_click": 1683,
-      "ads_impressioni": 84827
+      "ads_impressioni": 84827,
+      "lead_nota": "1 lead dal foglio KPI (fonte non tracciata, nessun utm in riga)."
     },
     {
       "data": "2026-10-01",
@@ -312,7 +301,8 @@
       "guide": 1,
       "ads_spesa": 1780.97,
       "ads_click": 1658,
-      "ads_impressioni": 79541
+      "ads_impressioni": 79541,
+      "lead_nota": "1 lead dal foglio KPI (LinkedIn/magnete, guida-comment-marketing, Pietro Gritto). 1 guida Kajabi (Pietro Gritto, 35 Marketing Skills per Claude Code) — stessa persona del lead funnel con guida diversa."
     },
     {
       "data": "2026-10-02",
@@ -352,15 +342,27 @@
     },
     {
       "data": "2026-10-05",
+      "parziale": false,
+      "call": 3,
+      "call_scartate": 0,
+      "call_nomi": [],
+      "lead_funnel": 0,
+      "guide": 69,
+      "ads_spesa": 837.25,
+      "ads_click": 1127,
+      "ads_impressioni": 30562
+    },
+    {
+      "data": "2026-10-06",
       "parziale": true,
-      "call": 0,
+      "call": 1,
       "call_scartate": 0,
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 0,
-      "ads_spesa": 200.13,
-      "ads_click": 214,
-      "ads_impressioni": 6243
+      "ads_spesa": 8.38,
+      "ads_click": 24,
+      "ads_impressioni": 431
     }
   ]
 }
