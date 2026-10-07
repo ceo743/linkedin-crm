@@ -342,15 +342,15 @@
     },
     {
       "data": "2026-10-06",
-      "parziale": true,
+      "parziale": false,
       "call": 3,
       "call_scartate": 1,
       "call_nomi": [],
       "lead_funnel": 1,
       "guide": 35,
-      "ads_spesa": 133.83,
+      "ads_spesa": 134.39,
       "ads_click": 649,
-      "ads_impressioni": 9563
+      "ads_impressioni": 9605
     },
     {
       "data": "2026-10-07",
