@@ -1,6 +1,6 @@
 {
-  "aggiornato": "2026-10-02 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; agenti.outreach non riletto in questo giro, numeri invariati; agenti.newsletter invariato; agenti.analyst aggiornato; agenti.blog non riletto in questo giro, numeri invariati)",
-  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 25 settembre - 1 ottobre 2026",
+  "aggiornato": "2026-10-08 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; agenti.outreach non riletto in questo giro, numeri invariati; agenti.newsletter invariato; agenti.analyst non riletto in questo giro, numeri invariati; agenti.blog non riletto in questo giro, numeri invariati)",
+  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 1 - 7 ottobre 2026",
   "kpi": {
     "follower": 233118,
     "follower_delta": "+163",
@@ -11,8 +11,8 @@
     "engagement": "0,14%",
     "reazioni": 60,
     "commenti": 0,
-    "call": 1,
-    "call_target": 1
+    "call": 11,
+    "call_target": 9
   },
   "interazioni_composizione": [
     {
