@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-08T07:13:45+02:00",
+  "aggiornato": "2026-10-09T07:11:22+02:00",
   "account": {
     "nome": "Consulenza 1:1",
     "obiettivo": "Analisi gratuita + call su Calendly",
@@ -18,14 +18,14 @@
       "descrizione": "Oggi",
       "giorni": 1,
       "totali": {
-        "spesa": 4.16,
-        "impressions": 192,
-        "reach": 166,
-        "frequency": 1.156627,
+        "spesa": 4.18,
+        "impressions": 198,
+        "reach": 173,
+        "frequency": 1.144509,
         "click": 5,
-        "ctr": 2.6,
-        "cpc": 0.83,
-        "cpm": 21.67,
+        "ctr": 2.53,
+        "cpc": 0.84,
+        "cpm": 21.11,
         "call": 0,
         "costo_call_migliore": null
       },
@@ -35,14 +35,14 @@
           "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1",
           "stato": "ACTIVE",
           "obiettivo": "Contatti",
-          "spesa": 4.16,
-          "impressions": 192,
-          "reach": 166,
-          "frequency": 1.156627,
+          "spesa": 4.18,
+          "impressions": 198,
+          "reach": 173,
+          "frequency": 1.144509,
           "click": 5,
-          "ctr": 2.6,
-          "cpc": 0.83,
-          "cpm": 21.67,
+          "ctr": 2.53,
+          "cpc": 0.84,
+          "cpm": 21.11,
           "risultati": 0,
           "tipo_risultato": "call prenotate",
           "costo_risultato": null
@@ -54,16 +54,16 @@
       "descrizione": "Ieri",
       "giorni": 1,
       "totali": {
-        "spesa": 36.9,
-        "impressions": 1571,
-        "reach": 1134,
-        "frequency": 1.385362,
-        "click": 38,
-        "ctr": 2.42,
-        "cpc": 0.97,
-        "cpm": 23.49,
-        "call": 1,
-        "costo_call_migliore": 36.9
+        "spesa": 32.93,
+        "impressions": 1906,
+        "reach": 1450,
+        "frequency": 1.314483,
+        "click": 61,
+        "ctr": 3.2,
+        "cpc": 0.54,
+        "cpm": 17.28,
+        "call": 0,
+        "costo_call_migliore": null
       },
       "campagne": [
         {
@@ -71,17 +71,17 @@
           "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1",
           "stato": "ACTIVE",
           "obiettivo": "Contatti",
-          "spesa": 36.9,
-          "impressions": 1571,
-          "reach": 1134,
-          "frequency": 1.385362,
-          "click": 38,
-          "ctr": 2.42,
-          "cpc": 0.97,
-          "cpm": 23.49,
-          "risultati": 1,
+          "spesa": 32.93,
+          "impressions": 1906,
+          "reach": 1450,
+          "frequency": 1.314483,
+          "click": 61,
+          "ctr": 3.2,
+          "cpc": 0.54,
+          "cpm": 17.28,
+          "risultati": 0,
           "tipo_risultato": "call prenotate",
-          "costo_risultato": 36.9
+          "costo_risultato": null
         }
       ]
     },
@@ -90,16 +90,16 @@
       "descrizione": "Ultimi 7 giorni",
       "giorni": 7,
       "totali": {
-        "spesa": 461.82,
-        "impressions": 25599,
-        "reach": 15519,
-        "frequency": 1.649526,
-        "click": 723,
-        "ctr": 2.82,
-        "cpc": 0.64,
-        "cpm": 18.04,
+        "spesa": 409.94,
+        "impressions": 19998,
+        "reach": 12254,
+        "frequency": 1.631957,
+        "click": 569,
+        "ctr": 2.85,
+        "cpc": 0.72,
+        "cpm": 20.5,
         "call": 4,
-        "costo_call_migliore": 115.46
+        "costo_call_migliore": 102.49
       },
       "campagne": [
         {
@@ -107,17 +107,17 @@
           "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1",
           "stato": "ACTIVE",
           "obiettivo": "Contatti",
-          "spesa": 461.82,
-          "impressions": 25599,
-          "reach": 15519,
-          "frequency": 1.649526,
-          "click": 723,
-          "ctr": 2.82,
-          "cpc": 0.64,
-          "cpm": 18.04,
+          "spesa": 409.94,
+          "impressions": 19998,
+          "reach": 12254,
+          "frequency": 1.631957,
+          "click": 569,
+          "ctr": 2.85,
+          "cpc": 0.72,
+          "cpm": 20.5,
           "risultati": 4,
           "tipo_risultato": "call prenotate",
-          "costo_risultato": 115.46
+          "costo_risultato": 102.49
         }
       ]
     },
@@ -126,16 +126,16 @@
       "descrizione": "Ultimi 30 giorni",
       "giorni": 30,
       "totali": {
-        "spesa": 1721.95,
-        "impressions": 73362,
-        "reach": 35754,
-        "frequency": 2.051854,
-        "click": 2344,
-        "ctr": 3.2,
-        "cpc": 0.73,
-        "cpm": 23.47,
-        "call": 19,
-        "costo_call_migliore": 90.63
+        "spesa": 1704.38,
+        "impressions": 74269,
+        "reach": 35811,
+        "frequency": 2.073916,
+        "click": 2371,
+        "ctr": 3.19,
+        "cpc": 0.72,
+        "cpm": 22.95,
+        "call": 18,
+        "costo_call_migliore": 94.69
       },
       "campagne": [
         {
@@ -143,35 +143,35 @@
           "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1",
           "stato": "ACTIVE",
           "obiettivo": "Contatti",
-          "spesa": 1721.95,
-          "impressions": 73362,
-          "reach": 35754,
-          "frequency": 2.051854,
-          "click": 2344,
-          "ctr": 3.2,
-          "cpc": 0.73,
-          "cpm": 23.47,
-          "risultati": 19,
+          "spesa": 1704.38,
+          "impressions": 74269,
+          "reach": 35811,
+          "frequency": 2.073916,
+          "click": 2371,
+          "ctr": 3.19,
+          "cpc": 0.72,
+          "cpm": 22.95,
+          "risultati": 18,
           "tipo_risultato": "call prenotate",
-          "costo_risultato": 90.63
+          "costo_risultato": 94.69
         }
       ]
     },
     "max": {
       "label": "Dall'inizio",
       "descrizione": "Dall'inizio campagna",
-      "giorni": 116,
+      "giorni": 117,
       "totali": {
-        "spesa": 16938.51,
-        "impressions": 763546,
-        "reach": 218302,
-        "frequency": 3.497659,
-        "click": 20576,
-        "ctr": 2.69,
+        "spesa": 16971.68,
+        "impressions": 765462,
+        "reach": 218522,
+        "frequency": 3.502906,
+        "click": 20637,
+        "ctr": 2.7,
         "cpc": 0.82,
-        "cpm": 22.18,
+        "cpm": 22.17,
         "call": 222,
-        "costo_call_migliore": 74.45
+        "costo_call_migliore": 74.6
       },
       "campagne": [
         {
@@ -179,17 +179,17 @@
           "nome": "25.03 | DC Academy - Lead Gen Consulenza LinkedIn 1:1",
           "stato": "ACTIVE",
           "obiettivo": "Contatti",
-          "spesa": 16379.54,
-          "impressions": 749500,
-          "reach": 209432,
-          "frequency": 3.578727,
-          "click": 20256,
+          "spesa": 16412.71,
+          "impressions": 751416,
+          "reach": 209652,
+          "frequency": 3.584111,
+          "click": 20317,
           "ctr": 2.7,
           "cpc": 0.81,
-          "cpm": 21.85,
+          "cpm": 21.84,
           "risultati": 220,
           "tipo_risultato": "call prenotate",
-          "costo_risultato": 74.45
+          "costo_risultato": 74.6
         },
         {
           "id": "120252595942170348",
@@ -218,13 +218,13 @@
       "titolo": "Video 4 - La Diagnosi",
       "immagine": "creativi/diagnosi.jpg",
       "stato": "ACTIVE",
-      "spesa": 1230.69,
-      "impressions": 59469,
-      "click": 1948,
+      "spesa": 1231.74,
+      "impressions": 60339,
+      "click": 1978,
       "ctr": 3.28,
-      "cpc": 0.63,
+      "cpc": 0.62,
       "call": 15,
-      "costo_call": 82.05
+      "costo_call": 82.12
     },
     {
       "id": "120255614383240348",
@@ -232,13 +232,13 @@
       "titolo": "Video 28 - Diagnosi profilo",
       "immagine": "creativi/video28-diagnosi-profilo.jpg",
       "stato": "ACTIVE",
-      "spesa": 184.31,
-      "impressions": 5974,
-      "click": 148,
-      "ctr": 2.48,
-      "cpc": 1.25,
+      "spesa": 189.45,
+      "impressions": 6256,
+      "click": 153,
+      "ctr": 2.45,
+      "cpc": 1.24,
       "call": 1,
-      "costo_call": 184.31
+      "costo_call": 189.45
     },
     {
       "id": "120255614671380348",
@@ -246,13 +246,13 @@
       "titolo": "Video 29 - Caso concreto",
       "immagine": "creativi/video29-caso-concreto.jpg",
       "stato": "ACTIVE",
-      "spesa": 37.69,
-      "impressions": 2145,
-      "click": 76,
-      "ctr": 3.54,
-      "cpc": 0.5,
+      "spesa": 39.93,
+      "impressions": 2319,
+      "click": 84,
+      "ctr": 3.62,
+      "cpc": 0.48,
       "call": 1,
-      "costo_call": 37.69
+      "costo_call": 39.93
     }
   ]
 }
