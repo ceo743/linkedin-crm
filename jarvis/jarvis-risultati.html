@@ -506,7 +506,7 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
   </div>
   <div class="panel corner reveal" style="animation-delay:.6s">
     <h3>Agenda call confermate<a class="fonte" href="https://calendar.google.com/calendar/u/0/r" target="_blank" rel="noopener">fonte ↗</a></h3>
-    <div class="note">1 call confermata in agenda: 12/10 alle 12:00 (fonte non tracciata). Tutte le altre prenotazioni della finestra sono state annullate da noi o sono già passate (la call dell'8/10 alle 11:30, fonte non tracciata, è nel passato). Per il quadro completo verificare Google Calendar.</div>
+    <div class="note">2 call confermate in agenda: 12/10 alle 12:00 e alle 12:30 (entrambe fonte non tracciata). Tutte le altre prenotazioni della finestra sono state annullate da noi o sono già passate (la call dell'8/10 alle 11:30, fonte non tracciata, è nel passato). Per il quadro completo verificare Google Calendar.</div>
   </div>
 </div>
 <div class="panelgrid g2" style="margin-top:16px">
@@ -625,7 +625,7 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
 </div>
 
 <footer>
-  <span>Periodo: 2 – 8 ottobre 2026 (pannelli LinkedIn fermi al 14/8: accesso a LinkedIn sospeso; il resto aggiornato all'8/10) · Giro del 9/10: record dell'8/10 FINALIZZATO (Account 1 a giornata intera 118,22 €, 0 call prenotate quel giorno, 0 lead, 7 guide; Account 3 confermato a zero). Aperto il record di oggi 9/10 (parziale, solo Account 1 17,26 €). 1 cancellazione in un giorno successivo alla prenotazione (call del 7/10, annullata l'8/10, Meta Ads). 11 prenotazioni Calendly nuove nella finestra 2/10-8/10 (1 il 3/10, 2 il 4/10, 3 il 5/10, 3 il 6/10, 2 il 7/10). Resta 1 call confermata in agenda (12/10); le altre prenotazioni della finestra sono state annullate da noi. Vendite: 1 chiusa il 2/10, fonte Meta Ads. Dati LinkedIn fermi al 14/08: accesso a LinkedIn sospeso. Account 3 Meta Ads non incluso nel pannello Ads: ha la sua dashboard dedicata. Pannello SEO ancora fermo al giro del 28/9 (nessun giro regolare più recente nel CHANGELOG; prossimo lunedì 12/10). Routine e newsletter non rilette questo giro, valori invariati. · Musica: "Cut and Run" Kevin MacLeod (incompetech.com), CC BY 4.0</span>
+  <span>Periodo: 2 – 8 ottobre 2026 (pannelli LinkedIn fermi al 14/8: accesso a LinkedIn sospeso; il resto aggiornato all'8/10) · Giro del 9/10: record dell'8/10 FINALIZZATO (Account 1 a giornata intera 118,22 €, 0 call prenotate quel giorno, 0 lead, 7 guide; Account 3 confermato a zero). Record di oggi 9/10 aggiornato alle 18:32 (parziale, Account 1 99,25 €, 1 call, 1 lead, 3 guide). 1 cancellazione in un giorno successivo alla prenotazione (call del 7/10, annullata l'8/10, Meta Ads). 11 prenotazioni Calendly nuove nella finestra 2/10-8/10 (1 il 3/10, 2 il 4/10, 3 il 5/10, 3 il 6/10, 2 il 7/10). Restano 2 call confermate in agenda (12/10); le altre prenotazioni della finestra sono state annullate da noi. Vendite: 1 chiusa il 2/10, fonte Meta Ads. Dati LinkedIn fermi al 14/08: accesso a LinkedIn sospeso. Account 3 Meta Ads non incluso nel pannello Ads: ha la sua dashboard dedicata. Pannello SEO ancora fermo al giro del 28/9 (nessun giro regolare più recente nel CHANGELOG; prossimo lunedì 12/10). Routine e newsletter non rilette questo giro, valori invariati. · Musica: "Cut and Run" Kevin MacLeod (incompetech.com), CC BY 4.0</span>
   <span><a href="claude-command-dashboard.html" id="link-dashboard-routine">→ Dashboard routine</a></span>
   <script>
   // 09/09, revisione: la versione precedente scriveva un href SBAGLIATO di default (jarvis-dashboard.html,
@@ -1597,7 +1597,7 @@ const RISPOSTE=[
   {test:q=>/(ultimi 7 giorni|questa settimana|ultima settimana)/.test(q) && soloPeriodo(q), who:'cso', act:'periodo', per:'7'},
   {k:['report','riepilogo','risultat','come è andata','come e andata','come stiamo','dammi i numeri','dammi i dati','situazione','sintesi','vedere il report','andamento'], who:'jarvis', act:'periodo', per:null},
   {k:['agenda','domani','stamattina','stasera','questa settimana in agenda','che ho oggi','chi ho oggi','call di oggi','appuntamenti di oggi'], who:'cso', tab:'calendly', t:()=>
-    "Oggi e domani nessuna call in agenda, Signore. La prossima è il 12 ottobre alle 12, fonte non tracciata. Quattro cancellazioni questa settimana, tutte nostre. Le eventuali nuove prenotazioni su Calendly: gliel'ho aperto."},
+    "Oggi e domani nessuna call in agenda, Signore. Il 12 ottobre ne ha due, alle 12 e alle 12 e 30, entrambe fonte non tracciata. Quattro cancellazioni questa settimana, tutte nostre. Le eventuali nuove prenotazioni su Calendly: gliel'ho aperto."},
   {k:['impression','visualizzazion','views'], who:'cmo', tab:'linkedin', t:()=>
     "53 mila 734 impressioni su LinkedIn negli ultimi 7 giorni, Signore, dall'archivio giornaliero. In calo del 36 virgola 3 percento vs i 7 giorni precedenti. Le ho aperto la scheda."},
   {k:['follower','seguaci'], who:'cmo', tab:'linkedin', t:()=>
