@@ -1,51 +1,51 @@
 {
-  "aggiornato": "2 ottobre, ore 09:30",
+  "aggiornato": "7 ottobre, ore 08:08",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
       "id": "newsletter-martedi",
       "nome": "Newsletter Martedì",
-      "sottotitolo": "LinkedIn e IA — Guida 018 Ricerca Account IA completata",
+      "sottotitolo": "LinkedIn e IA — Guida 019 Decision Maker IA completata",
       "colore": "cyan",
       "stato": "attenzione",
-      "ultima_run": "30 settembre, ore 08:14",
+      "ultima_run": "7 ottobre, ore 08:08",
       "prossima_run": "prossimo martedì",
       "verifiche": [
         {
           "ok": true,
-          "testo": "Pulizia preliminare: nessuna cartella/Doc \"018\" anomala trovata, partenza pulita"
+          "testo": "Pulizia preliminare: nessuna cartella/Doc \"019\" anomala trovata, partenza pulita"
         },
         {
           "ok": true,
-          "testo": "Tema nuovo scelto: Account IQ e Lead IQ di Sales Navigator (riassunto IA di un'azienda in meno di 2 minuti, riservato ai piani Advanced/Advanced Plus) — fatti verificati con WebSearch su fonti indipendenti, nessun titolo duplicato"
+          "testo": "Tema nuovo scelto: avviso Sales Navigator-Microsoft Teams su cambio decision maker, escluso per contatti in EEA/Italia — fatti verificati con WebSearch/WebFetch su fonti indipendenti, nessun titolo duplicato"
         },
         {
           "ok": true,
-          "testo": "Articolo Doc #018 creato in Newsletter-Claude-Martedì/, contenuto verificato con read_file_content (accenti ed emoji integri, chiusura in stile \"Impara da me\")"
+          "testo": "Articolo Doc #019 creato in Projects/Newsletter-Claude-Martedì/, contenuto verificato con read_file_content (accenti ed emoji integri, chiusura in stile \"Impara da me\")"
         },
         {
           "ok": true,
-          "testo": "Guida PDF generata da codice (genera_brochure_ricerca_account.py), 12 pagine, CTA doppia verificata visivamente + link Calendly 200"
+          "testo": "Guida PDF generata da codice (genera_brochure_decisionmaker.py), 12 pagine, CTA doppia verificata visivamente + link Calendly 200"
         },
         {
           "ok": true,
-          "testo": "Repo dedicato ceo743/guida-ricerca-account-ia-linkedin creato, GitHub Pages attivo, DNS CNAME su Kajabi aggiunto (confermato via DNS-over-HTTPS)"
+          "testo": "Repo dedicato ceo743/guida-decision-maker-ia-linkedin creato, GitHub Pages attivo, DNS CNAME su Kajabi aggiunto (confermato via DNS-over-HTTPS)"
         },
         {
           "ok": true,
-          "testo": "Form Kajabi 2149738018 creato (duplicato da #017 con automazioni incluse), verificato end-to-end: submission 302 → email di consegna arrivata su ceo@davidecaiazzo.it → link risolto al PDF Pages corretto"
+          "testo": "Form Kajabi 2149745873 creato (duplicato da #018 con automazioni incluse), verificato end-to-end: submission 302 → email di consegna arrivata su ceo@davidecaiazzo.it in meno di 1 minuto → link risolto al PDF Pages corretto"
         },
         {
           "ok": true,
-          "testo": "Card 18 aggiunta in cima alla hub newsletterguide.davidecaiazzo.it, confermata live (200)"
-        },
-        {
-          "ok": true,
-          "testo": "Certificato TLS del sottodominio guida-ricerca-account-ia-linkedin.davidecaiazzo.it emesso e confermato: landing e PDF rispondono 200 in HTTPS strict, anche seguendo il link vero dell'email di consegna"
+          "testo": "Card 19 aggiunta in cima alla hub newsletterguide.davidecaiazzo.it, confermata live (200)"
         },
         {
           "ok": false,
-          "testo": "WhatsApp a Davide NON tentato: limite strutturale noto (routine schedulata non presidiata) — nessuna email sostitutiva perché non è una decisione da prendere, solo il promemoria di sempre per registrare il video"
+          "testo": "Certificato TLS del sottodominio guida-decision-maker-ia-linkedin.davidecaiazzo.it ANCORA in emissione a fine sessione (DNS Check riavviato con la sequenza Remove+re-add): landing/PDF rispondono 200 solo in HTTP/HTTPS non strict, da riverificare al prossimo giro"
+        },
+        {
+          "ok": false,
+          "testo": "WhatsApp a Davide NON tentato: verificato di persona che web.whatsapp.com non ha sessione attiva nella routine non presidiata (limite strutturale confermato) — nessuna email sostitutiva perché non è una decisione da prendere, solo il promemoria di sempre per registrare il video"
         }
       ],
       "azioni": [
@@ -54,15 +54,15 @@
           "url": "https://drive.google.com/drive/folders/1a8XCuzdUWR7Z_hOsq7Yl8zX61-2TAs_T"
         },
         {
-          "testo": "Apri articolo Doc #018",
-          "url": "https://docs.google.com/document/d/1QHhs5aUywmFgM7badCyL2RA7ISuIBHZpDWoMOiX_9Cs/edit"
+          "testo": "Apri articolo Doc #019",
+          "url": "https://docs.google.com/document/d/1skuMNvYYHMDtuRg1aRc7tZZqoK8iI-_-psI-uzJm5qc/edit"
         },
         {
-          "testo": "Apri landing guida #018",
-          "url": "https://guida-ricerca-account-ia-linkedin.davidecaiazzo.it/"
+          "testo": "Apri landing guida #019",
+          "url": "https://guida-decision-maker-ia-linkedin.davidecaiazzo.it/"
         }
       ],
-      "nota": "Guida 018 \"La scheda azienda pronta in 2 minuti\" prodotta e verificata end-to-end, incluso HTTPS strict (pubblicazione mar 3/11). Manca solo il video di Davide."
+      "nota": "Guida 019 \"Il contatto cambia lavoro: scoprilo prima con l'IA\" prodotta e verificata end-to-end (pubblicazione mar 10/11). Certificato HTTPS del sottodominio in emissione, manca solo il video di Davide."
     },
     {
       "id": "newsletter-venerdi",
