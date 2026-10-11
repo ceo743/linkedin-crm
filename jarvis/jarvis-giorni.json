@@ -1,6 +1,6 @@
 {
-  "aggiornato": "2026-10-07T05:53:00",
-  "nota": "Un record per giorno. ads = entrambi gli account Meta. call = prenotazioni Calendly ARRIVATE quel giorno (mai retroattivo). call_scartate = SOLO le prenotazioni ricevute quel giorno e poi scartate lo stesso giorno (mai riferito a prenotazioni di giorni precedenti: se una call di un giorno passato viene annullata dopo, il numero del giorno passato non si tocca, si aggiunge solo una nota testuale in call_nomi di quel giorno). lead_funnel = optin dal foglio KPI. guide = form Kajabi. li_impressioni (opzionale) = impressioni LinkedIn del giorno, dal grafico Rendimento contenuti in modalità Giornaliero. Motivazioni di annullamento call: fonte foglio Google 'Report Calendly Giornaliero (Stefania)' (id 1bPJih5riHWqz86hwkfbYybmwhCKkiWVyKxqMD9ppwDU, colonna ESITO), match per giorno di PRENOTAZIONE della call. | BACKFILL 1/9/2026: record 15/8-31/8 ricostruiti in blocco dopo un buco di 17 giorni nella scrittura dell'archivio (vedi ads_nota di ciascun record).",
+  "aggiornato": "2026-10-11T09:08:00",
+  "nota": "Un record per giorno. ads = SOLO Account 1 Meta (465327538443110, il funnel di Davide, stesse campagne dell'audit Meta): mai sommare l'Account 3 dell'agenzia (1344277446511127). Correzione 11/10/2026: i record 12/9-5/10 sommavano anche l'Account 3 e sono stati ricalcolati da Meta (valori vecchi in ads_nota). call = prenotazioni Calendly ARRIVATE quel giorno (mai retroattivo). call_scartate = SOLO le prenotazioni ricevute quel giorno e poi scartate lo stesso giorno (mai riferito a prenotazioni di giorni precedenti: se una call di un giorno passato viene annullata dopo, il numero del giorno passato non si tocca, si aggiunge solo una nota testuale in call_nomi di quel giorno). lead_funnel = optin dal foglio KPI. guide = form Kajabi. li_impressioni (opzionale) = impressioni LinkedIn del giorno, dal grafico Rendimento contenuti in modalità Giornaliero. Motivazioni di annullamento call: fonte foglio Google 'Report Calendly Giornaliero (Stefania)' (id 1bPJih5riHWqz86hwkfbYybmwhCKkiWVyKxqMD9ppwDU, colonna ESITO), match per giorno di PRENOTAZIONE della call. | BACKFILL 1/9/2026: record 15/8-31/8 ricostruiti in blocco dopo un buco di 17 giorni nella scrittura dell'archivio (vedi ads_nota di ciascun record).",
   "giorni": [
     {
       "data": "2026-09-12",
@@ -9,9 +9,9 @@
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 3,
-      "ads_spesa": 437.24,
-      "ads_click": 790,
-      "ads_impressioni": 19650,
+      "ads_spesa": 60.84,
+      "ads_click": 358,
+      "ads_impressioni": 5266,
       "parziale": false
     },
     {
@@ -21,9 +21,9 @@
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 2,
-      "ads_spesa": 571.74,
-      "ads_click": 1136,
-      "ads_impressioni": 24669,
+      "ads_spesa": 99.13,
+      "ads_click": 609,
+      "ads_impressioni": 7970,
       "parziale": false
     },
     {
@@ -33,9 +33,9 @@
       "call_nomi": [],
       "lead_funnel": 1,
       "guide": 2,
-      "ads_spesa": 513.0,
-      "ads_click": 827,
-      "ads_impressioni": 22221,
+      "ads_spesa": 76.29,
+      "ads_click": 398,
+      "ads_impressioni": 6249,
       "parziale": false
     },
     {
@@ -45,9 +45,9 @@
       "call_nomi": [],
       "lead_funnel": 1,
       "guide": 0,
-      "ads_spesa": 542.71,
-      "ads_click": 839,
-      "ads_impressioni": 24292,
+      "ads_spesa": 76.92,
+      "ads_click": 349,
+      "ads_impressioni": 6153,
       "parziale": false
     },
     {
@@ -57,9 +57,9 @@
       "call_nomi": [],
       "lead_funnel": 1,
       "guide": 0,
-      "ads_spesa": 525.92,
-      "ads_click": 744,
-      "ads_impressioni": 23585,
+      "ads_spesa": 64.81,
+      "ads_click": 298,
+      "ads_impressioni": 5475,
       "parziale": false
     },
     {
@@ -69,9 +69,9 @@
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 4,
-      "ads_spesa": 800.93,
-      "ads_click": 1078,
-      "ads_impressioni": 31987,
+      "ads_spesa": 67.04,
+      "ads_click": 403,
+      "ads_impressioni": 6005,
       "parziale": false
     },
     {
@@ -81,9 +81,9 @@
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 1,
-      "ads_spesa": 722.7,
-      "ads_click": 994,
-      "ads_impressioni": 30376,
+      "ads_spesa": 54.76,
+      "ads_click": 326,
+      "ads_impressioni": 5392,
       "parziale": false
     },
     {
@@ -93,9 +93,9 @@
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 1,
-      "ads_spesa": 741.4,
-      "ads_click": 863,
-      "ads_impressioni": 28884,
+      "ads_spesa": 65.35,
+      "ads_click": 251,
+      "ads_impressioni": 4813,
       "parziale": false
     },
     {
@@ -105,9 +105,9 @@
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 0,
-      "ads_spesa": 950.33,
-      "ads_click": 1045,
-      "ads_impressioni": 34014,
+      "ads_spesa": 111.78,
+      "ads_click": 399,
+      "ads_impressioni": 7814,
       "parziale": false
     },
     {
@@ -117,9 +117,9 @@
       "call_nomi": [],
       "lead_funnel": 1,
       "guide": 1,
-      "ads_spesa": 1360.53,
-      "ads_click": 1164,
-      "ads_impressioni": 49563,
+      "ads_spesa": 133.45,
+      "ads_click": 306,
+      "ads_impressioni": 7192,
       "parziale": false
     },
     {
@@ -129,9 +129,9 @@
       "call_nomi": [],
       "lead_funnel": 1,
       "guide": 1,
-      "ads_spesa": 1702.94,
-      "ads_click": 1384,
-      "ads_impressioni": 56124,
+      "ads_spesa": 120.89,
+      "ads_click": 343,
+      "ads_impressioni": 7717,
       "parziale": false
     },
     {
@@ -141,9 +141,9 @@
       "call_nomi": [],
       "lead_funnel": 1,
       "guide": 4,
-      "ads_spesa": 1838.19,
-      "ads_click": 1559,
-      "ads_impressioni": 69698,
+      "ads_spesa": 127.86,
+      "ads_click": 377,
+      "ads_impressioni": 8138,
       "parziale": false
     },
     {
@@ -153,9 +153,9 @@
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 0,
-      "ads_spesa": 2023.06,
-      "ads_click": 1464,
-      "ads_impressioni": 68044,
+      "ads_spesa": 114.1,
+      "ads_click": 254,
+      "ads_impressioni": 6071,
       "parziale": false
     },
     {
@@ -165,9 +165,9 @@
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 0,
-      "ads_spesa": 1717.08,
-      "ads_click": 1332,
-      "ads_impressioni": 64032,
+      "ads_spesa": 114.44,
+      "ads_click": 281,
+      "ads_impressioni": 6608,
       "parziale": false
     },
     {
@@ -177,9 +177,9 @@
       "call_nomi": [],
       "lead_funnel": 2,
       "guide": 2,
-      "ads_spesa": 1477.9,
-      "ads_click": 1214,
-      "ads_impressioni": 58299,
+      "ads_spesa": 88.77,
+      "ads_click": 223,
+      "ads_impressioni": 4948,
       "parziale": false
     },
     {
@@ -190,16 +190,16 @@
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 11,
-      "ads_spesa": 1798.4,
-      "ads_click": 1562,
-      "ads_impressioni": 65260
+      "ads_spesa": 134.3,
+      "ads_click": 481,
+      "ads_impressioni": 10697
     },
     {
       "data": "2026-09-28",
       "parziale": false,
-      "ads_spesa": 2107.77,
-      "ads_click": 1567,
-      "ads_impressioni": 86248,
+      "ads_spesa": 103.55,
+      "ads_click": 330,
+      "ads_impressioni": 9270,
       "call": 0,
       "call_scartate": 0,
       "lead_funnel": 0,
@@ -209,9 +209,9 @@
     {
       "data": "2026-09-29",
       "parziale": false,
-      "ads_spesa": 1711.91,
-      "ads_click": 1549,
-      "ads_impressioni": 78811,
+      "ads_spesa": 144.71,
+      "ads_click": 432,
+      "ads_impressioni": 12006,
       "call": 0,
       "call_scartate": 0,
       "lead_funnel": 0,
@@ -226,10 +226,9 @@
       "call_nomi": [],
       "lead_funnel": 1,
       "guide": 0,
-      "ads_spesa": 1981.73,
-      "ads_click": 1683,
-      "ads_impressioni": 84827,
-      "lead_nota": "1 lead dal foglio KPI (fonte non tracciata, nessun utm in riga)."
+      "ads_spesa": 90.78,
+      "ads_click": 247,
+      "ads_impressioni": 7192
     },
     {
       "data": "2026-10-01",
@@ -239,10 +238,9 @@
       "call_nomi": [],
       "lead_funnel": 1,
       "guide": 1,
-      "ads_spesa": 1780.97,
-      "ads_click": 1658,
-      "ads_impressioni": 79541,
-      "lead_nota": "1 lead dal foglio KPI (LinkedIn/magnete, guida-comment-marketing, Pietro Gritto). 1 guida Kajabi (Pietro Gritto, 35 Marketing Skills per Claude Code) — stessa persona del lead funnel con guida diversa."
+      "ads_spesa": 188.43,
+      "ads_click": 529,
+      "ads_impressioni": 17520
     },
     {
       "data": "2026-10-02",
@@ -252,9 +250,9 @@
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 0,
-      "ads_spesa": 944.7,
-      "ads_click": 1191,
-      "ads_impressioni": 43151
+      "ads_spesa": 139.05,
+      "ads_click": 584,
+      "ads_impressioni": 11734
     },
     {
       "data": "2026-10-03",
@@ -264,9 +262,9 @@
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 0,
-      "ads_spesa": 991.58,
-      "ads_click": 1209,
-      "ads_impressioni": 43157
+      "ads_spesa": 134.78,
+      "ads_click": 589,
+      "ads_impressioni": 10403
     },
     {
       "data": "2026-10-04",
@@ -276,9 +274,9 @@
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 1,
-      "ads_spesa": 1422.01,
-      "ads_click": 1412,
-      "ads_impressioni": 54765
+      "ads_spesa": 142.58,
+      "ads_click": 464,
+      "ads_impressioni": 9105
     },
     {
       "data": "2026-10-05",
@@ -288,9 +286,9 @@
       "call_nomi": [],
       "lead_funnel": 0,
       "guide": 69,
-      "ads_spesa": 837.25,
-      "ads_click": 1127,
-      "ads_impressioni": 30562
+      "ads_spesa": 128.38,
+      "ads_click": 559,
+      "ads_impressioni": 7916
     },
     {
       "data": "2026-10-06",
