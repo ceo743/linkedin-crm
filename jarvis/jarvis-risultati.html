@@ -362,6 +362,7 @@ a.postlink:hover .t{color:var(--cyan);text-decoration:underline}
     <button data-g="1">ieri</button>
     <button data-g="3">ultimi 3 giorni</button>
     <button data-g="7">ultimi 7 giorni</button>
+    <button data-g="30">ultimi 30 giorni</button>
   </div>
   <div style="display:flex;gap:8px;align-items:center;font-size:12px;color:var(--muted)">
     <span>oppure</span>
@@ -2196,7 +2197,7 @@ function salvaHeroOrig(){
 }
 function nomePeriodo(g,da,a){
   if(da&&a) return 'periodo scelto';
-  return ({oggi:'oggi','1':'ieri','3':'ultimi 3 giorni','7':'ultimi 7 giorni'})[g]||'periodo';
+  return ({oggi:'oggi','1':'ieri','3':'ultimi 3 giorni','7':'ultimi 7 giorni','30':'ultimi 30 giorni'})[g]||'periodo';
 }
 function scriviHero(kw, color, label, valore, deltaTxt, sub){
   const c=heroCard(kw); if(!c) return;
