@@ -155,6 +155,7 @@
 
 <footer class="fade" style="animation-delay:.72s">
   Funnel consulenza 1:1 (analisi gratuita + call Calendly) · account Meta 465327538443110 · via JARVIS · finestra ultimi 30 giorni.<br>
+  Call = prenotazioni Calendly valide dal foglio Lead (non annullate, arrivate da Meta), come nell'audit delle pubblicità. I segnali del pixel Meta non sono call.<br>
   <a id="link-ads-manager" href="#" target="_blank">Apri in Meta Ads Manager →</a> · <a href="account1-ads-dati.json" target="_blank">dati grezzi (JSON)</a>
 </footer>
 
@@ -300,7 +301,8 @@ function render(d, live){
 }
 
 function simula(){
-  const t = D.totali;
+  // 11/10: lo schema per periodo non ha D.totali (simulatore rotto): si usano i totali del periodo mostrato
+  const t = (window._iaPeriodo || D).totali;
   const val = +document.getElementById('s-val').value;
   const clo = +document.getElementById('s-clo').value;
   document.getElementById('l-val').textContent = eur0(val);
@@ -396,7 +398,7 @@ function jvAvvia(){
 }
 document.getElementById('jarvis-voce-btn').addEventListener('click', jvAvvia);
 
-const EMBEDDED = {"aggiornato":"2026-07-17T08:20:00+02:00","account":{"nome":"Consulenza 1:1","obiettivo":"Analisi gratuita + call su Calendly","id":"465327538443110","valuta":"EUR","periodo":"ultimi 30 giorni","giorni_periodo":30,"link_ads_manager":"https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110"},"totali":{"spesa":3144.35,"impressions":155837,"reach":61499,"frequency":2.53,"click":3664,"ctr":2.35,"cpc":0.86,"cpm":20.18,"call":13,"costo_call_migliore":210.55},"ipotesi_default":{"valore_cliente":1500,"tasso_chiusura":25},"campagne":[]};
+const EMBEDDED = {"aggiornato":"2026-07-17T08:20:00+02:00","account":{"nome":"Consulenza 1:1","obiettivo":"Analisi gratuita + call su Calendly","id":"465327538443110","valuta":"EUR","periodo":"ultimi 30 giorni","giorni_periodo":30,"link_ads_manager":"https://business.facebook.com/adsmanager/manage/campaigns?act=465327538443110"},"totali":{"spesa":3144.35,"impressions":155837,"reach":61499,"frequency":2.53,"click":3664,"ctr":2.35,"cpc":0.86,"cpm":20.18,"call":null,"costo_call_migliore":null},"ipotesi_default":{"valore_cliente":1500,"tasso_chiusura":25},"campagne":[]};
 
 carica();
 </script>
