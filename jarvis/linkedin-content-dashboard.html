@@ -217,7 +217,7 @@ function renderAll(){
     {l:"Impressioni · 7gg",v:k.impressioni,n:`<span class="up">${k.impressioni_delta}</span> vs 7 giorni precedenti`},
     {l:"Utenti raggiunti",v:k.reach,n:"reach organica 7 giorni"},
     {l:"Interazioni · 7gg",v:k.interazioni,n:`engagement ${k.engagement} · ${k.reazioni} reazioni · ${k.commenti} commenti`},
-    {l:"Call prenotate · 7gg",v:k.call,extra:` <small>→ ${k.call_target} in target</small>`,n:"l'obiettivo di tutto: la call"}
+    {l:(k.call_ads!=null?"Call prenotate valide · 7gg":"Call prenotate · 7gg"),v:k.call,extra:(k.call_ads!=null?` <small>→ ${k.call_ads} dalla pubblicità</small>`:` <small>→ ${k.call_target} in target</small>`),n:"l'obiettivo di tutto: la call"} /* ⛔ 11/10/2026: call = prenotazioni valide, stessa regola della dashboard Consulenza e dell'audit */
   ].map((c,i)=>`<div class="card kpi fade" style="animation-delay:${.05+i*.05}s">
     <div class="label">${c.l}</div>
     <div class="value"><span data-count="${c.v}">0</span>${c.extra||""}</div>
