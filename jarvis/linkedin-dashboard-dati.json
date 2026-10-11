@@ -1,6 +1,6 @@
 {
-  "aggiornato": "2026-10-10 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; agenti.outreach riletto, numeri invariati 59/59/15; agenti.newsletter aggiornato a Guida 020; agenti.analyst riletto, ieri = 9/10; agenti.blog non riletto in questo giro, numeri invariati)",
-  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 3 - 9 ottobre 2026",
+  "aggiornato": "2026-10-11 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; agenti.outreach riletto, numeri invariati 59/59/15; agenti.newsletter invariato a Guida 020; agenti.analyst riletto, ieri = 10/10; agenti.blog non riletto in questo giro, numeri invariati)",
+  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 4 - 10 ottobre 2026",
   "kpi": {
     "follower": 233118,
     "follower_delta": "+163",
@@ -209,15 +209,16 @@
         }
       ],
       "ieri": {
-        "data": "9 ottobre",
+        "data": "10 ottobre",
         "call": 1,
-        "spesa": "146,48€ (solo Account 1, giornata intera via time_range; Account 3 confermato a zero)",
-        "click": 605,
-        "dettaglio": "1 prenotazione nuova (fonte non tracciata, per il 12/10); 1 lead funnel dal foglio KPI (form non ancora tracciato); 3 guide Kajabi; 0 vendite chiuse"
+        "spesa": "120,34€ (solo Account 1, giornata intera via time_range; Account 3 confermato a zero)",
+        "click": 413,
+        "dettaglio": "1 prenotazione nuova (Meta Ads, rebooking di un lead di settembre, per il 20/10); 0 lead funnel; 1 guida Kajabi; 0 vendite chiuse"
       },
       "agenda": [
         "Lun 12/10 · 12:00 — fonte non tracciata",
-        "Lun 12/10 · 12:30 — fonte non tracciata"
+        "Lun 12/10 · 12:30 — fonte non tracciata",
+        "Mar 20/10 · 09:30 — Meta Ads"
       ]
     }
   }
