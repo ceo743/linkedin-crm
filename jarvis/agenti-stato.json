@@ -1,5 +1,5 @@
 {
-  "aggiornato": "9 ottobre, ore 18:55",
+  "aggiornato": "11 ottobre, ore 08:45",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
@@ -67,23 +67,15 @@
     {
       "id": "newsletter-venerdi",
       "nome": "Newsletter Venerdì",
-      "sottotitolo": "LinkedIn e IA — guida #019 Decision Maker (uscita 06/10), canale prenotazioni resta chiuso",
+      "sottotitolo": "Routine spenta l'11 ottobre su decisione di Davide: canale chiuso dal direttore marketing, zero prenotazioni in 7 settimane. Il conteggio lo fa il consulente dei numeri.",
       "colore": "amber",
-      "stato": "attenzione",
-      "ultima_run": "9 ottobre, ore 18:38 (riverifica infragiornaliera)",
-      "prossima_run": "16 ottobre",
+      "stato": "ok",
+      "ultima_run": "9 ottobre, ore 18:38 (ultima prima dello spegnimento)",
+      "prossima_run": "nessuna (routine spenta l'11 ottobre)",
       "verifiche": [
         {
           "ok": true,
-          "testo": "Dati Calendly reali via API Zapier, finestra 2-9 ottobre (30 eventi), nessuno riconducibile alla guida PDF"
-        },
-        {
-          "ok": false,
-          "testo": "cta_finale/cta_intermedia, post_optin, nurturing: zero prenotazioni anche questa settimana, stesso quadro dal 25 agosto"
-        },
-        {
-          "ok": true,
-          "testo": "Verdetto CMO del 25/09 confermato, non rivalutato (dato identico): canale prenotazioni newsletter resta chiuso, nessuna nuova proposta di restyling CTA"
+          "testo": "Spenta l'11 ottobre con il sì di Davide, dopo la verifica del direttore tecnico: niente altro la usava. Il metodo di conteggio Calendly è salvato nella memoria."
         }
       ],
       "azioni": [],

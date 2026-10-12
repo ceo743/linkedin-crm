@@ -1,6 +1,6 @@
 {
-  "aggiornato": "2026-10-11 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; agenti.outreach riletto, numeri invariati 59/59/15; agenti.newsletter invariato a Guida 020; agenti.analyst riletto, ieri = 10/10; agenti.blog non riletto in questo giro, numeri invariati)",
-  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 4 - 10 ottobre 2026",
+  "aggiornato": "2026-10-12 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target aggiornati da jarvis-giorni.json; agenti.outreach riletto, numeri invariati 59/59/15; agenti.newsletter invariato a Guida 020; agenti.analyst riletto, ieri = 11/10; agenti.blog non riletto in questo giro, numeri invariati)",
+  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 5 - 11 ottobre 2026",
   "kpi": {
     "follower": 233118,
     "follower_delta": "+163",
@@ -11,8 +11,8 @@
     "engagement": "0,14%",
     "reazioni": 60,
     "commenti": 0,
-    "call": 6,
-    "call_target": 6,
+    "call": 5,
+    "call_target": 5,
     "call_ads": 1,
     "call_regola": "11/10/2026: call = prenotazioni valide dal foglio Lead (annullate escluse), tutte le fonti; call_ads = di cui dalla pubblicità, stessa regola della dashboard Consulenza e dell'audit"
   },
@@ -94,27 +94,27 @@
       ],
       "ultime_risposte": [
         {
-          "nome": "",
+          "nome": "Francesco Cerchiara",
           "ruolo": "Commercialista (Cosenza)",
           "data": "recente"
         },
         {
-          "nome": "",
+          "nome": "Elena Maria Foglia",
           "ruolo": "attività immobiliare propria",
           "data": "recente"
         },
         {
-          "nome": "",
+          "nome": "Giuseppe D'Imperio",
           "ruolo": "Applied Management",
           "data": "recente"
         },
         {
-          "nome": "",
+          "nome": "Gianluca Falduto",
           "ruolo": "",
           "data": "recente"
         },
         {
-          "nome": "",
+          "nome": "Paolo Marciante",
           "ruolo": "",
           "data": "recente"
         }
@@ -211,15 +211,14 @@
         }
       ],
       "ieri": {
-        "data": "10 ottobre",
+        "data": "11 ottobre",
         "call": 0,
-        "spesa": "120,34€ (solo Account 1, giornata intera via time_range; Account 3 confermato a zero)",
+        "spesa": "144,96€ (solo Account 1, giornata intera via time_range)",
         "click": 413,
-        "dettaglio": "0 call valide nuove sul foglio Lead (una prenotazione Meta Ads su Calendly per il 20/10 è il rebooking di un lead di settembre: non è una call nuova per la regola unica); 0 lead funnel; 1 guida Kajabi; 0 vendite chiuse"
+        "dettaglio": "0 call valide nuove sul foglio Lead; 0 lead funnel; 3 guide Kajabi (Social Selling in Automatico x2, Il Venditore che non Dorme x1); 0 vendite chiuse"
       },
       "agenda": [
         "Lun 12/10 · 12:00 — fonte non tracciata",
-        "Lun 12/10 · 12:30 — fonte non tracciata",
         "Mar 20/10 · 09:30 — Meta Ads"
       ]
     }
