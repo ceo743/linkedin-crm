@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-12T06:14:55+02:00",
+  "aggiornato": "2026-10-12T06:25:15+02:00",
   "workshop": {
     "nome": "Workshop Commercialisti",
     "sottotitolo": "Webinar gratuito su Zoom, un'edizione ogni 15 giorni",
@@ -23,7 +23,7 @@
     "da_ads": 122,
     "da_email": 0,
     "diretti": 7,
-    "spesa": 939.29,
+    "spesa": 939.74,
     "costo_per_iscritto": 7.7,
     "lead_meta": 105,
     "utm_conferma": 11,
@@ -31,10 +31,10 @@
     "raccolta_al": "2026-10-12",
     "giorni_pubblicita": 12,
     "meta": {
-      "spesa": 939.29,
-      "impressions": 77017,
+      "spesa": 939.74,
+      "impressions": 77059,
       "campagne_sommate": 12,
-      "click": 4859,
+      "click": 4861,
       "ctr": 6.31,
       "cpc": 0.19,
       "cpm": 12.2,
@@ -92,7 +92,7 @@
       "da_ads": 122,
       "da_email": 0,
       "diretti": 7,
-      "spesa": 939.29,
+      "spesa": 939.74,
       "costo_per_iscritto": 7.7,
       "lead_meta": 105,
       "utm_conferma": 11,
@@ -100,10 +100,10 @@
       "raccolta_al": "2026-10-12",
       "giorni_pubblicita": 12,
       "meta": {
-        "spesa": 939.29,
-        "impressions": 77017,
+        "spesa": 939.74,
+        "impressions": 77059,
         "campagne_sommate": 12,
-        "click": 4859,
+        "click": 4861,
         "ctr": 6.31,
         "cpc": 0.19,
         "cpm": 12.2,
@@ -134,7 +134,7 @@
       "stato": "ACTIVE",
       "in_corsa": true,
       "principale": true,
-      "spesa": 1477.8,
+      "spesa": 1478.25,
       "lead_meta": 263,
       "budget_giornaliero": 100.0,
       "inizio": "2026-09-07",
@@ -178,9 +178,9 @@
     "primo_iscritto": "2026-08-19"
   },
   "spesa": {
-    "oggi": 11.56,
+    "oggi": 12.01,
     "ieri": 101.59,
-    "totale": 1855.9,
+    "totale": 1856.35,
     "tetto": null,
     "residuo": null,
     "budget_giornaliero": 100.0,
@@ -195,15 +195,15 @@
   },
   "meta": {
     "oggi": {
-      "spesa": 11.56,
-      "impressions": 532,
-      "reach": 469,
-      "frequency": 1.13,
+      "spesa": 12.01,
+      "impressions": 574,
+      "reach": 488,
+      "frequency": 1.18,
       "campagne_sommate": 1,
-      "click": 37,
-      "ctr": 6.95,
+      "click": 39,
+      "ctr": 6.79,
       "cpc": 0.31,
-      "cpm": 21.73,
+      "cpm": 20.92,
       "lead_meta": 0,
       "costo_lead_meta": null
     },
@@ -221,12 +221,12 @@
       "costo_lead_meta": 8.47
     },
     "totale": {
-      "spesa": 1855.9,
-      "impressions": 188679,
+      "spesa": 1856.35,
+      "impressions": 188721,
       "reach": null,
       "frequency": null,
       "campagne_sommate": 2,
-      "click": 11713,
+      "click": 11715,
       "ctr": 6.21,
       "cpc": 0.16,
       "cpm": 9.84,
@@ -1561,12 +1561,12 @@
       "cumulato": 422,
       "edizione": "2026-10-15",
       "cumulato_edizione": 127,
-      "spesa": 11.56,
+      "spesa": 12.01,
       "per_edizione": {}
     }
   ],
   "pubblicita": {
-    "letto": "2026-10-12T06:14:46+02:00",
+    "letto": "2026-10-12T06:25:07+02:00",
     "inserzioni_lette": 101,
     "senza_link": 0,
     "per_edizione": [
@@ -2369,7 +2369,7 @@
         "totale": {
           "iscritti": 129,
           "da_ads": 122,
-          "spesa": 939.29,
+          "spesa": 939.74,
           "spesa_inserzioni": 939.14,
           "costo_per_iscritto": 7.7,
           "spesa_zero_iscritti": 43.89,
@@ -2379,7 +2379,7 @@
         "letture": [
           "Porta più iscritti: «[CODEX] AUTO2 PRINCIPALE 2026-10-04 SENZA DATA», 35 su 122 arrivati dalla pubblicità (29%), 7,98 € l'uno.",
           "Costa di più per iscritto: «signor Rossi», 16,79 € a iscritto (3 iscritti con 50,36 €).",
-          "Spesa andata a pubblicità con 0 iscritti: 43,89 € su 939,29 € (5%), in 13 pubblicità (le più care: «SENZA DATA stile Sibill 2B Ti dico cosa NON fa» 8,63 €, «stile Sibill B» 7,77 €, «SENZA DATA Il cliente chiama attore AI» 5,59 €)."
+          "Spesa andata a pubblicità con 0 iscritti: 43,89 € su 939,74 € (5%), in 13 pubblicità (le più care: «SENZA DATA stile Sibill 2B Ti dico cosa NON fa» 8,63 €, «stile Sibill B» 7,77 €, «SENZA DATA Il cliente chiama attore AI» 5,59 €)."
         ]
       },
       {
@@ -2948,7 +2948,7 @@
       "totale": {
         "iscritti": 422,
         "da_ads": 387,
-        "spesa": 1855.9,
+        "spesa": 1856.35,
         "costo_per_iscritto": 4.8,
         "spesa_zero_iscritti": 53.89,
         "pubblicita": 45
@@ -2956,7 +2956,7 @@
       "letture": [
         "Porta più iscritti: «Video AI F24 voce Eleven», 142 su 387 arrivati dalla pubblicità (37%), 2,91 € l'uno.",
         "Costa di più per iscritto: «signor Rossi», 16,79 € a iscritto (3 iscritti con 50,36 €).",
-        "Spesa andata a pubblicità con 0 iscritti: 53,89 € su 1.855,90 € (3%), in 22 pubblicità (le più care: «SENZA DATA stile Sibill 2B Ti dico cosa NON fa» 8,63 €, «stile Sibill B» 7,77 €, «SENZA DATA Il cliente chiama attore AI» 5,59 €)."
+        "Spesa andata a pubblicità con 0 iscritti: 53,89 € su 1.856,35 € (3%), in 22 pubblicità (le più care: «SENZA DATA stile Sibill 2B Ti dico cosa NON fa» 8,63 €, «stile Sibill B» 7,77 €, «SENZA DATA Il cliente chiama attore AI» 5,59 €)."
       ]
     }
   },
