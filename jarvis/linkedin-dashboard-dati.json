@@ -1,6 +1,6 @@
 {
-  "aggiornato": "2026-10-14 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target/call_ads aggiornati da jarvis-giorni.json; agenti.outreach riletto, numeri invariati 59/59/15; agenti.newsletter invariato a Guida 020; agenti.analyst riletto, ieri = 13/10; agenti.blog non riletto in questo giro, numeri invariati)",
-  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 7 - 13 ottobre 2026",
+  "aggiornato": "2026-10-15 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target/call_ads aggiornati da jarvis-giorni.json; agenti.outreach riletto, numeri invariati 59/59/15; agenti.newsletter invariato a Guida 020; agenti.analyst riletto, ieri = 14/10; agenti.blog non riletto in questo giro, numeri invariati)",
+  "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 8 - 14 ottobre 2026",
   "kpi": {
     "follower": 233118,
     "follower_delta": "+163",
@@ -11,8 +11,8 @@
     "engagement": "0,14%",
     "reazioni": 60,
     "commenti": 0,
-    "call": 3,
-    "call_target": 3,
+    "call": 4,
+    "call_target": 4,
     "call_ads": 1,
     "call_regola": "11/10/2026: call = prenotazioni valide dal foglio Lead (annullate escluse), tutte le fonti; call_ads = di cui dalla pubblicità, stessa regola della dashboard Consulenza e dell'audit"
   },
@@ -211,14 +211,16 @@
         }
       ],
       "ieri": {
-        "data": "13 ottobre",
-        "call": 0,
-        "spesa": "140,53€ (solo Account 1, giornata intera via time_range)",
-        "click": 400,
-        "dettaglio": "0 call valide (2 prenotazioni del 7/10 annullate da noi, contate su quel giorno); 1 lead funnel; 4 guide Kajabi; 0 vendite chiuse"
+        "data": "14 ottobre",
+        "call": 1,
+        "spesa": "124,69€ (solo Account 1, giornata intera via time_range)",
+        "click": 452,
+        "dettaglio": "1 call valida (SEO); 1 lead funnel; 5 guide Kajabi; 0 vendite chiuse"
       },
       "agenda": [
-        "Mer 21/10 · 09:30 — Commercialista AI"
+        "Lun 19/10 · 12:00 — Consulenza Strategica Gratuita LinkedIn",
+        "Mer 21/10 · 09:30 — Commercialista AI",
+        "Gio 22/10 · 14:30 — Commercialista AI"
       ]
     }
   }

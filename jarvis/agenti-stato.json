@@ -1,68 +1,36 @@
 {
-  "aggiornato": "11 ottobre, ore 08:45",
+  "aggiornato": "14 ottobre, ore 07:40",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
       "id": "newsletter-martedi",
       "nome": "Newsletter Martedì",
-      "sottotitolo": "LinkedIn e IA — Guida 020 Agente Prospezione IA completata",
+      "sottotitolo": "LinkedIn e IA — produzione in pausa, scorta di 5",
       "colore": "cyan",
-      "stato": "attenzione",
-      "ultima_run": "9 ottobre, ore 18:55",
+      "stato": "ok",
+      "ultima_run": "14 ottobre, ore 07:40",
       "prossima_run": "prossimo martedì",
       "verifiche": [
         {
           "ok": true,
-          "testo": "Pulizia preliminare: nessuna cartella/Doc \"020\" anomala trovata, partenza pulita"
+          "testo": "Scorta controllata: 5 newsletter pronte non ancora pubblicate (#016 20 ott, #017 27 ott, #018 3 nov, #019 10 nov, #020 17 nov)"
         },
         {
           "ok": true,
-          "testo": "Tema nuovo scelto: Sales Assistant di LinkedIn Sales Navigator (agente IA di prospezione in beta, solo inglese, piano Advanced Plus) — fatti verificati con WebSearch su fonti ufficiali e indipendenti, nessun titolo duplicato"
+          "testo": "Scorta > 2: produzione in pausa per questo giro, come da regola SCORTA-NEWSLETTER-v1 (11/10/2026). Nessuna guida/landing/repo nuovi."
         },
         {
           "ok": true,
-          "testo": "Articolo Doc #020 creato in Projects/Newsletter-Claude-Martedì/, contenuto verificato con read_file_content (accenti ed emoji integri, chiusura in stile \"Impara da me\")"
-        },
-        {
-          "ok": true,
-          "testo": "Guida PDF generata da codice (genera_brochure_agenteprospezione.py), 12 pagine, CTA doppia verificata visivamente + link Calendly 200"
-        },
-        {
-          "ok": true,
-          "testo": "Repo dedicato ceo743/guida-agente-prospezione-ia-linkedin creato, GitHub Pages attivo, DNS CNAME su Kajabi aggiunto (confermato via DNS-over-HTTPS)"
-        },
-        {
-          "ok": true,
-          "testo": "Form Kajabi 2149748643 creato (duplicato da #019, automazioni ricreate a mano perché il Duplicate di Kajabi non le copia), verificato end-to-end: submission 302 → email di consegna arrivata su ceo@davidecaiazzo.it in meno di 1 minuto → link risolto al PDF Pages corretto"
-        },
-        {
-          "ok": true,
-          "testo": "Card 20 aggiunta in cima alla hub newsletterguide.davidecaiazzo.it, confermata live (200)"
-        },
-        {
-          "ok": true,
-          "testo": "Certificato TLS del sottodominio guida-agente-prospezione-ia-linkedin.davidecaiazzo.it CONFERMATO: landing, PDF e link email rispondono 200 in HTTPS strict (senza -k)"
-        },
-        {
-          "ok": false,
-          "testo": "WhatsApp a Davide NON tentato: verificato di persona che web.whatsapp.com non ha sessione attiva nella routine non presidiata (limite strutturale confermato) — nessuna email sostitutiva perché non è una decisione da prendere, solo il promemoria di sempre per registrare il video"
+          "testo": "Newsletter #015 (13 ott) risulta pubblicata sul blog"
         }
       ],
       "azioni": [
         {
           "testo": "Apri cartella Newsletter-Claude-Martedì",
           "url": "https://drive.google.com/drive/folders/1a8XCuzdUWR7Z_hOsq7Yl8zX61-2TAs_T"
-        },
-        {
-          "testo": "Apri articolo Doc #020",
-          "url": "https://docs.google.com/document/d/17L_0ZJQUreDCJP5xhClSCl6qbglOzc_MrYnzTnAmm3c/edit"
-        },
-        {
-          "testo": "Apri landing guida #020",
-          "url": "https://guida-agente-prospezione-ia-linkedin.davidecaiazzo.it/"
         }
       ],
-      "nota": "Guida 020 \"Il tuo agente di prospezione fatto con l'IA\" prodotta e verificata end-to-end, HTTPS strict confermato (pubblicazione mar 17/11). Manca solo il video di Davide."
+      "nota": "In pausa, 5 pronte. Riprende quando la scorta scende a 2 o meno."
     },
     {
       "id": "newsletter-venerdi",
