@@ -1,5 +1,5 @@
 {
-  "aggiornato": "14 ottobre, ore 07:40",
+  "aggiornato": "15 ottobre, ore 08:24",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
@@ -8,7 +8,7 @@
       "sottotitolo": "LinkedIn e IA — produzione in pausa, scorta di 5",
       "colore": "cyan",
       "stato": "ok",
-      "ultima_run": "14 ottobre, ore 07:40",
+      "ultima_run": "15 ottobre, ore 08:24",
       "prossima_run": "prossimo martedì",
       "verifiche": [
         {
