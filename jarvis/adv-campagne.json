@@ -1,0 +1,34 @@
+{
+ "aggiornato": "2026-10-19T15:20:00+02:00",
+ "fonte": "Meta Ads, account 465327538443110, sola lettura; solo campagne «(CLAUDE) … Commercialista AI|Soldea | …»",
+ "campagne": [
+  {
+   "id": "120256128676540348",
+   "nome": "(CLAUDE) 2026-10-19 Commercialista AI | CHIAMATE SALES",
+   "stato": "ACTIVE",
+   "periodi": {
+    "7g": {
+     "spesa": 0.0
+    },
+    "max": {
+     "spesa": 8.34
+    }
+   }
+  },
+  {
+   "id": "120255475473930348",
+   "nome": "(CLAUDE) 2026-09-07 Commercialista AI | ISCRITTI WORKSHOP",
+   "stato": "ACTIVE",
+   "periodi": {
+    "7g": {
+     "spesa": 513.45,
+     "risultati": 62
+    },
+    "max": {
+     "spesa": 1996.03,
+     "risultati": 325
+    }
+   }
+  }
+ ]
+}
