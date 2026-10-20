@@ -3,22 +3,6 @@
   "nota": "Un record per giorno. ads = SOLO Account 1 Meta (465327538443110, il funnel di Davide, stesse campagne dell'audit Meta): mai sommare l'Account 3 dell'agenzia (1344277446511127). Correzione 11/10/2026: i record 12/9-5/10 sommavano anche l'Account 3 e sono stati ricalcolati da Meta (valori vecchi in ads_nota). ⛔ 11/10/2026: call = prenotazioni valide, stessa regola della dashboard Consulenza e dell'audit (Davide: numeri giusti). call = prenotazioni Calendly VALIDE del giorno dal foglio Lead, tutte le fonti, annullate escluse (si ricalcola ogni giorno su tutto l'archivio con call_valide.py: un'annullata dopo esce anche dal giorno passato). call_ads = di cui portate dalla pubblicità Meta (stessa regola della dashboard Consulenza e dell'audit). call_annullate = solo informazione, non sono call. call_fonti = call valide per fonte. call_scartate = 0 (le annullate sono già fuori da call). ads_spesa_consulenza = spesa Meta delle sole campagne Consulenza (quelle che portano call). call_nomi resta il diario interno dalle email Calendly (anche annullate), non è un conteggio. lead_funnel = optin dal foglio KPI. guide = form Kajabi. li_impressioni (opzionale) = impressioni LinkedIn del giorno, dal grafico Rendimento contenuti in modalità Giornaliero. Motivazioni di annullamento call: fonte foglio Google 'Report Calendly Giornaliero (Stefania)' (id 1bPJih5riHWqz86hwkfbYybmwhCKkiWVyKxqMD9ppwDU, colonna ESITO), match per giorno di PRENOTAZIONE della call. | BACKFILL 1/9/2026: record 15/8-31/8 ricostruiti in blocco dopo un buco di 17 giorni nella scrittura dell'archivio (vedi ads_nota di ciascun record).",
   "giorni": [
     {
-      "data": "2026-09-19",
-      "call": 0,
-      "call_scartate": 0,
-      "call_nomi": [],
-      "lead_funnel": 0,
-      "guide": 1,
-      "ads_spesa": 65.35,
-      "ads_click": 251,
-      "ads_impressioni": 4813,
-      "parziale": false,
-      "call_ads": 0,
-      "call_annullate": 1,
-      "call_fonti": {},
-      "ads_spesa_consulenza": 32.02
-    },
-    {
       "data": "2026-09-20",
       "call": 0,
       "call_scartate": 0,
@@ -499,25 +483,41 @@
       "call_fonti": {
         "Meta Ads": 1
       },
-      "ads_spesa_consulenza": 95.38
+      "ads_spesa_consulenza": 95.41
     },
     {
       "data": "2026-10-19",
-      "parziale": true,
-      "ads_spesa": 49.95,
-      "ads_click": 76,
-      "ads_impressioni": 2445,
+      "parziale": false,
+      "ads_spesa": 129.49,
+      "ads_click": 202,
+      "ads_impressioni": 5991,
       "call": 0,
       "call_ads": 0,
       "call_annullate": 0,
       "call_fonti": {},
       "call_scartate": 0,
       "call_nomi": [],
-      "lead_funnel": 1,
-      "guide": 8,
-      "ads_spesa_consulenza": 31.07
+      "lead_funnel": 2,
+      "guide": 9,
+      "ads_spesa_consulenza": 74.87
+    },
+    {
+      "data": "2026-10-20",
+      "parziale": true,
+      "ads_spesa": 21.12,
+      "ads_click": 33,
+      "ads_impressioni": 602,
+      "call": 0,
+      "call_ads": 0,
+      "call_annullate": 0,
+      "call_fonti": {},
+      "call_scartate": 0,
+      "call_nomi": [],
+      "lead_funnel": 0,
+      "guide": 0,
+      "ads_spesa_consulenza": 12.73
     }
   ],
   "regola_call": "Call valida = prenotazione Calendly del foglio Lead non annullata (le annullate non contano mai). Call da pubblicità = call valida arrivata da Meta (utm_source Meta in uno dei tre blocchi). Stessa regola della dashboard Consulenza e dell'audit Meta (11/10/2026).",
-  "call_fonte": "foglio Lead KPI letto il 2026-10-19T13:53:35+02:00"
+  "call_fonte": "foglio Lead KPI letto il 2026-10-20T05:56:51+02:00"
 }
