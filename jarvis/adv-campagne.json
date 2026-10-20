@@ -1,6 +1,7 @@
 {
- "aggiornato": "2026-10-19T15:20:00+02:00",
- "fonte": "Meta Ads, account 465327538443110, sola lettura; solo campagne «(CLAUDE) … Commercialista AI|Soldea | …»",
+ "aggiornato": "2026-10-20T04:10:00+02:00",
+ "fonte": "Meta Ads, account 465327538443110, sola lettura; solo campagne «(CLAUDE) … Commercialista AI|Soldea | …»; giorni: spesa e risultati di ogni giorno (ora di Roma), l'ultimo può essere parziale",
+ "fino_al": "2026-10-20",
  "campagne": [
   {
    "id": "120256128676540348",
@@ -8,10 +9,21 @@
    "stato": "ACTIVE",
    "periodi": {
     "7g": {
-     "spesa": 0.0
+     "spesa": 14.96,
+     "risultati": 1
     },
     "max": {
-     "spesa": 8.34
+     "spesa": 15.46,
+     "risultati": 1
+    }
+   },
+   "giorni": {
+    "2026-10-19": {
+     "spesa": 14.96,
+     "risultati": 1
+    },
+    "2026-10-20": {
+     "spesa": 0.5
     }
    }
   },
@@ -21,12 +33,187 @@
    "stato": "ACTIVE",
    "periodi": {
     "7g": {
-     "spesa": 513.45,
-     "risultati": 62
+     "spesa": 442.64,
+     "risultati": 45
     },
     "max": {
-     "spesa": 1996.03,
+     "spesa": 2022.59,
      "risultati": 325
+    }
+   },
+   "giorni": {
+    "2026-09-07": {
+     "spesa": 18.09,
+     "risultati": 8
+    },
+    "2026-09-08": {
+     "spesa": 43.1,
+     "risultati": 16
+    },
+    "2026-09-09": {
+     "spesa": 40.73,
+     "risultati": 9
+    },
+    "2026-09-10": {
+     "spesa": 21.8,
+     "risultati": 4
+    },
+    "2026-09-11": {
+     "spesa": 23.47,
+     "risultati": 4
+    },
+    "2026-09-12": {
+     "spesa": 27.45,
+     "risultati": 16
+    },
+    "2026-09-13": {
+     "spesa": 35.8,
+     "risultati": 14
+    },
+    "2026-09-14": {
+     "spesa": 23.87,
+     "risultati": 7
+    },
+    "2026-09-15": {
+     "spesa": 24.84,
+     "risultati": 8
+    },
+    "2026-09-16": {
+     "spesa": 21.72,
+     "risultati": 3
+    },
+    "2026-09-17": {
+     "spesa": 24.33,
+     "risultati": 4
+    },
+    "2026-09-18": {
+     "spesa": 22.86,
+     "risultati": 9
+    },
+    "2026-09-19": {
+     "spesa": 21.14,
+     "risultati": 10
+    },
+    "2026-09-20": {
+     "spesa": 30.45,
+     "risultati": 9
+    },
+    "2026-09-21": {
+     "spesa": 25.44,
+     "risultati": 6
+    },
+    "2026-09-22": {
+     "spesa": 24.39,
+     "risultati": 9
+    },
+    "2026-09-23": {
+     "spesa": 25.34,
+     "risultati": 12
+    },
+    "2026-09-24": {
+     "spesa": 24.32,
+     "risultati": 3
+    },
+    "2026-09-25": {
+     "spesa": 24.74,
+     "risultati": 6
+    },
+    "2026-09-26": {
+     "spesa": 20.04,
+     "risultati": 5
+    },
+    "2026-09-27": {
+     "spesa": 24.46,
+     "risultati": 6
+    },
+    "2026-09-28": {
+     "spesa": 24.25,
+     "risultati": 4
+    },
+    "2026-09-29": {
+     "spesa": 32.88,
+     "risultati": 3
+    },
+    "2026-09-30": {
+     "spesa": 7.41,
+     "risultati": 3
+    },
+    "2026-10-01": {
+     "spesa": 103.4,
+     "risultati": 6
+    },
+    "2026-10-02": {
+     "spesa": 41.22,
+     "risultati": 4
+    },
+    "2026-10-03": {
+     "spesa": 39.34,
+     "risultati": 2
+    },
+    "2026-10-04": {
+     "spesa": 45.43,
+     "risultati": 9
+    },
+    "2026-10-05": {
+     "spesa": 48.25,
+     "risultati": 3
+    },
+    "2026-10-06": {
+     "spesa": 90.65
+    },
+    "2026-10-07": {
+     "spesa": 81.77,
+     "risultati": 7
+    },
+    "2026-10-08": {
+     "spesa": 85.84,
+     "risultati": 10
+    },
+    "2026-10-09": {
+     "spesa": 118.35,
+     "risultati": 14
+    },
+    "2026-10-10": {
+     "spesa": 97.48,
+     "risultati": 18
+    },
+    "2026-10-11": {
+     "spesa": 101.8,
+     "risultati": 12
+    },
+    "2026-10-12": {
+     "spesa": 110.51,
+     "risultati": 17
+    },
+    "2026-10-13": {
+     "spesa": 106.36,
+     "risultati": 11
+    },
+    "2026-10-14": {
+     "spesa": 92.55,
+     "risultati": 8
+    },
+    "2026-10-15": {
+     "spesa": 55.61,
+     "risultati": 11
+    },
+    "2026-10-16": {
+     "spesa": 61.09,
+     "risultati": 7
+    },
+    "2026-10-17": {
+     "spesa": 35.97,
+     "risultati": 4
+    },
+    "2026-10-18": {
+     "spesa": 51.42,
+     "risultati": 4
+    },
+    "2026-10-19": {
+     "spesa": 39.64
+    },
+    "2026-10-20": {
+     "spesa": 2.99
     }
    }
   }
