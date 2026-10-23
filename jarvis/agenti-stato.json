@@ -1,36 +1,36 @@
 {
-  "aggiornato": "15 ottobre, ore 08:24",
+  "aggiornato": "21 ottobre, ore 08:31",
   "nota_struttura": "Un oggetto per agente/routine. 'verifiche' sono controlli con prova reale (non solo 'girato'), non un semplice si/no — indagati fino in fondo, mai lasciati '?' se il dato è recuperabile. 'azioni' sono link diretti per quando serve un intervento manuale di Davide. Date SEMPRE in formato leggibile italiano (es. '14 luglio, ore 16:55'), MAI ISO grezzo. Ogni routine collegata scrive qui a fine run: mai numeri o esiti inventati, se un dato non è verificabile si dichiara ESATTAMENTE perché (non un punto interrogativo muto).",
   "agenti": [
     {
       "id": "newsletter-martedi",
       "nome": "Newsletter Martedì",
-      "sottotitolo": "LinkedIn e IA — produzione in pausa, scorta di 5",
+      "sottotitolo": "LinkedIn e IA — produzione in pausa, scorta di 6",
       "colore": "cyan",
-      "stato": "ok",
-      "ultima_run": "15 ottobre, ore 08:24",
-      "prossima_run": "prossimo martedì",
+      "stato": "attenzione",
+      "ultima_run": "21 ottobre, ore 08:31",
+      "prossima_run": "prossimo mercoledì",
       "verifiche": [
         {
           "ok": true,
-          "testo": "Scorta controllata: 5 newsletter pronte non ancora pubblicate (#016 20 ott, #017 27 ott, #018 3 nov, #019 10 nov, #020 17 nov)"
+          "testo": "Scorta controllata: 6 newsletter pronte non ancora pubblicate (#021 20 ott, #017 27 ott, #018 3 nov, #019 10 nov, #020 17 nov, #016 24 nov)"
         },
         {
           "ok": true,
           "testo": "Scorta > 2: produzione in pausa per questo giro, come da regola SCORTA-NEWSLETTER-v1 (11/10/2026). Nessuna guida/landing/repo nuovi."
         },
         {
-          "ok": true,
-          "testo": "Newsletter #015 (13 ott) risulta pubblicata sul blog"
+          "ok": false,
+          "testo": "Newsletter #021 doveva uscire ieri (20 ott) e non risulta pubblicata nel log di articolo-blog-giornaliero, che non ha voci dopo il 18/10. Delegato ad agente risolutore per verifica e fix."
         }
       ],
       "azioni": [
         {
           "testo": "Apri cartella Newsletter-Claude-Martedì",
-          "url": "https://drive.google.com/drive/folders/1a8XCuzdUWR7Z_hOsq7Yl8zX61-2TAs_T"
+          "url": "https://drive.google.com/drive/folders/1PzAuaIZ9PawmiG6rrUCgNW7r6vXux8aG"
         }
       ],
-      "nota": "In pausa, 5 pronte. Riprende quando la scorta scende a 2 o meno."
+      "nota": "In pausa, 6 pronte. Verifica in corso su pubblicazione mancante del 20/10."
     },
     {
       "id": "newsletter-venerdi",
