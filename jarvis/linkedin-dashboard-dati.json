@@ -1,6 +1,6 @@
 {
- "aggiornato": "2026-10-23 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target/call_ads ricalcolati (7/7/5) da jarvis-giorni.json; agenti.analyst riletto, ieri = 22 ottobre; agenda aggiornata a 12 call confermate; agenti.outreach/blog/newsletter non riletti in questo giro, numeri invariati)",
- "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 16 - 22 ottobre 2026",
+ "aggiornato": "2026-10-24 (blocchi LinkedIn kpi/interazioni/top_post FERMI al 12/8, routine sospese per shadowban dal 14/8; kpi.call/call_target/call_ads ricalcolati (9/9/7) da jarvis-giorni.json; agenti.analyst riletto, ieri = 23 ottobre; agenda aggiornata a 13 call confermate; agenti.outreach/blog/newsletter non riletti in questo giro, numeri invariati)",
+ "periodo": "5 – 11 agosto 2026 (solo blocchi LinkedIn, fermi) · call: 17 - 23 ottobre 2026",
  "kpi": {
   "follower": 233118,
   "follower_delta": "+163",
@@ -11,9 +11,9 @@
   "engagement": "0,14%",
   "reazioni": 60,
   "commenti": 0,
-  "call": 7,
-  "call_target": 7,
-  "call_ads": 5,
+  "call": 9,
+  "call_target": 9,
+  "call_ads": 7,
   "call_regola": "11/10/2026: call = prenotazioni valide dal foglio Lead (annullate escluse), tutte le fonti; call_ads = di cui dalla pubblicità, stessa regola della dashboard Consulenza e dell'audit"
  },
  "interazioni_composizione": [
@@ -211,21 +211,22 @@
     }
    ],
    "ieri": {
-    "data": "22 ottobre",
-    "call": 2,
-    "spesa": "170,60€ (solo Account 1, giornata intera)",
-    "click": 266,
-    "dettaglio": "2 call valide (entrambe Meta Ads); 0 lead funnel; 0 guide Kajabi; 0 vendite chiuse"
+    "data": "23 ottobre",
+    "call": 3,
+    "spesa": "193,87€ (solo Account 1, giornata intera)",
+    "click": 340,
+    "dettaglio": "3 call valide (tutte Meta Ads); 1 lead funnel; 0 guide Kajabi; 0 vendite chiuse"
    },
    "agenda": [
-    "Ven 23/10 · 11:30 — Consulenza Strategica Gratuita LinkedIn",
     "Lun 26/10 · 11:00 — Consulenza Strategica Gratuita LinkedIn",
     "Lun 26/10 · 11:30 — Consulenza Strategica Gratuita LinkedIn",
     "Lun 26/10 · 12:00 — Telefonata introduttiva Commercialista AI",
     "Mar 27/10 · 10:00 — Consulenza Strategica Gratuita LinkedIn",
-    "Mar 27/10 · 10:30 — Consulenza Strategica Gratuita LinkedIn",
+    "Mar 27/10 · 11:30 — Consulenza Strategica Gratuita LinkedIn",
+    "Mar 27/10 · 11:30 — Consulenza Strategica Gratuita LinkedIn",
     "Mer 28/10 · 09:30 — Consulenza Strategica Gratuita LinkedIn",
     "Mer 28/10 · 11:30 — Consulenza Strategica Gratuita LinkedIn",
+    "Mer 28/10 · 12:00 — Consulenza Strategica Gratuita LinkedIn",
     "Mer 28/10 · 17:30 — Onboarding Commercialista AI",
     "Gio 29/10 · 13:00 — Onboarding Commercialista AI",
     "Lun 02/11 · 16:00 — Onboarding Commercialista AI",
