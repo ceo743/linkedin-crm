@@ -1,7 +1,7 @@
 {
- "aggiornato": "2026-10-20T04:10:00+02:00",
+ "aggiornato": "2026-10-24T03:55:00+02:00",
  "fonte": "Meta Ads, account 465327538443110, sola lettura; solo campagne «(CLAUDE) … Commercialista AI|Soldea | …»; giorni: spesa e risultati di ogni giorno (ora di Roma), l'ultimo può essere parziale",
- "fino_al": "2026-10-20",
+ "fino_al": "2026-10-24",
  "campagne": [
   {
    "id": "120256128676540348",
@@ -9,21 +9,37 @@
    "stato": "ACTIVE",
    "periodi": {
     "7g": {
-     "spesa": 14.96,
-     "risultati": 1
+     "spesa": 106.1,
+     "risultati": 3
     },
     "max": {
-     "spesa": 15.46,
-     "risultati": 1
+     "spesa": 109.91,
+     "risultati": 3
     }
    },
    "giorni": {
     "2026-10-19": {
-     "spesa": 14.96,
+     "spesa": 15.11,
      "risultati": 1
     },
     "2026-10-20": {
-     "spesa": 0.5
+     "spesa": 14.65,
+     "risultati": 1
+    },
+    "2026-10-21": {
+     "spesa": 27.93,
+     "risultati": 0
+    },
+    "2026-10-22": {
+     "spesa": 23.05,
+     "risultati": 0
+    },
+    "2026-10-23": {
+     "spesa": 25.36,
+     "risultati": 1
+    },
+    "2026-10-24": {
+     "spesa": 3.81
     }
    }
   },
@@ -33,12 +49,12 @@
    "stato": "ACTIVE",
    "periodi": {
     "7g": {
-     "spesa": 442.64,
-     "risultati": 45
+     "spesa": 465.22,
+     "risultati": 31
     },
     "max": {
-     "spesa": 2022.59,
-     "risultati": 325
+     "spesa": 2362.89,
+     "risultati": 348
     }
    },
    "giorni": {
@@ -210,10 +226,59 @@
      "risultati": 4
     },
     "2026-10-19": {
-     "spesa": 39.64
+     "spesa": 39.75,
+     "risultati": 0
     },
     "2026-10-20": {
-     "spesa": 2.99
+     "spesa": 100.09,
+     "risultati": 7
+    },
+    "2026-10-21": {
+     "spesa": 83.17,
+     "risultati": 8
+    },
+    "2026-10-22": {
+     "spesa": 81.59,
+     "risultati": 5
+    },
+    "2026-10-23": {
+     "spesa": 73.23,
+     "risultati": 3
+    },
+    "2026-10-24": {
+     "spesa": 5.1
+    }
+   }
+  },
+  {
+   "id": "120256140173850348",
+   "nome": "(CLAUDE) 2026-10-19 Commercialista AI | SEGNALATORI",
+   "stato": "PAUSED",
+   "periodi": {},
+   "giorni": {}
+  },
+  {
+   "id": "120256201422210348",
+   "nome": "Commercialista AI | Remarketing | 9 problemi",
+   "stato": "ACTIVE",
+   "periodi": {
+    "7g": {
+     "spesa": 8.28,
+     "risultati": 74
+    },
+    "max": {
+     "spesa": 12.91,
+     "risultati": 95
+    }
+   },
+   "giorni": {
+    "2026-10-23": {
+     "spesa": 8.28,
+     "risultati": 74
+    },
+    "2026-10-24": {
+     "spesa": 4.63,
+     "risultati": 21
     }
    }
   }
