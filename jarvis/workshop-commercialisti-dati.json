@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-25T19:30:42+01:00",
+  "aggiornato": "2026-10-25T22:29:23+01:00",
   "workshop": {
     "nome": "Workshop Commercialisti",
     "sottotitolo": "Webinar gratuito su Zoom, un'edizione ogni 15 giorni",
@@ -19,27 +19,27 @@
     "ora": "21:00",
     "stato": "corrente",
     "raccolta_dal": "2026-10-16",
-    "iscritti": 55,
-    "da_ads": 51,
+    "iscritti": 59,
+    "da_ads": 55,
     "da_email": 0,
     "diretti": 4,
-    "spesa": 682.32,
-    "costo_per_iscritto": 13.38,
+    "spesa": 705.18,
+    "costo_per_iscritto": 12.82,
     "lead_meta": 38,
     "utm_conferma": 1,
     "utm_altra_edizione": 0,
     "raccolta_al": "2026-10-25",
     "giorni_pubblicita": 10,
     "meta": {
-      "spesa": 682.32,
-      "impressions": 44061,
+      "spesa": 705.18,
+      "impressions": 45634,
       "campagne_sommate": 10,
-      "click": 1744,
-      "ctr": 3.96,
+      "click": 1801,
+      "ctr": 3.95,
       "cpc": 0.39,
-      "cpm": 15.49,
+      "cpm": 15.45,
       "lead_meta": 38,
-      "costo_lead_meta": 17.96
+      "costo_lead_meta": 18.56
     }
   },
   "edizioni": [
@@ -125,27 +125,27 @@
       "ora": "21:00",
       "stato": "corrente",
       "raccolta_dal": "2026-10-16",
-      "iscritti": 55,
-      "da_ads": 51,
+      "iscritti": 59,
+      "da_ads": 55,
       "da_email": 0,
       "diretti": 4,
-      "spesa": 682.32,
-      "costo_per_iscritto": 13.38,
+      "spesa": 705.18,
+      "costo_per_iscritto": 12.82,
       "lead_meta": 38,
       "utm_conferma": 1,
       "utm_altra_edizione": 0,
       "raccolta_al": "2026-10-25",
       "giorni_pubblicita": 10,
       "meta": {
-        "spesa": 682.32,
-        "impressions": 44061,
+        "spesa": 705.18,
+        "impressions": 45634,
         "campagne_sommate": 10,
-        "click": 1744,
-        "ctr": 3.96,
+        "click": 1801,
+        "ctr": 3.95,
         "cpc": 0.39,
-        "cpm": 15.49,
+        "cpm": 15.45,
         "lead_meta": 38,
-        "costo_lead_meta": 17.96
+        "costo_lead_meta": 18.56
       }
     }
   ],
@@ -210,7 +210,7 @@
       "stato": "ACTIVE",
       "in_corsa": true,
       "principale": true,
-      "spesa": 2499.11,
+      "spesa": 2521.97,
       "lead_meta": 348,
       "budget_giornaliero": 80.0,
       "inizio": "2026-09-07",
@@ -218,42 +218,42 @@
     }
   ],
   "iscritti": {
-    "totali": 530,
-    "oggi": 7,
+    "totali": 534,
+    "oggi": 11,
     "ieri": 3,
-    "da_ads": 482,
+    "da_ads": 486,
     "da_email": 13,
     "diretti": 35,
     "righe_di_prova_escluse": 10,
     "primo_iscritto": "2026-08-19"
   },
   "spesa": {
-    "oggi": 70.79,
+    "oggi": 93.65,
     "ieri": 71.03,
-    "totale": 2891.9,
+    "totale": 2914.76,
     "tetto": null,
     "residuo": null,
     "budget_giornaliero": 80.0,
     "campagne": 4
   },
   "costo_per_iscritto": {
-    "oggi": 11.8,
+    "oggi": 9.37,
     "ieri": 35.52,
     "totale": 6.0,
-    "edizione_corrente": 13.38,
+    "edizione_corrente": 12.82,
     "nota": "spesa Meta divisa per gli iscritti col tracciamento ads (utm_source=meta / utm_medium=paid) presenti sul foglio"
   },
   "meta": {
     "oggi": {
-      "spesa": 70.79,
-      "impressions": 4401,
+      "spesa": 93.65,
+      "impressions": 5974,
       "reach": 1582,
-      "frequency": 2.78,
+      "frequency": 3.78,
       "campagne_sommate": 1,
-      "click": 131,
-      "ctr": 2.98,
-      "cpc": 0.54,
-      "cpm": 16.08,
+      "click": 188,
+      "ctr": 3.15,
+      "cpc": 0.5,
+      "cpm": 15.68,
       "lead_meta": 0,
       "costo_lead_meta": null
     },
@@ -271,40 +271,50 @@
       "costo_lead_meta": null
     },
     "totale": {
-      "spesa": 2891.9,
-      "impressions": 254240,
+      "spesa": 2914.76,
+      "impressions": 255813,
       "reach": null,
       "frequency": null,
       "campagne_sommate": 2,
-      "click": 14836,
-      "ctr": 5.84,
-      "cpc": 0.19,
-      "cpm": 11.37,
+      "click": 14893,
+      "ctr": 5.82,
+      "cpc": 0.2,
+      "cpm": 11.39,
       "lead_meta": 447,
-      "costo_lead_meta": 6.47
+      "costo_lead_meta": 6.52
     }
   },
   "fonti": [
     {
       "chiave": "ads",
       "label": "Meta Ads",
-      "iscritti": 482,
-      "quota": 90.94
+      "iscritti": 486,
+      "quota": 91.01
     },
     {
       "chiave": "email",
       "label": "Email fredde",
       "iscritti": 13,
-      "quota": 2.45
+      "quota": 2.43
     },
     {
       "chiave": "diretti",
       "label": "Diretti / non tracciati",
       "iscritti": 35,
-      "quota": 6.6
+      "quota": 6.55
     }
   ],
   "dettaglio_contenuti": [
+    {
+      "fonte": "ads",
+      "utm_content": "davide-gestionali-sd",
+      "iscritti": 14,
+      "iscritti_edizione_corrente": 11,
+      "per_edizione": {
+        "2026-10-15": 3,
+        "2026-10-29": 11
+      }
+    },
     {
       "fonte": "ads",
       "utm_content": "davide-nonserve-sd",
@@ -313,16 +323,6 @@
       "per_edizione": {
         "2026-10-15": 46,
         "2026-10-29": 10
-      }
-    },
-    {
-      "fonte": "ads",
-      "utm_content": "davide-gestionali-sd",
-      "iscritti": 11,
-      "iscritti_edizione_corrente": 8,
-      "per_edizione": {
-        "2026-10-15": 3,
-        "2026-10-29": 8
       }
     },
     {
@@ -450,6 +450,15 @@
     {
       "fonte": "ads",
       "utm_content": "foto-gestionale",
+      "iscritti": 1,
+      "iscritti_edizione_corrente": 1,
+      "per_edizione": {
+        "2026-10-29": 1
+      }
+    },
+    {
+      "fonte": "ads",
+      "utm_content": "ai-video-grazie-c",
       "iscritti": 1,
       "iscritti_edizione_corrente": 1,
       "per_edizione": {
@@ -2002,18 +2011,18 @@
     {
       "data": "2026-10-25",
       "etichetta": "25/10",
-      "iscritti": 7,
-      "ads": 6,
+      "iscritti": 11,
+      "ads": 10,
       "email": 0,
       "diretti": 1,
-      "cumulato": 530,
+      "cumulato": 534,
       "edizione": "2026-10-29",
-      "cumulato_edizione": 54,
-      "spesa": 70.79,
+      "cumulato_edizione": 58,
+      "spesa": 93.65,
       "per_edizione": {
         "2026-10-29": {
-          "iscritti": 7,
-          "ads": 6,
+          "iscritti": 11,
+          "ads": 10,
           "email": 0,
           "diretti": 1
         }
@@ -2031,6 +2040,32 @@
         "data_it": "giovedì 29 ottobre 2026",
         "stato": "corrente",
         "righe": [
+          {
+            "tipo": "ads",
+            "chiave": "davide-gestionali-sd",
+            "utm_content": "davide-gestionali-sd",
+            "nome": "SENZA DATA Davide vero gestionali (in auto, 06-10)",
+            "inserzioni": [
+              {
+                "id": "120255930305720348",
+                "nome": "SENZA DATA Davide vero gestionali (in auto, 06-10)",
+                "campagna": "120255475473930348",
+                "stato": "ACTIVE",
+                "spesa": 25.85
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-10-16",
+            "al": "2026-10-20",
+            "spesa": 25.85,
+            "iscritti": 11,
+            "costo_per_iscritto": 2.35,
+            "lead_meta": 1,
+            "attiva_ora": true,
+            "nota": null
+          },
           {
             "tipo": "ads",
             "chiave": "davide-nonserve-sd",
@@ -2054,32 +2089,6 @@
             "iscritti": 10,
             "costo_per_iscritto": 6.96,
             "lead_meta": 5,
-            "attiva_ora": true,
-            "nota": null
-          },
-          {
-            "tipo": "ads",
-            "chiave": "davide-gestionali-sd",
-            "utm_content": "davide-gestionali-sd",
-            "nome": "SENZA DATA Davide vero gestionali (in auto, 06-10)",
-            "inserzioni": [
-              {
-                "id": "120255930305720348",
-                "nome": "SENZA DATA Davide vero gestionali (in auto, 06-10)",
-                "campagna": "120255475473930348",
-                "stato": "ACTIVE",
-                "spesa": 25.85
-              }
-            ],
-            "campagne": [
-              "120255475473930348"
-            ],
-            "dal": "2026-10-16",
-            "al": "2026-10-20",
-            "spesa": 25.85,
-            "iscritti": 8,
-            "costo_per_iscritto": 3.23,
-            "lead_meta": 1,
             "attiva_ora": true,
             "nota": null
           },
@@ -2331,6 +2340,32 @@
           },
           {
             "tipo": "ads",
+            "chiave": "ai-video-grazie-c",
+            "utm_content": "ai-video-grazie-c",
+            "nome": "SENZA DATA Il gestionale resta il tuo (video C)",
+            "inserzioni": [
+              {
+                "id": "120256110123390348",
+                "nome": "SENZA DATA Il gestionale resta il tuo (video C)",
+                "campagna": "120255475473930348",
+                "stato": "PAUSED",
+                "spesa": 2.54
+              }
+            ],
+            "campagne": [
+              "120255475473930348"
+            ],
+            "dal": "2026-10-17",
+            "al": "2026-10-17",
+            "spesa": 2.54,
+            "iscritti": 1,
+            "costo_per_iscritto": 2.54,
+            "lead_meta": 1,
+            "attiva_ora": false,
+            "nota": null
+          },
+          {
+            "tipo": "ads",
             "chiave": "web-voce-davide-1810",
             "utm_content": "web-voce-davide-1810",
             "nome": "WEBINAR Versione web voce Davide (etichetta AI)",
@@ -2479,32 +2514,6 @@
             "iscritti": 0,
             "costo_per_iscritto": null,
             "lead_meta": 0,
-            "attiva_ora": false,
-            "nota": null
-          },
-          {
-            "tipo": "ads",
-            "chiave": "ai-video-grazie-c",
-            "utm_content": "ai-video-grazie-c",
-            "nome": "SENZA DATA Il gestionale resta il tuo (video C)",
-            "inserzioni": [
-              {
-                "id": "120256110123390348",
-                "nome": "SENZA DATA Il gestionale resta il tuo (video C)",
-                "campagna": "120255475473930348",
-                "stato": "PAUSED",
-                "spesa": 2.54
-              }
-            ],
-            "campagne": [
-              "120255475473930348"
-            ],
-            "dal": "2026-10-17",
-            "al": "2026-10-17",
-            "spesa": 2.54,
-            "iscritti": 0,
-            "costo_per_iscritto": null,
-            "lead_meta": 1,
             "attiva_ora": false,
             "nota": null
           },
@@ -2732,19 +2741,19 @@
           }
         ],
         "totale": {
-          "iscritti": 55,
-          "da_ads": 51,
-          "spesa": 682.32,
+          "iscritti": 59,
+          "da_ads": 55,
+          "spesa": 705.18,
           "spesa_inserzioni": 293.01,
-          "costo_per_iscritto": 13.38,
-          "spesa_zero_iscritti": 32.28,
+          "costo_per_iscritto": 12.82,
+          "spesa_zero_iscritti": 29.74,
           "pubblicita": 26,
           "pubblicita_con_spesa": 24
         },
         "letture": [
-          "Porta più iscritti: «SENZA DATA Davide vero «non serve a niente» (06-10)», 10 su 51 arrivati dalla pubblicità (20%), 6,96 € l'uno.",
+          "Porta più iscritti: «SENZA DATA Davide vero gestionali (in auto, 06-10)», 11 su 55 arrivati dalla pubblicità (20%), 2,35 € l'uno.",
           "Costa di più per iscritto: «ETICHETTA AI VINCENTI Fatture estere HeyGen SENZA DATA (sostituisce 120256111086470348)», 23,32 € a iscritto (1 iscritto con 23,32 €).",
-          "Spesa andata a pubblicità con 0 iscritti: 32,28 € su 682,32 € (5%), in 12 pubblicità (le più care: «A5 - una per una» 9,16 €, «SENZA DATA Fatture estere attrice AI» 8,43 €, «SENZA DATA stile Sibill 2B Ti dico cosa NON fa» 5,02 €)."
+          "Spesa andata a pubblicità con 0 iscritti: 29,74 € su 705,18 € (4%), in 11 pubblicità (le più care: «A5 - una per una» 9,16 €, «SENZA DATA Fatture estere attrice AI» 8,43 €, «SENZA DATA stile Sibill 2B Ti dico cosa NON fa» 5,02 €)."
         ]
       },
       {
@@ -4137,17 +4146,17 @@
     ],
     "tutte": {
       "totale": {
-        "iscritti": 530,
-        "da_ads": 482,
-        "spesa": 2891.9,
+        "iscritti": 534,
+        "da_ads": 486,
+        "spesa": 2914.76,
         "costo_per_iscritto": 6.0,
-        "spesa_zero_iscritti": 46.56,
+        "spesa_zero_iscritti": 44.02,
         "pubblicita": 58
       },
       "letture": [
-        "Porta più iscritti: «Video AI F24 voce Eleven», 142 su 482 arrivati dalla pubblicità (29%), 2,91 € l'uno.",
+        "Porta più iscritti: «Video AI F24 voce Eleven», 142 su 486 arrivati dalla pubblicità (29%), 2,91 € l'uno.",
         "Costa di più per iscritto: «SENZA DATA stile Sibill 2B Ti dico cosa NON fa», 28,93 € a iscritto (1 iscritto con 28,93 €).",
-        "Spesa andata a pubblicità con 0 iscritti: 46,56 € su 2.891,90 € (2%), in 24 pubblicità (le più care: «stile Sibill B» 7,77 €, «SENZA DATA Il cliente chiama attore AI» 7,42 €, «F24 Davide vero (girato 06-10) con data» 6,08 €)."
+        "Spesa andata a pubblicità con 0 iscritti: 44,02 € su 2.914,76 € (2%), in 23 pubblicità (le più care: «stile Sibill B» 7,77 €, «SENZA DATA Il cliente chiama attore AI» 7,42 €, «F24 Davide vero (girato 06-10) con data» 6,08 €)."
       ]
     }
   },
@@ -4161,6 +4170,6 @@
     "spesa giorno per giorno incompleta per l'inserzione «ETICHETTA AI VINCENTI A5 SENZA DATA (sostituisce 120256110943140348)»: rileggila (Passo 2-quater, comando piano)",
     "spesa giorno per giorno incompleta per l'inserzione «Davide in auto 2 SENZA DATA (stesso post di 120255866791090348)»: rileggila (Passo 2-quater, comando piano)",
     "spesa giorno per giorno incompleta per l'inserzione «WEBINAR Versione web voce Davide (etichetta AI)»: rileggila (Passo 2-quater, comando piano)",
-    "spesa per inserzione dell'edizione 29/10 (293.01 €) diversa da quella delle campagne (682.32 €): rileggi le inserzioni (Passo 2-quater)"
+    "spesa per inserzione dell'edizione 29/10 (293.01 €) diversa da quella delle campagne (705.18 €): rileggi le inserzioni (Passo 2-quater)"
   ]
 }
