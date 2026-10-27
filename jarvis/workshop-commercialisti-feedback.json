@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-27T10:40:00+01:00",
+  "aggiornato": "2026-10-27T13:40:00+01:00",
   "regola": "Solo ruolo e zona, MAI nome, cognome o email: la pagina e' pubblica (regola JARVIS del 14/07/2026). I nomi veri stanno solo in Gmail (campo gmail_thread).",
   "feedback": [
     {
@@ -191,6 +191,30 @@
       ],
       "risposto": true,
       "gmail_thread": "1a17c53404b753a0"
+    },
+    {
+      "data": "2026-10-27",
+      "chi": "Commercialista · usa Profis",
+      "chiede": [
+        "Automatizzare la registrazione delle fatture"
+      ],
+      "temi": [
+        "Registrazione fatture"
+      ],
+      "risposto": false,
+      "gmail_thread": "1a17d04883c0f6b8"
+    },
+    {
+      "data": "2026-10-27",
+      "chi": "Studio di economia aziendale · provincia di Catanzaro · usa GB Software",
+      "chiede": [
+        "Automatizzare le riconciliazioni bancarie"
+      ],
+      "temi": [
+        "Riconciliazione banca"
+      ],
+      "risposto": false,
+      "gmail_thread": "1a17ccfae6375be7"
     }
   ]
 }
