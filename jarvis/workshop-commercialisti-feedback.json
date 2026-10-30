@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-28T22:30:44+01:00",
+  "aggiornato": "2026-10-30T13:28:21+01:00",
   "regola": "Solo ruolo e zona, MAI nome, cognome o email: la pagina e' pubblica (regola JARVIS del 14/07/2026). I nomi veri stanno solo in Gmail (campo gmail_thread).",
   "feedback": [
     {
@@ -231,6 +231,18 @@
       ],
       "risposto": true,
       "gmail_thread": "1a18435030b016c5"
+    },
+    {
+      "data": "2026-10-30",
+      "chi": "Commercialista · partecipante alla diretta del 29/10",
+      "chiede": [
+        "Il codice QR promesso a fine diretta per avere tutti i chiarimenti"
+      ],
+      "temi": [
+        "Informazioni sul programma"
+      ],
+      "risposto": false,
+      "gmail_thread": "1a18c5d07baf4b74"
     }
   ]
 }
