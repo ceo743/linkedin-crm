@@ -1,7 +1,7 @@
 {
- "aggiornato": "2026-11-01T06:15:19+01:00",
+ "aggiornato": "2026-11-02T07:23:01+01:00",
  "fonte": "Meta Ads, account 465327538443110, sola lettura; solo campagne «(CLAUDE) … Commercialista AI|Soldea | …»; giorni: spesa e risultati di ogni giorno (ora di Roma), l'ultimo può essere parziale",
- "fino_al": "2026-11-01",
+ "fino_al": "2026-11-02",
  "campagne": [
   {
    "id": "120256342306280348",
@@ -9,10 +9,11 @@
    "stato": "ACTIVE",
    "periodi": {
     "7g": {
-     "spesa": 9.94
+     "spesa": 33.08
     },
     "max": {
-     "spesa": 9.94
+     "spesa": 36.71,
+     "risultati": 1
     }
    },
    "giorni": {
@@ -21,6 +22,13 @@
     },
     "2026-10-31": {
      "spesa": 5.76
+    },
+    "2026-11-01": {
+     "spesa": 23.14
+    },
+    "2026-11-02": {
+     "spesa": 3.63,
+     "risultati": 1
     }
    }
   },
@@ -30,12 +38,12 @@
    "stato": "ACTIVE",
    "periodi": {
     "7g": {
-     "spesa": 50.04,
-     "risultati": 695
+     "spesa": 90.69,
+     "risultati": 1269
     },
     "max": {
-     "spesa": 55.82,
-     "risultati": 762
+     "spesa": 96.41,
+     "risultati": 1361
     }
    },
    "giorni": {
@@ -44,12 +52,16 @@
      "risultati": 125
     },
     "2026-10-31": {
-     "spesa": 39.17,
+     "spesa": 39.25,
      "risultati": 570
     },
     "2026-11-01": {
-     "spesa": 5.78,
-     "risultati": 67
+     "spesa": 40.57,
+     "risultati": 574
+    },
+    "2026-11-02": {
+     "spesa": 5.72,
+     "risultati": 92
     }
    }
   },
@@ -59,10 +71,10 @@
    "stato": "ACTIVE",
    "periodi": {
     "7g": {
-     "spesa": 301.14
+     "spesa": 459.29
     },
     "max": {
-     "spesa": 321.25
+     "spesa": 495.2
     }
    },
    "giorni": {
@@ -73,10 +85,13 @@
      "spesa": 147.55
     },
     "2026-10-31": {
-     "spesa": 144.61
+     "spesa": 144.94
     },
     "2026-11-01": {
-     "spesa": 20.11
+     "spesa": 157.82
+    },
+    "2026-11-02": {
+     "spesa": 35.91
     }
    }
   },
@@ -107,8 +122,8 @@
    "stato": "PAUSED",
    "periodi": {
     "7g": {
-     "spesa": 68.25,
-     "risultati": 1068
+     "spesa": 48.51,
+     "risultati": 779
     },
     "max": {
      "spesa": 95.2,
@@ -159,8 +174,8 @@
    "stato": "PAUSED",
    "periodi": {
     "7g": {
-     "spesa": 215.99,
-     "risultati": 6
+     "spesa": 179.91,
+     "risultati": 5
     },
     "max": {
      "spesa": 346.75,
@@ -217,8 +232,8 @@
    "stato": "PAUSED",
    "periodi": {
     "7g": {
-     "spesa": 472.9,
-     "risultati": 71
+     "spesa": 365.1,
+     "risultati": 58
     },
     "max": {
      "spesa": 2901.83,
