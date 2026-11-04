@@ -1,250 +1,16 @@
 {
- "aggiornato": "2026-11-03T06:15:17+01:00",
+ "aggiornato": "2026-11-04T06:15:14+01:00",
  "fonte": "Meta Ads, account 465327538443110, sola lettura; solo campagne «(CLAUDE) … Commercialista AI|Soldea | …»; giorni: spesa e risultati di ogni giorno (ora di Roma), l'ultimo può essere parziale",
- "fino_al": "2026-11-03",
+ "fino_al": "2026-11-04",
  "campagne": [
-  {
-   "id": "120256342306280348",
-   "nome": "(CLAUDE) 2026-10-30 Antiriciclaggio 19 € | ACQUISTI",
-   "stato": "ACTIVE",
-   "periodi": {
-    "7g": {
-     "spesa": 62.08,
-     "risultati": 1
-    },
-    "max": {
-     "spesa": 64.66,
-     "risultati": 1
-    }
-   },
-   "giorni": {
-    "2026-10-30": {
-     "spesa": 4.18
-    },
-    "2026-10-31": {
-     "spesa": 5.76
-    },
-    "2026-11-01": {
-     "spesa": 23.15
-    },
-    "2026-11-02": {
-     "spesa": 28.99,
-     "risultati": 1
-    },
-    "2026-11-03": {
-     "spesa": 2.58
-    }
-   }
-  },
-  {
-   "id": "120256339042170348",
-   "nome": "(CLAUDE) 2026-10-30 Commercialista AI | GUIDE GRATUITE prova",
-   "stato": "ACTIVE",
-   "periodi": {
-    "7g": {
-     "spesa": 131.88,
-     "risultati": 1941
-    },
-    "max": {
-     "spesa": 134.3,
-     "risultati": 1986
-    }
-   },
-   "giorni": {
-    "2026-10-30": {
-     "spesa": 10.87,
-     "risultati": 125
-    },
-    "2026-10-31": {
-     "spesa": 39.25,
-     "risultati": 570
-    },
-    "2026-11-01": {
-     "spesa": 40.98,
-     "risultati": 574
-    },
-    "2026-11-02": {
-     "spesa": 40.78,
-     "risultati": 672
-    },
-    "2026-11-03": {
-     "spesa": 2.42,
-     "risultati": 45
-    }
-   }
-  },
-  {
-   "id": "120256324576360348",
-   "nome": "(CLAUDE) 2026-10-30 Commercialista AI | WEBINAR + CALL",
-   "stato": "ACTIVE",
-   "periodi": {
-    "7g": {
-     "spesa": 609.92
-    },
-    "max": {
-     "spesa": 631.36
-    }
-   },
-   "giorni": {
-    "2026-10-29": {
-     "spesa": 8.98
-    },
-    "2026-10-30": {
-     "spesa": 147.55
-    },
-    "2026-10-31": {
-     "spesa": 144.94
-    },
-    "2026-11-01": {
-     "spesa": 158.18
-    },
-    "2026-11-02": {
-     "spesa": 150.27
-    },
-    "2026-11-03": {
-     "spesa": 21.44
-    }
-   }
-  },
-  {
-   "id": "120256339603550348",
-   "nome": "(CLAUDE) 2026-10-30 Antiriciclaggio 19 € | vendita",
-   "stato": "PAUSED",
-   "periodi": {
-    "7g": {
-     "spesa": 5.0,
-     "risultati": 106
-    },
-    "max": {
-     "spesa": 5.0,
-     "risultati": 108
-    }
-   },
-   "giorni": {
-    "2026-10-30": {
-     "spesa": 5.0,
-     "risultati": 106
-    }
-   }
-  },
-  {
-   "id": "120256201422210348",
-   "nome": "Commercialista AI | Remarketing | 9 problemi",
-   "stato": "PAUSED",
-   "periodi": {
-    "7g": {
-     "spesa": 33.12,
-     "risultati": 550
-    },
-    "max": {
-     "spesa": 95.2,
-     "risultati": 1375
-    }
-   },
-   "giorni": {
-    "2026-10-23": {
-     "spesa": 8.31,
-     "risultati": 74
-    },
-    "2026-10-24": {
-     "spesa": 18.64,
-     "risultati": 233
-    },
-    "2026-10-25": {
-     "spesa": 19.74,
-     "risultati": 289
-    },
-    "2026-10-26": {
-     "spesa": 15.39,
-     "risultati": 229
-    },
-    "2026-10-27": {
-     "spesa": 12.57,
-     "risultati": 240
-    },
-    "2026-10-28": {
-     "spesa": 13.66,
-     "risultati": 226
-    },
-    "2026-10-29": {
-     "spesa": 6.89,
-     "risultati": 84
-    }
-   }
-  },
-  {
-   "id": "120256140173850348",
-   "nome": "(CLAUDE) 2026-10-19 Commercialista AI | SEGNALATORI",
-   "stato": "PAUSED",
-   "periodi": {},
-   "giorni": {}
-  },
-  {
-   "id": "120256128676540348",
-   "nome": "(CLAUDE) 2026-10-19 Commercialista AI | CHIAMATE SALES",
-   "stato": "PAUSED",
-   "periodi": {
-    "7g": {
-     "spesa": 141.74,
-     "risultati": 3
-    },
-    "max": {
-     "spesa": 346.75,
-     "risultati": 10
-    }
-   },
-   "giorni": {
-    "2026-10-19": {
-     "spesa": 15.11,
-     "risultati": 1
-    },
-    "2026-10-20": {
-     "spesa": 14.65,
-     "risultati": 1
-    },
-    "2026-10-21": {
-     "spesa": 27.93
-    },
-    "2026-10-22": {
-     "spesa": 23.05
-    },
-    "2026-10-23": {
-     "spesa": 25.37,
-     "risultati": 1
-    },
-    "2026-10-24": {
-     "spesa": 24.65,
-     "risultati": 1
-    },
-    "2026-10-25": {
-     "spesa": 36.08,
-     "risultati": 1
-    },
-    "2026-10-26": {
-     "spesa": 38.17,
-     "risultati": 2
-    },
-    "2026-10-27": {
-     "spesa": 41.46,
-     "risultati": 1
-    },
-    "2026-10-28": {
-     "spesa": 55.13
-    },
-    "2026-10-29": {
-     "spesa": 45.15,
-     "risultati": 2
-    }
-   }
-  },
   {
    "id": "120255475473930348",
    "nome": "(CLAUDE) 2026-09-07 Commercialista AI | ISCRITTI WORKSHOP",
    "stato": "PAUSED",
    "periodi": {
     "7g": {
-     "spesa": 226.78,
-     "risultati": 44
+     "spesa": 134.71,
+     "risultati": 25
     },
     "max": {
      "spesa": 2901.83,
@@ -461,6 +227,250 @@
     "2026-10-29": {
      "spesa": 41.8,
      "risultati": 11
+    }
+   }
+  },
+  {
+   "id": "120256128676540348",
+   "nome": "(CLAUDE) 2026-10-19 Commercialista AI | CHIAMATE SALES",
+   "stato": "PAUSED",
+   "periodi": {
+    "7g": {
+     "spesa": 100.28,
+     "risultati": 2
+    },
+    "max": {
+     "spesa": 346.75,
+     "risultati": 10
+    }
+   },
+   "giorni": {
+    "2026-10-19": {
+     "spesa": 15.11,
+     "risultati": 1
+    },
+    "2026-10-20": {
+     "spesa": 14.65,
+     "risultati": 1
+    },
+    "2026-10-21": {
+     "spesa": 27.93
+    },
+    "2026-10-22": {
+     "spesa": 23.05
+    },
+    "2026-10-23": {
+     "spesa": 25.37,
+     "risultati": 1
+    },
+    "2026-10-24": {
+     "spesa": 24.65,
+     "risultati": 1
+    },
+    "2026-10-25": {
+     "spesa": 36.08,
+     "risultati": 1
+    },
+    "2026-10-26": {
+     "spesa": 38.17,
+     "risultati": 2
+    },
+    "2026-10-27": {
+     "spesa": 41.46,
+     "risultati": 1
+    },
+    "2026-10-28": {
+     "spesa": 55.13
+    },
+    "2026-10-29": {
+     "spesa": 45.15,
+     "risultati": 2
+    }
+   }
+  },
+  {
+   "id": "120256140173850348",
+   "nome": "(CLAUDE) 2026-10-19 Commercialista AI | SEGNALATORI",
+   "stato": "PAUSED",
+   "periodi": {},
+   "giorni": {}
+  },
+  {
+   "id": "120256201422210348",
+   "nome": "Commercialista AI | Remarketing | 9 problemi",
+   "stato": "PAUSED",
+   "periodi": {
+    "7g": {
+     "spesa": 20.55,
+     "risultati": 310
+    },
+    "max": {
+     "spesa": 95.2,
+     "risultati": 1375
+    }
+   },
+   "giorni": {
+    "2026-10-23": {
+     "spesa": 8.31,
+     "risultati": 74
+    },
+    "2026-10-24": {
+     "spesa": 18.64,
+     "risultati": 233
+    },
+    "2026-10-25": {
+     "spesa": 19.74,
+     "risultati": 289
+    },
+    "2026-10-26": {
+     "spesa": 15.39,
+     "risultati": 229
+    },
+    "2026-10-27": {
+     "spesa": 12.57,
+     "risultati": 240
+    },
+    "2026-10-28": {
+     "spesa": 13.66,
+     "risultati": 226
+    },
+    "2026-10-29": {
+     "spesa": 6.89,
+     "risultati": 84
+    }
+   }
+  },
+  {
+   "id": "120256324576360348",
+   "nome": "(CLAUDE) 2026-10-30 Commercialista AI | WEBINAR + CALL",
+   "stato": "ACTIVE",
+   "periodi": {
+    "7g": {
+     "spesa": 751.66
+    },
+    "max": {
+     "spesa": 769.63
+    }
+   },
+   "giorni": {
+    "2026-10-29": {
+     "spesa": 8.98
+    },
+    "2026-10-30": {
+     "spesa": 147.55
+    },
+    "2026-10-31": {
+     "spesa": 144.94
+    },
+    "2026-11-01": {
+     "spesa": 158.18
+    },
+    "2026-11-02": {
+     "spesa": 151.4
+    },
+    "2026-11-03": {
+     "spesa": 140.61
+    },
+    "2026-11-04": {
+     "spesa": 17.97
+    }
+   }
+  },
+  {
+   "id": "120256339042170348",
+   "nome": "(CLAUDE) 2026-10-30 Commercialista AI | GUIDE GRATUITE prova",
+   "stato": "ACTIVE",
+   "periodi": {
+    "7g": {
+     "spesa": 173.13,
+     "risultati": 2570
+    },
+    "max": {
+     "spesa": 179.07,
+     "risultati": 2658
+    }
+   },
+   "giorni": {
+    "2026-10-30": {
+     "spesa": 10.87,
+     "risultati": 125
+    },
+    "2026-10-31": {
+     "spesa": 39.25,
+     "risultati": 570
+    },
+    "2026-11-01": {
+     "spesa": 40.98,
+     "risultati": 574
+    },
+    "2026-11-02": {
+     "spesa": 41.62,
+     "risultati": 672
+    },
+    "2026-11-03": {
+     "spesa": 40.41,
+     "risultati": 629
+    },
+    "2026-11-04": {
+     "spesa": 5.94,
+     "risultati": 88
+    }
+   }
+  },
+  {
+   "id": "120256339603550348",
+   "nome": "(CLAUDE) 2026-10-30 Antiriciclaggio 19 € | vendita",
+   "stato": "PAUSED",
+   "periodi": {
+    "7g": {
+     "spesa": 5.0,
+     "risultati": 106
+    },
+    "max": {
+     "spesa": 5.0,
+     "risultati": 108
+    }
+   },
+   "giorni": {
+    "2026-10-30": {
+     "spesa": 5.0,
+     "risultati": 106
+    }
+   }
+  },
+  {
+   "id": "120256342306280348",
+   "nome": "(CLAUDE) 2026-10-30 Antiriciclaggio 19 € | ACQUISTI",
+   "stato": "ACTIVE",
+   "periodi": {
+    "7g": {
+     "spesa": 103.75,
+     "risultati": 1
+    },
+    "max": {
+     "spesa": 106.45,
+     "risultati": 1
+    }
+   },
+   "giorni": {
+    "2026-10-30": {
+     "spesa": 4.18
+    },
+    "2026-10-31": {
+     "spesa": 5.76
+    },
+    "2026-11-01": {
+     "spesa": 23.15
+    },
+    "2026-11-02": {
+     "spesa": 29.06,
+     "risultati": 1
+    },
+    "2026-11-03": {
+     "spesa": 41.6
+    },
+    "2026-11-04": {
+     "spesa": 2.7
     }
    }
   }
