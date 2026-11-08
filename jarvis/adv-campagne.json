@@ -1,7 +1,7 @@
 {
- "aggiornato": "2026-11-04T06:15:14+01:00",
+ "aggiornato": "2026-11-08T20:04:40+01:00",
  "fonte": "Meta Ads, account 465327538443110, sola lettura; solo campagne «(CLAUDE) … Commercialista AI|Soldea | …»; giorni: spesa e risultati di ogni giorno (ora di Roma), l'ultimo può essere parziale",
- "fino_al": "2026-11-04",
+ "fino_al": "2026-11-08",
  "campagne": [
   {
    "id": "120255475473930348",
@@ -9,8 +9,7 @@
    "stato": "PAUSED",
    "periodi": {
     "7g": {
-     "spesa": 134.71,
-     "risultati": 25
+     "spesa": 0
     },
     "max": {
      "spesa": 2901.83,
@@ -236,8 +235,7 @@
    "stato": "PAUSED",
    "periodi": {
     "7g": {
-     "spesa": 100.28,
-     "risultati": 2
+     "spesa": 0
     },
     "max": {
      "spesa": 346.75,
@@ -301,8 +299,7 @@
    "stato": "PAUSED",
    "periodi": {
     "7g": {
-     "spesa": 20.55,
-     "risultati": 310
+     "spesa": 0
     },
     "max": {
      "spesa": 95.2,
@@ -346,10 +343,10 @@
    "stato": "ACTIVE",
    "periodi": {
     "7g": {
-     "spesa": 751.66
+     "spesa": 1042.09
     },
     "max": {
-     "spesa": 769.63
+     "spesa": 1469.09
     }
    },
    "giorni": {
@@ -369,25 +366,37 @@
      "spesa": 151.4
     },
     "2026-11-03": {
-     "spesa": 140.61
+     "spesa": 141.01
     },
     "2026-11-04": {
-     "spesa": 17.97
+     "spesa": 143.36
+    },
+    "2026-11-05": {
+     "spesa": 141.69
+    },
+    "2026-11-06": {
+     "spesa": 146.69
+    },
+    "2026-11-07": {
+     "spesa": 159.76
+    },
+    "2026-11-08": {
+     "spesa": 125.53
     }
    }
   },
   {
    "id": "120256339042170348",
    "nome": "(CLAUDE) 2026-10-30 Commercialista AI | GUIDE GRATUITE prova",
-   "stato": "ACTIVE",
+   "stato": "PAUSED",
    "periodi": {
     "7g": {
-     "spesa": 173.13,
-     "risultati": 2570
+     "spesa": 210.21,
+     "risultati": 3195
     },
     "max": {
-     "spesa": 179.07,
-     "risultati": 2658
+     "spesa": 260.33,
+     "risultati": 3890
     }
    },
    "giorni": {
@@ -408,12 +417,20 @@
      "risultati": 672
     },
     "2026-11-03": {
-     "spesa": 40.41,
+     "spesa": 40.73,
      "risultati": 629
     },
     "2026-11-04": {
-     "spesa": 5.94,
-     "risultati": 88
+     "spesa": 40.81,
+     "risultati": 643
+    },
+    "2026-11-05": {
+     "spesa": 40.66,
+     "risultati": 598
+    },
+    "2026-11-06": {
+     "spesa": 5.41,
+     "risultati": 79
     }
    }
   },
@@ -423,8 +440,7 @@
    "stato": "PAUSED",
    "periodi": {
     "7g": {
-     "spesa": 5.0,
-     "risultati": 106
+     "spesa": 0
     },
     "max": {
      "spesa": 5.0,
@@ -441,15 +457,15 @@
   {
    "id": "120256342306280348",
    "nome": "(CLAUDE) 2026-10-30 Antiriciclaggio 19 € | ACQUISTI",
-   "stato": "ACTIVE",
+   "stato": "PAUSED",
    "periodi": {
     "7g": {
-     "spesa": 103.75,
-     "risultati": 1
+     "spesa": 160.38,
+     "risultati": 3
     },
     "max": {
-     "spesa": 106.45,
-     "risultati": 1
+     "spesa": 170.32,
+     "risultati": 3
     }
    },
    "giorni": {
@@ -467,10 +483,17 @@
      "risultati": 1
     },
     "2026-11-03": {
-     "spesa": 41.6
+     "spesa": 41.63
     },
     "2026-11-04": {
-     "spesa": 2.7
+     "spesa": 36.39
+    },
+    "2026-11-05": {
+     "spesa": 27.24
+    },
+    "2026-11-06": {
+     "spesa": 2.91,
+     "risultati": 2
     }
    }
   }
