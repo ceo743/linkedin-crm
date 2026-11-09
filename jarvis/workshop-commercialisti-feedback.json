@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-30T13:28:21+01:00",
+  "aggiornato": "2026-11-09T07:51:59+01:00",
   "regola": "Solo ruolo e zona, MAI nome, cognome o email: la pagina e' pubblica (regola JARVIS del 14/07/2026). I nomi veri stanno solo in Gmail (campo gmail_thread).",
   "feedback": [
     {
@@ -243,6 +243,32 @@
       ],
       "risposto": false,
       "gmail_thread": "1a18c5d07baf4b74"
+    },
+    {
+      "data": "2026-11-07",
+      "chi": "Commercialista · usa Datev Koinos e Tutto Tel",
+      "chiede": [
+        "Lavora con un gestionale completo (contabilità, bilancio, dichiarativi) e con Tutto Tel per il cassetto fiscale: vuole capire come l'AI si affianca a questi strumenti"
+      ],
+      "temi": [
+        "Gestionale"
+      ],
+      "risposto": false,
+      "gmail_thread": "1a1b5c58c8605135"
+    },
+    {
+      "data": "2026-11-08",
+      "chi": "Commercialista · usa Profis",
+      "chiede": [
+        "Rispondere alle richieste disparate dei clienti",
+        "Ridurre le lunghe telefonate dei clienti"
+      ],
+      "temi": [
+        "Email e WhatsApp",
+        "Gestionale"
+      ],
+      "risposto": false,
+      "gmail_thread": "1a1ba2f3602e27ab"
     }
   ]
 }
