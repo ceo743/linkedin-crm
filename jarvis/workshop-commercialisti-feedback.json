@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-09T07:51:59+01:00",
+  "aggiornato": "2026-11-10T07:28:20+01:00",
   "regola": "Solo ruolo e zona, MAI nome, cognome o email: la pagina e' pubblica (regola JARVIS del 14/07/2026). I nomi veri stanno solo in Gmail (campo gmail_thread).",
   "feedback": [
     {
@@ -269,6 +269,33 @@
       ],
       "risposto": false,
       "gmail_thread": "1a1ba2f3602e27ab"
+    },
+    {
+      "data": "2026-11-09",
+      "chi": "Studio professionale · usa Datev Koinos",
+      "chiede": [
+        "Archiviare email e chat",
+        "Gestire il fascicolo del cliente"
+      ],
+      "temi": [
+        "Email e WhatsApp",
+        "Raccolta documenti",
+        "Gestionale"
+      ],
+      "risposto": false,
+      "gmail_thread": "1a1c10d30dabdb56"
+    },
+    {
+      "data": "2026-11-09",
+      "chi": "Commercialista · usa Bridge Buffetti",
+      "chiede": [
+        "Indica il gestionale usato in studio"
+      ],
+      "temi": [
+        "Gestionale"
+      ],
+      "risposto": false,
+      "gmail_thread": "1a1c0e9048c6a95e"
     }
   ]
 }
