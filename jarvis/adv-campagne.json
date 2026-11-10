@@ -1,7 +1,7 @@
 {
- "aggiornato": "2026-11-09T06:15:02+01:00",
+ "aggiornato": "2026-11-10T06:14:39+01:00",
  "fonte": "Meta Ads, account 465327538443110, sola lettura; solo campagne «(CLAUDE) … Commercialista AI|Soldea | …»; giorni: spesa e risultati di ogni giorno (ora di Roma), l'ultimo può essere parziale",
- "fino_al": "2026-11-09",
+ "fino_al": "2026-11-10",
  "campagne": [
   {
    "id": "120255475473930348",
@@ -343,10 +343,10 @@
    "stato": "ACTIVE",
    "periodi": {
     "7g": {
-     "spesa": 1035.56
+     "spesa": 1037.42
     },
     "max": {
-     "spesa": 1506.51
+     "spesa": 1666.92
     }
    },
    "giorni": {
@@ -381,10 +381,13 @@
      "spesa": 159.76
     },
     "2026-11-08": {
-     "spesa": 151.65
+     "spesa": 152.02
     },
     "2026-11-09": {
-     "spesa": 11.3
+     "spesa": 152.89
+    },
+    "2026-11-10": {
+     "spesa": 18.45
     }
    }
   },
@@ -394,8 +397,8 @@
    "stato": "PAUSED",
    "periodi": {
     "7g": {
-     "spesa": 169.23,
-     "risultati": 2621
+     "spesa": 127.61,
+     "risultati": 1949
     },
     "max": {
      "spesa": 260.33,
@@ -463,8 +466,8 @@
    "stato": "PAUSED",
    "periodi": {
     "7g": {
-     "spesa": 137.23,
-     "risultati": 3
+     "spesa": 108.17,
+     "risultati": 2
     },
     "max": {
      "spesa": 170.32,
