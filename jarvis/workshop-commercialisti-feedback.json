@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-10T07:28:20+01:00",
+  "aggiornato": "2026-11-12T07:35:00+01:00",
   "regola": "Solo ruolo e zona, MAI nome, cognome o email: la pagina e' pubblica (regola JARVIS del 14/07/2026). I nomi veri stanno solo in Gmail (campo gmail_thread).",
   "feedback": [
     {
@@ -296,6 +296,36 @@
       ],
       "risposto": false,
       "gmail_thread": "1a1c0e9048c6a95e"
+    },
+    {
+      "data": "2026-11-10",
+      "chi": "Commercialista · provincia di Taranto · usa Passcom (Passepartout)",
+      "chiede": [
+        "Predisposizione e invio telematico degli F24 alle scadenze (IVA, INPS-INAIL, diritti camerali, rateazioni)",
+        "Gestione delle comunicazioni di irregolarità 36-bis e 54-bis con relative rateazioni",
+        "Gestione degli avvisi di accertamento",
+        "Comunicazioni con i clienti su tutte queste attività"
+      ],
+      "temi": [
+        "F24",
+        "Scadenze",
+        "Gestionale",
+        "Email e WhatsApp"
+      ],
+      "risposto": false,
+      "gmail_thread": "1a1c54d58ec4f014"
+    },
+    {
+      "data": "2026-11-11",
+      "chi": "Ragioniere · provincia di Venezia",
+      "chiede": [
+        "Chiede di rinviare di qualche giorno"
+      ],
+      "temi": [
+        "Data del webinar"
+      ],
+      "risposto": false,
+      "gmail_thread": "1a1c99faa499e4cb"
     }
   ]
 }
