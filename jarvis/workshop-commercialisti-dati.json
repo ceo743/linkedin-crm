@@ -3,10 +3,10 @@
   "workshop": {
     "nome": "Workshop Commercialisti",
     "sottotitolo": "Webinar gratuito su Zoom, un'edizione ogni 15 giorni",
-    "data_evento": "2026-11-12",
-    "data_evento_it": "12 novembre 2026",
-    "ora_evento": "21:00",
-    "giorni_mancanti": 0,
+    "data_evento": "2026-11-26",
+    "data_evento_it": "26 novembre 2026",
+    "ora_evento": "18:00",
+    "giorni_mancanti": 14,
     "iniziato": false,
     "landing": "https://commercialisti.davidecaiazzo.it/",
     "foglio": "https://docs.google.com/spreadsheets/d/1vPM-gHNN3CuocFF3nEwpcwrKv4ND8nZHtrDdWBD17fs/edit"
