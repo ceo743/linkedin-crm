@@ -3,9 +3,12 @@
 Uso: python3 jarvis/aggiorna_adv.py letture.json
 letture.json = {"oggi": "AAAA-MM-GG",
                 "campagne": [{"id", "nome", "stato", "max_spesa", "max_risultati" (o null)}],
-                "giorni": [{"id", "data": "AAAA-MM-GG", "spesa": numero, "risultati": numero o null}]}
+                "giorni": [{"id", "data": "AAAA-MM-GG", "spesa": numero, "risultati": numero o null}],
+                "giorni_altro": [{"id", "data": "AAAA-MM-GG", "spesa": numero}]}  (facoltativo)
 "campagne" = campagne di Commercialista AI, Soldea e Antiriciclaggio, con la spesa «maximum»;
-"giorni" = righe giornaliere degli ultimi 14 giorni (time_increment 1) di quelle campagne.
+"giorni" = righe giornaliere degli ultimi 14 giorni (time_increment 1) di quelle campagne;
+"giorni_altro" = per le campagne del webinar, la spesa giornaliera dei gruppi di inserzioni della call («Call 15 minuti»,
+«Remarketing call»): il programma la toglie dalla spesa del webinar (cruscotti_admin.togli_spesa_non_webinar).
 I giorni più vecchi restano quelli già nel file. Se per una campagna la somma dei giorni non torna con la spesa
 «maximum» (oltre 5 centesimi) il file NON si scrive e lo script esce con errore.
 """
@@ -30,6 +33,10 @@ def main(percorso):
             if r.get("risultati") not in (None, "", 0):
                 g["risultati"] = int(float(r["risultati"]))
             nuovi.setdefault(str(r["id"]), {})[r["data"]] = g
+    altri = {}
+    for r in letture.get("giorni_altro") or []:
+        if float(r["spesa"] or 0) > 0:
+            altri.setdefault(str(r["id"]), {})[r["data"]] = round(float(r["spesa"]), 2)
     uscita, errori = [], []
     sette = {(oggi - timedelta(days=i)).isoformat() for i in range(1, 8)}
     for c in letture["campagne"]:
@@ -48,7 +55,15 @@ def main(percorso):
             periodi = {"7g": {"spesa": s7, **({"risultati": r7} if r7 else {})},
                        "max": {"spesa": mx, **({"risultati": int(float(c["max_risultati"]))}
                                               if c.get("max_risultati") not in (None, "") else {})}}
-        uscita.append({"id": cid, "nome": c["nome"], "stato": c["stato"], "periodi": periodi, "giorni": giorni})
+        voce = {"id": cid, "nome": c["nome"], "stato": c["stato"], "periodi": periodi, "giorni": giorni}
+        altro = {k: v for k, v in (vecchie.get(cid, {}).get("giorni_altro") or {}).items() if k < dal}
+        altro.update(altri.get(cid, {}))
+        if altro:
+            for k, v in altro.items():
+                if v > giorni.get(k, {}).get("spesa", 0) + 0.05:
+                    errori.append(f"{c['nome']}: call del {k} ({v}) oltre la spesa della campagna")
+            voce["giorni_altro"] = dict(sorted(altro.items()))
+        uscita.append(voce)
     if errori:
         sys.exit("NON SCRITTO: " + "; ".join(errori))
     attuale["aggiornato"] = datetime.now(ZoneInfo("Europe/Rome")).isoformat(timespec="seconds")
